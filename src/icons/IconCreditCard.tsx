@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconCreditCard = (props: IconProps) => (
+  <Icon {...props}><g clipPath="url(#clip0_4039_13009)"><path fillRule="evenodd" clipRule="evenodd" d="M2.00001 3.41669C1.67784 3.41669 1.41667 3.67785 1.41667 4.00002V5.91669H14.5833V4.00002C14.5833 3.67785 14.3222 3.41669 14 3.41669H2.00001ZM16.0833 4.00002C16.0833 2.84943 15.1506 1.91669 14 1.91669H2.00001C0.849412 1.91669 -0.0833282 2.84943 -0.0833282 4.00002V12C-0.0833282 13.1506 0.849412 14.0834 2.00001 14.0834H14C15.1506 14.0834 16.0833 13.1506 16.0833 12V4.00002ZM14.5833 7.41669H1.41667V12C1.41667 12.3222 1.67784 12.5834 2.00001 12.5834H14C14.3222 12.5834 14.5833 12.3222 14.5833 12V7.41669Z" fill="var(--svg-fill-color)"/></g><defs><clipPath id="clip0_4039_13009"><rect width="16" height="16" fill="white"/></clipPath></defs></Icon>
+);
+figma.connect(IconCreditCard, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4039:13474", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconCreditCard size={size} /> });

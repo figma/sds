@@ -1,0 +1,13 @@
+{
+  "codeConnect": {
+    "include": ["src/ui/**"],
+    "exclude": [],
+    "react": {
+      "importPaths": {
+        "src/ui/**/*": "ui",
+        "src/icons/*": "icons",
+        "*": "ui"
+      }
+    }
+  }
+}

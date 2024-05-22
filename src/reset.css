@@ -1,0 +1,19 @@
+a,
+button,
+legend,
+fieldset,
+select,
+input,
+textarea {
+  all: unset;
+  line-height: 1;
+}
+
+div,
+button,
+select,
+input,
+textarea,
+span {
+  box-sizing: border-box;
+}

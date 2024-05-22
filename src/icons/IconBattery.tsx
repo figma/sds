@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconBattery = (props: IconProps) => (
+  <Icon {...props}><g clipPath="url(#clip0_4039_12335)"><path fillRule="evenodd" clipRule="evenodd" d="M1.99996 4.75C1.67779 4.75 1.41663 5.01117 1.41663 5.33333V10.6667C1.41663 10.9888 1.67779 11.25 1.99996 11.25H11.3333C11.6555 11.25 11.9166 10.9888 11.9166 10.6667V5.33333C11.9166 5.01117 11.6555 4.75 11.3333 4.75H1.99996ZM-0.083374 5.33333C-0.083374 4.18274 0.849366 3.25 1.99996 3.25H11.3333C12.4839 3.25 13.4166 4.18274 13.4166 5.33333V10.6667C13.4166 11.8173 12.4839 12.75 11.3333 12.75H1.99996C0.849366 12.75 -0.083374 11.8173 -0.083374 10.6667V5.33333ZM15.3333 6.58333C15.7475 6.58333 16.0833 6.91912 16.0833 7.33333V8.66667C16.0833 9.08088 15.7475 9.41667 15.3333 9.41667C14.9191 9.41667 14.5833 9.08088 14.5833 8.66667V7.33333C14.5833 6.91912 14.9191 6.58333 15.3333 6.58333Z" fill="var(--svg-fill-color)"/></g><defs><clipPath id="clip0_4039_12335"><rect width="16" height="16" fill="white"/></clipPath></defs></Icon>
+);
+figma.connect(IconBattery, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4039:13047", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconBattery size={size} /> });

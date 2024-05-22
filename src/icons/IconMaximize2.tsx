@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconMaximize2 = (props: IconProps) => (
+  <Icon {...props}><path fillRule="evenodd" clipRule="evenodd" d="M10 2.75C9.58579 2.75 9.25 2.41421 9.25 2C9.25 1.58579 9.58579 1.25 10 1.25H14C14.4142 1.25 14.75 1.58579 14.75 2V6C14.75 6.41421 14.4142 6.75 14 6.75C13.5858 6.75 13.25 6.41421 13.25 6V3.81066L9.86366 7.197C9.57077 7.48989 9.0959 7.48989 8.803 7.197C8.51011 6.9041 8.51011 6.42923 8.803 6.13634L12.1893 2.75H10ZM7.197 8.803C7.48989 9.0959 7.48989 9.57077 7.197 9.86366L3.81066 13.25H6C6.41421 13.25 6.75 13.5858 6.75 14C6.75 14.4142 6.41421 14.75 6 14.75H2C1.58579 14.75 1.25 14.4142 1.25 14V10C1.25 9.58579 1.58579 9.25 2 9.25C2.41421 9.25 2.75 9.58579 2.75 10V12.1893L6.13634 8.803C6.42923 8.51011 6.9041 8.51011 7.197 8.803Z" fill="var(--svg-fill-color)"/></Icon>
+);
+figma.connect(IconMaximize2, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4049:13546", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconMaximize2 size={size} /> });

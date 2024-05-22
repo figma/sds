@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconPause = (props: IconProps) => (
+  <Icon {...props}><path fillRule="evenodd" clipRule="evenodd" d="M3.25 2.66663C3.25 2.25241 3.58579 1.91663 4 1.91663H6.66667C7.08088 1.91663 7.41667 2.25241 7.41667 2.66663V13.3333C7.41667 13.7475 7.08088 14.0833 6.66667 14.0833H4C3.58579 14.0833 3.25 13.7475 3.25 13.3333V2.66663ZM4.75 3.41663V12.5833H5.91667V3.41663H4.75ZM8.58333 2.66663C8.58333 2.25241 8.91912 1.91663 9.33333 1.91663H12C12.4142 1.91663 12.75 2.25241 12.75 2.66663V13.3333C12.75 13.7475 12.4142 14.0833 12 14.0833H9.33333C8.91912 14.0833 8.58333 13.7475 8.58333 13.3333V2.66663ZM10.0833 3.41663V12.5833H11.25V3.41663H10.0833Z" fill="var(--svg-fill-color)"/></Icon>
+);
+figma.connect(IconPause, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4049:13572", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconPause size={size} /> });

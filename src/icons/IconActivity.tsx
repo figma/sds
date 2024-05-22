@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconActivity = (props: IconProps) => (
+  <Icon {...props}><path fillRule="evenodd" clipRule="evenodd" d="M6 1.25C6.32282 1.25 6.60942 1.45657 6.71151 1.76283L10 11.6283L11.2885 7.76283C11.3906 7.45657 11.6772 7.25 12 7.25H14.6667C15.0809 7.25 15.4167 7.58579 15.4167 8C15.4167 8.41421 15.0809 8.75 14.6667 8.75H12.5406L10.7115 14.2372C10.6094 14.5434 10.3228 14.75 10 14.75C9.67717 14.75 9.39057 14.5434 9.28848 14.2372L6 4.37171L4.71151 8.23717C4.60942 8.54343 4.32282 8.75 3.99999 8.75H1.33333C0.919115 8.75 0.583328 8.41421 0.583328 8C0.583328 7.58579 0.919115 7.25 1.33333 7.25H3.45943L5.28848 1.76283C5.39057 1.45657 5.67717 1.25 6 1.25Z" fill="var(--svg-fill-color)"/></Icon>
+);
+figma.connect(IconActivity, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4039:13018", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconActivity size={size} /> });

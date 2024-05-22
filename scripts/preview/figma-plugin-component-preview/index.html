@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden
+    }
+
+    input {
+      left: 50%;
+      position: absolute;
+      bottom: 1rem;
+      transform: translateX(-50%);
+      z-index: 9;
+    }
+
+    iframe {
+      --zoom: 1;
+      --factor: calc(1 / var(--zoom));
+      --height: calc(100vh);
+      --width: calc(100vw);
+      height: var(--height);
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: scale(var(--zoom)) translate(calc(-50% * var(--factor)), calc(-50% * var(--factor)));
+      transform-origin: 50% 50%;
+      width: var(--width);
+    }
+  </style>
+</head>
+
+<body>
+  <input type="range" min="0.1" max="5" step="0.05" value="2">
+  <iframe></iframe>
+  <script>
+    const iframe = document.querySelector("iframe");
+    const input = document.querySelector("input");
+    input.addEventListener("input", () => {
+      iframe.style.setProperty("--zoom", input.value);
+    })
+    iframe.frameBorder = 0;
+    window.onmessage = ({
+      data: { pluginMessage },
+    }) => {
+      if (pluginMessage && pluginMessage.type === "URL") {
+        iframe.src = pluginMessage.payload
+      }
+    }
+  </script>
+</body>
+
+</html>

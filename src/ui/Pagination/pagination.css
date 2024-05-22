@@ -1,0 +1,12 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pagination-list {
+  align-items: center;
+  display: var(--sds-responsive-display-none-to-flex);
+  gap: var(--sds-size-gap-sm);
+}

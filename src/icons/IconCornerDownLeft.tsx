@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconCornerDownLeft = (props: IconProps) => (
+  <Icon {...props}><path fillRule="evenodd" clipRule="evenodd" d="M13.3333 1.91669C13.7476 1.91669 14.0833 2.25247 14.0833 2.66669V7.33335C14.0833 8.23951 13.7234 9.10855 13.0826 9.7493C12.4419 10.3901 11.5728 10.75 10.6667 10.75H4.47733L6.53034 12.803C6.82323 13.0959 6.82323 13.5708 6.53034 13.8637C6.23744 14.1566 5.76257 14.1566 5.46968 13.8637L2.13634 10.5304C1.84345 10.2375 1.84345 9.76258 2.13634 9.46969L5.46968 6.13636C5.76257 5.84346 6.23744 5.84346 6.53034 6.13636C6.82323 6.42925 6.82323 6.90412 6.53034 7.19702L4.47733 9.25002H10.6667C11.175 9.25002 11.6625 9.04809 12.022 8.68864C12.3814 8.3292 12.5833 7.84169 12.5833 7.33335V2.66669C12.5833 2.25247 12.9191 1.91669 13.3333 1.91669Z" fill="var(--svg-fill-color)"/></Icon>
+);
+figma.connect(IconCornerDownLeft, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4039:13467", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconCornerDownLeft size={size} /> });

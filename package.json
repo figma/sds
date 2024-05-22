@@ -1,0 +1,60 @@
+{
+  "name": "sds",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "app:dev": "vite",
+    "app:build": "tsc && vite build",
+    "app:lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "app:preview": "vite preview",
+    "storybook": "storybook dev -p 6006 --no-open",
+    "storybook:build": "storybook build --output-dir dist/storybook",
+    "build": "npm run app:build; npm run storybook:build",
+    "script:icons": "cd scripts/icons; node --env-file=../../.env icons.cjs; cd -;",
+    "script:styles": "cd scripts/styles; node --env-file=../../.env styles.cjs; cd -;",
+    "script:tokens": "cd scripts/tokens; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",
+    "script:tokens:rest": "cd scripts/tokens; node --env-file=../../.env app.mjs; cd -;"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ]
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.3.5",
+    "@figma/code-connect": "^0.1.2",
+    "@react-aria/accordion": "^3.0.0-alpha.28",
+    "@react-aria/focus": "^3.17.0",
+    "@react-aria/interactions": "^3.21.2",
+    "@react-aria/utils": "^3.24.0",
+    "@react-stately/collections": "^3.10.6",
+    "@react-stately/tree": "^3.8.0",
+    "@react-types/shared": "^3.23.0",
+    "@storybook/addon-essentials": "^8.0.10",
+    "@storybook/addon-interactions": "^8.0.10",
+    "@storybook/addon-links": "^8.0.10",
+    "@storybook/addon-onboarding": "^8.0.10",
+    "@storybook/blocks": "^8.0.10",
+    "@storybook/react": "^8.0.10",
+    "@storybook/react-vite": "^8.0.10",
+    "@storybook/test": "^8.0.10",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "clsx": "^2.1.1",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-storybook": "^0.8.0",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "react": "^18.2.0",
+    "react-aria-components": "^1.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^8.0.10",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}

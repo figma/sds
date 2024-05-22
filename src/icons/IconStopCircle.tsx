@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconStopCircle = (props: IconProps) => (
+  <Icon {...props}><g clipPath="url(#clip0_4039_12692)"><path fillRule="evenodd" clipRule="evenodd" d="M7.99992 2.08325C4.73223 2.08325 2.08325 4.73223 2.08325 7.99992C2.08325 11.2676 4.73223 13.9166 7.99992 13.9166C11.2676 13.9166 13.9166 11.2676 13.9166 7.99992C13.9166 4.73223 11.2676 2.08325 7.99992 2.08325ZM0.583252 7.99992C0.583252 3.90381 3.90381 0.583252 7.99992 0.583252C12.096 0.583252 15.4166 3.90381 15.4166 7.99992C15.4166 12.096 12.096 15.4166 7.99992 15.4166C3.90381 15.4166 0.583252 12.096 0.583252 7.99992ZM5.24992 5.99992C5.24992 5.58571 5.58571 5.24992 5.99992 5.24992H9.99992C10.4141 5.24992 10.7499 5.58571 10.7499 5.99992V9.99992C10.7499 10.4141 10.4141 10.7499 9.99992 10.7499H5.99992C5.58571 10.7499 5.24992 10.4141 5.24992 9.99992V5.99992ZM6.74992 6.74992V9.24992H9.24992V6.74992H6.74992Z" fill="var(--svg-fill-color)"/></g><defs><clipPath id="clip0_4039_12692"><rect width="16" height="16" fill="white"/></clipPath></defs></Icon>
+);
+figma.connect(IconStopCircle, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4049:13625", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconStopCircle size={size} /> });

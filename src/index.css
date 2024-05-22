@@ -1,0 +1,61 @@
+@import url("./reset.css");
+@import url("./theme.css");
+@import url("./icons.css");
+
+:root {
+  --global-focus-ring-size: calc(var(--sds-responsive-border-width) * 2);
+  --global-focus-ring-color: var(--sds-color-blue-500);
+  --global-line-height-paragraph: 1.4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --global-focus-ring-color: var(--sds-color-blue-300);
+  }
+}
+
+html {
+  font-size: var(--sds-responsive-root-font-size, 16px);
+}
+
+body {
+  background: var(--sds-color-bg-default-default);
+  color: var(--sds-color-text-default-default);
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+}
+
+body,
+button,
+textarea,
+input,
+select {
+  font: var(--sds-font-body-base);
+}
+
+pre,
+code {
+  font: var(--sds-font-code);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: var(--sds-font-heading);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}

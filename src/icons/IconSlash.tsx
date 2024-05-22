@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconSlash = (props: IconProps) => (
+  <Icon {...props}><g clipPath="url(#clip0_4039_11606)"><path fillRule="evenodd" clipRule="evenodd" d="M3.31967 4.38008C2.54472 5.38063 2.0835 6.63641 2.0835 7.99992C2.0835 11.2676 4.73248 13.9166 8.00016 13.9166C9.36367 13.9166 10.6194 13.4554 11.62 12.6804L3.31967 4.38008ZM4.38033 3.31942L12.6807 11.6198C13.4556 10.6192 13.9168 9.36342 13.9168 7.99992C13.9168 4.73223 11.2678 2.08325 8.00016 2.08325C6.63666 2.08325 5.38088 2.54448 4.38033 3.31942ZM0.583496 7.99992C0.583496 3.90381 3.90405 0.583252 8.00016 0.583252C12.0963 0.583252 15.4168 3.90381 15.4168 7.99992C15.4168 12.096 12.0963 15.4166 8.00016 15.4166C3.90405 15.4166 0.583496 12.096 0.583496 7.99992Z" fill="var(--svg-fill-color)"/></g><defs><clipPath id="clip0_4039_11606"><rect width="16" height="16" fill="white"/></clipPath></defs></Icon>
+);
+figma.connect(IconSlash, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4049:13617", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconSlash size={size} /> });

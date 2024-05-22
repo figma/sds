@@ -1,0 +1,14 @@
+{
+  "name": "SDS - Figma Component Preview",
+  "id": "1225498390710809909",
+  "api": "1.0.0",
+  "editorType": ["figma", "dev"],
+  "capabilities": ["inspect"],
+  "permissions": [],
+  "main": "code.js",
+  "ui": "index.html",
+  "networkAccess": {
+    "allowedDomains": ["https://sds-jake.netlify.app", "http://localhost:6006"],
+    "reasoning": "doing the work"
+  }
+}

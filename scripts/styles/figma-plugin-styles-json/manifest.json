@@ -1,0 +1,9 @@
+{
+  "name": "SDS - Figma Styles JSON",
+  "id": "1225498390710809901",
+  "api": "1.0.0",
+  "editorType": ["figma"],
+  "permissions": [],
+  "main": "code.js",
+  "networkAccess": { "allowedDomains": ["none"] }
+}

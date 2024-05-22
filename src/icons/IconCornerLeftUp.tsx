@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconCornerLeftUp = (props: IconProps) => (
+  <Icon {...props}><path fillRule="evenodd" clipRule="evenodd" d="M5.46963 2.13636C5.76252 1.84346 6.2374 1.84346 6.53029 2.13636L9.86362 5.46969C10.1565 5.76258 10.1565 6.23746 9.86362 6.53035C9.57073 6.82324 9.09586 6.82324 8.80296 6.53035L6.74996 4.47735V10.6667C6.74996 11.175 6.95189 11.6625 7.31134 12.022C7.67078 12.3814 8.15829 12.5834 8.66663 12.5834H13.3333C13.7475 12.5834 14.0833 12.9191 14.0833 13.3334C14.0833 13.7476 13.7475 14.0834 13.3333 14.0834H8.66663C7.76047 14.0834 6.89143 13.7234 6.25068 13.0826C5.60993 12.4419 5.24996 11.5728 5.24996 10.6667V4.47735L3.19696 6.53035C2.90406 6.82324 2.42919 6.82324 2.1363 6.53035C1.8434 6.23746 1.8434 5.76258 2.1363 5.46969L5.46963 2.13636Z" fill="var(--svg-fill-color)"/></Icon>
+);
+figma.connect(IconCornerLeftUp, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4039:13468", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconCornerLeftUp size={size} /> });

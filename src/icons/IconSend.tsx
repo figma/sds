@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconSend = (props: IconProps) => (
+  <Icon {...props}><g clipPath="url(#clip0_4039_12605)"><path fillRule="evenodd" clipRule="evenodd" d="M15.197 0.802943C15.4008 1.00667 15.4698 1.3091 15.3746 1.58104L10.7079 14.9144C10.6064 15.2046 10.3379 15.4034 10.0306 15.416C9.72336 15.4285 9.43958 15.2522 9.31469 14.9712L6.76518 9.23481L1.02877 6.6853C0.747764 6.56041 0.571466 6.27663 0.584001 5.96937C0.596537 5.66211 0.795365 5.39363 1.08561 5.29205L14.4189 0.625379C14.6909 0.5302 14.9933 0.599214 15.197 0.802943ZM8.22794 8.83271L9.91709 12.6333L12.8731 4.18754L8.22794 8.83271ZM11.8124 3.12688L3.36668 6.08289L7.16728 7.77205L11.8124 3.12688Z" fill="var(--svg-fill-color)"/></g><defs><clipPath id="clip0_4039_12605"><rect width="16" height="16" fill="white"/></clipPath></defs></Icon>
+);
+figma.connect(IconSend, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4049:13603", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconSend size={size} /> });

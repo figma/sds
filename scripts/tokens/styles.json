@@ -1,0 +1,445 @@
+[
+  {
+    "type": "TEXT",
+    "name": "Display",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10189"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10188"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:58:8572"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Body/Base",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10180"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10179"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10181"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Body/Small",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10216"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10179"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10181"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Body/Bold",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10180"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10179"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:14844"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Body/Italic",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10180"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10179"
+    },
+    "fontStyle": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:14846"
+    }
+  },
+  {
+    "type": "TEXT",
+    "name": "Body/Link",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10180"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10179"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10181"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Caption",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11196"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11201"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11183"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Input",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:13415"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:13413"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:13417"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Code",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10183"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10182"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10184"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Subtitle",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10213"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10191"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10193"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Subheading",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10186"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10185"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10187"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Heading",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10177"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10176"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10178"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Hero",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10189"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10188"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10190"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": ".Utilities/Component notes/Regular",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11196"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11201"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11183"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "key": "8da8515db62c0847eb88ef0fb33766c372b5634d",
+    "name": "sm",
+    "styleType": "EFFECT",
+    "remote": false,
+    "description": "",
+    "type": "EFFECT",
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.05098039284348488,
+          "a": 0.05000000074505806
+        },
+        "blendMode": "NORMAL",
+        "offset": {
+          "x": 0,
+          "y": 1
+        },
+        "radius": 4,
+        "showShadowBehindNode": false,
+        "boundVariables": {
+          "radius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11282"
+          },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11234"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
+          "offsetY": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11281"
+          }
+        }
+      },
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.05098039284348488,
+          "a": 0.10000000149011612
+        },
+        "blendMode": "NORMAL",
+        "offset": {
+          "x": 0,
+          "y": 1
+        },
+        "radius": 4,
+        "showShadowBehindNode": false,
+        "boundVariables": {
+          "radius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11282"
+          },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11235"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
+          "offsetY": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11281"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "key": "23736b8c873c2c21938e364a83375208663bc4ac",
+    "name": "md",
+    "styleType": "EFFECT",
+    "remote": false,
+    "description": "",
+    "type": "EFFECT",
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.05098039284348488,
+          "a": 0.05000000074505806
+        },
+        "blendMode": "NORMAL",
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "radius": 4,
+        "spread": -1,
+        "showShadowBehindNode": false,
+        "boundVariables": {
+          "radius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11282"
+          },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11287"
+          },
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11234"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
+          "offsetY": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11282"
+          }
+        }
+      },
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.05098039284348488,
+          "a": 0.10000000149011612
+        },
+        "blendMode": "NORMAL",
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "radius": 5,
+        "spread": -1,
+        "showShadowBehindNode": false,
+        "boundVariables": {
+          "radius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11283"
+          },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11287"
+          },
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11235"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
+          "offsetY": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11282"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "key": "438be94d4f8e3c60b6551865b81a02701761ccd3",
+    "name": "xs",
+    "styleType": "EFFECT",
+    "remote": false,
+    "description": ""
+  },
+  {
+    "key": "60f8767d54258ace8a2e964e9c386a05bee054f5",
+    "name": "lg",
+    "styleType": "EFFECT",
+    "remote": false,
+    "description": ""
+  },
+  {
+    "key": "457a3cf1e09a340ed235d3ead8533eae74d4773a",
+    "name": "xl",
+    "styleType": "EFFECT",
+    "remote": false,
+    "description": ""
+  },
+  {
+    "key": "6e172be75403118c516f2ae6012ede9c59b1170a",
+    "name": "xxl",
+    "styleType": "EFFECT",
+    "remote": false,
+    "description": ""
+  }
+]

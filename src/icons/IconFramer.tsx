@@ -1,0 +1,6 @@
+import figma from "@figma/code-connect";
+import { IconProps, Icon } from "ui";
+export const IconFramer = (props: IconProps) => (
+  <Icon {...props}><g clipPath="url(#clip0_4039_12782)"><path fillRule="evenodd" clipRule="evenodd" d="M2.64061 1.04632C2.75669 0.766064 3.03017 0.583332 3.33352 0.583332H12.6669C13.0811 0.583332 13.4169 0.919118 13.4169 1.33333V6C13.4169 6.41421 13.0811 6.75 12.6669 6.75H9.81084L13.1972 10.1363C13.4117 10.3508 13.4758 10.6734 13.3598 10.9537C13.2437 11.2339 12.9702 11.4167 12.6669 11.4167H8.75019V15.3333C8.75019 15.6367 8.56745 15.9102 8.2872 16.0262C8.00694 16.1423 7.68435 16.0782 7.46985 15.8637L2.80319 11.197C2.66254 11.0563 2.58352 10.8656 2.58352 10.6667V6C2.58352 5.58579 2.9193 5.25 3.33352 5.25H6.18953L2.80319 1.86366C2.58869 1.64916 2.52452 1.32658 2.64061 1.04632ZM8.31084 5.25H11.9169V2.08333H5.14418L8.31084 5.25ZM7.68953 6.75H4.08352V9.91667H10.8562L7.68953 6.75ZM5.14418 11.4167L7.25019 13.5227V11.4167H5.14418Z" fill="var(--svg-fill-color)"/></g><defs><clipPath id="clip0_4039_12782"><rect width="16" height="16" fill="white"/></clipPath></defs></Icon>
+);
+figma.connect(IconFramer, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=4049:13508", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconFramer size={size} /> });

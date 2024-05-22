@@ -1,0 +1,26 @@
+.image {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.image-variant-rounded {
+  border-radius: var(--sds-size-radius-xs);
+}
+
+.image-aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+}
+.image-aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+.image-aspect-ratio-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.picture {
+  display: flex;
+  width: 100%;
+}

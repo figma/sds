@@ -1,0 +1,31 @@
+import { ForwardedRef, forwardRef } from "react";
+import {
+  Button,
+  DestructiveButton,
+  DestructiveButtonProps,
+  type ButtonProps,
+} from "../Button/Button";
+import "./iconButton.css";
+
+export type IconButtonProps = Omit<ButtonProps, "aria-label"> & {
+  "aria-label": string;
+};
+export const IconButton = forwardRef(function IconButton(
+  props: IconButtonProps,
+  ref: ForwardedRef<HTMLElement>,
+) {
+  return <Button {...props} {...ref} className="icon-button" />;
+});
+
+export type DestructiveIconButtonProps = Omit<
+  DestructiveButtonProps,
+  "aria-label"
+> & {
+  "aria-label": string;
+};
+export const DestructiveIconButton = forwardRef(function IconButton(
+  props: DestructiveIconButtonProps,
+  ref: ForwardedRef<HTMLElement>,
+) {
+  return <DestructiveButton {...props} {...ref} className="icon-button" />;
+});
