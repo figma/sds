@@ -5,7 +5,7 @@ import {
   type ListBoxItemProps as RACListBoxItemProps,
   type ListBoxProps as RACListBoxProps,
 } from "react-aria-components";
-import "./listbox.css";
+import "./listBox.css";
 
 export type ListBoxProps<T> = RACListBoxProps<T>;
 export function ListBox<T extends object>({
