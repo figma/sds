@@ -12,7 +12,7 @@ import {
   Label,
   SharedFieldProps,
 } from "ui/Fieldset/Fieldset";
-import "./textarea.css";
+import "./textArea.css";
 
 export type SharedTextAreaProps = { isResizable?: boolean };
 
