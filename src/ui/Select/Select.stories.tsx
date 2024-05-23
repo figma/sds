@@ -3,7 +3,7 @@ import { SelectField, SelectItem } from "ui";
 
 const meta: Meta<typeof SelectField> = {
   component: SelectField,
-  title: "ui/Fields/Select",
+  title: "ui/Select",
   parameters: { layout: "centered" },
 };
 export default meta;

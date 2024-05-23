@@ -3,7 +3,7 @@ import { TextAreaField } from "ui";
 
 const meta: Meta<typeof TextAreaField> = {
   component: TextAreaField,
-  title: "ui/Fields/TextArea",
+  title: "ui/TextArea",
   parameters: { layout: "centered" },
 };
 export default meta;

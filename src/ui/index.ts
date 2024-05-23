@@ -1,4 +1,5 @@
 export * from "./Accordion/Accordion";
+export * from "./Alert/Alert";
 export * from "./Avatar/Avatar";
 export * from "./Button/Button";
 export * from "./Card/Card";
@@ -13,7 +14,6 @@ export * from "./Input/Input";
 export * from "./Link/Link";
 export * from "./ListBox/ListBox";
 export * from "./Menu/Menu";
-export * from "./Message/Message";
 export * from "./Pagination/Pagination";
 export * from "./Radio/Radio";
 export * from "./Select/Select";

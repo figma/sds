@@ -1,6 +1,4 @@
 import figma from "@figma/code-connect";
-import { Checkbox } from "ui";
-import { Switch } from "ui/Switch/Switch";
 import {
   Description,
   Field,
@@ -127,55 +125,55 @@ figma.connect(Fieldset, FIGMA_URL_FIELDSET, {
 
 // Stubbed out fake connect doc while children is broken.
 
-function Form() {}
+// function Form() {}
 
-figma.connect(Form, FIGMA_URL_FORM, {
-  props: {
-    legend: figma.children("Legend"),
-    description: figma.children("Description"),
-    input: figma.children("Input"),
-    select: figma.children("Select"),
-    textarea: figma.children("Textarea"),
-    checkbox: figma.children("Checkbox"),
-    button: figma.children("Button"),
-    descriptionCheckbox: figma.string("Description Checkbox"),
-    textCheckbox: figma.string("Text Checkbox"),
-    descriptionSwitch: figma.string("Description Switch"),
-    textSwitch: figma.string("Text Switch"),
-    descriptionCountry: figma.string("Description Country"),
-    textCountry: figma.string("Text Country"),
-    textDeliveryNotes: figma.string("Text Delivery Notes"),
-    textFullName: figma.string("Text Full Name"),
-  },
-  example: (props) => (
-    <Fieldset>
-      {props.legend}
-      {props.description}
-      <FieldGroup>
-        <Field>
-          <Label>{props.textFullName}</Label>
-          {props.input}
-        </Field>
-        <Field>
-          <Label>{props.textCountry}</Label>
-          {props.select}
-          <Description>{props.descriptionCountry}</Description>
-        </Field>
-        <Field>
-          <Label>{props.textDeliveryNotes}</Label>
-          {props.textarea}
-        </Field>
-        <Switch>
-          <Label>{props.textSwitch}</Label>
-          <Description>{props.descriptionSwitch}</Description>
-        </Switch>
-        <Checkbox>
-          <Label>{props.textCheckbox}</Label>
-          {props.checkbox}
-          <Description>{props.descriptionCheckbox}</Description>
-        </Checkbox>
-      </FieldGroup>
-      {props.button}
-    </Fieldset>
-  ),
-});
+// figma.connect(Form, FIGMA_URL_FORM, {
+//   props: {
+//     legend: figma.children("Legend"),
+//     description: figma.children("Description"),
+//     input: figma.children("Input"),
+//     select: figma.children("Select"),
+//     textarea: figma.children("Textarea"),
+//     checkbox: figma.children("Checkbox"),
+//     button: figma.children("Button"),
+//     descriptionCheckbox: figma.string("Description Checkbox"),
+//     textCheckbox: figma.string("Text Checkbox"),
+//     descriptionSwitch: figma.string("Description Switch"),
+//     textSwitch: figma.string("Text Switch"),
+//     descriptionCountry: figma.string("Description Country"),
+//     textCountry: figma.string("Text Country"),
+//     textDeliveryNotes: figma.string("Text Delivery Notes"),
+//     textFullName: figma.string("Text Full Name"),
+//   },
+//   example: (props) => (
+//     <Fieldset>
+//       {props.legend}
+//       {props.description}
+//       <FieldGroup>
+//         <Field>
+//           <Label>{props.textFullName}</Label>
+//           {props.input}
+//         </Field>
+//         <Field>
+//           <Label>{props.textCountry}</Label>
+//           {props.select}
+//           <Description>{props.descriptionCountry}</Description>
+//         </Field>
+//         <Field>
+//           <Label>{props.textDeliveryNotes}</Label>
+//           {props.textarea}
+//         </Field>
+//         <Switch>
+//           <Label>{props.textSwitch}</Label>
+//           <Description>{props.descriptionSwitch}</Description>
+//         </Switch>
+//         <Checkbox>
+//           <Label>{props.textCheckbox}</Label>
+//           {props.checkbox}
+//           <Description>{props.descriptionCheckbox}</Description>
+//         </Checkbox>
+//       </FieldGroup>
+//       {props.button}
+//     </Fieldset>
+//   ),
+// });

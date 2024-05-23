@@ -22,7 +22,7 @@ import {
 
 const meta: Meta<typeof Fieldset> = {
   component: Fieldset,
-  title: "ui/Fields/Fieldset",
+  title: "ui/Fieldset",
   parameters: { layout: "centered" },
 };
 export default meta;

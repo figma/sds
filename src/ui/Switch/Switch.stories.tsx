@@ -3,7 +3,7 @@ import { SwitchField, SwitchGroup } from "ui";
 
 const meta: Meta<typeof SwitchField> = {
   component: SwitchField,
-  title: "ui/Fields/Switch",
+  title: "ui/Switch",
   parameters: { layout: "centered" },
 };
 export default meta;

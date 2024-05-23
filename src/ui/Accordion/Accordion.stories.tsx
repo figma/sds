@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import "react";
 import { Accordion, AccordionItem } from "ui/Accordion/Accordion";
-import { Text, TextSubtitle } from "ui/Text/Text";
+import { Text, TextHeading } from "ui/Text/Text";
 
 const meta: Meta<typeof Accordion> = {
   component: Accordion,
@@ -9,22 +9,33 @@ const meta: Meta<typeof Accordion> = {
   parameters: { layout: "centered" },
 };
 export default meta;
-type Story = StoryObj<typeof Accordion>;
 
-export const Default: Story = {
+export const AccordionStory: StoryObj<typeof Accordion> = {
   args: {},
   render: () => (
     <Accordion>
-      <AccordionItem title="Your files">
+      <AccordionItem title="Item 1">
         Answer the frequently asked question in a simple sentence, a longish
         paragraph, or even in a list.
       </AccordionItem>
-      <AccordionItem title="Shared with you">
+      <AccordionItem title="Item 2">
         Answer the frequently asked question in a simple sentence, a longish
         paragraph, or even in a list.
       </AccordionItem>
-      <AccordionItem title="Last item" hasChildItems={false}>
-        <TextSubtitle>Subtitle</TextSubtitle>
+      <AccordionItem title="Item 3">
+        Answer the frequently asked question in a simple sentence, a longish
+        paragraph, or even in a list.
+      </AccordionItem>
+    </Accordion>
+  ),
+};
+
+export const AccordionItemStory: StoryObj<typeof AccordionItem> = {
+  args: {},
+  render: () => (
+    <Accordion>
+      <AccordionItem title="Complex Content" hasChildItems={false}>
+        <TextHeading>Heading</TextHeading>
         <Text>
           Answer the frequently asked question in a simple sentence, a longish
           paragraph, or even in a list.

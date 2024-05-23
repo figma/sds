@@ -5,7 +5,7 @@ import { Checkbox, CheckboxField, CheckboxGroup, Grid } from "ui";
 
 const meta: Meta<typeof Checkbox> = {
   component: Checkbox,
-  title: "ui/Fields/Checkbox",
+  title: "ui/Checkbox",
   parameters: { layout: "centered" },
 };
 export default meta;

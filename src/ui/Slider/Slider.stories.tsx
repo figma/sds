@@ -10,7 +10,7 @@ import {
 
 const meta: Meta<typeof Slider> = {
   component: Slider,
-  title: "ui/Fields/Slider",
+  title: "ui/Slider",
   parameters: { layout: "centered" },
 };
 export default meta;

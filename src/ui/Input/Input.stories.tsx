@@ -3,7 +3,7 @@ import { InputField } from "ui";
 
 const meta: Meta<typeof InputField> = {
   component: InputField,
-  title: "ui/Fields/Input",
+  title: "ui/Input",
   parameters: { layout: "centered" },
 };
 export default meta;

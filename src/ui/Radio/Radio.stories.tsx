@@ -4,7 +4,7 @@ import { Radio, RadioField, RadioGroup } from "ui/Radio/Radio";
 
 const meta: Meta<typeof Radio> = {
   component: Radio,
-  title: "ui/Fields/Radio",
+  title: "ui/Radio",
   parameters: { layout: "centered" },
 };
 export default meta;
