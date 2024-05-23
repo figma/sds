@@ -39,7 +39,7 @@ function App() {
     document.body.className = `sds-scheme-color-${theme}`;
   }, [theme]);
   return (
-    <Grid direction="column" gap="xl" paddingY="xl">
+    <Grid auto direction="column" gap="xl">
       <GridItem>
         <SelectField
           defaultSelectedKey={theme}
@@ -53,7 +53,7 @@ function App() {
         </SelectField>
       </GridItem>
       <GridItem>
-        <Grid gap="sm">
+        <Grid gap="sm" auto>
           <GridItem>
             <Button>
               <IconArrowLeft />

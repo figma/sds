@@ -10,9 +10,11 @@ import { Link } from "ui/Link/Link";
 import "./text.css";
 
 export type TextProps = RACTextProps;
-export function Text({ className, ...props }: TextProps) {
+export function Text({ className, elementType = "p", ...props }: TextProps) {
   const classNames = clsx(className, "text-body-base");
-  return <RACText className={classNames} {...props} />;
+  return (
+    <RACText elementType={elementType} className={classNames} {...props} />
+  );
 }
 export type TextSmallProps = RACTextProps;
 export function TextSmall({ className, ...props }: TextSmallProps) {

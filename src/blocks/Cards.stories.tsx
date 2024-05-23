@@ -12,10 +12,10 @@ import {
   Image,
   Label,
   Text,
+  TextHeading,
   TextList,
   TextListItem,
-  TextSubheading,
-  TextSubtitle,
+  TextTitlePage,
 } from "ui";
 import {
   BasicCard,
@@ -33,102 +33,41 @@ export default meta;
 
 export const BasicCardStory: StoryObj<typeof BasicCard> = {
   render: () => (
-    <Grid gap="xl" direction="column">
-      <Grid
-        gap="lg"
-        direction="row"
-        alignPrimary="center"
-        alignSecondary="center"
-      >
-        <GridItem>
-          <BasicCard media={<IconActivity size="32" />}>
-            <TextSubheading>Subheading</TextSubheading>
-            <Text>
-              Body text for whatever you’d like to say. Add main takeaway
-              points, quotes, anecdotes, or even a very very short story.{" "}
-            </Text>
-            <ButtonGroup>
-              <Button variant="secondary">Some action</Button>
-            </ButtonGroup>
-          </BasicCard>
-        </GridItem>
-        <GridItem>
-          <BasicCard media={<IconActivity size="32" />}>
-            <TextSubheading>Subheading</TextSubheading>
-            <Text>
-              Body text for whatever you’d like to say. Add main takeaway
-              points, quotes, anecdotes, or even a very very short story.{" "}
-            </Text>
-            <ButtonGroup>
-              <Button variant="secondary">Some action</Button>
-            </ButtonGroup>
-          </BasicCard>
-        </GridItem>
-        <GridItem>
-          <BasicCard media={<IconActivity size="32" />}>
-            <TextSubheading>Subheading</TextSubheading>
-            <Text>
-              Body text for whatever you’d like to say. Add main takeaway
-              points, quotes, anecdotes, or even a very very short story.{" "}
-            </Text>
-            <ButtonGroup>
-              <Button variant="secondary">Some action</Button>
-            </ButtonGroup>
-          </BasicCard>
-        </GridItem>
-      </Grid>
-      <Grid gap="lg" direction="row">
-        <GridItem>
-          <BasicCard
-            variant="padded"
-            media={
-              <Image alt="Accessibility!" src="https://picsum.photos/500" />
-            }
-          >
-            <TextSubheading>Subheading</TextSubheading>
-            <Text>
-              Body text for whatever you’d like to say. Add main takeaway
-              points, quotes, anecdotes, or even a very very short story.{" "}
-            </Text>
-            <ButtonGroup>
-              <Button variant="secondary">Some action</Button>
-            </ButtonGroup>
-          </BasicCard>
-        </GridItem>
-        <GridItem>
-          <BasicCard
-            variant="padded"
-            media={
-              <Image alt="Accessibility!" src="https://picsum.photos/500" />
-            }
-          >
-            <TextSubheading>Subheading</TextSubheading>
-            <Text>
-              Body text for whatever you’d like to say. Add main takeaway
-              points, quotes, anecdotes, or even a very very short story.{" "}
-            </Text>
-            <ButtonGroup>
-              <Button variant="secondary">Some action</Button>
-            </ButtonGroup>
-          </BasicCard>
-        </GridItem>
-        <GridItem>
-          <BasicCard
-            variant="padded"
-            media={
-              <Image alt="Accessibility!" src="https://picsum.photos/500" />
-            }
-          >
-            <TextSubheading>Subheading</TextSubheading>
-            <Text>
-              Body text for whatever you’d like to say. Add main takeaway
-              points, quotes, anecdotes, or even a very very short story.{" "}
-            </Text>
-            <ButtonGroup>
-              <Button variant="secondary">Some action</Button>
-            </ButtonGroup>
-          </BasicCard>
-        </GridItem>
+    <Grid gap="xl" auto direction="column">
+      <Grid gap="lg" auto>
+        {[1, 2, 3, 4].map((i) => (
+          <GridItem key={i} size="minor">
+            <BasicCard media={<IconActivity size="32" />}>
+              <TextHeading>Subheading</TextHeading>
+              <Text>
+                Body text for whatever you’d like to say. Add main takeaway
+                points, quotes, anecdotes, or even a very very short story.{" "}
+              </Text>
+              <ButtonGroup>
+                <Button variant="secondary">Some action</Button>
+              </ButtonGroup>
+            </BasicCard>
+          </GridItem>
+        ))}
+        {[1, 2, 3, 4].map((i) => (
+          <GridItem key={i} size="minor">
+            <BasicCard
+              variant="padded"
+              media={
+                <Image alt="Accessibility!" src="https://picsum.photos/500" />
+              }
+            >
+              <TextHeading>Subheading</TextHeading>
+              <Text>
+                Body text for whatever you’d like to say. Add main takeaway
+                points, quotes, anecdotes, or even a very very short story.{" "}
+              </Text>
+              <ButtonGroup>
+                <Button variant="secondary">Some action</Button>
+              </ButtonGroup>
+            </BasicCard>
+          </GridItem>
+        ))}
       </Grid>
     </Grid>
   ),
@@ -136,74 +75,41 @@ export const BasicCardStory: StoryObj<typeof BasicCard> = {
 
 export const PricingCardStory: StoryObj<typeof PricingCard> = {
   render: () => (
-    <Grid gap="lg" direction="row">
-      <GridItem>
-        <PricingCard>
-          <TextSubheading>Subheading</TextSubheading>
-          <TextSubtitle>
-            $5<Text elementType="span"> / per month</Text>
-          </TextSubtitle>
-          <TextList>
-            <TextListItem>Something 1</TextListItem>
-            <TextListItem>Something 2</TextListItem>
-            <TextListItem>Something 3</TextListItem>
-            <TextListItem>Something 4</TextListItem>
-            <TextListItem>Something 5</TextListItem>
-          </TextList>
-          <ButtonGroup align="justify">
-            <Button>Buy this</Button>
-          </ButtonGroup>
-        </PricingCard>
-      </GridItem>
-      <GridItem>
-        <PricingCard>
-          <TextSubheading>Subheading</TextSubheading>
-          <TextSubtitle>
-            $5<Text elementType="span"> / per month</Text>
-          </TextSubtitle>
-          <TextList>
-            <TextListItem>Something 1</TextListItem>
-            <TextListItem>Something 2</TextListItem>
-            <TextListItem>Something 3</TextListItem>
-            <TextListItem>Something 4</TextListItem>
-            <TextListItem>Something 5</TextListItem>
-          </TextList>
-          <ButtonGroup align="justify">
-            <Button>Buy this</Button>
-          </ButtonGroup>
-        </PricingCard>
-      </GridItem>
-      <GridItem>
-        <PricingCard>
-          <TextSubheading>Subheading</TextSubheading>
-          <TextSubtitle>
-            $5<Text elementType="span"> / per month</Text>
-          </TextSubtitle>
-          <TextList>
-            <TextListItem>Something 1</TextListItem>
-            <TextListItem>Something 2</TextListItem>
-            <TextListItem>Something 3</TextListItem>
-            <TextListItem>Something 4</TextListItem>
-            <TextListItem>Something 5</TextListItem>
-          </TextList>
-          <ButtonGroup align="justify">
-            <Button>Buy this</Button>
-          </ButtonGroup>
-        </PricingCard>
-      </GridItem>
+    <Grid auto gap="lg" direction="row">
+      {[1, 2, 3, 4].map((i) => (
+        <GridItem key={i}>
+          <PricingCard>
+            <TextHeading>Look at these rates</TextHeading>
+            <TextTitlePage>
+              ${5 * (5 - i)}
+              <Text elementType="span"> / per month</Text>
+            </TextTitlePage>
+            <TextList>
+              <TextListItem>Something 1</TextListItem>
+              <TextListItem>Something 2</TextListItem>
+              <TextListItem>Something 3</TextListItem>
+              <TextListItem>Something 4</TextListItem>
+              <TextListItem>Something 5</TextListItem>
+            </TextList>
+            <ButtonGroup align="justify">
+              <Button>Buy this</Button>
+            </ButtonGroup>
+          </PricingCard>
+        </GridItem>
+      ))}
     </Grid>
   ),
 };
 
 export const ProductInfoCardStory: StoryObj<typeof ProductInfoCard> = {
   render: () => (
-    <Grid gap="lg" direction="row">
+    <Grid auto gap="lg" direction="row">
       <GridItem>
         <ProductInfoCard
           media={<Image alt="Accessibility!" src="https://picsum.photos/250" />}
         >
-          <TextSubtitle>Product</TextSubtitle>
-          <TextSubheading>$5</TextSubheading>
+          <TextHeading>Product</TextHeading>
+          <TextTitlePage>$5</TextTitlePage>
           <ButtonGroup align="start">
             <Button variant="secondary">Buy this</Button>
           </ButtonGroup>
@@ -213,8 +119,8 @@ export const ProductInfoCardStory: StoryObj<typeof ProductInfoCard> = {
         <ProductInfoCard
           media={<Image alt="Accessibility!" src="https://picsum.photos/250" />}
         >
-          <TextSubtitle>Product</TextSubtitle>
-          <TextSubheading>$5</TextSubheading>
+          <TextHeading>Product</TextHeading>
+          <TextTitlePage>$5</TextTitlePage>
           <ButtonGroup align="start">
             <Button variant="secondary">Buy this</Button>
           </ButtonGroup>
@@ -226,10 +132,10 @@ export const ProductInfoCardStory: StoryObj<typeof ProductInfoCard> = {
 
 export const TestimonialCardStory: StoryObj<typeof TestimonialCard> = {
   render: () => (
-    <Grid gap="lg" direction="row">
+    <Grid auto gap="lg" direction="row">
       <GridItem>
         <TestimonialCard>
-          <TextSubtitle>"Something nice"</TextSubtitle>
+          <TextHeading>"Something nice"</TextHeading>
           <AvatarBlock>
             <AvatarButton size="lg" src="https://picsum.photos/200" />
             <Label>Full Name</Label>
@@ -239,7 +145,7 @@ export const TestimonialCardStory: StoryObj<typeof TestimonialCard> = {
       </GridItem>
       <GridItem>
         <TestimonialCard>
-          <TextSubtitle>"Something nice"</TextSubtitle>
+          <TextHeading>"Something nice"</TextHeading>
           <AvatarBlock>
             <AvatarButton size="lg" src="https://picsum.photos/200" />
             <Label>Full Name</Label>
@@ -249,7 +155,7 @@ export const TestimonialCardStory: StoryObj<typeof TestimonialCard> = {
       </GridItem>
       <GridItem>
         <TestimonialCard>
-          <TextSubtitle>"Something nice"</TextSubtitle>
+          <TextHeading>"Something nice"</TextHeading>
           <AvatarBlock>
             <AvatarButton size="lg" src="https://picsum.photos/200" />
             <Label>Full Name</Label>

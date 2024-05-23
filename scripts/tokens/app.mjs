@@ -4,7 +4,7 @@ import { getFileStyles, getFileVariables } from "./fromFigma.mjs";
 const JOIN_CHAR = "";
 const CONVERT_TO_REM = true;
 const NAMESPACE = "org.sds";
-const TOKEN_PREFIX = "sds-"
+const TOKEN_PREFIX = "sds-";
 
 const SKIP_REST_API = process.argv.includes("--skip-rest-api");
 const WRITE_DIR = "../../src";
@@ -32,7 +32,7 @@ async function initialize() {
     fs.writeFileSync("./tokens.json", JSON.stringify(tokensJSON, null, 2));
   }
   const { processed, themeCSS } = processTokenJSON(
-    JSON.parse(fs.readFileSync("./tokens.json"))
+    JSON.parse(fs.readFileSync("./tokens.json")),
   );
   const variableLookups = [
     ...Object.values(processed.typography.primitive)[0],
@@ -47,12 +47,12 @@ async function initialize() {
 
   const stylesCSS = await processStyleJSON(
     JSON.parse(fs.readFileSync("./styles.json")),
-    variableLookups
+    variableLookups,
   );
 
   fs.writeFileSync(
     `${WRITE_DIR}/theme.css`,
-    [...themeCSS, ...stylesCSS].join("\n")
+    [...themeCSS, ...stylesCSS].join("\n"),
   );
   console.log("Done!");
 }
@@ -99,7 +99,7 @@ function processTokenJSON(data) {
   ];
   for (let key in processed) {
     fileStringCSSLines.push(
-      ...fileStringCSSFromProcessedObject(processed[key], key)
+      ...fileStringCSSFromProcessedObject(processed[key], key),
     );
   }
 
@@ -127,7 +127,7 @@ In the future, themeing will be handled via @container style() queries
       responsiveSizeOrder,
       responsiveSizeTokenSuffix,
     },
-    key
+    key,
   ) {
     const lines = [];
     if (primitive) {
@@ -138,7 +138,7 @@ In the future, themeing will be handled via @container style() queries
           ":root {",
           drawCSSPropLines(values, "  "),
           "}",
-        ]
+        ],
       );
     }
     if (colorSchemes) {
@@ -150,7 +150,7 @@ In the future, themeing will be handled via @container style() queries
             ...[
               `/* ${key}: ${scheme} */`,
               `.${TOKEN_PREFIX}scheme-${key}-${scheme.replace(COLOR_THEME_LIGHT_REMOVE, "")} {`,
-            ]
+            ],
           );
         }
         lines.push(drawCSSPropLines(main[scheme], "  "), "}");
@@ -165,7 +165,7 @@ In the future, themeing will be handled via @container style() queries
               ...[
                 `  /* ${key}: ${scheme} */`,
                 `  .${TOKEN_PREFIX}scheme-${key}-${scheme.replace(COLOR_THEME_DARK_REMOVE, "")} {`,
-              ]
+              ],
             );
           }
           lines.push(drawCSSPropLines(main[scheme], "    "), "  }");
@@ -176,7 +176,7 @@ In the future, themeing will be handled via @container style() queries
       const regexp = new RegExp(`${responsiveSizeTokenSuffix}$`, "g");
       const sizes = responsiveSizeOrder.map((size) => {
         const found = main[size].find(({ property }) =>
-          Boolean(property.match(regexp))
+          Boolean(property.match(regexp)),
         );
         return found ? found.value : "9999999px";
       });
@@ -188,7 +188,7 @@ In the future, themeing will be handled via @container style() queries
               ":root {",
               drawCSSPropLines(main[size], "  "),
               "}",
-            ]
+            ],
           );
         } else {
           lines.push(
@@ -199,7 +199,7 @@ In the future, themeing will be handled via @container style() queries
               drawCSSPropLines(main[size], "    "),
               "  }",
               "}",
-            ]
+            ],
           );
         }
       });
@@ -215,7 +215,9 @@ In the future, themeing will be handled via @container style() queries
             first = true;
             lines.push(...[`/* ${key}: ${k} (default) */`, ":root {"]);
           } else {
-            lines.push(...[`/* ${key}: ${k} */`, `.${TOKEN_PREFIX}theme-${key}-${k} {`]);
+            lines.push(
+              ...[`/* ${key}: ${k} */`, `.${TOKEN_PREFIX}theme-${key}-${k} {`],
+            );
           }
           lines.push(...[drawCSSPropLines(main[k], "  "), "}"]);
         }
@@ -283,7 +285,7 @@ In the future, themeing will be handled via @container style() queries
       convertPixelToRem = CONVERT_TO_REM,
       prefix,
       removeFromLastKey = [],
-    }
+    },
   ) {
     const fullPrefix = `${TOKEN_PREFIX}${prefix}`;
     if (processed.primitive && primitiveKey) {
@@ -296,7 +298,7 @@ In the future, themeing will be handled via @container style() queries
         convertPixelToRem,
         removeFromLastKey,
         "",
-        fullPrefix ? [fullPrefix] : undefined
+        fullPrefix ? [fullPrefix] : undefined,
       );
     }
     traverse(
@@ -308,7 +310,7 @@ In the future, themeing will be handled via @container style() queries
       convertPixelToRem,
       removeFromLastKey,
       "",
-      fullPrefix ? [fullPrefix] : undefined
+      fullPrefix ? [fullPrefix] : undefined,
     );
   }
 
@@ -321,7 +323,7 @@ In the future, themeing will be handled via @container style() queries
     convertPixelToRem = CONVERT_TO_REM,
     removeFromLastKey = [],
     currentType = "",
-    keys = []
+    keys = [],
   ) {
     const lastKey = keys[keys.length - 1];
     if (lastKey) {
@@ -335,7 +337,7 @@ In the future, themeing will be handled via @container style() queries
         key
           .split(/[^\dA-Za-z]/)
           .map((k) => `${k.charAt(0).toUpperCase()}${k.slice(1)}`)
-          .join("")
+          .join(""),
       )
       .join("");
     // .replace(/^color/i, "");
@@ -357,7 +359,7 @@ In the future, themeing will be handled via @container style() queries
               primitiveKey,
               mainKey,
               convertPixelToRem,
-              prefix
+              prefix,
             ),
             type,
           });
@@ -379,7 +381,7 @@ In the future, themeing will be handled via @container style() queries
             primitiveKey,
             mainKey,
             convertPixelToRem,
-            ""
+            "",
           ),
           type,
         });
@@ -396,7 +398,7 @@ In the future, themeing will be handled via @container style() queries
             convertPixelToRem,
             removeFromLastKey,
             type,
-            [...keys, key]
+            [...keys, key],
           );
         }
       });
@@ -409,7 +411,7 @@ In the future, themeing will be handled via @container style() queries
     primitiveKey,
     mainKey,
     convertPixelToRem,
-    prefix = ""
+    prefix = "",
   ) {
     if (value.toString().charAt(0) === "{")
       return `var(--${value
@@ -419,9 +421,13 @@ In the future, themeing will be handled via @container style() queries
         .replace(/^\{/, "")
         .replace(/\}$/, "")})`;
     const valueIsDigits = value.toString().match(/^-?\d+$/);
-    const isNumeric = valueIsDigits && !property.match(/(weight)/);
+    const isRatio = property.match(/(ratio-)/);
+    const isNumeric =
+      valueIsDigits && !property.match(/(weight|ratio-)/) && !isRatio;
     if (isNumeric) {
       return convertPixelToRem ? `${parseInt(value) / 16}rem` : `${value}px`;
+    } else if (isRatio) {
+      return Math.round(value * 10000) / 10000;
     }
     if (property.match("family-mono")) {
       return `"${value}", monospace`;
@@ -457,7 +463,7 @@ async function processStyleJSON(data, variablesLookup) {
         `--${TOKEN_PREFIX}font-${name
           .replace(/^[^a-zA-Z0-9]+/, "")
           .replace(/[^a-zA-Z0-9]+/g, "-")
-          .toLowerCase()}: ${css};`
+          .toLowerCase()}: ${css};`,
       );
     } else if (type === "EFFECT") {
       const { name, effects } = style;
@@ -479,15 +485,17 @@ async function processStyleJSON(data, variablesLookup) {
       });
       if (shadows.length) {
         effectDefs.push(
-          `--${TOKEN_PREFIX}effects-shadows-${name}: ${shadows.join(", ")};`
+          `--${TOKEN_PREFIX}effects-shadows-${name}: ${shadows.join(", ")};`,
         );
       }
       if (filters.length) {
-        effectDefs.push(`--${TOKEN_PREFIX}effects-filter-${name}: ${filters[0]};`);
+        effectDefs.push(
+          `--${TOKEN_PREFIX}effects-filter-${name}: ${filters[0]};`,
+        );
       }
       if (backdropFilters.length) {
         effectDefs.push(
-          `--${TOKEN_PREFIX}effects-backdrop-filter-${name}: ${backdropFilters[0]};`
+          `--${TOKEN_PREFIX}effects-backdrop-filter-${name}: ${backdropFilters[0]};`,
         );
       }
     }

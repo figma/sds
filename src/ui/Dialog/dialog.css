@@ -35,7 +35,7 @@
   flex-direction: column;
   padding-bottom: var(--dialog-padding-y);
   max-width: calc(
-    var(--sds-responsive-width-container-max) *
+    var(--sds-responsive-ratio-dialog-max) *
       var(--sds-responsive-width-device-min)
   );
   padding-top: var(--dialog-padding-y);

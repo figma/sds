@@ -365,23 +365,6 @@
   },
   {
     "type": "TEXT",
-    "name": "Title Hero",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10189"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10188"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10190"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
     "name": "Title Page",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
@@ -394,6 +377,23 @@
     "fontWeight": {
       "type": "VARIABLE_ALIAS",
       "id": "VariableID:58:8572"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Title Hero",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10189"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10188"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10190"
     },
     "fontStyle": "normal"
   },

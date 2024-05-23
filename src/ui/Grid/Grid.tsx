@@ -4,51 +4,47 @@ import "./grid.css";
 
 type TShirtSizes = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 
-type GridAlign = "center" | "start" | "end";
+type GridAlign = "center" | "start" | "end" | "stretch";
 type GridDirection = "row" | "column";
 type GridGap = Exclude<TShirtSizes, "xxl">;
-type GridPadding = TShirtSizes;
 
-export interface GridProps {
-  direction?: GridDirection;
+export type GridProps = {
   alignPrimary?: GridAlign;
   alignSecondary?: GridAlign;
   gap?: GridGap;
-  padding?: GridPadding;
-  paddingX?: GridPadding;
-  paddingY?: GridPadding;
-}
+} & (
+  | {
+      auto?: never;
+    }
+  | {
+      auto: true;
+      direction?: GridDirection;
+    }
+);
+
 export function Grid({
   children,
-  direction = "row",
   alignPrimary,
   alignSecondary,
-  gap = "sm",
-  padding,
-  paddingX,
-  paddingY,
+  gap,
+  ...props
 }: GridProps & { children: React.ReactNode }) {
   const classNames = clsx(
     "grid",
-    `grid-gap-${gap}`,
-    `grid-direction-${direction}`,
-    padding && `grid-padding-${padding}`,
-    paddingX && `grid-padding-x-${paddingX}`,
-    paddingY && `grid-padding-y-${paddingY}`,
+    gap && `grid-gap-${gap}`,
+    props.auto && "grid-auto",
+    props.auto && `grid-direction-${props.direction || "row"}`,
     alignPrimary && `grid-align-primary-${alignPrimary}`,
     alignSecondary && `grid-align-secondary-${alignSecondary}`,
   );
   return <div className={classNames}>{children}</div>;
 }
 
-export type GridItemProps = React.ComponentPropsWithoutRef<"div">;
-export function GridItem({ children }: GridItemProps) {
-  const classNames = clsx("grid-item");
-  return <div className={classNames}>{children}</div>;
-}
-
-export type GridCenterProps = React.ComponentPropsWithoutRef<"div">;
-export function GridCenter({ children }: GridCenterProps) {
-  const classNames = clsx("grid-center");
+type GridItemSize = "full" | "major" | "minor" | "half";
+export type GridItemProps = React.ComponentPropsWithoutRef<"div"> & {
+  size?: GridItemSize;
+};
+export function GridItem({ children, size }: GridItemProps) {
+  const classNames = clsx("grid-item", size && `grid-item-size-${size}`);
   return <div className={classNames}>{children}</div>;
 }
