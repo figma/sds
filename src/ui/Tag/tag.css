@@ -45,23 +45,23 @@
 }
 
 .tag-scheme-default {
-  --tag-color: var(--sds-color-text-default-default);
-  --tag-icon: var(--sds-color-icon-default-default);
-  --tag-background-color: var(--sds-color-bg-default-tertiary);
+  --tag-color: var(--sds-color-text-brand-onbrand);
+  --tag-icon: var(--sds-color-icon-brand-onbrand);
+  --tag-background-color: var(--sds-color-bg-brand-default);
 
   &[data-hovered],
   &:has(.tag-remove-button[data-hovered]) {
-    --tag-background-color: var(--sds-color-bg-default-tertiary-hover);
+    --tag-background-color: var(--sds-color-bg-brand-hover);
   }
 
   &.tag-variant-secondary {
-    --tag-color: var(--sds-color-text-default-default);
-    --tag-icon: var(--sds-color-icon-default-default);
-    --tag-background-color: var(--sds-color-bg-default-secondary);
+    --tag-color: var(--sds-color-text-brand-onbrand-tertiary);
+    --tag-icon: var(--sds-color-icon-brand-onbrand-tertiary);
+    --tag-background-color: var(--sds-color-bg-brand-tertiary);
 
     &[data-hovered],
     &:has(.tag-remove-button[data-hovered]) {
-      --tag-background-color: var(--sds-color-bg-default-secondary-hover);
+      --tag-background-color: var(--sds-color-bg-default-tertiary-hover);
     }
   }
 }
@@ -149,6 +149,25 @@
     }
   }
 }
+.tag-scheme-neutral {
+  --tag-color: var(--sds-color-text-default-default);
+  --tag-icon: var(--sds-color-icon-default-default);
+  --tag-background-color: var(--sds-color-bg-default-tertiary);
+
+  &[data-hovered],
+  &:has(.tag-remove-button[data-hovered]) {
+    --tag-background-color: var(--sds-color-bg-default-tertiary-hover);
+  }
+
+  &.tag-variant-secondary {
+    --tag-background-color: var(--sds-color-bg-default-secondary);
+
+    &[data-hovered],
+    &:has(.tag-remove-button[data-hovered]) {
+      --tag-background-color: var(--sds-color-bg-default-secondary-hover);
+    }
+  }
+}
 
 .tag-toggle {
   --tag-color: var(--sds-color-text-brand-tertiary);
@@ -156,6 +175,8 @@
   --tag-border-color: var(--sds-color-border-brand-default);
   box-shadow: inset 0 0 0 var(--sds-responsive-border-width)
     var(--tag-border-color);
+  cursor: pointer;
+  outline: none;
   &[data-selected] {
     --tag-color: var(--sds-color-text-brand-onbrand);
     --tag-background-color: var(--sds-color-bg-brand-default);

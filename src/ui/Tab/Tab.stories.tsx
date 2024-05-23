@@ -24,19 +24,19 @@ export const Default: Story = {
           <Tab id="neutral">Nuetral</Tab>
         </TabList>
         <TabPanel id="default">
-          <Grid paddingY="sm">This is the default thing</Grid>
+          <Grid>This is the default thing</Grid>
         </TabPanel>
         <TabPanel id="danger">
-          <Grid paddingY="sm">Some danger stuff</Grid>
+          <Grid>Some danger stuff</Grid>
         </TabPanel>
         <TabPanel id="positive">
-          <Grid paddingY="sm">Some positive stuff</Grid>
+          <Grid>Some positive stuff</Grid>
         </TabPanel>
         <TabPanel id="warning">
-          <Grid paddingY="sm">Some warning stuff</Grid>
+          <Grid>Some warning stuff</Grid>
         </TabPanel>
         <TabPanel id="neutral">
-          <Grid paddingY="sm">Some neutral stuff</Grid>
+          <Grid>Some neutral stuff</Grid>
         </TabPanel>
       </Tabs>
     </Grid>

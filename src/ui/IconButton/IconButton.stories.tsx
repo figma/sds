@@ -36,7 +36,7 @@ export const All: Story = {
     isDisabled: false,
   },
   render: ({ ...props }) => (
-    <Grid direction="column">
+    <Grid auto direction="column">
       {["default", "purple", "blue", "teal"].map((theme) => (
         <div key={theme} className={`sds-theme-${theme}`}>
           <Grid alignPrimary="center">
