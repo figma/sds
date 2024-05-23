@@ -1,3 +1,40 @@
+.text-body-base {
+  font: var(--sds-font-body-base);
+}
+.text-body-small {
+  font: var(--sds-font-body-small);
+}
+.text-body-strong {
+  font: var(--sds-font-body-strong);
+}
+.text-body-emphasis {
+  font: var(--sds-font-body-emphasis);
+}
+.text-body-link {
+  font: var(--sds-font-body-link);
+}
+.text-input {
+  font: var(--sds-font-input);
+}
+.text-body-code {
+  font: var(--sds-font-body-code);
+}
+.text-subtitle {
+  font: var(--sds-font-subtitle);
+}
+.text-subheading {
+  font: var(--sds-font-subheading);
+}
+.text-heading {
+  font: var(--sds-font-heading);
+}
+.text-title-hero {
+  font: var(--sds-font-title-hero);
+}
+.text-title-page {
+  font: var(--sds-font-title-page);
+}
+
 .text {
   line-height: var(--global-line-height-paragraph);
   font: var(--sds-font-body-base);

@@ -1,24 +1,7 @@
 [
   {
     "type": "TEXT",
-    "name": "Display",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10189"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10188"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:58:8572"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
-    "name": "Body/Base",
+    "name": "Body Base",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
       "id": "VariableID:66:10180"
@@ -35,7 +18,7 @@
   },
   {
     "type": "TEXT",
-    "name": "Body/Small",
+    "name": "Body Small",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
       "id": "VariableID:66:10216"
@@ -52,7 +35,7 @@
   },
   {
     "type": "TEXT",
-    "name": "Body/Bold",
+    "name": "Body Strong",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
       "id": "VariableID:66:10180"
@@ -69,7 +52,7 @@
   },
   {
     "type": "TEXT",
-    "name": "Body/Italic",
+    "name": "Body Emphasis",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
       "id": "VariableID:66:10180"
@@ -85,7 +68,7 @@
   },
   {
     "type": "TEXT",
-    "name": "Body/Link",
+    "name": "Body Link",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
       "id": "VariableID:66:10180"
@@ -97,23 +80,6 @@
     "fontWeight": {
       "type": "VARIABLE_ALIAS",
       "id": "VariableID:66:10181"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
-    "name": "Caption",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:9:11196"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:9:11201"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:9:11183"
     },
     "fontStyle": "normal"
   },
@@ -136,7 +102,7 @@
   },
   {
     "type": "TEXT",
-    "name": "Code",
+    "name": "Body Code",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
       "id": "VariableID:66:10183"
@@ -156,40 +122,6 @@
     "name": "Subtitle",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10213"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10191"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10193"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
-    "name": "Subheading",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10186"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10185"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10187"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
-    "name": "Heading",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
       "id": "VariableID:66:10177"
     },
     "fontFamily": {
@@ -204,18 +136,35 @@
   },
   {
     "type": "TEXT",
-    "name": "Hero",
+    "name": "Subheading",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10189"
+      "id": "VariableID:2103:22308"
     },
     "fontFamily": {
       "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10188"
+      "id": "VariableID:2103:22306"
     },
     "fontWeight": {
       "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10190"
+      "id": "VariableID:2103:22310"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Heading",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10186"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10185"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10187"
     },
     "fontStyle": "normal"
   },
@@ -413,6 +362,40 @@
         }
       }
     ]
+  },
+  {
+    "type": "TEXT",
+    "name": "Title Hero",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10189"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10188"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10190"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Title Page",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10197"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:58:8569"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:58:8572"
+    },
+    "fontStyle": "normal"
   },
   {
     "key": "438be94d4f8e3c60b6551865b81a02701761ccd3",
