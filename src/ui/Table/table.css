@@ -63,7 +63,8 @@
 
 .table-column {
   color: var(--sds-color-text-default-secondary);
-  font: var(--sds-font-body-small-bold);
+  font: var(--sds-font-body-small);
+  font-weight: var(--sds-typography-weight-bold);
 }
 
 .table-column-inner {
@@ -85,7 +86,7 @@
 }
 
 .table-cell {
-  font: var(--sds-font-body-small-regular);
+  font: var(--sds-font-body-small);
   position: relative;
 }
 .table-cell-link {

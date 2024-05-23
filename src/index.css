@@ -38,7 +38,7 @@ select {
 
 pre,
 code {
-  font: var(--sds-font-code);
+  font: var(--sds-font-body-code);
 }
 
 h1,

@@ -28,7 +28,7 @@
       margin-top: var(--sds-size-gap-cs);
     }
     > .message-title {
-      font: var(--sds-font-body-bold);
+      font: var(--sds-font-body-strong);
     }
     > .message-actions {
       margin-top: var(--sds-size-gap-md);

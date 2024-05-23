@@ -23,7 +23,7 @@
 }
 .menu-heading {
   color: var(--sds-color-text-default-secondary);
-  font: var(--sds-font-body-bold);
+  font: var(--sds-font-body-strong);
   padding: var(--sds-size-padding-sm) var(--sds-size-padding-lg)
     var(--sds-size-padding-xs);
 }

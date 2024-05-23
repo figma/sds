@@ -47,7 +47,7 @@
 
   .accordion-item-title,
   .accordion-item-title > button {
-    font: var(--sds-font-body-bold);
+    font: var(--sds-font-body-strong);
   }
 
   .accordion-item-indicator {

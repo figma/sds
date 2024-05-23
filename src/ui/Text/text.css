@@ -35,37 +35,9 @@
   font: var(--sds-font-title-page);
 }
 
-.text {
-  line-height: var(--global-line-height-paragraph);
-  font: var(--sds-font-body-base);
-}
-.text-code {
-  font: var(--sds-font-code);
-}
-
 .link.text-link {
   color: var(--sds-color-text-brand-secondary);
   text-decoration: underline;
-}
-
-.text-strong {
-  font: var(--sds-font-body-strong);
-}
-
-.text-heading {
-  font: var(--sds-font-heading);
-}
-
-.text-subheading {
-  font: var(--sds-font-subheading);
-}
-
-.text-subtitle {
-  font: var(--sds-font-subtitle);
-}
-
-.text-hero {
-  font: var(--sds-font-subtitle);
 }
 
 .text-list {
