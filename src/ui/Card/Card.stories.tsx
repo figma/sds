@@ -4,8 +4,9 @@ import "react";
 import { ComponentProps } from "react";
 import { Button, ButtonGroup } from "ui/Button/Button";
 import { Card } from "ui/Card/Card";
+import { Grid, GridItem } from "ui/Grid/Grid";
 import { Image } from "ui/Image/Image";
-import { Text, TextSubtitle } from "ui/Text/Text";
+import { Text, TextHeading } from "ui/Text/Text";
 
 const meta: Meta<typeof Card> = {
   component: Card,
@@ -15,7 +16,7 @@ const meta: Meta<typeof Card> = {
 export default meta;
 type Story = StoryObj<
   ComponentProps<typeof Card> & {
-    "[media]": "none" | "icon" | "image";
+    "[asset]": "none" | "icon" | "image";
     "[interaction]": boolean;
   }
 >;
@@ -24,7 +25,7 @@ export const Default: Story = {
   args: {
     direction: "vertical",
     variant: "default",
-    "[media]": "none",
+    "[asset]": "none",
     "[interaction]": false,
   },
   argTypes: {
@@ -34,20 +35,20 @@ export const Default: Story = {
     },
     variant: {
       control: { type: "select" },
-      options: ["default", "padded"],
+      options: ["default", "padded", "stroke"],
     },
-    "[media]": {
+    "[asset]": {
       control: { type: "select" },
       options: ["none", "icon", "image"],
     },
   },
-  render: ({ "[media]": _media, "[interaction]": _interaction, ...args }) => (
+  render: ({ "[asset]": _asset, "[interaction]": _interaction, ...args }) => (
     <Card
       {...args}
-      media={
-        _media === "icon" ? (
+      asset={
+        _asset === "icon" ? (
           <IconActivity size="32" />
-        ) : _media === "image" ? (
+        ) : _asset === "image" ? (
           <Image
             alt="A nice image"
             aspectRatio="1-1"
@@ -64,7 +65,7 @@ export const Default: Story = {
           : undefined
       }
     >
-      <TextSubtitle>Subtitle</TextSubtitle>
+      <TextHeading>This is a card</TextHeading>
       <Text>
         Answer the frequently asked question in a simple sentence, a longish
         paragraph, or even in a list.
@@ -73,5 +74,47 @@ export const Default: Story = {
         <Button variant="secondary">Hello there!</Button>
       </ButtonGroup>
     </Card>
+  ),
+};
+
+export const Bulk: StoryObj<typeof Card> = {
+  render: () => (
+    <Grid gap="xl" auto direction="column">
+      <Grid gap="lg" auto>
+        {[1, 2, 3, 4].map((i) => (
+          <GridItem key={i} size="minor">
+            <Card asset={<IconActivity size="32" />}>
+              <TextHeading>Subheading</TextHeading>
+              <Text>
+                Body text for whatever you’d like to say. Add main takeaway
+                points, quotes, anecdotes, or even a very very short story.{" "}
+              </Text>
+              <ButtonGroup>
+                <Button variant="secondary">Some action</Button>
+              </ButtonGroup>
+            </Card>
+          </GridItem>
+        ))}
+        {[1, 2, 3, 4].map((i) => (
+          <GridItem key={i} size="minor">
+            <Card
+              variant="padded"
+              asset={
+                <Image alt="Accessibility!" src="https://picsum.photos/500" />
+              }
+            >
+              <TextHeading>Subheading</TextHeading>
+              <Text>
+                Body text for whatever you’d like to say. Add main takeaway
+                points, quotes, anecdotes, or even a very very short story.{" "}
+              </Text>
+              <ButtonGroup>
+                <Button variant="secondary">Some action</Button>
+              </ButtonGroup>
+            </Card>
+          </GridItem>
+        ))}
+      </Grid>
+    </Grid>
   ),
 };

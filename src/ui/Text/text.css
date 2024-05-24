@@ -13,6 +13,10 @@
 .text-body-link {
   font: var(--sds-font-body-link);
 }
+.text-body-link {
+  color: inherit;
+  text-decoration: underline;
+}
 .text-input {
   font: var(--sds-font-input);
 }
@@ -35,11 +39,6 @@
   font: var(--sds-font-title-page);
 }
 
-.link.text-link {
-  color: var(--sds-color-text-brand-secondary);
-  text-decoration: underline;
-}
-
 .text-list {
   color: var(--sds-color-text-default-secondary);
   display: flex;
@@ -50,4 +49,14 @@
 }
 .text-list-item {
   font: var(--sds-font-body);
+}
+
+.text-price {
+  align-items: end;
+  display: flex;
+  gap: var(--sds-size-gap-sm);
+
+  > .text-body-small {
+    margin-bottom: var(--sds-size-gap-md);
+  }
 }

@@ -8,16 +8,16 @@
   &.card-direction-vertical {
     gap: var(--sds-size-gap-sm);
     grid-template-areas: "content";
-    &:has(.card-media) {
-      grid-template-areas: "media" "content";
+    &:has(.card-asset) {
+      grid-template-areas: "asset" "content";
     }
   }
 
   &.card-direction-horizontal {
     gap: var(--sds-size-gap-lg);
     grid-template-areas: "content";
-    &:has(.card-media) {
-      grid-template-areas: "media content";
+    &:has(.card-asset) {
+      grid-template-areas: "asset content";
       grid-template-columns: auto 1fr;
     }
   }
@@ -41,9 +41,13 @@
     background: var(--sds-color-bg-default-default-hover);
   }
 
-  .card-media {
+  .card-asset {
     display: flex;
-    grid-area: media;
+    grid-area: asset;
+
+    .icon {
+      --icon-color: var(--sds-color-icon-default-default);
+    }
   }
 
   .card-content {
@@ -52,6 +56,10 @@
     flex-direction: column;
     gap: var(--sds-size-gap-sm);
     grid-area: content;
+
+    .text-body-base {
+      color: var(--sds-color-text-default-secondary);
+    }
 
     .button-group {
       margin-top: var(--sds-size-gap-lg);

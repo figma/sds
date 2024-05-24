@@ -8,7 +8,7 @@ export type CardProps = ComponentPropsWithoutRef<"div"> & {
   interaction?: Omit<AnchorOrButtonProps, "aria-label"> & {
     "aria-label": string;
   };
-  media?: React.ReactNode;
+  asset?: React.ReactNode;
   variant?: "default" | "stroke" | "padded";
 };
 export function Card({
@@ -17,7 +17,7 @@ export function Card({
   direction = "vertical",
   interaction,
   variant = "default",
-  media,
+  asset,
   ...props
 }: CardProps) {
   const classNames = clsx(
@@ -28,7 +28,7 @@ export function Card({
   );
   return (
     <div className={classNames} {...props}>
-      {media && <div className="card-media">{media}</div>}
+      {asset && <div className="card-asset">{asset}</div>}
       <div className="card-content">{children}</div>
       {interaction && (
         <AnchorOrButton className="card-interaction" {...interaction} />

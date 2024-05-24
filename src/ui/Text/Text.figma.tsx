@@ -7,6 +7,7 @@ import {
   TextLink,
   TextList,
   TextListItem,
+  TextPrice,
   TextSmall,
   TextStrong,
   TextSubheading,
@@ -41,6 +42,8 @@ const FIGMA_URL_TEXT_LIST =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2010-10204&m=dev";
 const FIGMA_URL_TEXT_LIST_ITEM =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2077-11663&m=dev";
+const FIGMA_URL_TEXT_PRICE =
+  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2142-11622&t=OLOZiI4mAFpUQIOw-11";
 
 figma.connect(TextTitleHero, FIGMA_URL_TEXT_TITLE_HERO, {
   props: { text: figma.string("Text") },
@@ -93,4 +96,14 @@ figma.connect(TextList, FIGMA_URL_TEXT_LIST, {
 figma.connect(TextListItem, FIGMA_URL_TEXT_LIST_ITEM, {
   props: { text: figma.string("Text") },
   example: ({ text }) => <TextListItem>{text}</TextListItem>,
+});
+figma.connect(TextPrice, FIGMA_URL_TEXT_PRICE, {
+  props: {
+    label: figma.string("Label"),
+    currency: figma.string("Currency"),
+    price: figma.string("Price"),
+  },
+  example: ({ label, currency, price }) => (
+    <TextPrice label={label} currency={currency} price={price} />
+  ),
 });

@@ -1,9 +1,7 @@
 import { clsx } from "clsx";
 import { ComponentPropsWithoutRef } from "react";
 import {
-  Heading as RACHeading,
   Text as RACText,
-  type HeadingProps as RACHeadingProps,
   type TextProps as RACTextProps,
 } from "react-aria-components";
 import { Link } from "ui/Link/Link";
@@ -17,19 +15,37 @@ export function Text({ className, elementType = "p", ...props }: TextProps) {
   );
 }
 export type TextSmallProps = RACTextProps;
-export function TextSmall({ className, ...props }: TextSmallProps) {
+export function TextSmall({
+  className,
+  elementType = "small",
+  ...props
+}: TextSmallProps) {
   const classNames = clsx(className, "text-body-small");
-  return <RACText className={classNames} {...props} />;
+  return (
+    <RACText className={classNames} elementType={elementType} {...props} />
+  );
 }
-export type TextStrongProps = ComponentPropsWithoutRef<"strong">;
-export function TextStrong({ className, ...props }: TextStrongProps) {
+export type TextStrongProps = RACTextProps;
+export function TextStrong({
+  className,
+  elementType = "strong",
+  ...props
+}: TextStrongProps) {
   const classNames = clsx(className, "text-body-strong");
-  return <strong className={classNames} {...props} />;
+  return (
+    <RACText className={classNames} elementType={elementType} {...props} />
+  );
 }
-export type TextEmphasisProps = ComponentPropsWithoutRef<"em">;
-export function TextEmphasis({ className, ...props }: TextEmphasisProps) {
+export type TextEmphasisProps = RACTextProps;
+export function TextEmphasis({
+  className,
+  elementType,
+  ...props
+}: TextEmphasisProps) {
   const classNames = clsx(className, "text-body-emphasis");
-  return <em className={classNames} {...props} />;
+  return (
+    <RACText className={classNames} elementType={elementType} {...props} />
+  );
 }
 export type TextLinkProps = ComponentPropsWithoutRef<typeof Link>;
 export function TextLink({ className, ...props }: TextLinkProps) {
@@ -42,10 +58,10 @@ export function TextCode({ className, ...props }: TextCodeProps) {
   return <RACText className={classNames} {...props} />;
 }
 
-export type TextListItemProps = RACTextProps;
+export type TextListItemProps = ComponentPropsWithoutRef<"li">;
 export function TextListItem({ className, ...props }: TextListItemProps) {
   const classNames = clsx(className, "text-list-item");
-  return <RACText elementType="li" className={classNames} {...props} />;
+  return <li className={classNames} {...props} />;
 }
 
 export type TextListProps = ComponentPropsWithoutRef<"ul">;
@@ -60,28 +76,80 @@ export function TextInput({ className, ...props }: TextInputProps) {
   return <RACText className={classNames} {...props} />;
 }
 
-export type TextSubtitleProps = RACHeadingProps;
-export function TextSubtitle({ className, ...props }: TextSubtitleProps) {
-  const classNames = clsx(className, "text-subtitle");
-  return <RACHeading className={classNames} {...props} />;
-}
-export type TextSubheadingProps = RACHeadingProps;
-export function TextSubheading({ className, ...props }: TextSubheadingProps) {
-  const classNames = clsx(className, "text-subheading");
-  return <RACHeading className={classNames} {...props} />;
-}
-export type TextHeadingProps = RACHeadingProps;
-export function TextHeading({ className, ...props }: TextHeadingProps) {
-  const classNames = clsx(className, "text-heading");
-  return <RACHeading className={classNames} {...props} />;
-}
-export type TextTitleHeroProps = RACHeadingProps;
-export function TextTitleHero({ className, ...props }: TextTitleHeroProps) {
+export type TextTitleHeroProps = RACTextProps;
+export function TextTitleHero({
+  className,
+  elementType = "h1",
+  ...props
+}: TextTitleHeroProps) {
   const classNames = clsx(className, "text-title-hero");
-  return <RACHeading className={classNames} {...props} />;
+  return (
+    <RACText className={classNames} elementType={elementType} {...props} />
+  );
 }
-export type TextTitlePageProps = RACHeadingProps;
-export function TextTitlePage({ className, ...props }: TextTitlePageProps) {
+export type TextTitlePageProps = RACTextProps;
+export function TextTitlePage({
+  className,
+  elementType = "h2",
+  ...props
+}: TextTitlePageProps) {
   const classNames = clsx(className, "text-title-page");
-  return <RACHeading className={classNames} {...props} />;
+  return (
+    <RACText className={classNames} elementType={elementType} {...props} />
+  );
+}
+export type TextSubtitleProps = RACTextProps;
+export function TextSubtitle({
+  className,
+  elementType = "p",
+  ...props
+}: TextSubtitleProps) {
+  const classNames = clsx(className, "text-subtitle");
+  return (
+    <RACText className={classNames} elementType={elementType} {...props} />
+  );
+}
+export type TextHeadingProps = RACTextProps;
+export function TextHeading({
+  className,
+  elementType = "h3",
+  ...props
+}: TextHeadingProps) {
+  const classNames = clsx(className, "text-heading");
+  return (
+    <RACText className={classNames} elementType={elementType} {...props} />
+  );
+}
+export type TextSubheadingProps = RACTextProps;
+export function TextSubheading({
+  className,
+  elementType = "p",
+  ...props
+}: TextSubheadingProps) {
+  const classNames = clsx(className, "text-subheading");
+  return (
+    <RACText className={classNames} elementType={elementType} {...props} />
+  );
+}
+
+export type TextPriceProps = RACTextProps & {
+  currency: string;
+  price: string;
+  label?: string;
+};
+export function TextPrice({
+  className,
+  currency,
+  price,
+  label,
+  ...props
+}: TextPriceProps) {
+  const classNames = clsx(className, "text-price");
+  return (
+    <RACText elementType="p" className={classNames} {...props}>
+      <TextTitlePage elementType="span">{currency}</TextTitlePage>
+      <TextTitlePage elementType="span">{price}</TextTitlePage>
+      {label && <TextSmall>{label}</TextSmall>}
+    </RACText>
+  );
 }

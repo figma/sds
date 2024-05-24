@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { IconActivity } from "icons";
 import {
   AvatarBlock,
   AvatarButton,
@@ -17,12 +16,7 @@ import {
   TextListItem,
   TextTitlePage,
 } from "ui";
-import {
-  BasicCard,
-  PricingCard,
-  ProductInfoCard,
-  TestimonialCard,
-} from "./Cards";
+import { PricingCard, ProductInfoCard, TestimonialCard } from "./Cards/Cards";
 
 const meta: Meta<typeof Card> = {
   component: Card,
@@ -30,48 +24,6 @@ const meta: Meta<typeof Card> = {
   parameters: { layout: "centered" },
 };
 export default meta;
-
-export const BasicCardStory: StoryObj<typeof BasicCard> = {
-  render: () => (
-    <Grid gap="xl" auto direction="column">
-      <Grid gap="lg" auto>
-        {[1, 2, 3, 4].map((i) => (
-          <GridItem key={i} size="minor">
-            <BasicCard media={<IconActivity size="32" />}>
-              <TextHeading>Subheading</TextHeading>
-              <Text>
-                Body text for whatever you’d like to say. Add main takeaway
-                points, quotes, anecdotes, or even a very very short story.{" "}
-              </Text>
-              <ButtonGroup>
-                <Button variant="secondary">Some action</Button>
-              </ButtonGroup>
-            </BasicCard>
-          </GridItem>
-        ))}
-        {[1, 2, 3, 4].map((i) => (
-          <GridItem key={i} size="minor">
-            <BasicCard
-              variant="padded"
-              media={
-                <Image alt="Accessibility!" src="https://picsum.photos/500" />
-              }
-            >
-              <TextHeading>Subheading</TextHeading>
-              <Text>
-                Body text for whatever you’d like to say. Add main takeaway
-                points, quotes, anecdotes, or even a very very short story.{" "}
-              </Text>
-              <ButtonGroup>
-                <Button variant="secondary">Some action</Button>
-              </ButtonGroup>
-            </BasicCard>
-          </GridItem>
-        ))}
-      </Grid>
-    </Grid>
-  ),
-};
 
 export const PricingCardStory: StoryObj<typeof PricingCard> = {
   render: () => (
@@ -106,7 +58,7 @@ export const ProductInfoCardStory: StoryObj<typeof ProductInfoCard> = {
     <Grid auto gap="lg" direction="row">
       <GridItem>
         <ProductInfoCard
-          media={<Image alt="Accessibility!" src="https://picsum.photos/250" />}
+          asset={<Image alt="Accessibility!" src="https://picsum.photos/250" />}
         >
           <TextHeading>Product</TextHeading>
           <TextTitlePage>$5</TextTitlePage>
@@ -117,7 +69,7 @@ export const ProductInfoCardStory: StoryObj<typeof ProductInfoCard> = {
       </GridItem>
       <GridItem>
         <ProductInfoCard
-          media={<Image alt="Accessibility!" src="https://picsum.photos/250" />}
+          asset={<Image alt="Accessibility!" src="https://picsum.photos/250" />}
         >
           <TextHeading>Product</TextHeading>
           <TextTitlePage>$5</TextTitlePage>
@@ -132,8 +84,8 @@ export const ProductInfoCardStory: StoryObj<typeof ProductInfoCard> = {
 
 export const TestimonialCardStory: StoryObj<typeof TestimonialCard> = {
   render: () => (
-    <Grid auto gap="lg" direction="row">
-      <GridItem>
+    <Grid auto type="third" gap="lg" direction="row">
+      <GridItem size="minor">
         <TestimonialCard>
           <TextHeading>"Something nice"</TextHeading>
           <AvatarBlock>
@@ -143,7 +95,7 @@ export const TestimonialCardStory: StoryObj<typeof TestimonialCard> = {
           </AvatarBlock>
         </TestimonialCard>
       </GridItem>
-      <GridItem>
+      <GridItem size="minor">
         <TestimonialCard>
           <TextHeading>"Something nice"</TextHeading>
           <AvatarBlock>
@@ -153,7 +105,7 @@ export const TestimonialCardStory: StoryObj<typeof TestimonialCard> = {
           </AvatarBlock>
         </TestimonialCard>
       </GridItem>
-      <GridItem>
+      <GridItem size="minor">
         <TestimonialCard>
           <TextHeading>"Something nice"</TextHeading>
           <AvatarBlock>
