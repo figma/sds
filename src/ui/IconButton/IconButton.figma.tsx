@@ -1,23 +1,55 @@
 import figma from "@figma/code-connect";
-import { IconButton } from "./IconButton";
+import { DestructiveIconButton, IconButton } from "./IconButton";
 
 const FIGMA_URL_ICON_BUTTON =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=11-11508";
 
+const sharedProps = {
+  icon: figma.instance("Icon"),
+  isDisabled: figma.enum("State", {
+    Disabled: true,
+  }),
+  size: figma.enum("Size", {
+    sm: "sm",
+  }),
+  variant: figma.enum("Variant", {
+    Secondary: "secondary",
+    Stroke: "stroke",
+    Subtle: "subtle",
+  }),
+};
+
 figma.connect(IconButton, FIGMA_URL_ICON_BUTTON, {
-  props: {
-    icon: figma.instance("Icon"),
-    isDisabled: figma.enum("State", {
-      Disabled: true,
-    }),
+  variant: {
+    Scheme: "Default",
   },
-  example: ({ isDisabled, icon }) => (
+  props: sharedProps,
+  example: ({ isDisabled, icon, size, variant }) => (
     <IconButton
       aria-label="Write a nice description of the action."
       onPress={() => {}}
+      size={size}
+      variant={variant}
       isDisabled={isDisabled}
     >
       {icon}
     </IconButton>
+  ),
+});
+
+figma.connect(DestructiveIconButton, FIGMA_URL_ICON_BUTTON, {
+  variant: {
+    Scheme: "Danger",
+  },
+  props: sharedProps,
+  example: ({ isDisabled, size, icon }) => (
+    <DestructiveIconButton
+      aria-label="Write a nice description of the action."
+      onPress={() => {}}
+      size={size}
+      isDisabled={isDisabled}
+    >
+      {icon}
+    </DestructiveIconButton>
   ),
 });

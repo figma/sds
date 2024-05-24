@@ -3,7 +3,6 @@ import { Button, ButtonGroup, DestructiveButton } from "./Button";
 
 const FIGMA_URL_BUTTON =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=9762:426";
-// "https://www.figma.com/file/4HOiV2Yd9xDbTnp0j8hU6m?node-id=2-6"
 const FIGMA_URL_BUTTON_GROUP =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2072-9432&t=4T0FUMZf0IfQUWoa-11";
 
