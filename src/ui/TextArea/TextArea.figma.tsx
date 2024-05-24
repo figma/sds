@@ -1,11 +1,12 @@
 import figma from "@figma/code-connect";
-import { TextArea } from "./TextArea";
+import { TextArea, TextAreaField } from "./TextArea";
 
-const FIGMA_URL_TEXTAREA =
+const FIGMA_URL_TEXT_AREA =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=9762:1135";
-// "https://www.figma.com/file/4HOiV2Yd9xDbTnp0j8hU6m?node-id=29-1560"
+const FIGMA_URL_TEXT_AREA_FIELD =
+  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=9762-3088&m=dev";
 
-figma.connect(TextArea, FIGMA_URL_TEXTAREA, {
+figma.connect(TextArea, FIGMA_URL_TEXT_AREA, {
   props: {
     value: figma.enum("Value Type", {
       Default: figma.string("Value"),
@@ -24,4 +25,17 @@ figma.connect(TextArea, FIGMA_URL_TEXTAREA, {
       {value}
     </TextArea>
   ),
+});
+
+figma.connect(TextAreaField, FIGMA_URL_TEXT_AREA_FIELD, {
+  props: {
+    isDisabled: figma.enum("State", { Disabled: true }),
+    children: figma.children([
+      "Label",
+      "Text Area",
+      "Description",
+      "Error Message",
+    ]),
+  },
+  example: ({ children }) => <TextAreaField>{children}</TextAreaField>,
 });

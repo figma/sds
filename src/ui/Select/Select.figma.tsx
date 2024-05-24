@@ -1,9 +1,10 @@
 import figma from "@figma/code-connect";
-import { Select, SelectItem } from "./Select";
+import { Select, SelectField, SelectItem } from "./Select";
 
 const FIGMA_URL_SELECT =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=9762:1162";
-// "https://www.figma.com/file/4HOiV2Yd9xDbTnp0j8hU6m?node-id=29-1471"
+const FIGMA_URL_SELECT_FIELD =
+  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2136-2336&m=dev";
 
 figma.connect(Select, FIGMA_URL_SELECT, {
   props: {
@@ -30,4 +31,17 @@ figma.connect(Select, FIGMA_URL_SELECT, {
       <SelectItem>{item5}</SelectItem>
     </Select>
   ),
+});
+
+figma.connect(SelectField, FIGMA_URL_SELECT_FIELD, {
+  props: {
+    isDisabled: figma.enum("State", { Disabled: true }),
+    children: figma.children([
+      "Label",
+      "Select",
+      "Description",
+      "Error Message",
+    ]),
+  },
+  example: ({ children }) => <SelectField>{children}</SelectField>,
 });
