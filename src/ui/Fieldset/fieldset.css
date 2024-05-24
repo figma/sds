@@ -62,6 +62,12 @@
   }
 }
 
+.form.form-single-line {
+  display: flex;
+  flex-direction: row;
+  gap: var(--sds-size-gap-md);
+}
+
 .legend {
   font: var(--sds-font-subheading);
 }

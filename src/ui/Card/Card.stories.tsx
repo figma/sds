@@ -4,8 +4,8 @@ import "react";
 import { ComponentProps } from "react";
 import { Button, ButtonGroup } from "ui/Button/Button";
 import { Card } from "ui/Card/Card";
-import { Grid, GridItem } from "ui/Grid/Grid";
 import { Image } from "ui/Image/Image";
+import { Grid, GridItem } from "ui/Layout/Layout";
 import { Text, TextHeading } from "ui/Text/Text";
 
 const meta: Meta<typeof Card> = {

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { ComponentPropsWithoutRef } from "react";
-import "./grid.css";
+import "./layout.css";
 
 type TShirtSizes = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 
@@ -59,4 +59,36 @@ export type FlowProps = Omit<
 >;
 export function Flow({ ...props }: FlowProps) {
   return <Grid direction="column" auto {...props} />;
+}
+
+type SectionPadding = Omit<TShirtSizes, "xs" | "xxl" | "xl">;
+
+export type SectionProps = ComponentPropsWithoutRef<
+  "section" | "header" | "footer"
+> & {
+  elementType?: "section" | "header" | "footer";
+  padding?: SectionPadding;
+  variant?: "brand" | "secondary" | "stroke" | "subtle";
+};
+export function Section({
+  className,
+  elementType = "section",
+  padding = "md",
+  variant = "subtle",
+  ...props
+}: SectionProps) {
+  const classNames = clsx(
+    className,
+    "section",
+    `section-variant-${variant}`,
+    `section-padding-${padding}`,
+  );
+  switch (elementType) {
+    case "section":
+      return <section className={classNames} {...props} />;
+    case "header":
+      return <header className={classNames} {...props} />;
+    case "footer":
+      return <footer className={classNames} {...props} />;
+  }
 }

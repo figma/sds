@@ -1243,10 +1243,11 @@
   --sds-size-gap-xl: 1.5rem;
   --sds-size-gap-xs: 0.25rem;
   --sds-size-gap-xxl: 3rem;
-  --sds-size-padding-hero-vertical: 10rem;
   --sds-size-padding-lg: 1rem;
   --sds-size-padding-md: 0.75rem;
-  --sds-size-padding-section: 4rem;
+  --sds-size-padding-section-lg: 10rem;
+  --sds-size-padding-section-md: 4rem;
+  --sds-size-padding-section-sm: 2rem;
   --sds-size-padding-sm: 0.5rem;
   --sds-size-padding-xl: 1.5rem;
   --sds-size-padding-xs: 0.25rem;
@@ -1346,7 +1347,7 @@
   --sds-responsive-display-flex-to-none: flex;
   --sds-responsive-display-none-to-flex: none;
   --sds-responsive-ratio-column-full: 1;
-  --sds-responsive-ratio-column-quarter-half: 1;
+  --sds-responsive-ratio-column-half: 1;
   --sds-responsive-ratio-column-quarter-major: 1;
   --sds-responsive-ratio-column-quarter-minor: 1;
   --sds-responsive-ratio-column-third-major: 1;
@@ -1366,7 +1367,7 @@
     --sds-responsive-display-flex-to-none: flex;
     --sds-responsive-display-none-to-flex: none;
     --sds-responsive-ratio-column-full: 1;
-    --sds-responsive-ratio-column-quarter-half: 0.5;
+    --sds-responsive-ratio-column-half: 0.5;
     --sds-responsive-ratio-column-quarter-major: 0.5;
     --sds-responsive-ratio-column-quarter-minor: 0.5;
     --sds-responsive-ratio-column-third-major: 1;
@@ -1387,7 +1388,7 @@
     --sds-responsive-display-flex-to-none: none;
     --sds-responsive-display-none-to-flex: flex;
     --sds-responsive-ratio-column-full: 1;
-    --sds-responsive-ratio-column-quarter-half: 0.5;
+    --sds-responsive-ratio-column-half: 0.5;
     --sds-responsive-ratio-column-quarter-major: 0.75;
     --sds-responsive-ratio-column-quarter-minor: 0.25;
     --sds-responsive-ratio-column-third-major: 0.67;
@@ -1408,7 +1409,7 @@
     --sds-responsive-display-flex-to-none: none;
     --sds-responsive-display-none-to-flex: flex;
     --sds-responsive-ratio-column-full: 1;
-    --sds-responsive-ratio-column-quarter-half: 0.5;
+    --sds-responsive-ratio-column-half: 0.5;
     --sds-responsive-ratio-column-quarter-major: 0.75;
     --sds-responsive-ratio-column-quarter-minor: 0.25;
     --sds-responsive-ratio-column-third-major: 0.67;

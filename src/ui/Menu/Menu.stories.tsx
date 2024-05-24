@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconMenu } from "icons";
-import { Grid } from "ui/Grid/Grid";
+import { Grid } from "ui/Layout/Layout";
 import {
   MenuButton,
   MenuDescription,

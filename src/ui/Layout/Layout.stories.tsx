@@ -1,13 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Grid, GridItem } from "ui";
+import { Grid, GridItem, Section } from "ui";
 
 const meta: Meta<typeof Grid> = {
   component: Grid,
-  title: "ui/Grid",
+  title: "ui/Layout",
   parameters: { layout: "centered" },
 };
 export default meta;
-type Story = StoryObj<typeof Grid>;
 
 const renderChild = (text: string) => (
   <div
@@ -23,14 +22,19 @@ const renderChild = (text: string) => (
   </div>
 );
 
-export const Default: Story = {
+export const GridStory: StoryObj<typeof Grid> = {
   args: {
     gap: undefined,
+    type: "quarter",
   },
   argTypes: {
     gap: {
       control: { type: "select" },
       options: [undefined, "xs", "sm", "md", "lg", "xl"],
+    },
+    type: {
+      control: { type: "select" },
+      options: ["quarter", "third"],
     },
   },
   render: (args) => (
@@ -74,5 +78,53 @@ export const Default: Story = {
         <GridItem size="half">{renderChild("half")}</GridItem>
       </Grid>
     </Grid>
+  ),
+};
+
+export const SectionStory: StoryObj<typeof Section> = {
+  args: {
+    padding: "md",
+    variant: "subtle",
+  },
+  argTypes: {
+    padding: {
+      control: { type: "select" },
+      options: ["sm", "md", "lg"],
+    },
+    variant: {
+      control: { type: "select" },
+      options: ["subtle", "brand", "stroke", "secondary"],
+    },
+  },
+  render: (args) => (
+    <>
+      <Section {...args}>
+        <Grid auto gap="xl">
+          <GridItem size="full">{renderChild("full")}</GridItem>
+          <GridItem size="major">{renderChild("major")}</GridItem>
+          <GridItem size="minor">{renderChild("minor")}</GridItem>
+          <GridItem size="minor">{renderChild("minor")}</GridItem>
+          <GridItem size="major">{renderChild("major")}</GridItem>
+        </Grid>
+      </Section>
+      <Section {...args} variant="secondary">
+        <Grid auto gap="xl">
+          <GridItem size="full">{renderChild("full")}</GridItem>
+          <GridItem size="major">{renderChild("major")}</GridItem>
+          <GridItem size="minor">{renderChild("minor")}</GridItem>
+          <GridItem size="minor">{renderChild("minor")}</GridItem>
+          <GridItem size="major">{renderChild("major")}</GridItem>
+        </Grid>
+      </Section>
+      <Section {...args}>
+        <Grid auto gap="xl">
+          <GridItem size="full">{renderChild("full")}</GridItem>
+          <GridItem size="major">{renderChild("major")}</GridItem>
+          <GridItem size="minor">{renderChild("minor")}</GridItem>
+          <GridItem size="minor">{renderChild("minor")}</GridItem>
+          <GridItem size="major">{renderChild("major")}</GridItem>
+        </Grid>
+      </Section>
+    </>
   ),
 };

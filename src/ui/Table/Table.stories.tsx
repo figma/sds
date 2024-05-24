@@ -3,8 +3,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { IconTrash } from "icons";
 import { SortDescriptor } from "react-stately";
 import { Button } from "ui/Button/Button";
-import { Grid } from "ui/Grid/Grid";
 import { IconButton } from "ui/IconButton/IconButton";
+import { Grid } from "ui/Layout/Layout";
 import {
   Table,
   TableBody,

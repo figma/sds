@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconActivity, IconArrowLeft } from "icons";
 import { Button, ButtonGroup } from "ui/Button/Button";
-import { Grid, GridItem } from "ui/Grid/Grid";
+import { Grid, GridItem } from "ui/Layout/Layout";
 
 const meta: Meta<typeof Button> = {
   component: Button,

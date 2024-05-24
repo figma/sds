@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type React from "react";
+import { ComponentPropsWithoutRef } from "react";
 import {
   FieldError as RACFieldError,
   Form as RACForm,
@@ -14,27 +14,27 @@ import {
 } from "react-aria-components";
 import "./fieldset.css";
 
-export type FieldsetProps = React.ComponentPropsWithoutRef<"fieldset">;
+export type FieldsetProps = ComponentPropsWithoutRef<"fieldset">;
 export function Fieldset({ ...props }: FieldsetProps) {
   const classNames = clsx("fieldset");
   return <fieldset {...props} className={classNames} />;
 }
 
-export type LegendProps = React.ComponentPropsWithoutRef<"legend">;
+export type LegendProps = ComponentPropsWithoutRef<"legend">;
 export function Legend({ ...props }: LegendProps) {
   const classNames = clsx("legend");
   return <legend {...props} className={classNames} />;
 }
 
-export type FieldGroupProps = React.ComponentPropsWithoutRef<"div">;
+export type FieldGroupProps = ComponentPropsWithoutRef<"div">;
 export function FieldGroup({ ...props }: FieldGroupProps) {
   const classNames = clsx("field-group");
   return <div {...props} className={classNames} />;
 }
 
-export type FormProps = RACFormProps;
-export function Form({ className, ...props }: FormProps) {
-  const classNames = clsx(className, "form");
+export type FormProps = RACFormProps & { singleLine?: boolean };
+export function Form({ className, singleLine, ...props }: FormProps) {
+  const classNames = clsx(className, "form", singleLine && "form-single-line");
   return <RACForm className={classNames} {...props} />;
 }
 
@@ -74,7 +74,7 @@ export type SharedFieldProps = {
   errorMessage?: string | ((validation: RACValidationResult) => string);
 };
 
-export type FieldProps = React.ComponentPropsWithoutRef<"div">;
+export type FieldProps = ComponentPropsWithoutRef<"div">;
 export function Field({ className, ...props }: FieldProps) {
   const classNames = clsx(className, "field");
   return <div className={classNames} {...props} />;

@@ -1,8 +1,8 @@
 import type { Meta } from "@storybook/react";
 import { IconHelpCircle } from "icons";
 import { DialogTrigger } from "ui/Dialog/Dialog";
-import { Grid } from "ui/Grid/Grid";
 import { IconButton } from "ui/IconButton/IconButton";
+import { Grid } from "ui/Layout/Layout";
 import { Text } from "ui/Text/Text";
 import { Popover } from "./Popover";
 

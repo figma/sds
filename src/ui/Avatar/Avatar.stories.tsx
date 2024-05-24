@@ -7,7 +7,7 @@ import {
   AvatarGroup,
 } from "ui/Avatar/Avatar";
 import { Description, Label } from "ui/Fieldset/Fieldset";
-import { Grid } from "ui/Grid/Grid";
+import { Grid } from "ui/Layout/Layout";
 
 const meta: Meta<typeof Avatar> = {
   component: Avatar,

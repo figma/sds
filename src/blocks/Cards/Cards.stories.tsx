@@ -16,7 +16,7 @@ import {
   TextListItem,
   TextTitlePage,
 } from "ui";
-import { PricingCard, ProductInfoCard, TestimonialCard } from "./Cards/Cards";
+import { PricingCard, ProductInfoCard, TestimonialCard } from "./Cards";
 
 const meta: Meta<typeof Card> = {
   component: Card,

@@ -1,6 +1,6 @@
 import "react";
 import { useEffect, useState } from "react";
-import { Field, Input, Label } from "ui";
+import { InputField } from "ui";
 type ComponentMap = { [k: string]: { id: string; name: string; key: string } };
 
 export const COMPONENTS: ComponentMap = {
@@ -3190,14 +3190,13 @@ export function FigmaUrlFromComponentName({
   }, [name, url]);
 
   return (
-    <Field>
-      <Label>{name}</Label>
-      <Input
-        disabled={disabled}
-        onFocus={(e) => e.target.select()}
-        readOnly
-        value={finalUrl}
-      />
-    </Field>
+    <InputField
+      label={name}
+      isDisabled={disabled}
+      // @ts-expect-error
+      onFocus={(e) => e.target.select()}
+      isReadOnly
+      value={finalUrl}
+    />
   );
 }

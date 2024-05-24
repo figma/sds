@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Grid } from "ui/Grid/Grid";
+import { Grid } from "ui/Layout/Layout";
 import { Radio, RadioField, RadioGroup } from "ui/Radio/Radio";
 
 const meta: Meta<typeof Radio> = {

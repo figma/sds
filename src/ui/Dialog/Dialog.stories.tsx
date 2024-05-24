@@ -2,9 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { IconMenu } from "icons";
 import { useState } from "react";
 import { Button } from "ui/Button/Button";
-import { Field, Label } from "ui/Fieldset/Fieldset";
-import { Grid } from "ui/Grid/Grid";
-import { Input } from "ui/Input/Input";
+import { InputField } from "ui/Input/Input";
+import { Grid } from "ui/Layout/Layout";
 import {
   Table,
   TableBody,
@@ -43,10 +42,7 @@ export const Default: Story = {
               business days after processing.
             </DialogDescription>
             <DialogBody>
-              <Field>
-                <Label>Amount</Label>
-                <Input name="amount" placeholder="$0.00" />
-              </Field>
+              <InputField label="Amount" name="amount" placeholder="$0.00" />
             </DialogBody>
             <DialogActions>
               <Button onPress={close}>Refund</Button>
@@ -79,10 +75,7 @@ export const Controlled: Story = {
               business days after processing.
             </DialogDescription>
             <DialogBody>
-              <Field>
-                <Label>Amount</Label>
-                <Input name="amount" placeholder="$0.00" />
-              </Field>
+              <InputField label="Amount" name="amount" placeholder="$0.00" />
             </DialogBody>
             <DialogActions>
               <Button onPress={() => setIsOpen(false)}>Refund</Button>
