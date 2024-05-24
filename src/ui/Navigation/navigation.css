@@ -6,7 +6,7 @@
   --border-radius: var(--sds-size-radius-xs);
   background: transparent;
   border-radius: var(--border-radius);
-  color: var(--sds-color-text-default default);
+  color: var(--sds-color-text-default-default);
   padding: var(--sds-size-padding-sm);
   position: relative;
 
