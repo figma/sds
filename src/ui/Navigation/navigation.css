@@ -1,0 +1,33 @@
+.navigation {
+  display: flex;
+  gap: var(--sds-size-gap-sm);
+}
+.navigation-item {
+  --border-radius: var(--sds-size-radius-xs);
+  background: transparent;
+  border-radius: var(--border-radius);
+  color: var(--sds-color-text-default default);
+  padding: var(--sds-size-padding-sm);
+  position: relative;
+
+  &[data-selected] {
+    color: var(--sds-color-text-brand-onbrand-secondary);
+    background: var(--sds-color-bg-brand-secondary);
+  }
+
+  &[data-focus-visible] {
+    outline: none;
+    --offset: calc(var(--sds-responsive-border-width) * 2);
+    &::before {
+      content: "";
+      border-radius: calc(var(--border-radius) + var(--offset));
+      bottom: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size)
+        var(--global-focus-ring-color);
+      left: calc(-1 * var(--offset));
+      position: absolute;
+      right: calc(-1 * var(--offset));
+      top: calc(-1 * var(--offset));
+    }
+  }
+}
