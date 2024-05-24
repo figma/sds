@@ -152,7 +152,7 @@
 .button-group {
   align-items: center;
   display: flex;
-  gap: var(--sds-size-gap-xl);
+  gap: var(--sds-size-gap-md);
 
   &.button-group-align-start {
     justify-content: flex-start;

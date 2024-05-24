@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Grid, GridItem, Section } from "ui";
+import { StandardHeader, VerticalHeader } from "blocks/Headers/Headers";
+import { Button, ButtonGroup, Grid, GridItem, Section } from "ui";
+import { Logo } from "ui/Logo/Logo";
+import { Navigation, NavigationItem } from "ui/Navigation/Navigation";
 
 const meta: Meta<typeof Grid> = {
   component: Grid,
@@ -98,6 +101,46 @@ export const SectionStory: StoryObj<typeof Section> = {
   },
   render: (args) => (
     <>
+      <VerticalHeader>
+        <Grid auto direction="column" alignSecondary="center" gap="md">
+          <Logo />
+          <Navigation>
+            <NavigationItem>Home</NavigationItem>
+            <NavigationItem isSelected>About</NavigationItem>
+            <NavigationItem>Pricing</NavigationItem>
+            <NavigationItem>Blog</NavigationItem>
+            <NavigationItem>Careers</NavigationItem>
+            <NavigationItem>Contact</NavigationItem>
+          </Navigation>
+        </Grid>
+      </VerticalHeader>
+
+      <StandardHeader>
+        <Grid>
+          <GridItem size="minor">
+            <Logo />
+          </GridItem>
+          <GridItem size="major">
+            <Grid auto gap="xl" alignPrimary="end">
+              <Navigation>
+                <NavigationItem>Home</NavigationItem>
+                <NavigationItem isSelected>About</NavigationItem>
+                <NavigationItem>Pricing</NavigationItem>
+                <NavigationItem>Blog</NavigationItem>
+                <NavigationItem>Careers</NavigationItem>
+                <NavigationItem>Contact</NavigationItem>
+              </Navigation>
+              <ButtonGroup>
+                <Button onPress={() => {}} variant="secondary">
+                  Log in
+                </Button>
+                <Button onPress={() => {}}>Register</Button>
+              </ButtonGroup>
+            </Grid>
+          </GridItem>
+        </Grid>
+      </StandardHeader>
+
       <Section {...args}>
         <Grid auto gap="xl">
           <GridItem size="full">{renderChild("full")}</GridItem>
