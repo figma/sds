@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconActivity, IconArrowLeft } from "icons";
 import { Button, ButtonGroup } from "ui/Button/Button";
-import { Grid } from "ui/Grid/Grid";
+import { Grid, GridItem } from "ui/Grid/Grid";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -57,30 +57,36 @@ export const All: Story = {
   },
   render: ({ children, ...props }) => {
     return (
-      <Grid direction="column">
+      <Grid auto direction="column" gap="md">
         {["default", "purple", "blue", "teal"].map((theme) => (
-          <Grid>
-            <div key={theme} className={`sds-scheme-color-${theme}`}>
-              <Grid alignPrimary="center">
+          <div key={theme} className={`sds-scheme-color-${theme}`}>
+            <Grid auto alignPrimary="center" gap="md">
+              <GridItem>
                 <Button {...props}>
                   {children}
                   <IconActivity />
                 </Button>
+              </GridItem>
+              <GridItem>
                 <Button {...props} variant="secondary">
                   {children}
                   <IconActivity />
                 </Button>
+              </GridItem>
+              <GridItem>
                 <Button {...props} variant="stroke">
                   {children}
                   <IconActivity />
                 </Button>
+              </GridItem>
+              <GridItem>
                 <Button {...props} variant="subtle">
                   {children}
                   <IconActivity />
                 </Button>
-              </Grid>
-            </div>
-          </Grid>
+              </GridItem>
+            </Grid>
+          </div>
         ))}
       </Grid>
     );

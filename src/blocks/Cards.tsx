@@ -10,15 +10,15 @@ export function BasicCard(props: BasicCardProps) {
 
 export type PricingCardProps = Pick<CardProps, "children">;
 export function PricingCard(props: PricingCardProps) {
-  return <Card {...props} direction="vertical" variant="padded" />;
+  return <Card {...props} direction="vertical" variant="stroke" />;
 }
 
 export type ProductInfoCardProps = Pick<CardProps, "children" | "media">;
 export function ProductInfoCard(props: ProductInfoCardProps) {
-  return <Card {...props} direction="horizontal" variant="padded" />;
+  return <Card {...props} direction="horizontal" variant="stroke" />;
 }
 
 export type TestimonialCardProps = Pick<CardProps, "children">;
 export function TestimonialCard(props: TestimonialCardProps) {
-  return <Card {...props} direction="vertical" variant="padded" />;
+  return <Card {...props} direction="vertical" variant="stroke" />;
 }

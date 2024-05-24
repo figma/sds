@@ -9,7 +9,7 @@ export type CardProps = ComponentPropsWithoutRef<"div"> & {
     "aria-label": string;
   };
   media?: React.ReactNode;
-  variant?: "default" | "padded";
+  variant?: "default" | "stroke" | "padded";
 };
 export function Card({
   children,
