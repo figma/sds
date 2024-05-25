@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconActivity, IconArrowLeft } from "icons";
 import { Button, ButtonGroup } from "ui/Button/Button";
+import { Flex, FlexItem } from "ui/Flex/Flex";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -27,7 +28,7 @@ export const Default: Story = {
     },
   },
   render: ({ children, ...props }) => (
-    <Layout alignPrimary="center">
+    <Flex alignPrimary="center">
       <ButtonGroup>
         <Button {...props}>
           <IconArrowLeft />
@@ -40,7 +41,7 @@ export const Default: Story = {
           <IconActivity />
         </Button>
       </ButtonGroup>
-    </Layout>
+    </Flex>
   ),
 };
 
@@ -56,38 +57,38 @@ export const All: Story = {
   },
   render: ({ children, ...props }) => {
     return (
-      <Layout direction="column" gap="md">
+      <Flex direction="column" gap="md">
         {["default", "purple", "blue", "teal"].map((theme) => (
           <div key={theme} className={`sds-scheme-color-${theme}`}>
-            <Layout alignPrimary="center" gap="md">
-              <LayoutItem>
+            <Flex alignPrimary="center" gap="md">
+              <FlexItem>
                 <Button {...props}>
                   {children}
                   <IconActivity />
                 </Button>
-              </LayoutItem>
-              <LayoutItem>
+              </FlexItem>
+              <FlexItem>
                 <Button {...props} variant="secondary">
                   {children}
                   <IconActivity />
                 </Button>
-              </LayoutItem>
-              <LayoutItem>
+              </FlexItem>
+              <FlexItem>
                 <Button {...props} variant="stroke">
                   {children}
                   <IconActivity />
                 </Button>
-              </LayoutItem>
-              <LayoutItem>
+              </FlexItem>
+              <FlexItem>
                 <Button {...props} variant="subtle">
                   {children}
                   <IconActivity />
                 </Button>
-              </LayoutItem>
-            </Layout>
+              </FlexItem>
+            </Flex>
           </div>
         ))}
-      </Layout>
+      </Flex>
     );
   },
 };

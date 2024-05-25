@@ -28,20 +28,16 @@ export const Default: Story = {
 
 export const Group: StoryGroup = {
   args: {},
-  render: (args) => {
-    return (
-      <Layout alignPrimary="center">
-        <RadioGroup
-          label="Hello"
-          description="I am a description"
-          {...args}
-          onChange={console.log}
-        >
-          <RadioField value="one">Value one</RadioField>
-          <RadioField value="two">Value two</RadioField>
-          <RadioField value="three">Value three</RadioField>
-        </RadioGroup>
-      </Layout>
-    );
-  },
+  render: (args) => (
+    <RadioGroup
+      label="Hello"
+      description="I am a description"
+      {...args}
+      onChange={console.log}
+    >
+      <RadioField value="one">Value one</RadioField>
+      <RadioField value="two">Value two</RadioField>
+      <RadioField value="three">Value three</RadioField>
+    </RadioGroup>
+  ),
 };

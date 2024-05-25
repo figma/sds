@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconActivity } from "icons";
-import { IconButton } from "ui";
+import { Flex, IconButton } from "ui";
 
 const meta: Meta<typeof IconButton> = {
   component: IconButton,
@@ -23,11 +23,9 @@ export const Default: Story = {
     },
   },
   render: ({ ...props }) => (
-    <Layout alignPrimary="center">
-      <IconButton {...props}>
-        <IconActivity />
-      </IconButton>
-    </Layout>
+    <IconButton {...props}>
+      <IconActivity />
+    </IconButton>
   ),
 };
 
@@ -36,10 +34,10 @@ export const All: Story = {
     isDisabled: false,
   },
   render: ({ ...props }) => (
-    <Layout direction="column">
+    <Flex direction="column" gap="lg">
       {["default", "purple", "blue", "teal"].map((theme) => (
-        <div key={theme} className={`sds-theme-${theme}`}>
-          <Layout alignPrimary="center">
+        <div key={theme} className={`sds-scheme-color-${theme}`}>
+          <Flex alignPrimary="center" gap="lg">
             <IconButton {...props}>
               <IconActivity />
             </IconButton>
@@ -52,9 +50,9 @@ export const All: Story = {
             <IconButton {...props} variant="subtle">
               <IconActivity />
             </IconButton>
-          </Layout>
+          </Flex>
         </div>
       ))}
-    </Layout>
+    </Flex>
   ),
 };

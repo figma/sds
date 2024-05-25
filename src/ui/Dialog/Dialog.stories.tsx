@@ -31,28 +31,26 @@ type Story = StoryObj<typeof Dialog>;
 
 export const Default: Story = {
   render: () => (
-    <Layout alignPrimary="center">
-      <DialogButton variant="secondary" icon={<IconMenu />} label="Open Dialog">
-        {({ close }) => (
-          <>
-            <DialogTitle>Open Dialog</DialogTitle>
-            <DialogDescription>
-              The refund will be reflected in the customer’s bank account 2 to 3
-              business days after processing.
-            </DialogDescription>
-            <DialogBody>
-              <InputField label="Amount" name="amount" placeholder="$0.00" />
-            </DialogBody>
-            <DialogActions>
-              <Button onPress={close}>Refund</Button>
-              <Button variant="subtle" onPress={close}>
-                Cancel
-              </Button>
-            </DialogActions>
-          </>
-        )}
-      </DialogButton>
-    </Layout>
+    <DialogButton variant="secondary" icon={<IconMenu />} label="Open Dialog">
+      {({ close }) => (
+        <>
+          <DialogTitle>Open Dialog</DialogTitle>
+          <DialogDescription>
+            The refund will be reflected in the customer’s bank account 2 to 3
+            business days after processing.
+          </DialogDescription>
+          <DialogBody>
+            <InputField label="Amount" name="amount" placeholder="$0.00" />
+          </DialogBody>
+          <DialogActions>
+            <Button onPress={close}>Refund</Button>
+            <Button variant="subtle" onPress={close}>
+              Cancel
+            </Button>
+          </DialogActions>
+        </>
+      )}
+    </DialogButton>
   ),
 };
 export const Controlled: Story = {
@@ -60,7 +58,7 @@ export const Controlled: Story = {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-      <Layout alignPrimary="center">
+      <>
         <Button onPress={() => setIsOpen(!isOpen)}>Open Dialog</Button>
         <DialogModal
           isDismissable
@@ -84,7 +82,7 @@ export const Controlled: Story = {
             </DialogActions>
           </Dialog>
         </DialogModal>
-      </Layout>
+      </>
     );
   },
 };
@@ -94,7 +92,7 @@ export const BodyBleed: Story = {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-      <Layout alignPrimary="center">
+      <>
         <Button onPress={() => setIsOpen(!isOpen)}>Open Dialog</Button>
         <DialogModal
           isDismissable
@@ -135,7 +133,7 @@ export const BodyBleed: Story = {
             </DialogActions>
           </Dialog>
         </DialogModal>
-      </Layout>
+      </>
     );
   },
 };

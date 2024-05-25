@@ -1,7 +1,7 @@
 import { useArgs } from "@storybook/preview-api";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { Checkbox, CheckboxField, CheckboxGroup } from "ui";
+import { Checkbox, CheckboxField, CheckboxGroup, Flex } from "ui";
 
 const meta: Meta<typeof Checkbox> = {
   component: Checkbox,
@@ -37,18 +37,16 @@ export const Group: StoryGroup = {
   args: {},
   render: (args) => {
     return (
-      <Layout alignPrimary="center">
-        <CheckboxGroup
-          label="Hello"
-          description="I am a description"
-          {...args}
-          onChange={console.log}
-        >
-          <CheckboxField value="one">Value one</CheckboxField>
-          <CheckboxField value="two">Value two</CheckboxField>
-          <CheckboxField value="three">Value three</CheckboxField>
-        </CheckboxGroup>
-      </Layout>
+      <CheckboxGroup
+        label="Hello"
+        description="I am a description"
+        {...args}
+        onChange={console.log}
+      >
+        <CheckboxField value="one">Value one</CheckboxField>
+        <CheckboxField value="two">Value two</CheckboxField>
+        <CheckboxField value="three">Value three</CheckboxField>
+      </CheckboxGroup>
     );
   },
 };
@@ -58,7 +56,7 @@ export const Indeterminate: Story = {
     const options = ["One with a very long name indeed.", "Two", "Three"];
     const [selected, setSelected] = useState<string[]>([]);
     return (
-      <Layout direction="column">
+      <Flex direction="column">
         <CheckboxField
           isSelected={selected.length > 0}
           isIndeterminate={selected.length !== options.length}
@@ -85,7 +83,7 @@ export const Indeterminate: Story = {
             }
           />
         ))}
-      </Layout>
+      </Flex>
     );
   },
 };

@@ -1,5 +1,5 @@
 import { figma } from "@figma/code-connect";
-import { Flow, Section } from "ui";
+import { Flex, Section } from "ui";
 
 figma.connect(
   Section,
@@ -7,8 +7,10 @@ figma.connect(
   {
     props: { children: figma.children("Text Content Title") },
     example: ({ children }) => (
-      <Section padding="xl">
-        <Layout alignPrimary="center">{children}</Layout>
+      <Section padding="lg">
+        <Flex container alignPrimary="center">
+          {children}
+        </Flex>
       </Section>
     ),
   },
@@ -19,8 +21,10 @@ figma.connect(
   {
     props: { children: figma.children(["Text Content Title", "Button Group"]) },
     example: ({ children }) => (
-      <Section padding="xl">
-        <Layout alignPrimary="center">{children}</Layout>
+      <Section padding="lg">
+        <Flex container alignPrimary="center">
+          {children}
+        </Flex>
       </Section>
     ),
   },
@@ -34,8 +38,10 @@ figma.connect(
       children: figma.children(["Text Content Title", "Newsletter Form"]),
     },
     example: ({ children }) => (
-      <Section padding="xl">
-        <Layout alignPrimary="center">{children}</Layout>
+      <Section padding="lg">
+        <Flex container alignPrimary="center">
+          {children}
+        </Flex>
       </Section>
     ),
   },
@@ -48,8 +54,10 @@ figma.connect(
   {
     props: { children: figma.children(["Text Content Title", "Button Group"]) },
     example: ({ children }) => (
-      <Section variant="brand" padding="xl">
-        <Layout alignPrimary="center">{children}</Layout>
+      <Section variant="brand" padding="lg">
+        <Flex container alignPrimary="center">
+          {children}
+        </Flex>
       </Section>
     ),
   },
@@ -63,8 +71,10 @@ figma.connect(
       children: figma.children(["Text Content Title", "Contact Form"]),
     },
     example: ({ children }) => (
-      <Section padding="xl">
-        <Layout alignPrimary="center">{children}</Layout>
+      <Section padding="lg">
+        <Flex container alignPrimary="center">
+          {children}
+        </Flex>
       </Section>
     ),
   },
@@ -81,14 +91,14 @@ figma.connect(
     },
     example: ({ navigation, cards }) => (
       <Section variant="secondary" padding="sm">
-        <Flow gap="xl">
-          <Layout direction="row" alignPrimary="center">
+        <Flex direction="column" gap="xl">
+          <Flex container direction="row" alignPrimary="center">
             {navigation}
-          </Layout>
-          <Layout alignPrimary="stretch" gap="xl">
+          </Flex>
+          <Flex container alignPrimary="stretch" gap="xl">
             {cards}
-          </Layout>
-        </Flow>
+          </Flex>
+        </Flex>
       </Section>
     ),
   },
@@ -103,7 +113,9 @@ figma.connect(
     },
     example: ({ children }) => (
       <Section padding="sm">
-        <Flow gap="xl">{children}</Flow>
+        <Flex direction="column" gap="xl">
+          {children}
+        </Flex>
       </Section>
     ),
   },
@@ -119,10 +131,10 @@ figma.connect(
     },
     example: ({ heading, cards }) => (
       <Section padding="sm">
-        <Flow gap="xl">
+        <Flex direction="column" gap="xl">
           {heading}
-          <Layout type="third">{cards}</Layout>
-        </Flow>
+          <Flex type="third">{cards}</Flex>
+        </Flex>
       </Section>
     ),
   },
@@ -138,10 +150,12 @@ figma.connect(
     },
     example: ({ heading, cards }) => (
       <Section padding="sm">
-        <Flow gap="xl">
+        <Flex direction="column" gap="xl">
           {heading}
-          <Layout type="third">{cards}</Layout>
-        </Flow>
+          <Flex container type="third">
+            {cards}
+          </Flex>
+        </Flex>
       </Section>
     ),
   },
@@ -156,10 +170,10 @@ figma.connect(
     },
     example: ({ heading, cards }) => (
       <Section padding="sm">
-        <Flow gap="xl">
+        <Flex direction="column" gap="xl">
           {heading}
           {cards}
-        </Flow>
+        </Flex>
       </Section>
     ),
   },
@@ -175,10 +189,12 @@ figma.connect(
     },
     example: ({ heading, cards }) => (
       <Section padding="sm">
-        <Flow gap="xl">
+        <Flex direction="column" gap="xl">
           {heading}
-          <Layout type="third">{cards}</Layout>
-        </Flow>
+          <Flex container type="third">
+            {cards}
+          </Flex>
+        </Flex>
       </Section>
     ),
   },
@@ -195,10 +211,12 @@ figma.connect(
     },
     example: ({ heading, cards }) => (
       <Section padding="sm">
-        <Flow gap="xl">
+        <Flex direction="column" gap="xl">
           {heading}
-          <Layout type="third">{cards}</Layout>
-        </Flow>
+          <Flex container type="third">
+            {cards}
+          </Flex>
+        </Flex>
       </Section>
     ),
   },
@@ -212,7 +230,9 @@ figma.connect(
     props: { children: figma.children("Image Panel") },
     example: ({ children }) => (
       <Section padding="sm">
-        <Flow gap="xl">{children}</Flow>
+        <Flex direction="column" gap="xl">
+          {children}
+        </Flex>
       </Section>
     ),
   },

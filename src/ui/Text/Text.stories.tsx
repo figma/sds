@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {
-  Flow,
+  Flex,
   Text,
   TextCode,
   TextEmphasis,
@@ -28,7 +28,7 @@ export const Default: Story = {
   args: {},
   render: () => {
     return (
-      <Flow gap="lg">
+      <Flex direction="column" gap="lg">
         <TextTitleHero>TextTitleHero</TextTitleHero>
         <TextTitlePage>TextTitlePage</TextTitlePage>
         <TextSubtitle>TextSubtitle</TextSubtitle>
@@ -54,7 +54,7 @@ export const Default: Story = {
           <TextLink href="#">billing settings</TextLink>. Your api key is{" "}
           <TextCode>fig_123456789</TextCode>.
         </Text>
-      </Flow>
+      </Flex>
     );
   },
 };

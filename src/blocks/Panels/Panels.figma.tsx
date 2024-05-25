@@ -1,9 +1,9 @@
 import { figma } from "@figma/code-connect";
-import { Flow, Layout, LayoutItem } from "ui";
+import { Flex, FlexItem } from "ui";
 
 // Image Panel: Default
 figma.connect(
-  Layout,
+  Flex,
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2164-15467&t=qJR3PLmBgMwoBka4-11",
   {
     variant: { Variant: "Default" },
@@ -12,18 +12,20 @@ figma.connect(
       text: figma.children(["Text Content Heading", "Text"]),
     },
     example: ({ image, text }) => (
-      <Layout alignPrimary="center" gap="xl">
-        <LayoutItem size="half">{image}</LayoutItem>
-        <LayoutItem size="half">
-          <Flow gap="xl">{text}</Flow>
-        </LayoutItem>
-      </Layout>
+      <Flex alignPrimary="center" gap="xl">
+        <FlexItem size="half">{image}</FlexItem>
+        <FlexItem size="half">
+          <Flex direction="column" gap="xl">
+            {text}
+          </Flex>
+        </FlexItem>
+      </Flex>
     ),
   },
 );
 // Image Panel: Swap
 figma.connect(
-  Layout,
+  Flex,
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2164-15467&t=qJR3PLmBgMwoBka4-11",
   {
     variant: { Variant: "Swap" },
@@ -32,18 +34,20 @@ figma.connect(
       text: figma.children(["Text Content Heading", "Text"]),
     },
     example: ({ image, text }) => (
-      <Layout alignPrimary="center" gap="xl">
-        <LayoutItem size="half">
-          <Flow gap="xl">{text}</Flow>
-        </LayoutItem>
-        <LayoutItem size="half">{image}</LayoutItem>
-      </Layout>
+      <Flex alignPrimary="center" gap="xl">
+        <FlexItem size="half">
+          <Flex direction="column" gap="xl">
+            {text}
+          </Flex>
+        </FlexItem>
+        <FlexItem size="half">{image}</FlexItem>
+      </Flex>
     ),
   },
 );
 // Image Panel: Images
 figma.connect(
-  Layout,
+  Flex,
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2164-15467&t=qJR3PLmBgMwoBka4-11",
   {
     variant: { Variant: "Images" },
@@ -51,15 +55,15 @@ figma.connect(
       image: figma.children("Image"),
     },
     example: ({ image }) => (
-      <Layout alignPrimary="center" gap="xl">
+      <Flex alignPrimary="center" gap="xl">
         {image}
-      </Layout>
+      </Flex>
     ),
   },
 );
 // Image Panel: Image Full
 figma.connect(
-  Layout,
+  Flex,
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2164-15467&t=qJR3PLmBgMwoBka4-11",
   {
     variant: { Variant: "Image Full" },
@@ -67,9 +71,9 @@ figma.connect(
       image: figma.children("Image"),
     },
     example: ({ image }) => (
-      <Layout alignPrimary="center" gap="xl">
-        <LayoutItem size="full">{image}</LayoutItem>
-      </Layout>
+      <Flex alignPrimary="center" gap="xl">
+        <FlexItem size="full">{image}</FlexItem>
+      </Flex>
     ),
   },
 );

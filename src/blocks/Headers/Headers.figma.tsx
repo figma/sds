@@ -1,4 +1,5 @@
 import { figma } from "@figma/code-connect";
+import { Flex, FlexItem } from "ui";
 import { StandardHeader, VerticalHeader } from "./Headers";
 
 const FIGMA_URL_STANDARD_HEADER =
@@ -13,14 +14,14 @@ figma.connect(StandardHeader, FIGMA_URL_STANDARD_HEADER, {
   },
   example: ({ children, logo }) => (
     <StandardHeader>
-      <Layout>
-        <LayoutItem size="minor">{logo}</LayoutItem>
-        <LayoutItem size="major">
-          <Layout gap="xl" alignPrimary="end">
+      <Flex container>
+        <FlexItem size="minor">{logo}</FlexItem>
+        <FlexItem size="major">
+          <Flex gap="xl" alignPrimary="end">
             {children}
-          </Layout>
-        </LayoutItem>
-      </Layout>
+          </Flex>
+        </FlexItem>
+      </Flex>
     </StandardHeader>
   ),
 });
@@ -32,10 +33,10 @@ figma.connect(VerticalHeader, FIGMA_URL_VERTICAL_HEADER, {
   },
   example: ({ children, logo }) => (
     <VerticalHeader>
-      <Layout direction="column" alignSecondary="center" gap="md">
+      <Flex direction="column" alignSecondary="center" gap="md">
         {logo}
         {children}
-      </Layout>
+      </Flex>
     </VerticalHeader>
   ),
 });

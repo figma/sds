@@ -1,5 +1,5 @@
 import { figma } from "@figma/code-connect";
-import { Flow, Layout } from "ui";
+import { Flex } from "ui";
 import { StandardFooter } from "./Footers";
 
 const FIGMA_URL_STANDARD_FOOTER =
@@ -12,10 +12,12 @@ figma.connect(StandardFooter, FIGMA_URL_STANDARD_FOOTER, {
   },
   example: ({ lists, left }) => (
     <StandardFooter>
-      <Layout gap="xl" alignSecondary="start">
-        <Flow gap="lg">{left}</Flow>
+      <Flex gap="xl">
+        <Flex direction="column" gap="lg">
+          {left}
+        </Flex>
         {lists}
-      </Layout>
+      </Flex>
     </StandardFooter>
   ),
 });

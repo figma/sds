@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {
+  Flex,
   Label,
   Tag,
   TagButton,
@@ -14,164 +15,79 @@ const meta: Meta<typeof Tag> = {
   parameters: { layout: "centered" },
 };
 export default meta;
-type Story = StoryObj<typeof Tag>;
-type StoryToggle = StoryObj<typeof TagToggleGroup>;
 
-export const Default: Story = {
-  args: {},
-  render: () => (
-    <Layout alignPrimary="center" gap="md">
-      <LayoutItem>
-        <Tag scheme="default">Default</Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag scheme="danger">Danger</Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag scheme="positive">Positive</Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag scheme="warning">Warning</Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag scheme="neutral">Neutral</Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag scheme="default" variant="secondary">
-          Default
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag scheme="danger" variant="secondary">
-          Danger
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag scheme="positive" variant="secondary">
-          Positive
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag scheme="warning" variant="secondary">
-          Warning
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag scheme="neutral" variant="secondary">
-          Neutral
-        </Tag>
-      </LayoutItem>
-    </Layout>
+export const Default: StoryObj<typeof Tag> = {
+  args: { variant: "default" },
+  render: (args) => (
+    <Flex wrap alignPrimary="center" gap="md">
+      <Tag scheme="default" {...args}>
+        Default
+      </Tag>
+      <Tag scheme="danger" {...args}>
+        Danger
+      </Tag>
+      <Tag scheme="positive" {...args}>
+        Positive
+      </Tag>
+      <Tag scheme="warning" {...args}>
+        Warning
+      </Tag>
+      <Tag scheme="neutral" {...args}>
+        Neutral
+      </Tag>
+    </Flex>
   ),
 };
 
-export const Removable: Story = {
-  args: {},
-  render: () => (
-    <Layout alignPrimary="center" gap="md">
-      <LayoutItem>
-        <Tag onRemove={() => {}} scheme="default">
-          Default
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag onRemove={() => {}} scheme="danger">
-          Danger
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag onRemove={() => {}} scheme="positive">
-          Positive
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag onRemove={() => {}} scheme="warning">
-          Warning
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag onRemove={() => {}} scheme="neutral">
-          Neutral
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag onRemove={() => {}} scheme="default" variant="secondary">
-          Default
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag onRemove={() => {}} scheme="danger" variant="secondary">
-          Danger
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag onRemove={() => {}} scheme="positive" variant="secondary">
-          Positive
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag onRemove={() => {}} scheme="warning" variant="secondary">
-          Warning
-        </Tag>
-      </LayoutItem>
-      <LayoutItem>
-        <Tag onRemove={() => {}} scheme="neutral" variant="secondary">
-          Neutral
-        </Tag>
-      </LayoutItem>
-    </Layout>
+export const Removable: StoryObj<typeof Tag> = {
+  args: {
+    variant: "default",
+  },
+  render: (args) => (
+    <Flex wrap gap="md">
+      <Tag onRemove={() => {}} scheme="default" {...args}>
+        Default
+      </Tag>
+      <Tag onRemove={() => {}} scheme="danger" {...args}>
+        Danger
+      </Tag>
+      <Tag onRemove={() => {}} scheme="positive" {...args}>
+        Positive
+      </Tag>
+      <Tag onRemove={() => {}} scheme="warning" {...args}>
+        Warning
+      </Tag>
+      <Tag onRemove={() => {}} scheme="neutral" {...args}>
+        Neutral
+      </Tag>
+    </Flex>
   ),
 };
 
-export const TagButtonDefault: Story = {
-  args: {},
-  render: () => (
-    <Layout alignPrimary="center" gap="md">
-      <LayoutItem>
-        <TagButton scheme="default">Default</TagButton>
-      </LayoutItem>
-      <LayoutItem>
-        <TagButton scheme="danger">Danger</TagButton>
-      </LayoutItem>
-      <LayoutItem>
-        <TagButton scheme="positive">Positive</TagButton>
-      </LayoutItem>
-      <LayoutItem>
-        <TagButton scheme="warning">Warning</TagButton>
-      </LayoutItem>
-      <LayoutItem>
-        <TagButton scheme="neutral">Neutral</TagButton>
-      </LayoutItem>
-      <LayoutItem>
-        <TagButton scheme="default" variant="secondary">
-          Default
-        </TagButton>
-      </LayoutItem>
-      <LayoutItem>
-        <TagButton scheme="danger" variant="secondary">
-          Danger
-        </TagButton>
-      </LayoutItem>
-      <LayoutItem>
-        <TagButton scheme="positive" variant="secondary">
-          Positive
-        </TagButton>
-      </LayoutItem>
-      <LayoutItem>
-        <TagButton scheme="warning" variant="secondary">
-          Warning
-        </TagButton>
-      </LayoutItem>
-      <LayoutItem>
-        <TagButton scheme="neutral" variant="secondary">
-          Neutral
-        </TagButton>
-      </LayoutItem>
-    </Layout>
+export const TagButtonDefault: StoryObj<typeof TagButton> = {
+  args: { variant: "default" },
+  render: (args) => (
+    <Flex wrap alignPrimary="center" gap="md">
+      <TagButton scheme="default" {...args}>
+        Default
+      </TagButton>
+      <TagButton scheme="danger" {...args}>
+        Danger
+      </TagButton>
+      <TagButton scheme="positive" {...args}>
+        Positive
+      </TagButton>
+      <TagButton scheme="warning" {...args}>
+        Warning
+      </TagButton>
+      <TagButton scheme="neutral" {...args}>
+        Neutral
+      </TagButton>
+    </Flex>
   ),
 };
 
-export const TagToggleDefault: StoryToggle = {
+export const TagToggleDefault: StoryObj<typeof TagToggleGroup> = {
   args: {
     selectionMode: "single",
   },
@@ -182,7 +98,7 @@ export const TagToggleDefault: StoryToggle = {
     },
   },
   render: (args) => (
-    <Layout alignPrimary="center">
+    <Flex wrap alignPrimary="center">
       <TagToggleGroup defaultSelectedKeys={["default"]} {...args}>
         <Label>Hello there</Label>
         <TagToggleList>
@@ -193,6 +109,6 @@ export const TagToggleDefault: StoryToggle = {
           <TagToggle>Neutral</TagToggle>
         </TagToggleList>
       </TagToggleGroup>
-    </Layout>
+    </Flex>
   ),
 };

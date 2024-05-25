@@ -11,9 +11,5 @@ type Story = StoryObj<typeof Link>;
 
 export const Default: Story = {
   args: { children: "Hello world!", href: "https://www.example.org" },
-  render: (args) => (
-    <Layout alignPrimary="center">
-      <Link href={args.href}>{args.children}</Link>
-    </Layout>
-  ),
+  render: (args) => <Link href={args.href}>{args.children}</Link>,
 };

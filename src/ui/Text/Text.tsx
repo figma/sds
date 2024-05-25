@@ -4,7 +4,7 @@ import {
   Text as RACText,
   type TextProps as RACTextProps,
 } from "react-aria-components";
-import { Flow } from "ui/Layout/Layout";
+import { Flex } from "ui/Flex/Flex";
 import { Link } from "ui/Link/Link";
 import "./text.css";
 
@@ -156,9 +156,9 @@ export function TextList({ className, title, ...props }: TextListProps) {
   const classNames = clsx(className, "text-list");
   const list = <ul className={classNames} {...props} />;
   return title ? (
-    <Flow gap="xl">
+    <Flex direction="column" gap="xl">
       {title} {list}
-    </Flow>
+    </Flex>
   ) : (
     list
   );
@@ -188,10 +188,10 @@ export function TextContentHeading({
     `text-align-${align}`,
   );
   return (
-    <Flow gap="sm" className={classNames} {...props}>
+    <Flex direction="column" gap="sm" className={classNames} {...props}>
       <TextHeading>{heading}</TextHeading>
       {subheading && <TextSubheading>{subheading}</TextSubheading>}
-    </Flow>
+    </Flex>
   );
 }
 
@@ -209,13 +209,13 @@ export function TextContentTitle({
 }: TextContentTitleProps) {
   const classNames = clsx(className, "text-content-title");
   return (
-    <Flow gap="sm" className={classNames} {...props}>
+    <Flex direction="column" gap="sm" className={classNames} {...props}>
       <TextTitleHero className={`text-align-${align}`}>{title}</TextTitleHero>
       {subtitle && (
         <TextSubtitle className={`text-align-${align}`}>
           {subtitle}
         </TextSubtitle>
       )}
-    </Flow>
+    </Flex>
   );
 }

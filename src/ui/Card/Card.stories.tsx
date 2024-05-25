@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconActivity } from "icons";
-import "react";
 import { ComponentProps } from "react";
 import { Button, ButtonGroup } from "ui/Button/Button";
 import { Card } from "ui/Card/Card";
+import { Flex } from "ui/Flex/Flex";
 import { Image } from "ui/Image/Image";
 import { Text, TextHeading } from "ui/Text/Text";
 
@@ -78,42 +78,35 @@ export const Default: Story = {
 
 export const Bulk: StoryObj<typeof Card> = {
   render: () => (
-    <Layout gap="xl" direction="column">
-      <Layout gap="lg" auto>
-        {[1, 2, 3, 4].map((i) => (
-          <LayoutItem key={i} size="minor">
-            <Card asset={<IconActivity size="32" />}>
-              <TextHeading>Subheading</TextHeading>
-              <Text>
-                Body text for whatever you’d like to say. Add main takeaway
-                points, quotes, anecdotes, or even a very very short story.{" "}
-              </Text>
-              <ButtonGroup>
-                <Button variant="secondary">Some action</Button>
-              </ButtonGroup>
-            </Card>
-          </LayoutItem>
-        ))}
-        {[1, 2, 3, 4].map((i) => (
-          <LayoutItem key={i} size="minor">
-            <Card
-              variant="padded"
-              asset={
-                <Image alt="Accessibility!" src="https://picsum.photos/500" />
-              }
-            >
-              <TextHeading>Subheading</TextHeading>
-              <Text>
-                Body text for whatever you’d like to say. Add main takeaway
-                points, quotes, anecdotes, or even a very very short story.{" "}
-              </Text>
-              <ButtonGroup>
-                <Button variant="secondary">Some action</Button>
-              </ButtonGroup>
-            </Card>
-          </LayoutItem>
-        ))}
-      </Layout>
-    </Layout>
+    <Flex gap="lg" wrap type="quarter">
+      {[1, 2, 3, 4].map((i) => (
+        <Card key={i} asset={<IconActivity size="32" />}>
+          <TextHeading>Subheading</TextHeading>
+          <Text>
+            Body text for whatever you’d like to say. Add main takeaway points,
+            quotes, anecdotes, or even a very very short story.{" "}
+          </Text>
+          <ButtonGroup>
+            <Button variant="secondary">Some action</Button>
+          </ButtonGroup>
+        </Card>
+      ))}
+      {[1, 2, 3, 4].map((i) => (
+        <Card
+          variant="padded"
+          key={i}
+          asset={<Image alt="Accessibility!" src="https://picsum.photos/500" />}
+        >
+          <TextHeading>Subheading</TextHeading>
+          <Text>
+            Body text for whatever you’d like to say. Add main takeaway points,
+            quotes, anecdotes, or even a very very short story.{" "}
+          </Text>
+          <ButtonGroup>
+            <Button variant="secondary">Some action</Button>
+          </ButtonGroup>
+        </Card>
+      ))}
+    </Flex>
   ),
 };

@@ -8,6 +8,13 @@
   --global-line-height-paragraph: 1.4;
 }
 
+.display-none-to-flex {
+  display: var(--sds-responsive-display-none-to-flex) !important;
+}
+.display-flex-to-none {
+  display: var(--sds-responsive-display-flex-to-none) !important;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --global-focus-ring-color: var(--sds-color-blue-300);

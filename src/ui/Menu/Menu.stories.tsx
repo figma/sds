@@ -21,27 +21,25 @@ export const Default: Story = {
   args: { placement: "bottom left" },
   render: (args) => {
     return (
-      <Layout alignPrimary="center">
-        <MenuButton {...args} label="Open menu" icon={<IconMenu />}>
-          <MenuItem>New…</MenuItem>
-          <MenuItem isDisabled>Open…</MenuItem>
-          <MenuSeparator />
-          <MenuItem>
-            <MenuLabel>Save</MenuLabel>
-            <MenuShortcut>⌘S</MenuShortcut>
-          </MenuItem>
-          <MenuItem>
-            <MenuLabel>Delete</MenuLabel>
-            <MenuDescription>Delete this thing forever</MenuDescription>
-            <MenuShortcut>⇧⌘⌫</MenuShortcut>
-          </MenuItem>
-          <MenuItem>Save as…</MenuItem>
-          <MenuItem>Rename…</MenuItem>
-          <MenuSeparator />
-          <MenuItem>Page setup…</MenuItem>
-          <MenuItem>Print…</MenuItem>
-        </MenuButton>
-      </Layout>
+      <MenuButton {...args} label="Open menu" icon={<IconMenu />}>
+        <MenuItem>New…</MenuItem>
+        <MenuItem isDisabled>Open…</MenuItem>
+        <MenuSeparator />
+        <MenuItem>
+          <MenuLabel>Save</MenuLabel>
+          <MenuShortcut>⌘S</MenuShortcut>
+        </MenuItem>
+        <MenuItem>
+          <MenuLabel>Delete</MenuLabel>
+          <MenuDescription>Delete this thing forever</MenuDescription>
+          <MenuShortcut>⇧⌘⌫</MenuShortcut>
+        </MenuItem>
+        <MenuItem>Save as…</MenuItem>
+        <MenuItem>Rename…</MenuItem>
+        <MenuSeparator />
+        <MenuItem>Page setup…</MenuItem>
+        <MenuItem>Print…</MenuItem>
+      </MenuButton>
     );
   },
 };

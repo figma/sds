@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { IconTrash } from "icons";
 import { SortDescriptor } from "react-stately";
 import { Button } from "ui/Button/Button";
+import { Flex } from "ui/Flex/Flex";
 import { IconButton } from "ui/IconButton/IconButton";
 import {
   Table,
@@ -95,14 +96,14 @@ export const Other: Story = {
                 </Tag>
               </TableCell>
               <TableCell>
-                <Layout alignPrimary="end" alignSecondary="center">
+                <Flex alignPrimary="end" alignSecondary="center">
                   <Button size="sm" variant="stroke">
                     View
                   </Button>
                   <IconButton size="sm" aria-label="Trash icon">
                     <IconTrash />
                   </IconButton>
-                </Layout>
+                </Flex>
               </TableCell>
             </TableRow>
           ))}

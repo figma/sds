@@ -6,6 +6,8 @@ import {
   CheckboxGroup,
   FieldGroup,
   Fieldset,
+  Flex,
+  FlexItem,
   InputField,
   Legend,
   RadioField,
@@ -37,8 +39,8 @@ function App() {
     document.body.className = `sds-scheme-color-${theme}`;
   }, [theme]);
   return (
-    <Layout direction="column" gap="xl">
-      <LayoutItem>
+    <Flex container direction="column" gap="xl">
+      <FlexItem>
         <SelectField
           defaultSelectedKey={theme}
           placeholder="Select theme..."
@@ -49,40 +51,32 @@ function App() {
         >
           {(item) => <SelectItem>{item.name}</SelectItem>}
         </SelectField>
-      </LayoutItem>
-      <LayoutItem>
-        <Layout gap="sm" auto>
-          <LayoutItem>
-            <Button>
-              <IconArrowLeft />
-              Hello world
-              <IconActivity />
-            </Button>
-          </LayoutItem>
-          <LayoutItem>
-            <Button variant="secondary">
-              <IconArrowLeft />
-              Hello world
-              <IconActivity />
-            </Button>
-          </LayoutItem>
-          <LayoutItem>
-            <Button variant="stroke">
-              <IconArrowLeft />
-              Hello world
-              <IconActivity />
-            </Button>
-          </LayoutItem>
-          <LayoutItem>
-            <Button variant="subtle">
-              <IconArrowLeft />
-              Hello world
-              <IconActivity />
-            </Button>
-          </LayoutItem>
-        </Layout>
-      </LayoutItem>
-      <LayoutItem>
+      </FlexItem>
+      <FlexItem>
+        <Flex gap="sm" alignPrimary="center" wrap>
+          <Button>
+            <IconArrowLeft />
+            Hello world
+            <IconActivity />
+          </Button>
+          <Button variant="secondary">
+            <IconArrowLeft />
+            Hello world
+            <IconActivity />
+          </Button>
+          <Button variant="stroke">
+            <IconArrowLeft />
+            Hello world
+            <IconActivity />
+          </Button>
+          <Button variant="subtle">
+            <IconArrowLeft />
+            Hello world
+            <IconActivity />
+          </Button>
+        </Flex>
+      </FlexItem>
+      <FlexItem>
         <Fieldset>
           <Legend>Shipping details</Legend>
           <Text>Without this your odds of getting your order are low.</Text>
@@ -150,8 +144,8 @@ function App() {
             />
           </SwitchGroup>
         </Fieldset>
-      </LayoutItem>
-    </Layout>
+      </FlexItem>
+    </Flex>
   );
 }
 export default App;

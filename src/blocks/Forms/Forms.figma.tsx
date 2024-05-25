@@ -1,9 +1,9 @@
 import { figma } from "@figma/code-connect";
-import { Card, Flow, Form, Layout } from "ui";
+import { Card, Flex, Form } from "ui";
 
 // Shipping Form
 figma.connect(
-  Layout,
+  Flex,
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=9762-3140&t=qJR3PLmBgMwoBka4-11",
   {
     props: {
@@ -20,7 +20,9 @@ figma.connect(
     },
     example: ({ children }) => (
       <Card variant="padded">
-        <Flow gap="sm">{children}</Flow>
+        <Flex direction="column" gap="sm">
+          {children}
+        </Flex>
       </Card>
     ),
   },
@@ -28,7 +30,7 @@ figma.connect(
 
 // Contact Form
 figma.connect(
-  Layout,
+  Flex,
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=56-15992&t=qJR3PLmBgMwoBka4-11",
   {
     props: {
@@ -40,7 +42,9 @@ figma.connect(
     },
     example: ({ children }) => (
       <Card variant="padded">
-        <Flow gap="sm">{children}</Flow>
+        <Flex direction="column" gap="sm">
+          {children}
+        </Flex>
       </Card>
     ),
   },
@@ -60,7 +64,7 @@ figma.connect(
 
 // Log in Form
 figma.connect(
-  Layout,
+  Flex,
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2143-14838&t=qJR3PLmBgMwoBka4-11",
   {
     props: {
@@ -68,7 +72,9 @@ figma.connect(
     },
     example: ({ children }) => (
       <Card variant="padded">
-        <Flow gap="sm">{children}</Flow>
+        <Flex direction="column" gap="sm">
+          {children}
+        </Flex>
       </Card>
     ),
   },
@@ -76,7 +82,7 @@ figma.connect(
 
 // Register Form
 figma.connect(
-  Layout,
+  Flex,
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2143-14829&t=qJR3PLmBgMwoBka4-11",
   {
     props: {
@@ -88,7 +94,9 @@ figma.connect(
     },
     example: ({ children }) => (
       <Card variant="padded">
-        <Flow gap="sm">{children}</Flow>
+        <Flex direction="column" gap="sm">
+          {children}
+        </Flex>
       </Card>
     ),
   },
@@ -96,7 +104,7 @@ figma.connect(
 
 // Forgot Password Form
 figma.connect(
-  Layout,
+  Flex,
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2143-14939&t=qJR3PLmBgMwoBka4-11",
   {
     props: {
@@ -104,7 +112,9 @@ figma.connect(
     },
     example: ({ children }) => (
       <Card variant="padded">
-        <Flow gap="sm">{children}</Flow>
+        <Flex direction="column" gap="sm">
+          {children}
+        </Flex>
       </Card>
     ),
   },

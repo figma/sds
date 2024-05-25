@@ -14,14 +14,12 @@ const meta: Meta<typeof Popover> = {
 export default meta;
 
 export const Default = (args: any) => (
-  <Layout alignPrimary="center">
-    <DialogTrigger>
-      <IconButton aria-label="Help">
-        <IconHelpCircle />
-      </IconButton>
-      <Popover {...args}>
-        <Text>For help accessing your account, please contact support.</Text>
-      </Popover>
-    </DialogTrigger>
-  </Layout>
+  <DialogTrigger>
+    <IconButton aria-label="Help">
+      <IconHelpCircle />
+    </IconButton>
+    <Popover {...args}>
+      <Text>For help accessing your account, please contact support.</Text>
+    </Popover>
+  </DialogTrigger>
 );
