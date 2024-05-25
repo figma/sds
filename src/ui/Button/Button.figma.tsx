@@ -68,7 +68,7 @@ figma.connect(ButtonGroup, FIGMA_URL_BUTTON_GROUP, {
       End: "end",
       Justify: "justify",
     }),
-    children: figma.children("Button"),
+    children: figma.children(["Button", "Icon Button"]),
   },
   example: ({ children, align }) => (
     <ButtonGroup align={align}>{children}</ButtonGroup>

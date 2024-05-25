@@ -6,8 +6,6 @@ import {
   CheckboxGroup,
   FieldGroup,
   Fieldset,
-  Grid,
-  GridItem,
   InputField,
   Legend,
   RadioField,
@@ -39,8 +37,8 @@ function App() {
     document.body.className = `sds-scheme-color-${theme}`;
   }, [theme]);
   return (
-    <Grid auto direction="column" gap="xl">
-      <GridItem>
+    <Layout direction="column" gap="xl">
+      <LayoutItem>
         <SelectField
           defaultSelectedKey={theme}
           placeholder="Select theme..."
@@ -51,40 +49,40 @@ function App() {
         >
           {(item) => <SelectItem>{item.name}</SelectItem>}
         </SelectField>
-      </GridItem>
-      <GridItem>
-        <Grid gap="sm" auto>
-          <GridItem>
+      </LayoutItem>
+      <LayoutItem>
+        <Layout gap="sm" auto>
+          <LayoutItem>
             <Button>
               <IconArrowLeft />
               Hello world
               <IconActivity />
             </Button>
-          </GridItem>
-          <GridItem>
+          </LayoutItem>
+          <LayoutItem>
             <Button variant="secondary">
               <IconArrowLeft />
               Hello world
               <IconActivity />
             </Button>
-          </GridItem>
-          <GridItem>
+          </LayoutItem>
+          <LayoutItem>
             <Button variant="stroke">
               <IconArrowLeft />
               Hello world
               <IconActivity />
             </Button>
-          </GridItem>
-          <GridItem>
+          </LayoutItem>
+          <LayoutItem>
             <Button variant="subtle">
               <IconArrowLeft />
               Hello world
               <IconActivity />
             </Button>
-          </GridItem>
-        </Grid>
-      </GridItem>
-      <GridItem>
+          </LayoutItem>
+        </Layout>
+      </LayoutItem>
+      <LayoutItem>
         <Fieldset>
           <Legend>Shipping details</Legend>
           <Text>Without this your odds of getting your order are low.</Text>
@@ -152,8 +150,8 @@ function App() {
             />
           </SwitchGroup>
         </Fieldset>
-      </GridItem>
-    </Grid>
+      </LayoutItem>
+    </Layout>
   );
 }
 export default App;

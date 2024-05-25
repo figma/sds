@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {
-  Grid,
-  GridItem,
   Label,
   Tag,
   TagButton,
@@ -22,154 +20,154 @@ type StoryToggle = StoryObj<typeof TagToggleGroup>;
 export const Default: Story = {
   args: {},
   render: () => (
-    <Grid auto alignPrimary="center" gap="md">
-      <GridItem>
+    <Layout alignPrimary="center" gap="md">
+      <LayoutItem>
         <Tag scheme="default">Default</Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag scheme="danger">Danger</Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag scheme="positive">Positive</Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag scheme="warning">Warning</Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag scheme="neutral">Neutral</Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag scheme="default" variant="secondary">
           Default
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag scheme="danger" variant="secondary">
           Danger
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag scheme="positive" variant="secondary">
           Positive
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag scheme="warning" variant="secondary">
           Warning
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag scheme="neutral" variant="secondary">
           Neutral
         </Tag>
-      </GridItem>
-    </Grid>
+      </LayoutItem>
+    </Layout>
   ),
 };
 
 export const Removable: Story = {
   args: {},
   render: () => (
-    <Grid auto alignPrimary="center" gap="md">
-      <GridItem>
+    <Layout alignPrimary="center" gap="md">
+      <LayoutItem>
         <Tag onRemove={() => {}} scheme="default">
           Default
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag onRemove={() => {}} scheme="danger">
           Danger
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag onRemove={() => {}} scheme="positive">
           Positive
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag onRemove={() => {}} scheme="warning">
           Warning
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag onRemove={() => {}} scheme="neutral">
           Neutral
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag onRemove={() => {}} scheme="default" variant="secondary">
           Default
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag onRemove={() => {}} scheme="danger" variant="secondary">
           Danger
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag onRemove={() => {}} scheme="positive" variant="secondary">
           Positive
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag onRemove={() => {}} scheme="warning" variant="secondary">
           Warning
         </Tag>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <Tag onRemove={() => {}} scheme="neutral" variant="secondary">
           Neutral
         </Tag>
-      </GridItem>
-    </Grid>
+      </LayoutItem>
+    </Layout>
   ),
 };
 
 export const TagButtonDefault: Story = {
   args: {},
   render: () => (
-    <Grid auto alignPrimary="center" gap="md">
-      <GridItem>
+    <Layout alignPrimary="center" gap="md">
+      <LayoutItem>
         <TagButton scheme="default">Default</TagButton>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <TagButton scheme="danger">Danger</TagButton>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <TagButton scheme="positive">Positive</TagButton>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <TagButton scheme="warning">Warning</TagButton>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <TagButton scheme="neutral">Neutral</TagButton>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <TagButton scheme="default" variant="secondary">
           Default
         </TagButton>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <TagButton scheme="danger" variant="secondary">
           Danger
         </TagButton>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <TagButton scheme="positive" variant="secondary">
           Positive
         </TagButton>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <TagButton scheme="warning" variant="secondary">
           Warning
         </TagButton>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <TagButton scheme="neutral" variant="secondary">
           Neutral
         </TagButton>
-      </GridItem>
-    </Grid>
+      </LayoutItem>
+    </Layout>
   ),
 };
 
@@ -184,7 +182,7 @@ export const TagToggleDefault: StoryToggle = {
     },
   },
   render: (args) => (
-    <Grid alignPrimary="center">
+    <Layout alignPrimary="center">
       <TagToggleGroup defaultSelectedKeys={["default"]} {...args}>
         <Label>Hello there</Label>
         <TagToggleList>
@@ -195,6 +193,6 @@ export const TagToggleDefault: StoryToggle = {
           <TagToggle>Neutral</TagToggle>
         </TagToggleList>
       </TagToggleGroup>
-    </Grid>
+    </Layout>
   ),
 };

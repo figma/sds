@@ -5,7 +5,6 @@ import { ComponentProps } from "react";
 import { Button, ButtonGroup } from "ui/Button/Button";
 import { Card } from "ui/Card/Card";
 import { Image } from "ui/Image/Image";
-import { Grid, GridItem } from "ui/Layout/Layout";
 import { Text, TextHeading } from "ui/Text/Text";
 
 const meta: Meta<typeof Card> = {
@@ -79,10 +78,10 @@ export const Default: Story = {
 
 export const Bulk: StoryObj<typeof Card> = {
   render: () => (
-    <Grid gap="xl" auto direction="column">
-      <Grid gap="lg" auto>
+    <Layout gap="xl" direction="column">
+      <Layout gap="lg" auto>
         {[1, 2, 3, 4].map((i) => (
-          <GridItem key={i} size="minor">
+          <LayoutItem key={i} size="minor">
             <Card asset={<IconActivity size="32" />}>
               <TextHeading>Subheading</TextHeading>
               <Text>
@@ -93,10 +92,10 @@ export const Bulk: StoryObj<typeof Card> = {
                 <Button variant="secondary">Some action</Button>
               </ButtonGroup>
             </Card>
-          </GridItem>
+          </LayoutItem>
         ))}
         {[1, 2, 3, 4].map((i) => (
-          <GridItem key={i} size="minor">
+          <LayoutItem key={i} size="minor">
             <Card
               variant="padded"
               asset={
@@ -112,9 +111,9 @@ export const Bulk: StoryObj<typeof Card> = {
                 <Button variant="secondary">Some action</Button>
               </ButtonGroup>
             </Card>
-          </GridItem>
+          </LayoutItem>
         ))}
-      </Grid>
-    </Grid>
+      </Layout>
+    </Layout>
   ),
 };

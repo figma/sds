@@ -40,12 +40,20 @@
 }
 
 .text-list {
-  color: var(--sds-color-text-default-secondary);
   display: flex;
   flex-direction: column;
   gap: var(--sds-size-gap-md);
   margin: 0;
-  padding: 1rem;
+
+  &.text-link-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &:not(.text-link-list) {
+    color: var(--sds-color-text-default-secondary);
+    padding: 1rem;
+  }
 }
 .text-list-item {
   font: var(--sds-font-body);
@@ -59,4 +67,14 @@
   > .text-body-small {
     margin-bottom: var(--sds-size-gap-md);
   }
+}
+
+.text-align-center {
+  text-align: center;
+}
+.text-align-start {
+  text-align: left;
+}
+.text-align-end {
+  text-align: right;
 }

@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconMenu } from "icons";
-import { Grid } from "ui/Layout/Layout";
 import {
   MenuButton,
   MenuDescription,
@@ -22,7 +21,7 @@ export const Default: Story = {
   args: { placement: "bottom left" },
   render: (args) => {
     return (
-      <Grid alignPrimary="center">
+      <Layout alignPrimary="center">
         <MenuButton {...args} label="Open menu" icon={<IconMenu />}>
           <MenuItem>New…</MenuItem>
           <MenuItem isDisabled>Open…</MenuItem>
@@ -42,7 +41,7 @@ export const Default: Story = {
           <MenuItem>Page setup…</MenuItem>
           <MenuItem>Print…</MenuItem>
         </MenuButton>
-      </Grid>
+      </Layout>
     );
   },
 };

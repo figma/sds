@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Grid, Link } from "ui";
+import { Link } from "ui";
 
 const meta: Meta<typeof Link> = {
   component: Link,
@@ -12,8 +12,8 @@ type Story = StoryObj<typeof Link>;
 export const Default: Story = {
   args: { children: "Hello world!", href: "https://www.example.org" },
   render: (args) => (
-    <Grid alignPrimary="center">
+    <Layout alignPrimary="center">
       <Link href={args.href}>{args.children}</Link>
-    </Grid>
+    </Layout>
   ),
 };

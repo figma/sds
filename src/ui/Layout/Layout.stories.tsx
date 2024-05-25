@@ -1,11 +1,25 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { StandardFooter } from "blocks/Footers/Footers";
 import { StandardHeader, VerticalHeader } from "blocks/Headers/Headers";
-import { Button, ButtonGroup, Grid, GridItem, Section } from "ui";
+import { IconFacebook, IconInstagram, IconLinkedin, IconYoutube } from "icons";
+import {
+  Button,
+  ButtonGroup,
+  Flow,
+  IconButton,
+  Layout,
+  LayoutItem,
+  Section,
+  TextLink,
+  TextLinkList,
+  TextListItem,
+  TextStrong,
+} from "ui";
 import { Logo } from "ui/Logo/Logo";
 import { Navigation, NavigationItem } from "ui/Navigation/Navigation";
 
-const meta: Meta<typeof Grid> = {
-  component: Grid,
+const meta: Meta<typeof Layout> = {
+  component: Layout,
   title: "ui/Layout",
   parameters: { layout: "centered" },
 };
@@ -25,9 +39,9 @@ const renderChild = (text: string) => (
   </div>
 );
 
-export const GridStory: StoryObj<typeof Grid> = {
+export const LayoutStory: StoryObj<typeof Layout> = {
   args: {
-    gap: undefined,
+    gap: "sm",
     type: "quarter",
   },
   argTypes: {
@@ -41,46 +55,70 @@ export const GridStory: StoryObj<typeof Grid> = {
     },
   },
   render: (args) => (
-    <Grid auto direction="column" gap="xl">
-      <Grid {...args} auto direction="row">
-        <GridItem size="full">{renderChild("full")}</GridItem>
-        <GridItem size="major">{renderChild("major")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="major">{renderChild("major")}</GridItem>
-        <GridItem size="half">{renderChild("half")}</GridItem>
-        <GridItem size="half">{renderChild("half")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="half">{renderChild("half")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="half">{renderChild("half")}</GridItem>
-      </Grid>
-      <Grid {...args}>
-        <GridItem size="full">{renderChild("full")}</GridItem>
-        <GridItem size="major">{renderChild("major")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="major">{renderChild("major")}</GridItem>
-        <GridItem size="half">{renderChild("half")}</GridItem>
-        <GridItem size="half">{renderChild("half")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="half">{renderChild("half")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="minor">{renderChild("minor")}</GridItem>
-        <GridItem size="half">{renderChild("half")}</GridItem>
-      </Grid>
-    </Grid>
+    <Layout direction="column" gap="xl">
+      <LayoutItem size="full">
+        <Layout {...args} direction="row">
+          <LayoutItem size="full">{renderChild("full")}</LayoutItem>
+          <LayoutItem size="major">{renderChild("major")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="major">{renderChild("major")}</LayoutItem>
+          <LayoutItem size="half">{renderChild("half")}</LayoutItem>
+          <LayoutItem size="half">{renderChild("half")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="half">{renderChild("half")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="half">{renderChild("half")}</LayoutItem>
+        </Layout>
+      </LayoutItem>
+      <LayoutItem size="full">
+        <Layout {...args}>
+          <LayoutItem size="full">{renderChild("full")}</LayoutItem>
+          <LayoutItem size="major">{renderChild("major")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="major">{renderChild("major")}</LayoutItem>
+          <LayoutItem size="half">{renderChild("half")}</LayoutItem>
+          <LayoutItem size="half">{renderChild("half")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="half">{renderChild("half")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="half">{renderChild("half")}</LayoutItem>
+        </Layout>
+      </LayoutItem>
+      <LayoutItem size="full">
+        <Layout {...args}>
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+          {renderChild("span")}
+        </Layout>
+      </LayoutItem>
+    </Layout>
   ),
 };
 
@@ -102,7 +140,7 @@ export const SectionStory: StoryObj<typeof Section> = {
   render: (args) => (
     <>
       <VerticalHeader>
-        <Grid auto direction="column" alignSecondary="center" gap="md">
+        <Layout direction="column" alignSecondary="center" gap="md">
           <Logo />
           <Navigation>
             <NavigationItem>Home</NavigationItem>
@@ -112,62 +150,132 @@ export const SectionStory: StoryObj<typeof Section> = {
             <NavigationItem>Careers</NavigationItem>
             <NavigationItem>Contact</NavigationItem>
           </Navigation>
-        </Grid>
+        </Layout>
       </VerticalHeader>
-
       <StandardHeader>
-        <Grid>
-          <GridItem size="minor">
-            <Logo />
-          </GridItem>
-          <GridItem size="major">
-            <Grid auto gap="xl" alignPrimary="end">
-              <Navigation>
-                <NavigationItem>Home</NavigationItem>
-                <NavigationItem isSelected>About</NavigationItem>
-                <NavigationItem>Pricing</NavigationItem>
-                <NavigationItem>Blog</NavigationItem>
-                <NavigationItem>Careers</NavigationItem>
-                <NavigationItem>Contact</NavigationItem>
-              </Navigation>
-              <ButtonGroup>
-                <Button onPress={() => {}} variant="secondary">
-                  Log in
-                </Button>
-                <Button onPress={() => {}}>Register</Button>
-              </ButtonGroup>
-            </Grid>
-          </GridItem>
-        </Grid>
-      </StandardHeader>
+        <Flow direction="row">
+          <Logo />
 
+          <Flow direction="row">
+            <Navigation>
+              <NavigationItem>Home</NavigationItem>
+              <NavigationItem isSelected>About</NavigationItem>
+              <NavigationItem>Pricing</NavigationItem>
+              <NavigationItem>Blog</NavigationItem>
+              <NavigationItem>Careers</NavigationItem>
+              <NavigationItem>Contact</NavigationItem>
+            </Navigation>
+            <ButtonGroup>
+              <Button onPress={() => {}} variant="secondary">
+                Log in
+              </Button>
+              <Button onPress={() => {}}>Register</Button>
+            </ButtonGroup>
+          </Flow>
+        </Flow>
+      </StandardHeader>
       <Section {...args}>
-        <Grid auto gap="xl">
-          <GridItem size="full">{renderChild("full")}</GridItem>
-          <GridItem size="major">{renderChild("major")}</GridItem>
-          <GridItem size="minor">{renderChild("minor")}</GridItem>
-          <GridItem size="minor">{renderChild("minor")}</GridItem>
-          <GridItem size="major">{renderChild("major")}</GridItem>
-        </Grid>
+        <Layout gap="xl">
+          <LayoutItem size="full">{renderChild("full")}</LayoutItem>
+          <LayoutItem size="major">{renderChild("major")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="major">{renderChild("major")}</LayoutItem>
+        </Layout>
       </Section>
       <Section {...args} variant="secondary">
-        <Grid auto gap="xl">
-          <GridItem size="full">{renderChild("full")}</GridItem>
-          <GridItem size="major">{renderChild("major")}</GridItem>
-          <GridItem size="minor">{renderChild("minor")}</GridItem>
-          <GridItem size="minor">{renderChild("minor")}</GridItem>
-          <GridItem size="major">{renderChild("major")}</GridItem>
-        </Grid>
+        <Layout gap="xl">
+          <LayoutItem size="full">{renderChild("full")}</LayoutItem>
+          <LayoutItem size="major">{renderChild("major")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="major">{renderChild("major")}</LayoutItem>
+        </Layout>
       </Section>
       <Section {...args}>
-        <Grid auto gap="xl">
-          <GridItem size="full">{renderChild("full")}</GridItem>
-          <GridItem size="major">{renderChild("major")}</GridItem>
-          <GridItem size="minor">{renderChild("minor")}</GridItem>
-          <GridItem size="minor">{renderChild("minor")}</GridItem>
-          <GridItem size="major">{renderChild("major")}</GridItem>
-        </Grid>
+        <Layout gap="xl">
+          <LayoutItem size="full">{renderChild("full")}</LayoutItem>
+          <LayoutItem size="major">{renderChild("major")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="minor">{renderChild("minor")}</LayoutItem>
+          <LayoutItem size="major">{renderChild("major")}</LayoutItem>
+        </Layout>
       </Section>
+
+      <StandardFooter>
+        <Layout gap="xl" alignSecondary="start">
+          <Flow gap="lg">
+            <Logo />
+            <ButtonGroup>
+              <IconButton
+                aria-label="Write a nice description of the action."
+                onPress={() => {}}
+                size="sm"
+                variant="subtle"
+              >
+                <IconFacebook />
+              </IconButton>
+              <IconButton
+                aria-label="Write a nice description of the action."
+                onPress={() => {}}
+                size="sm"
+                variant="subtle"
+              >
+                <IconLinkedin />
+              </IconButton>
+              <IconButton
+                aria-label="Write a nice description of the action."
+                onPress={() => {}}
+                size="sm"
+                variant="subtle"
+              >
+                <IconYoutube />
+              </IconButton>
+              <IconButton
+                aria-label="Write a nice description of the action."
+                onPress={() => {}}
+                size="sm"
+                variant="subtle"
+              >
+                <IconInstagram />
+              </IconButton>
+            </ButtonGroup>
+          </Flow>
+          <TextLinkList title={<TextStrong>Text Strong</TextStrong>}>
+            <TextListItem>
+              <TextLink href="#">List item</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">List item</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">List item</TextLink>
+            </TextListItem>
+          </TextLinkList>
+          <TextLinkList title={<TextStrong>Text Strong</TextStrong>}>
+            <TextListItem>
+              <TextLink href="#">List item</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">List item</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">List item</TextLink>
+            </TextListItem>
+          </TextLinkList>
+          <TextLinkList title={<TextStrong>Text Strong</TextStrong>}>
+            <TextListItem>
+              <TextLink href="#">List item</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">List item</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">List item</TextLink>
+            </TextListItem>
+          </TextLinkList>
+        </Layout>
+      </StandardFooter>
     </>
   ),
 };

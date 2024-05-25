@@ -1,5 +1,4 @@
 import { figma } from "@figma/code-connect";
-import { Grid, GridItem } from "ui";
 import { StandardHeader, VerticalHeader } from "./Headers";
 
 const FIGMA_URL_STANDARD_HEADER =
@@ -14,14 +13,14 @@ figma.connect(StandardHeader, FIGMA_URL_STANDARD_HEADER, {
   },
   example: ({ children, logo }) => (
     <StandardHeader>
-      <Grid>
-        <GridItem size="minor">{logo}</GridItem>
-        <GridItem size="major">
-          <Grid auto gap="xl" alignPrimary="end">
+      <Layout>
+        <LayoutItem size="minor">{logo}</LayoutItem>
+        <LayoutItem size="major">
+          <Layout gap="xl" alignPrimary="end">
             {children}
-          </Grid>
-        </GridItem>
-      </Grid>
+          </Layout>
+        </LayoutItem>
+      </Layout>
     </StandardHeader>
   ),
 });
@@ -33,10 +32,10 @@ figma.connect(VerticalHeader, FIGMA_URL_VERTICAL_HEADER, {
   },
   example: ({ children, logo }) => (
     <VerticalHeader>
-      <Grid auto direction="column" alignSecondary="center" gap="md">
+      <Layout direction="column" alignSecondary="center" gap="md">
         {logo}
         {children}
-      </Grid>
+      </Layout>
     </VerticalHeader>
   ),
 });

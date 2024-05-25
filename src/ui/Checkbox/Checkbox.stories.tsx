@@ -1,7 +1,7 @@
 import { useArgs } from "@storybook/preview-api";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useState } from "react";
-import { Checkbox, CheckboxField, CheckboxGroup, Grid } from "ui";
+import { Checkbox, CheckboxField, CheckboxGroup } from "ui";
 
 const meta: Meta<typeof Checkbox> = {
   component: Checkbox,
@@ -37,7 +37,7 @@ export const Group: StoryGroup = {
   args: {},
   render: (args) => {
     return (
-      <Grid alignPrimary="center">
+      <Layout alignPrimary="center">
         <CheckboxGroup
           label="Hello"
           description="I am a description"
@@ -48,7 +48,7 @@ export const Group: StoryGroup = {
           <CheckboxField value="two">Value two</CheckboxField>
           <CheckboxField value="three">Value three</CheckboxField>
         </CheckboxGroup>
-      </Grid>
+      </Layout>
     );
   },
 };
@@ -58,7 +58,7 @@ export const Indeterminate: Story = {
     const options = ["One with a very long name indeed.", "Two", "Three"];
     const [selected, setSelected] = useState<string[]>([]);
     return (
-      <Grid direction="column">
+      <Layout direction="column">
         <CheckboxField
           isSelected={selected.length > 0}
           isIndeterminate={selected.length !== options.length}
@@ -85,7 +85,7 @@ export const Indeterminate: Story = {
             }
           />
         ))}
-      </Grid>
+      </Layout>
     );
   },
 };

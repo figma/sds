@@ -12,9 +12,9 @@ figma.connect(Image, FIGMA_URL_IMAGE, {
       "4:3": "4-3",
     }),
     src: figma.enum("Aspect ratio", {
-      "16:9": "https://picsum.photo/800/450",
-      "1:1": "https://picsum.photo/600/600",
-      "4:3": "https://picsum.photo/800/600",
+      "16:9": "https://picsum.photos/800/450",
+      "1:1": "https://picsum.photos/600/600",
+      "4:3": "https://picsum.photos/800/600",
     }),
   },
   example: ({ aspectRatio, src }) => (

@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Grid } from "ui";
 import { Tab, TabList, TabPanel, Tabs } from "./Tab";
 
 const meta: Meta<typeof Tabs> = {
@@ -14,7 +13,7 @@ export const Default: Story = {
   args: {},
   argTypes: {},
   render: (args) => (
-    <Grid alignPrimary="center">
+    <Layout alignPrimary="center">
       <Tabs defaultSelectedKey="default" {...args}>
         <TabList>
           <Tab id="default">Default</Tab>
@@ -24,21 +23,21 @@ export const Default: Story = {
           <Tab id="neutral">Nuetral</Tab>
         </TabList>
         <TabPanel id="default">
-          <Grid>This is the default thing</Grid>
+          <Layout>This is the default thing</Layout>
         </TabPanel>
         <TabPanel id="danger">
-          <Grid>Some danger stuff</Grid>
+          <Layout>Some danger stuff</Layout>
         </TabPanel>
         <TabPanel id="positive">
-          <Grid>Some positive stuff</Grid>
+          <Layout>Some positive stuff</Layout>
         </TabPanel>
         <TabPanel id="warning">
-          <Grid>Some warning stuff</Grid>
+          <Layout>Some warning stuff</Layout>
         </TabPanel>
         <TabPanel id="neutral">
-          <Grid>Some neutral stuff</Grid>
+          <Layout>Some neutral stuff</Layout>
         </TabPanel>
       </Tabs>
-    </Grid>
+    </Layout>
   ),
 };

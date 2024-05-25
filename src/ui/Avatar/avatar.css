@@ -47,7 +47,7 @@
   align-items: center;
   display: grid;
   grid-template-areas: "avatar label" "avatar description";
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr;
   column-gap: var(--sds-size-gap-sm);
   row-gap: var(--sds-size-gap-xs);
 

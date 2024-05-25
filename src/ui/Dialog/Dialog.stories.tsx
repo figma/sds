@@ -3,7 +3,6 @@ import { IconMenu } from "icons";
 import { useState } from "react";
 import { Button } from "ui/Button/Button";
 import { InputField } from "ui/Input/Input";
-import { Grid } from "ui/Layout/Layout";
 import {
   Table,
   TableBody,
@@ -32,7 +31,7 @@ type Story = StoryObj<typeof Dialog>;
 
 export const Default: Story = {
   render: () => (
-    <Grid alignPrimary="center">
+    <Layout alignPrimary="center">
       <DialogButton variant="secondary" icon={<IconMenu />} label="Open Dialog">
         {({ close }) => (
           <>
@@ -53,7 +52,7 @@ export const Default: Story = {
           </>
         )}
       </DialogButton>
-    </Grid>
+    </Layout>
   ),
 };
 export const Controlled: Story = {
@@ -61,7 +60,7 @@ export const Controlled: Story = {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-      <Grid alignPrimary="center">
+      <Layout alignPrimary="center">
         <Button onPress={() => setIsOpen(!isOpen)}>Open Dialog</Button>
         <DialogModal
           isDismissable
@@ -85,7 +84,7 @@ export const Controlled: Story = {
             </DialogActions>
           </Dialog>
         </DialogModal>
-      </Grid>
+      </Layout>
     );
   },
 };
@@ -95,7 +94,7 @@ export const BodyBleed: Story = {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-      <Grid alignPrimary="center">
+      <Layout alignPrimary="center">
         <Button onPress={() => setIsOpen(!isOpen)}>Open Dialog</Button>
         <DialogModal
           isDismissable
@@ -136,7 +135,7 @@ export const BodyBleed: Story = {
             </DialogActions>
           </Dialog>
         </DialogModal>
-      </Grid>
+      </Layout>
     );
   },
 };

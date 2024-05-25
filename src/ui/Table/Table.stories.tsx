@@ -4,7 +4,6 @@ import { IconTrash } from "icons";
 import { SortDescriptor } from "react-stately";
 import { Button } from "ui/Button/Button";
 import { IconButton } from "ui/IconButton/IconButton";
-import { Grid } from "ui/Layout/Layout";
 import {
   Table,
   TableBody,
@@ -96,14 +95,14 @@ export const Other: Story = {
                 </Tag>
               </TableCell>
               <TableCell>
-                <Grid alignPrimary="end" alignSecondary="center">
+                <Layout alignPrimary="end" alignSecondary="center">
                   <Button size="sm" variant="stroke">
                     View
                   </Button>
                   <IconButton size="sm" aria-label="Trash icon">
                     <IconTrash />
                   </IconButton>
-                </Grid>
+                </Layout>
               </TableCell>
             </TableRow>
           ))}

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconActivity } from "icons";
-import { Grid, IconButton } from "ui";
+import { IconButton } from "ui";
 
 const meta: Meta<typeof IconButton> = {
   component: IconButton,
@@ -23,11 +23,11 @@ export const Default: Story = {
     },
   },
   render: ({ ...props }) => (
-    <Grid alignPrimary="center">
+    <Layout alignPrimary="center">
       <IconButton {...props}>
         <IconActivity />
       </IconButton>
-    </Grid>
+    </Layout>
   ),
 };
 
@@ -36,10 +36,10 @@ export const All: Story = {
     isDisabled: false,
   },
   render: ({ ...props }) => (
-    <Grid auto direction="column">
+    <Layout direction="column">
       {["default", "purple", "blue", "teal"].map((theme) => (
         <div key={theme} className={`sds-theme-${theme}`}>
-          <Grid alignPrimary="center">
+          <Layout alignPrimary="center">
             <IconButton {...props}>
               <IconActivity />
             </IconButton>
@@ -52,9 +52,9 @@ export const All: Story = {
             <IconButton {...props} variant="subtle">
               <IconActivity />
             </IconButton>
-          </Grid>
+          </Layout>
         </div>
       ))}
-    </Grid>
+    </Layout>
   ),
 };

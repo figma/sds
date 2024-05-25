@@ -50,7 +50,7 @@
   column-gap: var(--sds-size-gap-lg);
   display: grid;
   font: var(--sds-font-body-base);
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr auto;
 
   padding: var(--sds-size-padding-md) var(--sds-size-padding-lg);
   row-gap: var(--sds-size-gap-xs);

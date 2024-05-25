@@ -4,61 +4,61 @@ import "./layout.css";
 
 type TShirtSizes = "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 
-type GridAlign = "center" | "start" | "end" | "stretch";
-type GridDirection = "row" | "column";
-type GridType = "quarter" | "third";
-type GridGap = Exclude<TShirtSizes, "xxl">;
+type LayoutAlign = "center" | "start" | "end" | "stretch";
+type LayoutDirection = "row" | "column";
+type LayoutType = "quarter" | "third";
+type LayoutGap = Exclude<TShirtSizes, "xxl">;
 
-export type GridProps = ComponentPropsWithoutRef<"div"> & {
-  alignPrimary?: GridAlign;
-  alignSecondary?: GridAlign;
-  gap?: GridGap;
-  type?: GridType;
-} & (
-    | {
-        auto?: never;
-      }
-    | {
-        auto: true;
-        direction?: GridDirection;
-      }
-  );
+export type LayoutProps = ComponentPropsWithoutRef<"div"> & {
+  alignPrimary?: LayoutAlign;
+  alignSecondary?: LayoutAlign;
+  gap?: LayoutGap;
+  type?: LayoutType;
+  direction?: LayoutDirection;
+};
 
-export function Grid({
+export function Layout({
   children,
+  className,
   alignPrimary,
   alignSecondary,
   gap,
+  direction = "row",
   type = "quarter",
   ...props
-}: GridProps) {
+}: LayoutProps) {
   const classNames = clsx(
-    "grid",
-    gap && `grid-gap-${gap}`,
-    `grid-type-${type}`,
-    props.auto && "grid-auto",
-    props.auto && `grid-direction-${props.direction || "row"}`,
-    alignPrimary && `grid-align-primary-${alignPrimary}`,
-    alignSecondary && `grid-align-secondary-${alignSecondary}`,
+    className,
+    "layout",
+    `layout-type-${type}`,
+    `layout-direction-${direction}`,
+    gap && `layout-gap-${gap}`,
+    alignPrimary && `layout-align-primary-${alignPrimary}`,
+    alignSecondary && `layout-align-secondary-${alignSecondary}`,
   );
-  return <div className={classNames}>{children}</div>;
+  return (
+    <div className={classNames} {...props}>
+      {children}
+    </div>
+  );
 }
 
-type GridItemSize = "full" | "major" | "minor" | "half";
-export type GridItemProps = ComponentPropsWithoutRef<"div"> & {
-  size?: GridItemSize;
+type LayoutItemSize = "full" | "major" | "minor" | "half";
+export type LayoutItemProps = ComponentPropsWithoutRef<"div"> & {
+  size?: LayoutItemSize;
 };
-export function GridItem({ children, size }: GridItemProps) {
-  const classNames = clsx("grid-item", size && `grid-item-size-${size}`);
+export function LayoutItem({ children, size }: LayoutItemProps) {
+  const classNames = clsx("layout-item", size && `layout-item-size-${size}`);
   return <div className={classNames}>{children}</div>;
 }
 
 export type FlowProps = Omit<
-  GridProps,
-  "alignPrimiary" | "alignSecondary" | "auto" | "direction" | "type"
+  LayoutProps,
+  "alignPrimary" | "alignSecondary" | "auto" | "type"
 >;
-export function Flow({ ...props }: FlowProps) {
-  return <Grid direction="column" auto {...props} />;
+export function Flow({ className, direction = "column", ...props }: FlowProps) {
+  const classNames = clsx("layout-flow");
+  return <Layout direction={direction} className={classNames} {...props} />;
 }
 
 type SectionPadding = Omit<TShirtSizes, "xs" | "xxl" | "xl">;

@@ -6,8 +6,6 @@ import {
   ButtonGroup,
   Card,
   Description,
-  Grid,
-  GridItem,
   Image,
   Label,
   Text,
@@ -27,9 +25,9 @@ export default meta;
 
 export const PricingCardStory: StoryObj<typeof PricingCard> = {
   render: () => (
-    <Grid auto gap="lg" direction="row">
+    <Layout gap="lg" direction="row">
       {[1, 2, 3, 4].map((i) => (
-        <GridItem key={i}>
+        <LayoutItem key={i}>
           <PricingCard>
             <TextHeading>Look at these rates</TextHeading>
             <TextTitlePage>
@@ -47,16 +45,16 @@ export const PricingCardStory: StoryObj<typeof PricingCard> = {
               <Button>Buy this</Button>
             </ButtonGroup>
           </PricingCard>
-        </GridItem>
+        </LayoutItem>
       ))}
-    </Grid>
+    </Layout>
   ),
 };
 
 export const ProductInfoCardStory: StoryObj<typeof ProductInfoCard> = {
   render: () => (
-    <Grid auto gap="lg" direction="row">
-      <GridItem>
+    <Layout gap="lg" direction="row">
+      <LayoutItem>
         <ProductInfoCard
           asset={<Image alt="Accessibility!" src="https://picsum.photos/250" />}
         >
@@ -66,8 +64,8 @@ export const ProductInfoCardStory: StoryObj<typeof ProductInfoCard> = {
             <Button variant="secondary">Buy this</Button>
           </ButtonGroup>
         </ProductInfoCard>
-      </GridItem>
-      <GridItem>
+      </LayoutItem>
+      <LayoutItem>
         <ProductInfoCard
           asset={<Image alt="Accessibility!" src="https://picsum.photos/250" />}
         >
@@ -77,15 +75,15 @@ export const ProductInfoCardStory: StoryObj<typeof ProductInfoCard> = {
             <Button variant="secondary">Buy this</Button>
           </ButtonGroup>
         </ProductInfoCard>
-      </GridItem>
-    </Grid>
+      </LayoutItem>
+    </Layout>
   ),
 };
 
 export const TestimonialCardStory: StoryObj<typeof TestimonialCard> = {
   render: () => (
-    <Grid auto type="third" gap="lg" direction="row">
-      <GridItem size="minor">
+    <Layout type="third" gap="lg" direction="row">
+      <LayoutItem size="minor">
         <TestimonialCard>
           <TextHeading>"Something nice"</TextHeading>
           <AvatarBlock>
@@ -94,8 +92,8 @@ export const TestimonialCardStory: StoryObj<typeof TestimonialCard> = {
             <Description>@fullname420</Description>
           </AvatarBlock>
         </TestimonialCard>
-      </GridItem>
-      <GridItem size="minor">
+      </LayoutItem>
+      <LayoutItem size="minor">
         <TestimonialCard>
           <TextHeading>"Something nice"</TextHeading>
           <AvatarBlock>
@@ -104,8 +102,8 @@ export const TestimonialCardStory: StoryObj<typeof TestimonialCard> = {
             <Description>@fullname420</Description>
           </AvatarBlock>
         </TestimonialCard>
-      </GridItem>
-      <GridItem size="minor">
+      </LayoutItem>
+      <LayoutItem size="minor">
         <TestimonialCard>
           <TextHeading>"Something nice"</TextHeading>
           <AvatarBlock>
@@ -114,7 +112,7 @@ export const TestimonialCardStory: StoryObj<typeof TestimonialCard> = {
             <Description>@fullname420</Description>
           </AvatarBlock>
         </TestimonialCard>
-      </GridItem>
-    </Grid>
+      </LayoutItem>
+    </Layout>
   ),
 };

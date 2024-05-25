@@ -2,9 +2,12 @@ import figma from "@figma/code-connect";
 import {
   Text,
   TextCode,
+  TextContentHeading,
+  TextContentTitle,
   TextEmphasis,
   TextHeading,
   TextLink,
+  TextLinkList,
   TextList,
   TextListItem,
   TextPrice,
@@ -42,8 +45,16 @@ const FIGMA_URL_TEXT_LIST =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2010-10204&m=dev";
 const FIGMA_URL_TEXT_LIST_ITEM =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2077-11663&m=dev";
+const FIGMA_URL_TEXT_LINK_LIST =
+  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2153-7990&t=nZCpXAWLyKWF2wPs-11";
+const FIGMA_URL_TEXT_LINK_LIST_ITEM =
+  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2153-7973&t=nZCpXAWLyKWF2wPs-11";
 const FIGMA_URL_TEXT_PRICE =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2142-11622&t=OLOZiI4mAFpUQIOw-11";
+const FIGMA_URL_TEXT_CONTENT_HEADING =
+  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2153-7834&t=nZCpXAWLyKWF2wPs-11";
+const FIGMA_URL_TEXT_CONTENT_TITLE =
+  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2153-7838&t=nZCpXAWLyKWF2wPs-11";
 
 figma.connect(TextTitleHero, FIGMA_URL_TEXT_TITLE_HERO, {
   props: { text: figma.string("Text") },
@@ -89,14 +100,45 @@ figma.connect(TextCode, FIGMA_URL_TEXT_CODE, {
   props: { text: figma.string("Text") },
   example: ({ text }) => <TextCode>{text}</TextCode>,
 });
+
 figma.connect(TextList, FIGMA_URL_TEXT_LIST, {
-  props: { children: figma.children("Text List Item") },
-  example: ({ children }) => <TextList>{children}</TextList>,
+  props: {
+    children: figma.children("Text List Item"),
+    title: figma.boolean("Has Title", {
+      true: figma.children("Text Strong"),
+      false: undefined,
+    }),
+  },
+  example: ({ children, title }) => (
+    <TextList title={title}>{children}</TextList>
+  ),
 });
 figma.connect(TextListItem, FIGMA_URL_TEXT_LIST_ITEM, {
   props: { text: figma.string("Text") },
   example: ({ text }) => <TextListItem>{text}</TextListItem>,
 });
+
+figma.connect(TextList, FIGMA_URL_TEXT_LINK_LIST, {
+  props: {
+    children: figma.children("Text Link List Item"),
+    title: figma.boolean("Has Title", {
+      true: figma.children("Text Strong"),
+      false: undefined,
+    }),
+  },
+  example: ({ children, title }) => (
+    <TextLinkList title={title}>{children}</TextLinkList>
+  ),
+});
+figma.connect(TextListItem, FIGMA_URL_TEXT_LINK_LIST_ITEM, {
+  props: { text: figma.string("Text") },
+  example: ({ text }) => (
+    <TextListItem>
+      <TextLink href="#">{text}</TextLink>
+    </TextListItem>
+  ),
+});
+
 figma.connect(TextPrice, FIGMA_URL_TEXT_PRICE, {
   props: {
     label: figma.string("Label"),
@@ -105,5 +147,31 @@ figma.connect(TextPrice, FIGMA_URL_TEXT_PRICE, {
   },
   example: ({ label, currency, price }) => (
     <TextPrice label={label} currency={currency} price={price} />
+  ),
+});
+
+figma.connect(TextContentHeading, FIGMA_URL_TEXT_CONTENT_HEADING, {
+  props: {
+    align: figma.enum("Align", { Center: "center" }),
+    heading: figma.string("Heading"),
+    subheading: figma.string("Subheading"),
+  },
+  example: ({ align, heading, subheading }) => (
+    <TextContentHeading
+      align={align}
+      heading={heading}
+      subheading={subheading}
+    />
+  ),
+});
+
+figma.connect(TextContentTitle, FIGMA_URL_TEXT_CONTENT_TITLE, {
+  props: {
+    align: figma.enum("Align", { Center: "center" }),
+    title: figma.string("Title"),
+    subtitle: figma.string("Subtitle"),
+  },
+  example: ({ align, title, subtitle }) => (
+    <TextContentTitle align={align} title={title} subtitle={subtitle} />
   ),
 });

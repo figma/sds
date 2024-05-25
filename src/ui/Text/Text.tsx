@@ -1,9 +1,10 @@
 import { clsx } from "clsx";
-import { ComponentPropsWithoutRef } from "react";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 import {
   Text as RACText,
   type TextProps as RACTextProps,
 } from "react-aria-components";
+import { Flow } from "ui/Layout/Layout";
 import { Link } from "ui/Link/Link";
 import "./text.css";
 
@@ -56,18 +57,6 @@ export type TextCodeProps = RACTextProps;
 export function TextCode({ className, ...props }: TextCodeProps) {
   const classNames = clsx(className, "text-body-code");
   return <RACText className={classNames} {...props} />;
-}
-
-export type TextListItemProps = ComponentPropsWithoutRef<"li">;
-export function TextListItem({ className, ...props }: TextListItemProps) {
-  const classNames = clsx(className, "text-list-item");
-  return <li className={classNames} {...props} />;
-}
-
-export type TextListProps = ComponentPropsWithoutRef<"ul">;
-export function TextList({ className, ...props }: TextListProps) {
-  const classNames = clsx(className, "text-list");
-  return <ul className={classNames} {...props} />;
 }
 
 export type TextInputProps = RACTextProps;
@@ -151,5 +140,82 @@ export function TextPrice({
       <TextTitlePage elementType="span">{price}</TextTitlePage>
       {label && <TextSmall>{label}</TextSmall>}
     </RACText>
+  );
+}
+
+export type TextListItemProps = ComponentPropsWithoutRef<"li">;
+export function TextListItem({ className, ...props }: TextListItemProps) {
+  const classNames = clsx(className, "text-list-item");
+  return <li className={classNames} {...props} />;
+}
+
+export type TextListProps = Omit<ComponentPropsWithoutRef<"ul">, "title"> & {
+  title?: ReactNode;
+};
+export function TextList({ className, title, ...props }: TextListProps) {
+  const classNames = clsx(className, "text-list");
+  const list = <ul className={classNames} {...props} />;
+  return title ? (
+    <Flow gap="xl">
+      {title} {list}
+    </Flow>
+  ) : (
+    list
+  );
+}
+
+export type TextLinkListProps = TextListProps;
+export function TextLinkList({ className, ...props }: TextLinkListProps) {
+  const classNames = clsx(className, "text-link-list");
+  return <TextList className={classNames} {...props} />;
+}
+
+export type TextContentHeadingProps = ComponentPropsWithoutRef<"div"> & {
+  align?: "start" | "center";
+  heading: string;
+  subheading?: string;
+};
+export function TextContentHeading({
+  align = "start",
+  className,
+  heading,
+  subheading,
+  ...props
+}: TextContentHeadingProps) {
+  const classNames = clsx(
+    className,
+    "text-content-heading",
+    `text-align-${align}`,
+  );
+  return (
+    <Flow gap="sm" className={classNames} {...props}>
+      <TextHeading>{heading}</TextHeading>
+      {subheading && <TextSubheading>{subheading}</TextSubheading>}
+    </Flow>
+  );
+}
+
+export type TextContentTitleProps = ComponentPropsWithoutRef<"div"> & {
+  align?: "start" | "center";
+  title: string;
+  subtitle?: string;
+};
+export function TextContentTitle({
+  align = "start",
+  className,
+  title,
+  subtitle,
+  ...props
+}: TextContentTitleProps) {
+  const classNames = clsx(className, "text-content-title");
+  return (
+    <Flow gap="sm" className={classNames} {...props}>
+      <TextTitleHero className={`text-align-${align}`}>{title}</TextTitleHero>
+      {subtitle && (
+        <TextSubtitle className={`text-align-${align}`}>
+          {subtitle}
+        </TextSubtitle>
+      )}
+    </Flow>
   );
 }

@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Grid } from "ui/Layout/Layout";
 import { Radio, RadioField, RadioGroup } from "ui/Radio/Radio";
 
 const meta: Meta<typeof Radio> = {
@@ -31,7 +30,7 @@ export const Group: StoryGroup = {
   args: {},
   render: (args) => {
     return (
-      <Grid alignPrimary="center">
+      <Layout alignPrimary="center">
         <RadioGroup
           label="Hello"
           description="I am a description"
@@ -42,7 +41,7 @@ export const Group: StoryGroup = {
           <RadioField value="two">Value two</RadioField>
           <RadioField value="three">Value three</RadioField>
         </RadioGroup>
-      </Grid>
+      </Layout>
     );
   },
 };

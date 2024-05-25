@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconActivity, IconArrowLeft } from "icons";
 import { Button, ButtonGroup } from "ui/Button/Button";
-import { Grid, GridItem } from "ui/Layout/Layout";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -28,7 +27,7 @@ export const Default: Story = {
     },
   },
   render: ({ children, ...props }) => (
-    <Grid alignPrimary="center">
+    <Layout alignPrimary="center">
       <ButtonGroup>
         <Button {...props}>
           <IconArrowLeft />
@@ -41,7 +40,7 @@ export const Default: Story = {
           <IconActivity />
         </Button>
       </ButtonGroup>
-    </Grid>
+    </Layout>
   ),
 };
 
@@ -57,38 +56,38 @@ export const All: Story = {
   },
   render: ({ children, ...props }) => {
     return (
-      <Grid auto direction="column" gap="md">
+      <Layout direction="column" gap="md">
         {["default", "purple", "blue", "teal"].map((theme) => (
           <div key={theme} className={`sds-scheme-color-${theme}`}>
-            <Grid auto alignPrimary="center" gap="md">
-              <GridItem>
+            <Layout alignPrimary="center" gap="md">
+              <LayoutItem>
                 <Button {...props}>
                   {children}
                   <IconActivity />
                 </Button>
-              </GridItem>
-              <GridItem>
+              </LayoutItem>
+              <LayoutItem>
                 <Button {...props} variant="secondary">
                   {children}
                   <IconActivity />
                 </Button>
-              </GridItem>
-              <GridItem>
+              </LayoutItem>
+              <LayoutItem>
                 <Button {...props} variant="stroke">
                   {children}
                   <IconActivity />
                 </Button>
-              </GridItem>
-              <GridItem>
+              </LayoutItem>
+              <LayoutItem>
                 <Button {...props} variant="subtle">
                   {children}
                   <IconActivity />
                 </Button>
-              </GridItem>
-            </Grid>
+              </LayoutItem>
+            </Layout>
           </div>
         ))}
-      </Grid>
+      </Layout>
     );
   },
 };
