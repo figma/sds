@@ -33,7 +33,7 @@
       --select-text-color: var(--sds-color-text-default-tertiary);
     }
 
-    > .select-item-check {
+    .select-item-check {
       display: none;
     }
   }
@@ -56,11 +56,13 @@
 
 .select-item {
   gap: var(--sds-size-gap-sm);
+  min-width: calc(var(--sds-size-gap-lg) * 10);
   padding-left: var(--sds-size-padding-xs);
-  > .select-item-check {
+
+  .select-item-check {
     opacity: 0;
   }
-  &[data-selected] > .select-item-check {
+  &[data-selected] .select-item-check {
     opacity: 1;
   }
 }

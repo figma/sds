@@ -42,7 +42,7 @@
 
   &[data-layout="grid"] {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
     scrollbar-gutter: stable;
   }
 
@@ -50,7 +50,7 @@
     width: 100%;
     max-width: none;
     grid-auto-flow: column;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
     grid-template-columns: none;
     grid-auto-columns: auto;
   }
@@ -69,7 +69,7 @@
   cursor: pointer;
   display: grid;
   grid-template-areas: var(--list-box-item-template-areas);
-  grid-template-columns: 1fr;
+  grid-template-columns: auto 1fr;
   padding: var(--sds-size-padding-sm) var(--sds-size-padding-sm);
 
   > .icon {

@@ -66,8 +66,10 @@ export function SelectItem({ children, className, ...props }: SelectItemProps) {
   const textValue = typeof children === "string" ? children : "";
   return (
     <ListBoxItem textValue={textValue} className={classNames} {...props}>
-      <IconCheck className="select-item-check" />
-      <>{children}</>
+      <>
+        <IconCheck className="select-item-check" />
+        {children}
+      </>
     </ListBoxItem>
   );
 }

@@ -12,6 +12,7 @@ import {
   Legend,
   RadioField,
   RadioGroup,
+  Section,
   SelectField,
   SelectItem,
   SwitchField,
@@ -39,113 +40,115 @@ function App() {
     document.body.className = `sds-scheme-color-${theme}`;
   }, [theme]);
   return (
-    <Flex container direction="column" gap="xl">
-      <FlexItem>
-        <SelectField
-          defaultSelectedKey={theme}
-          placeholder="Select theme..."
-          onSelectionChange={(key) =>
-            setTheme(findThemeById(parseInt(key as string)))
-          }
-          items={items}
-        >
-          {(item) => <SelectItem>{item.name}</SelectItem>}
-        </SelectField>
-      </FlexItem>
-      <FlexItem>
-        <Flex gap="sm" alignPrimary="center" wrap>
-          <Button>
-            <IconArrowLeft />
-            Hello world
-            <IconActivity />
-          </Button>
-          <Button variant="secondary">
-            <IconArrowLeft />
-            Hello world
-            <IconActivity />
-          </Button>
-          <Button variant="stroke">
-            <IconArrowLeft />
-            Hello world
-            <IconActivity />
-          </Button>
-          <Button variant="subtle">
-            <IconArrowLeft />
-            Hello world
-            <IconActivity />
-          </Button>
-        </Flex>
-      </FlexItem>
-      <FlexItem>
-        <Fieldset>
-          <Legend>Shipping details</Legend>
-          <Text>Without this your odds of getting your order are low.</Text>
-          <FieldGroup>
-            <InputField
-              placeholder="Street"
-              name="street_address"
-              label="Street address"
-            />
-            <SelectField label="Country" name="country">
-              <SelectItem>Canada</SelectItem>
-              <SelectItem>Mexico</SelectItem>
-              <SelectItem>United States</SelectItem>
-            </SelectField>
-            <TextAreaField
-              description="If you have a tiger, we'd like to know about it."
-              placeholder="Delivery notes"
-              name="notes"
-              label="Delivery notes"
-            />
-          </FieldGroup>
-
-          <RadioGroup
-            label="Some stuff "
-            description="It's just ok"
-            defaultValue="Unique value"
+    <Section>
+      <Flex container direction="column" gap="xl">
+        <FlexItem>
+          <SelectField
+            defaultSelectedKey={theme}
+            placeholder="Select theme..."
+            onSelectionChange={(key) =>
+              setTheme(findThemeById(parseInt(key as string)))
+            }
+            items={items}
           >
-            <RadioField
-              label="This is a radio"
-              value="Unique value"
-              description="Some text over here please and thank you will it wrap?"
-            />
-            <RadioField
-              label="This is also a radio"
-              value="Other Unique value"
-            />
-          </RadioGroup>
+            {(item) => <SelectItem>{item.name}</SelectItem>}
+          </SelectField>
+        </FlexItem>
+        <FlexItem>
+          <Flex gap="sm" alignPrimary="center" wrap>
+            <Button>
+              <IconArrowLeft />
+              Hello world
+              <IconActivity />
+            </Button>
+            <Button variant="secondary">
+              <IconArrowLeft />
+              Hello world
+              <IconActivity />
+            </Button>
+            <Button variant="stroke">
+              <IconArrowLeft />
+              Hello world
+              <IconActivity />
+            </Button>
+            <Button variant="subtle">
+              <IconArrowLeft />
+              Hello world
+              <IconActivity />
+            </Button>
+          </Flex>
+        </FlexItem>
+        <FlexItem>
+          <Fieldset>
+            <Legend>Shipping details</Legend>
+            <Text>Without this your odds of getting your order are low.</Text>
+            <FieldGroup>
+              <InputField
+                placeholder="Street"
+                name="street_address"
+                label="Street address"
+              />
+              <SelectField label="Country" name="country">
+                <SelectItem>Canada</SelectItem>
+                <SelectItem>Mexico</SelectItem>
+                <SelectItem>United States</SelectItem>
+              </SelectField>
+              <TextAreaField
+                description="If you have a tiger, we'd like to know about it."
+                placeholder="Delivery notes"
+                name="notes"
+                label="Delivery notes"
+              />
+            </FieldGroup>
 
-          <CheckboxGroup
-            label="Some other stuff"
-            description="It's kinda cool"
-            defaultValue={["one"]}
-          >
-            <CheckboxField
-              label="This is a checkbox"
-              value="one"
-              description="This is a checkbox description"
-            />
-            <CheckboxField
-              label="This is also a checkbox"
-              value="two"
-              description="This is also a checkbox description"
-            />
-          </CheckboxGroup>
+            <RadioGroup
+              label="Some stuff "
+              description="It's just ok"
+              defaultValue="Unique value"
+            >
+              <RadioField
+                label="This is a radio"
+                value="Unique value"
+                description="Some text over here please and thank you will it wrap?"
+              />
+              <RadioField
+                label="This is also a radio"
+                value="Other Unique value"
+              />
+            </RadioGroup>
 
-          <SwitchGroup>
-            <SwitchField
-              label="Enable"
-              defaultSelected={true}
-              description="Allow others to embed your event details on their own site"
-            />
-            <SwitchField
-              label="Dont you love it"
-              description="Something magical"
-            />
-          </SwitchGroup>
-        </Fieldset>
-      </FlexItem>
-    </Flex>
+            <CheckboxGroup
+              label="Some other stuff"
+              description="It's kinda cool"
+              defaultValue={["one"]}
+            >
+              <CheckboxField
+                label="This is a checkbox"
+                value="one"
+                description="This is a checkbox description"
+              />
+              <CheckboxField
+                label="This is also a checkbox"
+                value="two"
+                description="This is also a checkbox description"
+              />
+            </CheckboxGroup>
+
+            <SwitchGroup>
+              <SwitchField
+                label="Enable"
+                defaultSelected={true}
+                description="Allow others to embed your event details on their own site"
+              />
+              <SwitchField
+                label="Dont you love it"
+                description="Something magical"
+              />
+            </SwitchGroup>
+          </Fieldset>
+        </FlexItem>
+      </Flex>
+    </Section>
   );
 }
 export default App;
