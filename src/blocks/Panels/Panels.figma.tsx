@@ -12,7 +12,7 @@ figma.connect(
       text: figma.children(["Text Content Heading", "Text"]),
     },
     example: ({ image, text }) => (
-      <Flex container type="half" alignPrimary="center" gap="xxl">
+      <Flex container type="half" wrap alignPrimary="center" gap="xxl">
         <FlexItem size="half">{image}</FlexItem>
         <FlexItem size="half">
           <Flex direction="column" gap="xl">
@@ -34,7 +34,7 @@ figma.connect(
       text: figma.children(["Text Content Heading", "Text"]),
     },
     example: ({ image, text }) => (
-      <Flex container type="half" alignPrimary="center" gap="xxl">
+      <Flex container type="half" wrap alignPrimary="center" gap="xxl">
         <FlexItem size="half">
           <Flex direction="column" gap="xl">
             {text}

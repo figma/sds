@@ -2,25 +2,26 @@
   --border-radius: var(--sds-size-radius-sm);
   background: var(--sds-color-bg-default-default);
   border-radius: var(--border-radius);
-  display: grid;
+  gap: var(--sds-size-gap-xl);
+  display: flex;
   position: relative;
 
   &.card-direction-vertical {
-    gap: var(--sds-size-gap-xl);
-    grid-template-areas: "content";
+    flex-direction: column;
+    /* grid-template-areas: "content";
     &:has(.card-asset) {
       grid-template-areas: "asset" "content";
-    }
+    } */
   }
 
   &.card-direction-horizontal {
-    gap: var(--sds-size-gap-xl);
-    grid-template-areas: "content";
+    flex-direction: var(--sds-responsive-direction-column-to-row);
+    /* grid-template-areas: "content";
 
     &:has(.card-asset) {
       grid-template-areas: "asset content";
-      grid-template-columns: 1fr 3fr;
-    }
+      grid-template-columns: auto 1fr;
+    } */
   }
 
   &.card-variant-stroke {
@@ -52,7 +53,6 @@
   }
 
   .card-content {
-    align-self: center;
     display: flex;
     flex-direction: column;
     gap: var(--sds-size-gap-sm);

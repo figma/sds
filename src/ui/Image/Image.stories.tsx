@@ -9,15 +9,21 @@ const meta: Meta<typeof Image> = {
 export default meta;
 
 export const Default: StoryObj<typeof Image> = {
-  args: {
-    aspectRatio: "auto",
-  },
-  argTypes: {
-    aspectRatio: {
-      control: { type: "select" },
-      options: ["1-1", "16-9", "4-3", "auto"],
-    },
-  },
+  render: (args) => (
+    <div
+      style={{
+        height: "calc(100vh - 2rem)",
+        display: "grid",
+        placeItems: "center",
+        width: "100%",
+      }}
+    >
+      <Image src="https://picsum.photos/500/300" {...args} />
+    </div>
+  ),
+};
+
+export const SrcSet: StoryObj<typeof Image> = {
   render: (args) => (
     <Image
       src="https://picsum.photos/500"

@@ -4,19 +4,22 @@ import "./image.css";
 
 export type ImageProps = Omit<ComponentPropsWithoutRef<"img">, "alt"> & {
   alt: string;
-  aspectRatio?: "1-1" | "16-9" | "4-3" | "auto";
+  aspectRatio?: "1-1" | "16-9" | "4-3" | "fill" | "natural";
+  size?: "sm" | "md" | "lg" | "fill" | "natural";
   variant?: "default" | "rounded";
 };
 export function Image({
-  aspectRatio = "auto",
+  aspectRatio = "natural",
   className,
-  variant = "default",
+  size = "natural",
+  variant = "rounded",
   ...props
 }: ImageProps) {
   const classNames = clsx(
     className,
     "image",
     `image-aspect-ratio-${aspectRatio}`,
+    `image-size-${size}`,
     `image-variant-${variant}`,
   );
   return <img className={classNames} {...props} />;

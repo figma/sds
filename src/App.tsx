@@ -72,8 +72,9 @@ function App() {
             <Card
               asset={
                 <Image
-                  aspectRatio="1-1"
                   alt="Always use alt"
+                  aspectRatio="1-1"
+                  size="sm"
                   src="https://picsum.photos/600/600"
                 />
               }
@@ -87,8 +88,9 @@ function App() {
             <Card
               asset={
                 <Image
-                  aspectRatio="1-1"
                   alt="Always use alt"
+                  aspectRatio="1-1"
+                  size="sm"
                   src="https://picsum.photos/600/600"
                 />
               }
@@ -102,8 +104,9 @@ function App() {
             <Card
               asset={
                 <Image
-                  aspectRatio="1-1"
                   alt="Always use alt"
+                  aspectRatio="1-1"
+                  size="sm"
                   src="https://picsum.photos/600/600"
                 />
               }
@@ -117,8 +120,9 @@ function App() {
             <Card
               asset={
                 <Image
-                  aspectRatio="1-1"
                   alt="Always use alt"
+                  aspectRatio="1-1"
+                  size="sm"
                   src="https://picsum.photos/600/600"
                 />
               }
@@ -132,8 +136,9 @@ function App() {
             <Card
               asset={
                 <Image
-                  aspectRatio="1-1"
                   alt="Always use alt"
+                  aspectRatio="1-1"
+                  size="sm"
                   src="https://picsum.photos/600/600"
                 />
               }
@@ -147,8 +152,9 @@ function App() {
             <Card
               asset={
                 <Image
-                  aspectRatio="1-1"
                   alt="Always use alt"
+                  aspectRatio="1-1"
+                  size="sm"
                   src="https://picsum.photos/600/600"
                 />
               }
@@ -207,15 +213,16 @@ function App() {
         <Flex container type="half" alignPrimary="center" gap="xxl">
           <FlexItem size="full">
             <Image
-              aspectRatio="16-9"
+              aspectRatio="fill"
               alt="Always use alt"
+              size="lg"
               src="https://picsum.photos/800/450"
             />
           </FlexItem>
         </Flex>
       </Section>
       <Section padding="md">
-        <Flex container type="half" alignPrimary="center" gap="xxl">
+        <Flex container type="half" wrap alignPrimary="center" gap="xxl">
           <FlexItem size="half">
             <Flex direction="column" gap="xl">
               <TextContentHeading heading="Heading" subheading="Subheading" />
@@ -239,6 +246,7 @@ function App() {
           <FlexItem size="half">
             <Image
               aspectRatio="4-3"
+              size="fill"
               alt="Always use alt"
               src="https://picsum.photos/800/600"
             />
@@ -246,10 +254,11 @@ function App() {
         </Flex>
       </Section>
       <Section padding="md">
-        <Flex container type="half" alignPrimary="center" gap="xxl">
+        <Flex container type="half" wrap alignPrimary="center" gap="xxl">
           <FlexItem size="half">
             <Image
               aspectRatio="4-3"
+              size="fill"
               alt="Always use alt"
               src="https://picsum.photos/800/600"
             />
@@ -280,11 +289,13 @@ function App() {
         <Flex alignPrimary="center" wrap type="half" container gap="xxl">
           <Image
             aspectRatio="4-3"
+            size="fill"
             alt="Always use alt"
             src="https://picsum.photos/800/600"
           />
           <Image
             aspectRatio="4-3"
+            size="fill"
             alt="Always use alt"
             src="https://picsum.photos/800/600"
           />
@@ -453,6 +464,7 @@ function App() {
             asset={
               <Image
                 aspectRatio="1-1"
+                size="sm"
                 alt="Always use alt"
                 src="https://picsum.photos/600/600"
               />
@@ -475,6 +487,7 @@ function App() {
             asset={
               <Image
                 aspectRatio="1-1"
+                size="sm"
                 alt="Always use alt"
                 src="https://picsum.photos/600/600"
               />
@@ -497,6 +510,7 @@ function App() {
             asset={
               <Image
                 aspectRatio="1-1"
+                size="sm"
                 alt="Always use alt"
                 src="https://picsum.photos/600/600"
               />

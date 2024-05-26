@@ -1,9 +1,8 @@
 .image {
-  height: auto;
   max-width: 100%;
   object-fit: cover;
   object-position: center;
-  width: 100%;
+  width: auto;
 }
 
 .image-variant-rounded {
@@ -19,8 +18,36 @@
 .image-aspect-ratio-4-3 {
   aspect-ratio: 4 / 3;
 }
+.image-aspect-ratio-fill {
+  width: 100%;
+}
+.image-aspect-ratio-natural {
+  aspect-ratio: auto;
+}
 
-.picture {
+.image-size-sm {
+  --image-size-height: 10rem;
+  height: var(--image-size-height);
+}
+.image-size-md {
+  --image-size-height: 20rem;
+  height: var(--image-size-height);
+}
+.image-size-lg {
+  --image-size-height: 30rem;
+  height: var(--image-size-height);
+}
+.image-size-fill {
+  --image-size-height: auto;
+  height: var(--image-size-height);
+  width: 100%;
+}
+.image-size-natural {
+  --image-size-height: auto;
+  height: var(--image-size-height);
+}
+
+.image-size .picture {
   display: flex;
   width: 100%;
 }

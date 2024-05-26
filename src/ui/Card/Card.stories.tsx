@@ -51,6 +51,7 @@ export const Default: Story = {
           <Image
             alt="A nice image"
             aspectRatio="1-1"
+            size="sm"
             src="https://picsum.photos/500"
           />
         ) : undefined
