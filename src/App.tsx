@@ -397,10 +397,7 @@ function App() {
             <TestimonialCard>
               <TextHeading>"Quote"</TextHeading>
               <AvatarBlock>
-                <Avatar
-                  size="lg"
-                  src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                />
+                <Avatar size="lg" src="https://picsum.photos/80" />
                 <Label>Title</Label>
                 <Description>Description</Description>
               </AvatarBlock>
@@ -408,10 +405,7 @@ function App() {
             <TestimonialCard>
               <TextHeading>"Quote"</TextHeading>
               <AvatarBlock>
-                <Avatar
-                  size="lg"
-                  src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                />
+                <Avatar size="lg" src="https://picsum.photos/80" />
                 <Label>Title</Label>
                 <Description>Description</Description>
               </AvatarBlock>
@@ -419,10 +413,7 @@ function App() {
             <TestimonialCard>
               <TextHeading>"Quote"</TextHeading>
               <AvatarBlock>
-                <Avatar
-                  size="lg"
-                  src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                />
+                <Avatar size="lg" src="https://picsum.photos/80" />
                 <Label>Title</Label>
                 <Description>Description</Description>
               </AvatarBlock>
@@ -430,10 +421,7 @@ function App() {
             <TestimonialCard>
               <TextHeading>"Quote"</TextHeading>
               <AvatarBlock>
-                <Avatar
-                  size="lg"
-                  src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                />
+                <Avatar size="lg" src="https://picsum.photos/80" />
                 <Label>Title</Label>
                 <Description>Description</Description>
               </AvatarBlock>
@@ -441,10 +429,7 @@ function App() {
             <TestimonialCard>
               <TextHeading>"Quote"</TextHeading>
               <AvatarBlock>
-                <Avatar
-                  size="lg"
-                  src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                />
+                <Avatar size="lg" src="https://picsum.photos/80" />
                 <Label>Title</Label>
                 <Description>Description</Description>
               </AvatarBlock>
@@ -452,10 +437,7 @@ function App() {
             <TestimonialCard>
               <TextHeading>"Quote"</TextHeading>
               <AvatarBlock>
-                <Avatar
-                  size="lg"
-                  src="https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                />
+                <Avatar size="lg" src="https://picsum.photos/80" />
                 <Label>Title</Label>
                 <Description>Description</Description>
               </AvatarBlock>

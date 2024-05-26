@@ -40,8 +40,7 @@ figma.connect(Avatar, FIGMA_URL_AVATAR, {
       sm: "sm",
     }),
     src: figma.enum("Type", {
-      Image:
-        "https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80",
+      Image: "https://picsum.photos/80",
     }),
   },
   example: ({ initials, size, square, src }) => (
