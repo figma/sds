@@ -5,6 +5,16 @@
   width: auto;
 }
 
+.image-placeholder {
+  background: var(--sds-color-bg-default-secondary);
+  display: block;
+}
+
+img.image-loading {
+  opacity: 0;
+  display: none;
+}
+
 .image-variant-rounded {
   border-radius: var(--sds-size-radius-xs);
 }

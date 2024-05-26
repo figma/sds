@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { ComponentPropsWithoutRef } from "react";
+import { ComponentPropsWithoutRef, useState } from "react";
 import "./image.css";
 
 export type ImageProps = Omit<ComponentPropsWithoutRef<"img">, "alt"> & {
@@ -15,14 +15,21 @@ export function Image({
   variant = "rounded",
   ...props
 }: ImageProps) {
+  const [loaded, setLoaded] = useState(false);
   const classNames = clsx(
     className,
     "image",
     `image-aspect-ratio-${aspectRatio}`,
     `image-size-${size}`,
     `image-variant-${variant}`,
+    !loaded && `image-loading`,
   );
-  return <img className={classNames} {...props} />;
+  return (
+    <>
+      {!loaded && <span className={clsx("image-placeholder", classNames)} />}
+      <img className={classNames} {...props} onLoad={() => setLoaded(true)} />
+    </>
+  );
 }
 
 export type PictureProps = ComponentPropsWithoutRef<"picture">;
