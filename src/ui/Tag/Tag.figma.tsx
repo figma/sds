@@ -1,5 +1,5 @@
 import figma from "@figma/code-connect";
-import { Label } from "ui/Fieldset/Fieldset";
+import { Label } from "../Fieldset/Fieldset";
 import { Tag, TagToggle, TagToggleGroup, TagToggleList } from "./Tag";
 
 const FIGMA_URL_TAG =

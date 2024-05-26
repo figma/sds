@@ -31,40 +31,40 @@
       width: 100%;
     }
   }
+
+  &.flex-type-half,
+  &.flex-type-quarter,
+  &.flex-type-third {
+    > .flex-item-size-full {
+      --column-ratio: var(--sds-responsive-ratio-column-full);
+    }
+    > .flex-item-size-half {
+      --column-ratio: var(--sds-responsive-ratio-column-half);
+    }
+    > .flex-item-size-major {
+      --column-ratio: var(--column-major);
+    }
+    > .flex-item-size-minor {
+      --column-ratio: var(--column-minor);
+    }
+    > * {
+      --column-count: calc(1 / var(--column-ratio));
+      --base-width: calc(
+        (100% / var(--column-count)) -
+          (((var(--column-count) - 1) / var(--column-count)) * var(--flex-gap))
+      );
+      --column-span: calc(var(--column-ratio) * var(--column-count));
+      flex-basis: calc(var(--column-span) * var(--base-width));
+      max-width: calc(var(--column-span) * var(--base-width));
+    }
+  }
+
   &.flex-direction-row,
   &.flex-direction-row-reverse {
-    &.flex-type-half,
-    &.flex-type-quarter,
-    &.flex-type-third {
-      > .flex-item-size-full {
-        --column-ratio: var(--sds-responsive-ratio-column-full);
-      }
-      > .flex-item-size-half {
-        --column-ratio: var(--sds-responsive-ratio-column-half);
-      }
-      > .flex-item-size-major {
-        --column-ratio: var(--column-major);
-      }
-      > .flex-item-size-minor {
-        --column-ratio: var(--column-minor);
-      }
-      > :not(.flex-item) {
-        --column-ratio: var(--column-minor);
-      }
-      > * {
-        --column-count: calc(1 / var(--column-ratio));
-        --base-width: calc(
-          (100% / var(--column-count)) -
-            (
-              ((var(--column-count) - 1) / var(--column-count)) *
-                var(--flex-gap)
-            )
-        );
-        --column-span: calc(var(--column-ratio) * var(--column-count));
-        flex-basis: calc(var(--column-span) * var(--base-width));
-        max-width: calc(var(--column-span) * var(--base-width));
-      }
+    > :not(.flex-item) {
+      --column-ratio: var(--column-minor);
     }
+
     &.flex-type-auto {
       &.flex-align-primary-stretch > * {
         flex: 1;
@@ -89,5 +89,8 @@
   }
   &.flex-gap-xl {
     --flex-gap: var(--sds-size-gap-xl);
+  }
+  &.flex-gap-xxl {
+    --flex-gap: var(--sds-size-gap-xxl);
   }
 }

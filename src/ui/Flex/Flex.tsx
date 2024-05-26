@@ -12,7 +12,7 @@ export type FlexProps = ComponentPropsWithoutRef<"div"> & {
   alignPrimary?: "start" | "end" | "center" | "stretch" | "space-between";
   alignSecondary?: "start" | "end" | "center" | "stretch" | "space-between";
   direction?: "row" | "row-reverse" | "column" | "column-reverse";
-  gap?: "xs" | "sm" | "md" | "lg" | "xl";
+  gap?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
   type?: "quarter" | "third" | "half" | "auto";
   container?: boolean;
   wrap?: boolean;

@@ -1,5 +1,7 @@
 .navigation {
   display: flex;
+  flex-direction: var(--sds-responsive-direction-column-to-row);
+  align-items: center;
   gap: var(--sds-size-gap-sm);
 }
 .navigation-item {

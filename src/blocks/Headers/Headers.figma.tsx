@@ -1,5 +1,5 @@
 import { figma } from "@figma/code-connect";
-import { Flex, FlexItem } from "ui";
+import { Flex, FlexItem } from "../../ui";
 import { StandardHeader, VerticalHeader } from "./Headers";
 
 const FIGMA_URL_STANDARD_HEADER =

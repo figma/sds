@@ -1,5 +1,5 @@
 import figma from "@figma/code-connect";
-import { Description, Label } from "ui/Fieldset/Fieldset";
+import { Description, Label } from "../Fieldset/Fieldset";
 import { Avatar, AvatarBlock, AvatarGroup } from "./Avatar";
 
 const FIGMA_URL_AVATAR =

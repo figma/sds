@@ -1,5 +1,6 @@
 import figma from "@figma/code-connect";
-import { TextArea, TextAreaField } from "./TextArea";
+import { Field } from "../Fieldset/Fieldset";
+import { TextArea } from "./TextArea";
 
 const FIGMA_URL_TEXT_AREA =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=9762:1135";
@@ -27,7 +28,8 @@ figma.connect(TextArea, FIGMA_URL_TEXT_AREA, {
   ),
 });
 
-figma.connect(TextAreaField, FIGMA_URL_TEXT_AREA_FIELD, {
+// TODO: Use Text Area Field
+figma.connect(Field, FIGMA_URL_TEXT_AREA_FIELD, {
   props: {
     isDisabled: figma.enum("State", { Disabled: true }),
     children: figma.children([
@@ -37,5 +39,5 @@ figma.connect(TextAreaField, FIGMA_URL_TEXT_AREA_FIELD, {
       "Error Message",
     ]),
   },
-  example: ({ children }) => <TextAreaField>{children}</TextAreaField>,
+  example: ({ children }) => <Field>{children}</Field>,
 });

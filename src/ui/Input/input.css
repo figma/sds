@@ -10,7 +10,9 @@
   border-radius: var(--sds-size-radius-sm);
   color: var(--input-text-color);
   display: flex;
-  padding: var(--sds-size-padding-md) var(--sds-size-padding-lg);
+  line-height: 1;
+  /* TODO: this makes it same height as button? */
+  padding: calc(var(--sds-size-padding-md) - 2px) var(--sds-size-padding-lg);
   position: relative;
   width: 100%;
 

@@ -1300,7 +1300,9 @@
   --sds-typography-body-size-lg: var(--sds-typography-scale-04);
   --sds-typography-body-size-md: var(--sds-typography-scale-03);
   --sds-typography-body-size-sm: var(--sds-typography-scale-02);
-  --sds-typography-body-weight-emphasis: var(--sds-typography-weight-regular-italic);
+  --sds-typography-body-weight-emphasis: var(
+    --sds-typography-weight-regular-italic
+  );
   --sds-typography-body-weight-regular: var(--sds-typography-weight-regular);
   --sds-typography-body-weight-strong: var(--sds-typography-weight-bold);
   --sds-typography-code-family: var(--sds-typography-family-mono);
@@ -1421,19 +1423,44 @@
 }
 /* styles */
 :root {
-  --sds-font-body-base: normal var(--sds-typography-body-weight-regular) var(--sds-typography-body-size-md) var(--sds-typography-body-family);
-  --sds-font-body-small: normal var(--sds-typography-body-weight-regular) var(--sds-typography-body-size-sm) var(--sds-typography-body-family);
-  --sds-font-body-strong: normal var(--sds-typography-body-weight-strong) var(--sds-typography-body-size-md) var(--sds-typography-body-family);
-  --sds-font-body-emphasis: var(--sds-typography-body-weight-emphasis)  var(--sds-typography-body-size-md) var(--sds-typography-body-family);
-  --sds-font-body-link: normal var(--sds-typography-body-weight-regular) var(--sds-typography-body-size-md) var(--sds-typography-body-family);
-  --sds-font-input: normal var(--sds-typography-input-weight) var(--sds-typography-input-size-md) var(--sds-typography-input-family);
-  --sds-font-body-code: normal var(--sds-typography-code-weight) var(--sds-typography-code-size-md) var(--sds-typography-code-family);
-  --sds-font-subtitle: normal var(--sds-typography-subtitle-weight) var(--sds-typography-subtitle-size-md) var(--sds-typography-subtitle-family);
-  --sds-font-subheading: normal var(--sds-typography-subheading-weight) var(--sds-typography-subheading-size-md) var(--sds-typography-subheading-family);
-  --sds-font-heading: normal var(--sds-typography-heading-weight) var(--sds-typography-heading-size-md) var(--sds-typography-heading-family);
-  --sds-font-utilities-component-notes-regular: normal var(--sds-typography-weight-regular) var(--sds-typography-scale-03) var(--sds-typography-family-mono);
-  --sds-font-title-hero: normal var(--sds-typography-title-hero-weight) var(--sds-typography-title-hero-size) var(--sds-typography-title-hero-family);
-  --sds-font-title-page: normal var(--sds-typography-title-page-weight) var(--sds-typography-title-page-size-md) var(--sds-typography-title-page-family);
-  --sds-effects-shadows-sm: var(--sds-size-depth-none) var(--sds-size-depth-xs) var(--sds-size-depth-sm) var(--sds-size-depth-none) var(--sds-color-black-100), var(--sds-size-depth-none) var(--sds-size-depth-xs) var(--sds-size-depth-sm) var(--sds-size-depth-none) var(--sds-color-black-200);
-  --sds-effects-shadows-md: var(--sds-size-depth-none) var(--sds-size-depth-sm) var(--sds-size-depth-sm) var(--sds-size-depth-negative-xs) var(--sds-color-black-100), var(--sds-size-depth-none) var(--sds-size-depth-sm) var(--sds-size-depth-md) var(--sds-size-depth-negative-xs) var(--sds-color-black-200);
+  --sds-font-body-base: normal var(--sds-typography-body-weight-regular)
+    var(--sds-typography-body-size-md) var(--sds-typography-body-family);
+  --sds-font-body-small: normal var(--sds-typography-body-weight-regular)
+    var(--sds-typography-body-size-sm) var(--sds-typography-body-family);
+  --sds-font-body-strong: normal var(--sds-typography-body-weight-strong)
+    var(--sds-typography-body-size-md) var(--sds-typography-body-family);
+  --sds-font-body-emphasis: var(--sds-typography-body-weight-emphasis)
+    var(--sds-typography-body-size-md) var(--sds-typography-body-family);
+  --sds-font-body-link: normal var(--sds-typography-body-weight-regular)
+    var(--sds-typography-body-size-md) var(--sds-typography-body-family);
+  --sds-font-input: normal var(--sds-typography-input-weight)
+    var(--sds-typography-input-size-md) var(--sds-typography-input-family);
+  --sds-font-body-code: normal var(--sds-typography-code-weight)
+    var(--sds-typography-code-size-md) var(--sds-typography-code-family);
+  --sds-font-subtitle: normal var(--sds-typography-subtitle-weight)
+    var(--sds-typography-subtitle-size-md) var(--sds-typography-subtitle-family);
+  --sds-font-subheading: normal var(--sds-typography-subheading-weight)
+    var(--sds-typography-subheading-size-md)
+    var(--sds-typography-subheading-family);
+  --sds-font-heading: normal var(--sds-typography-heading-weight)
+    var(--sds-typography-heading-size-md) var(--sds-typography-heading-family);
+  --sds-font-utilities-component-notes-regular: normal
+    var(--sds-typography-weight-regular) var(--sds-typography-scale-03)
+    var(--sds-typography-family-mono);
+  --sds-font-title-hero: normal var(--sds-typography-title-hero-weight)
+    var(--sds-typography-title-hero-size)
+    var(--sds-typography-title-hero-family);
+  --sds-font-title-page: normal var(--sds-typography-title-page-weight)
+    var(--sds-typography-title-page-size-md)
+    var(--sds-typography-title-page-family);
+  --sds-effects-shadows-sm: var(--sds-size-depth-none) var(--sds-size-depth-xs)
+      var(--sds-size-depth-sm) var(--sds-size-depth-none)
+      var(--sds-color-black-100),
+    var(--sds-size-depth-none) var(--sds-size-depth-xs) var(--sds-size-depth-sm)
+      var(--sds-size-depth-none) var(--sds-color-black-200);
+  --sds-effects-shadows-md: var(--sds-size-depth-none) var(--sds-size-depth-sm)
+      var(--sds-size-depth-sm) var(--sds-size-depth-negative-xs)
+      var(--sds-color-black-100),
+    var(--sds-size-depth-none) var(--sds-size-depth-sm) var(--sds-size-depth-md)
+      var(--sds-size-depth-negative-xs) var(--sds-color-black-200);
 }

@@ -1,0 +1,10 @@
+import { figma } from "@figma/code-connect"; import { Flex, FlexItem, Section } from "../../ui";
+
+// Cards: Product Info Card
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=7753:4465", { props: { children: figma.children(["Image","Text Heading","Text Price","Text","Button Group"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Cards: Pricing Card
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=7722:3736", { props: { children: figma.children(["Text Heading","Text Price","Text List","Button Group"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Cards: Testimonial Card
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=7717:3946", { props: { children: figma.children(["Text Heading","Avatar Block"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })

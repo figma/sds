@@ -6,7 +6,7 @@
   position: relative;
 
   &.card-direction-vertical {
-    gap: var(--sds-size-gap-sm);
+    gap: var(--sds-size-gap-xl);
     grid-template-areas: "content";
     &:has(.card-asset) {
       grid-template-areas: "asset" "content";
@@ -14,11 +14,12 @@
   }
 
   &.card-direction-horizontal {
-    gap: var(--sds-size-gap-lg);
+    gap: var(--sds-size-gap-xl);
     grid-template-areas: "content";
+
     &:has(.card-asset) {
       grid-template-areas: "asset content";
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 3fr;
     }
   }
 

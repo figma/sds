@@ -1,5 +1,5 @@
 import { figma } from "@figma/code-connect";
-import { Flex, FlexItem } from "ui";
+import { Flex, FlexItem } from "../../ui";
 
 // Image Panel: Default
 figma.connect(
@@ -12,7 +12,7 @@ figma.connect(
       text: figma.children(["Text Content Heading", "Text"]),
     },
     example: ({ image, text }) => (
-      <Flex alignPrimary="center" gap="xl">
+      <Flex container type="half" alignPrimary="center" gap="xxl">
         <FlexItem size="half">{image}</FlexItem>
         <FlexItem size="half">
           <Flex direction="column" gap="xl">
@@ -34,7 +34,7 @@ figma.connect(
       text: figma.children(["Text Content Heading", "Text"]),
     },
     example: ({ image, text }) => (
-      <Flex alignPrimary="center" gap="xl">
+      <Flex container type="half" alignPrimary="center" gap="xxl">
         <FlexItem size="half">
           <Flex direction="column" gap="xl">
             {text}
@@ -55,23 +55,23 @@ figma.connect(
       image: figma.children("Image"),
     },
     example: ({ image }) => (
-      <Flex alignPrimary="center" gap="xl">
+      <Flex container type="half" alignPrimary="center" gap="xxl">
         {image}
       </Flex>
     ),
   },
 );
-// Image Panel: Image Full
+// Image Panel: Image
 figma.connect(
   Flex,
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2164-15467&t=qJR3PLmBgMwoBka4-11",
   {
-    variant: { Variant: "Image Full" },
+    variant: { Variant: "Image" },
     props: {
       image: figma.children("Image"),
     },
     example: ({ image }) => (
-      <Flex alignPrimary="center" gap="xl">
+      <Flex container alignPrimary="center">
         <FlexItem size="full">{image}</FlexItem>
       </Flex>
     ),

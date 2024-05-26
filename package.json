@@ -11,6 +11,7 @@
     "storybook": "storybook dev -p 6006 --no-open",
     "storybook:build": "storybook build --output-dir dist/storybook",
     "build": "npm run app:build; npm run storybook:build",
+    "script:blocks": "cd scripts/blocks; node --env-file=../../.env app.mjs; cd -;",
     "script:icons": "cd scripts/icons; node --env-file=../../.env icons.cjs; cd -;",
     "script:styles": "cd scripts/styles; node --env-file=../../.env styles.cjs; cd -;",
     "script:tokens": "cd scripts/tokens; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",

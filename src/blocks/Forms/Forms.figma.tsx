@@ -1,5 +1,5 @@
 import { figma } from "@figma/code-connect";
-import { Card, Flex, Form } from "ui";
+import { Card, Flex, Form } from "../../ui";
 
 // Shipping Form
 figma.connect(
@@ -20,7 +20,7 @@ figma.connect(
     },
     example: ({ children }) => (
       <Card variant="padded">
-        <Flex direction="column" gap="sm">
+        <Flex direction="column" gap="xl">
           {children}
         </Flex>
       </Card>
@@ -42,7 +42,7 @@ figma.connect(
     },
     example: ({ children }) => (
       <Card variant="padded">
-        <Flex direction="column" gap="sm">
+        <Flex direction="column" gap="xl">
           {children}
         </Flex>
       </Card>
@@ -56,7 +56,7 @@ figma.connect(
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=56-15991&t=qJR3PLmBgMwoBka4-11",
   {
     props: {
-      children: figma.children(["Input Field", "Button"]),
+      children: figma.children(["Input", "Button"]),
     },
     example: ({ children }) => <Form singleLine>{children}</Form>,
   },
@@ -72,7 +72,7 @@ figma.connect(
     },
     example: ({ children }) => (
       <Card variant="padded">
-        <Flex direction="column" gap="sm">
+        <Flex direction="column" gap="xl">
           {children}
         </Flex>
       </Card>
@@ -94,7 +94,7 @@ figma.connect(
     },
     example: ({ children }) => (
       <Card variant="padded">
-        <Flex direction="column" gap="sm">
+        <Flex direction="column" gap="xl">
           {children}
         </Flex>
       </Card>
@@ -112,7 +112,7 @@ figma.connect(
     },
     example: ({ children }) => (
       <Card variant="padded">
-        <Flex direction="column" gap="sm">
+        <Flex direction="column" gap="xl">
           {children}
         </Flex>
       </Card>

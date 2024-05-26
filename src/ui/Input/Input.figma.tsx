@@ -1,5 +1,6 @@
 import figma from "@figma/code-connect";
-import { Input, InputField } from "./Input";
+import { Field } from "../Fieldset/Fieldset";
+import { Input } from "./Input";
 
 const FIGMA_URL_INPUT =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=9762:850";
@@ -10,7 +11,6 @@ figma.connect(Input, FIGMA_URL_INPUT, {
   props: {
     value: figma.enum("Value Type", {
       Default: figma.string("Value"),
-      Placeholder: "",
     }),
     placeholder: figma.enum("Value Type", {
       Default: "Placeholder here...",
@@ -25,7 +25,8 @@ figma.connect(Input, FIGMA_URL_INPUT, {
   ),
 });
 
-figma.connect(InputField, FIGMA_URL_INPUT_FIELD, {
+// TODO: Use Text Field
+figma.connect(Field, FIGMA_URL_INPUT_FIELD, {
   props: {
     isDisabled: figma.enum("State", { Disabled: true }),
     children: figma.children([
@@ -35,5 +36,5 @@ figma.connect(InputField, FIGMA_URL_INPUT_FIELD, {
       "Error Message",
     ]),
   },
-  example: ({ children }) => <InputField>{children}</InputField>,
+  example: ({ children }) => <Field>{children}</Field>,
 });

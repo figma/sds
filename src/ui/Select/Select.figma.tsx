@@ -1,5 +1,6 @@
 import figma from "@figma/code-connect";
-import { Select, SelectField, SelectItem } from "./Select";
+import { Field } from "../Fieldset/Fieldset";
+import { Select, SelectItem } from "./Select";
 
 const FIGMA_URL_SELECT =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=9762:1162";
@@ -33,7 +34,8 @@ figma.connect(Select, FIGMA_URL_SELECT, {
   ),
 });
 
-figma.connect(SelectField, FIGMA_URL_SELECT_FIELD, {
+// TODO: Use Select Field
+figma.connect(Field, FIGMA_URL_SELECT_FIELD, {
   props: {
     isDisabled: figma.enum("State", { Disabled: true }),
     children: figma.children([
@@ -43,5 +45,5 @@ figma.connect(SelectField, FIGMA_URL_SELECT_FIELD, {
       "Error Message",
     ]),
   },
-  example: ({ children }) => <SelectField>{children}</SelectField>,
+  example: ({ children }) => <Field>{children}</Field>,
 });

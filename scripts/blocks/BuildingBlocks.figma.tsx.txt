@@ -1,0 +1,49 @@
+import { figma } from "@figma/code-connect"; import { Flex, FlexItem, Section } from "../../ui";
+
+// Building Blocks: Section Accordion
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2142:11009", { props: { children: figma.children(["Text Content Heading","Accordion"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Card Image Grid
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2142:12529", { props: { children: figma.children(["Text Content Heading","Card"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Content List
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2142:12241", { props: { children: figma.children(["Text Content Heading","Card"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Testimonials
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2142:10523", { props: { children: figma.children(["Text Content Heading","Testimonial Card"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Card Icon Grid
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2143:14417", { props: { children: figma.children(["Text Content Heading","Card"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Image Panel Images
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2143:14658", { props: { children: figma.children(["Image Panel"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Image Panel Default
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2171:21360", { props: { children: figma.children(["Image Panel"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Image Panel Swap
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2171:21397", { props: { children: figma.children(["Image Panel"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Image Panel Image
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2171:21434", { props: { children: figma.children(["Image Panel"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Hero
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2142:10483", { props: { children: figma.children(["Text Content Title"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Hero Actions
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2143:15053", { props: { children: figma.children(["Text Content Title","Button Group"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Pricing
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2142:10786", { props: { children: figma.children(["Navigation","Pricing Card"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Hero Newsletter
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2142:11090", { props: { children: figma.children(["Text Content Title","Newsletter Form"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Section Hero Contact
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2143:13799", { props: { children: figma.children(["Text Content Title","Contact Form"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Footer
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2171:21910", { props: { children: figma.children(["Standard Footer"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
+
+// Building Blocks: Header
+figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=2171:21984", { props: { children: figma.children(["Vertical Header"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
