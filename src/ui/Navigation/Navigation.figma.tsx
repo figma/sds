@@ -2,7 +2,7 @@ import { figma } from "@figma/code-connect";
 import { Navigation, NavigationItem } from "./Navigation";
 
 const FIGMA_URL_NAVIGATION =
-  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=7753-4609&t=piSsjqZPlyn7qp8D-11";
+  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2194-14984&t=mfoXF8CdZRcMh5oX-11";
 const FIGMA_URL_NAVIGATION_ITEM =
   "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=7768-19970&t=piSsjqZPlyn7qp8D-11";
 

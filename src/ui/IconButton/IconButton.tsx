@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { ForwardedRef, forwardRef } from "react";
 import {
   Button,
@@ -11,10 +12,11 @@ export type IconButtonProps = Omit<ButtonProps, "aria-label"> & {
   "aria-label": string;
 };
 export const IconButton = forwardRef(function IconButton(
-  props: IconButtonProps,
+  { className, ...props }: IconButtonProps,
   ref: ForwardedRef<HTMLElement>,
 ) {
-  return <Button {...props} {...ref} className="icon-button" />;
+  const classNames = clsx(className, "icon-button");
+  return <Button {...props} {...ref} className={classNames} />;
 });
 
 export type DestructiveIconButtonProps = Omit<

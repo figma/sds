@@ -48,23 +48,7 @@ import {
 function App() {
   return (
     <>
-      <VerticalHeader>
-        <Flex direction="column" container alignSecondary="center" gap="md">
-          <Flex alignPrimary="center">
-            <Logo />
-          </Flex>
-          <Flex alignPrimary="center">
-            <Navigation>
-              <NavigationItem>Home</NavigationItem>
-              <NavigationItem isSelected>About</NavigationItem>
-              <NavigationItem>Pricing</NavigationItem>
-              <NavigationItem>Blog</NavigationItem>
-              <NavigationItem>Careers</NavigationItem>
-              <NavigationItem>Contact</NavigationItem>
-            </Navigation>
-          </Flex>
-        </Flex>
-      </VerticalHeader>
+      <VerticalHeader />
       <Section padding="md">
         <Flex direction="column" gap="xxl" container>
           <TextContentHeading heading="Heading" subheading="Subheading" />
