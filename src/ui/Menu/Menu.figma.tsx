@@ -30,7 +30,7 @@ figma.connect(MenuSection, "<FIGMA_URL_MENU_SECTION>", {
 });
 
 figma.connect(MenuHeading, "<FIGMA_URL_MENU_HEADING>", {
-  props: { heading: figma.string("Heading") },
+  props: { heading: figma.children("Text Strong") },
   example: ({ heading }) => <MenuHeading>{heading}</MenuHeading>,
 });
 

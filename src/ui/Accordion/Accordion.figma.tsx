@@ -11,7 +11,7 @@ figma.connect(Accordion, "<FIGMA_URL_ACCORDION>", {
 figma.connect(AccordionItem, "<FIGMA_URL_ACCORDION_ITEM>", {
   props: {
     isSelected: figma.enum("State", {
-      Closed: false,
+      Closed: undefined,
       Open: true,
     }),
     title: figma.string("Title"),
