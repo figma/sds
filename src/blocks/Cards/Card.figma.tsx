@@ -1,5 +1,5 @@
 import { figma } from "@figma/code-connect";
-import { Card } from "./Card";
+import { Card } from "./Cards";
 
 figma.connect(Card, "<FIGMA_URL_CARD>", {
   props: {
