@@ -1,8 +1,8 @@
 import {
   PricingCard,
   StandardFooter,
+  StandardHeader,
   TestimonialCard,
-  VerticalHeader,
 } from "blocks";
 import {
   IconCircle,
@@ -11,6 +11,7 @@ import {
   IconLinkedin,
   IconYoutube,
 } from "icons";
+import { AuthenticationProvider } from "providers";
 import {
   Accordion,
   AccordionItem,
@@ -47,8 +48,8 @@ import {
 
 function App() {
   return (
-    <>
-      <VerticalHeader />
+    <AuthenticationProvider>
+      <StandardHeader />
       <Section padding="md">
         <Flex direction="column" gap="xxl" container>
           <TextContentHeading heading="Heading" subheading="Subheading" />
@@ -688,7 +689,7 @@ function App() {
           </TextLinkList>
         </Flex>
       </StandardFooter>
-    </>
+    </AuthenticationProvider>
   );
 }
 

@@ -16,7 +16,8 @@ const COLOR_THEME_LIGHT_REMOVE = "_light";
 const COLOR_THEME_DARK_REMOVE = "_dark";
 const RESPONSIVE_SIZE_ORDER = ["mobile", "tablet", "desktop", "wide"];
 const RESPONSIVE_SIZE_TOKEN_SUFFIX = "width-device-min";
-const FILE_KEY = "YfiqA0yWMXuLJAzkZNpBdy";
+const _FILE_KEY = "YfiqA0yWMXuLJAzkZNpBdy";
+const FILE_KEY = "J0KLPKXiONDRssXD1AX9Oi";
 
 // const formatters = {
 //   "weight-black-italic": "style",

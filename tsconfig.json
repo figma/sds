@@ -18,6 +18,8 @@
     "baseUrl": "./src",
     "paths": {
       "blocks": ["./blocks"],
+      "icons": ["./icons"],
+      "providers": ["./providers"],
       "ui": ["./ui"]
     }
   },

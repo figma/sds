@@ -1,7 +1,9 @@
+const _FILE_URL = "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy";
+const FILE_URL = "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi";
+
 async function run() {
   const exports = [];
-  const files = [
-  ];
+  const files = [];
   await Promise.all(
     figma.currentPage
       .findAllWithCriteria({ types: ["COMPONENT_SET"] })
@@ -25,7 +27,7 @@ async function run() {
               const cleanSvg = svg
                 .replace(
                   /(stroke|fill|line|clip)-(.)/g,
-                  (_, p1, p2) => p1 + p2.toUpperCase()
+                  (_, p1, p2) => p1 + p2.toUpperCase(),
                 )
                 .replace(/<svg[^>]+>/, "")
                 .replace(/<\/svg>/, "")
@@ -35,14 +37,14 @@ async function run() {
               lines.push(`  <Icon {...props}>${cleanSvg}</Icon>`);
             }
             return true;
-          })
+          }),
         );
         lines.push(");");
         lines.push(
-          `figma.connect(${cleanName}, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=${componentSet.id}", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <${cleanName} size={size} /> });`
+          `figma.connect(${cleanName}, "${FILE_URL}?node-id=${componentSet.id}", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <${cleanName} size={size} /> });`,
         );
         files.push(`["${cleanName}.tsx", ${JSON.stringify(lines.join("\n"))}]`);
-      })
+      }),
   );
 
   figma.showUI(
@@ -52,7 +54,7 @@ async function run() {
     {
       height: 900,
       width: 1200,
-    }
+    },
   );
 }
 

@@ -56,7 +56,11 @@ type FlextItemSize = "full" | "major" | "minor" | "half";
 export type FlexItemProps = ComponentPropsWithoutRef<"div"> & {
   size?: FlextItemSize;
 };
-export function FlexItem({ children, size }: FlexItemProps) {
-  const classNames = clsx("flex-item", size && `flex-item-size-${size}`);
+export function FlexItem({ className, children, size }: FlexItemProps) {
+  const classNames = clsx(
+    className,
+    "flex-item",
+    size && `flex-item-size-${size}`,
+  );
   return <div className={classNames}>{children}</div>;
 }

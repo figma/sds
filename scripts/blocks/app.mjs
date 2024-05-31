@@ -2,9 +2,12 @@ import fs from "fs";
 
 // run with node --env-file=.env app.mjs
 const TOKEN = process.env.FIGMA_ACCESS_TOKEN;
-const URL_BASE = "https://api.staging.figma.com/v1/files";
-const FILE_URL_BASE = "https://staging.figma.com/design/";
-const FILE_KEY = "YfiqA0yWMXuLJAzkZNpBdy";
+const _URL_BASE = "https://api.staging.figma.com/v1/files";
+const _FILE_URL_BASE = "https://staging.figma.com/design/";
+const _FILE_KEY = "YfiqA0yWMXuLJAzkZNpBdy";
+const URL_BASE = "https://api.figma.com/v1/files";
+const FILE_URL_BASE = "https://figma.com/design/";
+const FILE_KEY = "J0KLPKXiONDRssXD1AX9Oi";
 
 export async function getFileData(fileKey, pageName) {
   try {

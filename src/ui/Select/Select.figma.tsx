@@ -2,12 +2,7 @@ import figma from "@figma/code-connect";
 import { Field } from "../Fieldset/Fieldset";
 import { Select, SelectItem } from "./Select";
 
-const FIGMA_URL_SELECT =
-  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=9762:1162";
-const FIGMA_URL_SELECT_FIELD =
-  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2136-2336&m=dev";
-
-figma.connect(Select, FIGMA_URL_SELECT, {
+figma.connect(Select, "<FIGMA_URL_SELECT>", {
   props: {
     value: figma.string("Value"),
     isDisabled: figma.enum("State", {
@@ -35,7 +30,7 @@ figma.connect(Select, FIGMA_URL_SELECT, {
 });
 
 // TODO: Use Select Field
-figma.connect(Field, FIGMA_URL_SELECT_FIELD, {
+figma.connect(Field, "<FIGMA_URL_SELECT_FIELD>", {
   props: {
     isDisabled: figma.enum("State", { Disabled: true }),
     children: figma.children([

@@ -1,10 +1,7 @@
 import figma from "@figma/code-connect";
 import { Image } from "./Image";
 
-const FIGMA_URL_IMAGE =
-  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=159-8617&m=dev";
-
-figma.connect(Image, FIGMA_URL_IMAGE, {
+figma.connect(Image, "<FIGMA_URL_IMAGE>", {
   props: {
     aspectRatio: figma.enum("Aspect ratio", {
       "16:9": "16-9",

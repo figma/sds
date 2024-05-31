@@ -32,8 +32,10 @@
 
 .slider-output {
   align-self: flex-end;
+  justify-self: flex-end;
   font: var(--sds-font-body-small);
   grid-area: field-extra;
+  margin-bottom: var(--sds-size-gap-sm);
 }
 
 .slider-thumb {

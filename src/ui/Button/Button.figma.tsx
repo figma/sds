@@ -1,11 +1,6 @@
 import figma from "@figma/code-connect";
 import { Button, ButtonGroup, DestructiveButton } from "./Button";
 
-const FIGMA_URL_BUTTON =
-  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=9762:426";
-const FIGMA_URL_BUTTON_GROUP =
-  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy/SDS?node-id=2072-9432&t=4T0FUMZf0IfQUWoa-11";
-
 const sharedProps = {
   label: figma.string("Label"),
   iconStart: figma.boolean("Has Icon Start", {
@@ -29,7 +24,7 @@ const sharedProps = {
   }),
 };
 
-figma.connect(Button, FIGMA_URL_BUTTON, {
+figma.connect(Button, "<FIGMA_URL_BUTTON>", {
   variant: {
     Scheme: "Default",
   },
@@ -47,7 +42,7 @@ figma.connect(Button, FIGMA_URL_BUTTON, {
     </Button>
   ),
 });
-figma.connect(Button, FIGMA_URL_BUTTON, {
+figma.connect(Button, "<FIGMA_URL_BUTTON>", {
   variant: {
     Scheme: "Danger",
   },
@@ -61,14 +56,14 @@ figma.connect(Button, FIGMA_URL_BUTTON, {
   ),
 });
 
-figma.connect(ButtonGroup, FIGMA_URL_BUTTON_GROUP, {
+figma.connect(ButtonGroup, "<FIGMA_URL_BUTTON_GROUP>", {
   props: {
     align: figma.enum("Align", {
       Center: "center",
       End: "end",
       Justify: "justify",
     }),
-    children: figma.children(["Button", "Icon Button"]),
+    children: figma.children(["Button"]),
   },
   example: ({ children, align }) => (
     <ButtonGroup align={align}>{children}</ButtonGroup>

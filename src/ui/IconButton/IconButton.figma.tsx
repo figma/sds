@@ -1,9 +1,6 @@
 import figma from "@figma/code-connect";
 import { DestructiveIconButton, IconButton } from "./IconButton";
 
-const FIGMA_URL_ICON_BUTTON =
-  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=11-11508";
-
 const sharedProps = {
   icon: figma.instance("Icon"),
   isDisabled: figma.enum("State", {
@@ -19,7 +16,7 @@ const sharedProps = {
   }),
 };
 
-figma.connect(IconButton, FIGMA_URL_ICON_BUTTON, {
+figma.connect(IconButton, "<FIGMA_URL_ICON_BUTTON>", {
   variant: {
     Scheme: "Default",
   },
@@ -37,7 +34,7 @@ figma.connect(IconButton, FIGMA_URL_ICON_BUTTON, {
   ),
 });
 
-figma.connect(DestructiveIconButton, FIGMA_URL_ICON_BUTTON, {
+figma.connect(DestructiveIconButton, "<FIGMA_URL_ICON_BUTTON>", {
   variant: {
     Scheme: "Danger",
   },

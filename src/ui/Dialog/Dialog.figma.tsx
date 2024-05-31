@@ -1,24 +1,14 @@
 import figma from "@figma/code-connect";
-import {
-  Dialog,
-  DialogActions,
-  DialogBody,
-  DialogDescription,
-  DialogTitle,
-} from "./Dialog";
+import { Dialog, DialogActions, DialogBody } from "./Dialog";
 
-const FIGMA_URL_DIALOG =
-  "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=9762-696";
-// "https://www.figma.com/file/4HOiV2Yd9xDbTnp0j8hU6m?node-id=15-8469"
-
-figma.connect(Dialog, FIGMA_URL_DIALOG, {
+figma.connect(Dialog, "<FIGMA_URL_DIALOG>", {
   props: {
     body: figma.boolean("Dialog Body", {
       true: <DialogBody>Something here!</DialogBody>,
       false: undefined,
     }),
-    description: figma.string("Description"),
-    title: figma.string("Title"),
+    description: figma.children("Text"),
+    title: figma.children("Text Heading"),
     layout: figma.enum("Layout", {
       Desktop: "desktop",
       Mobile: "mobile",
@@ -27,9 +17,9 @@ figma.connect(Dialog, FIGMA_URL_DIALOG, {
   },
   example: ({ title, description, body, actions }) => (
     <Dialog>
-      <DialogTitle>{title}</DialogTitle>
+      {title}
 
-      <DialogDescription>{description}</DialogDescription>
+      {description}
 
       {body}
 

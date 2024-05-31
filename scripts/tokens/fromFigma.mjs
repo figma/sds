@@ -1,6 +1,7 @@
 // run with node --env-file=.env app.mjs
 const TOKEN = process.env.FIGMA_ACCESS_TOKEN;
-const URL_BASE = "https://api.staging.figma.com/v1/files";
+const _URL_BASE = "https://api.staging.figma.com/v1/files";
+const URL_BASE = "https://api.figma.com/v1/files";
 const KEY_PREFIX_COLLECTION = "@";
 
 export async function getFileStyles(fileKey) {
@@ -76,7 +77,7 @@ function fileRESTResponseToStylesJSON(response) {
     }
     if (node.children) {
       node.children.forEach((child) =>
-        traverseChildrenForStyles(styles, child, finder)
+        traverseChildrenForStyles(styles, child, finder),
       );
     }
   }
@@ -84,7 +85,7 @@ function fileRESTResponseToStylesJSON(response) {
 
 function variablesRESTResponseToVariablesJSON(response, nameSpace) {
   const collections = Object.values(response.meta.variableCollections).filter(
-    (c) => !c.remote
+    (c) => !c.remote,
   );
   const object = {};
   const { idToKey } = uniqueKeyIdMaps(collections, "id", KEY_PREFIX_COLLECTION);
@@ -95,8 +96,8 @@ function variablesRESTResponseToVariablesJSON(response, nameSpace) {
         nameSpace,
         idToKey,
         response.meta.variables,
-        collection
-      ))
+        collection,
+      )),
   );
 
   return object;
@@ -134,7 +135,7 @@ function variablesRESTResponseToVariablesJSON(response, nameSpace) {
     nameSpace,
     collectionIdToKeyMap,
     variables,
-    { name, modes, variableIds, id: figmaId }
+    { name, modes, variableIds, id: figmaId },
   ) {
     const collection = {};
     const { idToKey, keyToId } = uniqueKeyIdMaps(modes, "modeId");
@@ -177,7 +178,7 @@ function variablesRESTResponseToVariablesJSON(response, nameSpace) {
           value,
           resolvedType,
           collectionIdToKeyMap,
-          variables
+          variables,
         );
         obj.$extensions = {
           [nameSpace]: {
@@ -187,7 +188,7 @@ function variablesRESTResponseToVariablesJSON(response, nameSpace) {
                 valuesByMode[keyToId[modeKey]],
                 resolvedType,
                 collectionIdToKeyMap,
-                variables
+                variables,
               );
               return into;
             }, {}),
@@ -202,7 +203,7 @@ function variablesRESTResponseToVariablesJSON(response, nameSpace) {
     value,
     resolvedType,
     collectionIdToKeyMap,
-    variables
+    variables,
   ) {
     if (value.type === "VARIABLE_ALIAS") {
       const variable = variables[value.id];

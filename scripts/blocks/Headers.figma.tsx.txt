@@ -1,7 +1,0 @@
-import { figma } from "@figma/code-connect"; import { Flex, FlexItem, Section } from "../../ui";
-
-// Headers: Vertical Header
-figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=7722:3364", { props: { children: figma.children(["Logo","Navigation"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
-
-// Headers: Standard Header
-figma.connect(Section, "https://staging.figma.com/design/YfiqA0yWMXuLJAzkZNpBdy?node-id=7717:3642", { props: { children: figma.children(["Logo","Navigation","Button Group","Menu"]) }, example: ({ children }) => (<Section><Flex direction="row" wrap container>{children}</Flex></Section>) })
