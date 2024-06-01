@@ -9,6 +9,8 @@ import {
   Button,
   ButtonGroup,
   Description,
+  Dialog,
+  DialogModal,
   Flex,
   FlexItem,
   IconButton,
@@ -23,33 +25,14 @@ import {
   Section,
   type SectionProps,
 } from "ui";
+import "./headers.css";
 
-function HeaderUser() {
+function HeaderNavigation() {
   const { currentUser, login, logout } = useContext(AuthenticationContext);
-  return currentUser ? (
-    <MenuTrigger>
-      <AvatarButton
-        src={currentUser.avatar}
-        initials={currentUser.name.charAt(0)}
-      />
-      <MenuPopover placement="bottom right">
-        <Menu>
-          <MenuItem>
-            <AvatarBlock>
-              <Avatar
-                src={currentUser.avatar}
-                initials={currentUser.name.charAt(0)}
-              />
-              <Label>{currentUser.name}</Label>
-              <Description>View profile</Description>
-            </AvatarBlock>
-          </MenuItem>
-          <MenuItem onAction={logout}>Log out</MenuItem>
-        </Menu>
-      </MenuPopover>
-    </MenuTrigger>
-  ) : (
-    <ButtonGroup>
+  const [open, setOpen] = useState(false);
+
+  const userButtons = (
+    <>
       <Button
         variant="secondary"
         size="sm"
@@ -75,42 +58,120 @@ function HeaderUser() {
       >
         Register
       </Button>
-    </ButtonGroup>
+    </>
   );
-}
 
-function HeaderNavigation() {
-  const [open, setOpen] = useState(false);
   return (
-    <Flex
-      direction="column"
-      gap="md"
-      alignPrimary="center"
-      alignSecondary="center"
-    >
-      <FlexItem className="display-flex-to-none">
-        <Flex alignPrimary="center">
+    <>
+      <Flex
+        direction="column"
+        gap="md"
+        alignPrimary="center"
+        alignSecondary="center"
+      >
+        <FlexItem className="display-flex-to-none">
+          <Flex alignPrimary="center">
+            <IconButton
+              variant="subtle"
+              aria-label="Toggle navigation menu"
+              onPress={() => setOpen(true)}
+            >
+              <IconMenu />
+            </IconButton>
+          </Flex>
+        </FlexItem>
+        <FlexItem className="display-none-to-flex">
+          <Flex gap="lg" alignSecondary="center">
+            <Navigation>
+              <NavigationItem isSelected>Home</NavigationItem>
+              <NavigationItem>About</NavigationItem>
+            </Navigation>
+            {currentUser ? (
+              <MenuTrigger>
+                <AvatarButton
+                  src={currentUser.avatar}
+                  initials={currentUser.name.charAt(0)}
+                />
+                <MenuPopover placement="bottom right">
+                  <Menu>
+                    <MenuItem>
+                      <AvatarBlock>
+                        <Avatar
+                          src={currentUser.avatar}
+                          initials={currentUser.name.charAt(0)}
+                        />
+                        <Label>{currentUser.name}</Label>
+                        <Description>View profile</Description>
+                      </AvatarBlock>
+                    </MenuItem>
+                    <MenuItem onAction={logout}>Log out</MenuItem>
+                  </Menu>
+                </MenuPopover>
+              </MenuTrigger>
+            ) : (
+              <ButtonGroup>{userButtons}</ButtonGroup>
+            )}
+          </Flex>
+        </FlexItem>
+      </Flex>
+      <DialogModal isOpen={open}>
+        <Dialog className={clsx("navigation-dialog")}>
           <IconButton
+            className={clsx("navigation-dialog-close")}
             variant="subtle"
-            aria-label="Toggle navigation menu"
-            onPress={() => setOpen(!open)}
+            aria-label="Close navigation menu"
+            onPress={() => setOpen(false)}
           >
-            {open ? <IconX /> : <IconMenu />}
+            <IconX />
           </IconButton>
-        </Flex>
-      </FlexItem>
-      <Navigation className={clsx({ "display-none-to-flex": !open })}>
-        <NavigationItem isSelected>Home</NavigationItem>
-        <NavigationItem>About</NavigationItem>
-      </Navigation>
-    </Flex>
+          <Flex direction="column" alignPrimary="space-between">
+            <Navigation>
+              <NavigationItem isSelected>Home</NavigationItem>
+              <NavigationItem>About</NavigationItem>
+            </Navigation>
+            {currentUser ? (
+              <Flex alignSecondary="center" gap="sm" direction="column">
+                <FlexItem>
+                  <Flex alignPrimary="center">
+                    <Avatar
+                      src={currentUser.avatar}
+                      initials={currentUser.name.charAt(0)}
+                    />
+                  </Flex>
+                </FlexItem>
+                <FlexItem>
+                  <Flex alignPrimary="center">
+                    <Label>{currentUser.name}</Label>
+                  </Flex>
+                </FlexItem>
+                <FlexItem>
+                  <Flex alignPrimary="center">
+                    <Button variant="subtle" size="sm" onPress={logout}>
+                      Log out
+                    </Button>
+                  </Flex>
+                </FlexItem>
+              </Flex>
+            ) : (
+              <ButtonGroup align="justify">{userButtons}</ButtonGroup>
+            )}
+          </Flex>
+        </Dialog>
+      </DialogModal>
+    </>
   );
 }
 
 export type StandardHeaderProps = Omit<SectionProps, "variant" | "padding">;
 export function StandardHeader({ className, ...props }: StandardHeaderProps) {
   return (
-    <Section elementType="header" variant="stroke" padding="sm" {...props}>
+    <Section
+      className="header"
+      elementType="header"
+      variant="stroke"
+      padding="sm"
+      {...props}
+    >
       <Flex container alignPrimary="space-between" alignSecondary="center">
         <FlexItem size="minor">
           <Logo />
@@ -118,7 +179,6 @@ export function StandardHeader({ className, ...props }: StandardHeaderProps) {
         <FlexItem size="major">
           <Flex gap="xl" alignPrimary="end" alignSecondary="center">
             <HeaderNavigation />
-            <HeaderUser />
           </Flex>
         </FlexItem>
       </Flex>
@@ -128,14 +188,19 @@ export function StandardHeader({ className, ...props }: StandardHeaderProps) {
 export type VerticalHeaderProps = Omit<SectionProps, "variant" | "padding">;
 export function VerticalHeader({ className, ...props }: VerticalHeaderProps) {
   return (
-    <Section elementType="header" variant="subtle" padding="sm" {...props}>
+    <Section
+      className="header"
+      elementType="header"
+      variant="subtle"
+      padding="sm"
+      {...props}
+    >
       <Flex direction="column" alignSecondary="center" gap="md">
         <Flex alignPrimary="center">
           <Logo />
         </Flex>
         <Flex alignPrimary="center">
           <HeaderNavigation />
-          <HeaderUser />
         </Flex>
       </Flex>
     </Section>

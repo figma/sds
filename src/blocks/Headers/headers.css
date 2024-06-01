@@ -1,0 +1,34 @@
+.header {
+  background: var(--sds-color-bg-default-default);
+  left: 0;
+  position: sticky;
+  top: 0;
+  z-index: var(--global-stack-top);
+}
+
+.navigation-dialog {
+  border: none;
+  border-radius: var(--sds-size-radius-none);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-left: var(--sds-size-padding-lg);
+  padding-right: var(--sds-size-padding-lg);
+  max-width: 100%;
+  width: 100%;
+
+  > .flex {
+    flex: 1;
+  }
+
+  .navigation {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+.navigation-dialog-close {
+  position: absolute;
+  right: var(--sds-size-padding-md);
+  top: var(--sds-size-padding-md);
+}

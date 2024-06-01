@@ -15,7 +15,7 @@ import {
   TextTitlePage,
 } from "ui";
 import { AnchorOrButton, AnchorOrButtonProps } from "ui/utils/AnchorOrButton";
-import "./card.css";
+import "./cards.css";
 
 export type CardProps = ComponentPropsWithoutRef<"div"> & {
   direction?: "horizontal" | "vertical";

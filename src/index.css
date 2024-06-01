@@ -6,6 +6,8 @@
   --global-focus-ring-size: calc(var(--sds-responsive-border-width) * 2);
   --global-focus-ring-color: var(--sds-color-blue-500);
   --global-line-height-paragraph: 1.4;
+  --global-stack-top: 999;
+  --global-stack-focus: 999;
 }
 
 .display-none-to-flex {
@@ -31,7 +33,13 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 #root {
+  min-height: 100%;
   width: 100%;
 }
 

@@ -29,7 +29,7 @@ function Figma() {
 
 const meta: Meta<typeof Figma> = {
   component: Figma,
-  title: "figma/Preview",
+  title: "z/figma/Preview",
   parameters: { layout: "centered" },
 };
 export default meta;

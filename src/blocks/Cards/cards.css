@@ -8,20 +8,10 @@
 
   &.card-direction-vertical {
     flex-direction: column;
-    /* grid-template-areas: "content";
-    &:has(.card-asset) {
-      grid-template-areas: "asset" "content";
-    } */
   }
 
   &.card-direction-horizontal {
     flex-direction: var(--sds-responsive-direction-column-to-row);
-    /* grid-template-areas: "content";
-
-    &:has(.card-asset) {
-      grid-template-areas: "asset content";
-      grid-template-columns: auto 1fr;
-    } */
   }
 
   &.card-variant-stroke {

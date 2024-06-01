@@ -1,9 +1,7 @@
 .avatar-button {
   border-radius: var(--avatar-border-radius);
   cursor: pointer;
-  display: inline-flex;
   height: var(--avatar-diameter);
-  position: relative;
   width: var(--avatar-diameter);
   &:focus-visible {
     outline: none;
@@ -24,7 +22,7 @@
 
 .avatar {
   border-radius: var(--avatar-border-radius);
-  display: inline-flex;
+  position: relative;
   height: var(--avatar-diameter);
   width: var(--avatar-diameter);
   > img,
@@ -32,6 +30,9 @@
     border-radius: var(--avatar-border-radius);
     height: auto;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   > svg {
@@ -46,10 +47,14 @@
 .avatar-block {
   align-items: center;
   display: grid;
-  grid-template-areas: "avatar label" "avatar description";
+  grid-template-areas: "avatar label";
   grid-template-columns: auto 1fr;
   column-gap: var(--sds-size-gap-sm);
   row-gap: var(--sds-size-gap-xs);
+
+  &:has(> .description) {
+    grid-template-areas: "avatar label" "avatar description";
+  }
 
   > .avatar {
     grid-area: avatar;

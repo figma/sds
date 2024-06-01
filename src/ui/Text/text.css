@@ -10,13 +10,31 @@
 .text-body-emphasis {
   font: var(--sds-font-body-emphasis);
 }
+
 .text-body-link {
-  font: var(--sds-font-body-link);
-}
-.text-body-link {
+  --border-radius: var(--sds-size-radius-xs);
   color: inherit;
+  font: var(--sds-font-body-link);
   text-decoration: underline;
+  position: relative;
+  &:focus-visible {
+    outline: none;
+    --offset: calc(var(--sds-responsive-border-width) * 2);
+    &::before {
+      content: "";
+      border-radius: calc(var(--border-radius) + var(--offset));
+      bottom: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size)
+        var(--global-focus-ring-color);
+      left: calc(-1 * var(--offset));
+      position: absolute;
+      right: calc(-1 * var(--offset));
+      top: calc(-1 * var(--offset));
+      z-index: var(--global-stack-focus);
+    }
+  }
 }
+
 .text-input {
   font: var(--sds-font-input);
 }

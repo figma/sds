@@ -9,7 +9,7 @@ import { Card, PricingCard, ProductInfoCard, TestimonialCard } from "./Cards";
 
 const meta: Meta<typeof Card> = {
   component: Card,
-  title: "blocks/Card",
+  title: "blocks/Cards",
   parameters: { layout: "centered" },
 };
 export default meta;
