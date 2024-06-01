@@ -1,29 +1,21 @@
 .tabs {
 }
 .tab {
-  --border-radius: var(--sds-size-radius-sm);
+  --color: var(--sds-color-text-default-secondary);
+  --border-color: var(--sds-color-border-default-default);
+  --border-radius: var(--sds-size-radius-xs);
+  padding: var(--sds-size-padding-xs) var(--sds-size-padding-md);
+  border-bottom: solid var(--sds-responsive-border-width) var(--border-color);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
-  padding: var(--sds-size-padding-xs) var(--sds-size-padding-sm);
-  border-bottom: solid var(--sds-responsive-border-width)
-    var(--sds-color-border-default-default);
   box-sizing: border-box;
-  color: var(--sds-color-text-default-default);
+  color: var(--color);
   cursor: pointer;
   outline: none;
   position: relative;
 
   &[data-selected] {
-    border: solid var(--sds-responsive-border-width)
-      var(--sds-color-border-default-default);
-    border-bottom-width: 0;
-    padding-top: calc(
-      var(--sds-size-padding-xs) - var(--sds-responsive-border-width)
-    );
-    padding-bottom: calc(
-      var(--sds-size-padding-xs) + var(--sds-responsive-border-width)
-    );
-    margin-left: calc(-1 * var(--sds-responsive-border-width));
-    margin-right: calc(-1 * var(--sds-responsive-border-width));
+    --color: var(--sds-color-text-default-default);
+    --border-color: var(--sds-color-border-default-secondary);
     position: relative;
     z-index: 1;
   }
@@ -53,4 +45,5 @@
 }
 .tab-panel {
   outline: none;
+  padding: var(--sds-size-padding-md);
 }
