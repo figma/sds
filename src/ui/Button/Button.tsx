@@ -16,16 +16,19 @@ export const Button = React.forwardRef(function Button(
   );
 });
 
-export type DestructiveButtonProps = Omit<
-  ButtonBaseProps,
-  "scheme" | "variant"
->;
+export type DestructiveButtonProps = Omit<ButtonBaseProps, "scheme">;
 export const DestructiveButton = React.forwardRef(function Button(
-  { className, ...props }: DestructiveButtonProps,
+  { className, variant = "default", ...props }: DestructiveButtonProps,
   ref: React.ForwardedRef<HTMLElement>,
 ) {
   return (
-    <ButtonBase {...props} scheme="danger" className={className} ref={ref} />
+    <ButtonBase
+      {...props}
+      variant={variant}
+      scheme="danger"
+      className={className}
+      ref={ref}
+    />
   );
 });
 

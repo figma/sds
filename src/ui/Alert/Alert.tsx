@@ -36,11 +36,15 @@ export function Alert({
       <div className="alert-content">{children}</div>
       {isDismissible &&
         (scheme === "danger" ? (
-          <DestructiveIconButton size="sm" aria-label="Dismiss alert">
+          <DestructiveIconButton
+            size="sm"
+            variant="subtle"
+            aria-label="Dismiss alert"
+          >
             <IconX />
           </DestructiveIconButton>
         ) : (
-          <IconButton size="sm" aria-label="Dismiss alert">
+          <IconButton size="sm" variant="subtle" aria-label="Dismiss alert">
             <IconX />
           </IconButton>
         ))}
@@ -51,11 +55,7 @@ export function Alert({
 export type AlertTitleProps = TextStrongProps;
 export function AlertTitle({ className, ...props }: AlertTitleProps) {
   const classNames = clsx(className, "alert-title");
-  return (
-    <Text className={classNames}>
-      <TextStrong {...props} />
-    </Text>
-  );
+  return <TextStrong className={classNames} {...props} />;
 }
 export type AlertBodyProps = TextProps;
 export function AlertBody({ className, ...props }: AlertBodyProps) {

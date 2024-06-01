@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { ComponentProps } from "react";
 import { Alert, AlertActions, AlertBody, AlertTitle } from "ui/Alert/Alert";
 import { Button, ButtonGroup } from "ui/Button/Button";
 
@@ -8,23 +9,29 @@ const meta: Meta<typeof Alert> = {
   parameters: { layout: "centered" },
 };
 export default meta;
-type Story = StoryObj<typeof Alert>;
 
-export const Default: Story = {
-  args: { isDismissible: true },
-  argTypes: {},
-  render: (args) => {
+export const Default: StoryObj<
+  Omit<ComponentProps<typeof Alert>, "scheme"> & {
+    "[type]": "message" | "alert";
+  }
+> = {
+  args: { isDismissible: true, "[type]": "message" },
+  argTypes: {
+    "[type]": { control: { type: "select" }, options: ["message", "alert"] },
+  },
+  render: ({ "[type]": _type, ...args }) => {
+    const scheme = _type === "message" ? "default" : "danger";
     return (
-      <Alert {...args}>
+      <Alert {...args} scheme={scheme}>
         <AlertTitle>Alert Title</AlertTitle>
         <AlertBody>Hello there! This is a message</AlertBody>
-        <AlertActions>
-          <ButtonGroup>
-            <Button variant="secondary" size="sm">
-              Hello
-            </Button>
-          </ButtonGroup>
-        </AlertActions>
+        {_type === "message" && (
+          <AlertActions>
+            <ButtonGroup>
+              <Button size="sm">Hello</Button>
+            </ButtonGroup>
+          </AlertActions>
+        )}
       </Alert>
     );
   },
