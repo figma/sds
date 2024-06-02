@@ -1,6 +1,7 @@
-import { StandardFooter, StandardHeader } from "blocks";
 import { AuthenticationProvider } from "providers";
-import { Flex, Section, TextContentTitle } from "ui";
+import { StandardFooter, StandardHeader } from "ui/components";
+import { Flex, Section } from "ui/layout";
+import { TextContentTitle } from "ui/primitives";
 
 function App() {
   return (

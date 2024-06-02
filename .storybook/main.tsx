@@ -2,12 +2,13 @@ import type { StorybookConfig } from "@storybook/react-vite";
 import path from "path";
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    "../src/stories/**/*.mdx",
+    "../src/stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+  ],
   addons: [
-    "@storybook/addon-onboarding",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@chromatic-com/storybook",
     "@storybook/addon-interactions",
   ],
   framework: {
@@ -21,10 +22,11 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        blocks: path.resolve(__dirname, "/src/blocks"),
         icons: path.resolve(__dirname, "/src/icons"),
         providers: path.resolve(__dirname, "/src/providers"),
-        ui: path.resolve(__dirname, "/src/ui"),
+        "ui/components": path.resolve(__dirname, "/src/ui/components"),
+        "ui/layout": path.resolve(__dirname, "/src/ui/layout"),
+        "ui/primitives": path.resolve(__dirname, "/src/ui/primitives"),
       };
     }
 

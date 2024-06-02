@@ -17,11 +17,12 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./src",
     "paths": {
-      "blocks": ["./blocks"],
       "icons": ["./icons"],
       "providers": ["./providers"],
-      "ui": ["./ui"]
+      "ui/components": ["./ui/components"],
+      "ui/layout": ["./ui/layout"],
+      "ui/primitives": ["./ui/primitives"]
     }
   },
-  "include": ["src", "scripts", "figma"]
+  "include": ["src", "scripts"]
 }

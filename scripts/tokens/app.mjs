@@ -14,7 +14,7 @@ const COLOR_THEMES_DARK = ["dark", "purple_dark", "blue_dark", "teal_dark"];
 // stripped from mode names above in theme class names
 const COLOR_THEME_LIGHT_REMOVE = "_light";
 const COLOR_THEME_DARK_REMOVE = "_dark";
-const RESPONSIVE_SIZE_ORDER = ["mobile", "tablet", "desktop", "wide"];
+const RESPONSIVE_SIZE_ORDER = ["mobile", "tablet", "desktop"];
 const RESPONSIVE_SIZE_TOKEN_SUFFIX = "width-device-min";
 const _FILE_KEY = "YfiqA0yWMXuLJAzkZNpBdy";
 const FILE_KEY = "J0KLPKXiONDRssXD1AX9Oi";
