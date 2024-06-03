@@ -34,14 +34,14 @@
   --checkbox-border: var(--checkbox-background);
 }
 
-.checkbox-field[data-selected]
-  > .checkbox:not([data-indeterminate])
+.checkbox-field[data-selected]:not([data-indeterminate])
+  > .checkbox
   > .icon-selected,
 .checkbox[data-selected]:not([data-indeterminate]) > .icon-selected {
   display: block;
 }
-.checkbox-field[data-selected]
-  > .checkbox[data-indeterminate]
+.checkbox-field[data-selected][data-indeterminate]
+  > .checkbox
   > .icon-indeterminate,
 .checkbox[data-selected][data-indeterminate] > .icon-indeterminate {
   display: block;
