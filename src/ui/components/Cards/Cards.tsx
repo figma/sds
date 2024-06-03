@@ -18,18 +18,39 @@ import { AnchorOrButton, AnchorOrButtonProps } from "ui/utils/AnchorOrButton";
 import "./cards.css";
 
 export type CardProps = ComponentPropsWithoutRef<"div"> & {
+  /**
+   * The initial direction of the card.
+   * All cards become vertical on mobile.
+   */
   direction?: "horizontal" | "vertical";
-  interaction?: Omit<AnchorOrButtonProps, "aria-label"> & {
+  /**
+   * The interaction props for the Card.
+   * If present, the card itself is pressable.
+   * AnchorOrButtonProps extend either button or anchor behavior.
+   */
+  interactionProps?: Omit<AnchorOrButtonProps, "aria-label"> & {
     "aria-label": string;
   };
+  /**
+   * An asset for the card.
+   * Can be an Icon or an Image instance.
+   */
   asset?: React.ReactNode;
+  /**
+   * Style variation of the card.
+   * stroke and padded both add spacing around the card, default is unpadded.
+   */
   variant?: "default" | "stroke" | "padded";
 };
+
+/**
+ * The basic card generic component that can be used to create vanity card components.
+ */
 export function Card({
   children,
   className,
   direction = "vertical",
-  interaction,
+  interactionProps,
   variant = "default",
   asset,
   ...props
@@ -44,20 +65,42 @@ export function Card({
     <div className={classNames} {...props}>
       {asset && <div className="card-asset">{asset}</div>}
       <div className="card-content">{children}</div>
-      {interaction && (
-        <AnchorOrButton className="card-interaction" {...interaction} />
+      {interactionProps && (
+        <AnchorOrButton
+          className="card-interactionProps"
+          {...interactionProps}
+        />
       )}
     </div>
   );
 }
 
 export type PricingCardProps = {
+  /**
+   * The heading for the price point
+   */
   heading: string;
+  /**
+   * The price excluding currency
+   */
   price: number;
+  /**
+   * A list of items to appear in a bulleted list
+   */
   items: string[];
+  /**
+   * The text labeling the action button
+   */
   action: string;
+  /**
+   * The action of the button.
+   */
   onAction: () => void;
 };
+
+/**
+ * A card that demonstrates price point and value, often in comparison to other cards.
+ */
 export function PricingCard({
   heading,
   action,
@@ -86,11 +129,27 @@ export function PricingCard({
 }
 
 export type ProductInfoCardProps = Pick<CardProps, "asset"> & {
+  /**
+   * The product name
+   */
   heading: string;
+  /**
+   * The price excluding currency
+   */
   price: number;
+  /**
+   * The text labeling the action button
+   */
   action: string;
+  /**
+   * The action for the button
+   */
   onAction: () => void;
 };
+
+/**
+ * A card that demonstrates product information with a CTA
+ */
 export function ProductInfoCard({
   asset,
   heading,
@@ -113,12 +172,31 @@ export function ProductInfoCard({
 }
 
 export type TestimonialCardProps = {
+  /**
+   * The testimonial quote
+   */
   heading: string;
+  /**
+   * The name of the author
+   */
   name: string;
+  /**
+   * The username of the author
+   */
   username: string;
+  /**
+   * The initials of the author
+   */
   initials?: AvatarProps["initials"];
+  /**
+   * An image url for the author
+   */
   src?: AvatarProps["src"];
 };
+
+/**
+ * A card demonstrating a quotation from someone
+ */
 export function TestimonialCard({
   heading,
   name,

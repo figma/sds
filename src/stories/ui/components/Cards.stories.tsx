@@ -58,7 +58,7 @@ export const Default: StoryObj<
           />
         ) : undefined
       }
-      interaction={
+      interactionProps={
         _interaction
           ? {
               "aria-label": "Visit something nice about this card",
