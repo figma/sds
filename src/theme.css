@@ -362,6 +362,7 @@
   --sds-color-bg-positive-secondary-hover: var(--sds-color-green-300);
   --sds-color-bg-positive-tertiary: var(--sds-color-green-100);
   --sds-color-bg-positive-tertiary-hover: var(--sds-color-green-200);
+  --sds-color-bg-utilities-measurement: var(--sds-color-pink-200);
   --sds-color-bg-utilities-overlay: #000000b2;
   --sds-color-bg-utilities-overlay-soft: #00000080;
   --sds-color-bg-utilities-scrim: #000000cc;
@@ -381,6 +382,7 @@
   --sds-color-border-disabled-secondary: var(--sds-color-slate-400);
   --sds-color-border-positive-default: var(--sds-color-green-500);
   --sds-color-border-positive-secondary: var(--sds-color-green-600);
+  --sds-color-border-utilities-measurement: var(--sds-color-pink-400);
   --sds-color-border-warning-default: var(--sds-color-yellow-500);
   --sds-color-border-warning-secondary: var(--sds-color-yellow-800);
   --sds-color-icon-brand-default: var(--sds-color-slate-800);
@@ -436,6 +438,7 @@
   --sds-color-text-positive-onpositive-tertiary: var(--sds-color-green-800);
   --sds-color-text-positive-secondary: var(--sds-color-green-700);
   --sds-color-text-positive-tertiary: var(--sds-color-green-800);
+  --sds-color-text-utilities-text-onmeasurement: var(--sds-color-pink-800);
   --sds-color-text-utilities-text-onoverlay: var(--sds-color-white-1000);
   --sds-color-text-warning-default: var(--sds-color-yellow-900);
   --sds-color-text-warning-onwarning: var(--sds-color-yellow-1000);
@@ -472,6 +475,7 @@
   --sds-color-bg-positive-secondary-hover: var(--sds-color-green-300);
   --sds-color-bg-positive-tertiary: var(--sds-color-green-200);
   --sds-color-bg-positive-tertiary-hover: var(--sds-color-green-200);
+  --sds-color-bg-utilities-measurement: #ffffff;
   --sds-color-bg-utilities-overlay: #00000080;
   --sds-color-bg-utilities-overlay-soft: #00000080;
   --sds-color-bg-utilities-scrim: #000000cc;
@@ -491,6 +495,7 @@
   --sds-color-border-disabled-secondary: var(--sds-color-slate-400);
   --sds-color-border-positive-default: var(--sds-color-green-300);
   --sds-color-border-positive-secondary: var(--sds-color-green-600);
+  --sds-color-border-utilities-measurement: #ffffff;
   --sds-color-border-warning-default: var(--sds-color-yellow-500);
   --sds-color-border-warning-secondary: var(--sds-color-yellow-800);
   --sds-color-icon-brand-default: var(--sds-color-purple-800);
@@ -546,6 +551,7 @@
   --sds-color-text-positive-onpositive-tertiary: var(--sds-color-green-800);
   --sds-color-text-positive-secondary: var(--sds-color-green-700);
   --sds-color-text-positive-tertiary: var(--sds-color-green-800);
+  --sds-color-text-utilities-text-onmeasurement: #ffffff;
   --sds-color-text-utilities-text-onoverlay: var(--sds-color-white-1000);
   --sds-color-text-warning-default: var(--sds-color-yellow-900);
   --sds-color-text-warning-onwarning: var(--sds-color-yellow-1000);
@@ -582,6 +588,7 @@
   --sds-color-bg-positive-secondary-hover: var(--sds-color-green-300);
   --sds-color-bg-positive-tertiary: var(--sds-color-green-200);
   --sds-color-bg-positive-tertiary-hover: var(--sds-color-green-200);
+  --sds-color-bg-utilities-measurement: #ffffff;
   --sds-color-bg-utilities-overlay: #00000080;
   --sds-color-bg-utilities-overlay-soft: #00000080;
   --sds-color-bg-utilities-scrim: #000000cc;
@@ -601,6 +608,7 @@
   --sds-color-border-disabled-secondary: var(--sds-color-slate-400);
   --sds-color-border-positive-default: var(--sds-color-green-300);
   --sds-color-border-positive-secondary: var(--sds-color-green-600);
+  --sds-color-border-utilities-measurement: #ffffff;
   --sds-color-border-warning-default: var(--sds-color-yellow-500);
   --sds-color-border-warning-secondary: var(--sds-color-yellow-800);
   --sds-color-icon-brand-default: var(--sds-color-blue-800);
@@ -656,6 +664,7 @@
   --sds-color-text-positive-onpositive-tertiary: var(--sds-color-green-800);
   --sds-color-text-positive-secondary: var(--sds-color-green-700);
   --sds-color-text-positive-tertiary: var(--sds-color-green-800);
+  --sds-color-text-utilities-text-onmeasurement: #ffffff;
   --sds-color-text-utilities-text-onoverlay: var(--sds-color-white-1000);
   --sds-color-text-warning-default: var(--sds-color-yellow-900);
   --sds-color-text-warning-onwarning: var(--sds-color-yellow-1000);
@@ -692,6 +701,7 @@
   --sds-color-bg-positive-secondary-hover: var(--sds-color-green-300);
   --sds-color-bg-positive-tertiary: var(--sds-color-green-200);
   --sds-color-bg-positive-tertiary-hover: var(--sds-color-green-200);
+  --sds-color-bg-utilities-measurement: #ffffff;
   --sds-color-bg-utilities-overlay: #00000080;
   --sds-color-bg-utilities-overlay-soft: #00000080;
   --sds-color-bg-utilities-scrim: #000000cc;
@@ -711,6 +721,7 @@
   --sds-color-border-disabled-secondary: var(--sds-color-slate-400);
   --sds-color-border-positive-default: var(--sds-color-green-300);
   --sds-color-border-positive-secondary: var(--sds-color-green-600);
+  --sds-color-border-utilities-measurement: #ffffff;
   --sds-color-border-warning-default: var(--sds-color-yellow-500);
   --sds-color-border-warning-secondary: var(--sds-color-yellow-800);
   --sds-color-icon-brand-default: var(--sds-color-teal-800);
@@ -766,6 +777,7 @@
   --sds-color-text-positive-onpositive-tertiary: var(--sds-color-green-800);
   --sds-color-text-positive-secondary: var(--sds-color-green-700);
   --sds-color-text-positive-tertiary: var(--sds-color-green-800);
+  --sds-color-text-utilities-text-onmeasurement: #ffffff;
   --sds-color-text-utilities-text-onoverlay: var(--sds-color-white-1000);
   --sds-color-text-warning-default: var(--sds-color-yellow-900);
   --sds-color-text-warning-onwarning: var(--sds-color-yellow-1000);
@@ -803,6 +815,7 @@
     --sds-color-bg-positive-secondary-hover: var(--sds-color-green-1000);
     --sds-color-bg-positive-tertiary: var(--sds-color-green-900);
     --sds-color-bg-positive-tertiary-hover: var(--sds-color-green-900);
+    --sds-color-bg-utilities-measurement: var(--sds-color-pink-800);
     --sds-color-bg-utilities-overlay: #000000b2;
     --sds-color-bg-utilities-overlay-soft: #00000080;
     --sds-color-bg-utilities-scrim: #000000cc;
@@ -822,6 +835,7 @@
     --sds-color-border-disabled-secondary: var(--sds-color-grey-600);
     --sds-color-border-positive-default: var(--sds-color-green-600);
     --sds-color-border-positive-secondary: var(--sds-color-green-700);
+    --sds-color-border-utilities-measurement: var(--sds-color-pink-600);
     --sds-color-border-warning-default: var(--sds-color-yellow-900);
     --sds-color-border-warning-secondary: var(--sds-color-yellow-700);
     --sds-color-icon-brand-default: var(--sds-color-slate-300);
@@ -877,6 +891,7 @@
     --sds-color-text-positive-onpositive-tertiary: var(--sds-color-green-100);
     --sds-color-text-positive-secondary: var(--sds-color-green-500);
     --sds-color-text-positive-tertiary: var(--sds-color-green-600);
+    --sds-color-text-utilities-text-onmeasurement: var(--sds-color-pink-200);
     --sds-color-text-utilities-text-onoverlay: var(--sds-color-white-1000);
     --sds-color-text-warning-default: var(--sds-color-yellow-300);
     --sds-color-text-warning-onwarning: var(--sds-color-yellow-1000);
@@ -913,6 +928,7 @@
     --sds-color-bg-positive-secondary-hover: var(--sds-color-green-1000);
     --sds-color-bg-positive-tertiary: var(--sds-color-green-900);
     --sds-color-bg-positive-tertiary-hover: var(--sds-color-green-900);
+    --sds-color-bg-utilities-measurement: #ffffff;
     --sds-color-bg-utilities-overlay: #00000080;
     --sds-color-bg-utilities-overlay-soft: #00000080;
     --sds-color-bg-utilities-scrim: #000000cc;
@@ -932,6 +948,7 @@
     --sds-color-border-disabled-secondary: var(--sds-color-grey-600);
     --sds-color-border-positive-default: var(--sds-color-green-700);
     --sds-color-border-positive-secondary: var(--sds-color-green-600);
+    --sds-color-border-utilities-measurement: #ffffff;
     --sds-color-border-warning-default: var(--sds-color-yellow-900);
     --sds-color-border-warning-secondary: var(--sds-color-yellow-700);
     --sds-color-icon-brand-default: var(--sds-color-purple-300);
@@ -987,6 +1004,7 @@
     --sds-color-text-positive-onpositive-tertiary: var(--sds-color-green-100);
     --sds-color-text-positive-secondary: var(--sds-color-green-500);
     --sds-color-text-positive-tertiary: var(--sds-color-green-600);
+    --sds-color-text-utilities-text-onmeasurement: #ffffff;
     --sds-color-text-utilities-text-onoverlay: var(--sds-color-white-1000);
     --sds-color-text-warning-default: var(--sds-color-yellow-300);
     --sds-color-text-warning-onwarning: var(--sds-color-yellow-1000);
@@ -1023,6 +1041,7 @@
     --sds-color-bg-positive-secondary-hover: var(--sds-color-green-1000);
     --sds-color-bg-positive-tertiary: var(--sds-color-green-900);
     --sds-color-bg-positive-tertiary-hover: var(--sds-color-green-900);
+    --sds-color-bg-utilities-measurement: #ffffff;
     --sds-color-bg-utilities-overlay: #00000080;
     --sds-color-bg-utilities-overlay-soft: #00000080;
     --sds-color-bg-utilities-scrim: #000000cc;
@@ -1042,6 +1061,7 @@
     --sds-color-border-disabled-secondary: var(--sds-color-grey-600);
     --sds-color-border-positive-default: var(--sds-color-green-700);
     --sds-color-border-positive-secondary: var(--sds-color-green-600);
+    --sds-color-border-utilities-measurement: #ffffff;
     --sds-color-border-warning-default: var(--sds-color-yellow-900);
     --sds-color-border-warning-secondary: var(--sds-color-yellow-700);
     --sds-color-icon-brand-default: var(--sds-color-blue-300);
@@ -1097,6 +1117,7 @@
     --sds-color-text-positive-onpositive-tertiary: var(--sds-color-green-100);
     --sds-color-text-positive-secondary: var(--sds-color-green-500);
     --sds-color-text-positive-tertiary: var(--sds-color-green-600);
+    --sds-color-text-utilities-text-onmeasurement: #ffffff;
     --sds-color-text-utilities-text-onoverlay: var(--sds-color-white-1000);
     --sds-color-text-warning-default: var(--sds-color-yellow-300);
     --sds-color-text-warning-onwarning: var(--sds-color-yellow-1000);
@@ -1133,6 +1154,7 @@
     --sds-color-bg-positive-secondary-hover: var(--sds-color-green-1000);
     --sds-color-bg-positive-tertiary: var(--sds-color-green-900);
     --sds-color-bg-positive-tertiary-hover: var(--sds-color-green-900);
+    --sds-color-bg-utilities-measurement: #ffffff;
     --sds-color-bg-utilities-overlay: #00000080;
     --sds-color-bg-utilities-overlay-soft: #00000080;
     --sds-color-bg-utilities-scrim: #000000cc;
@@ -1152,6 +1174,7 @@
     --sds-color-border-disabled-secondary: var(--sds-color-grey-600);
     --sds-color-border-positive-default: var(--sds-color-green-700);
     --sds-color-border-positive-secondary: var(--sds-color-green-600);
+    --sds-color-border-utilities-measurement: #ffffff;
     --sds-color-border-warning-default: var(--sds-color-yellow-900);
     --sds-color-border-warning-secondary: var(--sds-color-yellow-700);
     --sds-color-icon-brand-default: var(--sds-color-teal-300);
@@ -1207,6 +1230,7 @@
     --sds-color-text-positive-onpositive-tertiary: var(--sds-color-green-100);
     --sds-color-text-positive-secondary: var(--sds-color-green-500);
     --sds-color-text-positive-tertiary: var(--sds-color-green-600);
+    --sds-color-text-utilities-text-onmeasurement: #ffffff;
     --sds-color-text-utilities-text-onoverlay: var(--sds-color-white-1000);
     --sds-color-text-warning-default: var(--sds-color-yellow-300);
     --sds-color-text-warning-onwarning: var(--sds-color-yellow-1000);
@@ -1413,6 +1437,10 @@
   --sds-font-utilities-component-notes-regular: normal var(--sds-typography-weight-regular) var(--sds-typography-scale-03) var(--sds-typography-family-mono);
   --sds-font-title-hero: normal var(--sds-typography-title-hero-weight) var(--sds-typography-title-hero-size) var(--sds-typography-title-hero-family);
   --sds-font-title-page: normal var(--sds-typography-title-page-weight) var(--sds-typography-title-page-size-md) var(--sds-typography-title-page-family);
-  --sds-effects-shadows-md: var(--sds-size-depth-none) var(--sds-size-depth-sm) var(--sds-size-depth-sm) var(--sds-size-depth-negative-xs) var(--sds-color-black-100), var(--sds-size-depth-none) var(--sds-size-depth-sm) var(--sds-size-depth-md) var(--sds-size-depth-negative-xs) var(--sds-color-black-200);
+  --sds-effects-shadows-xs: var(--sds-size-depth-none) var(--sds-size-depth-xs) var(--sds-size-depth-sm) var(--sds-size-depth-none) var(--sds-color-black-100);
   --sds-effects-shadows-sm: var(--sds-size-depth-none) var(--sds-size-depth-xs) var(--sds-size-depth-sm) var(--sds-size-depth-none) var(--sds-color-black-100), var(--sds-size-depth-none) var(--sds-size-depth-xs) var(--sds-size-depth-sm) var(--sds-size-depth-none) var(--sds-color-black-200);
+  --sds-effects-shadows-md: var(--sds-size-depth-none) var(--sds-size-depth-sm) var(--sds-size-depth-sm) var(--sds-size-depth-negative-xs) var(--sds-color-black-100), var(--sds-size-depth-none) var(--sds-size-depth-sm) var(--sds-size-depth-md) var(--sds-size-depth-negative-xs) var(--sds-color-black-200);
+  --sds-effects-shadows-lg: var(--sds-size-depth-none) var(--sds-size-depth-sm) var(--sds-size-depth-md) var(--sds-size-depth-negative-sm) var(--sds-color-black-100), var(--sds-size-depth-none) var(--sds-size-depth-lg) var(--sds-size-depth-xl) var(--sds-size-depth-negative-sm) var(--sds-color-black-200);
+  --sds-effects-shadows-xl: var(--sds-size-depth-none) var(--sds-size-depth-sm) var(--sds-size-depth-md) var(--sds-size-depth-negative-sm) var(--sds-color-black-100), var(--sds-size-depth-none) var(--sds-size-depth-lg) var(--sds-size-depth-lg) var(--sds-size-depth-negative-md) var(--sds-color-black-200);
+  --sds-effects-shadows-xxl: var(--sds-size-depth-none) var(--sds-size-depth-lg) var(--sds-size-depth-xl) var(--sds-size-depth-negative-md) var(--sds-color-black-400);
 }

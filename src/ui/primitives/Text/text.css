@@ -14,9 +14,13 @@
 .text-body-link {
   --border-radius: var(--sds-size-radius-xs);
   color: inherit;
+  cursor: pointer;
   font: var(--sds-font-body-link);
-  text-decoration: underline;
   position: relative;
+  /* Override */
+  &.link {
+    text-decoration: underline;
+  }
   &:focus-visible {
     outline: none;
     --offset: calc(var(--sds-responsive-border-width) * 2);

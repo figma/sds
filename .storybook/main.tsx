@@ -5,6 +5,7 @@ const config: StorybookConfig = {
   stories: [
     "../src/stories/**/*.mdx",
     "../src/stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    // "../scripts/preview/Figma.stories.tsx", // Ignoring for now
   ],
   addons: [
     "@storybook/addon-links",
