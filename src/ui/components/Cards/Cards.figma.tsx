@@ -13,6 +13,7 @@ figma.connect(Card, "<FIGMA_URL_CARD>", {
     actions: figma.children("Button Group"),
     variant: figma.enum("Variant", {
       Stroke: "stroke",
+      Padded: "padded",
     }),
   },
   example: ({ actions, variant, heading, body, asset, direction }) => (

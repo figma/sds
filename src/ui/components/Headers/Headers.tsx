@@ -1,11 +1,10 @@
 import clsx from "clsx";
-import { IconMenu, IconX } from "icons";
+import { IconChevronDown, IconMenu, IconX } from "icons";
 import { AuthenticationContext } from "providers";
 import { useContext, useState } from "react";
 import {
   Avatar,
   AvatarBlock,
-  AvatarButton,
   Button,
   ButtonGroup,
   Description,
@@ -25,9 +24,10 @@ import {
   Section,
   type SectionProps,
 } from "ui";
+import { AnchorOrButton } from "ui/utils/AnchorOrButton";
 import "./headers.css";
 
-function HeaderNavigation() {
+export function HeaderAuth() {
   const { currentUser, login, logout } = useContext(AuthenticationContext);
   const [open, setOpen] = useState(false);
 
@@ -88,10 +88,13 @@ function HeaderNavigation() {
             </Navigation>
             {currentUser ? (
               <MenuTrigger>
-                <AvatarButton
-                  src={currentUser.avatar}
-                  initials={currentUser.name.charAt(0)}
-                />
+                <AnchorOrButton className={clsx("header-auth-avatar-button")}>
+                  <Avatar
+                    src={currentUser.avatar}
+                    initials={currentUser.name.charAt(0)}
+                  />
+                  <IconChevronDown />
+                </AnchorOrButton>
                 <MenuPopover placement="bottom right">
                   <Menu>
                     <MenuItem>
@@ -162,8 +165,8 @@ function HeaderNavigation() {
   );
 }
 
-export type StandardHeaderProps = Omit<SectionProps, "variant" | "padding">;
-export function StandardHeader({ className, ...props }: StandardHeaderProps) {
+export type HeaderProps = Omit<SectionProps, "variant" | "padding">;
+export function Header({ className, ...props }: HeaderProps) {
   return (
     <Section
       className="header"
@@ -178,7 +181,7 @@ export function StandardHeader({ className, ...props }: StandardHeaderProps) {
         </FlexItem>
         <FlexItem size="major">
           <Flex gap="xl" alignPrimary="end" alignSecondary="center">
-            <HeaderNavigation />
+            <HeaderAuth />
           </Flex>
         </FlexItem>
       </Flex>
@@ -200,7 +203,7 @@ export function VerticalHeader({ className, ...props }: VerticalHeaderProps) {
           <Logo />
         </Flex>
         <Flex alignPrimary="center">
-          <HeaderNavigation />
+          <HeaderAuth />
         </Flex>
       </Flex>
     </Section>

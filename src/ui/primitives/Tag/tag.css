@@ -26,9 +26,6 @@
   cursor: pointer;
   display: flex;
   padding: 0;
-  > .icon {
-    --icon-color: var(--tag-icon);
-  }
 }
 
 .tag {
@@ -42,6 +39,10 @@
   justify-content: center;
   line-height: 1;
   padding: var(--sds-size-padding-sm) var(--sds-size-padding-sm);
+
+  .icon {
+    --icon-color: var(--tag-icon);
+  }
 }
 
 .tag-scheme-default {
@@ -171,16 +172,16 @@
 
 .tag-toggle {
   --tag-color: var(--sds-color-text-brand-tertiary);
-  --tag-background-color: transparent;
-  --tag-border-color: var(--sds-color-border-brand-default);
-  box-shadow: inset 0 0 0 var(--sds-responsive-border-width)
-    var(--tag-border-color);
+  --tag-icon: var(--sds-color-icon-brand-tertiary);
+  --tag-background-color: var(--sds-color-bg-brand-tertiary);
+  --border-radius: var(--sds-size-radius-sm);
   cursor: pointer;
+  gap: var(--sds-size-gap-sm);
   outline: none;
   &[data-selected] {
     --tag-color: var(--sds-color-text-brand-onbrand);
+    --tag-icon: var(--sds-color-icon-brand-onbrand);
     --tag-background-color: var(--sds-color-bg-brand-default);
-    --tag-border-color: transparent;
   }
 }
 

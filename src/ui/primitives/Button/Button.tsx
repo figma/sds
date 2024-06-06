@@ -6,14 +6,12 @@ import {
 } from "ui/utils/AnchorOrButton";
 import "./button.css";
 
-export type ButtonProps = Omit<ButtonBaseProps, "scheme">;
+export type ButtonProps = ButtonBaseProps;
 export const Button = React.forwardRef(function Button(
   { className, ...props }: ButtonProps,
   ref: React.ForwardedRef<HTMLElement>,
 ) {
-  return (
-    <ButtonBase {...props} scheme="default" className={className} ref={ref} />
-  );
+  return <ButtonBase {...props} className={className} ref={ref} />;
 });
 
 export type DestructiveButtonProps = Omit<ButtonBaseProps, "scheme">;
@@ -34,7 +32,7 @@ export const DestructiveButton = React.forwardRef(function Button(
 
 type ButtonBaseProps = {
   type?: ComponentPropsWithoutRef<"button">["type"];
-  scheme?: "default" | "danger";
+  scheme?: "primary" | "danger" | "neutral";
   size?: "sm" | "md";
   variant?: "default" | "secondary" | "stroke" | "subtle";
 } & AnchorOrButtonProps;
@@ -44,7 +42,7 @@ const ButtonBase = React.forwardRef(function Button(
     className,
     size = "md",
     variant = "default",
-    scheme = "default",
+    scheme = "primary",
     ...props
   }: ButtonBaseProps,
   ref: React.ForwardedRef<HTMLElement>,

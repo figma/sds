@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { IconAirplay, IconCheck } from "icons";
 import { Flex } from "ui/layout";
 import {
   Label,
@@ -102,11 +103,13 @@ export const TagToggleDefault: StoryObj<typeof TagToggleGroup> = {
       <TagToggleGroup defaultSelectedKeys={["default"]} {...args}>
         <Label>Hello there</Label>
         <TagToggleList>
-          <TagToggle id="default">Default</TagToggle>
-          <TagToggle>Danger</TagToggle>
-          <TagToggle>Positive</TagToggle>
-          <TagToggle>Warning</TagToggle>
-          <TagToggle>Neutral</TagToggle>
+          <TagToggle id="default" iconStart={<IconCheck />}>
+            Default
+          </TagToggle>
+          <TagToggle iconStart={<IconAirplay />}>Hello</TagToggle>
+          <TagToggle>Love</TagToggle>
+          <TagToggle>This</TagToggle>
+          <TagToggle>Story</TagToggle>
         </TagToggleList>
       </TagToggleGroup>
     </Flex>

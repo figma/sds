@@ -5,7 +5,7 @@
   gap: var(--sds-size-gap-sm);
 }
 .navigation-item {
-  --border-radius: var(--sds-size-radius-xs);
+  --border-radius: var(--sds-size-radius-sm);
   background: transparent;
   border-radius: var(--border-radius);
   color: var(--sds-color-text-default-default);
@@ -15,7 +15,7 @@
 
   &[data-selected] {
     color: var(--sds-color-text-brand-onbrand-secondary);
-    background: var(--sds-color-bg-brand-secondary);
+    background: var(--sds-color-bg-brand-tertiary);
   }
 
   &[data-focus-visible] {

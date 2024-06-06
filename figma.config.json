@@ -1,6 +1,6 @@
 {
   "codeConnect": {
-    "include": ["src/ui/**", "src/icons/**"],
+    "include": ["src/ui/**"],
     "exclude": [],
     "react": {
       "importPaths": {
@@ -14,7 +14,6 @@
     "documentUrlSubstitutions": {
       "<FIGMA_URL_ACCORDION>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=7753-4779",
       "<FIGMA_URL_ACCORDION_ITEM>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=7753-4634",
-      "<FIGMA_URL_ALERT>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=2093-2151",
       "<FIGMA_URL_AVATAR>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:1103",
       "<FIGMA_URL_AVATAR_BLOCK>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=2010-15581",
       "<FIGMA_URL_AVATAR_GROUP>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=56-15608",
@@ -31,13 +30,15 @@
       "<FIGMA_URL_ERROR_MESSAGE>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:3086",
       "<FIGMA_URL_FIELD_GROUP>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:3121",
       "<FIGMA_URL_FIELDSET>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762-3128",
+      "<FIGMA_URL_FOOTER>": "https://www.figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=7717-4142",
+      "<FIGMA_URL_HEADER>": "https://www.figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=2287-22651",
+      "<FIGMA_URL_HEADER_AUTH>": "https://www.figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=18-9389",
       "<FIGMA_URL_ICON_BUTTON>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=11-11508",
       "<FIGMA_URL_IMAGE>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=159-8617",
       "<FIGMA_URL_INPUT>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:850",
       "<FIGMA_URL_INPUT_FIELD>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=2136-2263",
       "<FIGMA_URL_LOGO>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=2159-5053",
       "<FIGMA_URL_MENU_MENU>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:720",
-      "<FIGMA_URL_MENU_SECTION>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:733",
       "<FIGMA_URL_MENU_HEADING>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:760",
       "<FIGMA_URL_MENU_DESCRIPTION>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:737",
       "<FIGMA_URL_MENU_LABEL>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:741",
@@ -47,6 +48,7 @@
       "<FIGMA_URL_MENU_SEPARATOR>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:731",
       "<FIGMA_URL_NAVIGATION>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=2194-14984",
       "<FIGMA_URL_NAVIGATION_ITEM>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=7768-19970",
+      "<FIGMA_URL_NOTIFICATION>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=2093-2151",
       "<FIGMA_URL_PAGINATION_PAGE>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:890",
       "<FIGMA_URL_PAGINATION_GAP>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:868",
       "<FIGMA_URL_PAGINATION_PREVIOUS>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=9762:880",

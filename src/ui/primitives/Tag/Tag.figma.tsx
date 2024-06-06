@@ -29,8 +29,13 @@ figma.connect(Tag, "<FIGMA_URL_TAG>", {
 figma.connect(TagToggle, "<FIGMA_URL_TAG_TOGGLE>", {
   props: {
     label: figma.string("Label"),
+    iconStart: figma.instance("Icon"),
   },
-  example: ({ label }) => <TagToggle id={label}>{label}</TagToggle>,
+  example: ({ label, iconStart }) => (
+    <TagToggle id={label} iconStart={iconStart}>
+      {label}
+    </TagToggle>
+  ),
 });
 
 figma.connect(TagToggleGroup, "<FIGMA_URL_TAG_TOGGLE_GROUP>", {

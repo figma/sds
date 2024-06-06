@@ -11,8 +11,11 @@ const sharedProps = {
     true: figma.instance("Icon End"),
     false: undefined,
   }),
+  scheme: figma.enum("Scheme", {
+    Neutral: "neutral",
+  }),
   size: figma.enum("Size", {
-    sm: "sm",
+    Small: "sm",
   }),
   variant: figma.enum("Variant", {
     Secondary: "secondary",
@@ -25,14 +28,20 @@ const sharedProps = {
 };
 
 figma.connect(Button, "<FIGMA_URL_BUTTON>", {
-  variant: {
-    Scheme: "Default",
-  },
   props: sharedProps,
-  example: ({ isDisabled, label, size, variant, iconEnd, iconStart }) => (
+  example: ({
+    isDisabled,
+    label,
+    scheme,
+    size,
+    variant,
+    iconEnd,
+    iconStart,
+  }) => (
     <Button
       onPress={() => {}}
       size={size}
+      scheme={scheme}
       variant={variant}
       isDisabled={isDisabled}
     >

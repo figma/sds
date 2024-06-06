@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { IconX } from "icons";
-import React from "react";
+import React, { ReactNode } from "react";
 import {
   Button as RACButton,
   PressEvent as RACPressEvent,
@@ -74,10 +74,22 @@ export const TagButton = React.forwardRef(function Tag(
   return <AnchorOrButton {...props} className={classNames} ref={ref} />;
 });
 
-export type TagToggleProps = RACTagProps;
-export function TagToggle({ className, ...props }: TagToggleProps) {
+export type TagToggleProps = RACTagProps & { iconStart?: ReactNode };
+export function TagToggle({
+  children,
+  className,
+  iconStart,
+  ...props
+}: TagToggleProps) {
   const classNames = clsx(className, "tag", "tag-toggle");
-  return <RACTag className={classNames} {...props} />;
+  return (
+    <RACTag className={classNames} {...props}>
+      <>
+        {iconStart}
+        {children}
+      </>
+    </RACTag>
+  );
 }
 
 export type TagToggleGroupProps = RACTagGroupProps;

@@ -29,8 +29,8 @@ figma.connect(Avatar, "<FIGMA_URL_AVATAR>", {
       Initials: figma.string("Initials"),
     }),
     size: figma.enum("Size", {
-      lg: "lg",
-      sm: "sm",
+      Large: "lg",
+      Small: "sm",
     }),
     src: figma.enum("Type", {
       Image: "https://picsum.photos/80",

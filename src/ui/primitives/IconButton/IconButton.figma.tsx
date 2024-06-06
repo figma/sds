@@ -6,8 +6,11 @@ const sharedProps = {
   isDisabled: figma.enum("State", {
     Disabled: true,
   }),
+  scheme: figma.enum("Scheme", {
+    Neutral: "neutral",
+  }),
   size: figma.enum("Size", {
-    sm: "sm",
+    Small: "sm",
   }),
   variant: figma.enum("Variant", {
     Secondary: "secondary",
@@ -17,14 +20,12 @@ const sharedProps = {
 };
 
 figma.connect(IconButton, "<FIGMA_URL_ICON_BUTTON>", {
-  variant: {
-    Scheme: "Default",
-  },
   props: sharedProps,
-  example: ({ isDisabled, icon, size, variant }) => (
+  example: ({ isDisabled, scheme, icon, size, variant }) => (
     <IconButton
       aria-label="Write a nice description of the action."
       onPress={() => {}}
+      scheme={scheme}
       size={size}
       variant={variant}
       isDisabled={isDisabled}

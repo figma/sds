@@ -6,7 +6,6 @@ import {
   MenuHeading,
   MenuItem,
   MenuLabel,
-  MenuSection,
   MenuSeparator,
   MenuShortcut,
 } from "./Menu";
@@ -16,17 +15,11 @@ figma.connect(Menu, "<FIGMA_URL_MENU_MENU>", {
     children: figma.children([
       "Menu Header",
       "Menu Separator",
-      "Menu Heading",
       "Menu Section",
       "Menu Item",
     ]),
   },
   example: ({ children }) => <Menu>{children}</Menu>,
-});
-
-figma.connect(MenuSection, "<FIGMA_URL_MENU_SECTION>", {
-  props: { children: figma.children("Menu Item") },
-  example: ({ children }) => <MenuSection>{children}</MenuSection>,
 });
 
 figma.connect(MenuHeading, "<FIGMA_URL_MENU_HEADING>", {

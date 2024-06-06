@@ -1,23 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { ComponentProps } from "react";
 import {
-  Alert,
-  AlertActions,
-  AlertBody,
-  AlertTitle,
   Button,
   ButtonGroup,
+  Notification,
+  NotificationActions,
+  NotificationBody,
+  NotificationTitle,
 } from "ui/primitives";
 
-const meta: Meta<typeof Alert> = {
-  component: Alert,
-  title: "UI Primitives/Alert",
+const meta: Meta<typeof Notification> = {
+  component: Notification,
+  title: "UI Primitives/Notification",
   parameters: { layout: "centered" },
 };
 export default meta;
 
 export const Default: StoryObj<
-  Omit<ComponentProps<typeof Alert>, "scheme"> & {
+  Omit<ComponentProps<typeof Notification>, "scheme"> & {
     "[type]": "message" | "alert";
   }
 > = {
@@ -28,17 +28,17 @@ export const Default: StoryObj<
   render: ({ "[type]": _type, ...args }) => {
     const scheme = _type === "message" ? "default" : "danger";
     return (
-      <Alert {...args} scheme={scheme}>
-        <AlertTitle>Alert Title</AlertTitle>
-        <AlertBody>Hello there! This is a message</AlertBody>
+      <Notification {...args} scheme={scheme}>
+        <NotificationTitle>Notification Title</NotificationTitle>
+        <NotificationBody>Hello there! This is a message</NotificationBody>
         {_type === "message" && (
-          <AlertActions>
+          <NotificationActions>
             <ButtonGroup>
               <Button size="sm">Hello</Button>
             </ButtonGroup>
-          </AlertActions>
+          </NotificationActions>
         )}
-      </Alert>
+      </Notification>
     );
   },
 };

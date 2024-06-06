@@ -7,11 +7,11 @@
   background: var(--checkbox-background);
   box-shadow: inset 0 0 0 var(--sds-responsive-border-width)
     var(--checkbox-border);
+  box-sizing: border-box;
   border-radius: var(--checkbox-border-radius);
   display: flex;
   height: var(--sds-size-gap-lg);
   justify-content: center;
-  padding: var(--sds-responsive-border-width);
   position: relative;
   width: var(--sds-size-gap-lg);
   > .icon {

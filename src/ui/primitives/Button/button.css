@@ -57,7 +57,7 @@
   }
 }
 
-.button-scheme-default {
+.button-scheme-primary {
   &.button-variant-default {
     --button-background-color: var(--sds-color-bg-brand-default);
     --button-border-color: transparent;

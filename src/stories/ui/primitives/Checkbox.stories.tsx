@@ -57,7 +57,7 @@ export const Indeterminate: Story = {
     const options = ["One with a very long name indeed.", "Two", "Three"];
     const [selected, setSelected] = useState<string[]>([]);
     return (
-      <Flex direction="column">
+      <Flex direction="column" gap="sm">
         <CheckboxField
           isSelected={selected.length > 0}
           isIndeterminate={selected.length !== options.length}
