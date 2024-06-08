@@ -17,7 +17,7 @@
   --table-cell-padding-y: var(--sds-size-padding-sm);
 }
 .table-grid {
-  --table-cell-border-right-thickness: var(--sds-responsive-border-width);
+  --table-cell-border-right-thickness: var(--sds-size-border-width);
 }
 .table-striped {
   .table-row:nth-child(even) {
@@ -38,7 +38,7 @@
 .table-cell,
 .table-column {
   border-left-width: 0;
-  border-bottom: var(--sds-responsive-border-width) solid
+  border-bottom: var(--sds-size-border-width) solid
     var(--sds-color-border-default-default);
   padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
   text-align: var(--cell-text-align);

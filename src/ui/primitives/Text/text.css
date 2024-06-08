@@ -23,7 +23,7 @@
   }
   &:focus-visible {
     outline: none;
-    --offset: calc(var(--sds-responsive-border-width) * 2);
+    --offset: calc(var(--sds-size-border-width) * 2);
     &::before {
       content: "";
       border-radius: calc(var(--border-radius) + var(--offset));

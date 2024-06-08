@@ -9,8 +9,8 @@ const TOKEN_PREFIX = "sds-";
 const SKIP_REST_API = process.argv.includes("--skip-rest-api");
 const WRITE_DIR = "../../src";
 
-const COLOR_THEMES = ["light", "purple_light", "blue_light", "teal_light"];
-const COLOR_THEMES_DARK = ["dark", "purple_dark", "blue_dark", "teal_dark"];
+const COLOR_THEMES = ["sds_light"];
+const COLOR_THEMES_DARK = ["sds_dark"];
 // stripped from mode names above in theme class names
 const COLOR_THEME_LIGHT_REMOVE = "_light";
 const COLOR_THEME_DARK_REMOVE = "_dark";
@@ -468,6 +468,7 @@ async function processStyleJSON(data, variablesLookup) {
       );
     } else if (type === "EFFECT") {
       const { name, effects } = style;
+      const safeName = sanitizeName(name);
       const shadows = [];
       const filters = [];
       const backdropFilters = [];
@@ -486,17 +487,17 @@ async function processStyleJSON(data, variablesLookup) {
       });
       if (shadows.length) {
         effectDefs.push(
-          `--${TOKEN_PREFIX}effects-shadows-${name}: ${shadows.join(", ")};`,
+          `--${TOKEN_PREFIX}effects-shadows-${safeName}: ${shadows.join(", ")};`,
         );
       }
       if (filters.length) {
         effectDefs.push(
-          `--${TOKEN_PREFIX}effects-filter-${name}: ${filters[0]};`,
+          `--${TOKEN_PREFIX}effects-filter-${safeName}: ${filters[0]};`,
         );
       }
       if (backdropFilters.length) {
         effectDefs.push(
-          `--${TOKEN_PREFIX}effects-backdrop-filter-${name}: ${backdropFilters[0]};`,
+          `--${TOKEN_PREFIX}effects-backdrop-filter-${safeName}: ${backdropFilters[0]};`,
         );
       }
     }
@@ -521,6 +522,15 @@ async function processStyleJSON(data, variablesLookup) {
       return variable ? `var(${variable.property})` : item;
     }
     return item;
+  }
+
+  function sanitizeName(name) {
+    return name
+      .replace(/[^a-zA-Z0-9 ]/g, " ")
+      .replace(/^ +/, "")
+      .replace(/ +$/, "")
+      .replace(/ +/g, "-")
+      .toLowerCase();
   }
 
   function formatEffect({ type, ...effect }) {

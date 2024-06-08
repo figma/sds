@@ -207,6 +207,10 @@ function variablesRESTResponseToVariablesJSON(response, nameSpace) {
   ) {
     if (value.type === "VARIABLE_ALIAS") {
       const variable = variables[value.id];
+      if (!variable) {
+        console.log(value);
+        return "UNKNOWN";
+      }
       const prefix = collectionIdToKeyMap[variable.variableCollectionId];
       return `{${prefix}.${variable.name.replace(/\//g, ".")}}`;
     }

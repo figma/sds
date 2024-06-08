@@ -1,7 +1,7 @@
 .button {
   --border-radius: var(--sds-size-radius-sm);
   align-items: center;
-  box-shadow: inset 0 0 0 var(--sds-responsive-border-width)
+  box-shadow: inset 0 0 0 var(--sds-size-border-width)
     var(--button-border-color);
   border-radius: var(--border-radius);
   background: var(--button-background-color);
@@ -21,7 +21,7 @@
   }
 }
 
-.button-size-sm {
+.button-size-small {
   --button-font: var(--sds-font-body-small);
   --button-padding-x: var(--sds-size-padding-sm);
   --button-padding-y: var(--sds-size-padding-sm);
@@ -31,7 +31,7 @@
   }
 }
 
-.button-size-md {
+.button-size-medium {
   --button-font: var(--sds-font-body);
   --button-padding-x: var(--sds-size-padding-md);
   --button-padding-y: var(--sds-size-padding-md);
@@ -43,7 +43,7 @@
 
 .button[data-focus-visible] {
   outline: none;
-  --offset: calc(var(--sds-responsive-border-width) * 2);
+  --offset: calc(var(--sds-size-border-width) * 2);
   &::before {
     content: "";
     border-radius: calc(var(--border-radius) + var(--offset));
@@ -57,79 +57,49 @@
   }
 }
 
-.button-scheme-primary {
-  &.button-variant-default {
-    --button-background-color: var(--sds-color-bg-brand-default);
-    --button-border-color: transparent;
-    --button-color: var(--sds-color-text-brand-onbrand);
-    &[data-hovered]:not([data-disabled]) {
-      --button-background-color: var(--sds-color-bg-brand-hover);
-      --button-border-color: var(--sds-color-border-brand-default);
-    }
-  }
-  &.button-variant-secondary {
-    --button-background-color: var(--sds-color-bg-brand-secondary);
-    --button-border-color: transparent;
-    --button-color: var(--sds-color-text-brand-onbrand-secondary);
-    &[data-hovered]:not([data-disabled]) {
-      --button-background-color: var(--sds-color-bg-brand-secondary-hover);
-      --button-border-color: var(--sds-color-border-brand-secondary-hover);
-    }
-  }
-  &.button-variant-stroke {
-    --button-background-color: transparent;
+.button-variant-primary {
+  --button-background-color: var(--sds-color-bg-brand-default);
+  --button-border-color: var(--sds-color-border-brand-default);
+  --button-color: var(--sds-color-text-brand-onbrand);
+  &[data-hovered]:not([data-disabled]) {
+    --button-background-color: var(--sds-color-bg-brand-hover);
     --button-border-color: var(--sds-color-border-brand-default);
-    --button-color: var(--sds-color-text-brand-default);
-    &[data-hovered]:not([data-disabled]) {
-      --button-background-color: var(--sds-color-bg-brand-tertiary);
-      --button-border-color: var(--sds-color-border-brand-default);
-    }
   }
-  &.button-variant-subtle {
-    --button-background-color: transparent;
-    --button-border-color: transparent;
-    --button-color: var(--sds-color-text-brand-default);
-    &[data-hovered]:not([data-disabled]) {
-      --button-background-color: var(--sds-color-bg-brand-tertiary);
-    }
+}
+.button-variant-neutral {
+  --button-background-color: var(--sds-color-bg-default-secondary);
+  --button-border-color: var(--sds-color-border-default-default);
+  --button-color: var(--sds-color-text-default-default);
+  &[data-hovered]:not([data-disabled]) {
+    --button-background-color: var(--sds-color-bg-default-secondary-hover);
+  }
+}
+.button-variant-subtle {
+  --button-background-color: transparent;
+  --button-border-color: transparent;
+  --button-color: var(--sds-color-text-brand-default);
+  &[data-hovered]:not([data-disabled]) {
+    --button-background-color: var(--sds-color-bg-default-default-hover);
+    --button-border-color: var(--sds-color-border-default-default);
   }
 }
 
-.button-scheme-danger {
-  &.button-variant-default {
-    --button-background-color: var(--sds-color-bg-danger-default);
-    --button-border-color: transparent;
-    --button-color: var(--sds-color-text-danger-ondanger);
-    &[data-hovered]:not([data-disabled]) {
-      --button-background-color: var(--sds-color-bg-danger-hover);
-      --button-border-color: var(--sds-color-border-danger-default);
-    }
-  }
-  &.button-variant-secondary {
-    --button-background-color: var(--sds-color-bg-danger-secondary);
-    --button-border-color: transparent;
-    --button-color: var(--sds-color-text-danger-secondary);
-    &[data-hovered]:not([data-disabled]) {
-      --button-background-color: var(--sds-color-bg-danger-secondary-hover);
-      --button-border-color: var(--sds-color-border-danger-secondary-hover);
-    }
-  }
-  &.button-variant-stroke {
-    --button-background-color: transparent;
+.button-variant-danger-primary {
+  --button-background-color: var(--sds-color-bg-danger-default);
+  --button-border-color: var(--sds-color-border-danger-secondary);
+  --button-color: var(--sds-color-text-danger-ondanger);
+  &[data-hovered]:not([data-disabled]) {
+    --button-background-color: var(--sds-color-bg-danger-hover);
     --button-border-color: var(--sds-color-border-danger-default);
-    --button-color: var(--sds-color-text-danger-default);
-    &[data-hovered]:not([data-disabled]) {
-      --button-background-color: var(--sds-color-bg-danger-secondary);
-      --button-border-color: var(--sds-color-border-danger-default);
-    }
   }
-  &.button-variant-subtle {
-    --button-background-color: transparent;
-    --button-border-color: transparent;
-    --button-color: var(--sds-color-text-danger-default);
-    &[data-hovered]:not([data-disabled]) {
-      --button-background-color: var(--sds-color-bg-danger-secondary);
-    }
+}
+.button-variant-danger-subtle {
+  --button-background-color: transparent;
+  --button-border-color: transparent;
+  --button-color: var(--sds-color-text-danger-default);
+  &[data-hovered]:not([data-disabled]) {
+    --button-background-color: var(--sds-color-bg-danger-tertiary-hover);
+    --button-border-color: var(--sds-color-border-danger-default);
   }
 }
 
@@ -139,14 +109,6 @@
   --button-background-color: var(--sds-color-bg-disabled-default);
   --button-border-color: var(--sds-color-border-disabled-default);
   --button-color: var(--sds-color-text-disabled-default);
-
-  &.button-variant-stroke {
-    --button-border-color: var(--sds-color-border-disabled-default);
-  }
-  &.button-variant-subtle {
-    --button-background-color: var(--sds-color-bg-default-default);
-    --button-border-color: transparent;
-  }
 }
 
 .button-group {
@@ -166,6 +128,12 @@
   &.button-group-align-justify {
     > .button {
       flex: 1;
+    }
+  }
+  &.button-group-align-stack {
+    flex-direction: column;
+    > .button {
+      width: 100%;
     }
   }
 }

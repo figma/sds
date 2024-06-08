@@ -3,7 +3,7 @@
   align-items: center;
   background-color: var(--notification-background-color);
   border-radius: var(--border-radius);
-  box-shadow: inset 0 0 0 var(--sds-responsive-border-width)
+  box-shadow: inset 0 0 0 var(--sds-size-border-width)
     var(--notification-border-color);
   color: var(--notification-color);
   display: grid;

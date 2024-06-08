@@ -6,7 +6,7 @@
   background: var(--sds-color-bg-default-default);
   border-radius: var(--sds-size-radius-md);
   box-shadow:
-    inset 0 0 0 var(--sds-responsive-border-width)
+    inset 0 0 0 var(--sds-size-border-width)
       var(--sds-color-border-default-default),
     var(--sds-effects-shadows-md);
   outline: none;
@@ -30,7 +30,7 @@
 .menu-separator {
   background-color: var(--sds-color-border-default-default);
   display: block;
-  height: var(--sds-responsive-border-width);
+  height: var(--sds-size-border-width);
   margin: var(--sds-size-padding-xs) var(--sds-size-padding-lg);
 }
 

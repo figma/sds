@@ -1,6 +1,57 @@
 [
   {
     "type": "TEXT",
+    "name": "Body Strong",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10180"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10179"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:14844"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Body Base",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10180"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10179"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10181"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Input",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:13415"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:13413"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:13417"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
     "name": ".Utilities/Component notes/Regular",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
@@ -17,57 +68,25 @@
     "fontStyle": "normal"
   },
   {
-    "key": "844cb38efcc62bad149e9f8e82b049aafa7a9f14",
-    "name": "xs",
-    "styleType": "EFFECT",
-    "remote": false,
-    "description": "",
-    "type": "EFFECT",
-    "effects": [
-      {
-        "type": "DROP_SHADOW",
-        "visible": true,
-        "color": {
-          "r": 0.0470588244497776,
-          "g": 0.0470588244497776,
-          "b": 0.05098039284348488,
-          "a": 0.05000000074505806
-        },
-        "blendMode": "NORMAL",
-        "offset": {
-          "x": 0,
-          "y": 1
-        },
-        "radius": 4,
-        "showShadowBehindNode": false,
-        "boundVariables": {
-          "radius": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11282"
-          },
-          "spread": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11280"
-          },
-          "color": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11234"
-          },
-          "offsetX": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11280"
-          },
-          "offsetY": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11281"
-          }
-        }
-      }
-    ]
+    "type": "TEXT",
+    "name": "Subheading",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:2103:22308"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:2103:22306"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:2103:22310"
+    },
+    "fontStyle": "normal"
   },
   {
     "key": "2d01cd4dd5f75236392138f6c1e10e313e217abf",
-    "name": "sm",
+    "name": "Drop Shadow/200",
     "styleType": "EFFECT",
     "remote": false,
     "description": "",
@@ -154,8 +173,57 @@
     ]
   },
   {
+    "key": "844cb38efcc62bad149e9f8e82b049aafa7a9f14",
+    "name": "Drop Shadow/100",
+    "styleType": "EFFECT",
+    "remote": false,
+    "description": "",
+    "type": "EFFECT",
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.05098039284348488,
+          "a": 0.05000000074505806
+        },
+        "blendMode": "NORMAL",
+        "offset": {
+          "x": 0,
+          "y": 1
+        },
+        "radius": 4,
+        "showShadowBehindNode": false,
+        "boundVariables": {
+          "radius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11282"
+          },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11234"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
+          "offsetY": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11281"
+          }
+        }
+      }
+    ]
+  },
+  {
     "key": "41bfc984ba768095400f8a022edd454968162c94",
-    "name": "md",
+    "name": "Drop Shadow/300",
     "styleType": "EFFECT",
     "remote": false,
     "description": "",
@@ -245,7 +313,7 @@
   },
   {
     "key": "22a5720258ee85f4db18164a837c72af9bf36211",
-    "name": "lg",
+    "name": "Drop Shadow/400",
     "styleType": "EFFECT",
     "remote": false,
     "description": "",
@@ -335,7 +403,7 @@
   },
   {
     "key": "d61d50a6c230a64bafa23f076ca12209d159d3f1",
-    "name": "xl",
+    "name": "Drop Shadow/500",
     "styleType": "EFFECT",
     "remote": false,
     "description": "",
@@ -425,7 +493,7 @@
   },
   {
     "key": "a3f45659b320637d1041a0719886b10bd4ca4b74",
-    "name": "xxl",
+    "name": "Drop Shadow/600",
     "styleType": "EFFECT",
     "remote": false,
     "description": "",
@@ -472,23 +540,6 @@
         }
       }
     ]
-  },
-  {
-    "type": "TEXT",
-    "name": "Input",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:13415"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:13413"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:13417"
-    },
-    "fontStyle": "normal"
   },
   {
     "type": "TEXT",
@@ -577,57 +628,6 @@
   },
   {
     "type": "TEXT",
-    "name": "Subheading",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:2103:22308"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:2103:22306"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:2103:22310"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
-    "name": "Body Base",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10180"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10179"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10181"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
-    "name": "Body Strong",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10180"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10179"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:14844"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
     "name": "Body Emphasis",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
@@ -675,5 +675,12 @@
       "id": "VariableID:66:10181"
     },
     "fontStyle": "normal"
+  },
+  {
+    "key": "6a0b0b053a6eb9f72ad90ddd19010c5060f6c3ae",
+    "name": ".Utilities/Component notes/Bold",
+    "styleType": "TEXT",
+    "remote": false,
+    "description": ""
   }
 ]

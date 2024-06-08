@@ -11,16 +11,8 @@ const sharedProps = {
     true: figma.instance("Icon End"),
     false: undefined,
   }),
-  scheme: figma.enum("Scheme", {
-    Neutral: "neutral",
-  }),
   size: figma.enum("Size", {
-    Small: "sm",
-  }),
-  variant: figma.enum("Variant", {
-    Secondary: "secondary",
-    Stroke: "stroke",
-    Subtle: "subtle",
+    Small: "small",
   }),
   isDisabled: figma.enum("State", {
     Disabled: true,
@@ -28,21 +20,19 @@ const sharedProps = {
 };
 
 figma.connect(Button, "<FIGMA_URL_BUTTON>", {
-  props: sharedProps,
-  example: ({
-    isDisabled,
-    label,
-    scheme,
-    size,
-    variant,
-    iconEnd,
-    iconStart,
-  }) => (
+  props: {
+    ...sharedProps,
+    variant: figma.enum("Variant", {
+      Primary: "primary",
+      Neutral: "neutral",
+      Subtle: "subtle",
+    }),
+  },
+  example: ({ isDisabled, label, size, variant, iconEnd, iconStart }) => (
     <Button
       onPress={() => {}}
-      size={size}
-      scheme={scheme}
       variant={variant}
+      size={size}
       isDisabled={isDisabled}
     >
       {iconStart}
@@ -51,13 +41,20 @@ figma.connect(Button, "<FIGMA_URL_BUTTON>", {
     </Button>
   ),
 });
-figma.connect(Button, "<FIGMA_URL_BUTTON>", {
-  variant: {
-    Scheme: "Danger",
+figma.connect(Button, "<FIGMA_URL_BUTTON_DANGER>", {
+  props: {
+    ...sharedProps,
+    variant: figma.enum("Variant", {
+      Subtle: "danger-subtle",
+    }),
   },
-  props: sharedProps,
-  example: ({ isDisabled, label, size, iconEnd, iconStart }) => (
-    <DestructiveButton onPress={() => {}} size={size} isDisabled={isDisabled}>
+  example: ({ isDisabled, variant, label, size, iconEnd, iconStart }) => (
+    <DestructiveButton
+      onPress={() => {}}
+      variant={variant}
+      size={size}
+      isDisabled={isDisabled}
+    >
       {iconStart}
       {label}
       {iconEnd}

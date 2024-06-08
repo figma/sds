@@ -5,7 +5,7 @@
   --border-color: var(--sds-color-border-default-default);
   --border-radius: var(--sds-size-radius-xs);
   padding: var(--sds-size-padding-xs) var(--sds-size-padding-md);
-  border-bottom: solid var(--sds-responsive-border-width) var(--border-color);
+  border-bottom: solid var(--sds-size-border-width) var(--border-color);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   box-sizing: border-box;
   color: var(--color);
@@ -25,7 +25,7 @@
   }
 
   &[data-focus-visible] {
-    --offset: calc(var(--sds-responsive-border-width) * 0);
+    --offset: calc(var(--sds-size-border-width) * 0);
     &::before {
       content: "";
       border-radius: calc(var(--border-radius) + var(--offset))

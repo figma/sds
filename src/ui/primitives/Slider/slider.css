@@ -42,7 +42,7 @@
   --border-radius: var(--sds-size-radius-full);
   background: var(--slider-thumb-background-color);
   border-radius: var(--border-radius);
-  box-shadow: inset 0 0 0 var(--sds-responsive-border-width)
+  box-shadow: inset 0 0 0 var(--sds-size-border-width)
     var(--slider-thumb-border-color);
   height: var(--sds-typography-scale-05);
   width: var(--sds-typography-scale-05);
@@ -50,7 +50,7 @@
 
   &[data-focus-visible] {
     outline: none;
-    --offset: calc(var(--sds-responsive-border-width) * 2);
+    --offset: calc(var(--sds-size-border-width) * 2);
     &::before {
       content: "";
       border-radius: calc(var(--border-radius) + var(--offset));

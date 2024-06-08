@@ -3,8 +3,7 @@
   background: var(--sds-color-bg-default-default);
   border-radius: var(--sds-size-radius-sm);
   box-shadow:
-    0 0 0 var(--sds-responsive-border-width)
-      var(--sds-color-border-default-default),
+    0 0 0 var(--sds-size-border-width) var(--sds-color-border-default-default),
     var(--sds-effects-shadows-md);
   display: flex;
   flex-direction: column;

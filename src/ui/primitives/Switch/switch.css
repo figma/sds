@@ -8,8 +8,7 @@
   --switch-icon-x: calc(var(--switch-padding));
   --switch-border-radius: var(--sds-size-gap-xl);
   background: var(--switch-background);
-  box-shadow: inset 0 0 0 var(--sds-responsive-border-width)
-    var(--switch-border);
+  box-shadow: inset 0 0 0 var(--sds-size-border-width) var(--switch-border);
   border-radius: var(--switch-border-radius);
   height: var(--sds-size-gap-xl);
   padding: var(--switch-padding);
@@ -45,7 +44,7 @@
 }
 
 .switch-field[data-focus-visible] .switch::before {
-  --offset: calc(var(--sds-responsive-border-width) * 2);
+  --offset: calc(var(--sds-size-border-width) * 2);
   content: "";
   border-radius: calc(var(--switch-border-radius) + var(--offset));
   bottom: calc(-1 * var(--offset));

@@ -27,7 +27,7 @@
   --dialog-padding-y: var(--sds-size-padding-xxl);
   background: var(--sds-color-bg-default-default);
   border-radius: var(--sds-size-radius-md);
-  border: var(--sds-responsive-border-width) solid
+  border: var(--sds-size-border-width) solid
     var(--sds-color-border-default-default);
   box-shadow: var(--sds-effects-shadows-md);
   box-sizing: border-box;

@@ -6,7 +6,12 @@ import {
 } from "ui/utils/AnchorOrButton";
 import "./button.css";
 
-export type ButtonProps = ButtonBaseProps;
+export type ButtonProps = Omit<ButtonBaseProps, "variant"> & {
+  variant?: Exclude<
+    ButtonBaseProps["variant"],
+    "danger-primary" | "danger-subtle"
+  >;
+};
 export const Button = React.forwardRef(function Button(
   { className, ...props }: ButtonProps,
   ref: React.ForwardedRef<HTMLElement>,
@@ -14,43 +19,39 @@ export const Button = React.forwardRef(function Button(
   return <ButtonBase {...props} className={className} ref={ref} />;
 });
 
-export type DestructiveButtonProps = Omit<ButtonBaseProps, "scheme">;
+export type DestructiveButtonProps = Omit<ButtonBaseProps, "variant"> & {
+  variant?: Exclude<
+    ButtonBaseProps["variant"],
+    "primary" | "subtle" | "neutral"
+  >;
+};
 export const DestructiveButton = React.forwardRef(function Button(
-  { className, variant = "default", ...props }: DestructiveButtonProps,
+  { className, variant = "danger-primary", ...props }: DestructiveButtonProps,
   ref: React.ForwardedRef<HTMLElement>,
 ) {
   return (
-    <ButtonBase
-      {...props}
-      variant={variant}
-      scheme="danger"
-      className={className}
-      ref={ref}
-    />
+    <ButtonBase {...props} variant={variant} className={className} ref={ref} />
   );
 });
 
 type ButtonBaseProps = {
   type?: ComponentPropsWithoutRef<"button">["type"];
-  scheme?: "primary" | "danger" | "neutral";
-  size?: "sm" | "md";
-  variant?: "default" | "secondary" | "stroke" | "subtle";
+  size?: "small" | "medium";
+  variant?:
+    | "primary"
+    | "neutral"
+    | "subtle"
+    | "danger-primary"
+    | "danger-subtle";
 } & AnchorOrButtonProps;
 
 const ButtonBase = React.forwardRef(function Button(
-  {
-    className,
-    size = "md",
-    variant = "default",
-    scheme = "primary",
-    ...props
-  }: ButtonBaseProps,
+  { className, size = "medium", variant, ...props }: ButtonBaseProps,
   ref: React.ForwardedRef<HTMLElement>,
 ) {
   const classNames = clsx(
     className,
     "button",
-    `button-scheme-${scheme}`,
     `button-size-${size}`,
     `button-variant-${variant}`,
   );
@@ -58,7 +59,7 @@ const ButtonBase = React.forwardRef(function Button(
 });
 
 export type ButtonGroupProps = React.ComponentPropsWithoutRef<"div"> & {
-  align?: "start" | "end" | "center" | "justify";
+  align?: "start" | "end" | "center" | "justify" | "stack";
 };
 export const ButtonGroup = ({
   align = "start",

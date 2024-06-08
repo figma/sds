@@ -38,11 +38,11 @@
 }
 .section-variant-stroke {
   &:not(:last-child) {
-    border-bottom: var(--sds-responsive-border-width) solid
+    border-bottom: var(--sds-size-border-width) solid
       var(--sds-color-border-default-default);
   }
   &:not(:first-child) {
-    border-top: var(--sds-responsive-border-width) solid
+    border-top: var(--sds-size-border-width) solid
       var(--sds-color-border-default-default);
   }
   & + .section-variant-stroke {

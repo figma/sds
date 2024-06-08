@@ -3,8 +3,8 @@
 @import url("./icons.css");
 
 :root {
-  --global-focus-ring-size: calc(var(--sds-responsive-border-width) * 2);
-  --global-focus-ring-color: var(--sds-color-blue-500);
+  --global-focus-ring-size: var(--sds-size-focus-ring);
+  --global-focus-ring-color: rgb(0, 106, 255);
   --global-line-height-paragraph: 1.4;
   --global-stack-top: 999;
   --global-stack-focus: 999;

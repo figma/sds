@@ -14,12 +14,12 @@
       fill: var(--sds-color-border-default-default);
       position: absolute;
       left: 0;
-      transform: translateY(calc(0 * var(--sds-responsive-border-width)))
+      transform: translateY(calc(0 * var(--sds-size-border-width)))
         rotate(var(--rotation));
     }
     &:last-child {
       fill: var(--sds-color-bg-default-default);
-      transform: translateY(calc(1.5 * var(--sds-responsive-border-width)))
+      transform: translateY(calc(1.5 * var(--sds-size-border-width)))
         rotate(var(--rotation));
     }
   }
