@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconActivity } from "icons";
-import { Flex } from "ui/layout";
-import { IconButton } from "ui/primitives";
+import { DestructiveIconButton, IconButton } from "ui/primitives";
 
 const meta: Meta<typeof IconButton> = {
   component: IconButton,
@@ -9,51 +8,49 @@ const meta: Meta<typeof IconButton> = {
   parameters: { layout: "centered" },
 };
 export default meta;
-type Story = StoryObj<typeof IconButton>;
 
-export const Default: Story = {
+export const Default: StoryObj<typeof IconButton> = {
   args: {
+    variant: "primary",
+    size: "medium",
     isDisabled: false,
   },
   argTypes: {
     size: {
       control: { type: "select" },
+      options: ["small", "medium"],
     },
     variant: {
       control: { type: "select" },
+      options: ["primary", "neutral", "subtle"],
     },
   },
-  render: ({ ...props }) => (
-    <IconButton {...props}>
+  render: ({ ...args }) => (
+    <IconButton {...args}>
       <IconActivity />
     </IconButton>
   ),
 };
 
-export const All: Story = {
+export const Destructive: StoryObj<typeof DestructiveIconButton> = {
   args: {
+    variant: "danger-primary",
+    size: "medium",
     isDisabled: false,
   },
-  render: ({ ...props }) => (
-    <Flex direction="column" gap="lg">
-      {["default", "purple", "blue", "teal"].map((theme) => (
-        <div key={theme} className={`sds-scheme-color-${theme}`}>
-          <Flex alignPrimary="center" gap="lg">
-            <IconButton {...props}>
-              <IconActivity />
-            </IconButton>
-            <IconButton {...props} variant="secondary">
-              <IconActivity />
-            </IconButton>
-            <IconButton {...props} variant="stroke">
-              <IconActivity />
-            </IconButton>
-            <IconButton {...props} variant="subtle">
-              <IconActivity />
-            </IconButton>
-          </Flex>
-        </div>
-      ))}
-    </Flex>
+  argTypes: {
+    size: {
+      control: { type: "select" },
+      options: ["small", "medium"],
+    },
+    variant: {
+      control: { type: "select" },
+      options: ["danger-primary", "danger-subtle"],
+    },
+  },
+  render: ({ ...args }) => (
+    <DestructiveIconButton {...args}>
+      <IconActivity />
+    </DestructiveIconButton>
   ),
 };
