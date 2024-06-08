@@ -6,9 +6,6 @@ const sharedProps = {
   isDisabled: figma.enum("State", {
     Disabled: true,
   }),
-  scheme: figma.enum("Scheme", {
-    Neutral: "neutral",
-  }),
   size: figma.enum("Size", {
     Small: "small",
   }),

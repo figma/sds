@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { IconInfo } from "icons";
 import { ComponentProps } from "react";
 import {
   Button,
-  ButtonGroup,
+  DestructiveButton,
   Notification,
-  NotificationActions,
-  NotificationBody,
-  NotificationTitle,
+  Text,
+  TextStrong,
 } from "ui/primitives";
 
 const meta: Meta<typeof Notification> = {
@@ -17,7 +17,7 @@ const meta: Meta<typeof Notification> = {
 export default meta;
 
 export const Default: StoryObj<
-  Omit<ComponentProps<typeof Notification>, "scheme"> & {
+  Omit<ComponentProps<typeof Notification>, "variant"> & {
     "[type]": "message" | "alert";
   }
 > = {
@@ -26,17 +26,15 @@ export const Default: StoryObj<
     "[type]": { control: { type: "select" }, options: ["message", "alert"] },
   },
   render: ({ "[type]": _type, ...args }) => {
-    const scheme = _type === "message" ? "default" : "danger";
+    const variant = _type === "message" ? "message" : "alert";
     return (
-      <Notification {...args} scheme={scheme}>
-        <NotificationTitle>Notification Title</NotificationTitle>
-        <NotificationBody>Hello there! This is a message</NotificationBody>
-        {_type === "message" && (
-          <NotificationActions>
-            <ButtonGroup>
-              <Button size="sm">Hello</Button>
-            </ButtonGroup>
-          </NotificationActions>
+      <Notification {...args} variant={variant} icon={<IconInfo size="20" />}>
+        <TextStrong>Notification Title</TextStrong>
+        <Text>Hello there! This is a message</Text>
+        {_type === "message" ? (
+          <Button size="small">Hello</Button>
+        ) : (
+          <DestructiveButton size="small">Hello</DestructiveButton>
         )}
       </Notification>
     );

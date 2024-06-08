@@ -10,7 +10,7 @@
   grid-template-areas: "icon content" "icon content" "icon content";
   grid-template-columns: min-content 1fr;
   justify-content: center;
-  padding: var(--sds-size-padding-lg) var(--sds-size-padding-xl)
+  padding: var(--sds-size-padding-lg) var(--sds-size-padding-md)
     var(--sds-size-padding-lg) var(--sds-size-padding-lg);
   position: relative;
   width: 100%;
@@ -25,13 +25,10 @@
 
   > .notification-content {
     grid-area: content;
-    > .notification-title + .notification-body {
+    > * + * {
       margin-top: var(--sds-size-gap-xs);
     }
-    > .notification-title {
-      font: var(--sds-font-body-strong);
-    }
-    > .notification-actions {
+    > .button {
       margin-top: var(--sds-size-gap-md);
     }
   }
@@ -47,15 +44,15 @@
   }
 }
 
-.notification-scheme-default {
-  --notification-color: var(--sds-color-text-brand-default);
-  --notification-icon: var(--sds-color-icon-brand-default);
-  --notification-border-color: var(--sds-color-border-brand-default);
-  --notification-background-color: var(--sds-color-bg-brand-tertiary);
+.notification-variant-message {
+  --notification-color: var(--sds-color-text-default-default);
+  --notification-icon: var(--sds-color-icon-default-default);
+  --notification-border-color: var(--sds-color-border-default-default);
+  --notification-background-color: var(--sds-color-bg-default-default);
 }
-.notification-scheme-danger {
-  --notification-color: var(--sds-color-text-danger-tertiary);
-  --notification-icon: var(--sds-color-icon-danger-tertiary);
+.notification-variant-alert {
+  --notification-color: var(--sds-color-text-danger-ondanger-tertiary);
+  --notification-icon: var(--sds-color-icon-danger-ondanger-tertiary);
   --notification-border-color: var(--sds-color-border-danger-default);
   --notification-background-color: var(--sds-color-bg-danger-tertiary);
 }

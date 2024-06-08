@@ -3,9 +3,8 @@ import { Slider, SliderField } from "./Slider";
 
 figma.connect(Slider, "<FIGMA_URL_SLIDER>", {
   props: {
-    isDisabled: figma.boolean("Disabled", {
-      true: true,
-      false: undefined,
+    isDisabled: figma.enum("State", {
+      Disabled: true,
     }),
   },
   example: ({ isDisabled }) => <Slider isDisabled={isDisabled} />,
@@ -17,7 +16,7 @@ figma.connect(SliderField, "<FIGMA_URL_SLIDER_FIELD>", {
     description: figma.children("Description"),
   },
   example: ({ label, description }) => (
-    <SliderField>
+    <SliderField showOutput>
       {label}
       {description}
     </SliderField>

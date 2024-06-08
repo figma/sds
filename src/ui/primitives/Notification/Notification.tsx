@@ -1,65 +1,49 @@
 import clsx from "clsx";
-import { IconAlertTriangle, IconInfo, IconX } from "icons";
+import { IconX } from "icons";
+import { ReactNode } from "react";
 import {
   DestructiveIconButton,
   IconButton,
 } from "ui/primitives/IconButton/IconButton";
-import {
-  Text,
-  TextProps,
-  TextStrong,
-  TextStrongProps,
-} from "ui/primitives/Text/Text";
 import "./notification.css";
 
-type NotificationScheme = "default" | "danger";
-
-const iconFromScheme = (scheme: NotificationScheme): React.ReactNode => {
-  switch (scheme) {
-    case "default":
-      return <IconInfo size="20" />;
-    case "danger":
-      return <IconAlertTriangle size="20" />;
-  }
-};
+type NotificationVariant = "message" | "alert";
 
 // TODO: notification still needs an onDismiss handler or something
 export type NotificationProps = React.ComponentPropsWithoutRef<"div"> & {
   isDismissible?: boolean;
-  hasIcon?: boolean;
-  scheme?: NotificationScheme;
+  icon?: ReactNode;
+  variant?: NotificationVariant;
 };
 export function Notification({
   children,
   className,
   isDismissible,
-  hasIcon = true,
-  scheme = "default",
+  icon,
+  variant = "message",
   ...props
 }: NotificationProps) {
   const classNames = clsx(
     className,
     "notification",
-    `notification-scheme-${scheme}`,
+    `notification-variant-${variant}`,
   );
   return (
     <div className={classNames} {...props}>
-      {hasIcon && (
-        <span className="notification-icon">{iconFromScheme(scheme)}</span>
-      )}
+      {icon && <span className="notification-icon">{icon}</span>}
       <div className="notification-content">{children}</div>
       {isDismissible &&
-        (scheme === "danger" ? (
+        (variant === "alert" ? (
           <DestructiveIconButton
-            size="sm"
-            variant="subtle"
+            size="small"
+            variant="danger-subtle"
             aria-label="Dismiss notification"
           >
             <IconX />
           </DestructiveIconButton>
         ) : (
           <IconButton
-            size="sm"
+            size="small"
             variant="subtle"
             aria-label="Dismiss notification"
           >
@@ -68,29 +52,4 @@ export function Notification({
         ))}
     </div>
   );
-}
-
-export type NotificationTitleProps = TextStrongProps;
-export function NotificationTitle({
-  className,
-  ...props
-}: NotificationTitleProps) {
-  const classNames = clsx(className, "notification-title");
-  return <TextStrong className={classNames} {...props} />;
-}
-export type NotificationBodyProps = TextProps;
-export function NotificationBody({
-  className,
-  ...props
-}: NotificationBodyProps) {
-  const classNames = clsx(className, "notification-body");
-  return <Text className={classNames} {...props} />;
-}
-export type NotificationActionsProps = React.ComponentPropsWithoutRef<"div">;
-export function NotificationActions({
-  className,
-  ...props
-}: NotificationActionsProps) {
-  const classNames = clsx(className, "notification-actions");
-  return <div className={classNames} {...props} />;
 }
