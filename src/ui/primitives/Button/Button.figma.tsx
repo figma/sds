@@ -68,6 +68,7 @@ figma.connect(ButtonGroup, "<FIGMA_URL_BUTTON_GROUP>", {
       Center: "center",
       End: "end",
       Justify: "justify",
+      Stack: "stack",
     }),
     children: figma.children(["Button"]),
   },

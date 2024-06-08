@@ -1,29 +1,17 @@
 import figma from "@figma/code-connect";
-import { Dialog, DialogActions, DialogBody } from "./Dialog";
+import { Dialog } from "./Dialog";
 
 figma.connect(Dialog, "<FIGMA_URL_DIALOG>", {
   props: {
-    body: figma.boolean("Dialog Body", {
-      true: <DialogBody>Something here!</DialogBody>,
-      false: undefined,
-    }),
     description: figma.children("Text"),
     title: figma.children("Text Heading"),
-    layout: figma.enum("Layout", {
-      Desktop: "desktop",
-      Mobile: "mobile",
-    }),
-    actions: figma.children(["Button"]),
+    buttons: figma.children(["Button Group"]),
   },
-  example: ({ title, description, body, actions }) => (
+  example: ({ title, description, buttons }) => (
     <Dialog>
       {title}
-
       {description}
-
-      {body}
-
-      <DialogActions>{actions}</DialogActions>
+      {buttons}
     </Dialog>
   ),
 });

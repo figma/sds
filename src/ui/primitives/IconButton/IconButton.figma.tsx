@@ -1,5 +1,5 @@
 import figma from "@figma/code-connect";
-import { DestructiveIconButton, IconButton } from "./IconButton";
+import { IconButton } from "./IconButton";
 
 const sharedProps = {
   icon: figma.instance("Icon"),
@@ -10,44 +10,28 @@ const sharedProps = {
     Neutral: "neutral",
   }),
   size: figma.enum("Size", {
-    Small: "sm",
-  }),
-  variant: figma.enum("Variant", {
-    Secondary: "secondary",
-    Stroke: "stroke",
-    Subtle: "subtle",
+    Small: "small",
   }),
 };
 
 figma.connect(IconButton, "<FIGMA_URL_ICON_BUTTON>", {
-  props: sharedProps,
-  example: ({ isDisabled, scheme, icon, size, variant }) => (
+  props: {
+    ...sharedProps,
+    variant: figma.enum("Variant", {
+      Primary: "primary",
+      Neutral: "neutral",
+      Subtle: "subtle",
+    }),
+  },
+  example: ({ isDisabled, icon, size, variant }) => (
     <IconButton
       aria-label="Write a nice description of the action."
       onPress={() => {}}
-      scheme={scheme}
-      size={size}
       variant={variant}
+      size={size}
       isDisabled={isDisabled}
     >
       {icon}
     </IconButton>
-  ),
-});
-
-figma.connect(DestructiveIconButton, "<FIGMA_URL_ICON_BUTTON>", {
-  variant: {
-    Scheme: "Danger",
-  },
-  props: sharedProps,
-  example: ({ isDisabled, size, icon }) => (
-    <DestructiveIconButton
-      aria-label="Write a nice description of the action."
-      onPress={() => {}}
-      size={size}
-      isDisabled={isDisabled}
-    >
-      {icon}
-    </DestructiveIconButton>
   ),
 });

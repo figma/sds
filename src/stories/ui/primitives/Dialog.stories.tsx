@@ -29,7 +29,7 @@ type Story = StoryObj<typeof Dialog>;
 
 export const Default: Story = {
   render: () => (
-    <DialogButton variant="secondary" icon={<IconMenu />} label="Open Dialog">
+    <DialogButton variant="primary" icon={<IconMenu />} label="Open Dialog">
       {({ close }) => (
         <>
           <DialogTitle>Open Dialog</DialogTitle>

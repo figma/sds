@@ -34,3 +34,13 @@ figma.connect(Image, "<FIGMA_URL_IMAGE>", {
     />
   ),
 });
+
+figma.connect(Image, "<FIGMA_URL_IMAGE_BASIC>", {
+  example: () => (
+    <Image
+      aspectRatio="1-1"
+      alt="Always describe the image"
+      src="https://picsum.photos"
+    />
+  ),
+});

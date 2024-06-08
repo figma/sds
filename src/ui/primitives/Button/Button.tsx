@@ -13,10 +13,12 @@ export type ButtonProps = Omit<ButtonBaseProps, "variant"> & {
   >;
 };
 export const Button = React.forwardRef(function Button(
-  { className, ...props }: ButtonProps,
+  { className, variant = "primary", ...props }: ButtonProps,
   ref: React.ForwardedRef<HTMLElement>,
 ) {
-  return <ButtonBase {...props} className={className} ref={ref} />;
+  return (
+    <ButtonBase {...props} variant={variant} className={className} ref={ref} />
+  );
 });
 
 export type DestructiveButtonProps = Omit<ButtonBaseProps, "variant"> & {
