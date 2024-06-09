@@ -127,8 +127,8 @@ export const ButtonStory: StoryObj<typeof Button> = {
   args: {
     children: "Hello!",
     isDisabled: false,
-    size: "md",
-    variant: "default",
+    size: "medium",
+    variant: "primary",
   },
   argTypes: {
     children: {
@@ -136,11 +136,11 @@ export const ButtonStory: StoryObj<typeof Button> = {
     },
     size: {
       control: { type: "select" },
-      options: ["sm", "md"],
+      options: ["small", "medium"],
     },
     variant: {
       control: { type: "select" },
-      options: ["default", "secondary", "stroke", "subtle"],
+      options: ["primary", "neutral", "subtle"],
     },
   },
   render: ({ children, ...props }) => (
@@ -289,17 +289,17 @@ export const FieldStory: StoryObj<{
 export const IconButtonStory: StoryObj<typeof IconButton> = {
   args: {
     isDisabled: false,
-    size: "md",
-    variant: "default",
+    size: "medium",
+    variant: "primary",
   },
   argTypes: {
     size: {
       control: { type: "select" },
-      options: ["sm", "md"],
+      options: ["small", "medium"],
     },
     variant: {
       control: { type: "select" },
-      options: ["default", "secondary", "stroke", "subtle"],
+      options: ["primary", "neutral", "subtle"],
     },
   },
   render: ({ children, ...props }) => (

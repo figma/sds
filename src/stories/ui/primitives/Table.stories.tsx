@@ -97,10 +97,10 @@ export const Other: Story = {
               </TableCell>
               <TableCell>
                 <Flex alignPrimary="end" alignSecondary="center">
-                  <Button size="sm" variant="stroke">
+                  <Button size="small" variant="neutral">
                     View
                   </Button>
-                  <IconButton size="sm" aria-label="Trash icon">
+                  <IconButton size="small" aria-label="Trash icon">
                     <IconTrash />
                   </IconButton>
                 </Flex>

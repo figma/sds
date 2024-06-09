@@ -73,7 +73,7 @@ export const Default: StoryObj<
         paragraph, or even in a list.
       </Text>
       <ButtonGroup align="start">
-        <Button variant="secondary">Hello there!</Button>
+        <Button variant="neutral">Hello there!</Button>
       </ButtonGroup>
     </Card>
   ),

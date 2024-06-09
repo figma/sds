@@ -34,8 +34,8 @@ export function HeaderAuth() {
   const userButtons = (
     <>
       <Button
-        variant="secondary"
-        size="sm"
+        variant="subtle"
+        size="small"
         onPress={() =>
           login({
             avatar: "https://picsum.photos/300",
@@ -47,7 +47,7 @@ export function HeaderAuth() {
         Log in
       </Button>
       <Button
-        size="sm"
+        size="small"
         onPress={() =>
           login({
             avatar: "https://picsum.photos/300",
@@ -149,7 +149,7 @@ export function HeaderAuth() {
                 </FlexItem>
                 <FlexItem>
                   <Flex alignPrimary="center">
-                    <Button variant="subtle" size="sm" onPress={logout}>
+                    <Button variant="subtle" size="small" onPress={logout}>
                       Log out
                     </Button>
                   </Flex>

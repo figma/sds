@@ -41,7 +41,7 @@
   }
 }
 
-.header .navigation-dialog {
+.navigation-dialog {
   border: none;
   border-radius: var(--sds-size-radius-none);
   display: flex;
@@ -62,7 +62,7 @@
   }
 }
 
-.header .navigation-dialog-close {
+.navigation-dialog-close {
   position: absolute;
   right: var(--sds-size-padding-md);
   top: var(--sds-size-padding-md);

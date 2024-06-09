@@ -70,7 +70,7 @@ export function PaginationPage({
       href={href}
       aria-label={`Page ${children}`}
       aria-current={current ? "page" : undefined}
-      variant={current ? "default" : "subtle"}
+      variant={current ? "primary" : "subtle"}
       className={clsx()}
     >
       <span className="">{children}</span>

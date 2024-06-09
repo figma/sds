@@ -163,7 +163,7 @@ export function ProductInfoCard({
       <TextHeading>{heading}</TextHeading>
       <TextTitlePage>${price}</TextTitlePage>
       <ButtonGroup align="start">
-        <Button variant="secondary" onPress={onAction}>
+        <Button variant="neutral" onPress={onAction}>
           {action}
         </Button>
       </ButtonGroup>
