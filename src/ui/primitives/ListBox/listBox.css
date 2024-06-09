@@ -4,7 +4,7 @@
   border-radius: var(--sds-size-radius-sm);
   box-shadow:
     0 0 0 var(--sds-size-border-width) var(--sds-color-border-default-default),
-    var(--sds-effects-shadows-md);
+    var(--sds-effects-shadows-drop-shadow-400);
   display: flex;
   flex-direction: column;
   outline: none;

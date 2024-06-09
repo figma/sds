@@ -114,7 +114,7 @@
   &.avatar-group-overlap {
     --avatar-group-gap-factor: -1;
     > .avatar {
-      box-shadow: var(--sds-effects-shadows-sm);
+      box-shadow: var(--sds-effects-shadows-drop-shadow-300);
     }
   }
   &.avatar-group-spacing-xs {

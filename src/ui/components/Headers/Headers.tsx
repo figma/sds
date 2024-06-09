@@ -83,8 +83,12 @@ export function HeaderAuth() {
         <FlexItem className="display-none-to-flex">
           <Flex gap="lg" alignSecondary="center">
             <Navigation>
-              <NavigationItem isSelected>Home</NavigationItem>
-              <NavigationItem>About</NavigationItem>
+              <NavigationItem isSelected>Pricing</NavigationItem>
+              <NavigationItem>Solutions</NavigationItem>
+              <NavigationItem>Community</NavigationItem>
+              <NavigationItem>Resources</NavigationItem>
+              <NavigationItem>Pricing</NavigationItem>
+              <NavigationItem>Contact</NavigationItem>
             </Navigation>
             {currentUser ? (
               <MenuTrigger>
@@ -129,8 +133,12 @@ export function HeaderAuth() {
           </IconButton>
           <Flex direction="column" alignPrimary="space-between">
             <Navigation>
-              <NavigationItem isSelected>Home</NavigationItem>
-              <NavigationItem>About</NavigationItem>
+              <NavigationItem isSelected>Pricing</NavigationItem>
+              <NavigationItem>Solutions</NavigationItem>
+              <NavigationItem>Community</NavigationItem>
+              <NavigationItem>Resources</NavigationItem>
+              <NavigationItem>Pricing</NavigationItem>
+              <NavigationItem>Contact</NavigationItem>
             </Navigation>
             {currentUser ? (
               <Flex alignSecondary="center" gap="sm" direction="column">

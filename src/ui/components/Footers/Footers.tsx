@@ -34,41 +34,77 @@ export function StandardFooter({ className, ...props }: StandardFooterProps) {
           </Flex>
         </FlexItem>
         <FlexItem size="minor">
-          <TextLinkList title={<TextStrong>Something 1</TextStrong>}>
+          <TextLinkList title={<TextStrong>Use cases</TextStrong>}>
             <TextListItem>
-              <TextLink href="#">List item 1</TextLink>
+              <TextLink href="#">UI design</TextLink>
             </TextListItem>
             <TextListItem>
-              <TextLink href="#">List item 2</TextLink>
+              <TextLink href="#">UX design</TextLink>
             </TextListItem>
             <TextListItem>
-              <TextLink href="#">List item 3</TextLink>
+              <TextLink href="#">Wireframing</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Diagramming</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Brainstorming</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Online whiteboard</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Team collaboration</TextLink>
             </TextListItem>
           </TextLinkList>
         </FlexItem>
         <FlexItem size="minor">
-          <TextLinkList title={<TextStrong>Something 2</TextStrong>}>
+          <TextLinkList title={<TextStrong>Explore</TextStrong>}>
             <TextListItem>
-              <TextLink href="#">List item 1</TextLink>
+              <TextLink href="#">Design</TextLink>
             </TextListItem>
             <TextListItem>
-              <TextLink href="#">List item 2</TextLink>
+              <TextLink href="#">Prototyping</TextLink>
             </TextListItem>
             <TextListItem>
-              <TextLink href="#">List item 3</TextLink>
+              <TextLink href="#">Development features</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Design systems</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Collaboration features</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Design process</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">FigJam</TextLink>
             </TextListItem>
           </TextLinkList>
         </FlexItem>
         <FlexItem size="minor">
-          <TextLinkList title={<TextStrong>Something 3</TextStrong>}>
+          <TextLinkList title={<TextStrong>Resources</TextStrong>}>
             <TextListItem>
-              <TextLink href="#">List item 1</TextLink>
+              <TextLink href="#">Blog</TextLink>
             </TextListItem>
             <TextListItem>
-              <TextLink href="#">List item 2</TextLink>
+              <TextLink href="#">Best practices</TextLink>
             </TextListItem>
             <TextListItem>
-              <TextLink href="#">List item 3</TextLink>
+              <TextLink href="#">Colors</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Color wheel</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Support</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Developers</TextLink>
+            </TextListItem>
+            <TextListItem>
+              <TextLink href="#">Resource library</TextLink>
             </TextListItem>
           </TextLinkList>
         </FlexItem>

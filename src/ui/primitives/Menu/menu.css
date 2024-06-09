@@ -8,7 +8,7 @@
   box-shadow:
     inset 0 0 0 var(--sds-size-border-width)
       var(--sds-color-border-default-default),
-    var(--sds-effects-shadows-md);
+    var(--sds-effects-shadows-drop-shadow-400);
   outline: none;
   overflow-y: auto;
   padding: var(--sds-size-padding-sm);
