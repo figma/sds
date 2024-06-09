@@ -13,8 +13,8 @@ import {
   type SectionProps,
 } from "ui";
 
-export type StandardFooterProps = Omit<SectionProps, "variant" | "padding">;
-export function StandardFooter({ className, ...props }: StandardFooterProps) {
+export type FooterProps = Omit<SectionProps, "variant" | "padding">;
+export function Footer({ className, ...props }: FooterProps) {
   return (
     <Section
       elementType="footer"
