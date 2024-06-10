@@ -2,33 +2,43 @@ import { clsx } from "clsx";
 import { IconSearch, IconX } from "icons";
 import React, { useRef, useState } from "react";
 import {
+  ComboBox as RACComboBox,
   Popover as RACPopover,
   type InputProps as RACInputProps,
 } from "react-aria-components";
+import { Label } from "../Fieldset/Fieldset";
 import { IconButton } from "../IconButton/IconButton";
 import { Input } from "../Input/Input";
 import { ListBox, ListBoxItem } from "../ListBox/ListBox";
 import "./search.css";
 
-export type SearchProps = RACInputProps & {
+export type SearchProps = Omit<RACInputProps, "results"> & {
   results?: string[];
+  onSearch?: (search: string) => void;
 };
 export const Search = React.forwardRef(function Search(
-  { className, results, ...props }: SearchProps,
+  { className, results, onSearch, ...props }: SearchProps,
   ref: React.ForwardedRef<HTMLInputElement>,
 ) {
   const [searchTerm, setSearchTerm] = useState("");
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const onInputInput = (search: string) => {
+    setSearchTerm(search);
+    if (onSearch) {
+      onSearch(search);
+    }
+  };
 
   const classNames = clsx(className, "search-input-container");
 
   return (
-    <div className={classNames}>
+    <RACComboBox className={classNames}>
+      <Label hidden>{props["aria-label"] || "Search"}</Label>
       <Input
         type="search"
         className="search-input"
         value={searchTerm}
-        onInput={(e) => setSearchTerm(e.currentTarget.value)}
+        onInput={(e) => onInputInput(e.currentTarget.value)}
         ref={(node) => {
           inputRef.current = node;
           if (typeof ref === "function") {
@@ -43,7 +53,7 @@ export const Search = React.forwardRef(function Search(
         {searchTerm ? (
           <IconButton
             aria-label="Clear search"
-            onPress={() => setSearchTerm("")}
+            onPress={() => onInputInput("")}
             size="small"
             variant="subtle"
           >
@@ -60,15 +70,15 @@ export const Search = React.forwardRef(function Search(
           </IconButton>
         )}
       </span>
-      {results && (
-        <RACPopover>
-          <ListBox>
-            {results.map((a) => (
-              <ListBoxItem onAction={() => setSearchTerm(a)}>{a}</ListBoxItem>
-            ))}
-          </ListBox>
-        </RACPopover>
-      )}
-    </div>
+      <RACPopover>
+        <ListBox>
+          {results?.map((a) => (
+            <ListBoxItem key={a} onAction={() => onInputInput(a)}>
+              {a}
+            </ListBoxItem>
+          ))}
+        </ListBox>
+      </RACPopover>
+    </RACComboBox>
   );
 });
