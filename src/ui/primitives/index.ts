@@ -17,6 +17,7 @@ export * from "./Notification/Notification";
 export * from "./Pagination/Pagination";
 export * from "./Popover/Popover";
 export * from "./Radio/Radio";
+export * from "./Search/Search";
 export * from "./Select/Select";
 export * from "./Slider/Slider";
 export * from "./Switch/Switch";

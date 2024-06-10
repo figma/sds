@@ -164,7 +164,7 @@ export function HeaderAuth() {
                 </FlexItem>
               </Flex>
             ) : (
-              <ButtonGroup align="justify">{userButtons}</ButtonGroup>
+              <ButtonGroup align="center">{userButtons}</ButtonGroup>
             )}
           </Flex>
         </Dialog>
