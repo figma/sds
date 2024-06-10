@@ -66,10 +66,7 @@ export function Card({
       {asset && <div className="card-asset">{asset}</div>}
       <div className="card-content">{children}</div>
       {interactionProps && (
-        <AnchorOrButton
-          className="card-interactionProps"
-          {...interactionProps}
-        />
+        <AnchorOrButton className="card-interaction" {...interactionProps} />
       )}
     </div>
   );

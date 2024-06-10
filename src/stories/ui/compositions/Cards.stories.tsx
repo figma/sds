@@ -6,13 +6,13 @@ import {
   PricingCard,
   ProductInfoCard,
   TestimonialCard,
-} from "ui/components";
+} from "ui/compositions";
 import { Flex } from "ui/layout";
 import { Button, ButtonGroup, Image, Text, TextHeading } from "ui/primitives";
 
 const meta: Meta<typeof Card> = {
   component: Card,
-  title: "UI Components/Cards",
+  title: "UI Compositions/Cards",
   parameters: { layout: "centered" },
 };
 export default meta;

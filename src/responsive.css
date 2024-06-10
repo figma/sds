@@ -1,0 +1,52 @@
+/* Responsive default */
+:root {
+  --sds-responsive-direction-column-to-row: column;
+  --sds-responsive-direction-column-to-row-reverse: column;
+  --sds-responsive-direction-row-reverse-to-column: row-reverse;
+  --sds-responsive-direction-row-to-column: row;
+  --sds-responsive-display-flex-to-none: flex;
+  --sds-responsive-display-none-to-flex: none;
+  --sds-responsive-ratio-column-full: 1;
+  --sds-responsive-ratio-column-half: 2;
+  --sds-responsive-ratio-column-quarter-major: 4;
+  --sds-responsive-ratio-column-quarter-minor: 4;
+  --sds-responsive-ratio-column-third-major: 3;
+  --sds-responsive-ratio-column-third-minor: 3;
+  --sds-responsive-ratio-dialog-max: 2;
+}
+/* Responsive tablet */
+@media (min-width: 768px) {
+  :root {
+    --sds-responsive-direction-column-to-row: column;
+    --sds-responsive-direction-column-to-row-reverse: column;
+    --sds-responsive-direction-row-reverse-to-column: row-reverse;
+    --sds-responsive-direction-row-to-column: row;
+    --sds-responsive-display-flex-to-none: flex;
+    --sds-responsive-display-none-to-flex: none;
+    --sds-responsive-ratio-column-full: 1;
+    --sds-responsive-ratio-column-half: 1;
+    --sds-responsive-ratio-column-quarter-major: 2;
+    --sds-responsive-ratio-column-quarter-minor: 2;
+    --sds-responsive-ratio-column-third-major: 3;
+    --sds-responsive-ratio-column-third-minor: 3;
+    --sds-responsive-ratio-dialog-max: 0.85;
+  }
+}
+/* responsive: desktop */
+@media (min-width: 1200px) {
+  :root {
+    --sds-responsive-direction-column-to-row: row;
+    --sds-responsive-direction-column-to-row-reverse: row-reverse;
+    --sds-responsive-direction-row-reverse-to-column: column;
+    --sds-responsive-direction-row-to-column: column;
+    --sds-responsive-display-flex-to-none: none;
+    --sds-responsive-display-none-to-flex: flex;
+    --sds-responsive-ratio-column-full: 1;
+    --sds-responsive-ratio-column-half: 1;
+    --sds-responsive-ratio-column-quarter-major: 3;
+    --sds-responsive-ratio-column-quarter-minor: 1;
+    --sds-responsive-ratio-column-third-major: 2;
+    --sds-responsive-ratio-column-third-minor: 1;
+    --sds-responsive-ratio-dialog-max: 0.5;
+  }
+}

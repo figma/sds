@@ -14,14 +14,7 @@ const COLOR_THEMES_DARK = ["sds_dark"];
 // stripped from mode names above in theme class names
 const COLOR_THEME_LIGHT_REMOVE = "_light";
 const COLOR_THEME_DARK_REMOVE = "_dark";
-const RESPONSIVE_SIZE_ORDER = ["mobile", "tablet", "desktop"];
-const RESPONSIVE_SIZE_TOKEN_SUFFIX = "width-device-min";
-const _FILE_KEY = "YfiqA0yWMXuLJAzkZNpBdy";
 const FILE_KEY = "J0KLPKXiONDRssXD1AX9Oi";
-
-// const formatters = {
-//   "weight-black-italic": "style",
-// };
 
 initialize();
 
@@ -36,9 +29,9 @@ async function initialize() {
     JSON.parse(fs.readFileSync("./tokens.json")),
   );
   const variableLookups = [
-    ...Object.values(processed.typography.primitive)[0],
+    ...Object.values(processed.typography_primitives.main)[0],
     ...Object.values(processed.typography.main)[0],
-    ...Object.values(processed.color.primitive)[0],
+    ...Object.values(processed.color_primitives.main)[0],
     ...Object.values(processed.color.main)[0],
     ...Object.values(processed.size.main)[0],
   ].reduce((into, item) => {
@@ -60,36 +53,61 @@ async function initialize() {
 
 function processTokenJSON(data) {
   const processed = {
+    color_primitives: {
+      main: {},
+    },
     color: {
-      primitive: {},
       main: {},
       colorSchemes: COLOR_THEMES,
       colorSchemesDark: COLOR_THEMES_DARK,
     },
     size: { main: {} },
-    typography: { primitive: {}, main: {} },
-    responsive: {
-      main: {},
-      responsiveSizeOrder: RESPONSIVE_SIZE_ORDER,
-      responsiveSizeTokenSuffix: RESPONSIVE_SIZE_TOKEN_SUFFIX,
-    },
+    typography_primitives: { main: {} },
+    typography: { main: {} },
   };
 
-  processCollection(data, processed.color, "@colors", {
-    primitiveKey: "@color_primitives",
+  processCollection(data, processed.color_primitives, "@color_primitives", {
     prefix: "color",
   });
+  processCollection(data, processed.color, "@colors", {
+    prefix: "color",
+    replacements: {
+      "@color_primitives": `${TOKEN_PREFIX}color`,
+    },
+  });
+  processCollection(
+    data,
+    processed.typography_primitives,
+    "@typography_primitives",
+    {
+      prefix: "typography",
+      replacements: {
+        "@responsive": `${TOKEN_PREFIX}responsive`,
+        "Extra Bold Italic": "800 italic",
+        "Semi Bold Italic": "600 italic",
+        "Medium Italic": "500 italic",
+        "Regular Italic": "400 italic",
+        "Extra Light Italic": "200 italic",
+        "Light Italic": "300 italic",
+        "Black Italic": "900 italic",
+        "Bold Italic": "700 italic",
+        "Thin Italic": "100 italic",
+      },
+      convertPixelToRem: true,
+    },
+  );
   processCollection(data, processed.typography, "@typography", {
     prefix: "typography",
-    primitiveKey: "@typography_primitives",
+    replacements: {
+      typography_primitives: "typography",
+    },
     convertPixelToRem: true,
-  });
-  processCollection(data, processed.responsive, "@responsive", {
-    prefix: "responsive",
-    convertPixelToRem: false,
   });
   processCollection(data, processed.size, "@size", {
     prefix: "size",
+    replacements: {
+      "@responsive": `${TOKEN_PREFIX}responsive`,
+    },
     convertPixelToRem: true,
   });
 
@@ -228,10 +246,9 @@ In the future, themeing will be handled via @container style() queries
   }
 
   const codeSyntaxArrayString = `Promise.all([
-    ${drawCodeSyntaxWeb(processed.responsive.main.mobile)},
     ${drawCodeSyntaxWeb(processed.size.main.default)},
     ${drawCodeSyntaxWeb(processed.typography.main.default)},
-    ${drawCodeSyntaxWeb(processed.color.primitive.value)},
+    ${drawCodeSyntaxWeb(processed.color_primitives.main.value)},
     ${drawCodeSyntaxWeb(processed.color.main.light)}
     ].map(async ([variableId, webSyntax]) => {
       const variable = await figma.variables.getVariableByIdAsync(variableId);
@@ -242,24 +259,6 @@ In the future, themeing will be handled via @container style() queries
   fs.writeFileSync("./tokensCodeSyntaxes.js", codeSyntaxArrayString);
 
   return { processed, themeCSS: fileStringCSSLines };
-
-  function drawCSSPropDefinition(lines, indent = "  ") {
-    return lines
-      .sort()
-      .map((l) => {
-        let type = ["fontWeight", "number"].includes(l.type)
-          ? "number"
-          : l.type === "color"
-            ? "color"
-            : "*";
-        return `${indent}@property ${l.property} {
-  ${indent}  syntax: "${type === "*" ? "*" : `<${type}>`}";
-  ${indent}  inherits: true;
-  ${indent}  initial-value: ${type === "color" ? "#000000" : type === "number" ? 0 : l.type};
-  ${indent}}`;
-      })
-      .join("\n\n");
-  }
 
   function drawCSSPropLines(lines = [], indent = "  ") {
     return (
@@ -282,49 +281,39 @@ In the future, themeing will be handled via @container style() queries
     processed,
     mainKey,
     {
-      primitiveKey = "",
+      replacements = {},
       convertPixelToRem = CONVERT_TO_REM,
+      skipPrefix = "",
       prefix,
       removeFromLastKey = [],
     },
   ) {
     const fullPrefix = `${TOKEN_PREFIX}${prefix}`;
-    if (processed.primitive && primitiveKey) {
-      traverse(
-        processed.primitive,
-        data[primitiveKey],
-        primitiveKey,
-        mainKey,
-        fullPrefix,
-        convertPixelToRem,
-        removeFromLastKey,
-        "",
-        fullPrefix ? [fullPrefix] : undefined,
-      );
-    }
     traverse(
       processed.main,
       data[mainKey],
-      primitiveKey || mainKey,
+      replacements,
       mainKey,
       fullPrefix,
       convertPixelToRem,
       removeFromLastKey,
       "",
       fullPrefix ? [fullPrefix] : undefined,
+      skipPrefix,
     );
   }
 
   function traverse(
     definitions,
     object,
-    primitiveKey,
+    replacements,
     mainKey,
     prefix,
     convertPixelToRem = CONVERT_TO_REM,
     removeFromLastKey = [],
     currentType = "",
     keys = [],
+    skipPrefix,
   ) {
     const lastKey = keys[keys.length - 1];
     if (lastKey) {
@@ -342,9 +331,17 @@ In the future, themeing will be handled via @container style() queries
       )
       .join("");
     // .replace(/^color/i, "");
+    const valueWithReplacements = (value) => {
+      if (typeof value !== "string") return value;
+      for (let replacement in replacements) {
+        value = value.replace(replacement, replacements[replacement]);
+      }
+      return value;
+    };
     const propertyName =
       propertyNameFull.charAt(0).toLowerCase() + propertyNameFull.slice(1);
     const type = object.$type || currentType;
+    if (skipPrefix && propertyName.match(skipPrefix)) return;
     if ("$value" in object) {
       if ("$extensions" in object && NAMESPACE in object.$extensions) {
         const figmaId = object.$extensions[NAMESPACE].figmaId;
@@ -354,13 +351,14 @@ In the future, themeing will be handled via @container style() queries
             property,
             propertyName,
             figmaId,
-            value: valueToCSS(
-              property,
-              object.$extensions[NAMESPACE].modes[mode],
-              primitiveKey,
-              mainKey,
-              convertPixelToRem,
-              prefix,
+            value: valueWithReplacements(
+              valueToCSS(
+                property,
+                object.$extensions[NAMESPACE].modes[mode],
+                mainKey,
+                convertPixelToRem,
+                prefix,
+              ),
             ),
             type,
           });
@@ -376,13 +374,8 @@ In the future, themeing will be handled via @container style() queries
           property,
           propertyName,
           figmaId,
-          value: valueToCSS(
-            property,
-            object.$value,
-            primitiveKey,
-            mainKey,
-            convertPixelToRem,
-            "",
+          value: valueWithReplacements(
+            valueToCSS(property, object.$value, mainKey, convertPixelToRem, ""),
           ),
           type,
         });
@@ -393,13 +386,14 @@ In the future, themeing will be handled via @container style() queries
           traverse(
             definitions,
             value,
-            primitiveKey,
+            replacements,
             mainKey,
             prefix,
             convertPixelToRem,
             removeFromLastKey,
             type,
             [...keys, key],
+            skipPrefix,
           );
         }
       });
@@ -409,19 +403,17 @@ In the future, themeing will be handled via @container style() queries
   function valueToCSS(
     property,
     value,
-    primitiveKey,
     mainKey,
     convertPixelToRem,
     prefix = "",
   ) {
     if (value.toString().charAt(0) === "{")
       return `var(--${value
-        .replace(`${primitiveKey}${JOIN_CHAR}`, prefix)
         .replace(`${mainKey}${JOIN_CHAR}`, prefix)
         .replace(/[\. ]/g, "-")
         .replace(/^\{/, "")
         .replace(/\}$/, "")})`;
-    const valueIsDigits = value.toString().match(/^-?\d+$/);
+    const valueIsDigits = value.toString().match(/^-?\d+(\.\d+)?$/);
     const isRatio = property.match(/(ratio-)/);
     const isNumeric =
       valueIsDigits && !property.match(/(weight|ratio-)/) && !isRatio;
@@ -545,21 +537,24 @@ async function processStyleJSON(data, variablesLookup) {
       const numbers = [
         boundVariables.offsetX
           ? valueFromPossibleVariable(boundVariables.offsetX)
-          : x,
+          : `${x}px`,
         boundVariables.offsetY
           ? valueFromPossibleVariable(boundVariables.offsetY)
-          : y,
+          : `${y}px`,
         boundVariables.radius
           ? valueFromPossibleVariable(boundVariables.radius)
-          : radius,
+          : `${radius}px`,
         boundVariables.spread
           ? valueFromPossibleVariable(boundVariables.spread)
-          : spread,
+          : `${spread}px`,
         boundVariables.color
           ? valueFromPossibleVariable(boundVariables.color)
-          : hex,
+          : `${hex}px`,
       ];
       return `${type === "INNER_SHADOW" ? "inset " : ""}${numbers.join(" ")}`;
+    } else if (type === "LAYER_BLUR" || type === "BACKGROUND_BLUR") {
+      const { radius, boundVariables } = effect;
+      return `blur(${boundVariables.radius ? valueFromPossibleVariable(boundVariables.radius) : `${radius}px`})`;
     }
   }
 }

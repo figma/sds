@@ -12,7 +12,7 @@
 }
 
 .dialog-backdrop {
-  backdrop-filter: blur(var(--sds-size-gap-xs));
+  backdrop-filter: var(--sds-effects-backdrop-filter-blur-overlay);
   background: var(--sds-color-white-600);
   bottom: 0;
   left: 0;

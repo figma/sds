@@ -1,5 +1,5 @@
 import { AuthenticationProvider } from "providers";
-import { Header, StandardFooter } from "ui/components";
+import { Footer, Header } from "ui/compositions";
 import { Flex, Section } from "ui/layout";
 import { TextContentTitle } from "ui/primitives";
 
@@ -12,7 +12,7 @@ function App() {
           <TextContentTitle align="center" title="Title" subtitle="Subtitle" />
         </Flex>
       </Section>
-      <StandardFooter />
+      <Footer />
     </AuthenticationProvider>
   );
 }

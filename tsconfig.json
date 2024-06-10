@@ -19,7 +19,7 @@
     "paths": {
       "icons": ["./icons"],
       "providers": ["./providers"],
-      "ui/components": ["./ui/components"],
+      "ui/compositions": ["./ui/compositions"],
       "ui/layout": ["./ui/layout"],
       "ui/primitives": ["./ui/primitives"]
     }

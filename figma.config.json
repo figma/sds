@@ -5,7 +5,7 @@
     "react": {
       "importPaths": {
         "*": "ui",
-        "src/ui/components/**/*": "ui/components",
+        "src/ui/compositions/**/*": "ui/compositions",
         "src/ui/layout/**/*": "ui/layout",
         "src/ui/primitives/**/*": "ui/primitives",
         "src/icons/*": "icons"

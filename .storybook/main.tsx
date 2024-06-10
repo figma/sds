@@ -25,7 +25,7 @@ const config: StorybookConfig = {
         ...config.resolve.alias,
         icons: path.resolve(__dirname, "/src/icons"),
         providers: path.resolve(__dirname, "/src/providers"),
-        "ui/components": path.resolve(__dirname, "/src/ui/components"),
+        "ui/compositions": path.resolve(__dirname, "/src/ui/compositions"),
         "ui/layout": path.resolve(__dirname, "/src/ui/layout"),
         "ui/primitives": path.resolve(__dirname, "/src/ui/primitives"),
       };
