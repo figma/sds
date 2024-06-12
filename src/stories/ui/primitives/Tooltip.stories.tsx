@@ -1,10 +1,10 @@
 import type { Meta } from "@storybook/react";
 import { IconHelpCircle } from "icons";
-import { DialogTrigger, IconButton, Popover, Text } from "ui/primitives";
+import { DialogTrigger, IconButton, Text, Tooltip } from "ui/primitives";
 
-const meta: Meta<typeof Popover> = {
-  component: Popover,
-  title: "UI Primitives/Popover",
+const meta: Meta<typeof Tooltip> = {
+  component: Tooltip,
+  title: "UI Primitives/Tooltip",
   parameters: { layout: "centered" },
 };
 
@@ -15,8 +15,8 @@ export const Default = (args: any) => (
     <IconButton aria-label="Help">
       <IconHelpCircle />
     </IconButton>
-    <Popover {...args}>
+    <Tooltip {...args}>
       <Text>For help accessing your account, please contact support.</Text>
-    </Popover>
+    </Tooltip>
   </DialogTrigger>
 );

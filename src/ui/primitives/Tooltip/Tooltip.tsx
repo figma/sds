@@ -6,28 +6,28 @@ import {
   type PopoverProps as RACPopoverProps,
 } from "react-aria-components";
 import { Dialog } from "ui/primitives";
-import "./popover.css";
+import "./tooltip.css";
 
-export interface PopoverProps extends Omit<RACPopoverProps, "children"> {
+export interface TooltipProps extends Omit<RACPopoverProps, "children"> {
   children: React.ReactNode;
 }
 
-export function Popover({ children, className, ...props }: PopoverProps) {
-  const classNames = clsx(className, "popover");
+export function Tooltip({ children, className, ...props }: TooltipProps) {
+  const classNames = clsx(className, "tooltip");
   return (
     <RACPopover className={classNames} {...props}>
-      <PopoverOverlayArrow />
+      <TooltipOverlayArrow />
       <Dialog>{children}</Dialog>
     </RACPopover>
   );
 }
 
-export type PopoverOverlayArrowProps = RACOverlayArrowProps;
-export function PopoverOverlayArrow({
+export type TooltipOverlayArrowProps = RACOverlayArrowProps;
+export function TooltipOverlayArrow({
   className,
   ...props
-}: PopoverOverlayArrowProps) {
-  const classNames = clsx(className, "popover-overlay-arrow");
+}: TooltipOverlayArrowProps) {
+  const classNames = clsx(className, "tooltip-overlay-arrow");
   return (
     <RACOverlayArrow {...props} className={classNames}>
       <svg viewBox="0 0 10 5">

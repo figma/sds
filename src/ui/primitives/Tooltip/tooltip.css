@@ -1,11 +1,11 @@
-.popover {
-  .popover-overlay-arrow {
+.tooltip {
+  .tooltip-overlay-arrow {
     display: flex;
     position: relative;
     width: var(--sds-typography-scale-04);
   }
 
-  .popover-overlay-arrow svg {
+  .tooltip-overlay-arrow svg {
     --rotation: 0deg;
     display: block;
     height: calc(0.5 * var(--sds-typography-scale-04));
@@ -25,37 +25,37 @@
   }
 
   &[data-placement="top"] {
-    &:has(.popover-overlay-arrow) {
+    &:has(.tooltip-overlay-arrow) {
       margin-bottom: var(--sds-size-gap-sm);
     }
   }
 
   &[data-placement="bottom"] {
-    &:has(.popover-overlay-arrow) {
+    &:has(.tooltip-overlay-arrow) {
       margin-top: var(--sds-size-gap-sm);
     }
 
-    .popover-overlay-arrow svg {
+    .tooltip-overlay-arrow svg {
       --rotation: 180deg;
     }
   }
 
   &[data-placement="right"] {
-    &:has(.popover-overlay-arrow) {
+    &:has(.tooltip-overlay-arrow) {
       margin-left: var(--sds-size-gap-sm);
     }
 
-    .popover-overlay-arrow svg {
+    .tooltip-overlay-arrow svg {
       --rotation: 90deg;
     }
   }
 
   &[data-placement="left"] {
-    &:has(.popover-overlay-arrow) {
+    &:has(.tooltip-overlay-arrow) {
       margin-right: var(--sds-size-gap-sm);
     }
 
-    .popover-overlay-arrow svg {
+    .tooltip-overlay-arrow svg {
       --rotation: -90deg;
     }
   }
