@@ -1024,6 +1024,13 @@
     ]
   },
   {
+    "key": "b6cb6cc3526049c20430b096b6ed65c5eba1c246",
+    "name": "Image Placeholder",
+    "styleType": "FILL",
+    "remote": false,
+    "description": ""
+  },
+  {
     "key": "6a0b0b053a6eb9f72ad90ddd19010c5060f6c3ae",
     "name": ".Utilities/Component notes/Bold",
     "styleType": "TEXT",

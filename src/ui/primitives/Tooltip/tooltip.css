@@ -62,6 +62,7 @@
 
   > .dialog {
     --dialog-padding-y: var(--sds-size-padding-lg);
+    box-shadow: var(--sds-effects-shadows-drop-shadow-200);
     padding-left: var(--sds-size-padding-md);
     padding-right: var(--sds-size-padding-md);
     width: 100%;

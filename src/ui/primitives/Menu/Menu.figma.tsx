@@ -51,19 +51,19 @@ figma.connect(MenuItem, "<FIGMA_URL_MENU_ITEM>", {
       false: undefined,
     }),
     description: figma.boolean("Has Description", {
-      true: figma.children("Menu Description"),
+      true: <MenuDescription>{figma.string("Description")}</MenuDescription>,
       false: undefined,
     }),
     shortcut: figma.boolean("Has Shortcut", {
       true: figma.children("Menu Shortcut"),
       false: undefined,
     }),
-    label: figma.children("Menu Label"),
+    label: figma.string("Label"),
   },
   example: ({ icon, label, description, shortcut }) => (
     <MenuItem>
       {icon}
-      {label}
+      <MenuLabel>{label}</MenuLabel>
       {shortcut}
       {description}
     </MenuItem>

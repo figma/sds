@@ -23,9 +23,9 @@ export const Image: Story = {
   args: {},
   render: () => (
     <Flex alignPrimary="center" gap="sm" alignSecondary="center">
-      <Avatar src="https://picsum.photos/200" size="sm" />
-      <Avatar src="https://picsum.photos/200" />
-      <Avatar src="https://picsum.photos/200" square size="lg" />
+      <Avatar src="https://placehold.co/200" size="sm" />
+      <Avatar src="https://placehold.co/200" />
+      <Avatar src="https://placehold.co/200" square size="lg" />
     </Flex>
   ),
 };
@@ -45,9 +45,9 @@ export const Buttons: Story = {
   args: {},
   render: () => (
     <Flex alignPrimary="center" gap="sm" alignSecondary="center">
-      <AvatarButton square size="sm" src="https://picsum.photos/200" />
-      <AvatarButton square src="https://picsum.photos/200" />
-      <AvatarButton size="lg" src="https://picsum.photos/200" />
+      <AvatarButton square size="sm" src="https://placehold.co/200" />
+      <AvatarButton square src="https://placehold.co/200" />
+      <AvatarButton size="lg" src="https://placehold.co/200" />
     </Flex>
   ),
 };
@@ -70,11 +70,11 @@ export const Group: GroupStory = {
     <Flex alignPrimary="center" gap="sm" alignSecondary="center">
       <AvatarGroup {...args}>
         <Avatar initials="JA" />
-        <Avatar src="https://picsum.photos/200" />
+        <Avatar src="https://placehold.co/200" />
         <Avatar initials="LO" />
-        <Avatar src="https://picsum.photos/200" />
+        <Avatar src="https://placehold.co/200" />
         <Avatar initials="WM" />
-        <Avatar src="https://picsum.photos/200" />
+        <Avatar src="https://placehold.co/200" />
       </AvatarGroup>
     </Flex>
   ),
@@ -84,7 +84,7 @@ export const Block: Story = {
   args: {},
   render: () => (
     <AvatarBlock>
-      <AvatarButton square size="lg" src="https://picsum.photos/200" />
+      <AvatarButton square size="lg" src="https://placehold.co/200" />
       <Label>Full Name</Label>
       <Description>@fullname420</Description>
     </AvatarBlock>

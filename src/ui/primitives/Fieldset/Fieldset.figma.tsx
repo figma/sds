@@ -1,12 +1,5 @@
 import figma from "@figma/code-connect";
-import {
-  Description,
-  FieldError,
-  FieldGroup,
-  Fieldset,
-  Label,
-  Legend,
-} from "./Fieldset";
+import { Description, FieldError, Label, Legend } from "./Fieldset";
 
 figma.connect(Description, "<FIGMA_URL_DESCRIPTION>", {
   props: {
@@ -34,31 +27,4 @@ figma.connect(FieldError, "<FIGMA_URL_ERROR_MESSAGE>", {
     error: figma.string("Error"),
   },
   example: ({ error }) => <FieldError>{error}</FieldError>,
-});
-
-figma.connect(FieldGroup, "<FIGMA_URL_FIELD_GROUP>", {
-  props: {
-    children: figma.children([
-      "Input Field",
-      "Select Field",
-      "Text Area Field",
-      "Switch Group",
-      "Checkbox Group",
-      "Radio Group",
-      "Checkbox Field",
-    ]),
-  },
-  example: ({ children }) => <FieldGroup>{children}</FieldGroup>,
-});
-
-figma.connect(Fieldset, "<FIGMA_URL_FIELDSET>", {
-  props: {
-    children: figma.children([
-      "Legend",
-      "Description",
-      "Field Group",
-      "Button Group",
-    ]),
-  },
-  example: ({ children }) => <Fieldset>{children}</Fieldset>,
 });

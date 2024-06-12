@@ -18,7 +18,7 @@ export const Default: StoryObj<typeof Image> = {
         width: "100%",
       }}
     >
-      <Image src="https://picsum.photos/500/300" {...args} />
+      <Image src="https://placehold.co/500x300" {...args} />
     </div>
   ),
 };
@@ -26,8 +26,8 @@ export const Default: StoryObj<typeof Image> = {
 export const SrcSet: StoryObj<typeof Image> = {
   render: (args) => (
     <Image
-      src="https://picsum.photos/500"
-      srcSet="https://picsum.photos/500 500w, https://picsum.photos/1001 1001w"
+      src="https://placehold.co/500"
+      srcSet="https://placehold.co/500 500w, https://placehold.co/1001 1001w"
       sizes="(max-width: 700px) 500w, 1000w"
       {...args}
     />
@@ -41,13 +41,13 @@ export const DefaultPicture: StoryObj<typeof Picture> = {
     <Picture>
       <PictureSource
         media="(max-width: 499px)"
-        srcSet="https://picsum.photos/500"
+        srcSet="https://placehold.co/500"
       />
       <PictureSource
         media="(min-width: 500px)"
-        srcSet="https://picsum.photos/1000/500"
+        srcSet="https://placehold.co/1000x500"
       />
-      <Image src="https://picsum.photos/1000/500" alt="Magical thing" />
+      <Image src="https://placehold.co/1000x500" alt="Magical thing" />
     </Picture>
   ),
 };

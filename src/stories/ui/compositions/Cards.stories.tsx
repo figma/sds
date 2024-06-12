@@ -54,7 +54,7 @@ export const Default: StoryObj<
             alt="A nice image"
             aspectRatio="1-1"
             size="sm"
-            src="https://picsum.photos/500"
+            src="https://placehold.co/500"
           />
         ) : undefined
       }
@@ -107,14 +107,14 @@ export const BlockProductInfoCard: StoryObj<typeof ProductInfoCard> = {
   render: () => (
     <Flex container wrap type="half" gap="lg" direction="row">
       <ProductInfoCard
-        asset={<Image alt="Accessibility!" src="https://picsum.photos/300" />}
+        asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
         heading="Product"
         price={5}
         action="Buy this"
         onAction={() => {}}
       />
       <ProductInfoCard
-        asset={<Image alt="Accessibility!" src="https://picsum.photos/300" />}
+        asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
         heading="Product"
         price={5}
         action="Buy this"
@@ -136,19 +136,19 @@ export const BlockTestimonialCard: StoryObj<typeof TestimonialCard> = {
     >
       <TestimonialCard
         heading="“Something splendid”"
-        src="https://picsum.photos/200"
+        src="https://placehold.co/200"
         username="fullname421"
         name="Full Name"
       />
       <TestimonialCard
         heading="“Something splendid”"
-        src="https://picsum.photos/200"
+        src="https://placehold.co/200"
         username="fullname421"
         name="Full Name"
       />
       <TestimonialCard
         heading="“Something splendid”"
-        src="https://picsum.photos/200"
+        src="https://placehold.co/200"
         username="fullname421"
         name="Full Name"
       />

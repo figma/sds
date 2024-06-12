@@ -1,16 +1,17 @@
 import figma from "@figma/code-connect";
+import { Text, TextStrong } from "../Text/Text";
 import { Notification } from "./Notification";
 
 figma.connect(Notification, "<FIGMA_URL_NOTIFICATION>", {
   props: {
-    title: figma.children("Text Strong"),
+    title: figma.string("Title"),
     icon: figma.boolean("Has Icon", {
       true: figma.instance("Icon"),
       false: undefined,
     }),
     isDismissible: figma.boolean("Is Dismissible"),
     button: figma.children("Button"),
-    body: figma.children("Text"),
+    body: figma.string("Body"),
     variant: figma.enum("Variant", {
       Message: "message",
       Alert: "alert",
@@ -18,8 +19,8 @@ figma.connect(Notification, "<FIGMA_URL_NOTIFICATION>", {
   },
   example: ({ icon, isDismissible, button, body, title }) => (
     <Notification icon={icon} isDismissible={isDismissible}>
-      {title}
-      {body}
+      <TextStrong>{title}</TextStrong>
+      <Text>{body}</Text>
       {button}
     </Notification>
   ),

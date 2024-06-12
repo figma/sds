@@ -38,7 +38,7 @@ export function HeaderAuth() {
         size="small"
         onPress={() =>
           login({
-            avatar: "https://picsum.photos/300",
+            avatar: "https://placehold.co/300",
             name: "Charlie Brown",
             username: "snooptroupe",
           })
@@ -50,7 +50,7 @@ export function HeaderAuth() {
         size="small"
         onPress={() =>
           login({
-            avatar: "https://picsum.photos/300",
+            avatar: "https://placehold.co/300",
             name: "Charlie Brown",
             username: "snooptroupe",
           })

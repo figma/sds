@@ -7,8 +7,6 @@ import {
   TextEmphasis,
   TextHeading,
   TextLink,
-  TextLinkList,
-  TextList,
   TextListItem,
   TextPrice,
   TextSmall,
@@ -63,36 +61,11 @@ figma.connect(TextCode, "<FIGMA_URL_TEXT_CODE>", {
   props: { text: figma.string("Text") },
   example: ({ text }) => <TextCode>{text}</TextCode>,
 });
-
-figma.connect(TextList, "<FIGMA_URL_TEXT_LIST>", {
-  props: {
-    children: figma.children("Text List Item"),
-    title: figma.boolean("Has Title", {
-      true: figma.children("Text Strong"),
-      false: undefined,
-    }),
-  },
-  example: ({ children, title }) => (
-    <TextList title={title}>{children}</TextList>
-  ),
-});
 figma.connect(TextListItem, "<FIGMA_URL_TEXT_LIST_ITEM>", {
   props: { text: figma.string("Text") },
   example: ({ text }) => <TextListItem>{text}</TextListItem>,
 });
 
-figma.connect(TextList, "<FIGMA_URL_TEXT_LINK_LIST>", {
-  props: {
-    children: figma.children("Text Link List Item"),
-    title: figma.boolean("Has Title", {
-      true: figma.children("Text Strong"),
-      false: undefined,
-    }),
-  },
-  example: ({ children, title }) => (
-    <TextLinkList title={title}>{children}</TextLinkList>
-  ),
-});
 figma.connect(TextListItem, "<FIGMA_URL_TEXT_LINK_LIST_ITEM>", {
   props: { text: figma.string("Text") },
   example: ({ text }) => (

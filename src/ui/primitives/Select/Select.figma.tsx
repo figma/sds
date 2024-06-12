@@ -1,6 +1,6 @@
 import figma from "@figma/code-connect";
 import { Field } from "../Fieldset/Fieldset";
-import { Select, SelectItem } from "./Select";
+import { Select, SelectField, SelectItem } from "./Select";
 
 figma.connect(Select, "<FIGMA_URL_SELECT>", {
   props: {
@@ -29,16 +29,30 @@ figma.connect(Select, "<FIGMA_URL_SELECT>", {
   ),
 });
 
-// TODO: Use Select Field
 figma.connect(Field, "<FIGMA_URL_SELECT_FIELD>", {
   props: {
     isDisabled: figma.enum("State", { Disabled: true }),
-    children: figma.children([
-      "Label",
-      "Select",
-      "Description",
-      "Error Message",
-    ]),
+    description: figma.boolean("Has Description", {
+      true: figma.string("Description"),
+      false: undefined,
+    }),
+    label: figma.boolean("Has Label", {
+      true: figma.string("Label"),
+      false: undefined,
+    }),
+    errorMessage: figma.boolean("Has Error Message", {
+      true: figma.string("Error Message"),
+      false: undefined,
+    }),
+    select: figma.children("Select"),
   },
-  example: ({ children }) => <Field>{children}</Field>,
+  example: ({ description, label, errorMessage, select }) => (
+    <SelectField
+      label={label}
+      description={description}
+      errorMessage={errorMessage}
+    >
+      {select}
+    </SelectField>
+  ),
 });
