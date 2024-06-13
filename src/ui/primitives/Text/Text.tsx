@@ -151,16 +151,25 @@ export function TextListItem({ className, ...props }: TextListItemProps) {
 
 export type TextListProps = Omit<ComponentPropsWithoutRef<"ul">, "title"> & {
   title?: ReactNode;
+  density?: "default" | "tight";
 };
-export function TextList({ className, title, ...props }: TextListProps) {
-  const classNames = clsx(className, "text-list");
-  const list = <ul className={classNames} {...props} />;
-  return title ? (
-    <Flex direction="column" gap="xl">
-      {title} {list}
-    </Flex>
-  ) : (
-    list
+export function TextList({
+  children,
+  className,
+  density = "default",
+  title,
+  ...props
+}: TextListProps) {
+  const classNames = clsx(
+    className,
+    "text-list",
+    `text-list-density-${density}`,
+  );
+  return (
+    <ul className={classNames} {...props}>
+      {title && <li className="text-list-title">{title}</li>}
+      {children}
+    </ul>
   );
 }
 

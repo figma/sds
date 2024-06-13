@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Header } from "ui/compositions";
+import { Footer, Header } from "ui/compositions";
 import { Flex, Section } from "ui/layout";
 
 const meta: Meta<typeof Header> = {
   component: Header,
-  title: "UI Compositions/Headers",
+  title: "UI Compositions/Pages",
   parameters: { layout: "centered" },
 };
 export default meta;
@@ -16,6 +16,7 @@ export const Default: StoryObj<typeof Header> = {
       <Section>
         <Flex container>Something</Flex>
       </Section>
+      <Footer />
     </>
   ),
 };

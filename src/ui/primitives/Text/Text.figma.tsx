@@ -7,6 +7,7 @@ import {
   TextEmphasis,
   TextHeading,
   TextLink,
+  TextLinkList,
   TextListItem,
   TextPrice,
   TextSmall,
@@ -60,6 +61,21 @@ figma.connect(TextSmall, "<FIGMA_URL_TEXT_SMALL>", {
 figma.connect(TextCode, "<FIGMA_URL_TEXT_CODE>", {
   props: { text: figma.string("Text") },
   example: ({ text }) => <TextCode>{text}</TextCode>,
+});
+figma.connect(TextLinkList, "<FIGMA_URL_TEXT_LINK_LIST>", {
+  props: {
+    children: figma.string("Text Link List Item"),
+    title: figma.boolean("Has Title", {
+      true: figma.children("Text Strong"),
+      false: undefined,
+    }),
+    density: figma.enum("Density", { Default: "default", Tight: "tight" }),
+  },
+  example: ({ children, density, title }) => (
+    <TextLinkList density={density} title={title}>
+      {children}
+    </TextLinkList>
+  ),
 });
 figma.connect(TextListItem, "<FIGMA_URL_TEXT_LIST_ITEM>", {
   props: { text: figma.string("Text") },

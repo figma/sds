@@ -1,3 +1,4 @@
+import useMediaQuery from "hooks/useMediaQuery";
 import { IconInstagram, IconLinkedin, IconTwitter, IconYoutube } from "icons";
 import {
   ButtonGroup,
@@ -15,6 +16,8 @@ import {
 
 export type FooterProps = Omit<SectionProps, "variant" | "padding">;
 export function Footer({ className, ...props }: FooterProps) {
+  const { isMobile, isTablet, isTabletDown } = useMediaQuery();
+  const listDensity = isTabletDown ? "tight" : "default";
   return (
     <Section
       elementType="footer"
@@ -25,88 +28,106 @@ export function Footer({ className, ...props }: FooterProps) {
       {...props}
     >
       <Flex wrap type="quarter" gap="xl" container>
-        <FlexItem size="minor">
-          <Flex direction="column" gap="xl" alignSecondary="start">
+        <FlexItem size={isTablet ? "full" : "minor"}>
+          <Flex
+            direction={isTabletDown ? "row" : "column"}
+            alignPrimary="space-between"
+            gap="xl"
+            alignSecondary="start"
+          >
             <FlexItem>
               <Logo />
             </FlexItem>
             <SocialButtons />
           </Flex>
         </FlexItem>
-        <FlexItem size="minor">
-          <TextLinkList title={<TextStrong>Use cases</TextStrong>}>
-            <TextListItem>
-              <TextLink href="#">UI design</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">UX design</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Wireframing</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Diagramming</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Brainstorming</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Online whiteboard</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Team collaboration</TextLink>
-            </TextListItem>
-          </TextLinkList>
-        </FlexItem>
-        <FlexItem size="minor">
-          <TextLinkList title={<TextStrong>Explore</TextStrong>}>
-            <TextListItem>
-              <TextLink href="#">Design</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Prototyping</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Development features</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Design systems</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Collaboration features</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Design process</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">FigJam</TextLink>
-            </TextListItem>
-          </TextLinkList>
-        </FlexItem>
-        <FlexItem size="minor">
-          <TextLinkList title={<TextStrong>Resources</TextStrong>}>
-            <TextListItem>
-              <TextLink href="#">Blog</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Best practices</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Colors</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Color wheel</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Support</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Developers</TextLink>
-            </TextListItem>
-            <TextListItem>
-              <TextLink href="#">Resource library</TextLink>
-            </TextListItem>
-          </TextLinkList>
+        <FlexItem size={isTablet ? "full" : "major"}>
+          <Flex
+            type="auto"
+            gap="xl"
+            wrap
+            alignPrimary="stretch"
+            direction={isMobile ? "column" : "row"}
+          >
+            <TextLinkList
+              density={listDensity}
+              title={<TextStrong>Use cases</TextStrong>}
+            >
+              <TextListItem>
+                <TextLink href="#">UI design</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">UX design</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Wireframing</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Diagramming</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Brainstorming</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Online whiteboard</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Team collaboration</TextLink>
+              </TextListItem>
+            </TextLinkList>
+            <TextLinkList
+              density={listDensity}
+              title={<TextStrong>Explore</TextStrong>}
+            >
+              <TextListItem>
+                <TextLink href="#">Design</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Prototyping</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Development features</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Design systems</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Collaboration features</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Design process</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">FigJam</TextLink>
+              </TextListItem>
+            </TextLinkList>
+            <TextLinkList
+              density={listDensity}
+              title={<TextStrong>Resources</TextStrong>}
+            >
+              <TextListItem>
+                <TextLink href="#">Blog</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Best practices</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Colors</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Color wheel</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Support</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Developers</TextLink>
+              </TextListItem>
+              <TextListItem>
+                <TextLink href="#">Resource library</TextLink>
+              </TextListItem>
+            </TextLinkList>
+          </Flex>
         </FlexItem>
       </Flex>
     </Section>

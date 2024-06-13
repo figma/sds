@@ -64,8 +64,21 @@
 .text-list {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-size-gap-md);
   margin: 0;
+
+  &.text-list-density-default {
+    gap: var(--sds-size-gap-md);
+    .text-list-title {
+      margin-bottom: var(--sds-size-gap-lg);
+    }
+  }
+
+  &.text-list-density-tight {
+    gap: var(--sds-size-gap-sm);
+    .text-list-title {
+      margin-bottom: var(--sds-size-gap-xs);
+    }
+  }
 
   &.text-link-list {
     list-style: none;
