@@ -64,7 +64,7 @@ figma.connect(TextCode, "<FIGMA_URL_TEXT_CODE>", {
 });
 figma.connect(TextLinkList, "<FIGMA_URL_TEXT_LINK_LIST>", {
   props: {
-    children: figma.string("Text Link List Item"),
+    children: figma.children("Text Link List Item"),
     title: figma.boolean("Has Title", {
       true: figma.children("Text Strong"),
       false: undefined,

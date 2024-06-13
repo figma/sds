@@ -7,10 +7,10 @@ import {
   Avatar,
   AvatarGroup,
   Button,
+  ButtonGroup,
   Checkbox,
   CheckboxField,
   Dialog,
-  DialogActions,
   DialogBody,
   DialogDescription,
   DialogTitle,
@@ -224,10 +224,10 @@ export const DialogStory: StoryObj<typeof Dialog> = {
       <DialogBody>
         <InputField name="amount" label="Amount" placeholder="$0.00" />
       </DialogBody>
-      <DialogActions>
+      <ButtonGroup>
         <Button>Refund</Button>
         <Button variant="subtle">Cancel</Button>
-      </DialogActions>
+      </ButtonGroup>
     </Dialog>
   ),
 };

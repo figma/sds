@@ -199,24 +199,3 @@ export function Header({ className, ...props }: HeaderProps) {
     </Section>
   );
 }
-export type VerticalHeaderProps = Omit<SectionProps, "variant" | "padding">;
-export function VerticalHeader({ className, ...props }: VerticalHeaderProps) {
-  return (
-    <Section
-      className="header"
-      elementType="header"
-      variant="subtle"
-      padding="sm"
-      {...props}
-    >
-      <Flex direction="column" alignSecondary="center" gap="md">
-        <Flex alignPrimary="center">
-          <Logo />
-        </Flex>
-        <Flex alignPrimary="center">
-          <HeaderAuth />
-        </Flex>
-      </Flex>
-    </Section>
-  );
-}
