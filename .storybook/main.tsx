@@ -5,7 +5,6 @@ const config: StorybookConfig = {
   stories: [
     "../src/stories/**/*.mdx",
     "../src/stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-    // "../scripts/preview/Figma.stories.tsx", // Ignoring for now
   ],
   addons: [
     "@storybook/addon-links",
@@ -24,6 +23,7 @@ const config: StorybookConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         icons: path.resolve(__dirname, "/src/icons"),
+        hooks: path.resolve(__dirname, "/src/hooks"),
         providers: path.resolve(__dirname, "/src/providers"),
         "ui/compositions": path.resolve(__dirname, "/src/ui/compositions"),
         "ui/layout": path.resolve(__dirname, "/src/ui/layout"),

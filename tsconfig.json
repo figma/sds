@@ -18,6 +18,7 @@
     "baseUrl": "./src",
     "paths": {
       "icons": ["./icons"],
+      "hooks": ["./hooks"],
       "providers": ["./providers"],
       "ui/compositions": ["./ui/compositions"],
       "ui/layout": ["./ui/layout"],

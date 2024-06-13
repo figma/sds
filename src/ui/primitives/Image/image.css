@@ -16,7 +16,7 @@ img.image-loading {
 }
 
 .image-variant-rounded {
-  border-radius: var(--sds-size-radius-xs);
+  border-radius: var(--sds-size-radius-small);
 }
 
 .image-aspect-ratio-1-1 {

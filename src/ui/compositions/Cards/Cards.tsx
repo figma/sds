@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import useMediaQuery from "hooks/useMediaQuery";
 import { ComponentPropsWithoutRef } from "react";
 import {
   Avatar,
@@ -55,10 +56,11 @@ export function Card({
   asset,
   ...props
 }: CardProps) {
+  const { isMobile } = useMediaQuery();
   const classNames = clsx(
     className,
     "card",
-    `card-direction-${direction}`,
+    `card-direction-${isMobile ? "vertical" : direction}`,
     `card-variant-${variant}`,
   );
   return (

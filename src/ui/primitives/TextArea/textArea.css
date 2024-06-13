@@ -5,7 +5,7 @@
   --text-area-placeholder-color: var(--sds-color-text-default-tertiary);
   align-items: center;
   background-color: var(--text-area-background-color);
-  border-radius: var(--sds-size-radius-sm);
+  border-radius: var(--sds-size-radius-base);
   box-shadow: inset 0 0 0 var(--sds-size-border-width)
     var(--text-area-border-color);
   color: var(--text-area-text-color);

@@ -1,11 +1,18 @@
 .navigation {
   display: flex;
-  flex-direction: var(--sds-responsive-direction-column-to-row);
   align-items: center;
   gap: var(--sds-size-gap-sm);
 }
+
+.navigation-direction-row {
+  flex-direction: row;
+}
+.navigation-direction-column {
+  flex-direction: column;
+}
+
 .navigation-item {
-  --border-radius: var(--sds-size-radius-sm);
+  --border-radius: var(--sds-size-radius-base);
   background: transparent;
   border-radius: var(--border-radius);
   color: var(--sds-color-text-default-default);

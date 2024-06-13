@@ -99,9 +99,3 @@ export function DialogModal({
     </RACModalOverlay>
   );
 }
-
-export type DialogActionsProps = React.ComponentPropsWithoutRef<"div">;
-export function DialogActions({ className, ...props }: DialogActionsProps) {
-  const classNames = clsx(className, "dialog-actions");
-  return <div {...props} className={classNames} />;
-}

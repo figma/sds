@@ -1,5 +1,5 @@
 .logo {
-  --border-radius: var(--sds-size-radius-md);
+  --border-radius: var(--sds-size-radius-base);
   border-radius: var(--border-radius);
   position: relative;
 

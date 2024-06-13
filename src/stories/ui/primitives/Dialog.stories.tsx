@@ -3,8 +3,8 @@ import { IconMenu } from "icons";
 import { useState } from "react";
 import {
   Button,
+  ButtonGroup,
   Dialog,
-  DialogActions,
   DialogBody,
   DialogButton,
   DialogDescription,
@@ -40,12 +40,12 @@ export const Default: Story = {
           <DialogBody>
             <InputField label="Amount" name="amount" placeholder="$0.00" />
           </DialogBody>
-          <DialogActions>
+          <ButtonGroup>
             <Button onPress={close}>Refund</Button>
             <Button variant="subtle" onPress={close}>
               Cancel
             </Button>
-          </DialogActions>
+          </ButtonGroup>
         </>
       )}
     </DialogButton>
@@ -72,12 +72,12 @@ export const Controlled: Story = {
             <DialogBody>
               <InputField label="Amount" name="amount" placeholder="$0.00" />
             </DialogBody>
-            <DialogActions>
+            <ButtonGroup>
               <Button onPress={() => setIsOpen(false)}>Refund</Button>
               <Button variant="subtle" onPress={() => setIsOpen(false)}>
                 Cancel
               </Button>
-            </DialogActions>
+            </ButtonGroup>
           </Dialog>
         </DialogModal>
       </>
@@ -123,12 +123,12 @@ export const BodyBleed: Story = {
                 </TableBody>
               </Table>
             </DialogBody>
-            <DialogActions>
+            <ButtonGroup>
               <Button onPress={() => setIsOpen(false)}>Refund</Button>
               <Button variant="subtle" onPress={() => setIsOpen(false)}>
                 Cancel
               </Button>
-            </DialogActions>
+            </ButtonGroup>
           </Dialog>
         </DialogModal>
       </>

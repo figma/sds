@@ -73,7 +73,7 @@
   --avatar-border-radius: var(--sds-size-radius-full);
 }
 .avatar-shape-square {
-  --avatar-border-radius: var(--sds-size-radius-sm);
+  --avatar-border-radius: var(--sds-size-radius-base);
 }
 
 .avatar-size-sm {
@@ -100,7 +100,7 @@
   > .avatar-group-overflow {
     align-items: center;
     background: var(--sds-color-bg-default-secondary);
-    border-radius: var(--sds-size-radius-sm);
+    border-radius: var(--sds-size-radius-base);
     color: var(--sds-color-text-default-secondary);
     display: flex;
     justify-content: center;

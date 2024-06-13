@@ -12,7 +12,7 @@
 }
 
 .text-body-link {
-  --border-radius: var(--sds-size-radius-xs);
+  --border-radius: var(--sds-size-radius-small);
   color: inherit;
   cursor: pointer;
   font: var(--sds-font-body-link);

@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import useMediaQuery from "hooks/useMediaQuery";
 import { IconChevronDown, IconMenu, IconX } from "icons";
 import { AuthenticationContext } from "providers";
 import { useContext, useState } from "react";
@@ -61,15 +62,28 @@ export function HeaderAuth() {
     </>
   );
 
+  const { isTabletDown } = useMediaQuery();
+
+  const navigation = (
+    <Navigation direction={isTabletDown ? "column" : "row"}>
+      <NavigationItem isSelected>Pricing</NavigationItem>
+      <NavigationItem>Solutions</NavigationItem>
+      <NavigationItem>Community</NavigationItem>
+      <NavigationItem>Resources</NavigationItem>
+      <NavigationItem>Pricing</NavigationItem>
+      <NavigationItem>Contact</NavigationItem>
+    </Navigation>
+  );
+
   return (
-    <>
-      <Flex
-        direction="column"
-        gap="md"
-        alignPrimary="center"
-        alignSecondary="center"
-      >
-        <FlexItem className="display-flex-to-none">
+    <Flex
+      direction="column"
+      gap="md"
+      alignPrimary="center"
+      alignSecondary="center"
+    >
+      <FlexItem>
+        {isTabletDown ? (
           <Flex alignPrimary="center">
             <IconButton
               variant="subtle"
@@ -78,18 +92,55 @@ export function HeaderAuth() {
             >
               <IconMenu />
             </IconButton>
+            <DialogModal isOpen={open}>
+              <Dialog className={clsx("navigation-dialog")}>
+                <IconButton
+                  className={clsx("navigation-dialog-close")}
+                  variant="subtle"
+                  aria-label="Close navigation menu"
+                  onPress={() => setOpen(false)}
+                >
+                  <IconX />
+                </IconButton>
+                <Flex direction="column" alignPrimary="space-between">
+                  {navigation}
+                  {currentUser ? (
+                    <Flex alignSecondary="center" gap="sm" direction="column">
+                      <FlexItem>
+                        <Flex alignPrimary="center">
+                          <Avatar
+                            src={currentUser.avatar}
+                            initials={currentUser.name.charAt(0)}
+                          />
+                        </Flex>
+                      </FlexItem>
+                      <FlexItem>
+                        <Flex alignPrimary="center">
+                          <Label>{currentUser.name}</Label>
+                        </Flex>
+                      </FlexItem>
+                      <FlexItem>
+                        <Flex alignPrimary="center">
+                          <Button
+                            variant="subtle"
+                            size="small"
+                            onPress={logout}
+                          >
+                            Log out
+                          </Button>
+                        </Flex>
+                      </FlexItem>
+                    </Flex>
+                  ) : (
+                    <ButtonGroup align="center">{userButtons}</ButtonGroup>
+                  )}
+                </Flex>
+              </Dialog>
+            </DialogModal>
           </Flex>
-        </FlexItem>
-        <FlexItem className="display-none-to-flex">
+        ) : (
           <Flex gap="lg" alignSecondary="center">
-            <Navigation>
-              <NavigationItem isSelected>Pricing</NavigationItem>
-              <NavigationItem>Solutions</NavigationItem>
-              <NavigationItem>Community</NavigationItem>
-              <NavigationItem>Resources</NavigationItem>
-              <NavigationItem>Pricing</NavigationItem>
-              <NavigationItem>Contact</NavigationItem>
-            </Navigation>
+            {navigation}
             {currentUser ? (
               <MenuTrigger>
                 <AnchorOrButton className={clsx("header-auth-avatar-button")}>
@@ -119,57 +170,9 @@ export function HeaderAuth() {
               <ButtonGroup>{userButtons}</ButtonGroup>
             )}
           </Flex>
-        </FlexItem>
-      </Flex>
-      <DialogModal isOpen={open}>
-        <Dialog className={clsx("navigation-dialog")}>
-          <IconButton
-            className={clsx("navigation-dialog-close")}
-            variant="subtle"
-            aria-label="Close navigation menu"
-            onPress={() => setOpen(false)}
-          >
-            <IconX />
-          </IconButton>
-          <Flex direction="column" alignPrimary="space-between">
-            <Navigation>
-              <NavigationItem isSelected>Pricing</NavigationItem>
-              <NavigationItem>Solutions</NavigationItem>
-              <NavigationItem>Community</NavigationItem>
-              <NavigationItem>Resources</NavigationItem>
-              <NavigationItem>Pricing</NavigationItem>
-              <NavigationItem>Contact</NavigationItem>
-            </Navigation>
-            {currentUser ? (
-              <Flex alignSecondary="center" gap="sm" direction="column">
-                <FlexItem>
-                  <Flex alignPrimary="center">
-                    <Avatar
-                      src={currentUser.avatar}
-                      initials={currentUser.name.charAt(0)}
-                    />
-                  </Flex>
-                </FlexItem>
-                <FlexItem>
-                  <Flex alignPrimary="center">
-                    <Label>{currentUser.name}</Label>
-                  </Flex>
-                </FlexItem>
-                <FlexItem>
-                  <Flex alignPrimary="center">
-                    <Button variant="subtle" size="small" onPress={logout}>
-                      Log out
-                    </Button>
-                  </Flex>
-                </FlexItem>
-              </Flex>
-            ) : (
-              <ButtonGroup align="center">{userButtons}</ButtonGroup>
-            )}
-          </Flex>
-        </Dialog>
-      </DialogModal>
-    </>
+        )}
+      </FlexItem>
+    </Flex>
   );
 }
 

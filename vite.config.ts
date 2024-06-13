@@ -9,6 +9,7 @@ export default defineConfig({
     alias: {
       blocks: path.resolve(__dirname, "./src/blocks"),
       icons: path.resolve(__dirname, "./src/icons"),
+      hooks: path.resolve(__dirname, "./src/hooks"),
       providers: path.resolve(__dirname, "./src/providers"),
       ui: path.resolve(__dirname, "./src/ui"),
     },

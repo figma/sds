@@ -7,7 +7,7 @@
 }
 
 .header-auth-avatar-button {
-  --border-radius: var(--sds-size-radius-sm);
+  --border-radius: var(--sds-size-radius-base);
   align-items: center;
   border-radius: var(--border-radius);
   cursor: pointer;
@@ -43,7 +43,7 @@
 
 .navigation-dialog {
   border: none;
-  border-radius: var(--sds-size-radius-none);
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   height: 100%;

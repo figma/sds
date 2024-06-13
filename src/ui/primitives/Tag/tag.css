@@ -29,7 +29,7 @@
 }
 
 .tag {
-  --border-radius: var(--sds-size-radius-xs);
+  --border-radius: var(--sds-size-radius-small);
   align-items: center;
   background-color: var(--tag-background-color);
   border-radius: var(--border-radius);
@@ -174,7 +174,7 @@
   --tag-color: var(--sds-color-text-brand-tertiary);
   --tag-icon: var(--sds-color-icon-brand-tertiary);
   --tag-background-color: var(--sds-color-bg-brand-tertiary);
-  --border-radius: var(--sds-size-radius-sm);
+  --border-radius: var(--sds-size-radius-base);
   cursor: pointer;
   gap: var(--sds-size-gap-sm);
   outline: none;

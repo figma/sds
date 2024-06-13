@@ -2,7 +2,7 @@
   --checkbox-background: var(--sds-color-bg-default-default);
   --checkbox-border: var(--sds-color-border-default-default);
   --checkbox-icon: var(--sds-color-icon-brand-onbrand);
-  --checkbox-border-radius: var(--sds-size-radius-xs);
+  --checkbox-border-radius: var(--sds-size-radius-small);
   align-items: center;
   background: var(--checkbox-background);
   box-shadow: inset 0 0 0 var(--sds-size-border-width) var(--checkbox-border);

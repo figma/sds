@@ -26,7 +26,7 @@
 .dialog {
   --dialog-padding-y: var(--sds-size-padding-xxl);
   background: var(--sds-color-bg-default-default);
-  border-radius: var(--sds-size-radius-md);
+  border-radius: var(--sds-size-radius-base);
   border: var(--sds-size-border-width) solid
     var(--sds-color-border-default-default);
   box-shadow: var(--sds-effects-shadows-drop-shadow-400);
@@ -47,7 +47,7 @@
 
 .dialog-title,
 .dialog-description,
-.dialog-actions,
+.dialog .button-group,
 .dialog-body {
   padding-left: var(--sds-size-padding-xxl);
   padding-right: var(--sds-size-padding-xxl);
@@ -59,10 +59,7 @@
   --table-gutter-inset: var(--sds-size-padding-xxl);
 }
 
-.dialog-actions {
-  display: flex;
-  flex-direction: var(--sds-responsive-direction-column-to-row-reverse);
-  gap: var(--sds-size-gap-lg);
+.dialog .button-group {
   margin-top: var(--sds-size-gap-xl);
 }
 

@@ -1,7 +1,7 @@
 .list-box {
   --list-box-item-template-areas: "label" "description";
   background: var(--sds-color-bg-default-default);
-  border-radius: var(--sds-size-radius-sm);
+  border-radius: var(--sds-size-radius-base);
   box-shadow:
     0 0 0 var(--sds-size-border-width) var(--sds-color-border-default-default),
     var(--sds-effects-shadows-drop-shadow-400);
@@ -62,7 +62,7 @@
 
   align-items: center;
   background-color: transparent;
-  border-radius: var(--sds-size-radius-sm);
+  border-radius: var(--sds-size-radius-base);
   color: var(--list-box-label-color);
   column-gap: var(--sds-size-gap-sm);
   cursor: pointer;

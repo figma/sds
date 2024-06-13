@@ -220,6 +220,113 @@
     "fontStyle": "normal"
   },
   {
+    "type": "TEXT",
+    "name": ".Utilities/Component notes/Bold",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11196"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11201"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11186"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "key": "41bfc984ba768095400f8a022edd454968162c94",
+    "name": "Drop Shadow/300",
+    "styleType": "EFFECT",
+    "remote": false,
+    "description": "",
+    "type": "EFFECT",
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.05098039284348488,
+          "a": 0.05000000074505806
+        },
+        "blendMode": "NORMAL",
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "radius": 4,
+        "spread": -1,
+        "showShadowBehindNode": false,
+        "boundVariables": {
+          "radius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11282"
+          },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11287"
+          },
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11234"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
+          "offsetY": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11282"
+          }
+        }
+      },
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "color": {
+          "r": 0.0470588244497776,
+          "g": 0.0470588244497776,
+          "b": 0.05098039284348488,
+          "a": 0.10000000149011612
+        },
+        "blendMode": "NORMAL",
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "radius": 4,
+        "spread": -1,
+        "showShadowBehindNode": false,
+        "boundVariables": {
+          "radius": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11282"
+          },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11287"
+          },
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11235"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
+          "offsetY": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11282"
+          }
+        }
+      }
+    ]
+  },
+  {
     "key": "2d01cd4dd5f75236392138f6c1e10e313e217abf",
     "name": "Drop Shadow/200",
     "styleType": "EFFECT",
@@ -351,96 +458,6 @@
           "offsetY": {
             "type": "VARIABLE_ALIAS",
             "id": "VariableID:9:11281"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "key": "41bfc984ba768095400f8a022edd454968162c94",
-    "name": "Drop Shadow/300",
-    "styleType": "EFFECT",
-    "remote": false,
-    "description": "",
-    "type": "EFFECT",
-    "effects": [
-      {
-        "type": "DROP_SHADOW",
-        "visible": true,
-        "color": {
-          "r": 0.0470588244497776,
-          "g": 0.0470588244497776,
-          "b": 0.05098039284348488,
-          "a": 0.05000000074505806
-        },
-        "blendMode": "NORMAL",
-        "offset": {
-          "x": 0,
-          "y": 4
-        },
-        "radius": 4,
-        "spread": -1,
-        "showShadowBehindNode": false,
-        "boundVariables": {
-          "radius": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11282"
-          },
-          "spread": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11287"
-          },
-          "color": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11234"
-          },
-          "offsetX": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11280"
-          },
-          "offsetY": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11282"
-          }
-        }
-      },
-      {
-        "type": "DROP_SHADOW",
-        "visible": true,
-        "color": {
-          "r": 0.0470588244497776,
-          "g": 0.0470588244497776,
-          "b": 0.05098039284348488,
-          "a": 0.10000000149011612
-        },
-        "blendMode": "NORMAL",
-        "offset": {
-          "x": 0,
-          "y": 4
-        },
-        "radius": 4,
-        "spread": -1,
-        "showShadowBehindNode": false,
-        "boundVariables": {
-          "radius": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11282"
-          },
-          "spread": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11287"
-          },
-          "color": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11235"
-          },
-          "offsetX": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11280"
-          },
-          "offsetY": {
-            "type": "VARIABLE_ALIAS",
-            "id": "VariableID:9:11282"
           }
         }
       }
@@ -1004,7 +1021,7 @@
   },
   {
     "key": "c27c483297e637a9136a29b09a92360a84ba293d",
-    "name": "Blur/Background",
+    "name": "Blur/Glass",
     "styleType": "EFFECT",
     "remote": false,
     "description": "",
@@ -1027,13 +1044,6 @@
     "key": "b6cb6cc3526049c20430b096b6ed65c5eba1c246",
     "name": "Image Placeholder",
     "styleType": "FILL",
-    "remote": false,
-    "description": ""
-  },
-  {
-    "key": "6a0b0b053a6eb9f72ad90ddd19010c5060f6c3ae",
-    "name": ".Utilities/Component notes/Bold",
-    "styleType": "TEXT",
     "remote": false,
     "description": ""
   }

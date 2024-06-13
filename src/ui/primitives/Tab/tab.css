@@ -3,7 +3,7 @@
 .tab {
   --color: var(--sds-color-text-default-secondary);
   --border-color: var(--sds-color-border-default-default);
-  --border-radius: var(--sds-size-radius-xs);
+  --border-radius: var(--sds-size-radius-small);
   padding: var(--sds-size-padding-xs) var(--sds-size-padding-md);
   border-bottom: solid var(--sds-size-border-width) var(--border-color);
   border-radius: var(--border-radius) var(--border-radius) 0 0;

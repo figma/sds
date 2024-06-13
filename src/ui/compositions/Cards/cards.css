@@ -1,5 +1,5 @@
 .card {
-  --border-radius: var(--sds-size-radius-sm);
+  --border-radius: var(--sds-size-radius-base);
   background: var(--sds-color-bg-default-default);
   border-radius: var(--border-radius);
   gap: var(--sds-size-gap-xl);
@@ -11,7 +11,7 @@
   }
 
   &.card-direction-horizontal {
-    flex-direction: var(--sds-responsive-direction-column-to-row);
+    flex-direction: row;
   }
 
   &.card-variant-stroke {
