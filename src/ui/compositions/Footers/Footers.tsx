@@ -22,17 +22,17 @@ export function Footer({ className, ...props }: FooterProps) {
     <Section
       elementType="footer"
       variant="stroke"
-      paddingTop="md"
-      paddingBottom="lg"
+      paddingTop="1600""
+      paddingBottom="4000""
       style={{ marginTop: "auto" }}
       {...props}
     >
-      <Flex wrap type="quarter" gap="xl" container>
+      <Flex wrap type="quarter" gap="600" container>
         <FlexItem size={isTablet ? "full" : "minor"}>
           <Flex
             direction={isTabletDown ? "row" : "column"}
             alignPrimary="space-between"
-            gap="xl"
+            gap="600"
             alignSecondary="start"
           >
             <FlexItem>
@@ -44,7 +44,7 @@ export function Footer({ className, ...props }: FooterProps) {
         <FlexItem size={isTablet ? "full" : "major"}>
           <Flex
             type="auto"
-            gap="xl"
+            gap="600"
             wrap
             alignPrimary="stretch"
             direction={isMobile ? "column" : "row"}

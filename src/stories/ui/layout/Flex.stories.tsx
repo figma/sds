@@ -24,17 +24,17 @@ const renderChild = (text: string) => (
 
 export const Default: StoryObj<typeof Flex> = {
   args: {
-    gap: "sm",
+    gap: "200",
     wrap: true,
   },
   argTypes: {
     gap: {
       control: { type: "select" },
-      options: [undefined, "xs", "sm", "md", "lg", "xl"],
+      options: [undefined, "100", "200", "300", "400", "600", "800"],
     },
   },
   render: (args) => (
-    <Flex direction="column" gap="xl" container>
+    <Flex direction="column" gap="600" container>
       <Flex {...args} type="quarter">
         <FlexItem size="full">{renderChild("full")}</FlexItem>
         <FlexItem size="major">{renderChild("major")}</FlexItem>

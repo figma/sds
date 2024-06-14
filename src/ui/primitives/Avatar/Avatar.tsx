@@ -4,6 +4,7 @@ import {
   AnchorOrButton,
   type AnchorOrButtonProps,
 } from "ui/utils/AnchorOrButton";
+import { Text, TextStrong } from "../Text/Text";
 import "./avatar.css";
 
 type SharedAvatarProps = {
@@ -11,7 +12,7 @@ type SharedAvatarProps = {
   square?: boolean;
   initials?: string;
   alt?: string;
-  size?: "sm" | "md" | "lg";
+  size?: "small" | "medium" | "large";
 };
 
 function renderInitialsAndImage({
@@ -53,7 +54,7 @@ export function Avatar({
   square = false,
   initials,
   alt = "",
-  size = "md",
+  size = "medium",
   ...props
 }: AvatarProps) {
   const classNames = clsx(
@@ -79,7 +80,7 @@ export const AvatarButton = React.forwardRef(function AvatarButton(
     square = false,
     initials,
     alt = "",
-    size = "md",
+    size = "medium",
     ...props
   }: AvatarButtonProps,
   ref: React.ForwardedRef<HTMLElement>,
@@ -99,30 +100,37 @@ export const AvatarButton = React.forwardRef(function AvatarButton(
   );
 });
 
-export type AvatarBlockProps = React.ComponentPropsWithoutRef<"div">;
+export type AvatarBlockProps = React.ComponentPropsWithoutRef<"div"> & {
+  title: string;
+  description?: string;
+};
 export const AvatarBlock = ({
   className,
   children,
+  title,
+  description,
   ...props
-}: AvatarGroupProps) => {
+}: AvatarBlockProps) => {
   const classNames = clsx(className, "avatar-block");
   return (
     <div className={classNames} {...props}>
       {children}
+      <TextStrong>{title}</TextStrong>
+      {description && <Text>{description}</Text>}
     </div>
   );
 };
 
 export type AvatarGroupProps = React.ComponentPropsWithoutRef<"div"> & {
   max?: number;
-  spacing?: "xs" | "sm" | "md";
+  spacing?: "100" | "200" | "300";
   overlap?: boolean;
 };
 export const AvatarGroup = ({
   className,
   children,
   max = 3,
-  spacing = "sm",
+  spacing = "200",
   overlap,
   ...props
 }: AvatarGroupProps) => {

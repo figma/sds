@@ -35,15 +35,15 @@ img.image-loading {
   aspect-ratio: auto;
 }
 
-.image-size-sm {
+.image-size-small {
   --image-size-height: 10rem;
   height: var(--image-size-height);
 }
-.image-size-md {
+.image-size-medium {
   --image-size-height: 20rem;
   height: var(--image-size-height);
 }
-.image-size-lg {
+.image-size-large {
   --image-size-height: 30rem;
   height: var(--image-size-height);
 }

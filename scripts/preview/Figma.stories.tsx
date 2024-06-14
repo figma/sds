@@ -76,12 +76,15 @@ export const AvatarStory: StoryObj<
   }
 > = {
   args: {
-    size: "md",
+    size: "medium",
     shape: "square",
     type: "image",
   },
   argTypes: {
-    size: { control: { type: "select" }, options: ["sm", "md", "lg"] },
+    size: {
+      control: { type: "select" },
+      options: ["small", "medium", "large"],
+    },
     shape: { control: { type: "select" }, options: ["square", "circle"] },
     type: { control: { type: "select" }, options: ["initials", "image"] },
   },
@@ -108,7 +111,7 @@ export const AvatarGroupStory: StoryObj<
   },
   render: ({ spacing, ...args }) => (
     <AvatarGroup
-      spacing={spacing === "spaced" ? "xs" : "sm"}
+      spacing={spacing === "spaced" ? "100" : "200"}
       overlap={spacing === "overlap"}
       max={3}
       {...args}

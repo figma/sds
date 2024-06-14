@@ -7,8 +7,6 @@ import {
   AvatarProps,
   Button,
   ButtonGroup,
-  Description,
-  Label,
   Text,
   TextHeading,
   TextList,
@@ -207,10 +205,8 @@ export function TestimonialCard({
   return (
     <Card {...props} direction="vertical" variant="stroke">
       <TextHeading>{heading}</TextHeading>
-      <AvatarBlock>
+      <AvatarBlock title={name} description={`@${username}`}>
         <Avatar size="lg" src={src} initials={initials} />
-        <Label>{name}</Label>
-        <Description>@{username}</Description>
       </AvatarBlock>
     </Card>
   );

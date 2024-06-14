@@ -28,7 +28,7 @@ export const Default: Story = {
   args: {},
   render: () => {
     return (
-      <Flex direction="column" gap="lg">
+      <Flex direction="column" gap="400">
         <TextTitleHero>TextTitleHero</TextTitleHero>
         <TextTitlePage>TextTitlePage</TextTitlePage>
         <TextSubtitle>TextSubtitle</TextSubtitle>

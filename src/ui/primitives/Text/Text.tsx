@@ -197,7 +197,7 @@ export function TextContentHeading({
     `text-align-${align}`,
   );
   return (
-    <Flex direction="column" gap="sm" className={classNames} {...props}>
+    <Flex direction="column" gap="200" className={classNames} {...props}>
       <TextHeading>{heading}</TextHeading>
       {subheading && <TextSubheading>{subheading}</TextSubheading>}
     </Flex>
@@ -218,7 +218,7 @@ export function TextContentTitle({
 }: TextContentTitleProps) {
   const classNames = clsx(className, "text-content-title");
   return (
-    <Flex direction="column" gap="sm" className={classNames} {...props}>
+    <Flex direction="column" gap="200" className={classNames} {...props}>
       <TextTitleHero className={`text-align-${align}`}>{title}</TextTitleHero>
       {subtitle && (
         <TextSubtitle className={`text-align-${align}`}>

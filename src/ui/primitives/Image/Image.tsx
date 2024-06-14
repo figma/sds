@@ -5,7 +5,7 @@ import "./image.css";
 export type ImageProps = Omit<ComponentPropsWithoutRef<"img">, "alt"> & {
   alt: string;
   aspectRatio?: "1-1" | "16-9" | "4-3" | "fill" | "natural";
-  size?: "sm" | "md" | "lg" | "fill" | "natural";
+  size?: "small" | "medium" | "large" | "fill" | "natural";
   variant?: "default" | "rounded";
 };
 export function Image({

@@ -75,22 +75,22 @@
   &.flex-wrap {
     flex-wrap: wrap;
   }
-  &.flex-gap-xs {
+  &.flex-gap-100 {
     --flex-gap: var(--sds-size-space-100);
   }
-  &.flex-gap-sm {
+  &.flex-gap-200 {
     --flex-gap: var(--sds-size-space-200);
   }
-  &.flex-gap-md {
+  &.flex-gap-300 {
     --flex-gap: var(--sds-size-space-300);
   }
-  &.flex-gap-lg {
+  &.flex-gap-400 {
     --flex-gap: var(--sds-size-space-400);
   }
-  &.flex-gap-xl {
+  &.flex-gap-600 {
     --flex-gap: var(--sds-size-space-600);
   }
-  &.flex-gap-xxl {
+  &.flex-gap-800 {
     --flex-gap: var(--sds-size-space-800);
   }
 }

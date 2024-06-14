@@ -6,15 +6,15 @@ export type SectionProps = ComponentPropsWithoutRef<
   "section" | "header" | "footer"
 > & {
   elementType?: "section" | "header" | "footer";
-  padding?: "sm" | "md" | "lg";
-  paddingTop?: "sm" | "md" | "lg";
-  paddingBottom?: "sm" | "md" | "lg";
+  padding?: "800" | "1600" | "4000";
+  paddingTop?: "800" | "1600" | "4000";
+  paddingBottom?: "800" | "1600" | "4000";
   variant?: "brand" | "secondary" | "stroke" | "subtle";
 };
 export function Section({
   className,
   elementType = "section",
-  padding = "md",
+  padding = "1600",
   paddingBottom,
   paddingTop,
   variant = "subtle",

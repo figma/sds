@@ -6,7 +6,13 @@ export type FlexProps = ComponentPropsWithoutRef<"div"> & {
   alignPrimary?: "start" | "end" | "center" | "stretch" | "space-between";
   alignSecondary?: "start" | "end" | "center" | "stretch" | "space-between";
   direction?: "row" | "row-reverse" | "column" | "column-reverse";
-  gap?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
+  gap?:
+    | "100" // xs
+    | "200" // sm
+    | "300" // md
+    | "400" // lg
+    | "600" // xl
+    | "800"; // xxl;
   type?: "quarter" | "third" | "half" | "auto";
   container?: boolean;
   wrap?: boolean;

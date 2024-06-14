@@ -8,7 +8,6 @@ import {
   AvatarBlock,
   Button,
   ButtonGroup,
-  Description,
   Dialog,
   DialogModal,
   Flex,
@@ -78,7 +77,7 @@ export function HeaderAuth() {
   return (
     <Flex
       direction="column"
-      gap="md"
+      gap="300"
       alignPrimary="center"
       alignSecondary="center"
     >
@@ -105,7 +104,7 @@ export function HeaderAuth() {
                 <Flex direction="column" alignPrimary="space-between">
                   {navigation}
                   {currentUser ? (
-                    <Flex alignSecondary="center" gap="sm" direction="column">
+                    <Flex alignSecondary="center" gap="200" direction="column">
                       <FlexItem>
                         <Flex alignPrimary="center">
                           <Avatar
@@ -139,7 +138,7 @@ export function HeaderAuth() {
             </DialogModal>
           </Flex>
         ) : (
-          <Flex gap="lg" alignSecondary="center">
+          <Flex gap="400" alignSecondary="center">
             {navigation}
             {currentUser ? (
               <MenuTrigger>
@@ -153,13 +152,14 @@ export function HeaderAuth() {
                 <MenuPopover placement="bottom right">
                   <Menu>
                     <MenuItem>
-                      <AvatarBlock>
+                      <AvatarBlock
+                        title={currentUser.name}
+                        description="View profile"
+                      >
                         <Avatar
                           src={currentUser.avatar}
                           initials={currentUser.name.charAt(0)}
                         />
-                        <Label>{currentUser.name}</Label>
-                        <Description>View profile</Description>
                       </AvatarBlock>
                     </MenuItem>
                     <MenuItem onAction={logout}>Log out</MenuItem>
@@ -183,7 +183,7 @@ export function Header({ className, ...props }: HeaderProps) {
       className="header"
       elementType="header"
       variant="stroke"
-      padding="sm"
+      padding="800"
       {...props}
     >
       <Flex container alignPrimary="space-between" alignSecondary="center">
@@ -191,7 +191,7 @@ export function Header({ className, ...props }: HeaderProps) {
           <Logo />
         </FlexItem>
         <FlexItem size="major">
-          <Flex gap="xl" alignPrimary="end" alignSecondary="center">
+          <Flex gap="600" alignPrimary="end" alignSecondary="center">
             <HeaderAuth />
           </Flex>
         </FlexItem>

@@ -7,7 +7,7 @@ function App() {
   return (
     <AuthenticationProvider>
       <Header />
-      <Section padding="lg">
+      <Section padding="4000">
         <Flex direction="row" alignPrimary="center" wrap container>
           <TextContentTitle align="center" title="Title" subtitle="Subtitle" />
         </Flex>

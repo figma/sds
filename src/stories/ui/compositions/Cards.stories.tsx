@@ -53,7 +53,7 @@ export const Default: StoryObj<
           <Image
             alt="A nice image"
             aspectRatio="1-1"
-            size="sm"
+            size="small"
             src="https://placehold.co/500"
           />
         ) : undefined
@@ -84,7 +84,7 @@ export const BlockPricingCard: StoryObj<typeof PricingCard> = {
     <Flex
       container
       wrap
-      gap="lg"
+      gap="400"
       type="quarter"
       alignPrimary="center"
       direction="row"
@@ -105,7 +105,7 @@ export const BlockPricingCard: StoryObj<typeof PricingCard> = {
 
 export const BlockProductInfoCard: StoryObj<typeof ProductInfoCard> = {
   render: () => (
-    <Flex container wrap type="half" gap="lg" direction="row">
+    <Flex container wrap type="half" gap="400" direction="row">
       <ProductInfoCard
         asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
         heading="Product"
@@ -131,7 +131,7 @@ export const BlockTestimonialCard: StoryObj<typeof TestimonialCard> = {
       wrap
       type="third"
       alignPrimary="stretch"
-      gap="lg"
+      gap="400"
       direction="row"
     >
       <TestimonialCard

@@ -1,14 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import "react";
 import { Flex } from "ui/layout";
-import {
-  Avatar,
-  AvatarBlock,
-  AvatarButton,
-  AvatarGroup,
-  Description,
-  Label,
-} from "ui/primitives";
+import { Avatar, AvatarBlock, AvatarButton, AvatarGroup } from "ui/primitives";
 
 const meta: Meta<typeof Avatar> = {
   component: Avatar,
@@ -22,10 +15,10 @@ type GroupStory = StoryObj<typeof AvatarGroup>;
 export const Image: Story = {
   args: {},
   render: () => (
-    <Flex alignPrimary="center" gap="sm" alignSecondary="center">
-      <Avatar src="https://placehold.co/200" size="sm" />
+    <Flex alignPrimary="center" gap="200" alignSecondary="center">
+      <Avatar src="https://placehold.co/200" size="small" />
       <Avatar src="https://placehold.co/200" />
-      <Avatar src="https://placehold.co/200" square size="lg" />
+      <Avatar src="https://placehold.co/200" square size="large" />
     </Flex>
   ),
 };
@@ -33,10 +26,10 @@ export const Image: Story = {
 export const Initials: Story = {
   args: {},
   render: () => (
-    <Flex alignPrimary="center" gap="sm" alignSecondary="center">
-      <Avatar initials="JA" size="sm" />
-      <Avatar initials="JA" size="md" />
-      <Avatar initials="JA" square size="lg" />
+    <Flex alignPrimary="center" gap="200" alignSecondary="center">
+      <Avatar initials="JA" size="small" />
+      <Avatar initials="JA" size="medium" />
+      <Avatar initials="JA" square size="large" />
     </Flex>
   ),
 };
@@ -44,30 +37,30 @@ export const Initials: Story = {
 export const Buttons: Story = {
   args: {},
   render: () => (
-    <Flex alignPrimary="center" gap="sm" alignSecondary="center">
-      <AvatarButton square size="sm" src="https://placehold.co/200" />
+    <Flex alignPrimary="center" gap="200" alignSecondary="center">
+      <AvatarButton square size="small" src="https://placehold.co/200" />
       <AvatarButton square src="https://placehold.co/200" />
-      <AvatarButton size="lg" src="https://placehold.co/200" />
+      <AvatarButton size="large" src="https://placehold.co/200" />
     </Flex>
   ),
 };
 
 export const Group: GroupStory = {
   args: {
-    spacing: "sm",
+    spacing: "200",
     overlap: false,
     max: 3,
   },
   argTypes: {
     spacing: {
-      options: ["sm", "md", "xs"],
+      options: ["100", "200", "300"],
       control: {
         type: "select",
       },
     },
   },
   render: (args) => (
-    <Flex alignPrimary="center" gap="sm" alignSecondary="center">
+    <Flex alignPrimary="center" gap="200" alignSecondary="center">
       <AvatarGroup {...args}>
         <Avatar initials="JA" />
         <Avatar src="https://placehold.co/200" />
@@ -83,10 +76,8 @@ export const Group: GroupStory = {
 export const Block: Story = {
   args: {},
   render: () => (
-    <AvatarBlock>
-      <AvatarButton square size="lg" src="https://placehold.co/200" />
-      <Label>Full Name</Label>
-      <Description>@fullname420</Description>
+    <AvatarBlock title="Full Name" description="@fullname420">
+      <AvatarButton square size="large" src="https://placehold.co/200" />
     </AvatarBlock>
   ),
 };

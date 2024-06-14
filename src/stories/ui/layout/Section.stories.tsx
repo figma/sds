@@ -10,13 +10,13 @@ export default meta;
 
 export const Default: StoryObj<typeof Section> = {
   args: {
-    padding: "md",
+    padding: "1600",
     variant: "subtle",
   },
   argTypes: {
     padding: {
       control: { type: "select" },
-      options: ["sm", "md", "lg"],
+      options: ["800", "1600", "4000"],
     },
     variant: {
       control: { type: "select" },
@@ -26,17 +26,17 @@ export const Default: StoryObj<typeof Section> = {
   render: (args) => (
     <>
       <Section {...args}>
-        <Flex container alignPrimary="center" gap="xl">
+        <Flex container alignPrimary="center" gap="600">
           Hello there
         </Flex>
       </Section>
       <Section {...args} variant="secondary">
-        <Flex container alignPrimary="center" gap="xl">
+        <Flex container alignPrimary="center" gap="600">
           Hello there
         </Flex>
       </Section>
       <Section {...args}>
-        <Flex container alignPrimary="center" gap="xl">
+        <Flex container alignPrimary="center" gap="600">
           Hello there
         </Flex>
       </Section>

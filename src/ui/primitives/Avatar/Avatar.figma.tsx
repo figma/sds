@@ -1,12 +1,11 @@
 import figma from "@figma/code-connect";
-import { Description, Label } from "../Fieldset/Fieldset";
 import { Avatar, AvatarBlock, AvatarGroup } from "./Avatar";
 
 figma.connect(AvatarGroup, "<FIGMA_URL_AVATAR_GROUP>", {
   props: {
     spacing: figma.enum("Spacing", {
-      Overlap: "sm",
-      Spaced: "xs",
+      Overlap: "200",
+      Spaced: "100",
     }),
     overlap: figma.enum("Spacing", {
       Overlap: true,
@@ -26,11 +25,11 @@ figma.connect(Avatar, "<FIGMA_URL_AVATAR>", {
       Square: true,
     }),
     initials: figma.enum("Type", {
-      Initials: figma.string("Initials"),
+      Initial: figma.string("Initials"),
     }),
     size: figma.enum("Size", {
-      Large: "lg",
-      Small: "sm",
+      Large: "large",
+      Small: "small",
     }),
     src: figma.enum("Type", {
       Image: "https://placehold.co/80",
@@ -48,10 +47,8 @@ figma.connect(AvatarBlock, "<FIGMA_URL_AVATAR_BLOCK>", {
     avatar: figma.children("Avatar"),
   },
   example: ({ title, description, avatar }) => (
-    <AvatarBlock>
+    <AvatarBlock title={title} description={description}>
       {avatar}
-      <Label>{title}</Label>
-      <Description>{description}</Description>
     </AvatarBlock>
   ),
 });
