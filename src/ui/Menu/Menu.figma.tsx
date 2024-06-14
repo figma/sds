@@ -27,18 +27,6 @@ figma.connect(MenuHeading, "<FIGMA_URL_MENU_HEADING>", {
   example: ({ heading }) => <MenuHeading>{heading}</MenuHeading>,
 });
 
-figma.connect(MenuDescription, "<FIGMA_URL_MENU_DESCRIPTION>", {
-  props: { description: figma.string("Description") },
-  example: ({ description }) => (
-    <MenuDescription>{description}</MenuDescription>
-  ),
-});
-
-figma.connect(MenuLabel, "<FIGMA_URL_MENU_LABEL>", {
-  props: { label: figma.string("Label") },
-  example: ({ label }) => <MenuLabel>{label}</MenuLabel>,
-});
-
 figma.connect(MenuShortcut, "<FIGMA_URL_MENU_SHORTCUT>", {
   props: { shortcut: figma.string("Shortcut") },
   example: ({ shortcut }) => <MenuShortcut>{shortcut}</MenuShortcut>,
