@@ -1,7 +1,7 @@
+import { Footer, Header } from "compositions";
+import { Flex, Section } from "layout";
 import { AuthenticationProvider } from "providers";
-import { Footer, Header } from "ui/compositions";
-import { Flex, Section } from "ui/layout";
-import { TextContentTitle } from "ui/primitives";
+import { TextContentTitle } from "ui";
 
 function App() {
   return (

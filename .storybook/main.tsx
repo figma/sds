@@ -22,12 +22,13 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        icons: path.resolve(__dirname, "/src/icons"),
+        compositions: path.resolve(__dirname, "/src/compositions"),
         hooks: path.resolve(__dirname, "/src/hooks"),
+        icons: path.resolve(__dirname, "/src/icons"),
+        layout: path.resolve(__dirname, "/src/layout"),
         providers: path.resolve(__dirname, "/src/providers"),
-        "ui/compositions": path.resolve(__dirname, "/src/ui/compositions"),
-        "ui/layout": path.resolve(__dirname, "/src/ui/layout"),
-        "ui/primitives": path.resolve(__dirname, "/src/ui/primitives"),
+        ui: path.resolve(__dirname, "/src/ui"),
+        utils: path.resolve(__dirname, "/src/utils"),
       };
     }
 

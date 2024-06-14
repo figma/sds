@@ -7,11 +7,13 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      blocks: path.resolve(__dirname, "./src/blocks"),
-      icons: path.resolve(__dirname, "./src/icons"),
+      compositions: path.resolve(__dirname, "./src/compositions"),
       hooks: path.resolve(__dirname, "./src/hooks"),
+      icons: path.resolve(__dirname, "./src/icons"),
+      layout: path.resolve(__dirname, "./src/layout"),
       providers: path.resolve(__dirname, "./src/providers"),
       ui: path.resolve(__dirname, "./src/ui"),
+      utils: path.resolve(__dirname, "./src/utils"),
     },
   },
   server: {

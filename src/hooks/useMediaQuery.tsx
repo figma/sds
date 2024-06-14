@@ -31,7 +31,7 @@ const mediaQueryKeys: MediaQueryKey[] = [
 
 type MediaQueryMatches = { [K in MediaQueryKey]: boolean };
 
-const useMediaQuery = () => {
+export const useMediaQuery = () => {
   const [matches, setMatches] = useState<MediaQueryMatches>({
     isDesktop: false,
     isTablet: false,
@@ -64,5 +64,3 @@ const useMediaQuery = () => {
 
   return matches;
 };
-
-export default useMediaQuery;

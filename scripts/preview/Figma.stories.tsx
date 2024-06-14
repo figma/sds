@@ -21,7 +21,7 @@ import {
   Text,
   TextAreaField,
   TextSubtitle,
-} from "ui/primitives";
+} from "ui";
 
 function Figma() {
   return <>Figma</>;
