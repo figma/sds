@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { useMediaQuery } from "hooks";
-import { ComponentPropsWithoutRef } from "react";
+import { IconStar } from "icons";
+import { Flex } from "layout";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 import {
   Avatar,
   AvatarBlock,
@@ -11,12 +13,18 @@ import {
   TextHeading,
   TextList,
   TextListItem,
+  TextSmall,
+  TextStrong,
   TextTitlePage,
 } from "ui";
 import { AnchorOrButton, AnchorOrButtonProps } from "utils";
 import "./cards.css";
 
 export type CardProps = ComponentPropsWithoutRef<"div"> & {
+  /**
+   * The alignment of the card content.
+   */
+  align?: "start" | "center" | "end";
   /**
    * The initial direction of the card.
    * All cards become vertical on mobile.
@@ -46,6 +54,7 @@ export type CardProps = ComponentPropsWithoutRef<"div"> & {
  * The basic card generic component that can be used to create vanity card components.
  */
 export function Card({
+  align = "start",
   children,
   className,
   direction = "vertical",
@@ -58,6 +67,7 @@ export function Card({
   const classNames = clsx(
     className,
     "card",
+    `card-align-${align}`,
     `card-direction-${isMobile ? "vertical" : direction}`,
     `card-variant-${variant}`,
   );
@@ -108,19 +118,23 @@ export function PricingCard({
 }: PricingCardProps) {
   return (
     <Card {...props} direction="vertical" variant="stroke">
-      <TextHeading>{heading}</TextHeading>
-      <TextTitlePage>
-        ${price}
-        <Text elementType="span"> / per month</Text>
-      </TextTitlePage>
+      <Flex direction="column" gap="200">
+        <TextHeading>{heading}</TextHeading>
+        <TextTitlePage>
+          ${price}
+          <Text elementType="span"> / per month</Text>
+        </TextTitlePage>
+      </Flex>
       <TextList>
         {items.map((item) => (
           <TextListItem key={item}>{item}</TextListItem>
         ))}
       </TextList>
-      <ButtonGroup align="justify">
-        <Button onPress={onAction}>{action}</Button>
-      </ButtonGroup>
+      <Flex alignPrimary="stretch">
+        <ButtonGroup align="justify">
+          <Button onPress={onAction}>{action}</Button>
+        </ButtonGroup>
+      </Flex>
     </Card>
   );
 }
@@ -135,13 +149,9 @@ export type ProductInfoCardProps = Pick<CardProps, "asset"> & {
    */
   price: number;
   /**
-   * The text labeling the action button
+   * The description of the product
    */
-  action: string;
-  /**
-   * The action for the button
-   */
-  onAction: () => void;
+  description: string;
 };
 
 /**
@@ -151,19 +161,105 @@ export function ProductInfoCard({
   asset,
   heading,
   price,
-  action,
-  onAction,
+  description,
   ...props
 }: ProductInfoCardProps) {
   return (
-    <Card {...props} direction="horizontal" variant="stroke" asset={asset}>
-      <TextHeading>{heading}</TextHeading>
-      <TextTitlePage>${price}</TextTitlePage>
-      <ButtonGroup align="start">
-        <Button variant="neutral" onPress={onAction}>
-          {action}
-        </Button>
-      </ButtonGroup>
+    <Card {...props} direction="vertical" variant="stroke" asset={asset}>
+      <Flex direction="column" gap="200">
+        <Text>{heading}</Text>
+        <TextStrong>${price}</TextStrong>
+        <TextSmall>{description}</TextSmall>
+      </Flex>
+    </Card>
+  );
+}
+
+export type ReviewCardProps = {
+  /**
+   * The number of stars (1-5)
+   */
+  stars: number;
+  /**
+   * The title of the review
+   */
+  title: string;
+  /**
+   * The review
+   */
+  body: string;
+  /**
+   * The name of the reviewer
+   */
+  name: string;
+  /**
+   * The date of the review
+   */
+  date: string;
+  /**
+   * The avatar src
+   */
+  src?: AvatarProps["src"];
+};
+
+/**
+ * A card demonstrating a statistic or metric
+ */
+export function ReviewCard({
+  stars,
+  title,
+  body,
+  name,
+  date,
+  src,
+
+  ...props
+}: ReviewCardProps) {
+  return (
+    <Card {...props} direction="vertical" variant="stroke">
+      <Flex gap="100">{new Array(stars).fill(<IconStar />)}</Flex>
+      <Flex direction="column" gap="100">
+        <TextHeading>{title}</TextHeading>
+        <TextSmall>{body}</TextSmall>
+      </Flex>
+      <AvatarBlock title={name} description={date}>
+        <Avatar size="large" src={src} initials={name.charAt(0)} />
+      </AvatarBlock>
+    </Card>
+  );
+}
+
+export type StatsCardProps = {
+  /**
+   * The icon
+   */
+  icon?: ReactNode;
+  /**
+   * The stat
+   */
+  stat: string;
+  /**
+   * The description
+   */
+  description: string;
+};
+
+/**
+ * A card demonstrating a statistic or metric
+ */
+export function StatsCard({
+  icon,
+  stat,
+  description,
+  ...props
+}: StatsCardProps) {
+  return (
+    <Card {...props} direction="vertical" variant="stroke" align="center">
+      {icon}
+      <Flex direction="column" alignSecondary="center" gap="100">
+        <TextHeading>{stat}</TextHeading>
+        {description && <TextSmall>{description}</TextSmall>}
+      </Flex>
     </Card>
   );
 }

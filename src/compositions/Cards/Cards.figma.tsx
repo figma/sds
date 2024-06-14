@@ -1,6 +1,13 @@
 import { figma } from "@figma/code-connect";
 import { Image, Text, TextHeading } from "ui";
-import { Card } from "./Cards";
+import {
+  Card,
+  PricingCard,
+  ProductInfoCard,
+  ReviewCard,
+  StatsCard,
+  TestimonialCard,
+} from "./Cards";
 
 figma.connect(Card, "<FIGMA_URL_CARD>", {
   props: {
@@ -28,3 +35,9 @@ figma.connect(Card, "<FIGMA_URL_CARD>", {
     </Card>
   ),
 });
+
+figma.connect(ProductInfoCard, "<FIGMA_URL_CARDS_PRODUCT_INFO_CARD>");
+figma.connect(PricingCard, "<FIGMA_URL_CARDS_PRICING_CARD>");
+figma.connect(TestimonialCard, "<FIGMA_URL_CARDS_TESTIMONIAL_CARD>");
+figma.connect(StatsCard, "<FIGMA_URL_CARDS_STATS_CARD>");
+figma.connect(ReviewCard, "<FIGMA_URL_CARDS_REVIEW_CARD>");

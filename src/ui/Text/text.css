@@ -87,7 +87,7 @@
 
   &:not(.text-link-list) {
     color: var(--sds-color-text-default-secondary);
-    padding: 1rem;
+    padding-left: 1rem;
   }
 }
 .text-list-item {

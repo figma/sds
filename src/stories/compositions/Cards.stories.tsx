@@ -3,9 +3,17 @@ import {
   Card,
   PricingCard,
   ProductInfoCard,
+  ReviewCard,
+  StatsCard,
   TestimonialCard,
 } from "compositions";
-import { IconActivity } from "icons";
+import {
+  IconActivity,
+  IconClock,
+  IconCode,
+  IconCompass,
+  IconSmile,
+} from "icons";
 import { Flex } from "layout";
 import { ComponentProps } from "react";
 import { Button, ButtonGroup, Image, Text, TextHeading } from "ui";
@@ -105,20 +113,110 @@ export const BlockPricingCard: StoryObj<typeof PricingCard> = {
 
 export const BlockProductInfoCard: StoryObj<typeof ProductInfoCard> = {
   render: () => (
-    <Flex container wrap type="half" gap="400" direction="row">
+    <Flex container wrap type="quarter" gap="400" direction="row">
       <ProductInfoCard
         asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
         heading="Product"
         price={5}
-        action="Buy this"
-        onAction={() => {}}
+        description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
         asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
         heading="Product"
         price={5}
-        action="Buy this"
-        onAction={() => {}}
+        description="Wow do we have a cool thing for you. What an amazing thing."
+      />
+      <ProductInfoCard
+        asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
+        heading="Product"
+        price={5}
+        description="Wow do we have a cool thing for you. What an amazing thing."
+      />
+      <ProductInfoCard
+        asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
+        heading="Product"
+        price={5}
+        description="Wow do we have a cool thing for you. What an amazing thing."
+      />
+    </Flex>
+  ),
+};
+
+export const BlockReviewCard: StoryObj<typeof StatsCard> = {
+  render: () => (
+    <Flex
+      container
+      wrap
+      type="quarter"
+      alignPrimary="stretch"
+      gap="400"
+      direction="row"
+    >
+      <ReviewCard
+        stars={4}
+        title="This rocks"
+        body="Cannot believe how amazing this experience was"
+        name="Charlie Brown"
+        date="June 2024"
+        src="https://placehold.co/200"
+      />
+      <ReviewCard
+        stars={5}
+        title="This rocks"
+        body="Cannot believe how amazing this experience was"
+        name="Charlie Brown"
+        date="June 2024"
+        src="https://placehold.co/200"
+      />
+      <ReviewCard
+        stars={5}
+        title="This rocks"
+        body="Cannot believe how amazing this experience was"
+        name="Charlie Brown"
+        date="June 2024"
+        src="https://placehold.co/200"
+      />
+      <ReviewCard
+        stars={4}
+        title="This rocks"
+        body="Cannot believe how amazing this experience was"
+        name="Charlie Brown"
+        date="June 2024"
+        src="https://placehold.co/200"
+      />
+    </Flex>
+  ),
+};
+
+export const BlockStatsCard: StoryObj<typeof StatsCard> = {
+  render: () => (
+    <Flex
+      container
+      wrap
+      type="quarter"
+      alignPrimary="stretch"
+      gap="400"
+      direction="row"
+    >
+      <StatsCard
+        icon={<IconClock size="40" />}
+        stat="400"
+        description="SDS Hours"
+      />
+      <StatsCard
+        icon={<IconCode size="40" />}
+        stat="15.3k"
+        description="Lines of TypeScript"
+      />
+      <StatsCard
+        icon={<IconSmile size="40" />}
+        stat="8M"
+        description="Smiles"
+      />
+      <StatsCard
+        icon={<IconCompass size="40" />}
+        stat="120.4k"
+        description="Directions"
       />
     </Flex>
   ),

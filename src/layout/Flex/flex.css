@@ -27,7 +27,7 @@
 
   &.flex-direction-column,
   &.flex-direction-column-reverse {
-    > * {
+    &.flex-align-secondary-stretch > * {
       width: 100%;
     }
   }

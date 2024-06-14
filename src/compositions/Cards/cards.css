@@ -44,20 +44,25 @@
     }
   }
 
+  &.card-align-start {
+    --content-align: start;
+  }
+  &.card-align-center {
+    --content-align: center;
+  }
+  &.card-align-end {
+    --content-align: end;
+  }
+
   .card-content {
+    align-items: var(--content-align, start);
     display: flex;
     flex-direction: column;
-    gap: var(--sds-size-space-200);
+    gap: var(--sds-size-space-600);
     grid-area: content;
 
-    .text-body-base {
-      color: var(--sds-color-text-default-secondary);
-    }
-
-    .button-group {
-      margin-top: var(--sds-size-space-400);
-      position: relative;
-      z-index: 2;
+    > * {
+      width: 100%;
     }
   }
 }

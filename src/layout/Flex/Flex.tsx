@@ -6,13 +6,7 @@ export type FlexProps = ComponentPropsWithoutRef<"div"> & {
   alignPrimary?: "start" | "end" | "center" | "stretch" | "space-between";
   alignSecondary?: "start" | "end" | "center" | "stretch" | "space-between";
   direction?: "row" | "row-reverse" | "column" | "column-reverse";
-  gap?:
-    | "100" // xs
-    | "200" // sm
-    | "300" // md
-    | "400" // lg
-    | "600" // xl
-    | "800"; // xxl;
+  gap?: "100" | "200" | "300" | "400" | "600" | "800";
   type?: "quarter" | "third" | "half" | "auto";
   container?: boolean;
   wrap?: boolean;
@@ -52,9 +46,9 @@ export function Flex({
   );
 }
 
-type FlextItemSize = "full" | "major" | "minor" | "half";
+type FlexItemSize = "full" | "major" | "minor" | "half";
 export type FlexItemProps = ComponentPropsWithoutRef<"div"> & {
-  size?: FlextItemSize;
+  size?: FlexItemSize;
 };
 export function FlexItem({ className, children, size }: FlexItemProps) {
   const classNames = clsx(
