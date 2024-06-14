@@ -1,6 +1,6 @@
 .flex-container {
   margin: 0 auto;
-  max-width: calc(var(--sds-responsive-width-device-min));
+  max-width: var(--global-container-max-width);
   width: 100%;
 }
 

@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { IconX } from "icons";
 import {
   Dialog as RACDialog,
   DialogTrigger as RACDialogTrigger,
@@ -9,7 +10,10 @@ import {
   type ModalOverlayProps as RACModalOverlayProps,
 } from "react-aria-components";
 import { Button, ButtonProps } from "ui/primitives/Button/Button";
-import { IconButton } from "ui/primitives/IconButton/IconButton";
+import {
+  IconButton,
+  IconButtonProps,
+} from "ui/primitives/IconButton/IconButton";
 import {
   Text,
   TextHeading,
@@ -18,11 +22,26 @@ import {
 } from "ui/primitives/Text/Text";
 import "./dialog.css";
 
-export type DialogProps = RACDialogProps;
-export function Dialog({ className, ...props }: DialogProps) {
-  const classNames = clsx(className, "dialog");
+export type DialogProps = RACDialogProps & {
+  type?: "sheet" | "card";
+};
+export function Dialog({ className, type = "card", ...props }: DialogProps) {
+  const classNames = clsx(className, "dialog", `dialog-type-${type}`);
   return <RACDialog className={classNames} {...props} />;
 }
+
+export type DialogCloseProps = Pick<IconButtonProps, "onPress">;
+export const DialogClose = ({ onPress }: DialogCloseProps) => (
+  <IconButton
+    className="dialog-close"
+    aria-label="Dismiss dialog"
+    onPress={onPress}
+    variant="subtle"
+    size="small"
+  >
+    <IconX />
+  </IconButton>
+);
 
 export type DialogTriggerProps = RACDialogTriggerProps;
 export function DialogTrigger({ ...props }: DialogTriggerProps) {
@@ -90,6 +109,7 @@ export type DialogModalProps = RACModalOverlayProps;
 export function DialogModal({
   children,
   className,
+  isDismissable,
   ...props
 }: DialogModalProps) {
   const classNames = clsx(className, "dialog-backdrop");

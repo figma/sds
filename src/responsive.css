@@ -8,7 +8,6 @@
   --sds-responsive-ratio-column-quarter-minor: 4;
   --sds-responsive-ratio-column-third-major: 3;
   --sds-responsive-ratio-column-third-minor: 3;
-  --sds-responsive-ratio-dialog-max: 2;
 }
 /* Responsive tablet */
 @media (min-width: 768px) {
@@ -21,7 +20,6 @@
     --sds-responsive-ratio-column-quarter-minor: 2;
     --sds-responsive-ratio-column-third-major: 3;
     --sds-responsive-ratio-column-third-minor: 3;
-    --sds-responsive-ratio-dialog-max: 0.85;
   }
 }
 /* responsive: desktop */
@@ -35,6 +33,5 @@
     --sds-responsive-ratio-column-quarter-minor: 1;
     --sds-responsive-ratio-column-third-major: 2;
     --sds-responsive-ratio-column-third-minor: 1;
-    --sds-responsive-ratio-dialog-max: 0.5;
   }
 }

@@ -7,6 +7,7 @@ import {
   Dialog,
   DialogBody,
   DialogButton,
+  DialogClose,
   DialogDescription,
   DialogModal,
   DialogTitle,
@@ -28,10 +29,16 @@ export default meta;
 type Story = StoryObj<typeof Dialog>;
 
 export const Default: Story = {
-  render: () => (
-    <DialogButton variant="primary" icon={<IconMenu />} label="Open Dialog">
+  render: (args) => (
+    <DialogButton
+      {...args}
+      variant="primary"
+      icon={<IconMenu />}
+      label="Open Dialog"
+    >
       {({ close }) => (
         <>
+          <DialogClose onPress={close} />
           <DialogTitle>Open Dialog</DialogTitle>
           <DialogDescription>
             The refund will be reflected in the customer’s bank account 2 to 3
