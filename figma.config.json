@@ -1,6 +1,6 @@
 {
   "codeConnect": {
-    "include": ["src/ui/**"],
+    "include": ["src/ui/**", "src/compositions/**", "src/layout/**"],
     "exclude": [],
     "react": {
       "importPaths": {
