@@ -217,7 +217,11 @@ export function ReviewCard({
 }: ReviewCardProps) {
   return (
     <Card {...props} direction="vertical" variant="stroke">
-      <Flex gap="100">{new Array(stars).fill(<IconStar />)}</Flex>
+      <Flex gap="100">
+        {new Array(stars).fill(0).map((_, i) => (
+          <IconStar key={i} />
+        ))}
+      </Flex>
       <Flex direction="column" gap="100">
         <TextHeading>{title}</TextHeading>
         <TextSmall>{body}</TextSmall>
