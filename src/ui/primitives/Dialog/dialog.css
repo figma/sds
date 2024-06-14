@@ -50,7 +50,7 @@
   border: var(--sds-size-border-width) solid
     var(--sds-color-border-default-default);
   max-width: var(--global-dialog-max-width);
-  width: 90%;
+  width: calc(100% - var(--sds-size-padding-lg) * 2);
 }
 .dialog-type-sheet {
   align-self: flex-end;
