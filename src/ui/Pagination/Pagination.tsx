@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useMediaQuery } from "hooks";
 import { IconArrowLeft, IconArrowRight } from "icons";
 import type React from "react";
 import { Button } from "ui";
@@ -53,7 +54,8 @@ export function PaginationNext({
 }
 
 export function PaginationList({ children }: { children: React.ReactNode }) {
-  return <span className="pagination-list">{children}</span>;
+  const { isTabletUp } = useMediaQuery();
+  return isTabletUp && <span className="pagination-list">{children}</span>;
 }
 
 export function PaginationPage({

@@ -7,6 +7,6 @@
 
 .pagination-list {
   align-items: center;
-  display: var(--sds-responsive-display-none-to-flex);
+  display: flex;
   gap: var(--sds-size-space-200);
 }
