@@ -6,18 +6,20 @@ const config: StorybookConfig = {
     "../src/stories/**/*.mdx",
     "../src/stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
+
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
   ],
+
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
-  docs: {
-    autodocs: true,
-  },
+
+  docs: {},
+
   viteFinal: async (config) => {
     if (config.resolve) {
       config.resolve.alias = {
@@ -34,5 +36,9 @@ const config: StorybookConfig = {
 
     return config;
   },
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript"
+  }
 };
 export default config;
