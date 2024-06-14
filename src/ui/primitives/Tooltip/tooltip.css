@@ -3,6 +3,7 @@
     display: flex;
     position: relative;
     width: var(--sds-typography-scale-04);
+    z-index: 9;
   }
 
   .tooltip-overlay-arrow svg {
