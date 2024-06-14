@@ -9,7 +9,7 @@ const meta: Meta<typeof Image> = {
 export default meta;
 
 export const Default: StoryObj<typeof Image> = {
-  args: { size: "md" },
+  args: { size: "medium" },
   render: (args) => (
     <div
       style={{
