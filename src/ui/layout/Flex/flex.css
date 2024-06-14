@@ -76,21 +76,21 @@
     flex-wrap: wrap;
   }
   &.flex-gap-xs {
-    --flex-gap: var(--sds-size-gap-xs);
+    --flex-gap: var(--sds-size-space-100);
   }
   &.flex-gap-sm {
-    --flex-gap: var(--sds-size-gap-sm);
+    --flex-gap: var(--sds-size-space-200);
   }
   &.flex-gap-md {
-    --flex-gap: var(--sds-size-gap-md);
+    --flex-gap: var(--sds-size-space-300);
   }
   &.flex-gap-lg {
-    --flex-gap: var(--sds-size-gap-lg);
+    --flex-gap: var(--sds-size-space-400);
   }
   &.flex-gap-xl {
-    --flex-gap: var(--sds-size-gap-xl);
+    --flex-gap: var(--sds-size-space-600);
   }
   &.flex-gap-xxl {
-    --flex-gap: var(--sds-size-gap-xxl);
+    --flex-gap: var(--sds-size-space-800);
   }
 }

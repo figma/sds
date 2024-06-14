@@ -15,25 +15,25 @@
       fill: var(--sds-color-border-default-default);
       position: absolute;
       left: 0;
-      transform: translateY(calc(0 * var(--sds-size-border-width)))
+      transform: translateY(calc(0 * var(--sds-size-stroke-border)))
         rotate(var(--rotation));
     }
     &:last-child {
-      fill: var(--sds-color-bg-default-default);
-      transform: translateY(calc(1.5 * var(--sds-size-border-width)))
+      fill: var(--sds-color-background-default-default);
+      transform: translateY(calc(1.5 * var(--sds-size-stroke-border)))
         rotate(var(--rotation));
     }
   }
 
   &[data-placement="top"] {
     &:has(.tooltip-overlay-arrow) {
-      margin-bottom: var(--sds-size-gap-sm);
+      margin-bottom: var(--sds-size-space-200);
     }
   }
 
   &[data-placement="bottom"] {
     &:has(.tooltip-overlay-arrow) {
-      margin-top: var(--sds-size-gap-sm);
+      margin-top: var(--sds-size-space-200);
     }
 
     .tooltip-overlay-arrow svg {
@@ -43,7 +43,7 @@
 
   &[data-placement="right"] {
     &:has(.tooltip-overlay-arrow) {
-      margin-left: var(--sds-size-gap-sm);
+      margin-left: var(--sds-size-space-200);
     }
 
     .tooltip-overlay-arrow svg {
@@ -53,7 +53,7 @@
 
   &[data-placement="left"] {
     &:has(.tooltip-overlay-arrow) {
-      margin-right: var(--sds-size-gap-sm);
+      margin-right: var(--sds-size-space-200);
     }
 
     .tooltip-overlay-arrow svg {
@@ -62,10 +62,10 @@
   }
 
   > .dialog {
-    --dialog-padding-y: var(--sds-size-padding-lg);
+    --dialog-padding-y: var(--sds-size-space-400);
     box-shadow: var(--sds-effects-shadows-drop-shadow-200);
-    padding-left: var(--sds-size-padding-md);
-    padding-right: var(--sds-size-padding-md);
+    padding-left: var(--sds-size-space-300);
+    padding-right: var(--sds-size-space-300);
     width: 100%;
   }
 }

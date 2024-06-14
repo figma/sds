@@ -2,7 +2,7 @@
   border: none;
   display: flex;
   flex-direction: column;
-  gap: var(--sds-size-gap-xl);
+  gap: var(--sds-size-space-600);
   width: 100%;
 
   &.fieldset-disabled {
@@ -17,13 +17,13 @@
 .field-group {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-size-gap-xl);
+  gap: var(--sds-size-space-600);
 }
 
 .field {
   --field-label-color: var(--sds-color-text-default-default);
   --field-description-color: var(--sds-color-text-default-secondary);
-  --field-row-gap: var(--sds-size-gap-sm);
+  --field-row-gap: var(--sds-size-space-200);
 
   display: grid;
   grid-template-areas:
@@ -66,7 +66,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  gap: var(--sds-size-gap-md);
+  gap: var(--sds-size-space-300);
 }
 
 .legend {

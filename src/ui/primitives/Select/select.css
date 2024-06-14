@@ -2,32 +2,32 @@
   width: 100%;
 }
 .select {
-  --select-background-color: var(--sds-color-bg-default-default);
+  --select-background-color: var(--sds-color-background-default-default);
   --select-text-color: var(--sds-color-text-default-default);
   --select-border-color: var(--sds-color-border-default-default);
   align-items: center;
   background-color: var(--select-background-color);
-  box-shadow: inset 0 0 0 var(--sds-size-border-width)
+  box-shadow: inset 0 0 0 var(--sds-size-stroke-border)
     var(--select-border-color);
-  border-radius: var(--sds-size-radius-base);
+  border-radius: var(--sds-size-radius-200);
   color: var(--select-text-color);
   display: flex;
-  gap: var(--sds-size-gap-sm);
-  padding: var(--sds-size-padding-md) var(--sds-size-padding-lg);
+  gap: var(--sds-size-space-200);
+  padding: var(--sds-size-space-300) var(--sds-size-space-400);
   position: relative;
   justify-content: space-between;
   width: 100%;
 
   > .icon {
     --icon-color: var(--sds-color-icon-default-default);
-    margin-right: var(--sds-size-gap-negative-sm);
+    margin-right: var(--sds-size-space-negative-200);
   }
 
   > .select-value {
     align-items: center;
     color: var(--select-text-color);
     display: flex;
-    gap: var(--sds-size-gap-sm);
+    gap: var(--sds-size-space-200);
 
     &[data-placeholder] {
       --select-text-color: var(--sds-color-text-default-tertiary);
@@ -39,9 +39,9 @@
   }
 
   &[data-disabled] {
-    --select-background-color: var(--sds-color-bg-disabled-default);
+    --select-background-color: var(--sds-color-background-disabled-default);
     --select-text-color: var(--sds-color-text-disabled-default);
-    --select-border-color: var(--sds-color-border-disabled-secondary);
+    --select-border-color: var(--sds-color-border-disabled-default);
   }
 
   &:has(~ .error-message):not([data-disabled]),
@@ -55,9 +55,9 @@
 }
 
 .select-item {
-  gap: var(--sds-size-gap-sm);
-  min-width: calc(var(--sds-size-gap-lg) * 10);
-  padding-left: var(--sds-size-padding-xs);
+  gap: var(--sds-size-space-200);
+  min-width: calc(var(--sds-size-space-400) * 10);
+  padding-left: var(--sds-size-space-100);
 
   .select-item-check {
     opacity: 0;

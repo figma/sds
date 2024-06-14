@@ -1,7 +1,7 @@
 .button {
-  --border-radius: var(--sds-size-radius-base);
+  --border-radius: var(--sds-size-radius-200);
   align-items: center;
-  box-shadow: inset 0 0 0 var(--sds-size-border-width)
+  box-shadow: inset 0 0 0 var(--sds-size-stroke-border)
     var(--button-border-color);
   border-radius: var(--border-radius);
   background: var(--button-background-color);
@@ -9,7 +9,7 @@
   cursor: pointer;
   display: inline-flex;
   font: var(--button-font);
-  gap: var(--sds-size-gap-sm);
+  gap: var(--sds-size-space-200);
   justify-content: center;
   line-height: 1;
   padding: var(--button-padding-y) var(--button-padding-x);
@@ -23,8 +23,8 @@
 
 .button-size-small {
   --button-font: var(--sds-font-body-small);
-  --button-padding-x: var(--sds-size-padding-sm);
-  --button-padding-y: var(--sds-size-padding-sm);
+  --button-padding-x: var(--sds-size-space-200);
+  --button-padding-y: var(--sds-size-space-200);
 
   > .icon {
     --icon-diameter: var(--sds-typography-scale-02);
@@ -33,8 +33,8 @@
 
 .button-size-medium {
   --button-font: var(--sds-font-body);
-  --button-padding-x: var(--sds-size-padding-md);
-  --button-padding-y: var(--sds-size-padding-md);
+  --button-padding-x: var(--sds-size-space-300);
+  --button-padding-y: var(--sds-size-space-300);
 
   > .icon {
     --icon-diameter: var(--sds-typography-scale-03);
@@ -43,7 +43,7 @@
 
 .button[data-focus-visible] {
   outline: none;
-  --offset: calc(var(--sds-size-border-width) * 2);
+  --offset: calc(var(--sds-size-stroke-border) * 2);
   &::before {
     content: "";
     border-radius: calc(var(--border-radius) + var(--offset));
@@ -58,20 +58,22 @@
 }
 
 .button-variant-primary {
-  --button-background-color: var(--sds-color-bg-brand-default);
+  --button-background-color: var(--sds-color-background-brand-default);
   --button-border-color: var(--sds-color-border-brand-default);
-  --button-color: var(--sds-color-text-brand-onbrand);
+  --button-color: var(--sds-color-text-brand-on-brand);
   &[data-hovered]:not([data-disabled]) {
-    --button-background-color: var(--sds-color-bg-brand-hover);
+    --button-background-color: var(--sds-color-background-brand-hover);
     --button-border-color: var(--sds-color-border-brand-default);
   }
 }
 .button-variant-neutral {
-  --button-background-color: var(--sds-color-bg-default-secondary);
+  --button-background-color: var(--sds-color-background-default-secondary);
   --button-border-color: var(--sds-color-border-default-default);
   --button-color: var(--sds-color-text-default-default);
   &[data-hovered]:not([data-disabled]) {
-    --button-background-color: var(--sds-color-bg-default-secondary-hover);
+    --button-background-color: var(
+      --sds-color-background-default-secondary-hover
+    );
   }
 }
 .button-variant-subtle {
@@ -79,16 +81,18 @@
   --button-border-color: transparent;
   --button-color: var(--sds-color-text-brand-default);
   &[data-hovered]:not([data-disabled]) {
-    --button-background-color: var(--sds-color-bg-default-default-hover);
+    --button-background-color: var(
+      --sds-color-background-default-default-hover
+    );
   }
 }
 
 .button-variant-danger-primary {
-  --button-background-color: var(--sds-color-bg-danger-default);
+  --button-background-color: var(--sds-color-background-danger-default);
   --button-border-color: var(--sds-color-border-danger-secondary);
-  --button-color: var(--sds-color-text-danger-ondanger);
+  --button-color: var(--sds-color-text-danger-on-danger);
   &[data-hovered]:not([data-disabled]) {
-    --button-background-color: var(--sds-color-bg-danger-hover);
+    --button-background-color: var(--sds-color-background-danger-hover);
     --button-border-color: var(--sds-color-border-danger-default);
   }
 }
@@ -97,14 +101,16 @@
   --button-border-color: transparent;
   --button-color: var(--sds-color-text-danger-default);
   &[data-hovered]:not([data-disabled]) {
-    --button-background-color: var(--sds-color-bg-danger-tertiary-hover);
+    --button-background-color: var(
+      --sds-color-background-danger-tertiary-hover
+    );
   }
 }
 
 .button[data-disabled] {
   cursor: default;
   pointer-events: none;
-  --button-background-color: var(--sds-color-bg-disabled-default);
+  --button-background-color: var(--sds-color-background-disabled-default);
   --button-border-color: var(--sds-color-border-disabled-default);
   --button-color: var(--sds-color-text-disabled-default);
 }
@@ -112,7 +118,7 @@
 .button-group {
   align-items: center;
   display: flex;
-  gap: var(--sds-size-gap-md);
+  gap: var(--sds-size-space-300);
 
   &.button-group-align-start {
     justify-content: flex-start;

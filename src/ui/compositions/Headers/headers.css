@@ -1,5 +1,5 @@
 .header {
-  background: var(--sds-color-bg-default-default);
+  background: var(--sds-color-background-default-default);
   left: 0;
   position: sticky;
   top: 0;
@@ -7,22 +7,22 @@
 }
 
 .header-auth-avatar-button {
-  --border-radius: var(--sds-size-radius-base);
+  --border-radius: var(--sds-size-radius-200);
   align-items: center;
   border-radius: var(--border-radius);
   cursor: pointer;
   display: flex;
-  gap: var(--sds-size-gap-sm);
-  padding: var(--sds-size-padding-sm) var(--sds-size-padding-md);
+  gap: var(--sds-size-space-200);
+  padding: var(--sds-size-space-200) var(--sds-size-space-300);
   position: relative;
 
   &[data-hovered] {
-    background-color: var(--sds-color-bg-default-default-hover);
+    background-color: var(--sds-color-background-default-default-hover);
   }
 
   &[data-focus-visible] {
     outline: none;
-    --offset: calc(var(--sds-size-border-width) * 2);
+    --offset: calc(var(--sds-size-stroke-border) * 2);
     &::before {
       content: "";
       border-radius: calc(var(--border-radius) + var(--offset));
@@ -47,8 +47,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-left: var(--sds-size-padding-lg);
-  padding-right: var(--sds-size-padding-lg);
+  padding-left: var(--sds-size-space-400);
+  padding-right: var(--sds-size-space-400);
   max-width: 100%;
   width: 100%;
 
@@ -64,6 +64,6 @@
 
 .navigation-dialog-close {
   position: absolute;
-  right: var(--sds-size-padding-md);
-  top: var(--sds-size-padding-md);
+  right: var(--sds-size-space-300);
+  top: var(--sds-size-space-300);
 }

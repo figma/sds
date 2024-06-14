@@ -1,17 +1,18 @@
 .input {
-  --input-background-color: var(--sds-color-bg-default-default);
+  --input-background-color: var(--sds-color-background-default-default);
   --input-text-color: var(--sds-color-text-default-default);
   --input-border-color: var(--sds-color-border-default-default);
   --input-placeholder-color: var(--sds-color-text-default-tertiary);
   align-items: center;
   background-color: var(--input-background-color);
-  box-shadow: inset 0 0 0 var(--sds-size-border-width) var(--input-border-color);
-  border-radius: var(--sds-size-radius-base);
+  box-shadow: inset 0 0 0 var(--sds-size-stroke-border)
+    var(--input-border-color);
+  border-radius: var(--sds-size-radius-200);
   color: var(--input-text-color);
   display: flex;
   line-height: 1;
   /* TODO: this makes it same height as button? */
-  padding: calc(var(--sds-size-padding-md) - 2px) var(--sds-size-padding-lg);
+  padding: calc(var(--sds-size-space-300) - 2px) var(--sds-size-space-400);
   position: relative;
   width: 100%;
 
@@ -20,9 +21,9 @@
   }
 
   &[data-disabled] {
-    --input-background-color: var(--sds-color-bg-disabled-default);
+    --input-background-color: var(--sds-color-background-disabled-default);
     --input-text-color: var(--sds-color-text-disabled-default);
-    --input-border-color: var(--sds-color-border-disabled-secondary);
+    --input-border-color: var(--sds-color-border-disabled-default);
   }
 
   &[data-invalid]:not([data-disabled]) {

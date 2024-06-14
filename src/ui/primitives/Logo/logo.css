@@ -1,11 +1,11 @@
 .logo {
-  --border-radius: var(--sds-size-radius-base);
+  --border-radius: var(--sds-size-radius-200);
   border-radius: var(--border-radius);
   position: relative;
 
   &[data-focus-visible] {
     outline: none;
-    --offset: calc(var(--sds-size-border-width) * 2);
+    --offset: calc(var(--sds-size-stroke-border) * 2);
     &::before {
       content: "";
       border-radius: calc(var(--border-radius) + var(--offset));

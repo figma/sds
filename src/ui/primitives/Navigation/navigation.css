@@ -1,7 +1,7 @@
 .navigation {
   display: flex;
   align-items: center;
-  gap: var(--sds-size-gap-sm);
+  gap: var(--sds-size-space-200);
 }
 
 .navigation-direction-row {
@@ -12,22 +12,22 @@
 }
 
 .navigation-item {
-  --border-radius: var(--sds-size-radius-base);
+  --border-radius: var(--sds-size-radius-200);
   background: transparent;
   border-radius: var(--border-radius);
   color: var(--sds-color-text-default-default);
   cursor: pointer;
-  padding: var(--sds-size-padding-sm);
+  padding: var(--sds-size-space-200);
   position: relative;
 
   &[data-selected] {
-    color: var(--sds-color-text-brand-onbrand-secondary);
-    background: var(--sds-color-bg-brand-tertiary);
+    color: var(--sds-color-text-brand-on-brand-secondary);
+    background: var(--sds-color-background-brand-tertiary);
   }
 
   &[data-focus-visible] {
     outline: none;
-    --offset: calc(var(--sds-size-border-width) * 2);
+    --offset: calc(var(--sds-size-stroke-border) * 2);
     &::before {
       content: "";
       border-radius: calc(var(--border-radius) + var(--offset));

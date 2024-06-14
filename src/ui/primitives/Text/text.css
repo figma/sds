@@ -12,7 +12,7 @@
 }
 
 .text-body-link {
-  --border-radius: var(--sds-size-radius-small);
+  --border-radius: var(--sds-size-radius-100);
   color: inherit;
   cursor: pointer;
   font: var(--sds-font-body-link);
@@ -23,7 +23,7 @@
   }
   &:focus-visible {
     outline: none;
-    --offset: calc(var(--sds-size-border-width) * 2);
+    --offset: calc(var(--sds-size-stroke-border) * 2);
     &::before {
       content: "";
       border-radius: calc(var(--border-radius) + var(--offset));
@@ -67,16 +67,16 @@
   margin: 0;
 
   &.text-list-density-default {
-    gap: var(--sds-size-gap-md);
+    gap: var(--sds-size-space-300);
     .text-list-title {
-      margin-bottom: var(--sds-size-gap-lg);
+      margin-bottom: var(--sds-size-space-400);
     }
   }
 
   &.text-list-density-tight {
-    gap: var(--sds-size-gap-sm);
+    gap: var(--sds-size-space-200);
     .text-list-title {
-      margin-bottom: var(--sds-size-gap-xs);
+      margin-bottom: var(--sds-size-space-100);
     }
   }
 
@@ -97,10 +97,10 @@
 .text-price {
   align-items: end;
   display: flex;
-  gap: var(--sds-size-gap-sm);
+  gap: var(--sds-size-space-200);
 
   > .text-body-small {
-    margin-bottom: var(--sds-size-gap-md);
+    margin-bottom: var(--sds-size-space-300);
   }
 }
 

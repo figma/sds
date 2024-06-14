@@ -1,15 +1,15 @@
 .list-box {
   --list-box-item-template-areas: "label" "description";
-  background: var(--sds-color-bg-default-default);
-  border-radius: var(--sds-size-radius-base);
+  background: var(--sds-color-background-default-default);
+  border-radius: var(--sds-size-radius-200);
   box-shadow:
-    0 0 0 var(--sds-size-border-width) var(--sds-color-border-default-default),
+    0 0 0 var(--sds-size-stroke-border) var(--sds-color-border-default-default),
     var(--sds-effects-shadows-drop-shadow-400);
   display: flex;
   flex-direction: column;
   outline: none;
   overflow-y: auto;
-  padding: var(--sds-size-padding-sm);
+  padding: var(--sds-size-space-200);
 
   &[data-orientation="horizontal"],
   &[data-layout="grid"] {
@@ -62,14 +62,14 @@
 
   align-items: center;
   background-color: transparent;
-  border-radius: var(--sds-size-radius-base);
+  border-radius: var(--sds-size-radius-200);
   color: var(--list-box-label-color);
-  column-gap: var(--sds-size-gap-sm);
+  column-gap: var(--sds-size-space-200);
   cursor: pointer;
   display: grid;
   grid-template-areas: var(--list-box-item-template-areas);
   grid-template-columns: auto 1fr;
-  padding: var(--sds-size-padding-sm) var(--sds-size-padding-sm);
+  padding: var(--sds-size-space-200) var(--sds-size-space-200);
 
   > .icon {
     --icon-color: var(--list-box-icon-color);
@@ -98,11 +98,11 @@
   }
 
   &[data-focused] {
-    --list-box-label-color: var(--sds-color-text-brand-onbrand);
-    --list-box-description-color: var(--sds-color-text-brand-onbrand);
-    --list-box-icon-color: var(--sds-color-icon-brand-onbrand);
+    --list-box-label-color: var(--sds-color-text-brand-on-brand);
+    --list-box-description-color: var(--sds-color-text-brand-on-brand);
+    --list-box-icon-color: var(--sds-color-icon-brand-on-brand);
 
-    background-color: var(--sds-color-bg-brand-default);
+    background-color: var(--sds-color-background-brand-default);
     outline: none;
   }
 }

@@ -1,91 +1,6 @@
 [
   {
     "type": "TEXT",
-    "name": "Body Strong",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10180"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10179"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:14844"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
-    "name": "Body Base",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10180"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10179"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:10181"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
-    "name": "Input",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:13415"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:13413"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:66:13417"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
-    "name": ".Utilities/Component notes/Regular",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:9:11196"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:9:11201"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:9:11183"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
-    "name": "Subheading",
-    "fontSize": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:2103:22308"
-    },
-    "fontFamily": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:2103:22306"
-    },
-    "fontWeight": {
-      "type": "VARIABLE_ALIAS",
-      "id": "VariableID:2103:22310"
-    },
-    "fontStyle": "normal"
-  },
-  {
-    "type": "TEXT",
     "name": "Title Hero",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
@@ -154,6 +69,57 @@
   },
   {
     "type": "TEXT",
+    "name": "Subheading",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:2103:22308"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:2103:22306"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:2103:22310"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Body Base",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10180"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10179"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10181"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": "Body Strong",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10180"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:10179"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:14844"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
     "name": "Body Emphasis",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
@@ -204,6 +170,23 @@
   },
   {
     "type": "TEXT",
+    "name": "Input",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:13415"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:13413"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:66:13417"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
     "name": "Body Code",
     "fontSize": {
       "type": "VARIABLE_ALIAS",
@@ -216,6 +199,23 @@
     "fontWeight": {
       "type": "VARIABLE_ALIAS",
       "id": "VariableID:66:10184"
+    },
+    "fontStyle": "normal"
+  },
+  {
+    "type": "TEXT",
+    "name": ".Utilities/Component notes/Regular",
+    "fontSize": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11196"
+    },
+    "fontFamily": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11201"
+    },
+    "fontWeight": {
+      "type": "VARIABLE_ALIAS",
+      "id": "VariableID:9:11183"
     },
     "fontStyle": "normal"
   },

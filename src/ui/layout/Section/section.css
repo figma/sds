@@ -1,48 +1,48 @@
 .section {
   box-sizing: border-box;
-  padding: var(--padding-y-top) var(--sds-size-padding-section-sm)
+  padding: var(--padding-y-top) var(--sds-size-space-800)
     var(--padding-y-bottom);
   width: 100%;
 }
 .section-padding-bottom-sm {
-  --padding-y-bottom: var(--sds-size-padding-section-sm);
+  --padding-y-bottom: var(--sds-size-space-800);
 }
 .section-padding-top-sm {
-  --padding-y-top: var(--sds-size-padding-section-sm);
+  --padding-y-top: var(--sds-size-space-800);
 }
 .section-padding-bottom-md {
-  --padding-y-bottom: var(--sds-size-padding-section-md);
+  --padding-y-bottom: var(--sds-size-space-1600);
 }
 .section-padding-top-md {
-  --padding-y-top: var(--sds-size-padding-section-md);
+  --padding-y-top: var(--sds-size-space-1600);
 }
 .section-padding-bottom-lg {
-  --padding-y-bottom: var(--sds-size-padding-section-lg);
+  --padding-y-bottom: var(--sds-size-space-4000);
 }
 .section-padding-top-lg {
-  --padding-y-top: var(--sds-size-padding-section-lg);
+  --padding-y-top: var(--sds-size-space-4000);
 }
 .section-padding-bottom-xl {
-  --padding-y-bottom: var(--sds-size-padding-section-lg);
+  --padding-y-bottom: var(--sds-size-space-4000);
 }
 .section-padding-top-xl {
-  --padding-y-top: var(--sds-size-padding-section-lg);
+  --padding-y-top: var(--sds-size-space-4000);
 }
 
 .section-variant-brand {
-  background: var(--sds-color-bg-brand-default);
-  color: var(--sds-color-text-brand-onbrand);
+  background: var(--sds-color-background-brand-default);
+  color: var(--sds-color-text-brand-on-brand);
 }
 .section-variant-secondary {
-  background: var(--sds-color-bg-default-tertiary);
+  background: var(--sds-color-background-default-tertiary);
 }
 .section-variant-stroke {
   &:not(:last-child) {
-    border-bottom: var(--sds-size-border-width) solid
+    border-bottom: var(--sds-size-stroke-border) solid
       var(--sds-color-border-default-default);
   }
   &:not(:first-child) {
-    border-top: var(--sds-size-border-width) solid
+    border-top: var(--sds-size-stroke-border) solid
       var(--sds-color-border-default-default);
   }
   & + .section-variant-stroke {

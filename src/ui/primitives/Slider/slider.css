@@ -1,24 +1,28 @@
 .slider-field {
-  --slider-thumb-background-color: var(--sds-color-bg-brand-default);
-  --slider-thumb-border-color: var(--sds-color-bg-brand-default);
-  --slider-track-background-color: var(--sds-color-bg-brand-secondary);
+  --slider-thumb-background-color: var(--sds-color-background-brand-default);
+  --slider-thumb-border-color: var(--sds-color-background-brand-default);
+  --slider-track-background-color: var(--sds-color-background-brand-secondary);
   font: var(--sds-font-body-base);
 
   &[data-disabled] {
-    --slider-thumb-background-color: var(--sds-color-bg-disabled-default);
+    --slider-thumb-background-color: var(
+      --sds-color-background-disabled-default
+    );
     --slider-thumb-border-color: var(--sds-color-border-disabled-default);
-    --slider-track-background-color: var(--sds-color-bg-disabled-default);
+    --slider-track-background-color: var(
+      --sds-color-background-disabled-default
+    );
   }
 
   /* TODO: only supporting horizontal right now. these are the horizontal styles. */
   /* &[data-orientation="horizontal"] { */
   width: 100%;
   .slider {
-    height: var(--sds-size-gap-lg);
+    height: var(--sds-size-space-400);
     width: 100%;
 
     &:before {
-      height: var(--sds-size-gap-sm);
+      height: var(--sds-size-space-200);
       top: 50%;
       width: 100%;
       transform: translateY(-50%);
@@ -35,22 +39,22 @@
   justify-self: flex-end;
   font: var(--sds-font-body-small);
   grid-area: field-extra;
-  margin-bottom: var(--sds-size-gap-sm);
+  margin-bottom: var(--sds-size-space-200);
 }
 
 .slider-thumb {
   --border-radius: var(--sds-size-radius-full);
   background: var(--slider-thumb-background-color);
   border-radius: var(--border-radius);
-  box-shadow: inset 0 0 0 var(--sds-size-border-width)
+  box-shadow: inset 0 0 0 var(--sds-size-stroke-border)
     var(--slider-thumb-border-color);
-  height: var(--sds-size-gap-lg);
-  width: var(--sds-size-gap-lg);
+  height: var(--sds-size-space-400);
+  width: var(--sds-size-space-400);
   forced-color-adjust: none;
 
   &[data-focus-visible] {
     outline: none;
-    --offset: calc(var(--sds-size-border-width) * 2);
+    --offset: calc(var(--sds-size-stroke-border) * 2);
     &::before {
       content: "";
       border-radius: calc(var(--border-radius) + var(--offset));

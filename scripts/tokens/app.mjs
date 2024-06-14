@@ -61,6 +61,11 @@ function processTokenJSON(data) {
       colorSchemes: COLOR_THEMES,
       colorSchemesDark: COLOR_THEMES_DARK,
     },
+    responsive: {
+      main: {},
+      responsiveSizeOrder: ["mobile", "tablet", "desktop"],
+      responsiveSizeTokenSuffix: "Root Font Size",
+    },
     size: { main: {} },
     typography_primitives: { main: {} },
     typography: { main: {} },
@@ -69,10 +74,16 @@ function processTokenJSON(data) {
   processCollection(data, processed.color_primitives, "@color_primitives", {
     prefix: "color",
   });
-  processCollection(data, processed.color, "@colors", {
+  processCollection(data, processed.color, "@color", {
     prefix: "color",
     replacements: {
-      "@color_primitives": `${TOKEN_PREFIX}color`,
+      color_primitives: "color",
+    },
+  });
+  processCollection(data, processed.responsive, "@responsive", {
+    prefix: "responsive",
+    replacements: {
+      "@typography_primitives": "typography",
     },
   });
   processCollection(
@@ -82,7 +93,7 @@ function processTokenJSON(data) {
     {
       prefix: "typography",
       replacements: {
-        "@responsive": `${TOKEN_PREFIX}responsive`,
+        "@responsive": "responsive",
         "Extra Bold Italic": "800 italic",
         "Semi Bold Italic": "600 italic",
         "Medium Italic": "500 italic",
@@ -106,7 +117,7 @@ function processTokenJSON(data) {
   processCollection(data, processed.size, "@size", {
     prefix: "size",
     replacements: {
-      "@responsive": `${TOKEN_PREFIX}responsive`,
+      "@responsive": "responsive",
     },
     convertPixelToRem: true,
   });
@@ -336,7 +347,7 @@ In the future, themeing will be handled via @container style() queries
       for (let replacement in replacements) {
         value = value.replace(replacement, replacements[replacement]);
       }
-      return value;
+      return value.toLowerCase();
     };
     const propertyName =
       propertyNameFull.charAt(0).toLowerCase() + propertyNameFull.slice(1);

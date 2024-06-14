@@ -6,7 +6,7 @@
 }
 
 .image-placeholder {
-  background: var(--sds-color-bg-default-secondary);
+  background: var(--sds-color-background-default-secondary);
   display: block;
 }
 
@@ -16,7 +16,7 @@ img.image-loading {
 }
 
 .image-variant-rounded {
-  border-radius: var(--sds-size-radius-small);
+  border-radius: var(--sds-size-radius-100);
 }
 
 .image-aspect-ratio-1-1 {

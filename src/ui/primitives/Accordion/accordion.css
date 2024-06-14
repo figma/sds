@@ -1,14 +1,14 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-size-gap-lg);
+  gap: var(--sds-size-space-400);
   width: 100%;
 }
 
 .accordion-item {
-  --border-radius: var(--sds-size-radius-base);
-  background: var(--sds-color-bg-default-secondary);
-  box-shadow: inset 0 0 0 var(--sds-size-border-width)
+  --border-radius: var(--sds-size-radius-200);
+  background: var(--sds-color-background-default-secondary);
+  box-shadow: inset 0 0 0 var(--sds-size-stroke-border)
     var(--sds-color-border-default-default);
   border-radius: var(--border-radius);
   display: flex;
@@ -16,13 +16,13 @@
   width: 100%;
 
   &:has(.accordion-item-title > button[data-hovered]) {
-    background: var(--sds-color-bg-default-secondary-hover);
+    background: var(--sds-color-background-default-secondary-hover);
   }
 
   &:has(.accordion-item-title > button[data-focus-visible]) {
     outline: none;
     position: relative;
-    --offset: calc(var(--sds-size-border-width) * 2);
+    --offset: calc(var(--sds-size-stroke-border) * 2);
     &::before {
       content: "";
       border-radius: calc(var(--border-radius) + var(--offset));
@@ -41,7 +41,7 @@
     color: var(--sds-color-text-default-default);
     display: flex;
     justify-content: space-between;
-    padding: var(--sds-size-padding-lg);
+    padding: var(--sds-size-space-400);
     width: 100%;
   }
 
@@ -60,20 +60,20 @@
   }
 
   &[data-selected] {
-    background: var(--sds-color-bg-default-default);
+    background: var(--sds-color-background-default-default);
 
     > .accordion-item-title > button {
-      padding-bottom: var(--sds-size-padding-sm);
+      padding-bottom: var(--sds-size-space-200);
     }
 
     &:has(.accordion-item-title > button[data-hovered]) {
-      background: var(--sds-color-bg-default-default-hover);
+      background: var(--sds-color-background-default-default-hover);
     }
 
     > .accordion-item-content {
-      margin-left: var(--sds-size-padding-lg);
-      margin-right: var(--sds-size-padding-lg);
-      padding-bottom: var(--sds-size-padding-lg);
+      margin-left: var(--sds-size-space-400);
+      margin-right: var(--sds-size-space-400);
+      padding-bottom: var(--sds-size-space-400);
       max-height: initial;
     }
   }

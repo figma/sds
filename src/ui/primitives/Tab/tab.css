@@ -3,9 +3,9 @@
 .tab {
   --color: var(--sds-color-text-default-secondary);
   --border-color: var(--sds-color-border-default-default);
-  --border-radius: var(--sds-size-radius-small);
-  padding: var(--sds-size-padding-xs) var(--sds-size-padding-md);
-  border-bottom: solid var(--sds-size-border-width) var(--border-color);
+  --border-radius: var(--sds-size-radius-100);
+  padding: var(--sds-size-space-100) var(--sds-size-space-300);
+  border-bottom: solid var(--sds-size-stroke-border) var(--border-color);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   box-sizing: border-box;
   color: var(--color);
@@ -21,11 +21,11 @@
   }
 
   &[data-hovered]:not([data-selected]) {
-    background: var(--sds-color-bg-default-default-hover);
+    background: var(--sds-color-background-default-default-hover);
   }
 
   &[data-focus-visible] {
-    --offset: calc(var(--sds-size-border-width) * 0);
+    --offset: calc(var(--sds-size-stroke-border) * 0);
     &::before {
       content: "";
       border-radius: calc(var(--border-radius) + var(--offset))
@@ -45,5 +45,5 @@
 }
 .tab-panel {
   outline: none;
-  padding: var(--sds-size-padding-md);
+  padding: var(--sds-size-space-300);
 }

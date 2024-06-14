@@ -7,7 +7,7 @@
 .tag-button[data-focus-visible] {
   outline: none;
   position: relative;
-  --offset: calc(var(--sds-size-border-width) * 2);
+  --offset: calc(var(--sds-size-stroke-border) * 2);
   &::before {
     content: "";
     border-radius: calc(var(--border-radius) + var(--offset));
@@ -29,16 +29,16 @@
 }
 
 .tag {
-  --border-radius: var(--sds-size-radius-small);
+  --border-radius: var(--sds-size-radius-100);
   align-items: center;
   background-color: var(--tag-background-color);
   border-radius: var(--border-radius);
   color: var(--tag-color);
   display: inline-flex;
-  gap: var(--sds-size-gap-md);
+  gap: var(--sds-size-space-300);
   justify-content: center;
   line-height: 1;
-  padding: var(--sds-size-padding-sm) var(--sds-size-padding-sm);
+  padding: var(--sds-size-space-200) var(--sds-size-space-200);
 
   .icon {
     --icon-color: var(--tag-icon);
@@ -46,126 +46,136 @@
 }
 
 .tag-scheme-default {
-  --tag-color: var(--sds-color-text-brand-onbrand);
-  --tag-icon: var(--sds-color-icon-brand-onbrand);
-  --tag-background-color: var(--sds-color-bg-brand-default);
+  --tag-color: var(--sds-color-text-brand-on-brand);
+  --tag-icon: var(--sds-color-icon-brand-on-brand);
+  --tag-background-color: var(--sds-color-background-brand-default);
 
   &[data-hovered],
   &:has(.tag-remove-button[data-hovered]) {
-    --tag-background-color: var(--sds-color-bg-brand-hover);
+    --tag-background-color: var(--sds-color-background-brand-hover);
   }
 
   &.tag-variant-secondary {
-    --tag-color: var(--sds-color-text-brand-onbrand-tertiary);
-    --tag-icon: var(--sds-color-icon-brand-onbrand-tertiary);
-    --tag-background-color: var(--sds-color-bg-brand-tertiary);
+    --tag-color: var(--sds-color-text-brand-on-brand-tertiary);
+    --tag-icon: var(--sds-color-icon-brand-on-brand-tertiary);
+    --tag-background-color: var(--sds-color-background-brand-tertiary);
 
     &[data-hovered],
     &:has(.tag-remove-button[data-hovered]) {
-      --tag-background-color: var(--sds-color-bg-default-tertiary-hover);
+      --tag-background-color: var(
+        --sds-color-background-default-tertiary-hover
+      );
     }
   }
 }
 .tag-scheme-danger {
-  --tag-color: var(--sds-color-text-danger-ondanger);
-  --tag-icon: var(--sds-color-icon-danger-ondanger);
-  --tag-background-color: var(--sds-color-bg-danger-default);
+  --tag-color: var(--sds-color-text-danger-on-danger);
+  --tag-icon: var(--sds-color-icon-danger-on-danger);
+  --tag-background-color: var(--sds-color-background-danger-default);
 
   &[data-hovered],
   &:has(.tag-remove-button[data-hovered]) {
-    --tag-background-color: var(--sds-color-bg-danger-hover);
+    --tag-background-color: var(--sds-color-background-danger-hover);
   }
 
   &.tag-variant-secondary {
-    --tag-color: var(--sds-color-text-danger-ondanger-secondary);
-    --tag-icon: var(--sds-color-icon-danger-ondanger-secondary);
-    --tag-background-color: var(--sds-color-bg-danger-secondary);
+    --tag-color: var(--sds-color-text-danger-on-danger-secondary);
+    --tag-icon: var(--sds-color-icon-danger-on-danger-secondary);
+    --tag-background-color: var(--sds-color-background-danger-secondary);
 
     &[data-hovered],
     &:has(.tag-remove-button[data-hovered]) {
-      --tag-background-color: var(--sds-color-bg-danger-secondary-hover);
+      --tag-background-color: var(
+        --sds-color-background-danger-secondary-hover
+      );
     }
   }
 }
 .tag-scheme-positive {
-  --tag-color: var(--sds-color-text-positive-onpositive);
-  --tag-icon: var(--sds-color-icon-positive-onpositive);
-  --tag-background-color: var(--sds-color-bg-positive-default);
+  --tag-color: var(--sds-color-text-positive-on-positive);
+  --tag-icon: var(--sds-color-icon-positive-on-positive);
+  --tag-background-color: var(--sds-color-background-positive-default);
 
   &[data-hovered],
   &:has(.tag-remove-button[data-hovered]) {
-    --tag-background-color: var(--sds-color-bg-positive-hover);
+    --tag-background-color: var(--sds-color-background-positive-hover);
   }
 
   &.tag-variant-secondary {
-    --tag-color: var(--sds-color-text-positive-onpositive-secondary);
-    --tag-icon: var(--sds-color-icon-positive-onpositive-secondary);
-    --tag-background-color: var(--sds-color-bg-positive-secondary);
+    --tag-color: var(--sds-color-text-positive-on-positive-secondary);
+    --tag-icon: var(--sds-color-icon-positive-on-positive-secondary);
+    --tag-background-color: var(--sds-color-background-positive-secondary);
 
     &[data-hovered],
     &:has(.tag-remove-button[data-hovered]) {
-      --tag-background-color: var(--sds-color-bg-positive-secondary-hover);
+      --tag-background-color: var(
+        --sds-color-background-positive-secondary-hover
+      );
     }
   }
 }
 .tag-scheme-warning {
-  --tag-color: var(--sds-color-text-warning-onwarning);
-  --tag-icon: var(--sds-color-icon-warning-onwarning);
-  --tag-background-color: var(--sds-color-bg-warning-default);
+  --tag-color: var(--sds-color-text-warning-on-warning);
+  --tag-icon: var(--sds-color-icon-warning-on-warning);
+  --tag-background-color: var(--sds-color-background-warning-default);
 
   &[data-hovered],
   &:has(.tag-remove-button[data-hovered]) {
-    --tag-background-color: var(--sds-color-bg-warning-hover);
+    --tag-background-color: var(--sds-color-background-warning-hover);
   }
 
   &.tag-variant-secondary {
-    --tag-color: var(--sds-color-text-warning-onwarning-secondary);
-    --tag-icon: var(--sds-color-icon-warning-onwarning-secondary);
-    --tag-background-color: var(--sds-color-bg-warning-secondary);
+    --tag-color: var(--sds-color-text-warning-on-warning-secondary);
+    --tag-icon: var(--sds-color-icon-warning-on-warning-secondary);
+    --tag-background-color: var(--sds-color-background-warning-secondary);
 
     &[data-hovered],
     &:has(.tag-remove-button[data-hovered]) {
-      --tag-background-color: var(--sds-color-bg-warning-secondary-hover);
+      --tag-background-color: var(
+        --sds-color-background-warning-secondary-hover
+      );
     }
   }
 }
 .tag-scheme-brand {
-  --tag-color: var(--sds-color-text-brand-onbrand);
-  --tag-icon: var(--sds-color-icon-brand-onbrand);
-  --tag-background-color: var(--sds-color-bg-brand-default);
+  --tag-color: var(--sds-color-text-brand-on-brand);
+  --tag-icon: var(--sds-color-icon-brand-on-brand);
+  --tag-background-color: var(--sds-color-background-brand-default);
 
   &[data-hovered],
   &:has(.tag-remove-button[data-hovered]) {
-    --tag-background-color: var(--sds-color-bg-brand-hover);
+    --tag-background-color: var(--sds-color-background-brand-hover);
   }
 
   &.tag-variant-secondary {
-    --tag-color: var(--sds-color-text-brand-onbrand-secondary);
-    --tag-icon: var(--sds-color-icon-brand-onbrand-secondary);
-    --tag-background-color: var(--sds-color-bg-brand-secondary);
+    --tag-color: var(--sds-color-text-brand-on-brand-secondary);
+    --tag-icon: var(--sds-color-icon-brand-on-brand-secondary);
+    --tag-background-color: var(--sds-color-background-brand-secondary);
 
     &[data-hovered],
     &:has(.tag-remove-button[data-hovered]) {
-      --tag-background-color: var(--sds-color-bg-brand-secondary-hover);
+      --tag-background-color: var(--sds-color-background-brand-secondary-hover);
     }
   }
 }
 .tag-scheme-neutral {
   --tag-color: var(--sds-color-text-default-default);
   --tag-icon: var(--sds-color-icon-default-default);
-  --tag-background-color: var(--sds-color-bg-default-tertiary);
+  --tag-background-color: var(--sds-color-background-default-tertiary);
 
   &[data-hovered],
   &:has(.tag-remove-button[data-hovered]) {
-    --tag-background-color: var(--sds-color-bg-default-tertiary-hover);
+    --tag-background-color: var(--sds-color-background-default-tertiary-hover);
   }
 
   &.tag-variant-secondary {
-    --tag-background-color: var(--sds-color-bg-default-secondary);
+    --tag-background-color: var(--sds-color-background-default-secondary);
 
     &[data-hovered],
     &:has(.tag-remove-button[data-hovered]) {
-      --tag-background-color: var(--sds-color-bg-default-secondary-hover);
+      --tag-background-color: var(
+        --sds-color-background-default-secondary-hover
+      );
     }
   }
 }
@@ -173,25 +183,25 @@
 .tag-toggle {
   --tag-color: var(--sds-color-text-brand-tertiary);
   --tag-icon: var(--sds-color-icon-brand-tertiary);
-  --tag-background-color: var(--sds-color-bg-brand-tertiary);
-  --border-radius: var(--sds-size-radius-base);
+  --tag-background-color: var(--sds-color-background-brand-tertiary);
+  --border-radius: var(--sds-size-radius-200);
   cursor: pointer;
-  gap: var(--sds-size-gap-sm);
+  gap: var(--sds-size-space-200);
   outline: none;
   &[data-selected] {
-    --tag-color: var(--sds-color-text-brand-onbrand);
-    --tag-icon: var(--sds-color-icon-brand-onbrand);
-    --tag-background-color: var(--sds-color-bg-brand-default);
+    --tag-color: var(--sds-color-text-brand-on-brand);
+    --tag-icon: var(--sds-color-icon-brand-on-brand);
+    --tag-background-color: var(--sds-color-background-brand-default);
   }
 }
 
 .tag-toggle-list {
   display: flex;
-  gap: var(--sds-size-gap-sm);
+  gap: var(--sds-size-space-200);
 }
 
 .tag-toggle-group {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-size-gap-sm);
+  gap: var(--sds-size-space-200);
 }

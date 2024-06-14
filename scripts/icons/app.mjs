@@ -2,9 +2,6 @@ import fs from "fs";
 
 // run with node --env-file=.env app.mjs
 const TOKEN = process.env.FIGMA_ACCESS_TOKEN;
-const _URL_BASE = "https://api.staging.figma.com/v1/files";
-const _FILE_URL_BASE = "https://staging.figma.com/design/";
-const _FILE_KEY = "YfiqA0yWMXuLJAzkZNpBdy";
 const URL_BASE = "https://api.figma.com/v1/files";
 const URL_BASE_IMAGES = "https://api.figma.com/v1/images";
 const FILE_URL_BASE = "https://figma.com/design/";

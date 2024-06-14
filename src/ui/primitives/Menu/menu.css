@@ -1,22 +1,22 @@
 .menu {
-  --menu-anchor-gap: var(--sds-size-gap-md);
-  --menu-anchor-offset: var(--sds-size-gap-md);
-  --menu-anchor-padding: var(--sds-size-padding-md);
+  --menu-anchor-gap: var(--sds-size-space-300);
+  --menu-anchor-offset: var(--sds-size-space-300);
+  --menu-anchor-padding: var(--sds-size-space-300);
 
-  background: var(--sds-color-bg-default-default);
-  border-radius: var(--sds-size-radius-base);
+  background: var(--sds-color-background-default-default);
+  border-radius: var(--sds-size-radius-200);
   box-shadow:
-    inset 0 0 0 var(--sds-size-border-width)
+    inset 0 0 0 var(--sds-size-stroke-border)
       var(--sds-color-border-default-default),
     var(--sds-effects-shadows-drop-shadow-400);
   outline: none;
   overflow-y: auto;
-  padding: var(--sds-size-padding-sm);
+  padding: var(--sds-size-space-200);
 }
 
 .menu-header {
-  padding: var(--sds-size-padding-sm) var(--sds-size-padding-lg)
-    var(--sds-size-padding-xs);
+  padding: var(--sds-size-space-200) var(--sds-size-space-400)
+    var(--sds-size-space-100);
 }
 .menu-section {
   width: 100%;
@@ -24,14 +24,14 @@
 .menu-heading {
   color: var(--sds-color-text-default-secondary);
   font: var(--sds-font-body-strong);
-  padding: var(--sds-size-padding-sm) var(--sds-size-padding-lg)
-    var(--sds-size-padding-xs);
+  padding: var(--sds-size-space-200) var(--sds-size-space-400)
+    var(--sds-size-space-100);
 }
 .menu-separator {
   background-color: var(--sds-color-border-default-default);
   display: block;
-  height: var(--sds-size-border-width);
-  margin: var(--sds-size-padding-xs) var(--sds-size-padding-lg);
+  height: var(--sds-size-stroke-border);
+  margin: var(--sds-size-space-100) var(--sds-size-space-400);
 }
 
 .menu-item {
@@ -45,15 +45,15 @@
   --menu-item-label-color: var(--sds-color-text-default-default);
   --menu-item-description-color: var(--sds-color-text-default-secondary);
   background-color: var(--menu-item-background-color);
-  border-radius: var(--sds-size-radius-base);
+  border-radius: var(--sds-size-radius-200);
   color: var(--menu-item-label-color);
-  column-gap: var(--sds-size-gap-lg);
+  column-gap: var(--sds-size-space-400);
   display: grid;
   font: var(--sds-font-body-base);
   grid-template-columns: 1fr auto;
 
-  padding: var(--sds-size-padding-md) var(--sds-size-padding-lg);
-  row-gap: var(--sds-size-gap-xs);
+  padding: var(--sds-size-space-300) var(--sds-size-space-400);
+  row-gap: var(--sds-size-space-100);
   width: 100%;
 
   &[data-focused] {
@@ -62,10 +62,10 @@
 
   &[data-focused],
   &[data-hovered]:not([data-disabled]) {
-    --menu-item-icon-color: var(--sds-color-icon-brand-onbrand);
-    --menu-item-label-color: var(--sds-color-text-brand-onbrand);
-    --menu-item-description-color: var(--sds-color-text-brand-onbrand);
-    --menu-item-background-color: var(--sds-color-bg-brand-default);
+    --menu-item-icon-color: var(--sds-color-icon-brand-on-brand);
+    --menu-item-label-color: var(--sds-color-text-brand-on-brand);
+    --menu-item-description-color: var(--sds-color-text-brand-on-brand);
+    --menu-item-background-color: var(--sds-color-background-brand-default);
   }
 
   &[data-disabled] {
@@ -108,7 +108,7 @@
   align-items: center;
   color: var(--menu-item-description-color);
   display: flex;
-  gap: var(--sds-size-gap-xs);
+  gap: var(--sds-size-space-100);
   text-transform: capitalize;
   > kbd {
     display: flex;
