@@ -1,14 +1,19 @@
 import { Footer, Header, Panel } from "compositions";
+import { useMediaQuery } from "hooks";
 import { Flex, FlexItem, Section } from "layout";
 import { AuthenticationProvider } from "providers";
 import { Image, Text, TextContentHeading } from "ui";
 
 function App() {
+  const { isMobile } = useMediaQuery();
+  const panelGap = isMobile ? "600" : "1200";
+  const sectionPadding = isMobile ? "600" : "1600";
+
   return (
     <AuthenticationProvider>
       <Header />
-      <Section>
-        <Panel alignSecondary="center">
+      <Section padding={sectionPadding}>
+        <Panel alignSecondary="center" gap={panelGap} type="half">
           <Image
             src="https://placehold.co/560x320"
             alt="Always use image alt"
@@ -37,8 +42,8 @@ function App() {
           </FlexItem>
         </Panel>
       </Section>
-      <Section variant="brand">
-        <Panel>
+      <Section padding={sectionPadding} variant="brand">
+        <Panel type="half" gap={panelGap}>
           <Image
             src="https://placehold.co/560x320"
             alt="Always use image alt"
@@ -53,8 +58,8 @@ function App() {
           />
         </Panel>
       </Section>
-      <Section>
-        <Panel>
+      <Section padding={sectionPadding}>
+        <Panel type="half" gap={panelGap}>
           <FlexItem size="half">
             <Flex direction="column" gap="600">
               <TextContentHeading heading="Heading" subheading="Subheading" />
@@ -83,14 +88,14 @@ function App() {
           />
         </Panel>
       </Section>
-      <Section variant="brand">
-        <Panel>
+      <Section padding={sectionPadding} padding="1600" variant="brand">
+        <Panel type="auto">
           <FlexItem size="full">
             <Image
               src="https://placehold.co/1200x320"
               alt="Always use image alt"
               aspectRatio="fill"
-              size="medium"
+              size="large"
             />
           </FlexItem>
         </Panel>

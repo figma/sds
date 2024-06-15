@@ -1,9 +1,9 @@
 import { Flex, type FlexProps } from "layout";
 
-export type PanelProps = Omit<FlexProps, "gap">;
+export type PanelProps = Omit<FlexProps, "container" | "wrap">;
 export function Panel({ children, ...props }: PanelProps) {
   return (
-    <Flex container wrap type="half" gap="1600" {...props}>
+    <Flex container wrap {...props}>
       {children}
     </Flex>
   );

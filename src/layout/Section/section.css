@@ -5,6 +5,12 @@
   position: relative;
   width: 100%;
 }
+.section-padding-bottom-600 {
+  --padding-y-bottom: var(--sds-size-space-600);
+}
+.section-padding-top-600 {
+  --padding-y-top: var(--sds-size-space-600);
+}
 .section-padding-bottom-800 {
   --padding-y-bottom: var(--sds-size-space-800);
 }
