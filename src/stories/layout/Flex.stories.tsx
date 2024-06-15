@@ -14,8 +14,8 @@ const renderChild = (text: string) => (
       display: "grid",
       placeItems: "center",
       padding: "0.5rem 1rem",
-      background: "var(--sds-color-bg-brand-default)",
-      color: "var(--sds-color-text-brand-onbrand)",
+      background: "var(--sds-color-background-brand-default)",
+      color: "var(--sds-color-text-brand-on-brand)",
     }}
   >
     {text}
