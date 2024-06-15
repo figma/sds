@@ -73,7 +73,7 @@
     gap: var(--sds-size-space-100);
     padding-left: var(--sds-size-space-300);
     padding-right: var(--sds-size-space-300);
-    max-width: calc(var(--global-dialog-max-width) / 2);
+    max-width: var(--global-tooltip-max-width);
     width: 100%;
   }
 }
