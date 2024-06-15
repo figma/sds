@@ -90,6 +90,7 @@
     padding-left: 1rem;
   }
 }
+
 .text-list-item {
   font: var(--sds-font-body);
 }
@@ -112,4 +113,10 @@
 }
 .text-align-end {
   text-align: right;
+}
+
+.text-content-title {
+  > * {
+    width: 100%;
+  }
 }

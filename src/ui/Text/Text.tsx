@@ -1,4 +1,5 @@
 import { clsx } from "clsx";
+import { useMediaQuery } from "hooks";
 import { Flex } from "layout";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 import {
@@ -217,9 +218,15 @@ export function TextContentTitle({
   ...props
 }: TextContentTitleProps) {
   const classNames = clsx(className, "text-content-title");
+  const { isMobile } = useMediaQuery();
   return (
     <Flex direction="column" gap="200" className={classNames} {...props}>
-      <TextTitleHero className={`text-align-${align}`}>{title}</TextTitleHero>
+      {isMobile ? (
+        <TextTitlePage className={`text-align-${align}`}>{title}</TextTitlePage>
+      ) : (
+        <TextTitleHero className={`text-align-${align}`}>{title}</TextTitleHero>
+      )}
+
       {subtitle && (
         <TextSubtitle className={`text-align-${align}`}>
           {subtitle}

@@ -1,7 +1,8 @@
 .section {
   box-sizing: border-box;
-  padding: var(--padding-y-top) var(--sds-size-space-800)
+  padding: var(--padding-y-top) var(--sds-size-space-600)
     var(--padding-y-bottom);
+  position: relative;
   width: 100%;
 }
 .section-padding-bottom-800 {
@@ -23,6 +24,28 @@
   --padding-y-top: var(--sds-size-space-4000);
 }
 
+.section-variant-image {
+  overflow: hidden;
+  &::before {
+    content: "";
+    background-color: var(--sds-color-background-utilities-scrim);
+    z-index: -1;
+  }
+  .section-image {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    z-index: -2;
+  }
+  &::before,
+  .section-image {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
 .section-variant-brand {
   background: var(--sds-color-background-brand-default);
   color: var(--sds-color-text-brand-on-brand);
