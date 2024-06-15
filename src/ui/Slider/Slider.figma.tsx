@@ -12,13 +12,13 @@ figma.connect(Slider, "<FIGMA_URL_SLIDER>", {
 
 figma.connect(SliderField, "<FIGMA_URL_SLIDER_FIELD>", {
   props: {
-    label: figma.children("Label"),
-    description: figma.children("Description"),
+    label: figma.string("Label"),
+    description: figma.boolean("Has Description", {
+      true: figma.string("Description"),
+      false: undefined,
+    }),
   },
   example: ({ label, description }) => (
-    <SliderField showOutput>
-      {label}
-      {description}
-    </SliderField>
+    <SliderField label={label} description={description} showOutput />
   ),
 });
