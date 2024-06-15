@@ -93,4 +93,7 @@
   &.flex-gap-800 {
     --flex-gap: var(--sds-size-space-800);
   }
+  &.flex-gap-1600 {
+    --flex-gap: var(--sds-size-space-1600);
+  }
 }
