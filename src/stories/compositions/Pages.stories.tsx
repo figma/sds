@@ -14,8 +14,8 @@ export const Default: StoryObj<typeof Header> = {
   render: () => (
     <>
       <Header />
-      <Section>
-        <Panel>
+      <Section padding="1600">
+        <Panel type="half" gap="600">
           <Image
             src="https://placehold.co/560x320"
             alt="Always use image alt"

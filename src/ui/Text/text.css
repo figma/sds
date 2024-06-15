@@ -115,7 +115,8 @@
   text-align: right;
 }
 
-.text-content-title {
+.text-content-title,
+.text-content-heading {
   > * {
     width: 100%;
   }

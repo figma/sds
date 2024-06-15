@@ -38,15 +38,13 @@ figma.connect(Field, "<FIGMA_URL_TEXT_AREA_FIELD>", {
       true: figma.string("Error Message"),
       false: undefined,
     }),
-    textArea: figma.children("Text Area"),
   },
-  example: ({ description, label, errorMessage, textArea }) => (
+  // TODO: textarea props on field
+  example: ({ description, label, errorMessage }) => (
     <TextAreaField
       label={label}
       description={description}
       errorMessage={errorMessage}
-    >
-      {textArea}
-    </TextAreaField>
+    />
   ),
 });

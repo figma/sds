@@ -15,13 +15,20 @@ figma.connect(RadioField, "<FIGMA_URL_RADIO>", {
 
 figma.connect(RadioField, "<FIGMA_URL_RADIOFIELD>", {
   props: {
-    children: figma.children(["Radio", "Label", "Description"]),
+    label: figma.string("Label"),
+    description: figma.boolean("Has Description", {
+      true: figma.string("Description"),
+      false: undefined,
+    }),
     isDisabled: figma.enum("State", { Disabled: true }),
   },
-  example: ({ children, isDisabled }) => (
-    <RadioField value="Initial value" isDisabled={isDisabled}>
-      {children}
-    </RadioField>
+  example: ({ label, description, isDisabled }) => (
+    <RadioField
+      value="Initial value"
+      label={label}
+      description={description}
+      isDisabled={isDisabled}
+    />
   ),
 });
 

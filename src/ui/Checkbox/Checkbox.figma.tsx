@@ -28,11 +28,20 @@ figma.connect(CheckboxField, "<FIGMA_URL_CHECKBOX>", {
 
 figma.connect(CheckboxField, "<FIGMA_URL_CHECKBOX_FIELD>", {
   props: {
-    children: figma.children(["Checkbox", "Label", "Description"]),
+    label: figma.string("Label"),
+    description: figma.boolean("Has Description", {
+      true: figma.string("Description"),
+      false: undefined,
+    }),
     isDisabled: figma.enum("State", { Disabled: true }),
   },
-  example: ({ children, isDisabled }) => (
-    <CheckboxField isDisabled={isDisabled}>{children}</CheckboxField>
+  // TODO: checkbox props on field
+  example: ({ label, description, isDisabled }) => (
+    <CheckboxField
+      label={label}
+      description={description}
+      isDisabled={isDisabled}
+    />
   ),
 });
 

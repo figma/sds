@@ -35,15 +35,13 @@ figma.connect(Field, "<FIGMA_URL_INPUT_FIELD>", {
       true: figma.string("Error Message"),
       false: undefined,
     }),
-    input: figma.children("Input"),
   },
-  example: ({ description, label, errorMessage, input }) => (
+  // TODO: input props on field
+  example: ({ description, label, errorMessage }) => (
     <InputField
       label={label}
       description={description}
       errorMessage={errorMessage}
-    >
-      {input}
-    </InputField>
+    />
   ),
 });

@@ -8,14 +8,20 @@ figma.connect(SwitchGroup, "<FIGMA_URL_SWITCH_GROUP>", {
 
 figma.connect(Switch, "<FIGMA_URL_SWITCH_FIELD>", {
   props: {
-    children: figma.children(["Label", "Switch", "Description"]),
-    isDisabled: figma.enum("Type", {
-      "Default Disabled": true,
-      "Label Only Disabled": true,
+    label: figma.string("Label"),
+    description: figma.boolean("Has Description", {
+      true: figma.string("Description"),
+      false: undefined,
     }),
+    isDisabled: figma.enum("State", { Disabled: true }),
   },
-  example: ({ children, isDisabled }) => (
-    <SwitchField isDisabled={isDisabled}>{children}</SwitchField>
+  // TODO: switch props on field
+  example: ({ label, description, isDisabled }) => (
+    <SwitchField
+      label={label}
+      description={description}
+      isDisabled={isDisabled}
+    />
   ),
 });
 
