@@ -81,9 +81,8 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_PANEL_DOUBLE>", {
 figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_PANEL_IMAGE>", {
   props: {
     padding: figma.enum("Platform", { Desktop: "1600" }),
-    gap: figma.enum("Platform", { Desktop: "1200" }),
   },
-  example: ({ padding, gap }) => (
+  example: ({ padding }) => (
     <Section padding={padding}>
       <Panel type="auto">
         <FlexItem size="full">
