@@ -88,7 +88,7 @@ function App() {
           />
         </Panel>
       </Section>
-      <Section padding={sectionPadding} padding="1600" variant="brand">
+      <Section padding={sectionPadding} variant="brand">
         <Panel type="auto">
           <FlexItem size="full">
             <Image
