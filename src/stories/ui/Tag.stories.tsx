@@ -18,10 +18,10 @@ const meta: Meta<typeof Tag> = {
 export default meta;
 
 export const Default: StoryObj<typeof Tag> = {
-  args: { variant: "default" },
+  args: { variant: "primary" },
   render: (args) => (
     <Flex wrap alignPrimary="center" gap="300">
-      <Tag scheme="default" {...args}>
+      <Tag scheme="brand" {...args}>
         Default
       </Tag>
       <Tag scheme="danger" {...args}>
@@ -42,11 +42,11 @@ export const Default: StoryObj<typeof Tag> = {
 
 export const Removable: StoryObj<typeof Tag> = {
   args: {
-    variant: "default",
+    variant: "primary",
   },
   render: (args) => (
     <Flex wrap gap="300">
-      <Tag onRemove={() => {}} scheme="default" {...args}>
+      <Tag onRemove={() => {}} scheme="brand" {...args}>
         Default
       </Tag>
       <Tag onRemove={() => {}} scheme="danger" {...args}>
@@ -66,10 +66,10 @@ export const Removable: StoryObj<typeof Tag> = {
 };
 
 export const TagButtonDefault: StoryObj<typeof TagButton> = {
-  args: { variant: "default" },
+  args: { variant: "primary" },
   render: (args) => (
     <Flex wrap alignPrimary="center" gap="300">
-      <TagButton scheme="default" {...args}>
+      <TagButton scheme="brand" {...args}>
         Default
       </TagButton>
       <TagButton scheme="danger" {...args}>

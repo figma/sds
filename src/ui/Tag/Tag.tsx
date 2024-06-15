@@ -14,8 +14,8 @@ import {
 import { AnchorOrButton, type AnchorOrButtonProps } from "utils";
 import "./tag.css";
 
-type TagScheme = "default" | "danger" | "positive" | "warning" | "neutral";
-type TagVariant = "default" | "secondary";
+type TagScheme = "brand" | "danger" | "positive" | "warning" | "neutral";
+type TagVariant = "primary" | "secondary";
 
 type SharedTagProps = {
   scheme?: TagScheme;
@@ -29,8 +29,9 @@ export type TagProps = SharedTagProps &
   React.ComponentPropsWithoutRef<"span">;
 export function Tag({
   children,
-  scheme = "default",
-  variant = "default",
+  scheme = "brand",
+  variant = "primary",
+  onRemove,
   ...props
 }: TagProps) {
   const classNames = clsx(
@@ -41,8 +42,8 @@ export function Tag({
   return (
     <span {...props} className={classNames}>
       {children}{" "}
-      {props.onRemove && (
-        <RACButton className="tag-remove-button" onPress={props.onRemove}>
+      {onRemove && (
+        <RACButton className="tag-remove-button" onPress={onRemove}>
           <IconX size="16" />
         </RACButton>
       )}
@@ -54,8 +55,8 @@ export type TagButtonProps = SharedTagProps & AnchorOrButtonProps;
 export const TagButton = React.forwardRef(function Tag(
   {
     className,
-    scheme = "default",
-    variant = "default",
+    scheme = "brand",
+    variant = "primary",
     ...props
   }: TagButtonProps,
   ref: React.ForwardedRef<HTMLElement>,

@@ -29,7 +29,7 @@
 }
 
 .tag {
-  --border-radius: var(--sds-size-radius-100);
+  --border-radius: var(--sds-size-radius-200);
   align-items: center;
   background-color: var(--tag-background-color);
   border-radius: var(--border-radius);
@@ -45,7 +45,7 @@
   }
 }
 
-.tag-scheme-default {
+.tag-scheme-brand {
   --tag-color: var(--sds-color-text-brand-on-brand);
   --tag-icon: var(--sds-color-icon-brand-on-brand);
   --tag-background-color: var(--sds-color-background-brand-default);
@@ -184,7 +184,6 @@
   --tag-color: var(--sds-color-text-brand-tertiary);
   --tag-icon: var(--sds-color-icon-brand-tertiary);
   --tag-background-color: var(--sds-color-background-brand-tertiary);
-  --border-radius: var(--sds-size-radius-200);
   cursor: pointer;
   gap: var(--sds-size-space-200);
   outline: none;

@@ -12,10 +12,15 @@ export interface TooltipProps extends Omit<RACPopoverProps, "children"> {
   children: React.ReactNode;
 }
 
-export function Tooltip({ children, className, ...props }: TooltipProps) {
+export function Tooltip({
+  children,
+  className,
+  offset = 16,
+  ...props
+}: TooltipProps) {
   const classNames = clsx(className, "tooltip");
   return (
-    <RACPopover className={classNames} {...props}>
+    <RACPopover className={classNames} offset={offset} {...props}>
       <TooltipOverlayArrow />
       <Dialog>{children}</Dialog>
     </RACPopover>

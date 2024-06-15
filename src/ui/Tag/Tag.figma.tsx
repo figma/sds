@@ -5,7 +5,8 @@ import { Tag, TagToggle, TagToggleGroup, TagToggleList } from "./Tag";
 figma.connect(Tag, "<FIGMA_URL_TAG>", {
   props: {
     onRemove: figma.boolean("Is Removable", {
-      true: true, // TODO: this needs to be a function.
+      // @ts-expect-error
+      true: () => {},
       false: undefined,
     }),
     label: figma.string("Label"),
@@ -19,8 +20,9 @@ figma.connect(Tag, "<FIGMA_URL_TAG>", {
       Neutral: "neutral",
     }),
   },
-  example: ({ label, scheme, variant }) => (
-    <Tag variant={variant} scheme={scheme}>
+  example: ({ label, scheme, onRemove, variant }) => (
+    // @ts-expect-error
+    <Tag variant={variant} scheme={scheme} onRemove={onRemove}>
       {label}
     </Tag>
   ),
