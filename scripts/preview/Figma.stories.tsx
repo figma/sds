@@ -115,8 +115,7 @@ export const AvatarGroupStory: StoryObj<
   },
   render: ({ spacing, ...args }) => (
     <AvatarGroup
-      spacing={spacing === "spaced" ? "100" : "200"}
-      overlap={spacing === "overlap"}
+      spacing={spacing === "spaced" ? "100" : "negative-200"}
       max={3}
       {...args}
     >

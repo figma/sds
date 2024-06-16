@@ -11,7 +11,7 @@ import {
   TextStrong,
 } from "primitives";
 
-export type FooterProps = Omit<SectionProps, "variant" | "padding">;
+export type FooterProps = Omit<SectionProps, "variant" | "padding" | "src">;
 export function Footer({ className, ...props }: FooterProps) {
   const { isMobile, isTablet, isTabletDown } = useMediaQuery();
   const listDensity = isTabletDown ? "tight" : "default";
