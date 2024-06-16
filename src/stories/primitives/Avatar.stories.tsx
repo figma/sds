@@ -59,12 +59,18 @@ export const Buttons: Story = {
 export const Group: GroupStory = {
   args: {
     spacing: "200",
-    overlap: false,
     max: 3,
   },
   argTypes: {
     spacing: {
-      options: ["100", "200", "300"],
+      options: [
+        "100",
+        "200",
+        "300",
+        "negative-100",
+        "negative-200",
+        "negative-300",
+      ],
       control: {
         type: "select",
       },

@@ -4,17 +4,13 @@ import { Avatar, AvatarBlock, AvatarGroup } from "./Avatar";
 figma.connect(AvatarGroup, "<FIGMA_URL_AVATAR_GROUP>", {
   props: {
     spacing: figma.enum("Spacing", {
-      Overlap: "200",
+      Overlap: "negative-200",
       Spaced: "100",
-    }),
-    overlap: figma.enum("Spacing", {
-      Overlap: true,
-      Spaced: false,
     }),
     children: figma.children("Avatar"),
   },
-  example: ({ children, spacing, overlap }) => (
-    <AvatarGroup spacing={spacing} overlap={overlap} max={3}>
+  example: ({ children, spacing }) => (
+    <AvatarGroup spacing={spacing} max={3}>
       {children}
     </AvatarGroup>
   ),
