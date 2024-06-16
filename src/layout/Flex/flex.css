@@ -72,6 +72,10 @@
     }
   }
 
+  .flex-item-size-fill {
+    flex-grow: 1;
+  }
+
   &.flex-wrap {
     flex-wrap: wrap;
   }

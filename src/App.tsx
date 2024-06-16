@@ -1,19 +1,40 @@
-import { Footer, Header, Panel, PricingCard } from "compositions";
+import {
+  Footer,
+  Header,
+  Panel,
+  PricingCard,
+  ProductInfoCard,
+} from "compositions";
 import { useMediaQuery } from "hooks";
+import { IconCheck } from "icons";
 import { Flex, FlexItem, Section } from "layout";
 import { AuthenticationProvider } from "providers";
 import { useState } from "react";
 import {
+  Accordion,
+  AccordionItem,
+  Button,
+  Form,
   Image,
+  Input,
   Navigation,
   NavigationItem,
+  Search,
+  SelectField,
+  SelectItem,
+  Tag,
+  TagToggle,
+  TagToggleGroup,
+  TagToggleList,
   Text,
   TextContentHeading,
+  TextHeading,
+  TextPrice,
 } from "ui";
 
 function App() {
-  const { isMobile } = useMediaQuery();
-  const panelGap = isMobile ? "600" : "1200";
+  const { isMobile, isDesktop } = useMediaQuery();
+  const flexGap = isMobile ? "600" : "1200";
   const sectionPadding = isMobile ? "600" : "1600";
   const [pricingInterval, setPricingInterval] = useState("monthly");
   const intervalText = pricingInterval === "monthly" ? "month" : "year";
@@ -22,8 +43,229 @@ function App() {
   return (
     <AuthenticationProvider>
       <Header />
-      <Section padding="1200">
-        <Flex container gap="1200" direction="column" alignSecondary="stretch">
+      <Section padding={sectionPadding}>
+        <Flex container wrap type="quarter" gap={flexGap}>
+          {isMobile ? null : (
+            <FlexItem size="minor">
+              Filter content will go here{/* Filter Content here */}
+            </FlexItem>
+          )}
+          <FlexItem size={isDesktop ? "major" : "full"}>
+            <Flex direction="column" gap="1200" alignSecondary="stretch">
+              <Flex type="auto" alignPrimary="space-between" wrap gap="600">
+                <FlexItem size="fill">
+                  <Flex alignPrimary="stretch">
+                    <Search placeholder="Search" />
+                  </Flex>
+                </FlexItem>
+                <TagToggleGroup>
+                  <TagToggleList>
+                    <TagToggle id="New" iconStart={<IconCheck />}>
+                      New
+                    </TagToggle>
+                    <TagToggle id="Price ascending">Price ascending</TagToggle>
+                    <TagToggle id="Price descending">
+                      Price descending
+                    </TagToggle>
+                    <TagToggle id="Rating">Rating</TagToggle>
+                  </TagToggleList>
+                </TagToggleGroup>
+              </Flex>
+              <Flex type="third" wrap gap="600">
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+              </Flex>
+            </Flex>
+          </FlexItem>
+        </Flex>
+      </Section>
+      <Section padding={sectionPadding}>
+        <Flex
+          container
+          direction="column"
+          alignSecondary="center"
+          gap={flexGap}
+        >
+          <TextContentHeading
+            align="center"
+            heading="Heading"
+            subheading="Subheading"
+          />
+          <FlexItem>
+            <Flex container type="third" alignPrimary="center">
+              <FlexItem size="major">
+                <Accordion>
+                  <AccordionItem title="Title">
+                    Answer the frequently asked question in a simple sentence, a
+                    longish paragraph, or even in a list.
+                  </AccordionItem>
+                  <AccordionItem title="Title">
+                    Answer the frequently asked question in a simple sentence, a
+                    longish paragraph, or even in a list.
+                  </AccordionItem>
+                  <AccordionItem title="Title">
+                    Answer the frequently asked question in a simple sentence, a
+                    longish paragraph, or even in a list.
+                  </AccordionItem>
+                  <AccordionItem title="Title">
+                    Answer the frequently asked question in a simple sentence, a
+                    longish paragraph, or even in a list.
+                  </AccordionItem>
+                  <AccordionItem title="Title">
+                    Answer the frequently asked question in a simple sentence, a
+                    longish paragraph, or even in a list.
+                  </AccordionItem>
+                </Accordion>
+              </FlexItem>
+            </Flex>
+          </FlexItem>
+        </Flex>
+      </Section>
+      <Section padding={sectionPadding}>
+        <Flex container type="half" wrap gap={flexGap}>
+          <Image
+            src="https://placehold.co/600/f0f0f0/ddd?text=SDS"
+            alt="Always use image alt"
+            size="large"
+            aspectRatio="4-3"
+          />
+          <FlexItem size="half">
+            <Flex direction="column" gap="600" alignSecondary="stretch">
+              <TextHeading>Text Heading</TextHeading>
+              <FlexItem>
+                <Flex direction="column" gap="200">
+                  <Tag variant="secondary" scheme="positive">
+                    Tag
+                  </Tag>
+                  <TextPrice label="/ month" currency="$" price="50" />
+                </Flex>
+              </FlexItem>
+              <Text>Text</Text>
+              <FlexItem>
+                <Flex wrap type="half" gap="200">
+                  <SelectField
+                    label="Label"
+                    defaultSelectedKey="Hello World"
+                    placeholder="Select theme..."
+                  >
+                    <SelectItem>item1</SelectItem>
+                    <SelectItem>item2</SelectItem>
+                    <SelectItem>item3</SelectItem>
+                    <SelectItem>item4</SelectItem>
+                    <SelectItem>item5</SelectItem>
+                  </SelectField>
+                  <SelectField
+                    label="Label"
+                    defaultSelectedKey="Hello World"
+                    placeholder="Select theme..."
+                  >
+                    <SelectItem>item1</SelectItem>
+                    <SelectItem>item2</SelectItem>
+                    <SelectItem>item3</SelectItem>
+                    <SelectItem>item4</SelectItem>
+                    <SelectItem>item5</SelectItem>
+                  </SelectField>
+                </Flex>
+              </FlexItem>
+              <Button onPress={() => {}} variant="primary">
+                Button
+              </Button>
+              <Accordion>
+                <AccordionItem title="Title">
+                  Answer the frequently asked question in a simple sentence, a
+                  longish paragraph, or even in a list.
+                </AccordionItem>
+              </Accordion>
+            </Flex>
+          </FlexItem>
+        </Flex>
+      </Section>
+      <Section padding={sectionPadding}>
+        <Flex container wrap gap={flexGap} alignPrimary="center">
+          <TextContentHeading
+            align="center"
+            heading="Follow the latest trends"
+            subheading="With our daily newsletter"
+          />
+          <Form singleLine>
+            <Input placeholder="you@example.com" />
+            <Button onPress={() => {}} variant="primary">
+              Submit
+            </Button>
+          </Form>
+        </Flex>
+      </Section>
+      <Section padding={sectionPadding}>
+        <Flex
+          container
+          gap={flexGap}
+          direction="column"
+          alignSecondary="stretch"
+        >
           <FlexItem>
             <Flex alignPrimary="center">
               <Navigation direction="row">
@@ -75,7 +317,7 @@ function App() {
         </Flex>
       </Section>
       <Section padding={sectionPadding}>
-        <Panel alignSecondary="center" gap={panelGap} type="half">
+        <Panel alignSecondary="center" gap={flexGap} type="half">
           <Image
             src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
             alt="Always use image alt"
@@ -105,7 +347,7 @@ function App() {
         </Panel>
       </Section>
       <Section padding={sectionPadding} variant="brand">
-        <Panel type="half" gap={panelGap}>
+        <Panel type="half" gap={flexGap}>
           <Image
             src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
             alt="Always use image alt"
@@ -121,7 +363,7 @@ function App() {
         </Panel>
       </Section>
       <Section padding={sectionPadding}>
-        <Panel type="half" gap={panelGap}>
+        <Panel type="half" gap={flexGap}>
           <FlexItem size="half">
             <Flex direction="column" gap="600">
               <TextContentHeading heading="Heading" subheading="Subheading" />

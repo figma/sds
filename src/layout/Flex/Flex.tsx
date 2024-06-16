@@ -46,7 +46,7 @@ export function Flex({
   );
 }
 
-type FlexItemSize = "full" | "major" | "minor" | "half";
+type FlexItemSize = "full" | "major" | "minor" | "half" | "fill";
 export type FlexItemProps = ComponentPropsWithoutRef<"div"> & {
   size?: FlexItemSize;
 };
