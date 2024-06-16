@@ -120,22 +120,25 @@ export const AvatarBlock = ({
 
 export type AvatarGroupProps = React.ComponentPropsWithoutRef<"div"> & {
   max?: number;
-  spacing?: "100" | "200" | "300";
-  overlap?: boolean;
+  spacing?:
+    | "100"
+    | "200"
+    | "300"
+    | "negative-100"
+    | "negative-200"
+    | "negative-300";
 };
 export const AvatarGroup = ({
   className,
   children,
   max = 3,
   spacing = "200",
-  overlap,
   ...props
 }: AvatarGroupProps) => {
   const classNames = clsx(
     className,
     "avatar-group",
     `avatar-group-spacing-${spacing}`,
-    overlap && "avatar-group-overlap",
   );
   const childArray = React.Children.toArray(children);
   const childCount = childArray.length;
