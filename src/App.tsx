@@ -44,106 +44,6 @@ function App() {
     <AuthenticationProvider>
       <Header />
       <Section padding={sectionPadding}>
-        <Flex container wrap type="quarter" gap={flexGap}>
-          {isMobile ? null : (
-            <FlexItem size="minor">
-              Filter content will go here{/* Filter Content here */}
-            </FlexItem>
-          )}
-          <FlexItem size={isDesktop ? "major" : "full"}>
-            <Flex direction="column" gap="1200" alignSecondary="stretch">
-              <Flex type="auto" alignPrimary="space-between" wrap gap="600">
-                <FlexItem size="fill">
-                  <Flex alignPrimary="stretch">
-                    <Search placeholder="Search" />
-                  </Flex>
-                </FlexItem>
-                <TagToggleGroup>
-                  <TagToggleList>
-                    <TagToggle id="New" iconStart={<IconCheck />}>
-                      New
-                    </TagToggle>
-                    <TagToggle id="Price ascending">Price ascending</TagToggle>
-                    <TagToggle id="Price descending">
-                      Price descending
-                    </TagToggle>
-                    <TagToggle id="Rating">Rating</TagToggle>
-                  </TagToggleList>
-                </TagToggleGroup>
-              </Flex>
-              <Flex type="third" wrap gap="600">
-                <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
-                  heading="Product"
-                  price={5}
-                  description="Wow do we have a cool thing for you. What an amazing thing."
-                />
-                <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
-                  heading="Product"
-                  price={5}
-                  description="Wow do we have a cool thing for you. What an amazing thing."
-                />
-                <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
-                  heading="Product"
-                  price={5}
-                  description="Wow do we have a cool thing for you. What an amazing thing."
-                />
-                <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
-                  heading="Product"
-                  price={5}
-                  description="Wow do we have a cool thing for you. What an amazing thing."
-                />
-                <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
-                  heading="Product"
-                  price={5}
-                  description="Wow do we have a cool thing for you. What an amazing thing."
-                />
-                <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
-                  heading="Product"
-                  price={5}
-                  description="Wow do we have a cool thing for you. What an amazing thing."
-                />
-              </Flex>
-            </Flex>
-          </FlexItem>
-        </Flex>
-      </Section>
-      <Section padding={sectionPadding}>
         <Flex
           container
           direction="column"
@@ -391,6 +291,104 @@ function App() {
             size="medium"
           />
         </Panel>
+      </Section>
+      <Section padding={sectionPadding}>
+        <Flex container wrap type="quarter" gap={flexGap}>
+          {isMobile ? null : (
+            <FlexItem size="minor">Filter content will go here</FlexItem>
+          )}
+          <FlexItem size={isDesktop ? "major" : "full"}>
+            <Flex direction="column" gap="1200" alignSecondary="stretch">
+              <Flex type="auto" alignPrimary="space-between" wrap gap="600">
+                <FlexItem size="fill">
+                  <Flex alignPrimary="stretch">
+                    <Search placeholder="Search" />
+                  </Flex>
+                </FlexItem>
+                <TagToggleGroup>
+                  <TagToggleList>
+                    <TagToggle id="New" iconStart={<IconCheck />}>
+                      New
+                    </TagToggle>
+                    <TagToggle id="Price ascending">Price ascending</TagToggle>
+                    <TagToggle id="Price descending">
+                      Price descending
+                    </TagToggle>
+                    <TagToggle id="Rating">Rating</TagToggle>
+                  </TagToggleList>
+                </TagToggleGroup>
+              </Flex>
+              <Flex type="third" wrap gap="600">
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+                <ProductInfoCard
+                  asset={
+                    <Image
+                      alt="Accessibility!"
+                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+                    />
+                  }
+                  heading="Product"
+                  price={5}
+                  description="Wow do we have a cool thing for you. What an amazing thing."
+                />
+              </Flex>
+            </Flex>
+          </FlexItem>
+        </Flex>
       </Section>
       <Section padding={sectionPadding} variant="brand">
         <Panel type="auto">
