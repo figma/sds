@@ -9,6 +9,7 @@ import {
   AvatarProps,
   Button,
   ButtonGroup,
+  ButtonProps,
   Text,
   TextHeading,
   TextList,
@@ -92,6 +93,10 @@ export type PricingCardProps = {
    */
   price: number;
   /**
+   * The text for price per
+   */
+  pricePer?: string;
+  /**
    * A list of items to appear in a bulleted list
    */
   items: string[];
@@ -99,6 +104,10 @@ export type PricingCardProps = {
    * The text labeling the action button
    */
   action: string;
+  /**
+   * The action variant
+   */
+  actionVariant?: ButtonProps["variant"];
   /**
    * The action of the button.
    */
@@ -111,9 +120,11 @@ export type PricingCardProps = {
 export function PricingCard({
   heading,
   action,
+  actionVariant = "primary",
   onAction,
   items,
   price,
+  pricePer = "/ per month",
   ...props
 }: PricingCardProps) {
   return (
@@ -122,7 +133,7 @@ export function PricingCard({
         <TextHeading>{heading}</TextHeading>
         <TextTitlePage>
           ${price}
-          <Text elementType="span"> / per month</Text>
+          <Text elementType="span"> {pricePer}</Text>
         </TextTitlePage>
       </Flex>
       <TextList>
@@ -132,7 +143,9 @@ export function PricingCard({
       </TextList>
       <Flex alignPrimary="stretch">
         <ButtonGroup align="justify">
-          <Button onPress={onAction}>{action}</Button>
+          <Button variant={actionVariant} onPress={onAction}>
+            {action}
+          </Button>
         </ButtonGroup>
       </Flex>
     </Card>

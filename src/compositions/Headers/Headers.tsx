@@ -35,7 +35,7 @@ export function HeaderAuth() {
         size="small"
         onPress={() =>
           login({
-            avatar: "https://placehold.co/300",
+            avatar: "https://placehold.co/300/f0f0f0/ddd?text=SDS",
             name: "Charlie Brown",
             username: "snooptroupe",
           })
@@ -47,7 +47,7 @@ export function HeaderAuth() {
         size="small"
         onPress={() =>
           login({
-            avatar: "https://placehold.co/300",
+            avatar: "https://placehold.co/300/f0f0f0/ddd?text=SDS",
             name: "Charlie Brown",
             username: "snooptroupe",
           })
@@ -173,7 +173,7 @@ export function HeaderAuth() {
   );
 }
 
-export type HeaderProps = Omit<SectionProps, "variant" | "padding">;
+export type HeaderProps = Omit<SectionProps, "variant" | "padding" | "src">;
 export function Header({ className, ...props }: HeaderProps) {
   return (
     <Section

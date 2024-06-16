@@ -32,7 +32,7 @@ figma.connect(Avatar, "<FIGMA_URL_AVATAR>", {
       Small: "small",
     }),
     src: figma.enum("Type", {
-      Image: "https://placehold.co/80",
+      Image: "https://placehold.co/80/f0f0f0/ddd?text=SDS",
     }),
   },
   example: ({ initials, size, square, src }) => (

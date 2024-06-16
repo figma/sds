@@ -91,7 +91,11 @@ export const AvatarStory: StoryObj<
   render: ({ shape, type, ...args }) => (
     <Avatar
       initials={type === "initials" ? "JA" : undefined}
-      src={type === "image" ? "https://placehold.co/200" : undefined}
+      src={
+        type === "image"
+          ? "https://placehold.co/200/f0f0f0/ddd?text=SDS"
+          : undefined
+      }
       square={shape === "square"}
       {...args}
     />
@@ -116,12 +120,12 @@ export const AvatarGroupStory: StoryObj<
       max={3}
       {...args}
     >
-      <Avatar src="https://placehold.co/200" />
-      <Avatar src="https://placehold.co/201" />
-      <Avatar src="https://placehold.co/202" />
-      <Avatar src="https://placehold.co/203" />
-      <Avatar src="https://placehold.co/204" />
-      <Avatar src="https://placehold.co/205" />
+      <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
+      <Avatar src="https://placehold.co/201/f0f0f0/ddd?text=SDS" />
+      <Avatar src="https://placehold.co/202/f0f0f0/ddd?text=SDS" />
+      <Avatar src="https://placehold.co/203/f0f0f0/ddd?text=SDS" />
+      <Avatar src="https://placehold.co/204/f0f0f0/ddd?text=SDS" />
+      <Avatar src="https://placehold.co/205/f0f0f0/ddd?text=SDS" />
     </AvatarGroup>
   ),
 };

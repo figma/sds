@@ -19,7 +19,7 @@ export const Default: StoryObj<typeof Image> = {
         width: "100%",
       }}
     >
-      <Image src="https://placehold.co/500x300" {...args} />
+      <Image src="https://placehold.co/500x300/f0f0f0/ddd?text=SDS" {...args} />
     </div>
   ),
 };
@@ -27,8 +27,8 @@ export const Default: StoryObj<typeof Image> = {
 export const SrcSet: StoryObj<typeof Image> = {
   render: (args) => (
     <Image
-      src="https://placehold.co/500"
-      srcSet="https://placehold.co/500 500w, https://placehold.co/1001 1001w"
+      src="https://placehold.co/500/f0f0f0/ddd?text=SDS"
+      srcSet="https://placehold.co/500/f0f0f0/ddd?text=SDS 500w, https://placehold.co/1001/f0f0f0/ddd?text=SDS 1001w"
       sizes="(max-width: 700px) 500w, 1000w"
       {...args}
     />
@@ -42,13 +42,16 @@ export const DefaultPicture: StoryObj<typeof Picture> = {
     <Picture>
       <PictureSource
         media="(max-width: 499px)"
-        srcSet="https://placehold.co/500"
+        srcSet="https://placehold.co/500/f0f0f0/ddd?text=SDS"
       />
       <PictureSource
         media="(min-width: 500px)"
-        srcSet="https://placehold.co/1000x500"
+        srcSet="https://placehold.co/1000x500/f0f0f0/ddd?text=SDS"
       />
-      <Image src="https://placehold.co/1000x500" alt="Magical thing" />
+      <Image
+        src="https://placehold.co/1000x500/f0f0f0/ddd?text=SDS"
+        alt="Magical thing"
+      />
     </Picture>
   ),
 };

@@ -43,7 +43,7 @@ export const Default: StoryObj<typeof Section> = {
       </Section>
       <Section
         variant="image"
-        src="https://placehold.co/2000x1200"
+        src="https://placehold.co/2000x1200/f0f0f0/ddd?text=SDS"
         padding="4000"
       >
         <Flex container alignPrimary="center" gap="600">

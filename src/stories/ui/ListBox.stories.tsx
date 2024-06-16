@@ -32,7 +32,10 @@ export const Default: Story = {
           <Label>Turtle</Label>
         </ListBoxItem>
         <ListBoxItem textValue="Admin">
-          <img slot="image" src="https://placehold.co/100" />
+          <img
+            slot="image"
+            src="https://placehold.co/100/f0f0f0/ddd?text=SDS"
+          />
           <Label>Admin</Label>
           <Description>Full access</Description>
         </ListBoxItem>

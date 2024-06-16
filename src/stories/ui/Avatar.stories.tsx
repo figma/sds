@@ -16,9 +16,13 @@ export const Image: Story = {
   args: {},
   render: () => (
     <Flex alignPrimary="center" gap="200" alignSecondary="center">
-      <Avatar src="https://placehold.co/200" size="small" />
-      <Avatar src="https://placehold.co/200" />
-      <Avatar src="https://placehold.co/200" square size="large" />
+      <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" size="small" />
+      <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
+      <Avatar
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+        square
+        size="large"
+      />
     </Flex>
   ),
 };
@@ -38,9 +42,16 @@ export const Buttons: Story = {
   args: {},
   render: () => (
     <Flex alignPrimary="center" gap="200" alignSecondary="center">
-      <AvatarButton square size="small" src="https://placehold.co/200" />
-      <AvatarButton square src="https://placehold.co/200" />
-      <AvatarButton size="large" src="https://placehold.co/200" />
+      <AvatarButton
+        square
+        size="small"
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+      />
+      <AvatarButton square src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
+      <AvatarButton
+        size="large"
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+      />
     </Flex>
   ),
 };
@@ -63,11 +74,11 @@ export const Group: GroupStory = {
     <Flex alignPrimary="center" gap="200" alignSecondary="center">
       <AvatarGroup {...args}>
         <Avatar initials="JA" />
-        <Avatar src="https://placehold.co/200" />
+        <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
         <Avatar initials="LO" />
-        <Avatar src="https://placehold.co/200" />
+        <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
         <Avatar initials="WM" />
-        <Avatar src="https://placehold.co/200" />
+        <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
       </AvatarGroup>
     </Flex>
   ),
@@ -77,7 +88,11 @@ export const Block: Story = {
   args: {},
   render: () => (
     <AvatarBlock title="Full Name" description="@fullname420">
-      <AvatarButton square size="large" src="https://placehold.co/200" />
+      <AvatarButton
+        square
+        size="large"
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+      />
     </AvatarBlock>
   ),
 };

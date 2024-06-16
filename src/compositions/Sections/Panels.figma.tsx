@@ -3,7 +3,7 @@ import { Flex, FlexItem, Section } from "layout";
 import { Image } from "ui";
 import { Panel } from "./Panels";
 
-figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_CONTENT_PANEL>", {
+figma.connect(Panel, "<FIGMA_URL_SECTION_PANEL_IMAGE_CONTENT>", {
   props: {
     padding: figma.enum("Platform", { Desktop: "1600", Mobile: "600" }),
     gap: figma.enum("Platform", { Desktop: "1200", Mobile: "600" }),
@@ -13,7 +13,7 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_CONTENT_PANEL>", {
     <Section padding={padding}>
       <Panel gap={gap} type="half">
         <Image
-          src="https://placehold.co/560x320"
+          src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
           alt="Always use image alt"
           aspectRatio="4-3"
           size="medium"
@@ -28,7 +28,7 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_CONTENT_PANEL>", {
   ),
 });
 
-figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_CONTENT_PANEL_REVERSE>", {
+figma.connect(Panel, "<FIGMA_URL_SECTION_PANEL_IMAGE_CONTENT_REVERSE>", {
   props: {
     padding: figma.enum("Platform", { Desktop: "1600", Mobile: "600" }),
     gap: figma.enum("Platform", { Desktop: "1200", Mobile: "600" }),
@@ -43,7 +43,7 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_CONTENT_PANEL_REVERSE>", {
           </Flex>
         </FlexItem>
         <Image
-          src="https://placehold.co/560x320"
+          src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
           alt="Always use image alt"
           aspectRatio="4-3"
           size="medium"
@@ -53,7 +53,7 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_CONTENT_PANEL_REVERSE>", {
   ),
 });
 
-figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_PANEL_DOUBLE>", {
+figma.connect(Panel, "<FIGMA_URL_SECTION_PANEL_IMAGE_DOUBLE>", {
   props: {
     padding: figma.enum("Platform", { Desktop: "1600", Mobile: "600" }),
     gap: figma.enum("Platform", { Desktop: "1200", Mobile: "600" }),
@@ -62,13 +62,13 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_PANEL_DOUBLE>", {
     <Section padding={padding}>
       <Panel gap={gap} type="half">
         <Image
-          src="https://placehold.co/560x320"
+          src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
           alt="Always use image alt"
           aspectRatio="4-3"
           size="medium"
         />
         <Image
-          src="https://placehold.co/560x320"
+          src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
           alt="Always use image alt"
           aspectRatio="4-3"
           size="medium"
@@ -78,16 +78,16 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_PANEL_DOUBLE>", {
   ),
 });
 
-figma.connect(Panel, "<FIGMA_URL_SECTION_IMAGE_PANEL_IMAGE>", {
+figma.connect(Panel, "<FIGMA_URL_SECTION_PANEL_IMAGE_IMAGE>", {
   props: {
-    padding: figma.enum("Platform", { Desktop: "1600" }),
+    padding: figma.enum("Platform", { Desktop: "1600", Mobile: "600" }),
   },
   example: ({ padding }) => (
     <Section padding={padding}>
       <Panel type="auto">
         <FlexItem size="full">
           <Image
-            src="https://placehold.co/1200x320"
+            src="https://placehold.co/1200x320/f0f0f0/ddd?text=SDS"
             alt="Always use image alt"
             aspectRatio="fill"
             size="medium"

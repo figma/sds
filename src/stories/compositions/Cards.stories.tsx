@@ -62,7 +62,7 @@ export const Default: StoryObj<
             alt="A nice image"
             aspectRatio="1-1"
             size="small"
-            src="https://placehold.co/500"
+            src="https://placehold.co/500/f0f0f0/ddd?text=SDS"
           />
         ) : undefined
       }
@@ -115,25 +115,45 @@ export const BlockProductInfoCard: StoryObj<typeof ProductInfoCard> = {
   render: () => (
     <Flex container wrap type="quarter" gap="400" direction="row">
       <ProductInfoCard
-        asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
+        asset={
+          <Image
+            alt="Accessibility!"
+            src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+          />
+        }
         heading="Product"
         price={5}
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
-        asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
+        asset={
+          <Image
+            alt="Accessibility!"
+            src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+          />
+        }
         heading="Product"
         price={5}
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
-        asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
+        asset={
+          <Image
+            alt="Accessibility!"
+            src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+          />
+        }
         heading="Product"
         price={5}
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
-        asset={<Image alt="Accessibility!" src="https://placehold.co/300" />}
+        asset={
+          <Image
+            alt="Accessibility!"
+            src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
+          />
+        }
         heading="Product"
         price={5}
         description="Wow do we have a cool thing for you. What an amazing thing."
@@ -158,7 +178,7 @@ export const BlockReviewCard: StoryObj<typeof StatsCard> = {
         body="Cannot believe how amazing this experience was"
         name="Charlie Brown"
         date="June 2024"
-        src="https://placehold.co/200"
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
       />
       <ReviewCard
         stars={5}
@@ -166,7 +186,7 @@ export const BlockReviewCard: StoryObj<typeof StatsCard> = {
         body="Cannot believe how amazing this experience was"
         name="Charlie Brown"
         date="June 2024"
-        src="https://placehold.co/200"
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
       />
       <ReviewCard
         stars={5}
@@ -174,7 +194,7 @@ export const BlockReviewCard: StoryObj<typeof StatsCard> = {
         body="Cannot believe how amazing this experience was"
         name="Charlie Brown"
         date="June 2024"
-        src="https://placehold.co/200"
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
       />
       <ReviewCard
         stars={4}
@@ -182,7 +202,7 @@ export const BlockReviewCard: StoryObj<typeof StatsCard> = {
         body="Cannot believe how amazing this experience was"
         name="Charlie Brown"
         date="June 2024"
-        src="https://placehold.co/200"
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
       />
     </Flex>
   ),
@@ -234,19 +254,19 @@ export const BlockTestimonialCard: StoryObj<typeof TestimonialCard> = {
     >
       <TestimonialCard
         heading="“Something splendid”"
-        src="https://placehold.co/200"
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
         username="fullname421"
         name="Full Name"
       />
       <TestimonialCard
         heading="“Something splendid”"
-        src="https://placehold.co/200"
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
         username="fullname421"
         name="Full Name"
       />
       <TestimonialCard
         heading="“Something splendid”"
-        src="https://placehold.co/200"
+        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
         username="fullname421"
         name="Full Name"
       />

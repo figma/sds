@@ -17,6 +17,12 @@
 .section-padding-top-800 {
   --padding-y-top: var(--sds-size-space-800);
 }
+.section-padding-bottom-1200 {
+  --padding-y-bottom: var(--sds-size-space-1200);
+}
+.section-padding-top-1200 {
+  --padding-y-top: var(--sds-size-space-1200);
+}
 .section-padding-bottom-1600 {
   --padding-y-bottom: var(--sds-size-space-1600);
 }
