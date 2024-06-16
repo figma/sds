@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Footer, Header, Panel } from "compositions";
 import { Section } from "layout";
-import { Image } from "ui";
+import { Image } from "primitives";
 
 const meta: Meta<typeof Header> = {
   component: Header,

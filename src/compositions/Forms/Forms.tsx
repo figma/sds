@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Form, type FormProps } from "ui";
+import { Form, type FormProps } from "primitives";
 import "./forms.css";
 
 export type FormBoxProps = FormProps;

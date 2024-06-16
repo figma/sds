@@ -1,5 +1,5 @@
 import { figma } from "@figma/code-connect";
-import { Image, Text, TextHeading } from "ui";
+import { Image, Text, TextHeading } from "primitives";
 import {
   Card,
   PricingCard,

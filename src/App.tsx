@@ -8,8 +8,6 @@ import {
 import { useMediaQuery } from "hooks";
 import { IconCheck } from "icons";
 import { Flex, FlexItem, Section } from "layout";
-import { AuthenticationProvider } from "providers";
-import { useState } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -30,7 +28,9 @@ import {
   TextContentHeading,
   TextHeading,
   TextPrice,
-} from "ui";
+} from "primitives";
+import { AuthenticationProvider } from "providers";
+import { useState } from "react";
 
 function App() {
   const { isMobile, isDesktop } = useMediaQuery();

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { FormBox } from "compositions";
-import { Button, ButtonGroup, CheckboxField, InputField } from "ui";
+import { Button, ButtonGroup, CheckboxField, InputField } from "primitives";
 
 const meta: Meta<typeof FormBox> = {
   component: FormBox,

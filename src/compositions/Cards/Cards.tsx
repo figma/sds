@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { useMediaQuery } from "hooks";
 import { IconStar } from "icons";
 import { Flex } from "layout";
-import { ComponentPropsWithoutRef, ReactNode } from "react";
 import {
   Avatar,
   AvatarBlock,
@@ -17,7 +16,8 @@ import {
   TextSmall,
   TextStrong,
   TextTitlePage,
-} from "ui";
+} from "primitives";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { AnchorOrButton, AnchorOrButtonProps } from "utils";
 import "./cards.css";
 

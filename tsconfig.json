@@ -21,8 +21,8 @@
       "hooks": ["./hooks"],
       "icons": ["./icons"],
       "layout": ["./layout"],
+      "primitives": ["./primitives"],
       "providers": ["./providers"],
-      "ui": ["./ui"],
       "utils": ["./utils"]
     }
   },

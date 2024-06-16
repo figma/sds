@@ -130,7 +130,7 @@ async function fileRESTResponseToIconComponentsJSON(response) {
     const [name, componentSetId] = idsToNameAndComponentSetId[nodeId];
     const svgString = [
       `import figma from "@figma/code-connect";`,
-      'import { IconProps, Icon } from "ui/primitives";',
+      'import { IconProps, Icon } from "primitives";',
       `export const ${name} = (props: IconProps) => (`,
     ];
     res.exports.push(`export { ${name} } from "./${name}.tsx";`);

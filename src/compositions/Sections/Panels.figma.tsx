@@ -1,6 +1,6 @@
 import { figma } from "@figma/code-connect";
 import { Flex, FlexItem, Section } from "layout";
-import { Image } from "ui";
+import { Image } from "primitives";
 import { Panel } from "./Panels";
 
 figma.connect(Panel, "<FIGMA_URL_SECTION_PANEL_IMAGE_CONTENT>", {

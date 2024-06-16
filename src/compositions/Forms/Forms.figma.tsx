@@ -1,6 +1,6 @@
 import { figma } from "@figma/code-connect";
 import { Flex } from "layout";
-import { Form } from "ui";
+import { Form } from "primitives";
 import { FormBox } from "./Forms";
 
 figma.connect(FormBox, "<FIGMA_URL_FORM_LOG_IN>", {

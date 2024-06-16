@@ -28,8 +28,8 @@ const config: StorybookConfig = {
         hooks: path.resolve(__dirname, "/src/hooks"),
         icons: path.resolve(__dirname, "/src/icons"),
         layout: path.resolve(__dirname, "/src/layout"),
+        primitives: path.resolve(__dirname, "/src/primitives"),
         providers: path.resolve(__dirname, "/src/providers"),
-        ui: path.resolve(__dirname, "/src/ui"),
         utils: path.resolve(__dirname, "/src/utils"),
       };
     }
@@ -38,7 +38,7 @@ const config: StorybookConfig = {
   },
 
   typescript: {
-    reactDocgen: "react-docgen-typescript"
-  }
+    reactDocgen: "react-docgen-typescript",
+  },
 };
 export default config;

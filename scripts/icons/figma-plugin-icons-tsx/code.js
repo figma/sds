@@ -16,7 +16,7 @@ async function run() {
             .join("");
         const lines = [
           `import figma from "@figma/code-connect";`,
-          'import { IconProps, Icon } from "ui/primitives";',
+          'import { IconProps, Icon } from "primitives";',
           `export const ${cleanName} = (props: IconProps) => (`,
         ];
         exports.push(`export { ${cleanName} } from "./${cleanName}.tsx";`);

@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { IconActivity, IconArrowLeft } from "icons";
-import { ComponentProps } from "react";
 import {
   Accordion,
   AccordionItem,
@@ -21,7 +20,8 @@ import {
   Text,
   TextAreaField,
   TextSubtitle,
-} from "ui";
+} from "primitives";
+import { ComponentProps } from "react";
 
 function Figma() {
   return <>Figma</>;

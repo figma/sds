@@ -15,8 +15,8 @@ import {
   IconSmile,
 } from "icons";
 import { Flex } from "layout";
+import { Button, ButtonGroup, Image, Text, TextHeading } from "primitives";
 import { ComponentProps } from "react";
-import { Button, ButtonGroup, Image, Text, TextHeading } from "ui";
 
 const meta: Meta<typeof Card> = {
   component: Card,

@@ -2,8 +2,6 @@ import clsx from "clsx";
 import { useMediaQuery } from "hooks";
 import { IconChevronDown, IconMenu, IconX } from "icons";
 import { Flex, FlexItem, Section, type SectionProps } from "layout";
-import { AuthenticationContext } from "providers";
-import { useContext, useState } from "react";
 import {
   Avatar,
   AvatarBlock,
@@ -20,7 +18,9 @@ import {
   MenuTrigger,
   Navigation,
   NavigationItem,
-} from "ui";
+} from "primitives";
+import { AuthenticationContext } from "providers";
+import { useContext, useState } from "react";
 import { AnchorOrButton } from "utils";
 import "./headers.css";
 

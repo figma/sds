@@ -9,7 +9,7 @@ import {
   TextLinkList,
   TextListItem,
   TextStrong,
-} from "ui";
+} from "primitives";
 
 export type FooterProps = Omit<SectionProps, "variant" | "padding">;
 export function Footer({ className, ...props }: FooterProps) {

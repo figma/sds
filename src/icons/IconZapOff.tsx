@@ -1,5 +1,5 @@
 import figma from "@figma/code-connect";
-import { Icon, IconProps } from "ui";
+import { Icon, IconProps } from "primitives";
 export const IconZapOff = (props: IconProps) => (
   <Icon {...props}>
     <g clipPath="url(#clip0_68_16117)">

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Flex, Section } from "layout";
-import { TextContentTitle } from "ui";
+import { TextContentTitle } from "primitives";
 
 const meta: Meta<typeof Section> = {
   component: Section,

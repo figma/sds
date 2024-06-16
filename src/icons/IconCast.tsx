@@ -1,5 +1,5 @@
 import figma from "@figma/code-connect";
-import { Icon, IconProps } from "ui";
+import { Icon, IconProps } from "primitives";
 export const IconCast = (props: IconProps) => (
   <Icon {...props}>
     <path

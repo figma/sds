@@ -1,7 +1,7 @@
 import { figma } from "@figma/code-connect";
 import { Card } from "compositions";
 import { Flex, FlexItem, Section } from "layout";
-import { Image } from "ui";
+import { Image } from "primitives";
 
 figma.connect(Section, "<FIGMA_URL_SECTION_PAGE_ACCORDION>", {
   props: {
