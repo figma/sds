@@ -9,6 +9,8 @@
   --global-line-height-paragraph: 1.4;
   --global-stack-top: 999;
   --global-stack-focus: 999;
+  --global-stack-dialog-backdrop: 9999;
+  --global-stack-dialog-container: 99999;
   --global-container-max-width: 75rem;
   --global-dialog-max-width: 32rem;
   --global-tooltip-max-width: calc(var(--global-dialog-max-width) / 2);

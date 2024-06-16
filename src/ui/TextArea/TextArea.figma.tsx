@@ -39,7 +39,7 @@ figma.connect(Field, "<FIGMA_URL_TEXT_AREA_FIELD>", {
       false: undefined,
     }),
   },
-  // TODO: textarea props on field
+  // TODO: CC NESTED PROPS textarea props on field
   example: ({ description, label, errorMessage }) => (
     <TextAreaField
       label={label}

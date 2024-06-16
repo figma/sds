@@ -36,7 +36,7 @@ figma.connect(Field, "<FIGMA_URL_INPUT_FIELD>", {
       false: undefined,
     }),
   },
-  // TODO: input props on field
+  // TODO: CC NESTED PROPS input props on field
   example: ({ description, label, errorMessage }) => (
     <InputField
       label={label}

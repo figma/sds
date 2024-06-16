@@ -7,8 +7,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  /* TODO: z-index levels */
-  z-index: 99999;
+  z-index: var(--global-stack-dialog-container);
 }
 
 .dialog-backdrop {
@@ -19,8 +18,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  /* TODO: z-index levels */
-  z-index: 9999;
+  z-index: var(--global-stack-dialog-backdrop);
 }
 
 .dialog {

@@ -36,6 +36,7 @@ figma.connect(Card, "<FIGMA_URL_CARD>", {
   ),
 });
 
+// TODO: CC NESTED PROPS document these
 figma.connect(PricingCard, "<FIGMA_URL_CARDS_PRICING_CARD>");
 figma.connect(ProductInfoCard, "<FIGMA_URL_CARDS_PRODUCT_INFO_CARD>");
 figma.connect(ReviewCard, "<FIGMA_URL_CARDS_REVIEW_CARD>");

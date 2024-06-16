@@ -35,7 +35,7 @@ figma.connect(CheckboxField, "<FIGMA_URL_CHECKBOX_FIELD>", {
     }),
     isDisabled: figma.enum("State", { Disabled: true }),
   },
-  // TODO: checkbox props on field
+  // TODO: CC NESTED PROPS checkbox props on field
   example: ({ label, description, isDisabled }) => (
     <CheckboxField
       label={label}

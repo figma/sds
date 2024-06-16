@@ -15,7 +15,7 @@ figma.connect(Switch, "<FIGMA_URL_SWITCH_FIELD>", {
     }),
     isDisabled: figma.enum("State", { Disabled: true }),
   },
-  // TODO: switch props on field
+  // TODO: CC NESTED PROPS switch props on field
   example: ({ label, description, isDisabled }) => (
     <SwitchField
       label={label}
