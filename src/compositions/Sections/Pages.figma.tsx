@@ -84,7 +84,15 @@ figma.connect(Section, "<FIGMA_URL_SECTION_PAGE_NEWSLETTER>", {
   },
   example: ({ children, gap, padding }) => (
     <Section padding={padding}>
-      <Flex container wrap gap={gap} alignPrimary="center">
+      <Flex
+        container
+        wrap
+        gap={gap}
+        direction="column"
+        alignPrimary="center"
+        alignSecondary="center"
+        type="third"
+      >
         {children}
       </Flex>
     </Section>

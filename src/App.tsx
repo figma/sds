@@ -145,7 +145,15 @@ function App() {
         </Flex>
       </Section>
       <Section padding={sectionPadding}>
-        <Flex container wrap gap={flexGap} alignPrimary="center">
+        <Flex
+          container
+          wrap
+          gap={flexGap}
+          direction="column"
+          alignPrimary="center"
+          alignSecondary="center"
+          type="third"
+        >
           <TextContentHeading
             align="center"
             heading="Follow the latest trends"
@@ -299,7 +307,13 @@ function App() {
           )}
           <FlexItem size={isDesktop ? "major" : "full"}>
             <Flex direction="column" gap="1200" alignSecondary="stretch">
-              <Flex type="auto" alignPrimary="space-between" wrap gap="600">
+              <Flex
+                type="auto"
+                alignPrimary="space-between"
+                alignSecondary="center"
+                wrap
+                gap="600"
+              >
                 <FlexItem size="fill">
                   <Flex alignPrimary="stretch">
                     <Search placeholder="Search" />
