@@ -1,11 +1,6 @@
 {
   "codeConnect": {
-    "include": [
-      "src/primitives/**",
-      "src/compositions/**",
-      "src/layout/**",
-      "src/icons/**"
-    ],
+    "include": ["src/primitives/**", "src/compositions/**", "src/layout/**"],
     "exclude": [],
     "react": {
       "importPaths": {
