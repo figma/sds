@@ -199,7 +199,7 @@ function App() {
                 action="Select"
                 actionVariant="neutral"
                 heading="Free"
-                price={0 * annualRatio}
+                price={(0 * annualRatio).toString()}
                 pricePer={`/ per ${intervalText}`}
                 items={["List item 1", "List item 2", "List item 3"]}
                 onAction={() => {}}
@@ -207,7 +207,7 @@ function App() {
               <PricingCard
                 action="Select"
                 heading="Starter"
-                price={50 * annualRatio}
+                price={(50 * annualRatio).toString()}
                 pricePer={`/ per ${intervalText}`}
                 items={["List item 1", "List item 2", "List item 3"]}
                 onAction={() => {}}
@@ -216,7 +216,7 @@ function App() {
                 action="Select"
                 actionVariant="neutral"
                 heading="Enterprise"
-                price={150 * annualRatio}
+                price={(150 * annualRatio).toString()}
                 pricePer={`/ per ${intervalText}`}
                 items={["List item 1", "List item 2", "List item 3"]}
                 onAction={() => {}}
@@ -337,37 +337,37 @@ function App() {
                 <ProductInfoCard
                   asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
-                  price={5}
+                  price="5"
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
                 <ProductInfoCard
                   asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
-                  price={5}
+                  price="5"
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
                 <ProductInfoCard
                   asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
-                  price={5}
+                  price="5"
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
                 <ProductInfoCard
                   asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
-                  price={5}
+                  price="5"
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
                 <ProductInfoCard
                   asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
-                  price={5}
+                  price="5"
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
                 <ProductInfoCard
                   asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
-                  price={5}
+                  price="5"
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
               </Flex>

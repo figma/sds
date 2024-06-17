@@ -2,14 +2,23 @@
   "codeConnect": {
     "include": ["src/primitives/**", "src/compositions/**", "src/layout/**"],
     "exclude": [],
-    "react": {
-      "importPaths": {
-        "src/compositions/**/*": "compositions",
-        "src/icons/*": "icons",
-        "src/images/*": "images",
-        "src/layout/**/*": "layout",
-        "src/primitives/**/*": "primitives"
-      }
+    "parser": "react",
+    "importPaths": {
+      "src/compositions/**/*": "compositions",
+      "src/icons/*": "icons",
+      "src/images/*": "images",
+      "src/layout/**/*": "layout",
+      "src/primitives/**/*": "primitives"
+    },
+    "paths": {
+      "compositions": ["./compositions"],
+      "hooks": ["./hooks"],
+      "icons": ["./icons"],
+      "images": ["./images"],
+      "layout": ["./layout"],
+      "primitives": ["./primitives"],
+      "providers": ["./providers"],
+      "utils": ["./utils"]
     },
     "documentUrlSubstitutions": {
       "<FIGMA_URL_ACCORDION>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=7753-4779",

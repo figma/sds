@@ -1,5 +1,5 @@
 import { figma } from "@figma/code-connect";
-import { Image, Text, TextHeading } from "primitives";
+import { ButtonProps, Image, Text, TextHeading } from "primitives";
 import {
   Card,
   PricingCard,
@@ -27,8 +27,8 @@ figma.connect(Card, "<FIGMA_URL_CARD>", {
       Padded: "padded",
     }),
   },
-  example: ({ actions, variant, heading, body, asset, direction }) => (
-    <Card variant={variant} asset={asset} direction={direction}>
+  example: ({ actions, heading, body, ...props }) => (
+    <Card {...props}>
       <TextHeading>{heading}</TextHeading>
       <Text>{body}</Text>
       {actions}
@@ -37,7 +37,41 @@ figma.connect(Card, "<FIGMA_URL_CARD>", {
 });
 
 // TODO: CC NESTED PROPS document these
-figma.connect(PricingCard, "<FIGMA_URL_CARDS_PRICING_CARD>");
+figma.connect(PricingCard, "<FIGMA_URL_CARDS_PRICING_CARD>", {
+  props: {
+    textHeading: figma.nestedProps("Text Heading", {
+      text: figma.string("Text"),
+    }),
+    action: figma.nestedProps<{
+      label: string;
+      variant: ButtonProps["variant"];
+    }>("Button", {
+      label: figma.string("Label"),
+      variant: figma.enum("Variant", {
+        Primary: "primary",
+        Neutral: "neutral",
+        Subtle: "subtle",
+      }),
+    }),
+    textPrice: figma.nestedProps("Text Price", {
+      price: figma.string("Price"),
+    }),
+    items: figma.nestedProps("Text List Item", {
+      text: figma.string("Text"),
+    }),
+  },
+  example: ({ textHeading, textPrice, items, action, ...props }) => (
+    <PricingCard
+      heading={textHeading.text}
+      action={action.label}
+      actionVariant={action.variant}
+      onAction={() => {}}
+      items={[items.text]}
+      price={textPrice.price}
+      {...props}
+    />
+  ),
+});
 figma.connect(ProductInfoCard, "<FIGMA_URL_CARDS_PRODUCT_INFO_CARD>");
 figma.connect(ReviewCard, "<FIGMA_URL_CARDS_REVIEW_CARD>");
 figma.connect(StatsCard, "<FIGMA_URL_CARDS_STATS_CARD>");

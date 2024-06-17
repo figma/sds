@@ -103,7 +103,7 @@ export const BlockPricingCard: StoryObj<typeof PricingCard> = {
           key={i}
           heading="Look at these low rates!"
           action="Buy this"
-          price={5 * (5 - i)}
+          price={(5 * (5 - i)).toString()}
           onAction={() => {}}
           items={["Item 1", "Item 2", "Item 3"]}
         />
@@ -118,25 +118,25 @@ export const BlockProductInfoCard: StoryObj<typeof ProductInfoCard> = {
       <ProductInfoCard
         asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
-        price={5}
+        price="5"
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
         asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
-        price={5}
+        price="5"
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
         asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
-        price={5}
+        price="5"
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
         asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
-        price={5}
+        price="5"
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
     </Flex>

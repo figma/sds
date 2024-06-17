@@ -91,7 +91,7 @@ export type PricingCardProps = {
   /**
    * The price excluding currency
    */
-  price: number;
+  price: string;
   /**
    * The text for price per
    */
@@ -160,7 +160,7 @@ export type ProductInfoCardProps = Pick<CardProps, "asset"> & {
   /**
    * The price excluding currency
    */
-  price: number;
+  price: string;
   /**
    * The description of the product
    */
