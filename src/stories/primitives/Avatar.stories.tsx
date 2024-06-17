@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { placeholder } from "images";
 import { Flex } from "layout";
 import { Avatar, AvatarBlock, AvatarButton, AvatarGroup } from "primitives";
 import "react";
@@ -16,13 +17,9 @@ export const Image: Story = {
   args: {},
   render: () => (
     <Flex alignPrimary="center" gap="200" alignSecondary="center">
-      <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" size="small" />
-      <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
-      <Avatar
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
-        square
-        size="large"
-      />
+      <Avatar src={placeholder} size="small" />
+      <Avatar src={placeholder} />
+      <Avatar src={placeholder} square size="large" />
     </Flex>
   ),
 };
@@ -42,16 +39,9 @@ export const Buttons: Story = {
   args: {},
   render: () => (
     <Flex alignPrimary="center" gap="200" alignSecondary="center">
-      <AvatarButton
-        square
-        size="small"
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
-      />
-      <AvatarButton square src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
-      <AvatarButton
-        size="large"
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
-      />
+      <AvatarButton square size="small" src={placeholder} />
+      <AvatarButton square src={placeholder} />
+      <AvatarButton size="large" src={placeholder} />
     </Flex>
   ),
 };
@@ -80,11 +70,11 @@ export const Group: GroupStory = {
     <Flex alignPrimary="center" gap="200" alignSecondary="center">
       <AvatarGroup {...args}>
         <Avatar initials="JA" />
-        <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
+        <Avatar src={placeholder} />
         <Avatar initials="LO" />
-        <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
+        <Avatar src={placeholder} />
         <Avatar initials="WM" />
-        <Avatar src="https://placehold.co/200/f0f0f0/ddd?text=SDS" />
+        <Avatar src={placeholder} />
       </AvatarGroup>
     </Flex>
   ),
@@ -94,11 +84,7 @@ export const Block: Story = {
   args: {},
   render: () => (
     <AvatarBlock title="Full Name" description="@fullname420">
-      <AvatarButton
-        square
-        size="large"
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
-      />
+      <AvatarButton square size="large" src={placeholder} />
     </AvatarBlock>
   ),
 };

@@ -27,6 +27,7 @@ const config: StorybookConfig = {
         compositions: path.resolve(__dirname, "/src/compositions"),
         hooks: path.resolve(__dirname, "/src/hooks"),
         icons: path.resolve(__dirname, "/src/icons"),
+        images: path.resolve(__dirname, "/src/images"),
         layout: path.resolve(__dirname, "/src/layout"),
         primitives: path.resolve(__dirname, "/src/primitives"),
         providers: path.resolve(__dirname, "/src/providers"),

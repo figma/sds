@@ -1,4 +1,5 @@
 import figma from "@figma/code-connect";
+import { placeholder } from "images";
 import { Hero } from "./Heroes";
 
 figma.connect(Hero, "<FIGMA_URL_SECTION_HERO_BASIC>", {
@@ -30,10 +31,7 @@ figma.connect(Hero, "<FIGMA_URL_SECTION_HERO_IMAGE>", {
     children: figma.children(["Text Content Title", "Button Group"]),
   },
   example: ({ children }) => (
-    <Hero
-      variant="image"
-      src="https://placehold.co/2000x1200/f0f0f0/ddd?text=SDS"
-    >
+    <Hero variant="image" src={placeholder}>
       {children}
     </Hero>
   ),

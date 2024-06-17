@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useMediaQuery } from "hooks";
 import { IconChevronDown, IconMenu, IconX } from "icons";
+import { placeholder } from "images";
 import { Flex, FlexItem, Section, type SectionProps } from "layout";
 import {
   Avatar,
@@ -35,7 +36,7 @@ export function HeaderAuth() {
         size="small"
         onPress={() =>
           login({
-            avatar: "https://placehold.co/300/f0f0f0/ddd?text=SDS",
+            avatar: placeholder,
             name: "Charlie Brown",
             username: "snooptroupe",
           })
@@ -47,7 +48,7 @@ export function HeaderAuth() {
         size="small"
         onPress={() =>
           login({
-            avatar: "https://placehold.co/300/f0f0f0/ddd?text=SDS",
+            avatar: placeholder,
             name: "Charlie Brown",
             username: "snooptroupe",
           })
@@ -98,7 +99,11 @@ export function HeaderAuth() {
                 >
                   <IconX />
                 </IconButton>
-                <Flex direction="column" alignPrimary="space-between">
+                <Flex
+                  direction="column"
+                  alignPrimary="space-between"
+                  alignSecondary="center"
+                >
                   {navigation}
                   {currentUser ? (
                     <Flex alignSecondary="center" gap="200" direction="column">

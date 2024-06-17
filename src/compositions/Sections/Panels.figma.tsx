@@ -1,4 +1,5 @@
 import { figma } from "@figma/code-connect";
+import { placeholder } from "images";
 import { Flex, FlexItem, Section } from "layout";
 import { Image } from "primitives";
 import { Panel } from "./Panels";
@@ -13,7 +14,7 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_PANEL_IMAGE_CONTENT>", {
     <Section padding={padding}>
       <Panel gap={gap} type="half">
         <Image
-          src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
+          src={placeholder}
           alt="Always use image alt"
           aspectRatio="4-3"
           size="medium"
@@ -43,7 +44,7 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_PANEL_IMAGE_CONTENT_REVERSE>", {
           </Flex>
         </FlexItem>
         <Image
-          src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
+          src={placeholder}
           alt="Always use image alt"
           aspectRatio="4-3"
           size="medium"
@@ -62,13 +63,13 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_PANEL_IMAGE_DOUBLE>", {
     <Section padding={padding}>
       <Panel gap={gap} type="half">
         <Image
-          src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
+          src={placeholder}
           alt="Always use image alt"
           aspectRatio="4-3"
           size="medium"
         />
         <Image
-          src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
+          src={placeholder}
           alt="Always use image alt"
           aspectRatio="4-3"
           size="medium"
@@ -87,7 +88,7 @@ figma.connect(Panel, "<FIGMA_URL_SECTION_PANEL_IMAGE_IMAGE>", {
       <Panel type="auto">
         <FlexItem size="full">
           <Image
-            src="https://placehold.co/1200x320/f0f0f0/ddd?text=SDS"
+            src={placeholder}
             alt="Always use image alt"
             aspectRatio="fill"
             size="medium"

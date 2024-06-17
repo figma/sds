@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { placeholder } from "images";
 import { Flex, Section } from "layout";
 import { TextContentTitle } from "primitives";
 
@@ -41,11 +42,7 @@ export const Default: StoryObj<typeof Section> = {
           Hello there
         </Flex>
       </Section>
-      <Section
-        variant="image"
-        src="https://placehold.co/2000x1200/f0f0f0/ddd?text=SDS"
-        padding="4000"
-      >
+      <Section variant="image" src={placeholder} padding="4000">
         <Flex container alignPrimary="center" gap="600">
           <TextContentTitle align="center" title="Title" subtitle="Subtitle" />
         </Flex>

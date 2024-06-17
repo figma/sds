@@ -14,6 +14,7 @@ import {
   IconCompass,
   IconSmile,
 } from "icons";
+import { placeholder } from "images";
 import { Flex } from "layout";
 import { Button, ButtonGroup, Image, Text, TextHeading } from "primitives";
 import { ComponentProps } from "react";
@@ -62,7 +63,7 @@ export const Default: StoryObj<
             alt="A nice image"
             aspectRatio="1-1"
             size="small"
-            src="https://placehold.co/500/f0f0f0/ddd?text=SDS"
+            src={placeholder}
           />
         ) : undefined
       }
@@ -115,45 +116,25 @@ export const BlockProductInfoCard: StoryObj<typeof ProductInfoCard> = {
   render: () => (
     <Flex container wrap type="quarter" gap="400" direction="row">
       <ProductInfoCard
-        asset={
-          <Image
-            alt="Accessibility!"
-            src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-          />
-        }
+        asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
         price={5}
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
-        asset={
-          <Image
-            alt="Accessibility!"
-            src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-          />
-        }
+        asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
         price={5}
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
-        asset={
-          <Image
-            alt="Accessibility!"
-            src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-          />
-        }
+        asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
         price={5}
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
-        asset={
-          <Image
-            alt="Accessibility!"
-            src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-          />
-        }
+        asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
         price={5}
         description="Wow do we have a cool thing for you. What an amazing thing."
@@ -178,7 +159,7 @@ export const BlockReviewCard: StoryObj<typeof StatsCard> = {
         body="Cannot believe how amazing this experience was"
         name="Charlie Brown"
         date="June 2024"
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+        src={placeholder}
       />
       <ReviewCard
         stars={5}
@@ -186,7 +167,7 @@ export const BlockReviewCard: StoryObj<typeof StatsCard> = {
         body="Cannot believe how amazing this experience was"
         name="Charlie Brown"
         date="June 2024"
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+        src={placeholder}
       />
       <ReviewCard
         stars={5}
@@ -194,7 +175,7 @@ export const BlockReviewCard: StoryObj<typeof StatsCard> = {
         body="Cannot believe how amazing this experience was"
         name="Charlie Brown"
         date="June 2024"
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+        src={placeholder}
       />
       <ReviewCard
         stars={4}
@@ -202,7 +183,7 @@ export const BlockReviewCard: StoryObj<typeof StatsCard> = {
         body="Cannot believe how amazing this experience was"
         name="Charlie Brown"
         date="June 2024"
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+        src={placeholder}
       />
     </Flex>
   ),
@@ -254,19 +235,19 @@ export const BlockTestimonialCard: StoryObj<typeof TestimonialCard> = {
     >
       <TestimonialCard
         heading="“Something splendid”"
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+        src={placeholder}
         username="fullname421"
         name="Full Name"
       />
       <TestimonialCard
         heading="“Something splendid”"
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+        src={placeholder}
         username="fullname421"
         name="Full Name"
       />
       <TestimonialCard
         heading="“Something splendid”"
-        src="https://placehold.co/200/f0f0f0/ddd?text=SDS"
+        src={placeholder}
         username="fullname421"
         name="Full Name"
       />

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { placeholder } from "images";
 import { Description, Label, ListBox, ListBoxItem } from "primitives";
 
 const meta: Meta<typeof ListBox> = {
@@ -32,10 +33,7 @@ export const Default: Story = {
           <Label>Turtle</Label>
         </ListBoxItem>
         <ListBoxItem textValue="Admin">
-          <img
-            slot="image"
-            src="https://placehold.co/100/f0f0f0/ddd?text=SDS"
-          />
+          <img slot="image" src={placeholder} />
           <Label>Admin</Label>
           <Description>Full access</Description>
         </ListBoxItem>

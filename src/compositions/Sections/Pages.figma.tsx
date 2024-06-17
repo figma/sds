@@ -1,5 +1,6 @@
 import { figma } from "@figma/code-connect";
 import { Card } from "compositions";
+import { placeholder } from "images";
 import { Flex, FlexItem, Section } from "layout";
 import { Image } from "primitives";
 
@@ -48,7 +49,7 @@ figma.connect(Section, "<FIGMA_URL_SECTION_PAGE_PRODUCT>", {
     <Section padding={padding}>
       <Flex container type="half" wrap gap={gap}>
         <Image
-          src="https://placehold.co/600/f0f0f0/ddd?text=SDS"
+          src={placeholder}
           alt="Always use image alt"
           size="large"
           aspectRatio="4-3"

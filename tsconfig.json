@@ -20,6 +20,7 @@
       "compositions": ["./compositions"],
       "hooks": ["./hooks"],
       "icons": ["./icons"],
+      "images": ["./images"],
       "layout": ["./layout"],
       "primitives": ["./primitives"],
       "providers": ["./providers"],

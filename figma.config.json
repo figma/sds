@@ -10,9 +10,10 @@
     "react": {
       "importPaths": {
         "src/compositions/**/*": "compositions",
+        "src/icons/*": "icons",
+        "src/images/*": "images",
         "src/layout/**/*": "layout",
-        "src/primitives/**/*": "primitives",
-        "src/icons/*": "icons"
+        "src/primitives/**/*": "primitives"
       }
     },
     "documentUrlSubstitutions": {

@@ -7,6 +7,7 @@ import {
 } from "compositions";
 import { useMediaQuery } from "hooks";
 import { IconCheck } from "icons";
+import { placeholder } from "images";
 import { Flex, FlexItem, Section } from "layout";
 import {
   Accordion,
@@ -88,7 +89,7 @@ function App() {
       <Section padding={sectionPadding}>
         <Flex container type="half" wrap gap={flexGap}>
           <Image
-            src="https://placehold.co/600/f0f0f0/ddd?text=SDS"
+            src={placeholder}
             alt="Always use image alt"
             size="large"
             aspectRatio="4-3"
@@ -227,7 +228,7 @@ function App() {
       <Section padding={sectionPadding}>
         <Panel alignSecondary="center" gap={flexGap} type="half">
           <Image
-            src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
+            src={placeholder}
             alt="Always use image alt"
             aspectRatio="4-3"
             size="medium"
@@ -257,13 +258,13 @@ function App() {
       <Section padding={sectionPadding} variant="brand">
         <Panel type="half" gap={flexGap}>
           <Image
-            src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
+            src={placeholder}
             alt="Always use image alt"
             aspectRatio="4-3"
             size="medium"
           />
           <Image
-            src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
+            src={placeholder}
             alt="Always use image alt"
             aspectRatio="4-3"
             size="medium"
@@ -293,7 +294,7 @@ function App() {
             </Flex>
           </FlexItem>
           <Image
-            src="https://placehold.co/560x320/f0f0f0/ddd?text=SDS"
+            src={placeholder}
             alt="Always use image alt"
             aspectRatio="4-3"
             size="medium"
@@ -334,67 +335,37 @@ function App() {
               </Flex>
               <Flex type="third" wrap gap="600">
                 <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
+                  asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
                   price={5}
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
                 <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
+                  asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
                   price={5}
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
                 <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
+                  asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
                   price={5}
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
                 <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
+                  asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
                   price={5}
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
                 <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
+                  asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
                   price={5}
                   description="Wow do we have a cool thing for you. What an amazing thing."
                 />
                 <ProductInfoCard
-                  asset={
-                    <Image
-                      alt="Accessibility!"
-                      src="https://placehold.co/300/f0f0f0/ddd?text=SDS"
-                    />
-                  }
+                  asset={<Image alt="Accessibility!" src={placeholder} />}
                   heading="Product"
                   price={5}
                   description="Wow do we have a cool thing for you. What an amazing thing."
@@ -408,7 +379,7 @@ function App() {
         <Panel type="auto">
           <FlexItem size="full">
             <Image
-              src="https://placehold.co/1200x320/f0f0f0/ddd?text=SDS"
+              src={placeholder}
               alt="Always use image alt"
               aspectRatio="fill"
               size="large"

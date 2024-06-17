@@ -1,4 +1,5 @@
 import figma from "@figma/code-connect";
+import { placeholder } from "images";
 import { Avatar, AvatarBlock, AvatarGroup } from "./Avatar";
 
 figma.connect(AvatarGroup, "<FIGMA_URL_AVATAR_GROUP>", {
@@ -28,7 +29,7 @@ figma.connect(Avatar, "<FIGMA_URL_AVATAR>", {
       Small: "small",
     }),
     src: figma.enum("Type", {
-      Image: "https://placehold.co/80/f0f0f0/ddd?text=SDS",
+      Image: placeholder,
     }),
   },
   example: ({ initials, size, square, src }) => (
