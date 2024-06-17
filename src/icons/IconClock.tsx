@@ -1,33 +1,6 @@
 import figma from "@figma/code-connect";
-import { Icon, IconProps } from "primitives";
+import { IconProps, Icon } from "primitives";
 export const IconClock = (props: IconProps) => (
-  <Icon {...props}>
-    <g clipPath="url(#clip0_68_15665)">
-      <path
-        d="M8.80004 4.00004C8.80004 3.55821 8.44187 3.20004 8.00004 3.20004C7.55821 3.20004 7.20004 3.55821 7.20004 4.00004H8.80004ZM8.00004 8.00004H7.20004C7.20004 8.30306 7.37124 8.58007 7.64227 8.71558L8.00004 8.00004ZM10.3089 10.0489C10.7041 10.2465 11.1847 10.0863 11.3822 9.69114C11.5798 9.29596 11.4197 8.81542 11.0245 8.61783L10.3089 10.0489ZM13.8667 8.00004C13.8667 11.2401 11.2401 13.8667 8.00004 13.8667V15.4667C12.1238 15.4667 15.4667 12.1238 15.4667 8.00004H13.8667ZM8.00004 13.8667C4.75997 13.8667 2.13337 11.2401 2.13337 8.00004H0.533374C0.533374 12.1238 3.87631 15.4667 8.00004 15.4667V13.8667ZM2.13337 8.00004C2.13337 4.75997 4.75997 2.13337 8.00004 2.13337V0.533374C3.87631 0.533374 0.533374 3.87631 0.533374 8.00004H2.13337ZM8.00004 2.13337C11.2401 2.13337 13.8667 4.75997 13.8667 8.00004H15.4667C15.4667 3.87631 12.1238 0.533374 8.00004 0.533374V2.13337ZM7.20004 4.00004V8.00004H8.80004V4.00004H7.20004ZM7.64227 8.71558L10.3089 10.0489L11.0245 8.61783L8.35781 7.2845L7.64227 8.71558Z"
-        fill="var(--svg-fill-color)"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_68_15665">
-        <rect width="16" height="16" fill="white" />
-      </clipPath>
-    </defs>
-  </Icon>
+  <Icon {...props}><g clipPath="url(#clip0_68_15665)"><path d="M8.00004 4.00004V8.00004L10.6667 9.33337M14.6667 8.00004C14.6667 11.6819 11.6819 14.6667 8.00004 14.6667C4.31814 14.6667 1.33337 11.6819 1.33337 8.00004C1.33337 4.31814 4.31814 1.33337 8.00004 1.33337C11.6819 1.33337 14.6667 4.31814 14.6667 8.00004Z" stroke="var(--svg-stroke-color)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></g><defs><clipPath id="clip0_68_15665"><rect width="16" height="16" fill="white"/></clipPath></defs></Icon>
 );
-figma.connect(
-  IconClock,
-  "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4039:13173",
-  {
-    props: {
-      size: figma.enum("Size", {
-        "20": "20",
-        "24": "24",
-        "32": "32",
-        "40": "40",
-        "48": "48",
-      }),
-    },
-    example: ({ size }) => <IconClock size={size} />,
-  },
-);
+figma.connect(IconClock, "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4039:13173", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconClock size={size} /> });

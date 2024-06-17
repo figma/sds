@@ -1,26 +1,6 @@
 import figma from "@figma/code-connect";
-import { Icon, IconProps } from "primitives";
+import { IconProps, Icon } from "primitives";
 export const IconCornerDownLeft = (props: IconProps) => (
-  <Icon {...props}>
-    <path
-      d="M6.56569 7.23237C6.87811 6.91995 6.87811 6.41342 6.56569 6.101C6.25327 5.78858 5.74674 5.78858 5.43432 6.101L6.56569 7.23237ZM2.66667 10L2.10099 9.43433C1.78857 9.74675 1.78857 10.2533 2.10099 10.5657L2.66667 10ZM5.43432 13.899C5.74674 14.2115 6.25327 14.2115 6.56569 13.899C6.87811 13.5866 6.87811 13.0801 6.56569 12.7677L5.43432 13.899ZM14.1333 2.66669C14.1333 2.22486 13.7752 1.86669 13.3333 1.86669C12.8915 1.86669 12.5333 2.22486 12.5333 2.66669H14.1333ZM10.6667 10V10.8V10ZM5.43432 6.101L2.10099 9.43433L3.23236 10.5657L6.56569 7.23237L5.43432 6.101ZM2.10099 10.5657L5.43432 13.899L6.56569 12.7677L3.23236 9.43433L2.10099 10.5657ZM12.5333 2.66669V7.33335H14.1333V2.66669H12.5333ZM12.5333 7.33335C12.5333 7.82842 12.3367 8.30322 11.9866 8.65329L13.118 9.78466C13.7681 9.13453 14.1333 8.25277 14.1333 7.33335H12.5333ZM11.9866 8.65329C11.6365 9.00335 11.1617 9.20002 10.6667 9.20002V10.8C11.5861 10.8 12.4678 10.4348 13.118 9.78466L11.9866 8.65329ZM10.6667 9.20002H2.66667V10.8H10.6667V9.20002Z"
-      fill="var(--svg-fill-color)"
-    />
-  </Icon>
+  <Icon {...props}><path d="M5.99999 6.66669L2.66666 10M2.66666 10L5.99999 13.3334M2.66666 10H10.6667C11.3739 10 12.0522 9.71907 12.5523 9.21897C13.0524 8.71887 13.3333 8.0406 13.3333 7.33335V2.66669" stroke="var(--svg-stroke-color)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></Icon>
 );
-figma.connect(
-  IconCornerDownLeft,
-  "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4039:13467",
-  {
-    props: {
-      size: figma.enum("Size", {
-        "20": "20",
-        "24": "24",
-        "32": "32",
-        "40": "40",
-        "48": "48",
-      }),
-    },
-    example: ({ size }) => <IconCornerDownLeft size={size} />,
-  },
-);
+figma.connect(IconCornerDownLeft, "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4039:13467", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconCornerDownLeft size={size} /> });

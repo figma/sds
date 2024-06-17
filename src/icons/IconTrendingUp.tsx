@@ -1,33 +1,6 @@
 import figma from "@figma/code-connect";
-import { Icon, IconProps } from "primitives";
+import { IconProps, Icon } from "primitives";
 export const IconTrendingUp = (props: IconProps) => (
-  <Icon {...props}>
-    <g clipPath="url(#clip0_68_16049)">
-      <path
-        d="M15.3334 4L16.1334 4C16.1334 3.55817 15.7752 3.2 15.3334 3.2V4ZM9.00008 10.3333L8.4344 10.899C8.58442 11.049 8.78791 11.1333 9.00008 11.1333C9.21225 11.1333 9.41574 11.049 9.56577 10.899L9.00008 10.3333ZM5.66675 7L6.23243 6.43431C6.0824 6.28429 5.87892 6.2 5.66675 6.2C5.45457 6.2 5.25109 6.28429 5.10106 6.43431L5.66675 7ZM0.101063 11.4343C-0.211357 11.7467 -0.211357 12.2533 0.101063 12.5657C0.413482 12.8781 0.920014 12.8781 1.23243 12.5657L0.101063 11.4343ZM11.3334 3.2C10.8916 3.2 10.5334 3.55817 10.5334 4C10.5334 4.44183 10.8916 4.8 11.3334 4.8V3.2ZM14.5334 8C14.5334 8.44183 14.8916 8.8 15.3334 8.8C15.7752 8.8 16.1334 8.44183 16.1334 8L14.5334 8ZM14.7677 3.43431L8.4344 9.76765L9.56577 10.899L15.8991 4.56569L14.7677 3.43431ZM9.56577 9.76765L6.23243 6.43431L5.10106 7.56569L8.4344 10.899L9.56577 9.76765ZM5.10106 6.43431L0.101063 11.4343L1.23243 12.5657L6.23243 7.56569L5.10106 6.43431ZM11.3334 4.8H15.3334V3.2H11.3334V4.8ZM14.5334 4L14.5334 8L16.1334 8L16.1334 4L14.5334 4Z"
-        fill="var(--svg-fill-color)"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_68_16049">
-        <rect width="16" height="16" fill="white" />
-      </clipPath>
-    </defs>
-  </Icon>
+  <Icon {...props}><g clipPath="url(#clip0_68_16049)"><path d="M15.3334 4L9.00008 10.3333L5.66675 7L0.666748 12M15.3334 4H11.3334M15.3334 4L15.3334 8" stroke="var(--svg-stroke-color)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></g><defs><clipPath id="clip0_68_16049"><rect width="16" height="16" fill="white"/></clipPath></defs></Icon>
 );
-figma.connect(
-  IconTrendingUp,
-  "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4049:13643",
-  {
-    props: {
-      size: figma.enum("Size", {
-        "20": "20",
-        "24": "24",
-        "32": "32",
-        "40": "40",
-        "48": "48",
-      }),
-    },
-    example: ({ size }) => <IconTrendingUp size={size} />,
-  },
-);
+figma.connect(IconTrendingUp, "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4049:13643", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconTrendingUp size={size} /> });

@@ -1,33 +1,6 @@
 import figma from "@figma/code-connect";
-import { Icon, IconProps } from "primitives";
+import { IconProps, Icon } from "primitives";
 export const IconCreditCard = (props: IconProps) => (
-  <Icon {...props}>
-    <g clipPath="url(#clip0_68_15713)">
-      <path
-        d="M0.666672 5.86669C0.224844 5.86669 -0.133328 6.22486 -0.133328 6.66669C-0.133328 7.10851 0.224844 7.46669 0.666672 7.46669V5.86669ZM15.3333 7.46669C15.7752 7.46669 16.1333 7.10851 16.1333 6.66669C16.1333 6.22486 15.7752 5.86669 15.3333 5.86669V7.46669ZM2.00001 3.46669H14V1.86669H2.00001V3.46669ZM14 3.46669C14.2946 3.46669 14.5333 3.70547 14.5333 4.00002H16.1333C16.1333 2.82181 15.1782 1.86669 14 1.86669V3.46669ZM14.5333 4.00002V12H16.1333V4.00002H14.5333ZM14.5333 12C14.5333 12.2946 14.2946 12.5334 14 12.5334V14.1334C15.1782 14.1334 16.1333 13.1782 16.1333 12H14.5333ZM14 12.5334H2.00001V14.1334H14V12.5334ZM2.00001 12.5334C1.70545 12.5334 1.46667 12.2946 1.46667 12H-0.133328C-0.133328 13.1782 0.821797 14.1334 2.00001 14.1334V12.5334ZM1.46667 12V4.00002H-0.133328V12H1.46667ZM1.46667 4.00002C1.46667 3.70547 1.70545 3.46669 2.00001 3.46669V1.86669C0.821798 1.86669 -0.133328 2.82181 -0.133328 4.00002H1.46667ZM0.666672 7.46669H15.3333V5.86669H0.666672V7.46669Z"
-        fill="var(--svg-fill-color)"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_68_15713">
-        <rect width="16" height="16" fill="white" />
-      </clipPath>
-    </defs>
-  </Icon>
+  <Icon {...props}><g clipPath="url(#clip0_68_15713)"><path d="M0.666656 6.66669H15.3333M1.99999 2.66669H14C14.7364 2.66669 15.3333 3.26364 15.3333 4.00002V12C15.3333 12.7364 14.7364 13.3334 14 13.3334H1.99999C1.26361 13.3334 0.666656 12.7364 0.666656 12V4.00002C0.666656 3.26364 1.26361 2.66669 1.99999 2.66669Z" stroke="var(--svg-stroke-color)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></g><defs><clipPath id="clip0_68_15713"><rect width="16" height="16" fill="white"/></clipPath></defs></Icon>
 );
-figma.connect(
-  IconCreditCard,
-  "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4039:13474",
-  {
-    props: {
-      size: figma.enum("Size", {
-        "20": "20",
-        "24": "24",
-        "32": "32",
-        "40": "40",
-        "48": "48",
-      }),
-    },
-    example: ({ size }) => <IconCreditCard size={size} />,
-  },
-);
+figma.connect(IconCreditCard, "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4039:13474", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconCreditCard size={size} /> });

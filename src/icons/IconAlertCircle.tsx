@@ -1,33 +1,6 @@
 import figma from "@figma/code-connect";
-import { Icon, IconProps } from "primitives";
+import { IconProps, Icon } from "primitives";
 export const IconAlertCircle = (props: IconProps) => (
-  <Icon {...props}>
-    <g clipPath="url(#clip0_68_15555)">
-      <path
-        d="M8.80004 5.33325C8.80004 4.89142 8.44187 4.53325 8.00004 4.53325C7.55821 4.53325 7.20004 4.89142 7.20004 5.33325H8.80004ZM7.20004 7.99992C7.20004 8.44175 7.55821 8.79992 8.00004 8.79992C8.44187 8.79992 8.80004 8.44175 8.80004 7.99992H7.20004ZM8.00004 9.86658C7.55821 9.86658 7.20004 10.2248 7.20004 10.6666C7.20004 11.1084 7.55821 11.4666 8.00004 11.4666V9.86658ZM8.00671 11.4666C8.44853 11.4666 8.80671 11.1084 8.80671 10.6666C8.80671 10.2248 8.44853 9.86658 8.00671 9.86658V11.4666ZM13.8667 7.99992C13.8667 11.24 11.2401 13.8666 8.00004 13.8666V15.4666C12.1238 15.4666 15.4667 12.1236 15.4667 7.99992H13.8667ZM8.00004 13.8666C4.75997 13.8666 2.13337 11.24 2.13337 7.99992H0.533374C0.533374 12.1236 3.87631 15.4666 8.00004 15.4666V13.8666ZM2.13337 7.99992C2.13337 4.75985 4.75997 2.13325 8.00004 2.13325V0.533252C3.87631 0.533252 0.533374 3.87619 0.533374 7.99992H2.13337ZM8.00004 2.13325C11.2401 2.13325 13.8667 4.75985 13.8667 7.99992H15.4667C15.4667 3.87619 12.1238 0.533252 8.00004 0.533252V2.13325ZM7.20004 5.33325V7.99992H8.80004V5.33325H7.20004ZM8.00004 11.4666H8.00671V9.86658H8.00004V11.4666Z"
-        fill="var(--svg-fill-color)"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_68_15555">
-        <rect width="16" height="16" fill="white" />
-      </clipPath>
-    </defs>
-  </Icon>
+  <Icon {...props}><g clipPath="url(#clip0_68_15555)"><path d="M8.00004 5.33325V7.99992M8.00004 10.6666H8.00671M14.6667 7.99992C14.6667 11.6818 11.6819 14.6666 8.00004 14.6666C4.31814 14.6666 1.33337 11.6818 1.33337 7.99992C1.33337 4.31802 4.31814 1.33325 8.00004 1.33325C11.6819 1.33325 14.6667 4.31802 14.6667 7.99992Z" stroke="var(--svg-stroke-color)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></g><defs><clipPath id="clip0_68_15555"><rect width="16" height="16" fill="white"/></clipPath></defs></Icon>
 );
-figma.connect(
-  IconAlertCircle,
-  "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4039:13020",
-  {
-    props: {
-      size: figma.enum("Size", {
-        "20": "20",
-        "24": "24",
-        "32": "32",
-        "40": "40",
-        "48": "48",
-      }),
-    },
-    example: ({ size }) => <IconAlertCircle size={size} />,
-  },
-);
+figma.connect(IconAlertCircle, "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4039:13020", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconAlertCircle size={size} /> });

@@ -1,26 +1,6 @@
 import figma from "@figma/code-connect";
-import { Icon, IconProps } from "primitives";
+import { IconProps, Icon } from "primitives";
 export const IconX = (props: IconProps) => (
-  <Icon {...props}>
-    <path
-      d="M12.5657 4.56569C12.8781 4.25327 12.8781 3.74673 12.5657 3.43431C12.2533 3.1219 11.7467 3.1219 11.4343 3.43431L12.5657 4.56569ZM3.43431 11.4343C3.1219 11.7467 3.1219 12.2533 3.43431 12.5657C3.74673 12.8781 4.25327 12.8781 4.56569 12.5657L3.43431 11.4343ZM4.56569 3.43431C4.25327 3.1219 3.74673 3.1219 3.43431 3.43431C3.1219 3.74673 3.1219 4.25327 3.43431 4.56569L4.56569 3.43431ZM11.4343 12.5657C11.7467 12.8781 12.2533 12.8781 12.5657 12.5657C12.8781 12.2533 12.8781 11.7467 12.5657 11.4343L11.4343 12.5657ZM11.4343 3.43431L3.43431 11.4343L4.56569 12.5657L12.5657 4.56569L11.4343 3.43431ZM3.43431 4.56569L11.4343 12.5657L12.5657 11.4343L4.56569 3.43431L3.43431 4.56569Z"
-      fill="var(--svg-fill-color)"
-    />
-  </Icon>
+  <Icon {...props}><path d="M12 4L4 12M4 4L12 12" stroke="var(--svg-stroke-color)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></Icon>
 );
-figma.connect(
-  IconX,
-  "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4049:13675",
-  {
-    props: {
-      size: figma.enum("Size", {
-        "20": "20",
-        "24": "24",
-        "32": "32",
-        "40": "40",
-        "48": "48",
-      }),
-    },
-    example: ({ size }) => <IconX size={size} />,
-  },
-);
+figma.connect(IconX, "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4049:13675", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconX size={size} /> });

@@ -1,26 +1,6 @@
 import figma from "@figma/code-connect";
-import { Icon, IconProps } from "primitives";
+import { IconProps, Icon } from "primitives";
 export const IconChevronsDown = (props: IconProps) => (
-  <Icon {...props}>
-    <path
-      d="M5.23243 8.10098C4.92001 7.78856 4.41348 7.78856 4.10106 8.10098C3.78864 8.4134 3.78864 8.91993 4.10106 9.23235L5.23243 8.10098ZM8.00008 12L7.4344 12.5657C7.58442 12.7157 7.78791 12.8 8.00008 12.8C8.21225 12.8 8.41574 12.7157 8.56577 12.5657L8.00008 12ZM11.8991 9.23235C12.2115 8.91993 12.2115 8.4134 11.8991 8.10098C11.5867 7.78856 11.0801 7.78856 10.7677 8.10098L11.8991 9.23235ZM5.23243 3.43431C4.92001 3.1219 4.41348 3.1219 4.10106 3.43431C3.78864 3.74673 3.78864 4.25327 4.10106 4.56569L5.23243 3.43431ZM8.00008 7.33333L7.4344 7.89902C7.74682 8.21144 8.25335 8.21144 8.56577 7.89902L8.00008 7.33333ZM11.8991 4.56569C12.2115 4.25327 12.2115 3.74673 11.8991 3.43431C11.5867 3.1219 11.0801 3.1219 10.7677 3.43431L11.8991 4.56569ZM4.10106 9.23235L7.4344 12.5657L8.56577 11.4343L5.23243 8.10098L4.10106 9.23235ZM8.56577 12.5657L11.8991 9.23235L10.7677 8.10098L7.4344 11.4343L8.56577 12.5657ZM4.10106 4.56569L7.4344 7.89902L8.56577 6.76765L5.23243 3.43431L4.10106 4.56569ZM8.56577 7.89902L11.8991 4.56569L10.7677 3.43431L7.4344 6.76765L8.56577 7.89902Z"
-      fill="var(--svg-fill-color)"
-    />
-  </Icon>
+  <Icon {...props}><path d="M4.66675 8.66667L8.00008 12L11.3334 8.66667M4.66675 4L8.00008 7.33333L11.3334 4" stroke="var(--svg-stroke-color)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></Icon>
 );
-figma.connect(
-  IconChevronsDown,
-  "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4039:13168",
-  {
-    props: {
-      size: figma.enum("Size", {
-        "20": "20",
-        "24": "24",
-        "32": "32",
-        "40": "40",
-        "48": "48",
-      }),
-    },
-    example: ({ size }) => <IconChevronsDown size={size} />,
-  },
-);
+figma.connect(IconChevronsDown, "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=4039:13168", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <IconChevronsDown size={size} /> });
