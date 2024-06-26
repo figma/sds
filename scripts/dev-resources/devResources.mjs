@@ -1,5 +1,4 @@
-const STORYBOOK_URL =
-  "https://studious-happiness-n8g71ww.pages.github.io/storybook/?path=/story/";
+const STORYBOOK_URL = "https://figma.github.io/sds/storybook/?path=/story/";
 
 // prettier-ignore
 export const devResources = {
