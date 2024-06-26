@@ -1,0 +1,15 @@
+.form-box {
+  align-items: flex-start;
+  background: var(--sds-color-bg-default-default);
+  border: var(--sds-size-stroke-border) solid
+    var(--sds-color-border-default-default);
+  border-radius: var(--sds-size-radius-200);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-600);
+  padding: var(--sds-size-space-600);
+
+  > * {
+    width: 100%;
+  }
+}

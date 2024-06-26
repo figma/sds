@@ -1,0 +1,2666 @@
+{
+  "f58066fb5ed8db212059367208365df2a898d8b3": {
+    "id": "4039:13018",
+    "page": "Icons",
+    "name": "Activity",
+    "constant": "<FIGMA_ICONS_ACTIVITY>",
+    "description": ["Keywords: pulse, health, action, motion"]
+  },
+  "7bcd39cfd60eaa574c741084997782ea3f214a08": {
+    "id": "4039:13019",
+    "page": "Icons",
+    "name": "Airplay",
+    "constant": "<FIGMA_ICONS_AIRPLAY>",
+    "description": ["Keywords: stream, cast, mirroring"]
+  },
+  "730553faab09598a3ffdf226670271e61ed3049c": {
+    "id": "4039:13020",
+    "page": "Icons",
+    "name": "Alert Circle",
+    "constant": "<FIGMA_ICONS_ALERT_CIRCLE>",
+    "description": ["Keywords: warning, alert, danger"]
+  },
+  "4ea8b4be64fede94f5709d5da9105ea1a86f2329": {
+    "id": "4039:13021",
+    "page": "Icons",
+    "name": "Alert Octagon",
+    "constant": "<FIGMA_ICONS_ALERT_OCTAGON>",
+    "description": ["Keywords: warning, alert, danger"]
+  },
+  "861d9454f0656198f2eb832116b6192966c811b5": {
+    "id": "4039:13022",
+    "page": "Icons",
+    "name": "Alert Triangle",
+    "constant": "<FIGMA_ICONS_ALERT_TRIANGLE>",
+    "description": ["Keywords: warning, alert, danger"]
+  },
+  "6b75f5b8fd2d7a3e3834977e84e50eb15c9dfe23": {
+    "id": "4039:13023",
+    "page": "Icons",
+    "name": "Align Center",
+    "constant": "<FIGMA_ICONS_ALIGN_CENTER>",
+    "description": ["Keywords: text alignment, center"]
+  },
+  "0543452ba3569add3c0c5264f3692898b787b2d7": {
+    "id": "4039:13025",
+    "page": "Icons",
+    "name": "Align Justify",
+    "constant": "<FIGMA_ICONS_ALIGN_JUSTIFY>",
+    "description": ["Keywords: text alignment, justified"]
+  },
+  "02d61d1b2fb75de53a679817049ff9311fedbba0": {
+    "id": "4039:13024",
+    "page": "Icons",
+    "name": "Align Left",
+    "constant": "<FIGMA_ICONS_ALIGN_LEFT>",
+    "description": ["Keywords: text alignment, left"]
+  },
+  "3aa0514dbd174c65392cdb99b71765679c31b3f3": {
+    "id": "4039:13026",
+    "page": "Icons",
+    "name": "Align Right",
+    "constant": "<FIGMA_ICONS_ALIGN_RIGHT>",
+    "description": ["Keywords: text alignment, right"]
+  },
+  "e6ff6493d1538faf928aec7fc613dca9548d6350": {
+    "id": "4039:13027",
+    "page": "Icons",
+    "name": "Anchor",
+    "constant": "<FIGMA_ICONS_ANCHOR>",
+    "description": ["Keywords:"]
+  },
+  "5c1f9f53f6468897753c68ca9895f36b423079c0": {
+    "id": "4039:13029",
+    "page": "Icons",
+    "name": "Aperture",
+    "constant": "<FIGMA_ICONS_APERTURE>",
+    "description": ["Keywords: camera, photo"]
+  },
+  "e2c1c34538344d076e71bc8ade710dc8978fa83a": {
+    "id": "4039:13028",
+    "page": "Icons",
+    "name": "Archive",
+    "constant": "<FIGMA_ICONS_ARCHIVE>",
+    "description": ["Keywords: index, box"]
+  },
+  "960625500bc65781a01e6e0fbee1540c263d96df": {
+    "id": "4039:13031",
+    "page": "Icons",
+    "name": "Arrow Down Circle",
+    "constant": "<FIGMA_ICONS_ARROW_DOWN_CIRCLE>"
+  },
+  "31c298bc8af84017dcc71cf3acf6a93d9e3d5977": {
+    "id": "4039:13030",
+    "page": "Icons",
+    "name": "Arrow Down Left",
+    "constant": "<FIGMA_ICONS_ARROW_DOWN_LEFT>"
+  },
+  "5f3febb547131f68eb251b9eda29afb68e060b2c": {
+    "id": "4039:13033",
+    "page": "Icons",
+    "name": "Arrow Down Right",
+    "constant": "<FIGMA_ICONS_ARROW_DOWN_RIGHT>"
+  },
+  "9b75a5f4add3c3a51ff1b564e699bd939a6982e2": {
+    "id": "4039:13032",
+    "page": "Icons",
+    "name": "Arrow Down",
+    "constant": "<FIGMA_ICONS_ARROW_DOWN>"
+  },
+  "863beb51dbfa616f16afd1db0ad8d94188a852e1": {
+    "id": "4039:13035",
+    "page": "Icons",
+    "name": "Arrow Left Circle",
+    "constant": "<FIGMA_ICONS_ARROW_LEFT_CIRCLE>"
+  },
+  "a1e5a94d03414e6f7fc75b3a20f8905cf758c127": {
+    "id": "4039:13034",
+    "page": "Icons",
+    "name": "Arrow Left",
+    "constant": "<FIGMA_ICONS_ARROW_LEFT>"
+  },
+  "5b0077a350535fa1b42ffd8d3ddde530e64b153a": {
+    "id": "4039:13037",
+    "page": "Icons",
+    "name": "Arrow Right Circle",
+    "constant": "<FIGMA_ICONS_ARROW_RIGHT_CIRCLE>"
+  },
+  "440e350a8a2e2832594bf24c6e881ae20bb84fc5": {
+    "id": "4039:13036",
+    "page": "Icons",
+    "name": "Arrow Right",
+    "constant": "<FIGMA_ICONS_ARROW_RIGHT>"
+  },
+  "8e8923970dcd0971098b3262d35a5db78ea2db6c": {
+    "id": "4039:13038",
+    "page": "Icons",
+    "name": "Arrow Up Circle",
+    "constant": "<FIGMA_ICONS_ARROW_UP_CIRCLE>"
+  },
+  "e22a5eea3aaeac32d40f251d60c1ebf07149543c": {
+    "id": "4039:13039",
+    "page": "Icons",
+    "name": "Arrow Up Left",
+    "constant": "<FIGMA_ICONS_ARROW_UP_LEFT>"
+  },
+  "18a3ae2891037a0b2a9c3e6db4602ee01d01f112": {
+    "id": "4039:13041",
+    "page": "Icons",
+    "name": "Arrow Up Right",
+    "constant": "<FIGMA_ICONS_ARROW_UP_RIGHT>"
+  },
+  "b90273d3fcbed89fbf47536e5a196393e4a5568b": {
+    "id": "4039:13040",
+    "page": "Icons",
+    "name": "Arrow Up",
+    "constant": "<FIGMA_ICONS_ARROW_UP>"
+  },
+  "ade57605b8ef0ba27773bc3f56426bdd84640535": {
+    "id": "4039:13043",
+    "page": "Icons",
+    "name": "At Sign",
+    "constant": "<FIGMA_ICONS_AT_SIGN>",
+    "description": ["Keywords: mention, at, email, message"]
+  },
+  "691f0535b69514e120adbde6923b9f8f4d9f5ab1": {
+    "id": "4039:13042",
+    "page": "Icons",
+    "name": "Award",
+    "constant": "<FIGMA_ICONS_AWARD>",
+    "description": ["Keywords: achievement, badge"]
+  },
+  "81a6d29f5bec2ab38490ee35ce653aa066617dbf": {
+    "id": "4039:13045",
+    "page": "Icons",
+    "name": "Bar Chart 2",
+    "constant": "<FIGMA_ICONS_BAR_CHART_2>",
+    "description": ["Keywords: statistics, diagram, graph"]
+  },
+  "8a307f1155d136ca3644976a378e8ea7930a4597": {
+    "id": "4039:13044",
+    "page": "Icons",
+    "name": "Bar Chart",
+    "constant": "<FIGMA_ICONS_BAR_CHART>",
+    "description": ["Keywords: statistics, diagram, graph"]
+  },
+  "20b2e9ef5fa3ea3394fd8b3450eeb1e40c58c25a": {
+    "id": "4039:13046",
+    "page": "Icons",
+    "name": "Battery Charging",
+    "constant": "<FIGMA_ICONS_BATTERY_CHARGING>",
+    "description": ["Keywords: power, electricity"]
+  },
+  "d93bc39bfb1a4002d106f0428bfaa380628709c0": {
+    "id": "4039:13047",
+    "page": "Icons",
+    "name": "Battery",
+    "constant": "<FIGMA_ICONS_BATTERY>",
+    "description": ["Keywords: power, electricity"]
+  },
+  "d6d325c6602c633e1157b668aa528208b51c2045": {
+    "id": "4039:13049",
+    "page": "Icons",
+    "name": "Bell Off",
+    "constant": "<FIGMA_ICONS_BELL_OFF>",
+    "description": ["Keywords: alarm, notification, silent"]
+  },
+  "0f881188d8757408cdce7b6ec02a9be16855d69c": {
+    "id": "4039:13048",
+    "page": "Icons",
+    "name": "Bell",
+    "constant": "<FIGMA_ICONS_BELL>",
+    "description": ["Keywords: alarm, notification, sound"]
+  },
+  "07249fcfb2c50f06a7a79d860b552b2ffbce720a": {
+    "id": "4039:13051",
+    "page": "Icons",
+    "name": "Bluetooth",
+    "constant": "<FIGMA_ICONS_BLUETOOTH>",
+    "description": ["Keywords: wireless"]
+  },
+  "eb296255b2fab6334001256d3eaa11f166397055": {
+    "id": "4039:13050",
+    "page": "Icons",
+    "name": "Bold",
+    "constant": "<FIGMA_ICONS_BOLD>"
+  },
+  "1297483799cc1b85142273ba150834b189eb886b": {
+    "id": "4039:13053",
+    "page": "Icons",
+    "name": "Book Open",
+    "constant": "<FIGMA_ICONS_BOOK_OPEN>",
+    "description": ["Keywords: read, library"]
+  },
+  "b6d26bf52740e440e8f2903f248ccaf7f17c1fb7": {
+    "id": "4039:13052",
+    "page": "Icons",
+    "name": "Book",
+    "constant": "<FIGMA_ICONS_BOOK>",
+    "description": ["Keywords: read, dictionary, booklet, magazine, library"]
+  },
+  "989149433e8e7960b0f3f491e5a4a2b4cf0499e1": {
+    "id": "4039:13055",
+    "page": "Icons",
+    "name": "Bookmark",
+    "constant": "<FIGMA_ICONS_BOOKMARK>",
+    "description": ["Keywords: read, clip, marker, tag"]
+  },
+  "da216ea5358d8d32ec1ea3cfb698c03eb8337c11": {
+    "id": "4039:13054",
+    "page": "Icons",
+    "name": "Box",
+    "constant": "<FIGMA_ICONS_BOX>",
+    "description": ["Keywords: cube"]
+  },
+  "0f9930e558fa1883cf0b0c657ad93c26a97aec21": {
+    "id": "4039:13057",
+    "page": "Icons",
+    "name": "Briefcase",
+    "constant": "<FIGMA_ICONS_BRIEFCASE>",
+    "description": ["Keywords: work, bag, baggage, folder"]
+  },
+  "d13008c18c55a6080d5c4cbb7d48c7d715b8acec": {
+    "id": "4039:13056",
+    "page": "Icons",
+    "name": "Calendar",
+    "constant": "<FIGMA_ICONS_CALENDAR>",
+    "description": ["Keywords: date"]
+  },
+  "e2f96a9de7492938eb0f4ee75778184db46a30ac": {
+    "id": "4039:13059",
+    "page": "Icons",
+    "name": "Camera Off",
+    "constant": "<FIGMA_ICONS_CAMERA_OFF>"
+  },
+  "ec74183ec3cb41b52deec9af644b63bc0de7e5b5": {
+    "id": "4039:13058",
+    "page": "Icons",
+    "name": "Camera",
+    "constant": "<FIGMA_ICONS_CAMERA>",
+    "description": ["Keywords: photo"]
+  },
+  "47007422e038e7687cfea6e1581f87eaa5365555": {
+    "id": "4039:13061",
+    "page": "Icons",
+    "name": "Cast",
+    "constant": "<FIGMA_ICONS_CAST>",
+    "description": ["Keywords: chromecast, airplay"]
+  },
+  "3ec30d388d1b058e16cb0d108682af01f310f6f0": {
+    "id": "4039:13060",
+    "page": "Icons",
+    "name": "Check Circle",
+    "constant": "<FIGMA_ICONS_CHECK_CIRCLE>"
+  },
+  "9215c05075a2248a8d6cf9a7111248fdce5875c9": {
+    "id": "4039:13062",
+    "page": "Icons",
+    "name": "Check Square",
+    "constant": "<FIGMA_ICONS_CHECK_SQUARE>"
+  },
+  "9c083d8afaa37e1e2be54abea0e69996ee62b12b": {
+    "id": "4039:13063",
+    "page": "Icons",
+    "name": "Check",
+    "constant": "<FIGMA_ICONS_CHECK>"
+  },
+  "b9b6b3bc369b11cf1c4d6f755b33142022250dc6": {
+    "id": "4039:13072",
+    "page": "Icons",
+    "name": "Chevron Down",
+    "constant": "<FIGMA_ICONS_CHEVRON_DOWN>",
+    "description": ["Keywords: expand"]
+  },
+  "2ab9cfe7d25f87b6e49a86b53bfc7b8dcf351c3f": {
+    "id": "4039:13064",
+    "page": "Icons",
+    "name": "Chevron Left",
+    "constant": "<FIGMA_ICONS_CHEVRON_LEFT>"
+  },
+  "56addd0c972a392397344b0b725c91d401298268": {
+    "id": "4039:13165",
+    "page": "Icons",
+    "name": "Chevron Right",
+    "constant": "<FIGMA_ICONS_CHEVRON_RIGHT>"
+  },
+  "e0d8475fa14ce1dc789014acae7d5c2cca5d9fb3": {
+    "id": "4039:13166",
+    "page": "Icons",
+    "name": "Chevron Up",
+    "constant": "<FIGMA_ICONS_CHEVRON_UP>",
+    "description": ["Keywords: collapse"]
+  },
+  "b9a095aac0bc3b28aacc59125ae69afe33538ac8": {
+    "id": "4039:13168",
+    "page": "Icons",
+    "name": "Chevrons Down",
+    "constant": "<FIGMA_ICONS_CHEVRONS_DOWN>"
+  },
+  "4c217a91b7d50d9177cb9cf5c1fad836b90ffc2b": {
+    "id": "4039:13167",
+    "page": "Icons",
+    "name": "Chevrons Left",
+    "constant": "<FIGMA_ICONS_CHEVRONS_LEFT>"
+  },
+  "ce7ccd3cd1ff3296f17d2f9a0f752f6e03298658": {
+    "id": "4039:13170",
+    "page": "Icons",
+    "name": "Chevrons Right",
+    "constant": "<FIGMA_ICONS_CHEVRONS_RIGHT>"
+  },
+  "70011f80faca2e17f322a7269fa9d6054b9e4e54": {
+    "id": "4039:13169",
+    "page": "Icons",
+    "name": "Chevrons Up",
+    "constant": "<FIGMA_ICONS_CHEVRONS_UP>"
+  },
+  "14d5de0ed3bb01efbe57a2a443a734aa20cf376f": {
+    "id": "4039:13172",
+    "page": "Icons",
+    "name": "Chrome",
+    "constant": "<FIGMA_ICONS_CHROME>"
+  },
+  "244ce0ed7b4f9eacbdff7bccb0d4a747b32cec0f": {
+    "id": "4039:13171",
+    "page": "Icons",
+    "name": "Circle",
+    "constant": "<FIGMA_ICONS_CIRCLE>",
+    "description": ["Keywords: off, zero, record"]
+  },
+  "fccef11bd792a212fd26cc180dae746b6d6566be": {
+    "id": "4039:13174",
+    "page": "Icons",
+    "name": "Clipboard",
+    "constant": "<FIGMA_ICONS_CLIPBOARD>",
+    "description": ["Keywords: copy"]
+  },
+  "180c507c8b4a5a7dfa99fb0ba8e39bc47817c5bf": {
+    "id": "4039:13173",
+    "page": "Icons",
+    "name": "Clock",
+    "constant": "<FIGMA_ICONS_CLOCK>",
+    "description": ["Keywords: time, watch, alarm"]
+  },
+  "58f02aa2496542d27ea605437a160136cc84d093": {
+    "id": "4039:13176",
+    "page": "Icons",
+    "name": "Cloud Drizzle",
+    "constant": "<FIGMA_ICONS_CLOUD_DRIZZLE>",
+    "description": ["Keywords: weather, shower"]
+  },
+  "65dd03859688a2404f7beeec5c96792c258ed2ee": {
+    "id": "4039:13175",
+    "page": "Icons",
+    "name": "Cloud Lightning",
+    "constant": "<FIGMA_ICONS_CLOUD_LIGHTNING>",
+    "description": ["Keywords: weather, bolt"]
+  },
+  "16567135925a2a40b0ba4a423ae920445ae9237f": {
+    "id": "4039:13178",
+    "page": "Icons",
+    "name": "Cloud Off",
+    "constant": "<FIGMA_ICONS_CLOUD_OFF>"
+  },
+  "60e5e06e80bb109b4a8eb9dcce71bceb774cb04a": {
+    "id": "4039:13177",
+    "page": "Icons",
+    "name": "Cloud Rain",
+    "constant": "<FIGMA_ICONS_CLOUD_RAIN>",
+    "description": ["Keywords: weather"]
+  },
+  "c4198092ab34095a385902bdf795ae1aa5d07055": {
+    "id": "4039:13180",
+    "page": "Icons",
+    "name": "Cloud Snow",
+    "constant": "<FIGMA_ICONS_CLOUD_SNOW>",
+    "description": ["Keywords: weather, blizzard"]
+  },
+  "e7135e440a8e86e737f4c460df4f0ffa07b6319f": {
+    "id": "4039:13179",
+    "page": "Icons",
+    "name": "Cloud",
+    "constant": "<FIGMA_ICONS_CLOUD>",
+    "description": ["Keywords: weather"]
+  },
+  "df1ee7334c5eb623648863f7641bda52d99e5ac9": {
+    "id": "4039:13182",
+    "page": "Icons",
+    "name": "Code",
+    "constant": "<FIGMA_ICONS_CODE>",
+    "description": ["Keywords: source, programming"]
+  },
+  "c1e8670d625633713fa8217e02998f38f6adbf45": {
+    "id": "4039:13181",
+    "page": "Icons",
+    "name": "Codepen",
+    "constant": "<FIGMA_ICONS_CODEPEN>",
+    "description": ["Keywords: logo"]
+  },
+  "3b7fc064b90d277f9f865224cdd3abc19d8cf39a": {
+    "id": "4039:13184",
+    "page": "Icons",
+    "name": "Codesandbox",
+    "constant": "<FIGMA_ICONS_CODESANDBOX>",
+    "description": ["Keywords: logo"]
+  },
+  "2d14d328857493e9caf6130a5680011c954e0036": {
+    "id": "4039:13183",
+    "page": "Icons",
+    "name": "Coffee",
+    "constant": "<FIGMA_ICONS_COFFEE>",
+    "description": ["Keywords: drink, cup, mug, tea, cafe, hot, beverage"]
+  },
+  "ddacf8a7a84b545ddc93e8108647020230a3ccbc": {
+    "id": "4039:13185",
+    "page": "Icons",
+    "name": "Columns",
+    "constant": "<FIGMA_ICONS_COLUMNS>",
+    "description": ["Keywords: layout"]
+  },
+  "ea44cfd4eb2ada058bf5bc540698191709a02e22": {
+    "id": "4039:13463",
+    "page": "Icons",
+    "name": "Command",
+    "constant": "<FIGMA_ICONS_COMMAND>",
+    "description": ["Keywords: keyboard, cmd, terminal, prompt"]
+  },
+  "b13a6f1bab6bd3181f98da249b79840d63a7cb5f": {
+    "id": "4039:13465",
+    "page": "Icons",
+    "name": "Compass",
+    "constant": "<FIGMA_ICONS_COMPASS>",
+    "description": ["Keywords: navigation, safari, travel, direction"]
+  },
+  "5efce6fb81d8b70552377856eb27eb33d614fd9e": {
+    "id": "4039:13464",
+    "page": "Icons",
+    "name": "Copy",
+    "constant": "<FIGMA_ICONS_COPY>",
+    "description": ["Keywords: clone, duplicate"]
+  },
+  "e4eae546f3eb3248dcde6557c542f10c6cf23f21": {
+    "id": "4039:13467",
+    "page": "Icons",
+    "name": "Corner Down Left",
+    "constant": "<FIGMA_ICONS_CORNER_DOWN_LEFT>",
+    "description": ["Keywords: arrow, return"]
+  },
+  "76ffc50113d1482fb668b713df97c4fc5270197f": {
+    "id": "4039:13466",
+    "page": "Icons",
+    "name": "Corner Down Right",
+    "constant": "<FIGMA_ICONS_CORNER_DOWN_RIGHT>",
+    "description": ["Keywords: arrow"]
+  },
+  "1f45db60485e874bd6f184085a2edadf7f12c6d2": {
+    "id": "4039:13469",
+    "page": "Icons",
+    "name": "Corner Left Down",
+    "constant": "<FIGMA_ICONS_CORNER_LEFT_DOWN>",
+    "description": ["Keywords: arrow"]
+  },
+  "93d04a26d396e174a844a8e7b9cda6b53366a33a": {
+    "id": "4039:13468",
+    "page": "Icons",
+    "name": "Corner Left Up",
+    "constant": "<FIGMA_ICONS_CORNER_LEFT_UP>",
+    "description": ["Keywords: arrow"]
+  },
+  "5d1c2756e87c2953e4e93ae4b863ff90496fba00": {
+    "id": "4039:13471",
+    "page": "Icons",
+    "name": "Corner Right Down",
+    "constant": "<FIGMA_ICONS_CORNER_RIGHT_DOWN>",
+    "description": ["Keywords: arrow"]
+  },
+  "b33541f0b3a49cccd74087e40dda17f1ff5c5643": {
+    "id": "4039:13470",
+    "page": "Icons",
+    "name": "Corner Right Up",
+    "constant": "<FIGMA_ICONS_CORNER_RIGHT_UP>",
+    "description": ["Keywords: arrow"]
+  },
+  "2f3503250657503b12c46a74864a6bc8655ee4fe": {
+    "id": "4039:13473",
+    "page": "Icons",
+    "name": "Corner Up Left",
+    "constant": "<FIGMA_ICONS_CORNER_UP_LEFT>",
+    "description": ["Keywords: arrow"]
+  },
+  "b821d1dedc8a01f23f78033fd83562c2e8933a4c": {
+    "id": "4039:13472",
+    "page": "Icons",
+    "name": "Corner Up Right",
+    "constant": "<FIGMA_ICONS_CORNER_UP_RIGHT>",
+    "description": ["Keywords: arrow"]
+  },
+  "da113a048dae2762e29b5a58f268007e2316e1e1": {
+    "id": "4039:13475",
+    "page": "Icons",
+    "name": "Cpu",
+    "constant": "<FIGMA_ICONS_CPU>",
+    "description": ["Keywords: processor, technology"]
+  },
+  "a53f40df243b0fbcfa1b1cbb5aaefa324e0eee0c": {
+    "id": "4039:13474",
+    "page": "Icons",
+    "name": "Credit Card",
+    "constant": "<FIGMA_ICONS_CREDIT_CARD>",
+    "description": ["Keywords: purchase, payment, cc"]
+  },
+  "87b69f4d270ec4b9cd020b71426e2155a8802984": {
+    "id": "4049:13477",
+    "page": "Icons",
+    "name": "Crop",
+    "constant": "<FIGMA_ICONS_CROP>",
+    "description": ["Keywords: photo, image"]
+  },
+  "88285d743bcb4e7f353ec9b3accc247db8a3faaa": {
+    "id": "4049:13476",
+    "page": "Icons",
+    "name": "Crosshair",
+    "constant": "<FIGMA_ICONS_CROSSHAIR>",
+    "description": ["Keywords: aim, target"]
+  },
+  "6ba3245e929d4fd219b4cf5eb881974ffd05c35e": {
+    "id": "4049:13478",
+    "page": "Icons",
+    "name": "Database",
+    "constant": "<FIGMA_ICONS_DATABASE>",
+    "description": ["Keywords: storage, memory"]
+  },
+  "c335eddc1604b2de6a01735f648f9db59569298e": {
+    "id": "4049:13479",
+    "page": "Icons",
+    "name": "Delete",
+    "constant": "<FIGMA_ICONS_DELETE>",
+    "description": ["Keywords: remove"]
+  },
+  "4f367744c5ae770b067164be1baa515206a508eb": {
+    "id": "4049:13480",
+    "page": "Icons",
+    "name": "Disc",
+    "constant": "<FIGMA_ICONS_DISC>",
+    "description": ["Keywords: album, cd, dvd, music"]
+  },
+  "fd6db00dca0b3ec956f308acadedb4b1c61a29ec": {
+    "id": "4049:13481",
+    "page": "Icons",
+    "name": "Divide Circle",
+    "constant": "<FIGMA_ICONS_DIVIDE_CIRCLE>"
+  },
+  "fcb28b1744fba78f742b0fc382f2f20ed0125181": {
+    "id": "4049:13483",
+    "page": "Icons",
+    "name": "Divide Square",
+    "constant": "<FIGMA_ICONS_DIVIDE_SQUARE>"
+  },
+  "28ce1ce802bab56d079646604c8ee429db8e157f": {
+    "id": "4049:13482",
+    "page": "Icons",
+    "name": "Divide",
+    "constant": "<FIGMA_ICONS_DIVIDE>"
+  },
+  "d7b5ca6d48799851fb3d74d98e8f0a7b55ab9d86": {
+    "id": "4049:13485",
+    "page": "Icons",
+    "name": "Dollar Sign",
+    "constant": "<FIGMA_ICONS_DOLLAR_SIGN>",
+    "description": ["Keywords: currency, money, payment"]
+  },
+  "0ba2dbaf52a43702f20dc2db91abc4f6f51c5f98": {
+    "id": "4049:13484",
+    "page": "Icons",
+    "name": "Download Cloud",
+    "constant": "<FIGMA_ICONS_DOWNLOAD_CLOUD>"
+  },
+  "b943bf553f1b6ae70c69b6ec3fff76143f1fe996": {
+    "id": "4049:13487",
+    "page": "Icons",
+    "name": "Download",
+    "constant": "<FIGMA_ICONS_DOWNLOAD>"
+  },
+  "bdeda7adbc6a217a0a30e85bdd919f531e2d0fe8": {
+    "id": "4049:13486",
+    "page": "Icons",
+    "name": "Dribbble",
+    "constant": "<FIGMA_ICONS_DRIBBBLE>"
+  },
+  "eebc845ba5744934419c2b8629b8823764983e68": {
+    "id": "4049:13488",
+    "page": "Icons",
+    "name": "Droplet",
+    "constant": "<FIGMA_ICONS_DROPLET>",
+    "description": ["Keywords: water"]
+  },
+  "84f4d2f172ca4d5a14307a6b972ce6e8a6b4a03c": {
+    "id": "4049:13489",
+    "page": "Icons",
+    "name": "Edit 2",
+    "constant": "<FIGMA_ICONS_EDIT_2>",
+    "description": ["Keywords: pencil, change"]
+  },
+  "623fddf5d48c406c30d06062864165faeed474b3": {
+    "id": "4049:13491",
+    "page": "Icons",
+    "name": "Edit 3",
+    "constant": "<FIGMA_ICONS_EDIT_3>",
+    "description": ["Keywords: pencil, change"]
+  },
+  "c951cf3deb2333c96ab32ee1164b3f33331457f8": {
+    "id": "4049:13490",
+    "page": "Icons",
+    "name": "Edit",
+    "constant": "<FIGMA_ICONS_EDIT>",
+    "description": ["Keywords: pencil, change"]
+  },
+  "eebf0918c15fdfbc8915900ddcf1328c0a657a90": {
+    "id": "4049:13493",
+    "page": "Icons",
+    "name": "External Link",
+    "constant": "<FIGMA_ICONS_EXTERNAL_LINK>",
+    "description": ["Keywords: outbound"]
+  },
+  "36d4dd652b2e5e22db9feda33a4c9c883fab1d5b": {
+    "id": "4049:13492",
+    "page": "Icons",
+    "name": "Eye Off",
+    "constant": "<FIGMA_ICONS_EYE_OFF>",
+    "description": ["Keywords: view, watch, hide, hidden"]
+  },
+  "4358330dc9737e430c4ce7ce85d4eb463642b618": {
+    "id": "4049:13495",
+    "page": "Icons",
+    "name": "Eye",
+    "constant": "<FIGMA_ICONS_EYE>",
+    "description": ["Keywords: view, watch"]
+  },
+  "fd6c8a6e60928c6b03f6dcd5684e8522ae8322e7": {
+    "id": "4049:13494",
+    "page": "Icons",
+    "name": "Facebook",
+    "constant": "<FIGMA_ICONS_FACEBOOK>",
+    "description": ["Keywords: logo, social"]
+  },
+  "7d39bc419c4e3ed32b71ce685ad0d6a2d1942f77": {
+    "id": "4049:13497",
+    "page": "Icons",
+    "name": "Fast Forward",
+    "constant": "<FIGMA_ICONS_FAST_FORWARD>",
+    "description": ["Keywords: music"]
+  },
+  "d70571d638051bf96a8ba83aac544d81de8866f8": {
+    "id": "4049:13496",
+    "page": "Icons",
+    "name": "Feather",
+    "constant": "<FIGMA_ICONS_FEATHER>"
+  },
+  "fe94f6af02cad4a6ac396bf290789820a2304add": {
+    "id": "4049:13498",
+    "page": "Icons",
+    "name": "Figma",
+    "constant": "<FIGMA_ICONS_FIGMA>",
+    "description": ["Keywords: logo, design, tool"]
+  },
+  "22680384176ff0706c8518d45ce1455e54100771": {
+    "id": "4049:13499",
+    "page": "Icons",
+    "name": "File Minus",
+    "constant": "<FIGMA_ICONS_FILE_MINUS>",
+    "description": ["Keywords: delete, remove, erase"]
+  },
+  "de776e1f00d3bc09b0fcfe844651037a7a747c51": {
+    "id": "4049:13501",
+    "page": "Icons",
+    "name": "File Plus",
+    "constant": "<FIGMA_ICONS_FILE_PLUS>",
+    "description": ["Keywords: add, create, new"]
+  },
+  "e53fb8156857e11010776635662aa6ad9cdc05d5": {
+    "id": "4049:13500",
+    "page": "Icons",
+    "name": "File Text",
+    "constant": "<FIGMA_ICONS_FILE_TEXT>",
+    "description": ["Keywords: data, txt, pdf"]
+  },
+  "d5834ec90c09e5a4d7736f018456a2ec3fcbd3b3": {
+    "id": "4049:13503",
+    "page": "Icons",
+    "name": "File",
+    "constant": "<FIGMA_ICONS_FILE>"
+  },
+  "3285b8bdfef01b1687b064668f4b2f9441bd8077": {
+    "id": "4049:13502",
+    "page": "Icons",
+    "name": "Film",
+    "constant": "<FIGMA_ICONS_FILM>",
+    "description": ["Keywords: movie, video"]
+  },
+  "101c21fef72a4ccc9e6d3cf9438782b6141c17f9": {
+    "id": "4049:13505",
+    "page": "Icons",
+    "name": "Filter",
+    "constant": "<FIGMA_ICONS_FILTER>",
+    "description": ["Keywords: funnel, hopper"]
+  },
+  "24d11a757c3ab41ab5a9681b885f1c70406a6a35": {
+    "id": "4049:13504",
+    "page": "Icons",
+    "name": "Flag",
+    "constant": "<FIGMA_ICONS_FLAG>",
+    "description": ["Keywords: report"]
+  },
+  "81f349111d130482d1468c278ead1689d4eae4a0": {
+    "id": "4049:13507",
+    "page": "Icons",
+    "name": "Folder Minus",
+    "constant": "<FIGMA_ICONS_FOLDER_MINUS>",
+    "description": ["Keywords: directory"]
+  },
+  "e9891ad3d0ed45212add7755f2037e63bb6d655d": {
+    "id": "4049:13506",
+    "page": "Icons",
+    "name": "Folder Plus",
+    "constant": "<FIGMA_ICONS_FOLDER_PLUS>",
+    "description": ["Keywords: directory"]
+  },
+  "217c5ec17fdf22ced21eb68302b75d0530b6efd9": {
+    "id": "4049:13509",
+    "page": "Icons",
+    "name": "Folder",
+    "constant": "<FIGMA_ICONS_FOLDER>",
+    "description": ["Keywords: directory"]
+  },
+  "40ad624798ca61f0b76f53ae95bdbbfcf89ad3e9": {
+    "id": "4049:13508",
+    "page": "Icons",
+    "name": "Framer",
+    "constant": "<FIGMA_ICONS_FRAMER>",
+    "description": ["Keywords: logo, design, tool"]
+  },
+  "edeb8f2c6ddd734e5f34c81a079ae8cabf5b77e9": {
+    "id": "4049:13511",
+    "page": "Icons",
+    "name": "Frown",
+    "constant": "<FIGMA_ICONS_FROWN>",
+    "description": ["Keywords: emoji, face, bad, sad, emotion"]
+  },
+  "eaa3d98185cc545787b6785594d01f3da6c965e2": {
+    "id": "4049:13510",
+    "page": "Icons",
+    "name": "Gift",
+    "constant": "<FIGMA_ICONS_GIFT>",
+    "description": ["Keywords: present, box, birthday, party"]
+  },
+  "173ee53a02acfd5ad87364d53127eb0045ecae68": {
+    "id": "4049:13513",
+    "page": "Icons",
+    "name": "Git Branch",
+    "constant": "<FIGMA_ICONS_GIT_BRANCH>",
+    "description": ["Keywords: code, version control"]
+  },
+  "17da6e003f69c8e6e65cee6685c9a1ca557fb556": {
+    "id": "4049:13512",
+    "page": "Icons",
+    "name": "Git Commit",
+    "constant": "<FIGMA_ICONS_GIT_COMMIT>",
+    "description": ["Keywords: code, version control"]
+  },
+  "98ba2fc0d70766eb06af50054cb56f99dd5f45e9": {
+    "id": "4049:13515",
+    "page": "Icons",
+    "name": "Git Merge",
+    "constant": "<FIGMA_ICONS_GIT_MERGE>",
+    "description": ["Keywords: code, version control"]
+  },
+  "bcdba55f457c571c8405ea3178a96c45dc709732": {
+    "id": "4049:13514",
+    "page": "Icons",
+    "name": "Git Pull Request",
+    "constant": "<FIGMA_ICONS_GIT_PULL_REQUEST>",
+    "description": ["Keywords: code, version control"]
+  },
+  "6b7bb7a81bf13cc532b76f109ae8de360672ddbb": {
+    "id": "4049:13517",
+    "page": "Icons",
+    "name": "Github",
+    "constant": "<FIGMA_ICONS_GITHUB>",
+    "description": ["Keywords: logo, version control"]
+  },
+  "38d8cde6ebf4115fce8ec676899ed6ae4e078750": {
+    "id": "4049:13516",
+    "page": "Icons",
+    "name": "Gitlab",
+    "constant": "<FIGMA_ICONS_GITLAB>",
+    "description": ["Keywords: logo, version control"]
+  },
+  "9a38895dc2cb9b59e4a16f1cb43632c4d8e517ce": {
+    "id": "4049:13519",
+    "page": "Icons",
+    "name": "Globe",
+    "constant": "<FIGMA_ICONS_GLOBE>",
+    "description": ["Keywords: world, browser, language, translate"]
+  },
+  "c68d6f5ae42f8b6fecf88cc3bd28738609b95cf1": {
+    "id": "4049:13518",
+    "page": "Icons",
+    "name": "Grid",
+    "constant": "<FIGMA_ICONS_GRID>"
+  },
+  "5dfe2b42aa268daf38916cbb7fedaa94d42bb9fc": {
+    "id": "4049:13520",
+    "page": "Icons",
+    "name": "Hard Drive",
+    "constant": "<FIGMA_ICONS_HARD_DRIVE>",
+    "description": ["Keywords: computer, server, memory, data"]
+  },
+  "c2938431bd578b6415f47b247a0ff128f9cb880e": {
+    "id": "4049:13521",
+    "page": "Icons",
+    "name": "Hash",
+    "constant": "<FIGMA_ICONS_HASH>",
+    "description": ["Keywords: hashtag, number, pound"]
+  },
+  "0a514d88435d7583aaef2cdc016ad3959c250012": {
+    "id": "4049:13523",
+    "page": "Icons",
+    "name": "Headphones",
+    "constant": "<FIGMA_ICONS_HEADPHONES>",
+    "description": ["Keywords: music, audio, sound"]
+  },
+  "75edc6eb902b357b4738e6d08f8efbb144f9c918": {
+    "id": "4049:13522",
+    "page": "Icons",
+    "name": "Heart",
+    "constant": "<FIGMA_ICONS_HEART>",
+    "description": ["Keywords: like, love, emotion"]
+  },
+  "39082177d5d2f9a136028ab2f7e8e6eef2239916": {
+    "id": "4049:13524",
+    "page": "Icons",
+    "name": "Help Circle",
+    "constant": "<FIGMA_ICONS_HELP_CIRCLE>",
+    "description": ["Keywords: question mark"]
+  },
+  "b3d8417c18000420c1d1a8a4e2761ec157925959": {
+    "id": "4049:13525",
+    "page": "Icons",
+    "name": "Hexagon",
+    "constant": "<FIGMA_ICONS_HEXAGON>",
+    "description": ["Keywords: shape, node.js, logo"]
+  },
+  "478f6bd33e0a6469a801544d6c88e45799ca2692": {
+    "id": "4049:13527",
+    "page": "Icons",
+    "name": "Home",
+    "constant": "<FIGMA_ICONS_HOME>",
+    "description": ["Keywords: house, living"]
+  },
+  "0b2bba16777238dcb1dd340aadfe640b08248071": {
+    "id": "4049:13526",
+    "page": "Icons",
+    "name": "Image",
+    "constant": "<FIGMA_ICONS_IMAGE>",
+    "description": ["Keywords: picture"]
+  },
+  "baee177c365ccaeaf8f69eeac0c4fbe9272f050d": {
+    "id": "4049:13529",
+    "page": "Icons",
+    "name": "Inbox",
+    "constant": "<FIGMA_ICONS_INBOX>",
+    "description": ["Keywords: email"]
+  },
+  "2ce76ef354dd07689453e4e7757aee2b712aeae9": {
+    "id": "4049:13528",
+    "page": "Icons",
+    "name": "Info",
+    "constant": "<FIGMA_ICONS_INFO>"
+  },
+  "2355d844de73108ddae0c7f40af644527a4941c7": {
+    "id": "4049:13531",
+    "page": "Icons",
+    "name": "Instagram",
+    "constant": "<FIGMA_ICONS_INSTAGRAM>",
+    "description": ["Keywords: logo, camera"]
+  },
+  "9aa6d2303ddd5c8aadee8c6a72ff72f112c09525": {
+    "id": "4049:13530",
+    "page": "Icons",
+    "name": "Italic",
+    "constant": "<FIGMA_ICONS_ITALIC>"
+  },
+  "2bf40ba65a760e03261d935ed4a5f53facfaa59c": {
+    "id": "4049:13533",
+    "page": "Icons",
+    "name": "Key",
+    "constant": "<FIGMA_ICONS_KEY>"
+  },
+  "3113e2f88f8abfa04322f33436d17caf7af9c047": {
+    "id": "4049:13532",
+    "page": "Icons",
+    "name": "Layers",
+    "constant": "<FIGMA_ICONS_LAYERS>",
+    "description": ["Keywords: stack"]
+  },
+  "1dea3f3fb5b2126e5f8169f3051b7798373bdfec": {
+    "id": "4049:13535",
+    "page": "Icons",
+    "name": "Layout",
+    "constant": "<FIGMA_ICONS_LAYOUT>",
+    "description": ["Keywords: window, webpage"]
+  },
+  "465ae639a9b3a8e04d06f8e931792e9e9581c587": {
+    "id": "4049:13534",
+    "page": "Icons",
+    "name": "Life Buoy",
+    "constant": "<FIGMA_ICONS_LIFE_BUOY>",
+    "description": ["Keywords: help, life ring, support"]
+  },
+  "441c729adc9b07e5dcb779ea4fa310200dc84a15": {
+    "id": "4049:13537",
+    "page": "Icons",
+    "name": "Link 2",
+    "constant": "<FIGMA_ICONS_LINK_2>",
+    "description": ["Keywords: chain, url"]
+  },
+  "39b1bbd6b74be50258f2da02c61fda7f965de773": {
+    "id": "4049:13536",
+    "page": "Icons",
+    "name": "Link",
+    "constant": "<FIGMA_ICONS_LINK>",
+    "description": ["Keywords: chain, url"]
+  },
+  "96b2137e4c281ec0073f81fa6a51d712a51b70b9": {
+    "id": "4049:13539",
+    "page": "Icons",
+    "name": "Linkedin",
+    "constant": "<FIGMA_ICONS_LINKEDIN>",
+    "description": ["Keywords: logo, social media"]
+  },
+  "d8bd55d62d5489f20241d406682efa92c6df68cf": {
+    "id": "4049:13538",
+    "page": "Icons",
+    "name": "List",
+    "constant": "<FIGMA_ICONS_LIST>",
+    "description": ["Keywords: options"]
+  },
+  "a22a1d00f791c4d1a96bd46572322b448bdec03b": {
+    "id": "4049:13541",
+    "page": "Icons",
+    "name": "Loader",
+    "constant": "<FIGMA_ICONS_LOADER>"
+  },
+  "84fe09d932cc2ecc0139fda0585b286bd562b8ad": {
+    "id": "4049:13540",
+    "page": "Icons",
+    "name": "Lock",
+    "constant": "<FIGMA_ICONS_LOCK>",
+    "description": ["Keywords: security, password, secure"]
+  },
+  "e247f38d4188e7a8b9efdceed130ec4115629247": {
+    "id": "4049:13542",
+    "page": "Icons",
+    "name": "Log In",
+    "constant": "<FIGMA_ICONS_LOG_IN>",
+    "description": ["Keywords: sign in, arrow, enter"]
+  },
+  "fdeb044f8e928a367e6652a2a449c184f7558a40": {
+    "id": "4049:13543",
+    "page": "Icons",
+    "name": "Log Out",
+    "constant": "<FIGMA_ICONS_LOG_OUT>",
+    "description": ["Keywords: sign out, arrow, exit"]
+  },
+  "d345c353c49ea0983346807ea4939bfca8656bb6": {
+    "id": "4049:13544",
+    "page": "Icons",
+    "name": "Mail",
+    "constant": "<FIGMA_ICONS_MAIL>",
+    "description": ["Keywords: email, message"]
+  },
+  "52880bd09783c91d4f67ed5e3bc7993901c84460": {
+    "id": "4049:13545",
+    "page": "Icons",
+    "name": "Map Pin",
+    "constant": "<FIGMA_ICONS_MAP_PIN>",
+    "description": ["Keywords: location, navigation, travel, marker"]
+  },
+  "ebcadbf37d3dad06db0701fda4636d8f5ef36f81": {
+    "id": "4049:13547",
+    "page": "Icons",
+    "name": "Map",
+    "constant": "<FIGMA_ICONS_MAP>",
+    "description": ["Keywords: location, navigation, travel"]
+  },
+  "d33d822d1bbcd44440b783ce31e2293e8b352611": {
+    "id": "4049:13546",
+    "page": "Icons",
+    "name": "Maximize 2",
+    "constant": "<FIGMA_ICONS_MAXIMIZE_2>",
+    "description": ["Keywords: fullscreen, arrows, expand"]
+  },
+  "f0303f8e5fe78b5b4ea0eb231ce7ebf1faaabf0d": {
+    "id": "4049:13548",
+    "page": "Icons",
+    "name": "Maximize",
+    "constant": "<FIGMA_ICONS_MAXIMIZE>",
+    "description": ["Keywords: fullscreen"]
+  },
+  "5b7dcc492535557916c4fa5778ef711e163a8537": {
+    "id": "4049:13549",
+    "page": "Icons",
+    "name": "Meh",
+    "constant": "<FIGMA_ICONS_MEH>",
+    "description": ["Keywords: emoji, face, neutral, emotion"]
+  },
+  "28cd08a1ecfdaaf33f8dbcd9dd0be57f7655c19d": {
+    "id": "4049:13551",
+    "page": "Icons",
+    "name": "Menu",
+    "constant": "<FIGMA_ICONS_MENU>",
+    "description": ["Keywords: bars, navigation, hamburger"]
+  },
+  "e33590303e9758e7f4ce56f1582708eda4c7a883": {
+    "id": "4049:13550",
+    "page": "Icons",
+    "name": "Message Circle",
+    "constant": "<FIGMA_ICONS_MESSAGE_CIRCLE>",
+    "description": ["Keywords: comment, chat"]
+  },
+  "8a6e990ecf546f6c4a148a4cbb5bc7a6da69d95b": {
+    "id": "4049:13553",
+    "page": "Icons",
+    "name": "Message Square",
+    "constant": "<FIGMA_ICONS_MESSAGE_SQUARE>",
+    "description": ["Keywords: comment, chat"]
+  },
+  "2ff55d57cf65361eea0b9fe935897a129e5d22f2": {
+    "id": "4049:13552",
+    "page": "Icons",
+    "name": "Mic Off",
+    "constant": "<FIGMA_ICONS_MIC_OFF>",
+    "description": ["Keywords: record, sound, mute"]
+  },
+  "f93e81858ddd15f7d1e68be3667454df24a9c6be": {
+    "id": "4049:13555",
+    "page": "Icons",
+    "name": "Mic",
+    "constant": "<FIGMA_ICONS_MIC>",
+    "description": ["Keywords: record, sound, listen"]
+  },
+  "ceaa4e100dffffff76e55004c788dfc30288654c": {
+    "id": "4049:13554",
+    "page": "Icons",
+    "name": "Minimize 2",
+    "constant": "<FIGMA_ICONS_MINIMIZE_2>",
+    "description": ["Keywords: exit fullscreen, arrows, close"]
+  },
+  "520edfedddd68e240b0ee2785ac9135c64a1f7e6": {
+    "id": "4049:13557",
+    "page": "Icons",
+    "name": "Minimize",
+    "constant": "<FIGMA_ICONS_MINIMIZE>",
+    "description": ["Keywords: exit fullscreen, close"]
+  },
+  "2f117155a5a54317896f6c1cba38ec79f61c034a": {
+    "id": "4049:13556",
+    "page": "Icons",
+    "name": "Minus Circle",
+    "constant": "<FIGMA_ICONS_MINUS_CIRCLE>"
+  },
+  "37a3a71bbe7e8f1295935c52ec162784fd27d29f": {
+    "id": "4049:13559",
+    "page": "Icons",
+    "name": "Minus Square",
+    "constant": "<FIGMA_ICONS_MINUS_SQUARE>"
+  },
+  "e549e5d089f404a68a441e0a9335b499b867d866": {
+    "id": "4049:13558",
+    "page": "Icons",
+    "name": "Minus",
+    "constant": "<FIGMA_ICONS_MINUS>",
+    "description": ["Keywords: subtract"]
+  },
+  "a2e28d6c8f0c7dfe32ad7b46267bd3500390758a": {
+    "id": "4049:13561",
+    "page": "Icons",
+    "name": "Monitor",
+    "constant": "<FIGMA_ICONS_MONITOR>",
+    "description": ["Keywords: tv, screen, display"]
+  },
+  "34faea7b1921b62cc75b32e500f8fafcf53503a2": {
+    "id": "4049:13560",
+    "page": "Icons",
+    "name": "Moon",
+    "constant": "<FIGMA_ICONS_MOON>",
+    "description": ["Keywords: dark, night"]
+  },
+  "33939dff07c66e3178c4d9cf5cc47154d23a0fc4": {
+    "id": "4049:13563",
+    "page": "Icons",
+    "name": "More Horizontal",
+    "constant": "<FIGMA_ICONS_MORE_HORIZONTAL>",
+    "description": ["Keywords: ellipsis"]
+  },
+  "da0b3377218ad1f8e672b9077ba00e260bd4dfa9": {
+    "id": "4049:13562",
+    "page": "Icons",
+    "name": "More Vertical",
+    "constant": "<FIGMA_ICONS_MORE_VERTICAL>",
+    "description": ["Keywords: ellipsis"]
+  },
+  "c67ba239f5e6115bd3cf3e222fa46b9836bc9ddc": {
+    "id": "4049:13565",
+    "page": "Icons",
+    "name": "Mouse Pointer",
+    "constant": "<FIGMA_ICONS_MOUSE_POINTER>",
+    "description": ["Keywords: arrow, cursor"]
+  },
+  "73b42f5422423974c1adf85d61f369e63dd173e5": {
+    "id": "4049:13564",
+    "page": "Icons",
+    "name": "Move",
+    "constant": "<FIGMA_ICONS_MOVE>",
+    "description": ["Keywords: arrows"]
+  },
+  "165fd43859ab20d70112941cc9d3eaaebd211407": {
+    "id": "4049:13567",
+    "page": "Icons",
+    "name": "Music",
+    "constant": "<FIGMA_ICONS_MUSIC>",
+    "description": ["Keywords: note"]
+  },
+  "6ba8d55843a5199974c6ed7a48b506dae0f808aa": {
+    "id": "4049:13566",
+    "page": "Icons",
+    "name": "Navigation 2",
+    "constant": "<FIGMA_ICONS_NAVIGATION_2>",
+    "description": ["Keywords: location, travel"]
+  },
+  "e4041625b897697844d87336013ac5202a3f9d95": {
+    "id": "4049:13568",
+    "page": "Icons",
+    "name": "Navigation",
+    "constant": "<FIGMA_ICONS_NAVIGATION>",
+    "description": ["Keywords: location, travel"]
+  },
+  "71a0e66adb63bca49afc93841884a1e27e46e69b": {
+    "id": "4049:13569",
+    "page": "Icons",
+    "name": "Octagon",
+    "constant": "<FIGMA_ICONS_OCTAGON>",
+    "description": ["Keywords: stop"]
+  },
+  "281c3e8ba4671266434671c6648bcde03f34747b": {
+    "id": "4049:13571",
+    "page": "Icons",
+    "name": "Package",
+    "constant": "<FIGMA_ICONS_PACKAGE>",
+    "description": ["Keywords: box, container"]
+  },
+  "a20b04c7943924f2cfc5cf7a2d990dc39ef526b4": {
+    "id": "4049:13570",
+    "page": "Icons",
+    "name": "Paperclip",
+    "constant": "<FIGMA_ICONS_PAPERCLIP>",
+    "description": ["Keywords: attachment"]
+  },
+  "774ca2b321e9d190f1b0e1d969494a371c26155b": {
+    "id": "4049:13574",
+    "page": "Icons",
+    "name": "Pause Circle",
+    "constant": "<FIGMA_ICONS_PAUSE_CIRCLE>",
+    "description": ["Keywords: music, audio, stop"]
+  },
+  "dddf7cc16b66bfd11b81913b0da4e758053151da": {
+    "id": "4049:13572",
+    "page": "Icons",
+    "name": "Pause",
+    "constant": "<FIGMA_ICONS_PAUSE>",
+    "description": ["Keywords: music, stop"]
+  },
+  "f90f1b3614b75fb7e87d72c3d1a32c5833ca947a": {
+    "id": "4049:13576",
+    "page": "Icons",
+    "name": "Pen Tool",
+    "constant": "<FIGMA_ICONS_PEN_TOOL>",
+    "description": ["Keywords: vector, drawing"]
+  },
+  "7784507f8b20241f2733fb432886594bb8bb182e": {
+    "id": "4049:13575",
+    "page": "Icons",
+    "name": "Percent",
+    "constant": "<FIGMA_ICONS_PERCENT>",
+    "description": ["Keywords: discount"]
+  },
+  "99486436ad782258988f2bb329957e2246b532e3": {
+    "id": "4049:13577",
+    "page": "Icons",
+    "name": "Phone Call",
+    "constant": "<FIGMA_ICONS_PHONE_CALL>",
+    "description": ["Keywords: ring"]
+  },
+  "97d94be4713769b9babec1024f475e3a254ea64c": {
+    "id": "4049:13578",
+    "page": "Icons",
+    "name": "Phone Forwarded",
+    "constant": "<FIGMA_ICONS_PHONE_FORWARDED>",
+    "description": ["Keywords: call"]
+  },
+  "a2e20f20dbbeaa0530529aab3d47b69849f2eed0": {
+    "id": "4049:13580",
+    "page": "Icons",
+    "name": "Phone Incoming",
+    "constant": "<FIGMA_ICONS_PHONE_INCOMING>",
+    "description": ["Keywords: call"]
+  },
+  "a13a5a04744e9b53f71d9ae5613bc926796e0077": {
+    "id": "4049:13579",
+    "page": "Icons",
+    "name": "Phone Missed",
+    "constant": "<FIGMA_ICONS_PHONE_MISSED>",
+    "description": ["Keywords: call"]
+  },
+  "775d8953828b034e164c7de84eb9af8c211072f5": {
+    "id": "4049:13582",
+    "page": "Icons",
+    "name": "Phone Off",
+    "constant": "<FIGMA_ICONS_PHONE_OFF>",
+    "description": ["Keywords: call, mute"]
+  },
+  "c9418bd589c030d6d2acb5ef6774ffc13b15a79a": {
+    "id": "4049:13581",
+    "page": "Icons",
+    "name": "Phone Outgoing",
+    "constant": "<FIGMA_ICONS_PHONE_OUTGOING>",
+    "description": ["Keywords: call"]
+  },
+  "da7ef5bcd62e8a2299e2488631127252dbcb5697": {
+    "id": "4049:13584",
+    "page": "Icons",
+    "name": "Phone",
+    "constant": "<FIGMA_ICONS_PHONE>",
+    "description": ["Keywords: call"]
+  },
+  "c9a9c5556d6865d62fe08ca9c36d3a7e2b128f77": {
+    "id": "4049:13583",
+    "page": "Icons",
+    "name": "Pie Chart",
+    "constant": "<FIGMA_ICONS_PIE_CHART>",
+    "description": ["Keywords: statistics, diagram"]
+  },
+  "aa6ec1b6e0f114193c414e345605374f480d9e7d": {
+    "id": "4049:13585",
+    "page": "Icons",
+    "name": "Play Circle",
+    "constant": "<FIGMA_ICONS_PLAY_CIRCLE>",
+    "description": ["Keywords: music, start"]
+  },
+  "762e1978488372a64742fa8b033e4112c1c05a95": {
+    "id": "4049:13586",
+    "page": "Icons",
+    "name": "Play",
+    "constant": "<FIGMA_ICONS_PLAY>",
+    "description": ["Keywords: music, start"]
+  },
+  "b508ca52e61666f3a769c1700898f5fbd914fdc1": {
+    "id": "4049:13588",
+    "page": "Icons",
+    "name": "Plus Circle",
+    "constant": "<FIGMA_ICONS_PLUS_CIRCLE>",
+    "description": ["Keywords: add, new"]
+  },
+  "e70986ada663564fa9f56fdbb26544f91699cb58": {
+    "id": "4049:13587",
+    "page": "Icons",
+    "name": "Plus Square",
+    "constant": "<FIGMA_ICONS_PLUS_SQUARE>",
+    "description": ["Keywords: add, new"]
+  },
+  "b07b37e7e1445369e1679394be0de407a64abe74": {
+    "id": "4049:13590",
+    "page": "Icons",
+    "name": "Plus",
+    "constant": "<FIGMA_ICONS_PLUS>",
+    "description": ["Keywords: add, new"]
+  },
+  "9cb23a40d2c2855f90e9deb8f03892836e2f4c4d": {
+    "id": "4049:13589",
+    "page": "Icons",
+    "name": "Pocket",
+    "constant": "<FIGMA_ICONS_POCKET>",
+    "description": ["Keywords: logo, save"]
+  },
+  "9843c14b49eaa8df0e666e9d2568f436ae4f5e70": {
+    "id": "4049:13592",
+    "page": "Icons",
+    "name": "Power",
+    "constant": "<FIGMA_ICONS_POWER>",
+    "description": ["Keywords: on, off"]
+  },
+  "32bc96884c2b351b8c5c18e4a22ab4e087698247": {
+    "id": "4049:13591",
+    "page": "Icons",
+    "name": "Printer",
+    "constant": "<FIGMA_ICONS_PRINTER>",
+    "description": ["Keywords: fax, office, device"]
+  },
+  "45ae376bd4dfdf502c36307714a801aab8478eda": {
+    "id": "4049:13594",
+    "page": "Icons",
+    "name": "Radio",
+    "constant": "<FIGMA_ICONS_RADIO>",
+    "description": ["Keywords: signal"]
+  },
+  "199550380b49e717a2859736e547b98e61d163c5": {
+    "id": "4049:13593",
+    "page": "Icons",
+    "name": "Refresh Ccw",
+    "constant": "<FIGMA_ICONS_REFRESH_CCW>",
+    "description": ["Keywords: arrows"]
+  },
+  "c09105ac41be418a62680cad0714f2cd9d48ca8b": {
+    "id": "4049:13595",
+    "page": "Icons",
+    "name": "Refresh Cw",
+    "constant": "<FIGMA_ICONS_REFRESH_CW>",
+    "description": ["Keywords: synchronise, arrows"]
+  },
+  "62d580108476fb9740e123b8843118736ac8e724": {
+    "id": "4049:13596",
+    "page": "Icons",
+    "name": "Repeat",
+    "constant": "<FIGMA_ICONS_REPEAT>",
+    "description": ["Keywords: loop, arrows"]
+  },
+  "09276fcbd08cb3280d728d979a94be44dbff989a": {
+    "id": "4049:13598",
+    "page": "Icons",
+    "name": "Rewind",
+    "constant": "<FIGMA_ICONS_REWIND>",
+    "description": ["Keywords: music"]
+  },
+  "23fc2ff99c8d1c5de51441f5c4e1260ad8c03861": {
+    "id": "4049:13597",
+    "page": "Icons",
+    "name": "Rotate Ccw",
+    "constant": "<FIGMA_ICONS_ROTATE_CCW>",
+    "description": ["Keywords: arrow"]
+  },
+  "2b24904299a0c263aee16601ea538ae8d7408863": {
+    "id": "4049:13600",
+    "page": "Icons",
+    "name": "Rotate Cw",
+    "constant": "<FIGMA_ICONS_ROTATE_CW>",
+    "description": ["Keywords: arrow"]
+  },
+  "d1557c04be44270d74059981668ca3cdbe6bb133": {
+    "id": "4049:13599",
+    "page": "Icons",
+    "name": "Rss",
+    "constant": "<FIGMA_ICONS_RSS>",
+    "description": ["Keywords: feed, subscribe"]
+  },
+  "a4802165b36176d0a86d11a1f3a8a376600fc03c": {
+    "id": "4049:13601",
+    "page": "Icons",
+    "name": "Save",
+    "constant": "<FIGMA_ICONS_SAVE>",
+    "description": ["Keywords: floppy disk"]
+  },
+  "86e3b965ecc5f0455fae0646d73b209be6fd11cf": {
+    "id": "4049:13602",
+    "page": "Icons",
+    "name": "Scissors",
+    "constant": "<FIGMA_ICONS_SCISSORS>",
+    "description": ["Keywords: cut"]
+  },
+  "3277c00d0975a6228f39fc9134e8b14c99d44766": {
+    "id": "4049:13604",
+    "page": "Icons",
+    "name": "Search",
+    "constant": "<FIGMA_ICONS_SEARCH>",
+    "description": ["Keywords: find, magnifier, magnifying glass"]
+  },
+  "6dd2bc89a8d0e924555c385a773f0a479d168d06": {
+    "id": "4049:13603",
+    "page": "Icons",
+    "name": "Send",
+    "constant": "<FIGMA_ICONS_SEND>",
+    "description": [
+      "Keywords: message, mail, email, paper airplane, paper aeroplane"
+    ]
+  },
+  "2424fd014760ba606673fb9a2cce3d30b85ef8f6": {
+    "id": "4049:13605",
+    "page": "Icons",
+    "name": "Server",
+    "constant": "<FIGMA_ICONS_SERVER>"
+  },
+  "76afd60ed38ad7a70ca0c4241bd71417ccd1b724": {
+    "id": "4049:13606",
+    "page": "Icons",
+    "name": "Settings",
+    "constant": "<FIGMA_ICONS_SETTINGS>",
+    "description": ["Keywords: cog, edit, gear, preferences"]
+  },
+  "664474c27108ed00fc57beb68f618b214edf2d35": {
+    "id": "4049:13608",
+    "page": "Icons",
+    "name": "Share 2",
+    "constant": "<FIGMA_ICONS_SHARE_2>",
+    "description": ["Keywords: network, connections"]
+  },
+  "0b3a73b32a018a4ef3a0076ae9d5cbf96161522b": {
+    "id": "4049:13607",
+    "page": "Icons",
+    "name": "Share",
+    "constant": "<FIGMA_ICONS_SHARE>"
+  },
+  "af768969b3919ca5b113efcdbbd7a68b78f0e7b4": {
+    "id": "4049:13610",
+    "page": "Icons",
+    "name": "Shield Off",
+    "constant": "<FIGMA_ICONS_SHIELD_OFF>",
+    "description": ["Keywords: security, insecure"]
+  },
+  "001a2542412fa9d0f5b95a1ca71d9ae7c709b99b": {
+    "id": "4049:13609",
+    "page": "Icons",
+    "name": "Shield",
+    "constant": "<FIGMA_ICONS_SHIELD>",
+    "description": ["Keywords: security, secure"]
+  },
+  "603088b4b86909f99475e21319ace2f8c6f52381": {
+    "id": "4049:13612",
+    "page": "Icons",
+    "name": "Shopping Bag",
+    "constant": "<FIGMA_ICONS_SHOPPING_BAG>",
+    "description": ["Keywords: ecommerce, cart, purchase, store"]
+  },
+  "7ad4167138abc7ec9f5574ec1bc0b707673b33c6": {
+    "id": "4049:13611",
+    "page": "Icons",
+    "name": "Shopping Cart",
+    "constant": "<FIGMA_ICONS_SHOPPING_CART>",
+    "description": ["Keywords: ecommerce, cart, purchase, store"]
+  },
+  "56d1b83ee032fe841b7aa4ea331c32a0e36a44de": {
+    "id": "4049:13614",
+    "page": "Icons",
+    "name": "Shuffle",
+    "constant": "<FIGMA_ICONS_SHUFFLE>",
+    "description": ["Keywords: music"]
+  },
+  "805de02175bbba22ee14f9953dcac09ffe85cf48": {
+    "id": "4049:13613",
+    "page": "Icons",
+    "name": "Sidebar",
+    "constant": "<FIGMA_ICONS_SIDEBAR>"
+  },
+  "f7ea401f9f65c41cdd99f07decae3dd0963ceee2": {
+    "id": "4049:13616",
+    "page": "Icons",
+    "name": "Skip Back",
+    "constant": "<FIGMA_ICONS_SKIP_BACK>",
+    "description": ["Keywords: music"]
+  },
+  "8ab0775ad4f13ec73f85e8f16de6fd1df1c9e8d5": {
+    "id": "4049:13615",
+    "page": "Icons",
+    "name": "Skip Forward",
+    "constant": "<FIGMA_ICONS_SKIP_FORWARD>",
+    "description": ["Keywords: music"]
+  },
+  "b07312cf6da88fe1391bcd37b7cd11b9bf09dc98": {
+    "id": "4049:13618",
+    "page": "Icons",
+    "name": "Slack",
+    "constant": "<FIGMA_ICONS_SLACK>",
+    "description": ["Keywords: logo"]
+  },
+  "d2abb9f0b27cda3832300212556e7607fa9b3773": {
+    "id": "4049:13617",
+    "page": "Icons",
+    "name": "Slash",
+    "constant": "<FIGMA_ICONS_SLASH>",
+    "description": ["Keywords: ban, no"]
+  },
+  "764564bc735dfbef5f4492a18647dbb02e659463": {
+    "id": "4049:13620",
+    "page": "Icons",
+    "name": "Sliders",
+    "constant": "<FIGMA_ICONS_SLIDERS>",
+    "description": ["Keywords: settings, controls"]
+  },
+  "43593f6abbc30f9a9c89baff3f1eeac061e20d59": {
+    "id": "4049:13619",
+    "page": "Icons",
+    "name": "Smartphone",
+    "constant": "<FIGMA_ICONS_SMARTPHONE>",
+    "description": ["Keywords: cellphone, device"]
+  },
+  "132cba9c9e5f63e7223daaac18c96bba60c7bca3": {
+    "id": "4049:13622",
+    "page": "Icons",
+    "name": "Smile",
+    "constant": "<FIGMA_ICONS_SMILE>",
+    "description": ["Keywords: emoji, face, happy, good, emotion"]
+  },
+  "79ed03777b02d347f169d32f879b42a4ce8486a1": {
+    "id": "4049:13621",
+    "page": "Icons",
+    "name": "Speaker",
+    "constant": "<FIGMA_ICONS_SPEAKER>",
+    "description": ["Keywords: audio, music"]
+  },
+  "59cf14fe366811eaf3a0b8fe51c48a60cabc3db2": {
+    "id": "4049:13624",
+    "page": "Icons",
+    "name": "Square",
+    "constant": "<FIGMA_ICONS_SQUARE>"
+  },
+  "dfba3dd0c667d3e1aef27cc8aaa9e4096d806f01": {
+    "id": "4049:13623",
+    "page": "Icons",
+    "name": "Star",
+    "constant": "<FIGMA_ICONS_STAR>",
+    "description": ["Keywords: bookmark, favorite, like"]
+  },
+  "068564726ee1d4fcad81818a540e6e9a057e4b38": {
+    "id": "4049:13625",
+    "page": "Icons",
+    "name": "Stop Circle",
+    "constant": "<FIGMA_ICONS_STOP_CIRCLE>",
+    "description": ["Keywords: media, music"]
+  },
+  "99985092645fd41e8712fb46df0444d26d905f71": {
+    "id": "4049:13626",
+    "page": "Icons",
+    "name": "Sun",
+    "constant": "<FIGMA_ICONS_SUN>",
+    "description": ["Keywords: brightness, weather, light"]
+  },
+  "bf1aee6dcc9ec13913858f2ff21c7a1cbfdfd9e6": {
+    "id": "4049:13628",
+    "page": "Icons",
+    "name": "Sunrise",
+    "constant": "<FIGMA_ICONS_SUNRISE>",
+    "description": ["Keywords: weather, time, morning, day"]
+  },
+  "80a8aa52b4ecdc64eca990263709eff7f210c55c": {
+    "id": "4049:13627",
+    "page": "Icons",
+    "name": "Sunset",
+    "constant": "<FIGMA_ICONS_SUNSET>",
+    "description": ["Keywords: weather, time, evening, night"]
+  },
+  "5fecde9f5f2d3c21093370180e9029ee55fb82b2": {
+    "id": "4049:13630",
+    "page": "Icons",
+    "name": "Table",
+    "constant": "<FIGMA_ICONS_TABLE>"
+  },
+  "5601cb3b40d8d33c561fd3fdfd7a4709ce0595ec": {
+    "id": "4049:13629",
+    "page": "Icons",
+    "name": "Tablet",
+    "constant": "<FIGMA_ICONS_TABLET>",
+    "description": ["Keywords: device"]
+  },
+  "4a0aca11b5e79cff3a5b64b56b3e1f2ccd00df26": {
+    "id": "4049:13632",
+    "page": "Icons",
+    "name": "Tag",
+    "constant": "<FIGMA_ICONS_TAG>",
+    "description": ["Keywords: label"]
+  },
+  "f61dd849c9ebcc734c279df0c2720ff2b7e980c9": {
+    "id": "4049:13631",
+    "page": "Icons",
+    "name": "Target",
+    "constant": "<FIGMA_ICONS_TARGET>",
+    "description": ["Keywords: logo, bullseye"]
+  },
+  "8c4f13d7a511add3c4e423cefb95c849a2f079cf": {
+    "id": "4049:13634",
+    "page": "Icons",
+    "name": "Terminal",
+    "constant": "<FIGMA_ICONS_TERMINAL>",
+    "description": ["Keywords: code, command line, prompt"]
+  },
+  "749eeae6d3ea31f55c1f97e1d0a1a747318e2b27": {
+    "id": "4049:13633",
+    "page": "Icons",
+    "name": "Thermometer",
+    "constant": "<FIGMA_ICONS_THERMOMETER>",
+    "description": ["Keywords: temperature, celsius, fahrenheit, weather"]
+  },
+  "2905bf879f28b5eda6fcd42a1d8bf0b5699657e3": {
+    "id": "4049:13636",
+    "page": "Icons",
+    "name": "Thumbs Down",
+    "constant": "<FIGMA_ICONS_THUMBS_DOWN>",
+    "description": ["Keywords: dislike, bad, emotion"]
+  },
+  "f80a76a08cde3f6cc1da3701af9e14ee994d2801": {
+    "id": "4049:13635",
+    "page": "Icons",
+    "name": "Thumbs Up",
+    "constant": "<FIGMA_ICONS_THUMBS_UP>",
+    "description": ["Keywords: like, good, emotion"]
+  },
+  "57e61efb1cdd0303cbae54d33abdeedcad3d063c": {
+    "id": "4049:13638",
+    "page": "Icons",
+    "name": "Toggle Left",
+    "constant": "<FIGMA_ICONS_TOGGLE_LEFT>",
+    "description": ["Keywords: on, off, switch"]
+  },
+  "7bca980f37ff5808c7c4eb9762c816e496f27e06": {
+    "id": "4049:13637",
+    "page": "Icons",
+    "name": "Toggle Right",
+    "constant": "<FIGMA_ICONS_TOGGLE_RIGHT>",
+    "description": ["Keywords: on, off, switch"]
+  },
+  "03401f772ae41c5dc2b8f30934146f8c1e266ae6": {
+    "id": "4049:13640",
+    "page": "Icons",
+    "name": "Tool",
+    "constant": "<FIGMA_ICONS_TOOL>",
+    "description": ["Keywords: settings, spanner"]
+  },
+  "ba74c9e8d0585bed1fe49d725fae919a5b081352": {
+    "id": "4049:13639",
+    "page": "Icons",
+    "name": "Trash 2",
+    "constant": "<FIGMA_ICONS_TRASH_2>",
+    "description": ["Keywords: garbage, delete, remove, bin"]
+  },
+  "c28123d30de330ad8915ebaa5c1a994002d91e8e": {
+    "id": "4049:13642",
+    "page": "Icons",
+    "name": "Trash",
+    "constant": "<FIGMA_ICONS_TRASH>",
+    "description": ["Keywords: garbage, delete, remove, bin"]
+  },
+  "a2b62b7c6e15e75a06674dfc3cc9956781f9eaa1": {
+    "id": "4049:13641",
+    "page": "Icons",
+    "name": "Trello",
+    "constant": "<FIGMA_ICONS_TRELLO>"
+  },
+  "4c5b3245c15d77b944509b93ee1ec87d6ec219a6": {
+    "id": "4049:13644",
+    "page": "Icons",
+    "name": "Trending Down",
+    "constant": "<FIGMA_ICONS_TRENDING_DOWN>"
+  },
+  "737f3de97f5332cd03a79e7716c15ede7b48b91f": {
+    "id": "4049:13643",
+    "page": "Icons",
+    "name": "Trending Up",
+    "constant": "<FIGMA_ICONS_TRENDING_UP>"
+  },
+  "10bb7d881fb21fdda5034e41799ab5e08be43b37": {
+    "id": "4049:13646",
+    "page": "Icons",
+    "name": "Triangle",
+    "constant": "<FIGMA_ICONS_TRIANGLE>",
+    "description": ["Keywords: delta"]
+  },
+  "8a5479126975bc060451902962f3db918853d493": {
+    "id": "4049:13645",
+    "page": "Icons",
+    "name": "Truck",
+    "constant": "<FIGMA_ICONS_TRUCK>",
+    "description": ["Keywords: delivery, van, shipping, transport, lorry"]
+  },
+  "0c500c082c1e27198bdf053894a6c14d41cb7334": {
+    "id": "4049:13648",
+    "page": "Icons",
+    "name": "Tv",
+    "constant": "<FIGMA_ICONS_TV>",
+    "description": ["Keywords: television, stream"]
+  },
+  "2b991a7c90f672cf7cf4201cde8fe1601bd883fe": {
+    "id": "4049:13647",
+    "page": "Icons",
+    "name": "Twitch",
+    "constant": "<FIGMA_ICONS_TWITCH>",
+    "description": ["Keywords: logo"]
+  },
+  "04cdf0f0fb05c72e75757cdba7726087b949d4a7": {
+    "id": "4049:13650",
+    "page": "Icons",
+    "name": "Twitter",
+    "constant": "<FIGMA_ICONS_TWITTER>",
+    "description": ["Keywords: logo, social"]
+  },
+  "3edac1c56dae4e4c8ea92df8f07cbb24262ba41f": {
+    "id": "4049:13649",
+    "page": "Icons",
+    "name": "Type",
+    "constant": "<FIGMA_ICONS_TYPE>",
+    "description": ["Keywords: text"]
+  },
+  "e0979e00f7bca3850185d62d496faacbcfc73585": {
+    "id": "4049:13652",
+    "page": "Icons",
+    "name": "Umbrella",
+    "constant": "<FIGMA_ICONS_UMBRELLA>",
+    "description": ["Keywords: rain, weather"]
+  },
+  "6b7e7712ab4f23182ce5d81e2b589c59e4ec668f": {
+    "id": "4049:13651",
+    "page": "Icons",
+    "name": "Underline",
+    "constant": "<FIGMA_ICONS_UNDERLINE>"
+  },
+  "e4ce736d6e0e27ec04fa6cc6e5dee0671d0bf12b": {
+    "id": "4049:13654",
+    "page": "Icons",
+    "name": "Unlock",
+    "constant": "<FIGMA_ICONS_UNLOCK>",
+    "description": ["Keywords: security"]
+  },
+  "f77d8cfb5c5583681a69732c98928c76c976a28d": {
+    "id": "4049:13653",
+    "page": "Icons",
+    "name": "Upload Cloud",
+    "constant": "<FIGMA_ICONS_UPLOAD_CLOUD>"
+  },
+  "69308f4148d83329d59e8cd3a8c3ec71435ade91": {
+    "id": "4049:13656",
+    "page": "Icons",
+    "name": "Upload",
+    "constant": "<FIGMA_ICONS_UPLOAD>"
+  },
+  "5a2f9c62eff0ff84492d4502939e5996af719832": {
+    "id": "4049:13655",
+    "page": "Icons",
+    "name": "User Check",
+    "constant": "<FIGMA_ICONS_USER_CHECK>",
+    "description": ["Keywords: followed, subscribed"]
+  },
+  "d365fbac59d7076a2c4b975d259a8054eb788ebf": {
+    "id": "4049:13658",
+    "page": "Icons",
+    "name": "User Minus",
+    "constant": "<FIGMA_ICONS_USER_MINUS>",
+    "description": ["Keywords: delete, remove, unfollow, unsubscribe"]
+  },
+  "a8e984db81087b9ea2a560c2d9038a6c05343973": {
+    "id": "4049:13657",
+    "page": "Icons",
+    "name": "User Plus",
+    "constant": "<FIGMA_ICONS_USER_PLUS>",
+    "description": ["Keywords: new, add, create, follow, subscribe"]
+  },
+  "c60835a4abfb7ece937a105bd26342a500d14c50": {
+    "id": "4049:13660",
+    "page": "Icons",
+    "name": "User X",
+    "constant": "<FIGMA_ICONS_USER_X>",
+    "description": [
+      "Keywords: delete, remove, unfollow, unsubscribe, unavailable"
+    ]
+  },
+  "8063d5264bc130c351d44de578408926be2e5412": {
+    "id": "4049:13659",
+    "page": "Icons",
+    "name": "User",
+    "constant": "<FIGMA_ICONS_USER>",
+    "description": ["Keywords: person, account"]
+  },
+  "17146e730f9624c7cd30b91af7d0aaddf25d0905": {
+    "id": "4049:13661",
+    "page": "Icons",
+    "name": "Users",
+    "constant": "<FIGMA_ICONS_USERS>",
+    "description": ["Keywords: group"]
+  },
+  "e7251d2930c15ec2e6d6edc1a6b9547b8cb7ddff": {
+    "id": "4049:13662",
+    "page": "Icons",
+    "name": "Video Off",
+    "constant": "<FIGMA_ICONS_VIDEO_OFF>",
+    "description": ["Keywords: camera, movie, film"]
+  },
+  "1e758d3ca8135dfb27cc2ad1dfdbe7d1455a7a8a": {
+    "id": "4049:13664",
+    "page": "Icons",
+    "name": "Video",
+    "constant": "<FIGMA_ICONS_VIDEO>",
+    "description": ["Keywords: camera, movie, film"]
+  },
+  "3be8ceb405abe029e850deaa7a7b028c39f40e3e": {
+    "id": "4049:13663",
+    "page": "Icons",
+    "name": "Voicemail",
+    "constant": "<FIGMA_ICONS_VOICEMAIL>",
+    "description": ["Keywords: phone"]
+  },
+  "8c8e70eb98d5f6bfac087075a7ac82098f7792d9": {
+    "id": "4049:13666",
+    "page": "Icons",
+    "name": "Volume 1",
+    "constant": "<FIGMA_ICONS_VOLUME_1>",
+    "description": ["Keywords: music, sound"]
+  },
+  "770b37fcac1346941e8b4a4e5b05335f0224aae6": {
+    "id": "4049:13665",
+    "page": "Icons",
+    "name": "Volume 2",
+    "constant": "<FIGMA_ICONS_VOLUME_2>",
+    "description": ["Keywords: music, sound"]
+  },
+  "6129eeca30d1e0bf4e61463aa20cf54baf3cb79a": {
+    "id": "4049:13668",
+    "page": "Icons",
+    "name": "Volume X",
+    "constant": "<FIGMA_ICONS_VOLUME_X>",
+    "description": ["Keywords: music, sound, mute"]
+  },
+  "2e76b2040e6e14e58021608786c9569a885c9c62": {
+    "id": "4049:13667",
+    "page": "Icons",
+    "name": "Volume",
+    "constant": "<FIGMA_ICONS_VOLUME>",
+    "description": ["Keywords: music, sound, mute"]
+  },
+  "5aa48c7c49efe580ff313673b9d22b3ff336ecbc": {
+    "id": "4049:13670",
+    "page": "Icons",
+    "name": "Watch",
+    "constant": "<FIGMA_ICONS_WATCH>",
+    "description": ["Keywords: clock, time"]
+  },
+  "f9acb0e3eda49459ac40b68e5b73607bb0c702b4": {
+    "id": "4049:13669",
+    "page": "Icons",
+    "name": "Wifi Off",
+    "constant": "<FIGMA_ICONS_WIFI_OFF>",
+    "description": ["Keywords: disabled"]
+  },
+  "5e7f13b9ee375dfbe4110abcbc79d2fd506db18f": {
+    "id": "4049:13672",
+    "page": "Icons",
+    "name": "Wifi",
+    "constant": "<FIGMA_ICONS_WIFI>",
+    "description": ["Keywords: connection, signal, wireless"]
+  },
+  "f6027fb4f3a2d314dec83a3272c812852a1c5306": {
+    "id": "4049:13671",
+    "page": "Icons",
+    "name": "Wind",
+    "constant": "<FIGMA_ICONS_WIND>",
+    "description": ["Keywords: weather, air"]
+  },
+  "1d117f57d9ebead3be8523cb7a2646cf68a76526": {
+    "id": "4049:13674",
+    "page": "Icons",
+    "name": "X Circle",
+    "constant": "<FIGMA_ICONS_X_CIRCLE>",
+    "description": ["Keywords: cancel, close, delete, remove, times, clear"]
+  },
+  "6cfb508815300b8c38a737abf03b514b0143a77a": {
+    "id": "4049:13673",
+    "page": "Icons",
+    "name": "X Octagon",
+    "constant": "<FIGMA_ICONS_X_OCTAGON>",
+    "description": ["Keywords: delete, stop, alert, warning, times, clear"]
+  },
+  "c6128e57127c9505ec113dc6516f4663da9e28e8": {
+    "id": "4049:13676",
+    "page": "Icons",
+    "name": "X Square",
+    "constant": "<FIGMA_ICONS_X_SQUARE>",
+    "description": ["Keywords: cancel, close, delete, remove, times, clear"]
+  },
+  "b5a346aad6e655033fae05738a3918631dde95d3": {
+    "id": "4049:13675",
+    "page": "Icons",
+    "name": "X",
+    "constant": "<FIGMA_ICONS_X>",
+    "description": ["Keywords: cancel, close, delete, remove, times, clear"]
+  },
+  "b075827c88580f51972ca0a5b0d49d8e63dd0cc6": {
+    "id": "4049:13678",
+    "page": "Icons",
+    "name": "Youtube",
+    "constant": "<FIGMA_ICONS_YOUTUBE>",
+    "description": ["Keywords: logo, video, play"]
+  },
+  "54a310d4b2ced4d6e417f6c59f332e2235881d42": {
+    "id": "4049:13677",
+    "page": "Icons",
+    "name": "Zap Off",
+    "constant": "<FIGMA_ICONS_ZAP_OFF>",
+    "description": ["Keywords: flash, camera, lightning"]
+  },
+  "a8de5c9bbb291eb98080b1755ddfd8af528acaf7": {
+    "id": "4049:13680",
+    "page": "Icons",
+    "name": "Zap",
+    "constant": "<FIGMA_ICONS_ZAP>",
+    "description": ["Keywords: flash, camera, lightning"]
+  },
+  "66c769a8c842958627969f2660719228cafbc5dd": {
+    "id": "4049:13679",
+    "page": "Icons",
+    "name": "Zoom In",
+    "constant": "<FIGMA_ICONS_ZOOM_IN>",
+    "description": ["Keywords: magnifying glass"]
+  },
+  "27e2c67f8821a02ff49bf7204d438d77815baeaa": {
+    "id": "4049:13681",
+    "page": "Icons",
+    "name": "Zoom Out",
+    "constant": "<FIGMA_ICONS_ZOOM_OUT>",
+    "description": ["Keywords: magnifying glass"]
+  },
+  "0f9591b2e3220a1d9f23a534ef76439026a9c7cd": {
+    "id": "562:8332",
+    "page": "Examples",
+    "name": "Examples Home Page",
+    "constant": "<FIGMA_EXAMPLES_EXAMPLES_HOME_PAGE>"
+  },
+  "9370929293f93af94d5633abbdaa0a6883cb9544": {
+    "id": "562:9044",
+    "page": "Examples",
+    "name": "Examples About",
+    "constant": "<FIGMA_EXAMPLES_EXAMPLES_ABOUT>"
+  },
+  "9e31332980cdf84cac97870e32f4decfc2372b04": {
+    "id": "562:9227",
+    "page": "Examples",
+    "name": "Examples Contact Us",
+    "constant": "<FIGMA_EXAMPLES_EXAMPLES_CONTACT_US>"
+  },
+  "a3c1c86183723795e8b93a9b298873fb795003f3": {
+    "id": "562:9558",
+    "page": "Examples",
+    "name": "Examples Pricing",
+    "constant": "<FIGMA_EXAMPLES_EXAMPLES_PRICING>"
+  },
+  "19d57df60317469d81320a38af8ffefc485ca637": {
+    "id": "562:9701",
+    "page": "Examples",
+    "name": "Examples Waitlist",
+    "constant": "<FIGMA_EXAMPLES_EXAMPLES_WAITLIST>"
+  },
+  "f030ade14ec0956adac8d5940030ce77e667d8db": {
+    "id": "562:10124",
+    "page": "Examples",
+    "name": "Examples Landing Page",
+    "constant": "<FIGMA_EXAMPLES_EXAMPLES_LANDING_PAGE>"
+  },
+  "a5bc10bef6f7cb421f365c2344ee5b193df59966": {
+    "id": "562:10260",
+    "page": "Examples",
+    "name": "Examples Article",
+    "constant": "<FIGMA_EXAMPLES_EXAMPLES_ARTICLE>"
+  },
+  "fd53a477513ebadf6bd7389da651f0b6ad4018a5": {
+    "id": "562:10872",
+    "page": "Examples",
+    "name": "Examples Shop",
+    "constant": "<FIGMA_EXAMPLES_EXAMPLES_SHOP>"
+  },
+  "227834aa1efc92ff51eae98990683fdc038b9841": {
+    "id": "562:11271",
+    "page": "Examples",
+    "name": "Examples Product Detail Page",
+    "constant": "<FIGMA_EXAMPLES_EXAMPLES_PRODUCT_DETAIL_PAGE>"
+  },
+  "339ff0de1a0e41688fe3c00577c7cdb9209af503": {
+    "id": "562:11665",
+    "page": "Examples",
+    "name": "Examples Portfolio",
+    "constant": "<FIGMA_EXAMPLES_EXAMPLES_PORTFOLIO>"
+  },
+  "25ffa434a8dcd96f8f84b38670154b24739a632c": {
+    "id": "7753:4634",
+    "page": "Accordion",
+    "name": "Accordion Item",
+    "constant": "<FIGMA_ACCORDION_ACCORDION_ITEM>",
+    "description": [
+      "The items have a fixed width of 640 in the component set, but when placed in designs their auto layout and width settings should be defined by their parent"
+    ]
+  },
+  "615c09c089fd548620d451ffd1e9699ce57333c5": {
+    "id": "7753:4779",
+    "page": "Accordion",
+    "name": "Accordion",
+    "constant": "<FIGMA_ACCORDION_ACCORDION>",
+    "description": [
+      "Keywords: disclosure, collapse, expand, toggle, expandable, expander"
+    ]
+  },
+  "1a461f4868cf6b944dd5f3a84c12b1d7470383bf": {
+    "id": "9762:1103",
+    "page": "Avatars",
+    "name": "Avatar",
+    "constant": "<FIGMA_AVATARS_AVATAR>",
+    "description": [
+      "Initials should be single e.g. A, B, or C, and not multiple e.g. AA, BB, or CC.",
+      "This is because the widths of the avatars would force the text to overflow outside."
+    ]
+  },
+  "0b11c715d3fe9e943dff8e33af939b58e17f3e6c": {
+    "id": "2010:15581",
+    "page": "Avatars",
+    "name": "Avatar Block",
+    "constant": "<FIGMA_AVATARS_AVATAR_BLOCK>"
+  },
+  "fc4c4aa129efe02b00130e46bb35c2ff60a118e3": {
+    "id": "56:15608",
+    "page": "Avatars",
+    "name": "Avatar Group",
+    "constant": "<FIGMA_AVATARS_AVATAR_GROUP>"
+  },
+  "4fa48ca5f47171f269f1a1df9ab3f0c010c0c687": {
+    "id": "9762:426",
+    "page": "Buttons",
+    "name": "Button",
+    "constant": "<FIGMA_BUTTONS_BUTTON>"
+  },
+  "89a8b6fe6061a16272f17bc04521ca18222ff1c0": {
+    "id": "11:11508",
+    "page": "Buttons",
+    "name": "Icon Button",
+    "constant": "<FIGMA_BUTTONS_ICON_BUTTON>",
+    "description": ["Keywords: action"]
+  },
+  "fccd7bb7a95845a7085ad8cb58c59f542035122d": {
+    "id": "2072:9432",
+    "page": "Buttons",
+    "name": "Button Group",
+    "constant": "<FIGMA_BUTTONS_BUTTON_GROUP>",
+    "description": ["Keywords: actions"]
+  },
+  "ad61a82dcab4fe1fd7a477bc7551d936955774f3": {
+    "id": "185:852",
+    "page": "Buttons",
+    "name": "Button Danger",
+    "constant": "<FIGMA_BUTTONS_BUTTON_DANGER>",
+    "description": ["Keywords: action, negative, destructive"]
+  },
+  "f978029be2d6f6ac796331cea2777975f0cad36f": {
+    "id": "2142:11380",
+    "page": "Cards",
+    "name": "Card",
+    "constant": "<FIGMA_CARDS_CARD>",
+    "description": [
+      "The cards have a fixed width of 440 in the component set, but when placed in designs their auto layout and width settings should be defined by their parent. ",
+      "Use \"fill\" as the auto layout property, and the content will flow automatically.",
+      "Keywords: cards, tile, tiles"
+    ]
+  },
+  "078d7ddb2d9b20ef5299787dfb1beb6de4197dc6": {
+    "id": "7753:4465",
+    "page": "Cards",
+    "name": "Product Info Card",
+    "constant": "<FIGMA_CARDS_PRODUCT_INFO_CARD>"
+  },
+  "cb136f29ea184727b1f843e1c862ba473f49bb24": {
+    "id": "7722:3736",
+    "page": "Cards",
+    "name": "Pricing Card",
+    "constant": "<FIGMA_CARDS_PRICING_CARD>"
+  },
+  "74df5146391045b00ade5e1cbf645af21a1b4e95": {
+    "id": "7717:3946",
+    "page": "Cards",
+    "name": "Testimonial Card",
+    "constant": "<FIGMA_CARDS_TESTIMONIAL_CARD>"
+  },
+  "f43470a36d22891f8762ae7b3cc80b10470f3ac6": {
+    "id": "2236:15082",
+    "page": "Cards",
+    "name": "Stats Card",
+    "constant": "<FIGMA_CARDS_STATS_CARD>"
+  },
+  "b130f2e5e96d47c2a368da560da510a97eb88c99": {
+    "id": "2236:16106",
+    "page": "Cards",
+    "name": "Review Card",
+    "constant": "<FIGMA_CARDS_REVIEW_CARD>"
+  },
+  "2f9b974b696c4a556680e1ff4477066058236f59": {
+    "id": "9762:696",
+    "page": "Dialog",
+    "name": "Dialog Body",
+    "constant": "<FIGMA_DIALOG_DIALOG_BODY>",
+    "description": [
+      "Overlays have a maximum width of 600, to prevent long lines of text.",
+      "When using Bottom Sheets, override the auto layout settings in the ❖ Dialog, so that it is anchored to the bottom.",
+      "When using the ❖ Dialog on smaller screens, you may want to add horizontal padding so that it isn’t full bleed.",
+      "The body of Bottom Sheet has a min-height of 160, so that by default it covers a large portion of the small device’s height.",
+      "Keywords: popup, modal"
+    ]
+  },
+  "0c9c8a706298f88c8df3c3f55ee780076b6e368b": {
+    "id": "192:31534",
+    "page": "Dialog",
+    "name": "Dialog",
+    "constant": "<FIGMA_DIALOG_DIALOG>",
+    "description": [
+      "A precomposed full screen dialog, containing a swappable body.",
+      "It contains a semi-transparent scrim fill to obscure the content underneath.",
+      "Keywords: overlay, window, dialog, popup"
+    ]
+  },
+  "280dab7b978a0c991afb49e7bbe81b538ea96f76": {
+    "id": "9762:1412",
+    "page": "Inputs",
+    "name": "Radio Field",
+    "constant": "<FIGMA_INPUTS_RADIO_FIELD>",
+    "description": [
+      "Checked / Unchecked is a property within the design file only. Coded Radio Fields are grouped and the value of the field indicates its state."
+    ]
+  },
+  "969aa94da8d0b49d882e461c1809023f37877adf": {
+    "id": "9762:1441",
+    "page": "Inputs",
+    "name": "Checkbox Field",
+    "constant": "<FIGMA_INPUTS_CHECKBOX_FIELD>"
+  },
+  "b3aa9bf478ba53fc053b035be613664ba7df4c2c": {
+    "id": "9762:1902",
+    "page": "Inputs",
+    "name": "Switch Field",
+    "constant": "<FIGMA_INPUTS_SWITCH_FIELD>",
+    "description": ["Keywords: toggle"]
+  },
+  "ab84e2cc07cb10b2df5533917e55851880869fad": {
+    "id": "2136:2336",
+    "page": "Inputs",
+    "name": "Select Field",
+    "constant": "<FIGMA_INPUTS_SELECT_FIELD>",
+    "description": ["Keywords: dropdown"]
+  },
+  "563dcc68992a1f3150676de359b0f24a46f0cfe1": {
+    "id": "2136:2263",
+    "page": "Inputs",
+    "name": "Input Field",
+    "constant": "<FIGMA_INPUTS_INPUT_FIELD>"
+  },
+  "ad0afb81b5d7310b77536b7bc73cbf7d93afc8b5": {
+    "id": "9762:3088",
+    "page": "Inputs",
+    "name": "Textarea Field",
+    "constant": "<FIGMA_INPUTS_TEXTAREA_FIELD>"
+  },
+  "a6e0b0d58be13c1312d442614117768b33c88855": {
+    "id": "2236:14989",
+    "page": "Inputs",
+    "name": "Search",
+    "constant": "<FIGMA_INPUTS_SEARCH>"
+  },
+  "90696c9c9e0ed1bbb6d4cbc8c0a8a479736466ee": {
+    "id": "589:17676",
+    "page": "Inputs",
+    "name": "Slider Field",
+    "constant": "<FIGMA_INPUTS_SLIDER_FIELD>"
+  },
+  "cff4640a7421c8391c2be67bacbbae5908b99974": {
+    "id": "624:23642",
+    "page": "Inputs",
+    "name": "Radio Group",
+    "constant": "<FIGMA_INPUTS_RADIO_GROUP>"
+  },
+  "39f86344f31f7ebbf116ea428f4c9ddb0dde44b9": {
+    "id": "9762:1426",
+    "page": "Inputs",
+    "name": "Checkbox Group",
+    "constant": "<FIGMA_INPUTS_CHECKBOX_GROUP>"
+  },
+  "dfd84e5f2a6784db2711119c52fc5c1dfabf5c5f": {
+    "id": "9762:720",
+    "page": "Menu",
+    "name": "Menu",
+    "constant": "<FIGMA_MENU_MENU>",
+    "description": [
+      "This is an example of a composed menu.",
+      "If you require a different composition, you can build one using the Primitives.",
+      "Keywords: popover"
+    ]
+  },
+  "3ff613bd6f583785066db686aa415518af340eb7": {
+    "id": "9762:728",
+    "page": "Menu",
+    "name": "Menu Header",
+    "constant": "<FIGMA_MENU_MENU_HEADER>"
+  },
+  "4e70d6143b736bef0d201d385774cc70dc708fda": {
+    "id": "9762:760",
+    "page": "Menu",
+    "name": "Menu Heading",
+    "constant": "<FIGMA_MENU_MENU_HEADING>"
+  },
+  "17b4b089d2abc8ea0854708a5207b14d11f4bcb4": {
+    "id": "9762:731",
+    "page": "Menu",
+    "name": "Menu Separator",
+    "constant": "<FIGMA_MENU_MENU_SEPARATOR>"
+  },
+  "bad61f28ab781300529810fb1e203cd1a902d1ea": {
+    "id": "9762:739",
+    "page": "Menu",
+    "name": "Menu Shortcut",
+    "constant": "<FIGMA_MENU_MENU_SHORTCUT>",
+    "description": ["Example shortcut characters:", "⌘\n⇧\n⌥\n⌃"]
+  },
+  "267fb6fd1200eb501464bb4354c00cb594498385": {
+    "id": "9762:743",
+    "page": "Menu",
+    "name": "Menu Item",
+    "constant": "<FIGMA_MENU_MENU_ITEM>",
+    "description": ["Keywords: popover"]
+  },
+  "07e716ea9e3d4854ef790db16f850d948d6ce2c3": {
+    "id": "515:5459",
+    "page": "Navigation",
+    "name": "Navigation Button",
+    "constant": "<FIGMA_NAVIGATION_NAVIGATION_BUTTON>"
+  },
+  "5b87ce010f4491ebe21a9455a2d49724663549e9": {
+    "id": "524:503",
+    "page": "Navigation",
+    "name": "Navigation Button List",
+    "constant": "<FIGMA_NAVIGATION_NAVIGATION_BUTTON_LIST>"
+  },
+  "26dca03c781e27589ac429714cd04a388b767ebe": {
+    "id": "2194:14984",
+    "page": "Navigation",
+    "name": "Navigation Pill List",
+    "constant": "<FIGMA_NAVIGATION_NAVIGATION_PILL_LIST>"
+  },
+  "7ff471e72c279b4c3b803abfa25c2392da136a69": {
+    "id": "7768:19970",
+    "page": "Navigation",
+    "name": "Navigation Pill",
+    "constant": "<FIGMA_NAVIGATION_NAVIGATION_PILL>"
+  },
+  "08f63552706967212b6c72b1b0ad96bb498500f5": {
+    "id": "124:8256",
+    "page": "Notification",
+    "name": "Notification",
+    "constant": "<FIGMA_NOTIFICATION_NOTIFICATION>",
+    "description": ["Keywords: message, alert, feedback, callout, banner"]
+  },
+  "1cca4275f50ae5c55b0acab130134c9cd15c9869": {
+    "id": "9762:899",
+    "page": "Pagination",
+    "name": "Pagination",
+    "constant": "<FIGMA_PAGINATION_PAGINATION>"
+  },
+  "c00543d7f5692d1e1ec3cb4356b7c839efbee3ab": {
+    "id": "9762:868",
+    "page": "Pagination",
+    "name": "Pagination Gap",
+    "constant": "<FIGMA_PAGINATION_PAGINATION_GAP>"
+  },
+  "045f74018f018de683c1f391271d7d4cf5d1e2aa": {
+    "id": "9762:870",
+    "page": "Pagination",
+    "name": "Pagination Next",
+    "constant": "<FIGMA_PAGINATION_PAGINATION_NEXT>"
+  },
+  "af84596c6ce225664b82a10f1dfbbc74d92564ef": {
+    "id": "9762:880",
+    "page": "Pagination",
+    "name": "Pagination Previous",
+    "constant": "<FIGMA_PAGINATION_PAGINATION_PREVIOUS>"
+  },
+  "d52875b25a158ad3000e42ca3be54d67e42f410a": {
+    "id": "9762:890",
+    "page": "Pagination",
+    "name": "Pagination Page",
+    "constant": "<FIGMA_PAGINATION_PAGINATION_PAGE>"
+  },
+  "5fa1b86c7b2a5ee3f054ab2d788026c1ac2d2fa0": {
+    "id": "9762:903",
+    "page": "Pagination",
+    "name": "Pagination List",
+    "constant": "<FIGMA_PAGINATION_PAGINATION_LIST>"
+  },
+  "109a8a68efaad8a5aa89debf37325911eb9af72e": {
+    "id": "3729:12963",
+    "page": "Tabs",
+    "name": "Tab",
+    "constant": "<FIGMA_TABS_TAB>"
+  },
+  "f62ee8e9526c01e1ab9def654995601c6feeefa4": {
+    "id": "3729:13362",
+    "page": "Tabs",
+    "name": "Tabs",
+    "constant": "<FIGMA_TABS_TABS>",
+    "description": ["Keywords: tabbed"]
+  },
+  "b51fb5eab70460324a0b894a11ed9659dcddc0b0": {
+    "id": "56:8830",
+    "page": "Tags",
+    "name": "Tag",
+    "constant": "<FIGMA_TAGS_TAG>",
+    "description": ["Keywords: label, chip, badge"]
+  },
+  "571be82ead6b25335d6235ae57737e9da066153f": {
+    "id": "157:10352",
+    "page": "Tags",
+    "name": "Tag Toggle Group",
+    "constant": "<FIGMA_TAGS_TAG_TOGGLE_GROUP>",
+    "description": ["Keywords: filters"]
+  },
+  "016bbfc41a707581b4de04e3e6a68c89bc0f9e55": {
+    "id": "157:10316",
+    "page": "Tags",
+    "name": "Tag Toggle",
+    "constant": "<FIGMA_TAGS_TAG_TOGGLE>",
+    "description": ["Keywords: filter"]
+  },
+  "99294ee8e7299ff01d9463bd2d7d2a09cdd0e11b": {
+    "id": "315:32700",
+    "page": "Tooltip",
+    "name": "Tooltip",
+    "constant": "<FIGMA_TOOLTIP_TOOLTIP>",
+    "description": ["Keywords: toggletip, popover"]
+  },
+  "30f1ca9c141fdf4ddd82910a56b45aece54488b2": {
+    "id": "197:19742",
+    "page": "Forms",
+    "name": "Form Register",
+    "constant": "<FIGMA_FORMS_FORM_REGISTER>"
+  },
+  "34544440ecc4857a300924868f0f4cd59f24ee0e": {
+    "id": "197:19740",
+    "page": "Forms",
+    "name": "Form Log In",
+    "constant": "<FIGMA_FORMS_FORM_LOG_IN>"
+  },
+  "1b3d38a77e33add3a27e6b07d7cbf88ea071c6bd": {
+    "id": "197:19743",
+    "page": "Forms",
+    "name": "Form Newsletter",
+    "constant": "<FIGMA_FORMS_FORM_NEWSLETTER>"
+  },
+  "5b150bc624f629315875086922bd6ba0ba94f19b": {
+    "id": "197:19741",
+    "page": "Forms",
+    "name": "Form Contact",
+    "constant": "<FIGMA_FORMS_FORM_CONTACT>"
+  },
+  "54ef4d5c4fa0189756a319e162590a8c5f5ba53f": {
+    "id": "197:23153",
+    "page": "Forms",
+    "name": "Form Shipping",
+    "constant": "<FIGMA_FORMS_FORM_SHIPPING>"
+  },
+  "7b8a2c3cd1c34690c1fb9ed590cab13793e129f5": {
+    "id": "197:19744",
+    "page": "Forms",
+    "name": "Form Forgot Password",
+    "constant": "<FIGMA_FORMS_FORM_FORGOT_PASSWORD>"
+  },
+  "1f5c1b7193086fc11f07a2179b5c69e5154bb189": {
+    "id": "348:13221",
+    "page": "Sections",
+    "name": "Card Grid Icon",
+    "constant": "<FIGMA_SECTIONS_CARD_GRID_ICON>"
+  },
+  "9e45fb683bd4ef503cbebabdff4f6499a57cd7a4": {
+    "id": "348:14431",
+    "page": "Sections",
+    "name": "Card Grid Image",
+    "constant": "<FIGMA_SECTIONS_CARD_GRID_IMAGE>"
+  },
+  "37b4449c0059f10861e2bc64e89ae167167f6429": {
+    "id": "348:13407",
+    "page": "Sections",
+    "name": "Card Grid Content List",
+    "constant": "<FIGMA_SECTIONS_CARD_GRID_CONTENT_LIST>"
+  },
+  "89d0ce22112c72d0af8ebad86182fb900798ccbc": {
+    "id": "348:14983",
+    "page": "Sections",
+    "name": "Card Grid Pricing",
+    "constant": "<FIGMA_SECTIONS_CARD_GRID_PRICING>"
+  },
+  "21ec2008d1a4d25c287218a7ca2d00cf854db7ab": {
+    "id": "348:13347",
+    "page": "Sections",
+    "name": "Card Grid Testimonials",
+    "constant": "<FIGMA_SECTIONS_CARD_GRID_TESTIMONIALS>"
+  },
+  "b01c3edddb80e26aea9e2bfbaa5fdfd2875f05f5": {
+    "id": "348:15213",
+    "page": "Sections",
+    "name": "Card Grid Reviews",
+    "constant": "<FIGMA_SECTIONS_CARD_GRID_REVIEWS>"
+  },
+  "d916cbfbd3740326e14d3dd7770fd7eafa1edbf8": {
+    "id": "348:13173",
+    "page": "Sections",
+    "name": "Page Accordion",
+    "constant": "<FIGMA_SECTIONS_PAGE_ACCORDION>"
+  },
+  "24c65ce5060a8264f6dd728667703bf4faa7340e": {
+    "id": "348:15147",
+    "page": "Sections",
+    "name": "Page Product",
+    "constant": "<FIGMA_SECTIONS_PAGE_PRODUCT>"
+  },
+  "531f268ae1f8ae0bb0761ecbf1cc90a0c5a3e0f8": {
+    "id": "348:13517",
+    "page": "Sections",
+    "name": "Page Product Results",
+    "constant": "<FIGMA_SECTIONS_PAGE_PRODUCT_RESULTS>"
+  },
+  "176cd7aa2bb366119c4fe5d3bb78c935e71b9840": {
+    "id": "348:15133",
+    "page": "Sections",
+    "name": "Page Newsletter",
+    "constant": "<FIGMA_SECTIONS_PAGE_NEWSLETTER>"
+  },
+  "a7ff2d2736859fd65008eb5ed08d88d6d0fa2166": {
+    "id": "348:13474",
+    "page": "Sections",
+    "name": "Panel Image Content",
+    "constant": "<FIGMA_SECTIONS_PANEL_IMAGE_CONTENT>"
+  },
+  "c28becbb96d296193cc755fc943815a9595832e7": {
+    "id": "348:15101",
+    "page": "Sections",
+    "name": "Panel Image Content Reverse",
+    "constant": "<FIGMA_SECTIONS_PANEL_IMAGE_CONTENT_REVERSE>"
+  },
+  "11ea253c7015f17ef22aaaf4b4e4b7287daeba2b": {
+    "id": "348:15098",
+    "page": "Sections",
+    "name": "Panel Image",
+    "constant": "<FIGMA_SECTIONS_PANEL_IMAGE>"
+  },
+  "a27168b7742f1a8d9e4ed0230a1d116165b4d358": {
+    "id": "348:13470",
+    "page": "Sections",
+    "name": "Panel Image Double",
+    "constant": "<FIGMA_SECTIONS_PANEL_IMAGE_DOUBLE>"
+  },
+  "ab64dd0e6bc2057deed4d9d43bc4c4aecb11d97f": {
+    "id": "348:15896",
+    "page": "Sections",
+    "name": "Hero Basic",
+    "constant": "<FIGMA_SECTIONS_HERO_BASIC>"
+  },
+  "cb38bd892912c9bc0a04a65d1f4496bf8a5922d8": {
+    "id": "348:15901",
+    "page": "Sections",
+    "name": "Hero Actions",
+    "constant": "<FIGMA_SECTIONS_HERO_ACTIONS>"
+  },
+  "46dce671661efe939ecadbffb7de8c380f6a3fb5": {
+    "id": "348:15919",
+    "page": "Sections",
+    "name": "Hero Newsletter",
+    "constant": "<FIGMA_SECTIONS_HERO_NEWSLETTER>"
+  },
+  "972607214c510ca1e7898212312c6d08298f45e0": {
+    "id": "348:15933",
+    "page": "Sections",
+    "name": "Hero Form",
+    "constant": "<FIGMA_SECTIONS_HERO_FORM>"
+  },
+  "cb86fbc4bab395155d1f4bd5636f7f39cc9acd98": {
+    "id": "348:15970",
+    "page": "Sections",
+    "name": "Hero Image",
+    "constant": "<FIGMA_SECTIONS_HERO_IMAGE>"
+  },
+  "915002693d7df596ae90a13c5645795db45f5be1": {
+    "id": "321:11357",
+    "page": "Sections",
+    "name": "Footer",
+    "constant": "<FIGMA_SECTIONS_FOOTER>"
+  },
+  "a9ab8f57325a0c413c589b90f12f4672f823af63": {
+    "id": "2287:22651",
+    "page": "Sections",
+    "name": "Header",
+    "constant": "<FIGMA_SECTIONS_HEADER>"
+  },
+  "24e403212e5a575b2f4d2813928c6001aff6df70": {
+    "id": "18:9389",
+    "page": "Sections",
+    "name": "Header Auth",
+    "constant": "<FIGMA_SECTIONS_HEADER_AUTH>"
+  },
+  "fa82f4452066e0ce3c60dbcc2d3a4430cd5da5fd": {
+    "id": "2153:7834",
+    "page": "Text",
+    "name": "Text Content Heading",
+    "constant": "<FIGMA_TEXT_TEXT_CONTENT_HEADING>"
+  },
+  "0c00c39051af838d9047f02d9212f6a101c3b1d8": {
+    "id": "2153:7838",
+    "page": "Text",
+    "name": "Text Content Title",
+    "constant": "<FIGMA_TEXT_TEXT_CONTENT_TITLE>"
+  },
+  "5030d475311b68c787a2f4a1736c0814c38ea453": {
+    "id": "2142:11622",
+    "page": "Text",
+    "name": "Text Price",
+    "constant": "<FIGMA_TEXT_TEXT_PRICE>"
+  },
+  "3177985cb461dcca0f8f510bef0ab1caaa19d4fd": {
+    "id": "322:9321",
+    "page": "Text",
+    "name": "Text Link List",
+    "constant": "<FIGMA_TEXT_TEXT_LINK_LIST>"
+  },
+  "ff9d63033d82572e94d1d5e59972c6a083ab2304": {
+    "id": "480:6149",
+    "page": "Text",
+    "name": "Text List",
+    "constant": "<FIGMA_TEXT_TEXT_LIST>"
+  },
+  "f68eedd3bad5947ea84590538581414ce549c3f8": {
+    "id": "2087:8484",
+    "page": "Text",
+    "name": "Text Small",
+    "constant": "<FIGMA_TEXT_TEXT_SMALL>"
+  },
+  "3a45f89a7089dcb205c6e039fa5ae684c3268623": {
+    "id": "2104:22325",
+    "page": "Text",
+    "name": "Text Code",
+    "constant": "<FIGMA_TEXT_TEXT_CODE>"
+  },
+  "9185a0e47a410c0a806ff475521968c00a0b178e": {
+    "id": "2087:8486",
+    "page": "Text",
+    "name": "Text Strong",
+    "constant": "<FIGMA_TEXT_TEXT_STRONG>"
+  },
+  "b169f5293ebd56a1f016d61f0cc473f9a9ba9292": {
+    "id": "2087:8483",
+    "page": "Text",
+    "name": "Text Link",
+    "constant": "<FIGMA_TEXT_TEXT_LINK>"
+  },
+  "c6c3af3ad53d33acf10af4bbfbbe3a15d19c75dc": {
+    "id": "2087:8485",
+    "page": "Text",
+    "name": "Text Emphasis",
+    "constant": "<FIGMA_TEXT_TEXT_EMPHASIS>"
+  },
+  "ceecd3b486040604e607d6daddc1591388976290": {
+    "id": "2087:8487",
+    "page": "Text",
+    "name": "Text",
+    "constant": "<FIGMA_TEXT_TEXT>"
+  },
+  "ea544eb179d10cc28a96e21c58d786c13a5982aa": {
+    "id": "2103:22303",
+    "page": "Text",
+    "name": "Text Subheading",
+    "constant": "<FIGMA_TEXT_TEXT_SUBHEADING>"
+  },
+  "528e2c1837226bc29b80c93861542aa416451deb": {
+    "id": "2087:8488",
+    "page": "Text",
+    "name": "Text Heading",
+    "constant": "<FIGMA_TEXT_TEXT_HEADING>"
+  },
+  "d11458b0d61be97e693f13965279debae490c145": {
+    "id": "2103:22298",
+    "page": "Text",
+    "name": "Text Subtitle",
+    "constant": "<FIGMA_TEXT_TEXT_SUBTITLE>"
+  },
+  "19544e6113bd501632bb9a94fdd4e816075c2d4a": {
+    "id": "2087:8490",
+    "page": "Text",
+    "name": "Text Title Page",
+    "constant": "<FIGMA_TEXT_TEXT_TITLE_PAGE>"
+  },
+  "064904163a242014880ee4ba76032588ea726832": {
+    "id": "2087:8491",
+    "page": "Text",
+    "name": "Text Title Hero",
+    "constant": "<FIGMA_TEXT_TEXT_TITLE_HERO>"
+  },
+  "8b58c27485def9c1a1b519787a16c14cf4b4edc5": {
+    "id": "2077:11663",
+    "page": "Text",
+    "name": "Text List Item",
+    "constant": "<FIGMA_TEXT_TEXT_LIST_ITEM>"
+  },
+  "e9f14a82f4bc0e9b28152c85f5eef4920475df0f": {
+    "id": "2153:7973",
+    "page": "Text",
+    "name": "Text Link List Item",
+    "constant": "<FIGMA_TEXT_TEXT_LINK_LIST_ITEM>"
+  },
+  "1ae86f3e39277752f4cedaf794af6d99421977e8": {
+    "id": "4049:54746",
+    "page": "Utilities",
+    "name": " Component Annotation",
+    "constant": "<FIGMA_UTILITIES__COMPONENT_ANNOTATION>"
+  },
+  "10924d0af278a092e04b7172f1ac35e9f7eab789": {
+    "id": "348:20838",
+    "page": "Utilities",
+    "name": " Component Note",
+    "constant": "<FIGMA_UTILITIES__COMPONENT_NOTE>"
+  },
+  "c867a64359442a366df6ca1b51e4a93f660e38fd": {
+    "id": "108:12609",
+    "page": "Utilities",
+    "name": " Slot",
+    "constant": "<FIGMA_UTILITIES__SLOT>"
+  }
+}

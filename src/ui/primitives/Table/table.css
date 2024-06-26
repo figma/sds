@@ -1,0 +1,98 @@
+.table {
+  --table-cell-border-right-thickness: 0;
+  --table-cell-padding-x: var(--sds-size-space-200);
+  --table-cell-padding-y: var(--sds-size-space-400);
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+.table-bleed {
+  border-radius: 0;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+
+.table-dense {
+  --table-cell-padding-x: var(--sds-size-space-200);
+  --table-cell-padding-y: var(--sds-size-space-200);
+}
+.table-grid {
+  --table-cell-border-right-thickness: var(--sds-size-stroke-border);
+}
+.table-striped {
+  .table-row:nth-child(even) {
+    --table-row-background: var(--sds-color-background-default-secondary);
+  }
+}
+
+.table-row {
+  background-color: var(--table-row-background);
+}
+
+.table-row-interactive {
+  &.table-row-interactive:hover {
+    --table-row-background: var(--sds-color-background-default-hover);
+  }
+}
+
+.table-cell,
+.table-column {
+  border-left-width: 0;
+  border-bottom: var(--sds-size-stroke-border) solid
+    var(--sds-color-border-default-default);
+  padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
+  text-align: var(--cell-text-align);
+
+  &:first-child {
+    padding-left: var(--table-gutter-inset, var(--table-cell-padding-x));
+  }
+
+  &:last-child {
+    padding-right: var(--table-gutter-inset, var(--table-cell-padding-x));
+  }
+
+  .table-striped .table-row > &:not(.table-column) {
+    border-bottom-width: 0;
+  }
+
+  &:not(:last-child) {
+    border-right: var(--table-cell-border-right-thickness) solid
+      var(--sds-color-border-default-default);
+  }
+}
+
+.table-column {
+  color: var(--sds-color-text-default-secondary);
+  font: var(--sds-font-body-small);
+  font-weight: var(--sds-typography-weight-bold);
+}
+
+.table-column-inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-align-start {
+  --cell-text-align: left;
+}
+
+.table-align-end {
+  --cell-text-align: right;
+}
+
+.table-align-center {
+  --cell-text-align: center;
+}
+
+.table-cell {
+  font: var(--sds-font-body-small);
+  position: relative;
+}
+.table-cell-link {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

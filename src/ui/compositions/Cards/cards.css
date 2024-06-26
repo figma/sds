@@ -1,0 +1,86 @@
+.card {
+  --border-radius: var(--sds-size-radius-200);
+  background: var(--sds-color-background-default-default);
+  border-radius: var(--border-radius);
+  gap: var(--sds-size-space-600);
+  display: flex;
+  position: relative;
+
+  &.card-direction-vertical {
+    flex-direction: column;
+  }
+
+  &.card-direction-horizontal {
+    flex-direction: row;
+  }
+
+  &.card-variant-stroke {
+    box-shadow:
+      inset 0 0 0 var(--sds-size-stroke-border)
+        var(--sds-color-border-default-default),
+      var(--sds-effects-shadows-drop-shadow-300);
+    padding: var(--sds-size-space-600);
+  }
+
+  &:has(.card-interaction[data-hovered]:not([data-focus-visible])) {
+    background: var(--sds-color-background-default-default-hover);
+  }
+
+  .card-asset {
+    display: flex;
+    grid-area: asset;
+
+    .icon {
+      --icon-color: var(--sds-color-icon-default-default);
+    }
+  }
+
+  &.card-align-start {
+    --content-align: start;
+  }
+  &.card-align-center {
+    --content-align: center;
+  }
+  &.card-align-end {
+    --content-align: end;
+  }
+
+  .card-content {
+    align-items: var(--content-align, start);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sds-size-space-600);
+    grid-area: content;
+
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+.card-interaction {
+  border-radius: var(--border-radius);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  &[data-focus-visible] {
+    outline: none;
+    --offset: calc(var(--sds-size-stroke-border) * 2);
+    &::before {
+      content: "";
+      border-radius: calc(var(--border-radius) + var(--offset));
+      bottom: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size)
+        var(--global-focus-ring-color);
+      left: calc(-1 * var(--offset));
+      position: absolute;
+      right: calc(-1 * var(--offset));
+      top: calc(-1 * var(--offset));
+    }
+  }
+}

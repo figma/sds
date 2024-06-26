@@ -1,0 +1,89 @@
+.fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-600);
+  width: 100%;
+
+  &.fieldset-disabled {
+    --field-label-color: var(--sds-color-text-disabled-default);
+    --field-description-color: var(--sds-color-text-disabled-default);
+    > * {
+      color: var(--sds-color-text-disabled-default);
+    }
+  }
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-600);
+}
+
+.field {
+  --field-label-color: var(--sds-color-text-default-default);
+  --field-description-color: var(--sds-color-text-default-secondary);
+  --field-row-gap: var(--sds-size-space-200);
+
+  display: grid;
+  grid-template-areas:
+    "field-label field-extra"
+    "field-main field-main"
+    "field-description field-description"
+    "field-error field-error";
+  width: 100%;
+
+  [data-disabled] > &,
+  &[data-disabled] {
+    --field-label-color: var(--sds-color-text-disabled-default);
+    --field-description-color: var(--sds-color-text-disabled-default);
+  }
+
+  .select,
+  .input,
+  .text-area,
+  .slider {
+    grid-area: field-main;
+  }
+
+  .label {
+    grid-area: field-label;
+    margin-bottom: var(--field-row-gap);
+  }
+
+  .description {
+    grid-area: field-description;
+    margin-top: var(--field-row-gap);
+  }
+
+  .error-message {
+    grid-area: field-error;
+    margin-top: var(--field-row-gap);
+  }
+}
+
+.form.form-single-line {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: var(--sds-size-space-300);
+}
+
+.legend {
+  font: var(--sds-font-subheading);
+}
+
+.label {
+  color: var(--field-label-color);
+  font: var(--sds-font-body-base);
+}
+
+.description {
+  color: var(--field-description-color);
+  font: var(--sds-font-body-base);
+}
+
+.error-message {
+  color: var(--sds-color-text-danger-default);
+  font: var(--sds-font-body-base);
+}

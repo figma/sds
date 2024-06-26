@@ -1,0 +1,82 @@
+.slider-field {
+  --slider-thumb-background-color: var(--sds-color-background-brand-default);
+  --slider-thumb-border-color: var(--sds-color-background-brand-default);
+  --slider-track-background-color: var(--sds-color-background-brand-secondary);
+  font: var(--sds-font-body-base);
+
+  &[data-disabled] {
+    --slider-thumb-background-color: var(
+      --sds-color-background-disabled-default
+    );
+    --slider-thumb-border-color: var(--sds-color-border-disabled-default);
+    --slider-track-background-color: var(
+      --sds-color-background-disabled-default
+    );
+  }
+
+  /* TODO: only supporting horizontal right now. these are the horizontal styles. */
+  /* &[data-orientation="horizontal"] { */
+  width: 100%;
+  .slider {
+    height: var(--sds-size-space-400);
+    width: 100%;
+
+    &:before {
+      height: var(--sds-size-space-200);
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+    }
+  }
+  .slider-thumb {
+    top: 50%;
+  }
+  /* } */
+}
+
+.slider-output {
+  align-self: flex-end;
+  justify-self: flex-end;
+  font: var(--sds-font-body-small);
+  grid-area: field-extra;
+  margin-bottom: var(--sds-size-space-200);
+}
+
+.slider-thumb {
+  --border-radius: var(--sds-size-radius-full);
+  background: var(--slider-thumb-background-color);
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 0 0 var(--sds-size-stroke-border)
+    var(--slider-thumb-border-color);
+  height: var(--sds-size-space-400);
+  width: var(--sds-size-space-400);
+  forced-color-adjust: none;
+
+  &[data-focus-visible] {
+    outline: none;
+    --offset: calc(var(--sds-size-stroke-border) * 2);
+    &::before {
+      content: "";
+      border-radius: calc(var(--border-radius) + var(--offset));
+      bottom: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size)
+        var(--global-focus-ring-color);
+      left: calc(-1 * var(--offset));
+      position: absolute;
+      right: calc(-1 * var(--offset));
+      top: calc(-1 * var(--offset));
+    }
+  }
+}
+
+.slider {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: var(--slider-track-background-color);
+    border-radius: var(--sds-size-radius-full);
+    display: block;
+    position: absolute;
+  }
+}

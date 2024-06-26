@@ -1,0 +1,34 @@
+/* clears the ‘X’ from Internet Explorer */
+.search-input::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.search-input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* clears the ‘X’ from Chrome */
+.search-input::-webkit-search-decoration,
+.search-input::-webkit-search-cancel-button,
+.search-input::-webkit-search-results-button,
+.search-input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.search-input-container {
+  position: relative;
+}
+
+.search-input {
+  border-radius: var(--sds-size-radius-full);
+  padding-right: calc(var(--sds-size-space-800) + var(--sds-size-space-100));
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: var(--sds-size-space-100);
+  transform: translateY(-50%);
+}

@@ -1,0 +1,79 @@
+.tooltip {
+  .tooltip-overlay-arrow {
+    --offset-x: 0px;
+    --offset-y: 0px;
+    --offset-border-x: 0px;
+    --offset-border-y: 0px;
+    display: flex;
+    position: relative;
+    width: var(--sds-typography-scale-04);
+    z-index: 9;
+  }
+
+  .tooltip-overlay-arrow svg {
+    --rotation: 0deg;
+    --width: var(--sds-typography-scale-04);
+    display: block;
+    height: calc(0.5 * var(--sds-typography-scale-04));
+    width: var(--width);
+    &:first-child {
+      fill: var(--sds-color-border-default-default);
+      left: 0;
+      position: absolute;
+      transform: translate(var(--offset-x), var(--offset-y))
+        rotate(var(--rotation));
+    }
+    &:last-child {
+      fill: var(--sds-color-background-default-default);
+      transform: translate(
+          calc(var(--offset-x) + var(--offset-border-x)),
+          calc(var(--offset-y) + var(--offset-border-y))
+        )
+        rotate(var(--rotation));
+    }
+  }
+
+  &[data-placement="top"],
+  &[data-placement="bottom"] {
+    text-align: center;
+  }
+
+  &[data-placement="top"] {
+    .tooltip-overlay-arrow svg {
+      --offset-border-y: calc(-1.5 * var(--sds-size-stroke-border));
+    }
+  }
+
+  &[data-placement="bottom"] {
+    .tooltip-overlay-arrow svg {
+      --offset-border-y: calc(1.5 * var(--sds-size-stroke-border));
+      --rotation: 180deg;
+    }
+  }
+
+  &[data-placement="right"] {
+    .tooltip-overlay-arrow svg {
+      --offset-x: calc(0.25 * var(--width));
+      --offset-border-x: calc(1.5 * var(--sds-size-stroke-border));
+      --rotation: 90deg;
+    }
+  }
+
+  &[data-placement="left"] {
+    .tooltip-overlay-arrow svg {
+      --offset-x: calc(-0.25 * var(--width));
+      --offset-border-x: calc(-1.5 * var(--sds-size-stroke-border));
+      --rotation: -90deg;
+    }
+  }
+
+  > .dialog {
+    --dialog-padding-y: var(--sds-size-space-200);
+    box-shadow: var(--sds-effects-shadows-drop-shadow-200);
+    gap: var(--sds-size-space-100);
+    padding-left: var(--sds-size-space-300);
+    padding-right: var(--sds-size-space-300);
+    max-width: var(--global-tooltip-max-width);
+    width: 100%;
+  }
+}

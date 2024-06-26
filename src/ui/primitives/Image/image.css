@@ -1,0 +1,63 @@
+.image {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: auto;
+}
+
+.image-placeholder {
+  background: var(--sds-color-background-default-secondary);
+  display: block;
+}
+
+img.image-loading {
+  opacity: 0;
+  display: none;
+}
+
+.image-variant-rounded {
+  border-radius: var(--sds-size-radius-100);
+}
+
+.image-aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+}
+.image-aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+.image-aspect-ratio-4-3 {
+  aspect-ratio: 4 / 3;
+}
+.image-aspect-ratio-fill {
+  width: 100%;
+}
+.image-aspect-ratio-natural {
+  aspect-ratio: auto;
+}
+
+.image-size-small {
+  --image-size-height: 10rem;
+  height: var(--image-size-height);
+}
+.image-size-medium {
+  --image-size-height: 20rem;
+  height: var(--image-size-height);
+}
+.image-size-large {
+  --image-size-height: 30rem;
+  height: var(--image-size-height);
+}
+.image-size-fill {
+  --image-size-height: auto;
+  height: var(--image-size-height);
+  width: 100%;
+}
+.image-size-natural {
+  --image-size-height: auto;
+  height: var(--image-size-height);
+}
+
+.image-size .picture {
+  display: flex;
+  width: 100%;
+}
