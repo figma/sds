@@ -8,6 +8,11 @@ SDS is not just another design system in Figma. There are still many gaps betwee
 
 Whether you’re looking to use SDS to start a new project, or are looking for examples of some common design systems best practices, you'll find tools inside this codebase and design file to steer you in the right direction.
 
+## Resources
+
+- [Storybook](https://figma.github.io/sds/storybook)
+- [Figma Community File](https://www.figma.com/community/file/1380235722331273046/simple-design-system)
+
 ## Setup
 
 - `npm i` to install dependencies
@@ -49,7 +54,7 @@ figma.connect(CheckboxGroup, "<FIGMA_INPUTS_CHECKBOX_GROUP>");
 
 With the above in mind, a fresh clone of the Simple Design System Figma file should maintain all the node-ids. The steps should be as follows:
 
-- Duplicate SDS file from Figma Community
+- Duplicate the [Figma Community File](https://www.figma.com/community/file/1380235722331273046/simple-design-system)
 - Clone this repo
 - Update urls in [figma.config.js](./figma.config.js) to point to your Figma file
   - Note: the file keys (eg. `J0KLPKXiONDRssXD1AX9Oi`) should be the only change in the urls unless you're creating new components, detaching and recreating.
