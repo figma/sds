@@ -1,11 +1,4 @@
-import { useEffect, useState } from "react";
-
-type MediaQueryKey =
-  | "isMobile"
-  | "isTablet"
-  | "isDesktop"
-  | "isTabletUp"
-  | "isTabletDown";
+import { useMemo, useSyncExternalStore } from "react";
 
 const breakpoints = {
   mobile: 375,
@@ -13,54 +6,49 @@ const breakpoints = {
   desktop: 1200,
 };
 
-const mediaQueries: { [K in MediaQueryKey]: string } = {
-  isMobile: `(max-width: ${breakpoints.tablet - 1}px)`,
-  isTablet: `(min-width: ${breakpoints.tablet}px) and (max-width: ${breakpoints.desktop - 1}px)`,
-  isDesktop: `(min-width: ${breakpoints.desktop}px)`,
-  isTabletUp: `(min-width: ${breakpoints.tablet}px)`,
-  isTabletDown: `(max-width: ${breakpoints.desktop - 1}px)`,
-};
+export function useCustomMediaQuery(mediaQuery: string): boolean {
+  const [subscribe, getSnapshot] = useMemo(() => {
+    const mediaQueryList = globalThis.matchMedia(mediaQuery);
 
-const mediaQueryKeys: MediaQueryKey[] = [
-  "isMobile",
-  "isTablet",
-  "isDesktop",
-  "isTabletUp",
-  "isTabletDown",
-];
+    function subscribe(onStoreChange: () => void) {
+      mediaQueryList.addEventListener("change", onStoreChange);
+      return () => mediaQueryList.removeEventListener("change", onStoreChange);
+    }
 
-type MediaQueryMatches = { [K in MediaQueryKey]: boolean };
+    const getSnapshot = () => mediaQueryList.matches;
+
+    return [subscribe, getSnapshot];
+  }, [mediaQuery]);
+
+  return useSyncExternalStore(subscribe, getSnapshot);
+}
 
 export const useMediaQuery = () => {
-  const [matches, setMatches] = useState<MediaQueryMatches>({
-    isDesktop: false,
-    isTablet: false,
-    isTabletDown: true,
-    isTabletUp: false,
-    isMobile: true,
-  });
+  const isMobile = useCustomMediaQuery(
+    `(max-width: ${breakpoints.tablet - 1}px)`,
+  );
+  const isTablet = useCustomMediaQuery(
+    `(min-width: ${breakpoints.tablet}px) and (max-width: ${breakpoints.desktop - 1}px)`,
+  );
+  const isDesktop = useCustomMediaQuery(
+    `(min-width: ${breakpoints.desktop}px)`,
+  );
+  const isTabletUp = useCustomMediaQuery(
+    `(min-width: ${breakpoints.tablet}px)`,
+  );
+  const isTabletDown = useCustomMediaQuery(
+    `(max-width: ${breakpoints.desktop - 1}px)`,
+  );
 
-  useEffect(() => {
-    const matchesLoop = () => {
-      let changes = false;
-      const clonedMatches = { ...matches };
-      for (let key of mediaQueryKeys) {
-        clonedMatches[key];
-        const media = window.matchMedia(mediaQueries[key]);
-        if (media.matches !== clonedMatches[key]) {
-          clonedMatches[key] = media.matches;
-          changes = true;
-        }
-      }
-      if (changes) {
-        setMatches(clonedMatches);
-      }
+  const matches = useMemo(() => {
+    return {
+      isMobile,
+      isTablet,
+      isDesktop,
+      isTabletUp,
+      isTabletDown,
     };
-    matchesLoop();
-    const listener = () => matchesLoop();
-    window.addEventListener("resize", listener);
-    return () => window.removeEventListener("resize", listener);
-  }, [matches]);
+  }, [isMobile, isTablet, isDesktop, isTabletUp, isTabletDown]);
 
   return matches;
 };
