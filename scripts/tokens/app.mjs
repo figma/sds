@@ -1,88 +1,59 @@
 import fs from "fs";
-import { getFileStyles, getFileVariables } from "./fromFigma.mjs";
-
-const JOIN_CHAR = "";
-const CONVERT_TO_REM = true;
-const NAMESPACE = "org.sds";
-const TOKEN_PREFIX = "sds-";
+import {
+  getFileStyles,
+  getFileVariables,
+  KEY_PREFIX_COLLECTION,
+} from "./fromFigma.mjs";
 
 const FILE_KEY = process.env.FIGMA_FILE_KEY;
 const SKIP_REST_API = process.argv.includes("--skip-rest-api");
 const WRITE_DIR = "../../src";
 
-const COLOR_THEMES = ["sds_light"];
-const COLOR_THEMES_DARK = ["sds_dark"];
-// stripped from mode names above in theme class names
-const COLOR_THEME_LIGHT_REMOVE = "_light";
-const COLOR_THEME_DARK_REMOVE = "_dark";
+const CONVERT_TO_REM = true;
+// Extension namespace for the w3c token file
+const NAMESPACE = "com.figma.sds";
+// Prefix for CSS custom properties
+const TOKEN_PREFIX = "sds-";
 
-initialize();
-
-async function initialize() {
-  if (!SKIP_REST_API) {
-    const stylesJSON = await getFileStyles(FILE_KEY);
-    fs.writeFileSync("./styles.json", JSON.stringify(stylesJSON, null, 2));
-    const tokensJSON = await getFileVariables(FILE_KEY, NAMESPACE);
-    fs.writeFileSync("./tokens.json", JSON.stringify(tokensJSON, null, 2));
-  }
-  const { processed, themeCSS } = processTokenJSON(
-    JSON.parse(fs.readFileSync("./tokens.json")),
-  );
-  const variableLookups = [
-    ...Object.values(processed.typography_primitives.main)[0],
-    ...Object.values(processed.typography.main)[0],
-    ...Object.values(processed.color_primitives.main)[0],
-    ...Object.values(processed.color.main)[0],
-    ...Object.values(processed.size.main)[0],
-  ].reduce((into, item) => {
-    into[item.figmaId] = item;
-    return into;
-  }, {});
-
-  const stylesCSS = await processStyleJSON(
-    JSON.parse(fs.readFileSync("./styles.json")),
-    variableLookups,
-  );
-
-  fs.writeFileSync(
-    `${WRITE_DIR}/theme.css`,
-    [...themeCSS, ...stylesCSS].join("\n"),
-  );
-  console.log("Done!");
-}
-
-function processTokenJSON(data) {
-  const processed = {
-    color_primitives: {
-      main: {},
-    },
-    color: {
-      main: {},
-      colorSchemes: COLOR_THEMES,
-      colorSchemesDark: COLOR_THEMES_DARK,
-    },
-    size: { main: {} },
-    typography_primitives: { main: {} },
-    typography: { main: {} },
-  };
-
-  processCollection(data, processed.color_primitives, "@color_primitives", {
-    prefix: "color",
-  });
-  processCollection(data, processed.color, "@color", {
-    prefix: "color",
-    replacements: {
-      color_primitives: "color",
-    },
-  });
-  processCollection(
-    data,
-    processed.typography_primitives,
-    "@typography_primitives",
-    {
-      prefix: "typography",
+// The data object. Each item in here represents a collection.
+// `[collection].definitions` will contain all the token data
+// You should ensure these names match those in your Figma variables data.
+// Collection names are lowercased and underscored and stripped of non alphanumeric characters.
+const COLLECTION_DATA = {
+  color_primitives: {
+    settings: { prefix: "color" },
+  },
+  color: {
+    settings: {
+      prefix: "color",
+      // Light mode names from Figma in lower underscore case. First is default light mode.
+      colorSchemes: ["sds_light"],
+      // Dark mode names from Figma in lower underscore case. First is default dark mode.
+      colorSchemesDark: ["sds_dark"],
+      // Strings to strip from mode names above when transforming to theme class names. (Only applicable when more than one per mode)
+      colorSchemeLightRemove: "_light",
+      colorSchemeDarkRemove: "_dark",
+      // Strings to find and replace in CSS values
       replacements: {
-        "@responsive": "responsive",
+        color_primitives: "color",
+      },
+    },
+  },
+  size: {
+    settings: {
+      prefix: "size",
+      convertPixelToRem: true,
+      replacements: {
+        [`${KEY_PREFIX_COLLECTION}responsive`]: "responsive",
+      },
+    },
+  },
+  typography_primitives: {
+    settings: {
+      prefix: "typography",
+      convertPixelToRem: true,
+      replacements: {
+        [`${KEY_PREFIX_COLLECTION}responsive`]: "responsive",
         "Extra Bold Italic": "800 italic",
         "Semi Bold Italic": "600 italic",
         "Medium Italic": "500 italic",
@@ -93,27 +64,77 @@ function processTokenJSON(data) {
         "Bold Italic": "700 italic",
         "Thin Italic": "100 italic",
       },
+    },
+  },
+  typography: {
+    settings: {
+      prefix: "typography",
       convertPixelToRem: true,
+      replacements: {
+        typography_primitives: "typography",
+      },
     },
-  );
-  processCollection(data, processed.typography, "@typography", {
-    prefix: "typography",
-    replacements: {
-      typography_primitives: "typography",
-    },
-    convertPixelToRem: true,
-  });
-  processCollection(data, processed.size, "@size", {
-    prefix: "size",
-    replacements: {
-      "@responsive": "responsive",
-    },
-    convertPixelToRem: true,
-  });
+  },
+};
 
+initialize();
+
+async function initialize() {
+  // We write data to disk before processing.
+  // This allows us to process independent of REST API.
+  // You can use Plugins to author these files manually without Variables REST API access.
+  if (!SKIP_REST_API) {
+    const stylesJSON = await getFileStyles(FILE_KEY);
+    fs.writeFileSync("./styles.json", JSON.stringify(stylesJSON, null, 2));
+    const tokensJSON = await getFileVariables(FILE_KEY, NAMESPACE);
+    fs.writeFileSync("./tokens.json", JSON.stringify(tokensJSON, null, 2));
+  }
+  // Process token JSON into CSS
+  const { processed, themeCSS } = processTokenJSON(
+    JSON.parse(fs.readFileSync("./tokens.json")),
+  );
+  // An object to lookup variables in when processing styles.
+  console.log(processed.color.definitions.sds_light);
+  const variableLookups = Object.keys(processed)
+    .flatMap((key) => Object.values(processed[key].definitions)[0])
+    .reduce((into, item) => {
+      into[item.figmaId] = item;
+      return into;
+    }, {});
+
+  // Process styles JSON into CSS
+  const stylesCSS = await processStyleJSON(
+    JSON.parse(fs.readFileSync("./styles.json")),
+    variableLookups,
+  );
+
+  // Write our processed CSS
+  fs.writeFileSync(
+    `${WRITE_DIR}/theme.css`,
+    [...themeCSS, ...stylesCSS].join("\n"),
+  );
+  console.log("Done!");
+}
+
+/**
+ * Massive operation to process Token JSON as parseable object for CSS conversion
+ * @param {Object<any>} data - W3C Token Spec JSON with collections at the root.
+ * @returns {{ processed: {[collection_key: string]: { definitions: { [mode_name: string]: Array<{ property: string, propertyName: string, figmaId: string, description: string, value: string, type: string }> } } } } }}
+ */
+function processTokenJSON(data) {
+  const processed = { ...COLLECTION_DATA };
+  for (let key in processed) {
+    processCollection(
+      data,
+      COLLECTION_DATA[key],
+      `${KEY_PREFIX_COLLECTION}${key}`,
+    );
+  }
+
+  // Our theme.css file string.
   const fileStringCSSLines = [
     "/*",
-    " * This file is automatically generated by tokens.cjs!",
+    " * This file is automatically generated by scripts/tokens/app.mjs!",
     " */",
   ];
   for (let key in processed) {
@@ -122,147 +143,91 @@ function processTokenJSON(data) {
     );
   }
 
-  /* 
-In the future, themeing will be handled via @container style() queries
-
-:root {
-  --theme: default; // blue, purple, teal
-}
-
-@container style(--theme: default) {
-  :root {}
-  @media (prefers-color-scheme: dark) {
-    :root {}
-  }
-}
-*/
-
-  function fileStringCSSFromProcessedObject(
-    {
-      primitive,
-      main,
-      colorSchemes,
-      colorSchemesDark,
-      responsiveSizeOrder,
-      responsiveSizeTokenSuffix,
-    },
-    key,
-  ) {
+  // Turn variable collection data into a CSS file string
+  function fileStringCSSFromProcessedObject({ definitions, settings }, key) {
+    // Lines of CSS
     const lines = [];
-    if (primitive) {
-      const values = Object.values(primitive)[0];
-      lines.push(
-        ...[
-          `/* ${key}: primitive */`,
-          ":root {",
-          drawCSSPropLines(values, "  "),
-          "}",
-        ],
-      );
-    }
-    if (colorSchemes) {
-      colorSchemes.forEach((scheme, i) => {
+    // This is how we know to do prefers-color scheme rather than plain :root
+    if (settings.colorSchemes) {
+      settings.colorSchemes.forEach((scheme, i) => {
         if (i === 0) {
           lines.push(...[`/* ${key}: ${scheme} (default) */`, ":root {"]);
         } else {
           lines.push(
             ...[
               `/* ${key}: ${scheme} */`,
-              `.${TOKEN_PREFIX}scheme-${key}-${scheme.replace(COLOR_THEME_LIGHT_REMOVE, "")} {`,
+              `.${TOKEN_PREFIX}scheme-${key}-${scheme.replace(settings.colorSchemeLightRemove, "")} {`,
             ],
           );
         }
-        lines.push(drawCSSPropLines(main[scheme], "  "), "}");
+        lines.push(drawCSSPropLines(definitions[scheme], "  "), "}");
       });
-      if (colorSchemesDark) {
+      if (settings.colorSchemesDark) {
         lines.push("@media (prefers-color-scheme: dark) {");
-        colorSchemesDark.forEach((scheme, i) => {
+        settings.colorSchemesDark.forEach((scheme, i) => {
           if (i === 0) {
             lines.push(...[`  /* ${key}: ${scheme} (default) */`, "  :root {"]);
           } else {
             lines.push(
               ...[
                 `  /* ${key}: ${scheme} */`,
-                `  .${TOKEN_PREFIX}scheme-${key}-${scheme.replace(COLOR_THEME_DARK_REMOVE, "")} {`,
+                `  .${TOKEN_PREFIX}scheme-${key}-${scheme.replace(settings.colorSchemeDarkRemove, "")} {`,
               ],
             );
           }
-          lines.push(drawCSSPropLines(main[scheme], "    "), "  }");
+          lines.push(drawCSSPropLines(definitions[scheme], "    "), "  }");
         });
         lines.push("}");
       }
-    } else if (responsiveSizeOrder) {
-      const regexp = new RegExp(`${responsiveSizeTokenSuffix}$`, "g");
-      const sizes = responsiveSizeOrder.map((size) => {
-        const found = main[size].find(({ property }) =>
-          Boolean(property.match(regexp)),
-        );
-        return found ? found.value : "9999999px";
-      });
-      responsiveSizeOrder.forEach((size, i) => {
-        if (i === 0) {
-          lines.push(
-            ...[
-              `/* ${key}: ${size} (default) */`,
-              ":root {",
-              drawCSSPropLines(main[size], "  "),
-              "}",
-            ],
-          );
+    } else {
+      let first;
+      // For each mode in definitions
+      for (let k in definitions) {
+        if (!first) {
+          first = true;
+          lines.push(...[`/* ${key}: ${k} (default) */`, ":root {"]);
         } else {
           lines.push(
-            ...[
-              `/* ${key}: ${size} */`,
-              `@media (min-width: ${sizes[i]}) {`,
-              "  :root {",
-              drawCSSPropLines(main[size], "    "),
-              "  }",
-              "}",
-            ],
+            ...[`/* ${key}: ${k} */`, `.${TOKEN_PREFIX}theme-${key}-${k} {`],
           );
         }
-      });
-    } else {
-      // main only
-      if (main.length === 1) {
-        const values = Object.values(main)[0];
-        lines.push(...[":root {", drawCSSPropLines(values, "  "), "}"]);
-      } else {
-        let first;
-        for (let k in main) {
-          if (!first) {
-            first = true;
-            lines.push(...[`/* ${key}: ${k} (default) */`, ":root {"]);
-          } else {
-            lines.push(
-              ...[`/* ${key}: ${k} */`, `.${TOKEN_PREFIX}theme-${key}-${k} {`],
-            );
-          }
-          lines.push(...[drawCSSPropLines(main[k], "  "), "}"]);
-        }
+        lines.push(...[drawCSSPropLines(definitions[k], "  "), "}"]);
       }
     }
     return lines;
   }
-  const codeSyntaxArrayString = `Promise.all([
-    ${drawCodeSyntaxWeb(processed.size.main)},
-    ${drawCodeSyntaxWeb(processed.typography_primitives.main)},
-    ${drawCodeSyntaxWeb(processed.typography.main)},
-    ${drawCodeSyntaxWeb(processed.color_primitives.main)},
-    ${drawCodeSyntaxWeb(processed.color.main)}
-    ].map(async ([variableId, webSyntax, description]) => {
-      const variable = await figma.variables.getVariableByIdAsync(variableId);
-      if (variable) {
-        variable.setVariableCodeSyntax("WEB", webSyntax);
-        variable.description = description;
-      }
-      return;
-    })).then(() => console.log("DONE!")).catch(console.error)`;
 
-  fs.writeFileSync("./tokensCodeSyntaxes.js", codeSyntaxArrayString);
+  // Code syntax array string is something we can paste in Figma console
+  //  to bulk update variable code syntax and descriptions to match our CSS property names.
+  const variableSyntaxAndDescriptionString = `Promise.all([
+${Object.keys(processed)
+  .map((key) => drawVariableSyntaxAndDescription(processed[key].definitions))
+  .sort()
+  .join(",\n")},
+].map(async ([variableId, webSyntax, description]) => {
+  const variable = await figma.variables.getVariableByIdAsync(variableId);
+  if (variable) {
+    variable.setVariableCodeSyntax("WEB", webSyntax);
+    variable.description = description;
+  }
+  return;
+})).then(() => console.log("DONE!")).catch(console.error)`;
 
+  // Write the code syntax snippet
+  fs.writeFileSync(
+    "./tokenVariableSyntaxAndDescriptionSnippet.js",
+    variableSyntaxAndDescriptionString,
+  );
+
+  // Return our data
   return { processed, themeCSS: fileStringCSSLines };
 
+  /**
+   * Transform an array of lines of CSS custom property definitions into indented CSS output.
+   * @param {string[]} lines
+   * @param {string} indent
+   * @returns {string}
+   */
   function drawCSSPropLines(lines = [], indent = "  ") {
     return (
       lines
@@ -272,62 +237,70 @@ In the future, themeing will be handled via @container style() queries
     );
   }
 
-  function drawCodeSyntaxWeb(linesObject = { default: [] }) {
+  /**
+   * Given an object of modes, return the Code Syntax snippet string
+   * @param {{ [mode: string]: string[]}} linesObject
+   * @returns {string}
+   */
+  function drawVariableSyntaxAndDescription(linesObject = { default: [] }) {
     const lines = linesObject[Object.keys(linesObject)[0]];
     return lines
-      .sort((a, b) => (a.property > b.property ? 1 : -1))
       .map(
         (l) =>
-          `["${l.figmaId}", "var(${l.property})", "${l.description || ""}"]`,
+          `  ["${l.figmaId}", "var(${l.property})", "${l.description || ""}"]`,
       )
+      .sort()
       .join(",\n");
   }
 
-  function processCollection(
-    data,
-    processed,
-    mainKey,
-    {
+  /**
+   *
+   * @param {Object<any>} data - All variable collection data (W3C token spec JSON)
+   * @param {Object<any>} processed - The object to write collection data to
+   * @param {string} definitionsKey - The key for the definitions
+   */
+  function processCollection(data, processed, definitionsKey) {
+    const {
       replacements = {},
       convertPixelToRem = CONVERT_TO_REM,
-      skipPrefix = "",
       prefix,
-      removeFromLastKey = [],
-    },
-  ) {
+    } = processed.settings;
     const fullPrefix = `${TOKEN_PREFIX}${prefix}`;
+    processed.definitions = {};
     traverse(
-      processed.main,
-      data[mainKey],
+      processed.definitions,
+      data[definitionsKey],
       replacements,
-      mainKey,
+      definitionsKey,
       fullPrefix,
       convertPixelToRem,
-      removeFromLastKey,
       "",
       fullPrefix ? [fullPrefix] : undefined,
-      skipPrefix,
     );
   }
 
+  /**
+   * Traverse W3C token file to build out tokens.
+   * @param {Object<any>} definitions
+   * @param {Object<any>} object - collection from W3C token JSON
+   * @param {{[find: string]: string}} replacements - string replacement object, keyed by find.
+   * @param {string} definitionsKey
+   * @param {string} prefix - collection token prefix
+   * @param {boolean} convertPixelToRem - whether or not to turn numbers into n/16 rem values.
+   * @param {string} currentType - as we traverse token scope, we may need to track type from parent
+   * @param {string[]} keys - history of token scopes to prefix name
+   * @returns
+   */
   function traverse(
     definitions,
     object,
     replacements,
-    mainKey,
+    definitionsKey,
     prefix,
     convertPixelToRem = CONVERT_TO_REM,
-    removeFromLastKey = [],
     currentType = "",
     keys = [],
-    skipPrefix,
   ) {
-    const lastKey = keys[keys.length - 1];
-    if (lastKey) {
-      removeFromLastKey.forEach((a) => {
-        keys[keys.length - 1] = keys[keys.length - 1].replace(a, "");
-      });
-    }
     const property = `--${keys.join("-")}`;
     const propertyNameFull = keys
       .map((key) =>
@@ -348,7 +321,6 @@ In the future, themeing will be handled via @container style() queries
     const propertyName =
       propertyNameFull.charAt(0).toLowerCase() + propertyNameFull.slice(1);
     const type = object.$type || currentType;
-    if (skipPrefix && propertyName.match(skipPrefix)) return;
     if ("$value" in object) {
       if ("$extensions" in object && NAMESPACE in object.$extensions) {
         const description = object.$description || "";
@@ -364,7 +336,7 @@ In the future, themeing will be handled via @container style() queries
               valueToCSS(
                 property,
                 object.$extensions[NAMESPACE].modes[mode],
-                mainKey,
+                definitionsKey,
                 convertPixelToRem,
                 prefix,
               ),
@@ -386,7 +358,13 @@ In the future, themeing will be handled via @container style() queries
           description,
           figmaId,
           value: valueWithReplacements(
-            valueToCSS(property, object.$value, mainKey, convertPixelToRem, ""),
+            valueToCSS(
+              property,
+              object.$value,
+              definitionsKey,
+              convertPixelToRem,
+              "",
+            ),
           ),
           type,
         });
@@ -398,29 +376,36 @@ In the future, themeing will be handled via @container style() queries
             definitions,
             value,
             replacements,
-            mainKey,
+            definitionsKey,
             prefix,
             convertPixelToRem,
-            removeFromLastKey,
             type,
             [...keys, key],
-            skipPrefix,
           );
         }
       });
     }
   }
 
+  /**
+   * Converting W3C token JSON value to CSS value.
+   * @param {string} property
+   * @param {string} value
+   * @param {string} definitionsKey
+   * @param {boolean} convertPixelToRem
+   * @param {string} prefix
+   * @returns {string}
+   */
   function valueToCSS(
     property,
     value,
-    mainKey,
+    definitionsKey,
     convertPixelToRem,
     prefix = "",
   ) {
     if (value.toString().charAt(0) === "{")
       return `var(--${value
-        .replace(`${mainKey}${JOIN_CHAR}`, prefix)
+        .replace(`${definitionsKey}`, prefix)
         .replace(/[\. ]/g, "-")
         .replace(/^\{/, "")
         .replace(/\}$/, "")})`;
@@ -444,6 +429,12 @@ In the future, themeing will be handled via @container style() queries
   }
 }
 
+/**
+ * Turning style JSON into a box shadow, filter, or font property value
+ * @param {Object<any>} data - Style JSON data from Figma
+ * @param {Object<any>} variablesLookup - Object to find variable names
+ * @returns
+ */
 async function processStyleJSON(data, variablesLookup) {
   const effectDefs = [];
   const text = [];
@@ -513,6 +504,11 @@ async function processStyleJSON(data, variablesLookup) {
     "}",
   ];
 
+  /**
+   * Takes possible variable reference or value and returns an appropriate value
+   * @param {string} item
+   * @returns {string}
+   */
   function valueFromPossibleVariable(item = "") {
     if (typeof item === "object") {
       // attempting to find bound variables
@@ -527,15 +523,24 @@ async function processStyleJSON(data, variablesLookup) {
     return item;
   }
 
+  /**
+   * Lowercase hyphenate string
+   * @param {string} name
+   * @returns {string}
+   */
   function sanitizeName(name) {
     return name
       .replace(/[^a-zA-Z0-9 ]/g, " ")
-      .replace(/^ +/, "")
-      .replace(/ +$/, "")
+      .trim()
       .replace(/ +/g, "-")
       .toLowerCase();
   }
 
+  /**
+   * Transforms Figma effect data into CSS string
+   * @param {{type: EffectType, ...effect}} args[0] Figma effect
+   * @returns {string}
+   */
   function formatEffect({ type, ...effect }) {
     if (type === "DROP_SHADOW" || type === "INNER_SHADOW") {
       const {
