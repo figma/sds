@@ -1,9 +1,13 @@
 // run with node --env-file=.env app.mjs
 const TOKEN = process.env.FIGMA_ACCESS_TOKEN;
-const _URL_BASE = "https://api.staging.figma.com/v1/files";
 const URL_BASE = "https://api.figma.com/v1/files";
-const KEY_PREFIX_COLLECTION = "@";
+export const KEY_PREFIX_COLLECTION = "@";
 
+/**
+ * @link https://www.figma.com/developers/api#get-files-endpoint
+ * @param {string} fileKey
+ * @returns {Object<any>} styles data
+ */
 export async function getFileStyles(fileKey) {
   try {
     const fileResponse = await fetch(`${URL_BASE}/${fileKey}`, {
@@ -17,6 +21,12 @@ export async function getFileStyles(fileKey) {
   }
 }
 
+/**
+ * @link https://www.figma.com/developers/api#get-local-variables-endpoint
+ * @param {string} fileKey
+ * @param {string} nameSpace - the namespace for $extensions data
+ * @returns {Object<any>} styles data
+ */
 export async function getFileVariables(fileKey, nameSpace) {
   try {
     const fileResponse = await fetch(`${URL_BASE}/${fileKey}/variables/local`, {
