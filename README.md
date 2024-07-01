@@ -56,7 +56,7 @@ With the above in mind, a fresh clone of the Simple Design System Figma file sho
 
 - Duplicate the [Figma Community File](https://www.figma.com/community/file/1380235722331273046/simple-design-system)
 - Clone this repo
-- Update urls in [figma.config.js](./figma.config.js) to point to your Figma file
+- Update urls in [figma.config.json](./figma.config.json) to point to your Figma file
   - Note: the file keys (eg. `J0KLPKXiONDRssXD1AX9Oi`) should be the only change in the urls unless you're creating new components, detaching and recreating.
 - Create and set your [Figma Auth Token](#figma-auth)
 - At that point, `npx figma connect publish` should work and your new file should have Code Connect.
