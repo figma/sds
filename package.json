@@ -15,7 +15,9 @@
     "script:icons": "cd scripts/icons; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",
     "script:icons:rest": "cd scripts/icons; node --env-file=../../.env app.mjs; cd -;",
     "script:tokens": "cd scripts/tokens; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",
-    "script:tokens:rest": "cd scripts/tokens; node --env-file=../../.env app.mjs; cd -;"
+    "script:tokens:rest": "cd scripts/tokens; node --env-file=../../.env app.mjs; cd -;",
+    "happo": "happo",
+    "happo-ci-github-actions": "happo-ci-github-actions"
   },
   "prettier": {
     "plugins": [
@@ -50,6 +52,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.8.0",
+    "happo.io": "^10.1.1",
     "prettier-plugin-organize-imports": "^3.2.4",
     "react": "^18.2.0",
     "react-aria-components": "^1.2.0",
