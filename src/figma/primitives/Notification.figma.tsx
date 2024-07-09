@@ -8,7 +8,7 @@ figma.connect(Notification, "<FIGMA_NOTIFICATION_NOTIFICATION>", {
       true: figma.instance("Icon"),
       false: undefined,
     }),
-    isDismissible: figma.boolean("Is Dismissible"),
+    isDismissible: figma.boolean("Dismissible"),
     button: figma.children("Button"),
     body: figma.string("Body"),
     variant: figma.enum("Variant", {
