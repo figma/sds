@@ -3,7 +3,7 @@ import { TextSmall, TextStrong, Tooltip } from "primitives";
 
 figma.connect(Tooltip, "<FIGMA_TOOLTIP_TOOLTIP>", {
   props: {
-    body: figma.boolean("Show Body", {
+    body: figma.boolean("Has Body", {
       true: <TextSmall>{figma.string("Body")}</TextSmall>,
       false: undefined,
     }),

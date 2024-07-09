@@ -9,7 +9,7 @@ import {
 
 figma.connect(Tag, "<FIGMA_TAGS_TAG>", {
   props: {
-    onRemove: figma.boolean("Is Removable", {
+    onRemove: figma.boolean("Removable", {
       true: () => {},
       false: undefined,
     }),
