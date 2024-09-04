@@ -61,7 +61,8 @@ export const StoryText: Story = {
               <TextLink href="#">Text Link List Item 3</TextLink>
             </TextListItem>
           </TextLinkList>
-          <TextPrice currency="$" price="50.99" label="/ month" />
+          <TextPrice currency="$" price="50.99" label="/ mo" />
+          <TextPrice currency="$" price="50.99" label="/ mo" size="small" />
           <Text>
             This feature is only available to users on the{" "}
             <TextStrong>Business Plan</TextStrong>. To upgrade, visit your{" "}

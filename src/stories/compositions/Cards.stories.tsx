@@ -16,15 +16,7 @@ import {
 } from "icons";
 import { placeholder } from "images";
 import { Flex } from "layout";
-import {
-  Button,
-  ButtonGroup,
-  Image,
-  Text,
-  TextHeading,
-  TextList,
-  TextListItem,
-} from "primitives";
+import { Button, ButtonGroup, Image, Text, TextHeading } from "primitives";
 import { ComponentProps } from "react";
 
 const meta: Meta<typeof Card> = {
@@ -104,24 +96,36 @@ export const StoryPricingCard: StoryObj<typeof PricingCard> = {
       container
       wrap
       gap="400"
-      type="quarter"
+      type="third"
       alignPrimary="center"
       direction="row"
     >
-      {[1, 2, 3, 4].map((i) => (
+      {[1, 2, 3].map((i) => (
         <PricingCard
           key={i}
-          heading="Look at these low rates!"
+          variant={i === 2 ? "brand" : undefined}
+          heading="Wow Tier"
           action="Buy this"
           price={(5 * (5 - i)).toString()}
+          priceCurrency="$"
+          size="large"
           onAction={() => {}}
-          list={
-            <TextList>
-              <TextListItem>List item 1</TextListItem>
-              <TextListItem>List item 2</TextListItem>
-              <TextListItem>List item 3</TextListItem>
-            </TextList>
-          }
+          actionVariant={i === 2 ? "neutral" : undefined}
+          list={["List item 1", "List item 2", "List item 3"]}
+        />
+      ))}
+      {[1, 2, 3].map((i) => (
+        <PricingCard
+          key={i}
+          variant={i === 2 ? "brand" : undefined}
+          heading="Wow Tier"
+          action="Buy this"
+          price={(5 * (5 - i)).toString()}
+          priceCurrency="$"
+          size="small"
+          onAction={() => {}}
+          actionVariant={i === 2 ? "neutral" : undefined}
+          list={["List item 1", "List item 2", "List item 3"]}
         />
       ))}
     </Flex>
