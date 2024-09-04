@@ -21,6 +21,6 @@
   > svg {
     --logo-color: var(--sds-color-icon-default-default);
     height: auto;
-    width: var(--sds-size-icon-large);
+    width: var(--sds-size-icon-small);
   }
 }
