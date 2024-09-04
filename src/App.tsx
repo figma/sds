@@ -35,6 +35,7 @@ import { useState } from "react";
 
 function App() {
   const { isMobile, isDesktop } = useMediaQuery();
+  const headerPadding = isDesktop ? "800" : "600";
   const flexGap = isMobile ? "600" : "1200";
   const sectionPadding = isMobile ? "600" : "1600";
   const [pricingInterval, setPricingInterval] = useState("monthly");
@@ -44,7 +45,7 @@ function App() {
 
   return (
     <AuthenticationProvider>
-      <Header />
+      <Header paddingBottom={headerPadding} paddingTop={headerPadding} />
       <Section padding={sectionPadding} variant="brand">
         <Flex
           container
