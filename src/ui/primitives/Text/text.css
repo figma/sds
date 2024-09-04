@@ -107,10 +107,26 @@
 .text-price {
   align-items: end;
   display: flex;
-  gap: var(--sds-size-space-200);
 
-  > .text-body-small {
-    margin-bottom: var(--sds-size-space-300);
+  &.text-price-size-small {
+    gap: var(--sds-size-space-100);
+
+    > .text-body-small {
+      margin-bottom: var(--sds-size-space-100);
+    }
+  }
+
+  &.text-price-size-large {
+    gap: var(--sds-size-space-200);
+
+    > .text-body-small {
+      margin-bottom: var(--sds-size-space-300);
+    }
+  }
+
+  .text-price-currency {
+    font-size: 0.6em;
+    margin-right: var(--sds-size-space-050);
   }
 }
 

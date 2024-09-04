@@ -23,7 +23,7 @@
     ]
   },
   "devDependencies": {
-    "@figma/code-connect": "^1.0.1",
+    "@figma/code-connect": "^1.0.6",
     "@react-aria/accordion": "^3.0.0-alpha.28",
     "@react-aria/focus": "^3.17.0",
     "@react-aria/interactions": "^3.21.2",

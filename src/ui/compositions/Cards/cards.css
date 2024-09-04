@@ -19,7 +19,25 @@
       inset 0 0 0 var(--sds-size-stroke-border)
         var(--sds-color-border-default-default),
       var(--sds-effects-shadows-drop-shadow-300);
+  }
+
+  &.card-variant-brand {
+    background: var(--sds-color-background-brand-default);
+    box-shadow:
+      inset 0 0 0 var(--sds-size-stroke-brand)
+        var(--sds-color-border-default-default),
+      var(--sds-effects-shadows-drop-shadow-300);
+    color: var(--sds-color-text-brand-on-brand);
+    .text-list {
+      color: inherit;
+    }
+  }
+
+  &.card-padding-600 {
     padding: var(--sds-size-space-600);
+  }
+  &.card-padding-800 {
+    padding: var(--sds-size-space-800);
   }
 
   &:has(.card-interaction[data-hovered]:not([data-focus-visible])) {

@@ -106,6 +106,9 @@ figma.connect(TextListItem, "<FIGMA_TEXT_TEXT_LINK_LIST_ITEM>", {
 figma.connect(TextPrice, "<FIGMA_TEXT_TEXT_PRICE>", {
   props: {
     label: figma.string("Label"),
+    size: figma.enum("Size", {
+      Small: "small",
+    }),
     currency: figma.string("Currency"),
     price: figma.string("Price"),
   },
