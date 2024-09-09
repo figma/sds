@@ -25,7 +25,7 @@ figma.connect(FormBox, "<FIGMA_FORMS_FORM_REGISTER>", {
 });
 
 figma.connect(FormBox, "<FIGMA_FORMS_FORM_NEWSLETTER>", {
-  props: { children: figma.children(["Input", "Button"]) },
+  props: { children: figma.children(["Input Field", "Button"]) },
   example: ({ children }) => (
     <Form singleLine onSubmit={() => {}}>
       {children}
