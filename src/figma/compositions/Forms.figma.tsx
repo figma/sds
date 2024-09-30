@@ -40,7 +40,7 @@ figma.connect(FormBox, "<FIGMA_FORMS_FORM_FORGOT_PASSWORD>", {
 
 figma.connect(FormBox, "<FIGMA_FORMS_FORM_SHIPPING>", {
   props: {
-    legend: figma.children(["Form Legend", "Text"]),
+    legend: figma.children(["Text"]), // "Form Legend" no longer exists! waiting for that to be a new component.
     children: figma.children([
       "Input Field",
       "Select Field",
