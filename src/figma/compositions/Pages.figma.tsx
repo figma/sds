@@ -79,7 +79,7 @@ figma.connect(Section, "<FIGMA_SECTIONS_PAGE_PRODUCT>", {
 
 figma.connect(Section, "<FIGMA_SECTIONS_PAGE_NEWSLETTER>", {
   props: {
-    children: figma.children(["Text Content Heading", "Newsletter"]),
+    children: figma.children(["Text Content Heading", "Form Newsletter"]),
     padding: figma.enum("Platform", { Desktop: "1600", Mobile: "600" }),
     gap: figma.enum("Platform", { Desktop: "1200", Mobile: "600" }),
   },
