@@ -28,8 +28,6 @@ import {
   Text,
   TextContentHeading,
   TextHeading,
-  TextList,
-  TextListItem,
   TextPrice,
 } from "primitives";
 import { AuthenticationProvider } from "providers";
@@ -37,15 +35,17 @@ import { useState } from "react";
 
 function App() {
   const { isMobile, isDesktop } = useMediaQuery();
+  const headerPadding = isDesktop ? "800" : "600";
   const flexGap = isMobile ? "600" : "1200";
   const sectionPadding = isMobile ? "600" : "1600";
   const [pricingInterval, setPricingInterval] = useState("monthly");
   const intervalText = pricingInterval === "monthly" ? "month" : "year";
   const annualRatio = pricingInterval === "monthly" ? 1 : 11;
+  const pricingSize = isDesktop ? "large" : "small";
 
   return (
     <AuthenticationProvider>
-      <Header />
+      <Header paddingBottom={headerPadding} paddingTop={headerPadding} />
       <Section padding={sectionPadding} variant="brand">
         <Flex
           container
@@ -97,47 +97,35 @@ function App() {
           <FlexItem>
             <Flex wrap type="third" gap="1200">
               <PricingCard
+                size={pricingSize}
                 action="Select"
-                actionVariant="neutral"
                 heading="Free"
                 price={(0 * annualRatio).toString()}
-                pricePer={`/ ${intervalText}`}
-                list={
-                  <TextList>
-                    <TextListItem>List item 1</TextListItem>
-                    <TextListItem>List item 2</TextListItem>
-                    <TextListItem>List item 3</TextListItem>
-                  </TextList>
-                }
+                priceCurrency="$"
+                priceLabel={`/ ${intervalText}`}
+                list={["List item 1", "List item 2", "List item 3"]}
                 onAction={() => {}}
               />
               <PricingCard
-                action="Select"
-                heading="Starter"
-                price={(50 * annualRatio).toString()}
-                pricePer={`/ ${intervalText}`}
-                list={
-                  <TextList>
-                    <TextListItem>List item 1</TextListItem>
-                    <TextListItem>List item 2</TextListItem>
-                    <TextListItem>List item 3</TextListItem>
-                  </TextList>
-                }
-                onAction={() => {}}
-              />
-              <PricingCard
+                size={pricingSize}
                 action="Select"
                 actionVariant="neutral"
+                variant="brand"
+                heading="Starter"
+                price={(50 * annualRatio).toString()}
+                priceCurrency="$"
+                priceLabel={`/ ${intervalText}`}
+                list={["List item 1", "List item 2", "List item 3"]}
+                onAction={() => {}}
+              />
+              <PricingCard
+                size={pricingSize}
+                action="Select"
                 heading="Enterprise"
                 price={(150 * annualRatio).toString()}
-                pricePer={`/ ${intervalText}`}
-                list={
-                  <TextList>
-                    <TextListItem>List item 1</TextListItem>
-                    <TextListItem>List item 2</TextListItem>
-                    <TextListItem>List item 3</TextListItem>
-                  </TextList>
-                }
+                priceCurrency="$"
+                priceLabel={`/ ${intervalText}`}
+                list={["List item 1", "List item 2", "List item 3"]}
                 onAction={() => {}}
               />
             </Flex>

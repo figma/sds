@@ -54,8 +54,18 @@ figma.connect(PricingCard, "<FIGMA_CARDS_PRICING_CARD>", {
     }),
     textPrice: figma.nestedProps("Text Price", {
       price: figma.string("Price"),
+      priceCurrency: figma.string("Currency"),
+      priceLabel: figma.string("Label"),
+      size: figma.enum("Size", {
+        Large: "large",
+        Small: "small",
+      }),
     }),
     list: figma.children("Text List"),
+    variant: figma.enum("Variant", {
+      Stroke: "stroke",
+      Brand: "brand",
+    }),
   },
   example: ({ textHeading, textPrice, list, action, ...props }) => (
     <PricingCard
@@ -63,8 +73,11 @@ figma.connect(PricingCard, "<FIGMA_CARDS_PRICING_CARD>", {
       action={action.label}
       actionVariant={action.variant}
       onAction={() => {}}
-      list={list}
+      listSlot={list}
       price={textPrice.price}
+      priceCurrency={textPrice.priceCurrency}
+      priceLabel={textPrice.priceLabel}
+      size={textPrice.size}
       {...props}
     />
   ),

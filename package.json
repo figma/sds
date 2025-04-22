@@ -23,7 +23,7 @@
     ]
   },
   "devDependencies": {
-    "@figma/code-connect": "^1.0.1",
+    "@figma/code-connect": "^1.1.4",
     "@react-aria/accordion": "^3.0.0-alpha.28",
     "@react-aria/focus": "^3.17.0",
     "@react-aria/interactions": "^3.21.2",
@@ -56,6 +56,6 @@
     "react-dom": "^18.2.0",
     "storybook": "^8.1.11",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.5.5"
   }
 }

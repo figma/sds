@@ -11,11 +11,14 @@ import {
   ButtonProps,
   Text,
   TextHeading,
+  TextList,
+  TextListItem,
+  TextPrice,
+  TextPriceProps,
   TextSmall,
   TextStrong,
-  TextTitlePage,
 } from "primitives";
-import { ComponentPropsWithoutRef, ReactNode } from "react";
+import { ComponentPropsWithoutRef, ReactNode, createContext } from "react";
 import { AnchorOrButton, AnchorOrButtonProps } from "utils";
 import "./cards.css";
 
@@ -43,10 +46,13 @@ export type CardProps = ComponentPropsWithoutRef<"div"> & {
    */
   asset?: React.ReactNode;
   /**
-   * Style variation of the card.
-   * stroke and padded both add spacing around the card, default is unpadded.
+   * Padding can be none, 600, or 800
    */
-  variant?: "default" | "stroke";
+  padding?: "600" | "800";
+  /**
+   * Style variation of the card.
+   */
+  variant?: "default" | "stroke" | "brand";
 };
 
 /**
@@ -60,6 +66,7 @@ export function Card({
   interactionProps,
   variant = "default",
   asset,
+  padding,
   ...props
 }: CardProps) {
   const { isMobile } = useMediaQuery();
@@ -68,6 +75,7 @@ export function Card({
     "card",
     `card-align-${align}`,
     `card-direction-${isMobile ? "vertical" : direction}`,
+    `card-padding-${padding ? padding : "0"}`,
     `card-variant-${variant}`,
   );
   return (
@@ -89,15 +97,23 @@ export type PricingCardProps = {
   /**
    * The price excluding currency
    */
-  price: string;
+  price: TextPriceProps["price"];
+  /**
+   * The price currency
+   */
+  priceCurrency: TextPriceProps["currency"];
   /**
    * The text for price per
    */
-  pricePer?: string;
+  priceLabel?: TextPriceProps["label"];
   /**
-   * A list of items (<TextList />)
+   * Size of the pricing
    */
-  list: ReactNode;
+  size?: TextPriceProps["size"];
+  /**
+   * Card variant
+   */
+  variant?: CardProps["variant"];
   /**
    * The text labeling the action button
    */
@@ -110,7 +126,56 @@ export type PricingCardProps = {
    * The action of the button.
    */
   onAction: () => void;
-};
+} & (
+  | { list: string[]; listSlot?: undefined }
+  | { list?: undefined; listSlot: ReactNode }
+);
+
+/**
+ * An example pricing context for the card grid to use
+ */
+
+export const PricingContext = createContext<{
+  monthlyOptions: PricingCardProps[];
+  annualOptions: PricingCardProps[];
+}>({
+  monthlyOptions: [
+    {
+      heading: "Beginner",
+      price: "5",
+      priceCurrency: "$",
+      priceLabel: "/ mo",
+      list: [],
+      action: "Select Beginner",
+      actionVariant: "primary",
+      variant: "stroke",
+      onAction: () => {},
+    },
+    {
+      heading: "Advanced",
+      price: "10",
+      priceCurrency: "$",
+      priceLabel: "/ mo",
+      list: [],
+      action: "Select Advanced",
+      actionVariant: "primary",
+      variant: "stroke",
+      onAction: () => {},
+    },
+    {
+      heading: "Business",
+      price: "25",
+      priceCurrency: "$",
+      priceLabel: "/ mo",
+      list: [],
+      action: "Select Business",
+      actionVariant: "neutral",
+      variant: "brand",
+      onAction: () => {},
+    },
+  ],
+  annualOptions: [],
+});
 
 /**
  * A card that demonstrates price point and value, often in comparison to other cards.
@@ -119,22 +184,45 @@ export function PricingCard({
   heading,
   action,
   actionVariant = "primary",
-  list,
   onAction,
   price,
-  pricePer = "/ per month",
+  priceCurrency,
+  priceLabel = "/ mo",
+  size = "large",
+  variant = "stroke",
   ...props
 }: PricingCardProps) {
   return (
-    <Card {...props} direction="vertical" variant="stroke">
-      <Flex direction="column" gap="200">
+    <Card
+      {...props}
+      variant={variant}
+      padding={size === "large" ? "800" : "600"}
+      direction="vertical"
+    >
+      <Flex
+        direction={size === "large" ? "column" : "row"}
+        alignPrimary={size === "large" ? "center" : "space-between"}
+        alignSecondary="center"
+        gap={size === "large" ? "400" : undefined}
+      >
         <TextHeading>{heading}</TextHeading>
-        <TextTitlePage>
-          ${price}
-          <Text elementType="span"> {pricePer}</Text>
-        </TextTitlePage>
+        <TextPrice
+          size={size}
+          label={priceLabel}
+          currency={priceCurrency}
+          price={price}
+        />
       </Flex>
-      {list}
+      {props.list ? (
+        <TextList density={size === "large" ? "default" : "tight"}>
+          {props.list.map((item) => (
+            <TextListItem key={item}>{item}</TextListItem>
+          ))}
+        </TextList>
+      ) : (
+        props.listSlot
+      )}
+
       <Flex alignPrimary="stretch">
         <ButtonGroup align="justify">
           <Button variant={actionVariant} onPress={onAction}>
@@ -172,7 +260,13 @@ export function ProductInfoCard({
   ...props
 }: ProductInfoCardProps) {
   return (
-    <Card {...props} direction="vertical" variant="stroke" asset={asset}>
+    <Card
+      {...props}
+      padding="600"
+      direction="vertical"
+      variant="stroke"
+      asset={asset}
+    >
       <Flex direction="column" gap="200">
         <Text>{heading}</Text>
         <TextStrong>${price}</TextStrong>
@@ -223,7 +317,7 @@ export function ReviewCard({
   ...props
 }: ReviewCardProps) {
   return (
-    <Card {...props} direction="vertical" variant="stroke">
+    <Card {...props} padding="600" direction="vertical" variant="stroke">
       <Flex gap="100">
         {new Array(stars).fill(0).map((_, i) => (
           <IconStar key={i} />
@@ -265,7 +359,13 @@ export function StatsCard({
   ...props
 }: StatsCardProps) {
   return (
-    <Card {...props} direction="vertical" variant="stroke" align="center">
+    <Card
+      {...props}
+      padding="600"
+      direction="vertical"
+      variant="stroke"
+      align="center"
+    >
       {icon}
       <Flex direction="column" alignSecondary="center" gap="100">
         <TextHeading>{stat}</TextHeading>
@@ -310,7 +410,7 @@ export function TestimonialCard({
   ...props
 }: TestimonialCardProps) {
   return (
-    <Card {...props} direction="vertical" variant="stroke">
+    <Card {...props} padding="600" direction="vertical" variant="stroke">
       <TextHeading>{heading}</TextHeading>
       <AvatarBlock title={name} description={`@${username}`}>
         <Avatar size="large" src={src} initials={initials} />

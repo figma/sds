@@ -1,6 +1,8 @@
 import { figma } from "@figma/code-connect";
+import { PricingCard, PricingContext } from "compositions";
 import { useMediaQuery } from "hooks";
 import { Flex, FlexItem, Section } from "layout";
+import { useContext } from "react";
 
 figma.connect(Section, "<FIGMA_SECTIONS_CARD_GRID_ICON>", {
   props: {
@@ -88,21 +90,24 @@ figma.connect(Section, "<FIGMA_SECTIONS_CARD_GRID_IMAGE>", {
 
 figma.connect(Section, "<FIGMA_SECTIONS_CARD_GRID_PRICING>", {
   props: {
-    cards: figma.children("Pricing Card"),
     schedule: figma.children("Navigation Pill List"),
   },
-  example: ({ cards, schedule }) => {
+  example: ({ schedule }) => {
+    const { monthlyOptions } = useContext(PricingContext);
     const { isMobile } = useMediaQuery();
     const padding = isMobile ? "600" : "1200";
     const gap = isMobile ? "600" : "1200";
     const gapCards = isMobile ? "600" : "1200";
+    const size = isMobile ? "small" : "large";
 
     return (
       <Section padding={padding}>
         <Flex container direction="column" gap={gap}>
           {schedule}
           <Flex container direction="row" gap={gapCards}>
-            {cards}
+            {monthlyOptions.map((pricing) => (
+              <PricingCard key={pricing.heading} size={size} {...pricing} />
+            ))}
           </Flex>
         </Flex>
       </Section>

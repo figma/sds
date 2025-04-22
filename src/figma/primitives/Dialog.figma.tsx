@@ -1,5 +1,11 @@
 import figma from "@figma/code-connect";
-import { Dialog, Text, TextHeading } from "primitives";
+import {
+  Dialog,
+  DialogBody,
+  DialogClose,
+  DialogModal,
+  DialogTitle,
+} from "primitives";
 
 figma.connect(Dialog, "<FIGMA_DIALOG_DIALOG_BODY>", {
   props: {
@@ -10,9 +16,21 @@ figma.connect(Dialog, "<FIGMA_DIALOG_DIALOG_BODY>", {
   },
   example: ({ heading, body, buttons, ...props }) => (
     <Dialog {...props}>
-      <TextHeading>{heading}</TextHeading>
-      <Text>{body}</Text>
+      <DialogClose onPress={() => {}} />
+      <DialogTitle>{heading}</DialogTitle>
+      <DialogBody>{body}</DialogBody>
       {buttons}
     </Dialog>
+  ),
+});
+
+figma.connect(Dialog, "<FIGMA_DIALOG_DIALOG>", {
+  props: {
+    children: figma.children("Dialog Body"),
+  },
+  example: ({ children }) => (
+    <DialogModal isDismissable isOpen={true} onOpenChange={() => {}}>
+      {children}
+    </DialogModal>
   ),
 });

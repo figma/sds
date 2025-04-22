@@ -158,19 +158,31 @@ export type TextPriceProps = RACTextProps & {
   currency: string;
   price: string;
   label?: string;
+  size?: "small" | "large";
 };
 export function TextPrice({
   className,
   currency,
+  size = "large",
   price,
   label,
   ...props
 }: TextPriceProps) {
-  const classNames = clsx(className, "text-price");
+  const classNames = clsx(className, "text-price", `text-price-size-${size}`);
+  const content = (
+    <>
+      <sup className="text-price-currency">{currency}</sup>
+      {price}
+    </>
+  );
   return (
     <RACText elementType="p" className={classNames} {...props}>
-      <TextTitlePage elementType="span">{currency}</TextTitlePage>
-      <TextTitlePage elementType="span">{price}</TextTitlePage>
+      {size === "small" ? (
+        <TextHeading elementType="span">{content}</TextHeading>
+      ) : (
+        <TextTitlePage elementType="span">{content}</TextTitlePage>
+      )}
+
       {label && <TextSmall>{label}</TextSmall>}
     </RACText>
   );
