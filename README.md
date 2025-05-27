@@ -83,7 +83,7 @@ Placeholder images.
 
 ### [src/ui/layout](./src/ui/layout/)
 
-Layout components. Crucial to SDS layouts, but do not have analagous component in Figma.
+Layout components. Crucial to SDS layouts, but do not have analogous component in Figma.
 
 ### [src/ui/primitives](./src/ui/primitives/)
 
