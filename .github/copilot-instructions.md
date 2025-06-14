@@ -53,6 +53,7 @@ When importing SDS components, use aliases to ensure correct paths. These are de
 import { Footer, Header } from "compositions";
 import { useMediaQuery } from "hooks";
 import { IconChevronLeft } from "icons";
+import { placeholder } from "images";
 import { Flex, Section } from "layout";
 import {
   Accordion,
@@ -74,6 +75,7 @@ All design tokens from Figma are defined as CSS variables in [src/theme.css](../
 
 - Colors: Use `var(--sds-color-*)` variables (e.g., `var(--sds-color-text-default-default)`)
 - Spacing: Use `var(--sds-size-space-*)` variables (e.g., `var(--sds-size-space-400)`)
+  - **important**: These variables can map to a prop value numerically. For example, `<Section padding="400">` corresponds to `padding: var(--sds-size-space-400)` in a Figma response.
 - Typography: Use `var(--sds-typography-*)` or `var(--sds-font-*)` variables
 - Border radius: Use `var(--sds-size-radius-*)` variables
 - Shadows: Use `var(--sds-effects-shadows-*)` variables
@@ -105,7 +107,7 @@ src/
 │   ├── providers/      # React context providers
 │   └── utils/          # Utility functions
 ├── stories/            # Storybook stories for all components
-├── figma/              # Figma Code Connect files
+├── figma/              # Figma [Code Connect](https://www.figma.com/code-connect-docs/react/) files
 │   ├── primitives/     # Maps Figma components to React primitives
 │   ├── compositions/   # Maps Figma compositions to React components
 │   └── icons/          # Maps Figma icons to React icons
@@ -249,7 +251,7 @@ function ResponsiveExample() {
         {/* Content Grid */}
         <Flex direction={isMobile ? "column" : "row"} gap="1600" type="thirds">
           {content.map((item) => (
-            <ContentCard key={item.id} {...item} />
+            <Card key={item.id} {...item} />
           ))}
         </Flex>
       </Flex>
