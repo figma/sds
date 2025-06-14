@@ -1,6 +1,5 @@
-import { Footer, Header, Panel, ProductInfoCard } from "compositions";
+import { Footer, Header, Panel } from "compositions";
 import { useMediaQuery } from "hooks";
-import { IconCheck } from "icons";
 import { placeholder } from "images";
 import { Flex, FlexItem, Section } from "layout";
 import {
@@ -8,13 +7,9 @@ import {
   AccordionItem,
   Button,
   Image,
-  Search,
   SelectField,
   SelectItem,
   Tag,
-  TagToggle,
-  TagToggleGroup,
-  TagToggleList,
   Text,
   TextContentHeading,
   TextHeading,
@@ -22,6 +17,7 @@ import {
 } from "primitives";
 import { AuthenticationProvider } from "providers";
 import { PricingGrid } from "./examples/PricingGrid";
+import { ProductGrid } from "./examples/ProductGrid";
 import { WelcomeHero } from "./examples/WelcomeHero";
 
 function App() {
@@ -34,6 +30,7 @@ function App() {
     <AuthenticationProvider>
       <Header paddingBottom={headerPadding} paddingTop={headerPadding} />
       <WelcomeHero />
+      <ProductGrid />
       <PricingGrid />
       <Section padding={sectionPadding} variant="neutral">
         <Panel alignSecondary="center" gap={flexGap} type="half">
@@ -169,73 +166,6 @@ function App() {
             size="medium"
           />
         </Panel>
-      </Section>
-      <Section padding={sectionPadding}>
-        <Flex container wrap gap={flexGap}>
-          <FlexItem size={isDesktop ? "major" : "full"}>
-            <Flex direction="column" gap="1200" alignSecondary="stretch">
-              <Flex
-                alignPrimary="space-between"
-                alignSecondary="center"
-                type="quarter"
-                wrap
-                gap="600"
-              >
-                <FlexItem size="fill">
-                  <TagToggleGroup
-                    selectionMode="multiple"
-                    aria-label="Search filters"
-                    defaultSelectedKeys={["new"]}
-                  >
-                    <TagToggleList>
-                      <TagToggle id="new" iconStart={<IconCheck />}>
-                        New
-                      </TagToggle>
-                      <TagToggle id="price-ascending">
-                        Price ascending
-                      </TagToggle>
-                      <TagToggle id="price-descending">
-                        Price descending
-                      </TagToggle>
-                      <TagToggle id="rating">Rating</TagToggle>
-                    </TagToggleList>
-                  </TagToggleGroup>
-                </FlexItem>
-                <FlexItem size="minor">
-                  <Flex alignPrimary="stretch">
-                    <Search placeholder="Search" />
-                  </Flex>
-                </FlexItem>
-              </Flex>
-              <Flex type="quarter" wrap gap="600">
-                <ProductInfoCard
-                  asset={<Image alt="Accessibility!" src={placeholder} />}
-                  heading="Product"
-                  price="5"
-                  description="Wow do we have a cool thing for you. What an amazing thing."
-                />
-                <ProductInfoCard
-                  asset={<Image alt="Accessibility!" src={placeholder} />}
-                  heading="Product"
-                  price="5"
-                  description="Wow do we have a cool thing for you. What an amazing thing."
-                />
-                <ProductInfoCard
-                  asset={<Image alt="Accessibility!" src={placeholder} />}
-                  heading="Product"
-                  price="5"
-                  description="Wow do we have a cool thing for you. What an amazing thing."
-                />
-                <ProductInfoCard
-                  asset={<Image alt="Accessibility!" src={placeholder} />}
-                  heading="Product"
-                  price="5"
-                  description="Wow do we have a cool thing for you. What an amazing thing."
-                />
-              </Flex>
-            </Flex>
-          </FlexItem>
-        </Flex>
       </Section>
       <Section padding={sectionPadding} variant="brand">
         <Panel type="auto">

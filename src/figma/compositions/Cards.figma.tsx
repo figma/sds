@@ -110,6 +110,7 @@ figma.connect(ProductInfoCard, "<FIGMA_CARDS_PRODUCT_INFO_CARD>", {
           alt="Always describe images"
         />
       }
+      rating={4.5}
       heading={textProps.text}
       price={priceProps.price}
       description={descriptionProps.description}

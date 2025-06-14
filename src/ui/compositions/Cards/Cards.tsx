@@ -220,6 +220,10 @@ export type ProductInfoCardProps = Pick<CardProps, "asset"> & {
    * The description of the product
    */
   description: string;
+  /**
+   * The rating for the product
+   */
+  rating: number;
 };
 
 /**
@@ -230,6 +234,7 @@ export function ProductInfoCard({
   heading,
   price,
   description,
+  rating,
   ...props
 }: ProductInfoCardProps) {
   return (
@@ -241,9 +246,11 @@ export function ProductInfoCard({
       asset={asset}
     >
       <Flex direction="column" gap="200">
-        <Text>{heading}</Text>
-        <TextStrong>${price}</TextStrong>
-        <TextSmall>{description}</TextSmall>
+        <TextHeading>{heading}</TextHeading>
+        <TextStrong>
+          ${price} ({rating} rating)
+        </TextStrong>
+        <Text>{description}</Text>
       </Flex>
     </Card>
   );
