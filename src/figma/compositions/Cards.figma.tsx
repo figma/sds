@@ -44,6 +44,7 @@ figma.connect(PricingCard, "<FIGMA_CARDS_PRICING_CARD>", {
     action: figma.nestedProps<{
       label: string;
       variant: ButtonProps["variant"];
+      icon?: React.ReactNode;
     }>("Button", {
       label: figma.string("Label"),
       variant: figma.enum("Variant", {
@@ -51,6 +52,7 @@ figma.connect(PricingCard, "<FIGMA_CARDS_PRICING_CARD>", {
         Neutral: "neutral",
         Subtle: "subtle",
       }),
+      icon: figma.instance("Icon End"),
     }),
     textPrice: figma.nestedProps("Text Price", {
       price: figma.string("Price"),
@@ -71,9 +73,12 @@ figma.connect(PricingCard, "<FIGMA_CARDS_PRICING_CARD>", {
     <PricingCard
       heading={textHeading.text}
       action={action.label}
+      actionIcon={action.icon}
       actionVariant={action.variant}
       onAction={() => {}}
       listSlot={list}
+      interval="month"
+      sku="example_sku"
       price={textPrice.price}
       priceCurrency={textPrice.priceCurrency}
       priceLabel={textPrice.priceLabel}

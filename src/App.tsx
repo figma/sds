@@ -1,10 +1,4 @@
-import {
-  Footer,
-  Header,
-  Panel,
-  PricingCard,
-  ProductInfoCard,
-} from "compositions";
+import { Footer, Header, Panel, ProductInfoCard } from "compositions";
 import { useMediaQuery } from "hooks";
 import { IconCheck } from "icons";
 import { placeholder } from "images";
@@ -16,8 +10,6 @@ import {
   Form,
   Image,
   Input,
-  Navigation,
-  NavigationPill,
   Search,
   SelectField,
   SelectItem,
@@ -31,17 +23,13 @@ import {
   TextPrice,
 } from "primitives";
 import { AuthenticationProvider } from "providers";
-import { useState } from "react";
+import { PricingGrid } from "./examples/PricingGrid";
 
 function App() {
   const { isMobile, isDesktop } = useMediaQuery();
   const headerPadding = isDesktop ? "800" : "600";
   const flexGap = isMobile ? "600" : "1200";
   const sectionPadding = isMobile ? "600" : "1600";
-  const [pricingInterval, setPricingInterval] = useState("monthly");
-  const intervalText = pricingInterval === "monthly" ? "month" : "year";
-  const annualRatio = pricingInterval === "monthly" ? 1 : 11;
-  const pricingSize = isDesktop ? "large" : "small";
 
   return (
     <AuthenticationProvider>
@@ -69,69 +57,7 @@ function App() {
           </Form>
         </Flex>
       </Section>
-      <Section padding={sectionPadding}>
-        <Flex
-          container
-          gap={flexGap}
-          direction="column"
-          alignSecondary="stretch"
-        >
-          <FlexItem>
-            <Flex alignPrimary="center">
-              <Navigation direction="row">
-                <NavigationPill
-                  onPress={() => setPricingInterval("monthly")}
-                  isSelected={pricingInterval === "monthly"}
-                >
-                  Monthly
-                </NavigationPill>
-                <NavigationPill
-                  onPress={() => setPricingInterval("yearly")}
-                  isSelected={pricingInterval === "yearly"}
-                >
-                  Yearly
-                </NavigationPill>
-              </Navigation>
-            </Flex>
-          </FlexItem>
-          <FlexItem>
-            <Flex wrap type="third" gap="1200">
-              <PricingCard
-                size={pricingSize}
-                action="Select"
-                heading="Free"
-                price={(0 * annualRatio).toString()}
-                priceCurrency="$"
-                priceLabel={`/ ${intervalText}`}
-                list={["List item 1", "List item 2", "List item 3"]}
-                onAction={() => {}}
-              />
-              <PricingCard
-                size={pricingSize}
-                action="Select"
-                actionVariant="neutral"
-                variant="brand"
-                heading="Starter"
-                price={(50 * annualRatio).toString()}
-                priceCurrency="$"
-                priceLabel={`/ ${intervalText}`}
-                list={["List item 1", "List item 2", "List item 3"]}
-                onAction={() => {}}
-              />
-              <PricingCard
-                size={pricingSize}
-                action="Select"
-                heading="Enterprise"
-                price={(150 * annualRatio).toString()}
-                priceCurrency="$"
-                priceLabel={`/ ${intervalText}`}
-                list={["List item 1", "List item 2", "List item 3"]}
-                onAction={() => {}}
-              />
-            </Flex>
-          </FlexItem>
-        </Flex>
-      </Section>
+      <PricingGrid />
       <Section padding={sectionPadding} variant="neutral">
         <Panel alignSecondary="center" gap={flexGap} type="half">
           <Image
