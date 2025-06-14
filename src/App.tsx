@@ -7,9 +7,7 @@ import {
   Accordion,
   AccordionItem,
   Button,
-  Form,
   Image,
-  Input,
   Search,
   SelectField,
   SelectItem,
@@ -24,6 +22,7 @@ import {
 } from "primitives";
 import { AuthenticationProvider } from "providers";
 import { PricingGrid } from "./examples/PricingGrid";
+import { WelcomeHero } from "./examples/WelcomeHero";
 
 function App() {
   const { isMobile, isDesktop } = useMediaQuery();
@@ -34,29 +33,7 @@ function App() {
   return (
     <AuthenticationProvider>
       <Header paddingBottom={headerPadding} paddingTop={headerPadding} />
-      <Section padding={sectionPadding} variant="brand">
-        <Flex
-          container
-          wrap
-          gap={flexGap}
-          direction="column"
-          alignPrimary="center"
-          alignSecondary="center"
-          type="third"
-        >
-          <TextContentHeading
-            align="center"
-            heading="Follow the latest trends"
-            subheading="With our daily newsletter"
-          />
-          <Form singleLine>
-            <Input aria-label="Email address" placeholder="you@example.com" />
-            <Button onPress={() => {}} variant="neutral">
-              Submit
-            </Button>
-          </Form>
-        </Flex>
-      </Section>
+      <WelcomeHero />
       <PricingGrid />
       <Section padding={sectionPadding} variant="neutral">
         <Panel alignSecondary="center" gap={flexGap} type="half">
