@@ -53,7 +53,6 @@ When importing SDS components, use aliases to ensure correct paths. These are de
 import { Footer, Header } from "compositions";
 import { useMediaQuery } from "hooks";
 import { IconChevronLeft } from "icons";
-import { questioningFaces } from "images";
 import { Flex, Section } from "layout";
 import {
   Accordion,
@@ -96,23 +95,23 @@ All design tokens from Figma are defined as CSS variables in [src/theme.css](../
 
 ```
 src/
-├── ui/                    # Main component library
-│   ├── primitives/        # Atomic components (Button, Input, etc.)
-│   ├── compositions/      # Complex components (Cards, Forms, etc.)
-│   ├── layout/           # Layout components (Flex, Section, Grid)
-│   ├── hooks/            # Custom React hooks
-│   ├── icons/            # SVG icon components
-│   ├── images/           # Image assets
-│   ├── providers/        # React context providers
-│   └── utils/            # Utility functions
-├── stories/              # Storybook stories for all components
-├── figma/               # Figma Code Connect files
-│   ├── primitives/      # Maps Figma components to React primitives
-│   ├── compositions/    # Maps Figma compositions to React components
-│   └── icons/           # Maps Figma icons to React icons
-├── theme.css            # CSS custom properties (design tokens)
-├── reset.css            # CSS reset
-├── responsive.css       # Responsive utilities
+├── ui/                 # Main component library
+│   ├── primitives/     # Atomic components (Button, Input, etc.)
+│   ├── compositions/   # Complex components (Cards, Forms, etc.)
+│   ├── layout/         # Layout components (Flex, Section, Grid)
+│   ├── hooks/          # Custom React hooks
+│   ├── icons/          # SVG icon components
+│   ├── images/         # Image assets
+│   ├── providers/      # React context providers
+│   └── utils/          # Utility functions
+├── stories/            # Storybook stories for all components
+├── figma/              # Figma Code Connect files
+│   ├── primitives/     # Maps Figma components to React primitives
+│   ├── compositions/   # Maps Figma compositions to React components
+│   └── icons/          # Maps Figma icons to React icons
+├── theme.css           # CSS custom properties (design tokens)
+├── reset.css           # CSS reset
+├── responsive.css      # Responsive utilities
 └── App.tsx             # Demo application
 ```
 
@@ -120,7 +119,7 @@ src/
 
 ```
 scripts/
-├── tokens/              # Design token sync from Figma
+├── tokens/             # Design token sync from Figma
 ├── icons/              # Icon sync from Figma
 ├── component-metadata/ # Component metadata management
 └── dev-resources/      # Development resource generation
