@@ -221,7 +221,7 @@ When you see `hidden={true}` in Figma data, it indicates that the node should be
 // Figma: Cards in a grid
 // SDS Implementation:
 <Section>
-  <Flex direction="row" gap="400" type="thirds">
+  <Flex direction="row" gap="400" type="third">
     <div>Card 1</div>
     <div>Card 2</div>
     <div>Card 3</div>
@@ -249,7 +249,7 @@ function ResponsiveExample() {
         </Navigation>
 
         {/* Content Grid */}
-        <Flex direction={isMobile ? "column" : "row"} gap="1600" type="thirds">
+        <Flex direction={isMobile ? "column" : "row"} gap="1600" type="third">
           {content.map((item) => (
             <Card key={item.id} {...item} />
           ))}
@@ -293,7 +293,7 @@ import { Item } from "@react-stately/collections"; // WRONG
 <div style={{ color: "#111111", padding: "16px" }}> // WRONG
 ```
 
-**Fix**: Use CSS variables: `style={{ color: "var(--sds-color-text-default-default)", padding: "var(--sds-size-space-400)" }}`
+**Fix**: Use CSS variables via class names: `<div className="example">` and `.example { color: var(--sds-color-text-default-default); padding: var(--sds-size-space-400); }`
 
 ### ❌ Pitfall 3: Creating custom layout CSS
 
@@ -301,7 +301,7 @@ import { Item } from "@react-stately/collections"; // WRONG
 <div className="grid grid-cols-3 gap-4"> // WRONG
 ```
 
-**Fix**: Use layout components: `<Flex direction="row" gap="400" type="thirds">`
+**Fix**: Use layout components: `<Flex direction="row" gap="400" type="third">`
 
 ### ❌ Pitfall 4: Not reading component APIs
 
@@ -309,7 +309,7 @@ import { Item } from "@react-stately/collections"; // WRONG
 <Button active={true}> // WRONG - prop doesn't exist
 ```
 
-**Fix**: Read the TypeScript file: `<Button isSelected={true}>` or `<Button variant="primary">`
+**Fix**: Read the TypeScript file: `<Button isSelected>` or `<Button variant="primary">`
 
 ## Component Categories
 
@@ -367,9 +367,6 @@ Complex, pre-built component patterns:
 Custom React hooks for common functionality:
 
 - **useMediaQuery** - Responsive breakpoint detection
-- **useLocalStorage** - Persistent local storage
-- **useDebounce** - Input debouncing
-- **useClipboard** - Copy to clipboard functionality
 
 ## Figma Integration
 
