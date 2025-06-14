@@ -55,13 +55,7 @@ const shared: Record<
   >
 > = {
   beginner: {
-    list: [
-      "Promises",
-      "Intentions",
-      "240 credits",
-      "Small hoverboard",
-      "Helmet",
-    ],
+    list: ["Promises", "Intentions", "240 credits"],
     heading: "Beginner",
     priceCurrency: "$",
     action: "Select Beginner",
@@ -70,13 +64,7 @@ const shared: Record<
     variant: "stroke",
   },
   advanced: {
-    list: [
-      "Kept promises",
-      "Better intentions",
-      "480 credits",
-      "Medium hoverboard",
-      "Helmet",
-    ],
+    list: ["Kept promises", "Better intentions", "480 credits"],
     heading: "Advanced",
     priceCurrency: "$",
     action: "Select Advanced",
@@ -88,13 +76,7 @@ const shared: Record<
     heading: "Business",
     priceCurrency: "$",
     variant: "brand",
-    list: [
-      "Kept promises",
-      "Best intentions",
-      "Infinite credits",
-      "Large hoverboard",
-      "Extra helmet",
-    ],
+    list: ["Kept promises", "Best intentions", "Infinite credits"],
     action: "Select Business",
     actionVariant: "neutral",
     actionIcon: <IconGithub />,
