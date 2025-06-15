@@ -38,9 +38,7 @@ export type CardProps = ComponentPropsWithoutRef<"div"> & {
    * If present, the card itself is pressable.
    * AnchorOrButtonProps extend either button or anchor behavior.
    */
-  interactionProps?: Omit<AnchorOrButtonProps, "aria-label"> & {
-    "aria-label": string;
-  };
+  interactionProps?: AnchorOrButtonProps;
   /**
    * An asset for the card.
    * Can be an Icon or an Image instance.

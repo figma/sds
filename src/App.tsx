@@ -5,18 +5,13 @@ import { Flex, FlexItem, Section } from "layout";
 import {
   Accordion,
   AccordionItem,
-  Button,
   Image,
-  SelectField,
-  SelectItem,
-  Tag,
   Text,
   TextContentHeading,
-  TextHeading,
-  TextPrice,
 } from "primitives";
 import { AuthenticationProvider } from "providers";
 import { PricingGrid } from "./examples/PricingGrid";
+import { ProductDetails } from "./examples/ProductDetails";
 import { ProductGrid } from "./examples/ProductGrid";
 import { WelcomeHero } from "./examples/WelcomeHero";
 
@@ -30,8 +25,9 @@ function App() {
     <AuthenticationProvider>
       <Header paddingBottom={headerPadding} paddingTop={headerPadding} />
       <WelcomeHero />
-      <ProductGrid />
+      <ProductDetails />
       <PricingGrid />
+      <ProductGrid />
       <Section padding={sectionPadding} variant="neutral">
         <Panel alignSecondary="center" gap={flexGap} type="half">
           <Image
@@ -62,81 +58,7 @@ function App() {
           </FlexItem>
         </Panel>
       </Section>
-      <Section padding={sectionPadding}>
-        <Flex container type="half" wrap gap={flexGap}>
-          <Image
-            src={placeholder}
-            alt="Always use image alt"
-            size="large"
-            aspectRatio="4-3"
-          />
-          <FlexItem size="half">
-            <Flex direction="column" gap="600" alignSecondary="stretch">
-              <TextHeading>Text Heading</TextHeading>
-              <FlexItem>
-                <Flex direction="column" gap="200">
-                  <Tag variant="secondary" scheme="positive">
-                    Tag
-                  </Tag>
-                  <TextPrice label="/ month" currency="$" price="50" />
-                </Flex>
-              </FlexItem>
-              <Text>Text</Text>
-              <FlexItem>
-                <Flex wrap type="half" gap="200">
-                  <SelectField
-                    label="Label"
-                    defaultSelectedKey="Hello World"
-                    placeholder="Select theme..."
-                  >
-                    <SelectItem>item1</SelectItem>
-                    <SelectItem>item2</SelectItem>
-                    <SelectItem>item3</SelectItem>
-                    <SelectItem>item4</SelectItem>
-                    <SelectItem>item5</SelectItem>
-                  </SelectField>
-                  <SelectField
-                    label="Label"
-                    defaultSelectedKey="Hello World"
-                    placeholder="Select theme..."
-                  >
-                    <SelectItem>item1</SelectItem>
-                    <SelectItem>item2</SelectItem>
-                    <SelectItem>item3</SelectItem>
-                    <SelectItem>item4</SelectItem>
-                    <SelectItem>item5</SelectItem>
-                  </SelectField>
-                </Flex>
-              </FlexItem>
-              <Button onPress={() => {}} variant="primary">
-                Button
-              </Button>
-              <Accordion>
-                <AccordionItem title="Title">
-                  Answer the frequently asked question in a simple sentence, a
-                  longish paragraph, or even in a list.
-                </AccordionItem>
-              </Accordion>
-            </Flex>
-          </FlexItem>
-        </Flex>
-      </Section>
-      <Section padding={sectionPadding} variant="brand">
-        <Panel type="half" gap={flexGap}>
-          <Image
-            src={placeholder}
-            alt="Always use image alt"
-            aspectRatio="4-3"
-            size="medium"
-          />
-          <Image
-            src={placeholder}
-            alt="Always use image alt"
-            aspectRatio="4-3"
-            size="medium"
-          />
-        </Panel>
-      </Section>
+
       <Section padding={sectionPadding}>
         <Panel type="half" gap={flexGap}>
           <FlexItem size="half">
@@ -167,6 +89,23 @@ function App() {
           />
         </Panel>
       </Section>
+
+      <Section padding={sectionPadding} variant="brand">
+        <Panel type="half" gap={flexGap}>
+          <Image
+            src={placeholder}
+            alt="Always use image alt"
+            aspectRatio="4-3"
+            size="medium"
+          />
+          <Image
+            src={placeholder}
+            alt="Always use image alt"
+            aspectRatio="4-3"
+            size="medium"
+          />
+        </Panel>
+      </Section>
       <Section padding={sectionPadding} variant="brand">
         <Panel type="auto">
           <FlexItem size="fill">
@@ -183,7 +122,7 @@ function App() {
         <Flex
           container
           direction="column"
-          alignSecondary="center"
+          alignSecondary="stretch"
           gap={flexGap}
         >
           <TextContentHeading
@@ -191,34 +130,32 @@ function App() {
             heading="Heading"
             subheading="Subheading"
           />
-          <FlexItem>
-            <Flex container type="third" alignPrimary="center">
-              <FlexItem size="major">
-                <Accordion>
-                  <AccordionItem title="Title">
-                    Answer the frequently asked question in a simple sentence, a
-                    longish paragraph, or even in a list.
-                  </AccordionItem>
-                  <AccordionItem title="Title">
-                    Answer the frequently asked question in a simple sentence, a
-                    longish paragraph, or even in a list.
-                  </AccordionItem>
-                  <AccordionItem title="Title">
-                    Answer the frequently asked question in a simple sentence, a
-                    longish paragraph, or even in a list.
-                  </AccordionItem>
-                  <AccordionItem title="Title">
-                    Answer the frequently asked question in a simple sentence, a
-                    longish paragraph, or even in a list.
-                  </AccordionItem>
-                  <AccordionItem title="Title">
-                    Answer the frequently asked question in a simple sentence, a
-                    longish paragraph, or even in a list.
-                  </AccordionItem>
-                </Accordion>
-              </FlexItem>
-            </Flex>
-          </FlexItem>
+          <Flex container type="third" alignPrimary="center">
+            <FlexItem size="major">
+              <Accordion allowsMultipleExpanded>
+                <AccordionItem title="Title">
+                  Answer the frequently asked question in a simple sentence, a
+                  longish paragraph, or even in a list.
+                </AccordionItem>
+                <AccordionItem title="Title">
+                  Answer the frequently asked question in a simple sentence, a
+                  longish paragraph, or even in a list.
+                </AccordionItem>
+                <AccordionItem title="Title">
+                  Answer the frequently asked question in a simple sentence, a
+                  longish paragraph, or even in a list.
+                </AccordionItem>
+                <AccordionItem title="Title">
+                  Answer the frequently asked question in a simple sentence, a
+                  longish paragraph, or even in a list.
+                </AccordionItem>
+                <AccordionItem title="Title">
+                  Answer the frequently asked question in a simple sentence, a
+                  longish paragraph, or even in a list.
+                </AccordionItem>
+              </Accordion>
+            </FlexItem>
+          </Flex>
         </Flex>
       </Section>
       <Footer />

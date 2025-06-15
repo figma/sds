@@ -35,6 +35,8 @@
   border-radius: var(--border-radius);
   color: var(--tag-color);
   display: inline-flex;
+  font: var(--sds-font-body-base);
+
   gap: var(--sds-size-space-300);
   justify-content: center;
   line-height: 1;
