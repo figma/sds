@@ -53,7 +53,7 @@ export function PanelSections() {
       </Section>
 
       <Section padding={sectionPadding} variant="neutral">
-        <Panel type="half" gap={flexGap}>
+        <Panel alignSecondary="center" type="half" gap={flexGap}>
           <FlexItem size="half">
             <Flex direction="column" gap="600">
               <TextContentHeading
