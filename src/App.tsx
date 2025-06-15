@@ -2,14 +2,9 @@ import { Footer, Header, Panel } from "compositions";
 import { useMediaQuery } from "hooks";
 import { placeholder } from "images";
 import { Flex, FlexItem, Section } from "layout";
-import {
-  Accordion,
-  AccordionItem,
-  Image,
-  Text,
-  TextContentHeading,
-} from "primitives";
+import { Image, Text, TextContentHeading } from "primitives";
 import { AuthenticationProvider } from "providers";
+import { FAQs } from "./examples/FAQs";
 import { PricingGrid } from "./examples/PricingGrid";
 import { ProductDetails } from "./examples/ProductDetails";
 import { ProductGrid } from "./examples/ProductGrid";
@@ -25,6 +20,7 @@ function App() {
     <AuthenticationProvider>
       <Header paddingBottom={headerPadding} paddingTop={headerPadding} />
       <WelcomeHero />
+      <FAQs />
       <ProductDetails />
       <PricingGrid />
       <ProductGrid />
@@ -117,46 +113,6 @@ function App() {
             />
           </FlexItem>
         </Panel>
-      </Section>
-      <Section padding={sectionPadding}>
-        <Flex
-          container
-          direction="column"
-          alignSecondary="stretch"
-          gap={flexGap}
-        >
-          <TextContentHeading
-            align="center"
-            heading="Heading"
-            subheading="Subheading"
-          />
-          <Flex container type="third" alignPrimary="center">
-            <FlexItem size="major">
-              <Accordion allowsMultipleExpanded>
-                <AccordionItem title="Title">
-                  Answer the frequently asked question in a simple sentence, a
-                  longish paragraph, or even in a list.
-                </AccordionItem>
-                <AccordionItem title="Title">
-                  Answer the frequently asked question in a simple sentence, a
-                  longish paragraph, or even in a list.
-                </AccordionItem>
-                <AccordionItem title="Title">
-                  Answer the frequently asked question in a simple sentence, a
-                  longish paragraph, or even in a list.
-                </AccordionItem>
-                <AccordionItem title="Title">
-                  Answer the frequently asked question in a simple sentence, a
-                  longish paragraph, or even in a list.
-                </AccordionItem>
-                <AccordionItem title="Title">
-                  Answer the frequently asked question in a simple sentence, a
-                  longish paragraph, or even in a list.
-                </AccordionItem>
-              </Accordion>
-            </FlexItem>
-          </Flex>
-        </Flex>
       </Section>
       <Footer />
     </AuthenticationProvider>
