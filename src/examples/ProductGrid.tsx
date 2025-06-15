@@ -1,7 +1,6 @@
 import { ProductInfoCard, ProductInfoCardProps } from "compositions";
 import { useMediaQuery } from "hooks";
 import { IconChevronDown, IconChevronUp } from "icons";
-import { placeholder } from "images";
 import { Flex, FlexItem, Section } from "layout";
 import { Image, Search, TagButton } from "primitives";
 import { createContext, useContext, useEffect, useState } from "react";
@@ -112,7 +111,7 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       <Image
         aspectRatio="4-3"
         alt="Wireless Bluetooth Headphones"
-        src={placeholder}
+        src="https://picsum.photos/seed/Wireless Bluetooth Headphones/1200/900"
       />
     ),
     heading: "Wireless Bluetooth Headphones",
@@ -123,7 +122,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Smart Fitness Tracker" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Smart Fitness Tracker"
+        src="https://picsum.photos/seed/Smart Fitness Tracker/1200/900"
+      />
     ),
     heading: "Smart Fitness Tracker",
     price: "149.99",
@@ -133,7 +136,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Portable Phone Charger" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Portable Phone Charger"
+        src="https://picsum.photos/seed/Portable Phone Charger/1200/900"
+      />
     ),
     heading: "Portable Phone Charger",
     price: "29.99",
@@ -143,7 +150,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Coffee Bean Grinder" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Coffee Bean Grinder"
+        src="https://picsum.photos/seed/Coffee Bean Grinder/1200/900"
+      />
     ),
     heading: "Coffee Bean Grinder",
     price: "79.99",
@@ -152,7 +163,13 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       "Precision burr grinder for the perfect coffee experience with 15 grind settings.",
   },
   {
-    asset: <Image aspectRatio="4-3" alt="Yoga Mat Premium" src={placeholder} />,
+    asset: (
+      <Image
+        aspectRatio="4-3"
+        alt="Yoga Mat Premium"
+        src="https://picsum.photos/seed/Yoga Mat Premium/1200/900"
+      />
+    ),
     heading: "Yoga Mat Premium",
     price: "45.99",
     rating: 4.8,
@@ -160,7 +177,13 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       "Non-slip eco-friendly yoga mat with superior cushioning and grip for all practice levels.",
   },
   {
-    asset: <Image aspectRatio="4-3" alt="LED Desk Lamp" src={placeholder} />,
+    asset: (
+      <Image
+        aspectRatio="4-3"
+        alt="LED Desk Lamp"
+        src="https://picsum.photos/seed/LED Desk Lamp/1200/900"
+      />
+    ),
     heading: "LED Desk Lamp",
     price: "39.99",
     rating: 4.3,
@@ -169,7 +192,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Wireless Gaming Mouse" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Wireless Gaming Mouse"
+        src="https://picsum.photos/seed/Wireless Gaming Mouse/1200/900"
+      />
     ),
     heading: "Wireless Gaming Mouse",
     price: "69.99",
@@ -179,7 +206,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Ceramic Dinnerware Set" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Ceramic Dinnerware Set"
+        src="https://picsum.photos/seed/Ceramic Dinnerware Set/1200/900"
+      />
     ),
     heading: "Ceramic Dinnerware Set",
     price: "119.99",
@@ -192,7 +223,7 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       <Image
         aspectRatio="4-3"
         alt="Bluetooth Speaker Waterproof"
-        src={placeholder}
+        src="https://picsum.photos/seed/Bluetooth Speaker Waterproof/1200/900"
       />
     ),
     heading: "Bluetooth Speaker Waterproof",
@@ -203,7 +234,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Organic Cotton T-Shirt" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Organic Cotton T-Shirt"
+        src="https://picsum.photos/seed/Organic Cotton T-Shirt/1200/900"
+      />
     ),
     heading: "Organic Cotton T-Shirt",
     price: "24.99",
@@ -216,7 +251,7 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       <Image
         aspectRatio="4-3"
         alt="Stainless Steel Water Bottle"
-        src={placeholder}
+        src="https://picsum.photos/seed/Stainless Steel Water Bottle/1200/900"
       />
     ),
     heading: "Stainless Steel Water Bottle",
@@ -230,7 +265,7 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       <Image
         aspectRatio="4-3"
         alt="Mechanical Keyboard RGB"
-        src={placeholder}
+        src="https://picsum.photos/seed/Mechanical Keyboard RGB/1200/900"
       />
     ),
     heading: "Mechanical Keyboard RGB",
@@ -241,7 +276,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Essential Oil Diffuser" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Essential Oil Diffuser"
+        src="https://picsum.photos/seed/Essential Oil Diffuser/1200/900"
+      />
     ),
     heading: "Essential Oil Diffuser",
     price: "42.99",
@@ -251,7 +290,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Phone Camera Lens Kit" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Phone Camera Lens Kit"
+        src="https://picsum.photos/seed/Phone Camera Lens Kit/1200/900"
+      />
     ),
     heading: "Phone Camera Lens Kit",
     price: "35.99",
@@ -261,7 +304,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Memory Foam Pillow" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Memory Foam Pillow"
+        src="https://picsum.photos/seed/Memory Foam Pillow/1200/900"
+      />
     ),
     heading: "Memory Foam Pillow",
     price: "59.99",
@@ -271,7 +318,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Cast Iron Skillet" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Cast Iron Skillet"
+        src="https://picsum.photos/seed/Cast Iron Skillet/1200/900"
+      />
     ),
     heading: "Cast Iron Skillet",
     price: "49.99",
@@ -284,7 +335,7 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       <Image
         aspectRatio="4-3"
         alt="Laptop Stand Adjustable"
-        src={placeholder}
+        src="https://picsum.photos/seed/Laptop Stand Adjustable/1200/900"
       />
     ),
     heading: "Laptop Stand Adjustable",
@@ -294,7 +345,13 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       "Ergonomic laptop stand with adjustable height and angle for better posture.",
   },
   {
-    asset: <Image aspectRatio="4-3" alt="Silk Sleep Mask" src={placeholder} />,
+    asset: (
+      <Image
+        aspectRatio="4-3"
+        alt="Silk Sleep Mask"
+        src="https://picsum.photos/seed/Silk Sleep Mask/1200/900"
+      />
+    ),
     heading: "Silk Sleep Mask",
     price: "19.99",
     rating: 4.5,
@@ -303,7 +360,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Resistance Bands Set" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Resistance Bands Set"
+        src="https://picsum.photos/seed/Resistance Bands Set/1200/900"
+      />
     ),
     heading: "Resistance Bands Set",
     price: "28.99",
@@ -312,7 +373,13 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       "Complete resistance training set with multiple resistance levels and exercise guide.",
   },
   {
-    asset: <Image aspectRatio="4-3" alt="Smart Home Hub" src={placeholder} />,
+    asset: (
+      <Image
+        aspectRatio="4-3"
+        alt="Smart Home Hub"
+        src="https://picsum.photos/seed/Smart Home Hub/1200/900"
+      />
+    ),
     heading: "Smart Home Hub",
     price: "99.99",
     rating: 4.1,
@@ -321,7 +388,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Bamboo Cutting Board" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Bamboo Cutting Board"
+        src="https://picsum.photos/seed/Bamboo Cutting Board/1200/900"
+      />
     ),
     heading: "Bamboo Cutting Board",
     price: "34.99",
@@ -331,7 +402,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Wireless Car Charger" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Wireless Car Charger"
+        src="https://picsum.photos/seed/Wireless Car Charger/1200/900"
+      />
     ),
     heading: "Wireless Car Charger",
     price: "44.99",
@@ -341,7 +416,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Ceramic Space Heater" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Ceramic Space Heater"
+        src="https://picsum.photos/seed/Ceramic Space Heater/1200/900"
+      />
     ),
     heading: "Ceramic Space Heater",
     price: "89.99",
@@ -351,7 +430,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Blue Light Glasses" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Blue Light Glasses"
+        src="https://picsum.photos/seed/Blue Light Glasses/1200/900"
+      />
     ),
     heading: "Blue Light Glasses",
     price: "39.99",
@@ -361,7 +444,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Insulated Lunch Box" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Insulated Lunch Box"
+        src="https://picsum.photos/seed/Insulated Lunch Box/1200/900"
+      />
     ),
     heading: "Insulated Lunch Box",
     price: "26.99",
@@ -371,7 +458,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Foam Roller Massage" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Foam Roller Massage"
+        src="https://picsum.photos/seed/Foam Roller Massage/1200/900"
+      />
     ),
     heading: "Foam Roller Massage",
     price: "31.99",
@@ -381,7 +472,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Wireless Earbuds Pro" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Wireless Earbuds Pro"
+        src="https://picsum.photos/seed/Wireless Earbuds Pro/1200/900"
+      />
     ),
     heading: "Wireless Earbuds Pro",
     price: "159.99",
@@ -390,7 +485,13 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       "Premium wireless earbuds with active noise cancellation and transparency mode.",
   },
   {
-    asset: <Image aspectRatio="4-3" alt="Plant Humidifier" src={placeholder} />,
+    asset: (
+      <Image
+        aspectRatio="4-3"
+        alt="Plant Humidifier"
+        src="https://picsum.photos/seed/Plant Humidifier/1200/900"
+      />
+    ),
     heading: "Plant Humidifier",
     price: "55.99",
     rating: 4.2,
@@ -399,7 +500,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Magnetic Phone Mount" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Magnetic Phone Mount"
+        src="https://picsum.photos/seed/Magnetic Phone Mount/1200/900"
+      />
     ),
     heading: "Magnetic Phone Mount",
     price: "22.99",
@@ -409,7 +514,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Electric Kettle Smart" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Electric Kettle Smart"
+        src="https://picsum.photos/seed/Electric Kettle Smart/1200/900"
+      />
     ),
     heading: "Electric Kettle Smart",
     price: "79.99",
@@ -422,7 +531,7 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       <Image
         aspectRatio="4-3"
         alt="Weighted Blanket Therapy"
-        src={placeholder}
+        src="https://picsum.photos/seed/Weighted Blanket Therapy/1200/900"
       />
     ),
     heading: "Weighted Blanket Therapy",
@@ -436,7 +545,7 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       <Image
         aspectRatio="4-3"
         alt="Knife Sharpener Electric"
-        src={placeholder}
+        src="https://picsum.photos/seed/Knife Sharpener Electric/1200/900"
       />
     ),
     heading: "Knife Sharpener Electric",
@@ -447,7 +556,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Air Purifier HEPA" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Air Purifier HEPA"
+        src="https://picsum.photos/seed/Air Purifier HEPA/1200/900"
+      />
     ),
     heading: "Air Purifier HEPA",
     price: "179.99",
@@ -460,7 +573,7 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
       <Image
         aspectRatio="4-3"
         alt="Cordless Vacuum Handheld"
-        src={placeholder}
+        src="https://picsum.photos/seed/Cordless Vacuum Handheld/1200/900"
       />
     ),
     heading: "Cordless Vacuum Handheld",
@@ -471,7 +584,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Reading Light Clip-On" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Reading Light Clip-On"
+        src="https://picsum.photos/seed/Reading Light Clip-On/1200/900"
+      />
     ),
     heading: "Reading Light Clip-On",
     price: "18.99",
@@ -481,7 +598,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Spice Rack Magnetic" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Spice Rack Magnetic"
+        src="https://picsum.photos/seed/Spice Rack Magnetic/1200/900"
+      />
     ),
     heading: "Spice Rack Magnetic",
     price: "36.99",
@@ -491,7 +612,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Gaming Chair Ergonomic" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Gaming Chair Ergonomic"
+        src="https://picsum.photos/seed/Gaming Chair Ergonomic/1200/900"
+      />
     ),
     heading: "Gaming Chair Ergonomic",
     price: "229.99",
@@ -501,7 +626,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Wireless Charging Pad" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Wireless Charging Pad"
+        src="https://picsum.photos/seed/Wireless Charging Pad/1200/900"
+      />
     ),
     heading: "Wireless Charging Pad",
     price: "29.99",
@@ -511,7 +640,11 @@ export const ProductsContext = createContext<ProductInfoCardProps[]>([
   },
   {
     asset: (
-      <Image aspectRatio="4-3" alt="Bath Towel Set Luxury" src={placeholder} />
+      <Image
+        aspectRatio="4-3"
+        alt="Bath Towel Set Luxury"
+        src="https://picsum.photos/seed/Bath Towel Set Luxury/1200/900"
+      />
     ),
     heading: "Bath Towel Set Luxury",
     price: "79.99",

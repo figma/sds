@@ -38,7 +38,11 @@ export function PricingGrid() {
         <FlexItem>
           <Flex wrap type="third" gap="1200">
             {options.map((option) => (
-              <PricingCard key={option.sku} {...option} />
+              <PricingCard
+                key={option.sku}
+                {...option}
+                size={isMobile ? "small" : "large"}
+              />
             ))}
           </Flex>
         </FlexItem>

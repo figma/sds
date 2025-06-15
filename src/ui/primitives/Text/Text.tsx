@@ -365,8 +365,8 @@ export function TextContentHeading({
 
 export type TextContentTitleProps = ComponentPropsWithoutRef<"div"> & {
   align?: "start" | "center";
-  title: string;
-  subtitle?: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
 };
 export function TextContentTitle({
   align = "start",

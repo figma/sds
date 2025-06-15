@@ -13,7 +13,7 @@
   cursor: pointer;
   display: flex;
   gap: var(--sds-size-space-200);
-  padding: var(--sds-size-space-200) var(--sds-size-space-300);
+  padding: var(--sds-size-space-100) var(--sds-size-space-200);
   position: relative;
 
   &[data-hovered] {

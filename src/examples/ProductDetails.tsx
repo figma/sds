@@ -1,5 +1,4 @@
 import { useMediaQuery } from "hooks";
-import { placeholder } from "images";
 import { Flex, FlexItem, Section } from "layout";
 import {
   Accordion,
@@ -23,7 +22,7 @@ export function ProductDetails() {
     <Section padding={sectionPadding} variant="neutral">
       <Flex container type="half" wrap gap={flexGap}>
         <Image
-          src={placeholder}
+          src="https://picsum.photos/seed/Modern office/1200/900"
           alt="Modern office chair in black"
           size="large"
           aspectRatio="4-3"
