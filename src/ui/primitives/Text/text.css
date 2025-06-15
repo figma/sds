@@ -146,3 +146,13 @@
     width: 100%;
   }
 }
+
+/* Text truncation with ellipsis */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--text-truncate-line-clamp, 9999);
+  line-clamp: var(--text-truncate-line-clamp, 9999);
+}

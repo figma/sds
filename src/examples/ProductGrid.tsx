@@ -19,7 +19,7 @@ export function ProductGrid() {
   >([]);
   useEffect(() => {
     const initialProducts = products.filter(
-      (product) => !filterTopRated || product.rating >= 4.5,
+      (product) => !filterTopRated || product.rating >= 4.75,
     );
     if (!searchTerm) {
       setFilteredProducts(initialProducts);
@@ -83,13 +83,11 @@ export function ProductGrid() {
                     }}
                   >
                     Price{" "}
-                    {sortPrice !== 0 ? (
-                      sortPrice === -1 ? (
-                        <IconChevronDown />
-                      ) : (
-                        <IconChevronUp />
-                      )
-                    ) : undefined}
+                    {sortPrice === 0 || sortPrice === -1 ? (
+                      <IconChevronDown />
+                    ) : (
+                      <IconChevronUp />
+                    )}
                   </TagButton>
                 </Flex>
               </FlexItem>

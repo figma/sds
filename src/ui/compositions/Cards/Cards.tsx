@@ -17,6 +17,7 @@ import {
   TextPriceProps,
   TextSmall,
   TextStrong,
+  TextSubheading,
 } from "primitives";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { AnchorOrButton, AnchorOrButtonProps } from "utils";
@@ -246,11 +247,11 @@ export function ProductInfoCard({
       asset={asset}
     >
       <Flex direction="column" gap="200">
-        <TextHeading>{heading}</TextHeading>
+        <TextSubheading lineClamp={1}>{heading}</TextSubheading>
         <TextStrong>
           ${price} ({rating} rating)
         </TextStrong>
-        <Text>{description}</Text>
+        <Text lineClamp={2}>{description}</Text>
       </Flex>
     </Card>
   );
