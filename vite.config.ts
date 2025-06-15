@@ -9,6 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       compositions: path.resolve(__dirname, "./src/ui/compositions"),
+      data: path.resolve(__dirname, "./src/ui/data"),
       hooks: path.resolve(__dirname, "./src/ui/hooks"),
       icons: path.resolve(__dirname, "./src/ui/icons"),
       images: path.resolve(__dirname, "./src/ui/images"),

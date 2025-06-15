@@ -1,5 +1,6 @@
 import { Footer, Header } from "compositions";
 import { AuthenticationProvider } from "providers";
+import { Demo } from "./examples/Demo";
 import { FAQs } from "./examples/FAQs";
 import { PanelSections } from "./examples/PanelSections";
 import { PricingGrid } from "./examples/PricingGrid";
@@ -11,6 +12,7 @@ function App() {
   return (
     <AuthenticationProvider>
       <Header />
+      <Demo />
       <WelcomeHero />
       <PanelSections />
       <FAQs />

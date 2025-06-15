@@ -100,6 +100,7 @@ src/
 ├── ui/                 # Main component library
 │   ├── primitives/     # Atomic components (Button, Input, etc.)
 │   ├── compositions/   # Complex components (Cards, Forms, etc.)
+│   ├── data/           # Stubbed data contexts (Pricing, Product lists, etc.)
 │   ├── layout/         # Layout components (Flex, Section, Grid)
 │   ├── hooks/          # Custom React hooks
 │   ├── icons/          # SVG icon components
@@ -107,6 +108,7 @@ src/
 │   ├── providers/      # React context providers
 │   └── utils/          # Utility functions
 ├── stories/            # Storybook stories for all components
+├── examples/           # Examples of how to use components together in larger complete sections
 ├── figma/              # Figma [Code Connect](https://www.figma.com/code-connect-docs/react/) files
 │   ├── primitives/     # Maps Figma components to React primitives
 │   ├── compositions/   # Maps Figma compositions to React components

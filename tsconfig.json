@@ -18,6 +18,7 @@
     "baseUrl": "./src",
     "paths": {
       "compositions": ["./ui/compositions"],
+      "data": ["./ui/data"],
       "hooks": ["./ui/hooks"],
       "icons": ["./ui/icons"],
       "images": ["./ui/images"],
