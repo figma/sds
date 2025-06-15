@@ -67,7 +67,6 @@ export function HeaderAuth() {
     "Solutions",
     "Community",
     "Resources",
-    "Pricing",
     "Contact",
   ];
 
