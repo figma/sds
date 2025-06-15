@@ -17,8 +17,9 @@ import {
   TextPriceProps,
   TextSmall,
   TextStrong,
+  TextSubheading,
 } from "primitives";
-import { ComponentPropsWithoutRef, ReactNode, createContext } from "react";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 import { AnchorOrButton, AnchorOrButtonProps } from "utils";
 import "./cards.css";
 
@@ -37,9 +38,7 @@ export type CardProps = ComponentPropsWithoutRef<"div"> & {
    * If present, the card itself is pressable.
    * AnchorOrButtonProps extend either button or anchor behavior.
    */
-  interactionProps?: Omit<AnchorOrButtonProps, "aria-label"> & {
-    "aria-label": string;
-  };
+  interactionProps?: AnchorOrButtonProps;
   /**
    * An asset for the card.
    * Can be an Icon or an Image instance.
@@ -91,6 +90,14 @@ export function Card({
 
 export type PricingCardProps = {
   /**
+   * The sku for the tier
+   */
+  sku: string;
+  /**
+   * The billing interval
+   */
+  interval: "month" | "year";
+  /**
    * The heading for the price point
    */
   heading: string;
@@ -119,6 +126,10 @@ export type PricingCardProps = {
    */
   action: string;
   /**
+   * The action icon
+   */
+  actionIcon?: ReactNode;
+  /**
    * The action variant
    */
   actionVariant?: ButtonProps["variant"];
@@ -126,56 +137,15 @@ export type PricingCardProps = {
    * The action of the button.
    */
   onAction: () => void;
-} & (
-  | { list: string[]; listSlot?: undefined }
-  | { list?: undefined; listSlot: ReactNode }
-);
-
-/**
- * An example pricing context for the card grid to use
- */
-
-export const PricingContext = createContext<{
-  monthlyOptions: PricingCardProps[];
-  annualOptions: PricingCardProps[];
-}>({
-  monthlyOptions: [
-    {
-      heading: "Beginner",
-      price: "5",
-      priceCurrency: "$",
-      priceLabel: "/ mo",
-      list: [],
-      action: "Select Beginner",
-      actionVariant: "primary",
-      variant: "stroke",
-      onAction: () => {},
-    },
-    {
-      heading: "Advanced",
-      price: "10",
-      priceCurrency: "$",
-      priceLabel: "/ mo",
-      list: [],
-      action: "Select Advanced",
-      actionVariant: "primary",
-      variant: "stroke",
-      onAction: () => {},
-    },
-    {
-      heading: "Business",
-      price: "25",
-      priceCurrency: "$",
-      priceLabel: "/ mo",
-      list: [],
-      action: "Select Business",
-      actionVariant: "neutral",
-      variant: "brand",
-      onAction: () => {},
-    },
-  ],
-  annualOptions: [],
-});
+  /**
+   * List of items to map to a TextList instance
+   */
+  list?: string[];
+  /**
+   * List of items to render as a slot
+   */
+  listSlot?: ReactNode;
+};
 
 /**
  * A card that demonstrates price point and value, often in comparison to other cards.
@@ -184,6 +154,7 @@ export function PricingCard({
   heading,
   action,
   actionVariant = "primary",
+  actionIcon,
   onAction,
   price,
   priceCurrency,
@@ -227,6 +198,7 @@ export function PricingCard({
         <ButtonGroup align="justify">
           <Button variant={actionVariant} onPress={onAction}>
             {action}
+            {actionIcon}
           </Button>
         </ButtonGroup>
       </Flex>
@@ -247,6 +219,10 @@ export type ProductInfoCardProps = Pick<CardProps, "asset"> & {
    * The description of the product
    */
   description: string;
+  /**
+   * The rating for the product
+   */
+  rating: number;
 };
 
 /**
@@ -257,6 +233,7 @@ export function ProductInfoCard({
   heading,
   price,
   description,
+  rating,
   ...props
 }: ProductInfoCardProps) {
   return (
@@ -268,9 +245,11 @@ export function ProductInfoCard({
       asset={asset}
     >
       <Flex direction="column" gap="200">
-        <Text>{heading}</Text>
-        <TextStrong>${price}</TextStrong>
-        <TextSmall>{description}</TextSmall>
+        <TextSubheading lineClamp={1}>{heading}</TextSubheading>
+        <TextStrong>
+          ${price} ({rating} rating)
+        </TextStrong>
+        <Text lineClamp={2}>{description}</Text>
       </Flex>
     </Card>
   );

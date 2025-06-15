@@ -35,10 +35,13 @@
   border-radius: var(--border-radius);
   color: var(--tag-color);
   display: inline-flex;
+  font: var(--sds-font-body-base);
+
   gap: var(--sds-size-space-300);
   justify-content: center;
   line-height: 1;
   padding: var(--sds-size-space-200) var(--sds-size-space-200);
+  white-space: nowrap;
 
   .icon {
     --icon-color: var(--tag-icon);

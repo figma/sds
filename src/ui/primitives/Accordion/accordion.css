@@ -11,6 +11,7 @@
   box-shadow: inset 0 0 0 var(--sds-size-stroke-border)
     var(--sds-color-border-default-default);
   border-radius: var(--border-radius);
+  color: var(--sds-color-text-default-default);
   display: flex;
   flex-direction: column;
   line-height: var(--global-line-height-body);
@@ -40,6 +41,7 @@
   .accordion-item-title > button {
     align-items: center;
     color: var(--sds-color-text-default-default);
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     padding: var(--sds-size-space-400);
@@ -60,11 +62,15 @@
     overflow-y: hidden;
   }
 
-  &[data-selected] {
+  &[data-expanded] {
     background: var(--sds-color-background-default-default);
 
     > .accordion-item-title > button {
       padding-bottom: var(--sds-size-space-200);
+
+      > .accordion-item-indicator {
+        transform: scaleY(-1) translateY(2px);
+      }
     }
 
     &:has(.accordion-item-title > button[data-hovered]) {

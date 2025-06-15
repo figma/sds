@@ -11,63 +11,112 @@ import "./text.css";
 
 type TextLineHeightProps = { lineHeight?: "body" | "single" };
 
-export type TextProps = RACTextProps & TextLineHeightProps;
+type TextTruncateProps = { lineClamp?: number };
+
+export type TextProps = TextTruncateProps & RACTextProps & TextLineHeightProps;
 export function Text({
   className,
   elementType = "p",
   lineHeight = "body",
+  lineClamp,
   ...props
 }: TextProps) {
   const classNames = clsx(
     className,
+    !!lineClamp && "text-truncate",
     "text-body-base",
     `text-line-height-${lineHeight}`,
   );
+  const style = lineClamp
+    ? { "--text-truncate-line-clamp": lineClamp }
+    : undefined;
   return (
-    <RACText elementType={elementType} className={classNames} {...props} />
+    <RACText
+      style={style}
+      elementType={elementType}
+      className={classNames}
+      {...props}
+    />
   );
 }
-export type TextSmallProps = RACTextProps & TextLineHeightProps;
+export type TextSmallProps = TextTruncateProps &
+  RACTextProps &
+  TextLineHeightProps;
 export function TextSmall({
   className,
   elementType = "small",
   lineHeight = "body",
+  lineClamp,
   ...props
 }: TextSmallProps) {
   const classNames = clsx(
     className,
+    !!lineClamp && "text-truncate",
     "text-body-small",
     `text-line-height-${lineHeight}`,
   );
+  const style = lineClamp
+    ? { "--text-truncate-line-clamp": lineClamp }
+    : undefined;
   return (
-    <RACText className={classNames} elementType={elementType} {...props} />
+    <RACText
+      style={style}
+      className={classNames}
+      elementType={elementType}
+      {...props}
+    />
   );
 }
-export type TextSmallStrongProps = RACTextProps & TextLineHeightProps;
+export type TextSmallStrongProps = TextTruncateProps &
+  RACTextProps &
+  TextLineHeightProps;
 export function TextSmallStrong({
   className,
   elementType = "small",
+  lineClamp,
   lineHeight = "body",
   ...props
 }: TextSmallProps) {
   const classNames = clsx(
     className,
+    !!lineClamp && "text-truncate",
     "text-body-small-strong",
     `text-line-height-${lineHeight}`,
   );
+  const style = lineClamp
+    ? { "--text-truncate-line-clamp": lineClamp }
+    : undefined;
   return (
-    <RACText className={classNames} elementType={elementType} {...props} />
+    <RACText
+      style={style}
+      className={classNames}
+      elementType={elementType}
+      {...props}
+    />
   );
 }
-export type TextStrongProps = RACTextProps;
+export type TextStrongProps = TextTruncateProps & RACTextProps;
 export function TextStrong({
   className,
   elementType = "strong",
+  lineClamp,
   ...props
 }: TextStrongProps) {
-  const classNames = clsx(className, "text-body-strong");
+  const classNames = clsx(
+    className,
+    !!lineClamp && "text-truncate",
+    "text-body-strong",
+  );
+  const style = lineClamp
+    ? { "--text-truncate-line-clamp": lineClamp }
+    : undefined;
   return (
-    <RACText className={classNames} elementType={elementType} {...props} />
+    <RACText
+      style={style}
+      className={classNames}
+      elementType={elementType}
+      {...props}
+    />
   );
 }
 export type TextEmphasisProps = RACTextProps;
@@ -98,59 +147,124 @@ export function TextInput({ className, ...props }: TextInputProps) {
   return <RACText className={classNames} {...props} />;
 }
 
-export type TextTitleHeroProps = RACTextProps;
+export type TextTitleHeroProps = TextTruncateProps & RACTextProps;
 export function TextTitleHero({
   className,
   elementType = "h1",
+  lineClamp,
   ...props
 }: TextTitleHeroProps) {
-  const classNames = clsx(className, "text-title-hero");
+  const classNames = clsx(
+    className,
+    !!lineClamp && "text-truncate",
+    "text-title-hero",
+  );
+  const style = lineClamp
+    ? { "--text-truncate-line-clamp": lineClamp }
+    : undefined;
   return (
-    <RACText className={classNames} elementType={elementType} {...props} />
+    <RACText
+      style={style}
+      className={classNames}
+      elementType={elementType}
+      {...props}
+    />
   );
 }
-export type TextTitlePageProps = RACTextProps;
+export type TextTitlePageProps = TextTruncateProps & RACTextProps;
 export function TextTitlePage({
   className,
   elementType = "h2",
+  lineClamp,
   ...props
 }: TextTitlePageProps) {
-  const classNames = clsx(className, "text-title-page");
+  const classNames = clsx(
+    className,
+    !!lineClamp && "text-truncate",
+    "text-title-page",
+  );
+  const style = lineClamp
+    ? { "--text-truncate-line-clamp": lineClamp }
+    : undefined;
   return (
-    <RACText className={classNames} elementType={elementType} {...props} />
+    <RACText
+      style={style}
+      className={classNames}
+      elementType={elementType}
+      {...props}
+    />
   );
 }
-export type TextSubtitleProps = RACTextProps;
+export type TextSubtitleProps = TextTruncateProps & RACTextProps;
 export function TextSubtitle({
   className,
   elementType = "p",
+  lineClamp,
   ...props
 }: TextSubtitleProps) {
-  const classNames = clsx(className, "text-subtitle");
+  const classNames = clsx(
+    className,
+    !!lineClamp && "text-truncate",
+    "text-subtitle",
+  );
+  const style = lineClamp
+    ? { "--text-truncate-line-clamp": lineClamp }
+    : undefined;
   return (
-    <RACText className={classNames} elementType={elementType} {...props} />
+    <RACText
+      style={style}
+      className={classNames}
+      elementType={elementType}
+      {...props}
+    />
   );
 }
-export type TextHeadingProps = RACTextProps;
+export type TextHeadingProps = TextTruncateProps & RACTextProps;
 export function TextHeading({
   className,
   elementType = "h3",
+  lineClamp,
   ...props
 }: TextHeadingProps) {
-  const classNames = clsx(className, "text-heading");
+  const classNames = clsx(
+    className,
+    !!lineClamp && "text-truncate",
+    "text-heading",
+  );
+  const style = lineClamp
+    ? { "--text-truncate-line-clamp": lineClamp }
+    : undefined;
   return (
-    <RACText className={classNames} elementType={elementType} {...props} />
+    <RACText
+      style={style}
+      className={classNames}
+      elementType={elementType}
+      {...props}
+    />
   );
 }
-export type TextSubheadingProps = RACTextProps;
+export type TextSubheadingProps = TextTruncateProps & RACTextProps;
 export function TextSubheading({
   className,
   elementType = "p",
+  lineClamp,
   ...props
 }: TextSubheadingProps) {
-  const classNames = clsx(className, "text-subheading");
+  const classNames = clsx(
+    className,
+    !!lineClamp && "text-truncate",
+    "text-subheading",
+  );
+  const style = lineClamp
+    ? { "--text-truncate-line-clamp": lineClamp }
+    : undefined;
   return (
-    <RACText className={classNames} elementType={elementType} {...props} />
+    <RACText
+      style={style}
+      className={classNames}
+      elementType={elementType}
+      {...props}
+    />
   );
 }
 
@@ -251,8 +365,8 @@ export function TextContentHeading({
 
 export type TextContentTitleProps = ComponentPropsWithoutRef<"div"> & {
   align?: "start" | "center";
-  title: string;
-  subtitle?: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
 };
 export function TextContentTitle({
   align = "start",

@@ -28,6 +28,7 @@ import "./headers.css";
 export function HeaderAuth() {
   const { currentUser, login, logout } = useContext(AuthenticationContext);
   const [open, setOpen] = useState(false);
+  const [page, setPage] = useState("pricing");
 
   const userButtons = (
     <>
@@ -61,14 +62,26 @@ export function HeaderAuth() {
 
   const { isTabletDown } = useMediaQuery();
 
+  const navItems = [
+    "Pricing",
+    "Solutions",
+    "Community",
+    "Resources",
+    "Pricing",
+    "Contact",
+  ];
+
   const navigation = (
     <Navigation direction={isTabletDown ? "column" : "row"}>
-      <NavigationPill isSelected>Pricing</NavigationPill>
-      <NavigationPill>Solutions</NavigationPill>
-      <NavigationPill>Community</NavigationPill>
-      <NavigationPill>Resources</NavigationPill>
-      <NavigationPill>Pricing</NavigationPill>
-      <NavigationPill>Contact</NavigationPill>
+      {navItems.map((item) => (
+        <NavigationPill
+          key={item}
+          onPress={() => setPage(item.toLowerCase())}
+          isSelected={page === item.toLowerCase()}
+        >
+          {item}
+        </NavigationPill>
+      ))}
     </Navigation>
   );
 
@@ -169,7 +182,9 @@ export function HeaderAuth() {
                 </MenuPopover>
               </MenuTrigger>
             ) : (
-              <ButtonGroup>{userButtons}</ButtonGroup>
+              <ButtonGroup className={clsx("header-auth-avatar-button")}>
+                {userButtons}
+              </ButtonGroup>
             )}
           </Flex>
         )}
@@ -185,7 +200,7 @@ export function Header({ className, ...props }: HeaderProps) {
       className="header"
       elementType="header"
       variant="stroke"
-      padding="800"
+      padding={"800"}
       {...props}
     >
       <Flex container alignPrimary="space-between" alignSecondary="center">

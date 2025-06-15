@@ -133,41 +133,6 @@ All components are in [src/ui](../src/ui). **Never create new components - alway
 
 ## SDS Component Hierarchy
 
-**CRITICAL: Always use SDS high-level components, never their underlying dependencies.**
-
-SDS components are built on top of libraries like React Aria, React Stately, and other foundational libraries. However, you should **NEVER** import or use these low-level dependencies directly:
-
-### ❌ WRONG - Don't use low-level dependencies:
-
-```tsx
-import { Item } from "@react-stately/collections"; // NEVER do this
-import { useListState } from "@react-stately/list"; // NEVER do this
-import { useButton } from "@react-aria/button"; // NEVER do this
-
-// Wrong implementation:
-<Accordion>
-  <Item key="faq1">Question 1</Item> {/* This is wrong! */}
-</Accordion>;
-```
-
-### ✅ CORRECT - Use SDS components:
-
-```tsx
-import { Accordion, AccordionItem } from "ui/primitives/Accordion/Accordion";
-
-// Correct implementation:
-<Accordion>
-  <AccordionItem title="Question 1" content="Answer 1" />
-</Accordion>;
-```
-
-### Why This Matters:
-
-- SDS components provide design system styling and behavior
-- Low-level dependencies are implementation details that may change
-- SDS components handle accessibility, theming, and responsive behavior
-- Using low-level dependencies breaks the design system abstraction
-
 When you see `hidden={true}` in Figma data, it indicates that the node should be ignored. This can happen with Figma components frequently, as nodes that can be toggled with a prop need to exist, even when the prop is false.
 
 **Discovery tip**: When implementing Figma designs, check `codeDependencies` first, then browse the actual component files to understand available props and variants. See the complete component list in the Component Categories section below.
@@ -279,15 +244,7 @@ function ResponsiveExample() {
 
 ### Common Pitfalls & Solutions
 
-### ❌ Pitfall 1: Importing low-level dependencies
-
-```tsx
-import { Item } from "@react-stately/collections"; // WRONG
-```
-
-**Fix**: Always use SDS components: `import { AccordionItem } from "ui/primitives/Accordion/Accordion"`
-
-### ❌ Pitfall 2: Hardcoding design values
+### ❌ Pitfall 1: Hardcoding design values
 
 ```tsx
 <div style={{ color: "#111111", padding: "16px" }}> // WRONG
@@ -295,7 +252,7 @@ import { Item } from "@react-stately/collections"; // WRONG
 
 **Fix**: Use CSS variables via class names: `<div className="example">` and `.example { color: var(--sds-color-text-default-default); padding: var(--sds-size-space-400); }`
 
-### ❌ Pitfall 3: Creating custom layout CSS
+### ❌ Pitfall 2: Creating custom layout CSS
 
 ```tsx
 <div className="grid grid-cols-3 gap-4"> // WRONG
@@ -303,7 +260,7 @@ import { Item } from "@react-stately/collections"; // WRONG
 
 **Fix**: Use layout components: `<Flex direction="row" gap="400" type="third">`
 
-### ❌ Pitfall 4: Not reading component APIs
+### ❌ Pitfall 3: Not reading component APIs
 
 ```tsx
 <Button active={true}> // WRONG - prop doesn't exist
