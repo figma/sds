@@ -9,7 +9,7 @@ import {
   type ButtonProps as RACButtonProps,
 } from "react-aria-components";
 
-type AnchorOrButtonSharedProps = {
+export type AnchorOrButtonSharedProps = {
   children?: React.ReactNode;
   href?: string;
 };

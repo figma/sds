@@ -109,6 +109,8 @@ export const StoryPricingCard: StoryObj<typeof PricingCard> = {
           price={(5 * (5 - i)).toString()}
           priceCurrency="$"
           size="large"
+          sku={`sku-${i}`}
+          interval="month"
           onAction={() => {}}
           actionVariant={i === 2 ? "neutral" : undefined}
           list={["List item 1", "List item 2", "List item 3"]}
@@ -123,6 +125,8 @@ export const StoryPricingCard: StoryObj<typeof PricingCard> = {
           price={(5 * (5 - i)).toString()}
           priceCurrency="$"
           size="small"
+          sku={`sku-${i}`}
+          interval="year"
           onAction={() => {}}
           actionVariant={i === 2 ? "neutral" : undefined}
           list={["List item 1", "List item 2", "List item 3"]}
@@ -140,24 +144,28 @@ export const StoryProductInfoCard: StoryObj<typeof ProductInfoCard> = {
         asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
         price="5"
+        rating={4.7}
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
         asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
         price="5"
+        rating={4.7}
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
         asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
         price="5"
+        rating={4.7}
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
       <ProductInfoCard
         asset={<Image alt="Accessibility!" src={placeholder} />}
         heading="Product"
         price="5"
+        rating={4.7}
         description="Wow do we have a cool thing for you. What an amazing thing."
       />
     </Flex>

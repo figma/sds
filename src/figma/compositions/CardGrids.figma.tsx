@@ -1,8 +1,9 @@
 import { figma } from "@figma/code-connect";
-import { PricingCard, PricingContext } from "compositions";
+import { PricingCard } from "compositions";
 import { useMediaQuery } from "hooks";
 import { Flex, FlexItem, Section } from "layout";
 import { useContext } from "react";
+import { PricingContext } from "../../examples/PricingGrid";
 
 figma.connect(Section, "<FIGMA_SECTIONS_CARD_GRID_ICON>", {
   props: {

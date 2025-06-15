@@ -35,7 +35,7 @@ export const StoryAccordionItem: StoryObj<typeof AccordionItem> = {
   args: {},
   render: () => (
     <Accordion>
-      <AccordionItem title="Complex Content" hasChildItems={false}>
+      <AccordionItem title="Complex Content">
         <TextHeading>Heading</TextHeading>
         <Text>
           Answer the frequently asked question in a simple sentence, a longish
