@@ -2,8 +2,8 @@ import { useMemo, useSyncExternalStore } from "react";
 
 const breakpoints = {
   mobile: 375,
-  tablet: 768,
-  desktop: 1200,
+  tablet: 600,
+  desktop: 1024,
 };
 
 export function useCustomMediaQuery(mediaQuery: string): boolean {

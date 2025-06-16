@@ -1,4 +1,5 @@
 import { useMediaQuery } from "hooks";
+import { IconShoppingBag } from "icons";
 import { Flex, FlexItem, Section } from "layout";
 import {
   Accordion,
@@ -14,7 +15,7 @@ import {
 } from "primitives";
 
 export function ProductDetails() {
-  const { isMobile } = useMediaQuery();
+  const { isMobile, isDesktop } = useMediaQuery();
   const flexGap = isMobile ? "600" : "1200";
   const sectionPadding = isMobile ? "600" : "1600";
 
@@ -46,31 +47,41 @@ export function ProductDetails() {
               smooth-rolling casters. Perfect for home or office use.
             </Text>
             <FlexItem>
-              <Flex wrap type="third" gap="200" alignSecondary="end">
-                <SelectField
-                  label="Color"
-                  defaultSelectedKey="Black"
-                  placeholder="Select color..."
-                >
-                  <SelectItem>Black</SelectItem>
-                  <SelectItem>Gray</SelectItem>
-                  <SelectItem>Blue</SelectItem>
-                  <SelectItem>Red</SelectItem>
-                  <SelectItem>White</SelectItem>
-                </SelectField>
-                <SelectField
-                  label="Quantity"
-                  defaultSelectedKey="1"
-                  placeholder="Select quantity..."
-                >
-                  <SelectItem>1</SelectItem>
-                  <SelectItem>2</SelectItem>
-                  <SelectItem>3</SelectItem>
-                  <SelectItem>4</SelectItem>
-                  <SelectItem>5</SelectItem>
-                </SelectField>
+              <Flex
+                wrap
+                gap="200"
+                direction={isDesktop ? "row" : "column"}
+                alignSecondary={isDesktop ? "end" : "stretch"}
+              >
+                <FlexItem size="fill">
+                  <SelectField
+                    label="Color"
+                    defaultSelectedKey="Black"
+                    placeholder="Select color..."
+                  >
+                    <SelectItem>Black</SelectItem>
+                    <SelectItem>Gray</SelectItem>
+                    <SelectItem>Blue</SelectItem>
+                    <SelectItem>Red</SelectItem>
+                    <SelectItem>White</SelectItem>
+                  </SelectField>
+                </FlexItem>
+                <FlexItem size="fill">
+                  <SelectField
+                    label="Quantity"
+                    defaultSelectedKey="1"
+                    placeholder="Select quantity..."
+                  >
+                    <SelectItem>1</SelectItem>
+                    <SelectItem>2</SelectItem>
+                    <SelectItem>3</SelectItem>
+                    <SelectItem>4</SelectItem>
+                    <SelectItem>5</SelectItem>
+                  </SelectField>
+                </FlexItem>
                 <Button onPress={() => {}} variant="primary">
-                  Add to Cart
+                  Add
+                  <IconShoppingBag />
                 </Button>
               </Flex>
             </FlexItem>

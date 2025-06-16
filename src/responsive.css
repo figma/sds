@@ -10,7 +10,7 @@
   --sds-responsive-ratio-column-third-minor: 3;
 }
 /* Responsive tablet */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   :root {
     --sds-responsive-display-flex-to-none: flex;
     --sds-responsive-display-none-to-flex: none;
@@ -23,7 +23,7 @@
   }
 }
 /* Responsive desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   :root {
     --sds-responsive-display-flex-to-none: none;
     --sds-responsive-display-none-to-flex: flex;
