@@ -51,6 +51,15 @@ When importing SDS components, use aliases to ensure correct paths. These are de
 
 ```tsx
 import { Footer, Header } from "compositions";
+import {
+  useAuth,
+  usePricing,
+  useProducts,
+  AuthProvider,
+  PricingProvider,
+  ProductsProvider,
+  AllProviders,
+} from "data";
 import { useMediaQuery } from "hooks";
 import { IconChevronLeft } from "icons";
 import { placeholder } from "images";
@@ -62,7 +71,6 @@ import {
   TextContentHeading,
   TextContentTitle,
 } from "primitives";
-import { AuthenticationProvider } from "providers";
 ```
 
 ## Figma to SDS Translation Guidelines
@@ -97,16 +105,20 @@ All design tokens from Figma are defined as CSS variables in [src/theme.css](../
 
 ```
 src/
-├── ui/                 # Main component library
+├── data/               # Data layer - contexts, providers, services, types
+│   ├── contexts/       # React context definitions (AuthContext, PricingContext, ProductsContext)
+│   ├── providers/      # Context providers with state management
+│   ├── services/       # API and business logic services
+│   ├── types/          # TypeScript type definitions for data models
+│   └── hooks/          # Data-specific custom hooks (useAuth, usePricing, useProducts)
+├── ui/                 # UI component library
 │   ├── primitives/     # Atomic components (Button, Input, etc.)
 │   ├── compositions/   # Complex components (Cards, Forms, etc.)
-│   ├── data/           # Stubbed data contexts (Pricing, Product lists, etc.)
 │   ├── layout/         # Layout components (Flex, Section, Grid)
-│   ├── hooks/          # Custom React hooks
+│   ├── hooks/          # UI-specific custom hooks (useMediaQuery)
 │   ├── icons/          # SVG icon components
 │   ├── images/         # Image assets
-│   ├── providers/      # React context providers
-│   └── utils/          # Utility functions
+│   └── utils/          # Utility functions and components
 ├── stories/            # Storybook stories for all components
 ├── examples/           # Examples of how to use components together in larger complete sections
 ├── figma/              # Figma [Code Connect](https://www.figma.com/code-connect-docs/react/) files
@@ -131,7 +143,9 @@ scripts/
 
 ## Component Library Structure
 
-All components are in [src/ui](../src/ui). **Never create new components - always use existing SDS components.**
+All UI components are in [src/ui](../src/ui). **Never create new components - always use existing SDS components.**
+
+All data management (contexts, providers, services, types, and data hooks) are in [src/data](../src/data). Use the provided context providers and custom hooks for state management.
 
 ## SDS Component Hierarchy
 
@@ -323,9 +337,38 @@ Complex, pre-built component patterns:
 
 ### Hooks (`src/ui/hooks/`)
 
-Custom React hooks for common functionality:
+UI-specific custom React hooks:
 
 - **useMediaQuery** - Responsive breakpoint detection
+
+### Data Layer (`src/data/`)
+
+Data management layer with contexts, providers, services, and hooks:
+
+#### Hooks (`src/data/hooks/`)
+
+- **useAuth** - Authentication state and methods (login, logout, user data)
+- **usePricing** - Pricing plans, cart management, and billing operations
+- **useProducts** - Product catalog, search, filtering, and shopping cart
+
+#### Providers (`src/data/providers/`)
+
+- **AuthProvider** - Authentication context with loading states and error handling
+- **PricingProvider** - Pricing and subscription management
+- **ProductsProvider** - Product catalog and e-commerce functionality
+- **AllProviders** - Combined provider wrapper for full application state
+
+#### Services (`src/data/services/`)
+
+- **authService** - Authentication API calls and token management
+- **pricingService** - Pricing calculations and plan management
+- **productsService** - Product data, filtering, and search operations
+
+#### Types (`src/data/types/`)
+
+- **auth.ts** - User, credentials, and authentication types
+- **pricing.ts** - Plans, pricing, and cart types
+- **products.ts** - Product, filter, and e-commerce types
 
 ## Figma Integration
 
