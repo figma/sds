@@ -7,7 +7,7 @@ import { Search, TagButton } from "primitives";
 import { useEffect, useState } from "react";
 
 export function ProductGrid() {
-  const { isMobile, isTablet, isDesktop } = useMediaQuery();
+  const { isMobile, isTablet } = useMediaQuery();
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [sortPrice, setSortPrice] = useState<-1 | 0 | 1>(0);
   const [filterTopRated, setFilterTopRated] = useState<boolean>(false);
