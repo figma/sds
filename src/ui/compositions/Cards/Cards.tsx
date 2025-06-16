@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { PricingPlan, Product } from "data";
 import { useMediaQuery } from "hooks";
 import { IconStar } from "icons";
 import { Flex } from "layout";
@@ -9,6 +10,7 @@ import {
   Button,
   ButtonGroup,
   ButtonProps,
+  Image,
   Text,
   TextHeading,
   TextList,
@@ -147,6 +149,25 @@ export type PricingCardProps = {
   listSlot?: ReactNode;
 };
 
+export function pricingOptionToPricingCardProps(
+  option: PricingPlan,
+  index: number,
+): PricingCardProps {
+  return {
+    sku: option.sku,
+    interval: option.interval,
+    list: option.features,
+    heading: option.name,
+    priceCurrency: option.currency,
+    action: `Select ${option.name}`,
+    actionVariant: index === 2 ? "neutral" : "primary",
+    variant: index === 2 ? "brand" : "stroke",
+    price: option.price.toString(),
+    priceLabel: option.interval === "month" ? "/ mo" : "/ yr",
+    onAction: () => console.log(`Selected ${option.name}`),
+  };
+}
+
 /**
  * A card that demonstrates price point and value, often in comparison to other cards.
  */
@@ -204,6 +225,25 @@ export function PricingCard({
       </Flex>
     </Card>
   );
+}
+
+export function productToProductInfoCardProps(
+  product: Product,
+): ProductInfoCardProps {
+  return {
+    heading: product.name,
+    price: product.price.toString(),
+    description: product.description,
+    rating: product.rating,
+    asset: (
+      <Image
+        src={product.imageUrl}
+        alt={product.name}
+        aspectRatio="4-3"
+        className="product-info-card-asset"
+      />
+    ),
+  };
 }
 
 export type ProductInfoCardProps = Pick<CardProps, "asset"> & {

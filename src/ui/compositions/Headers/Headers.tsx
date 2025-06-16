@@ -1,7 +1,7 @@
 import clsx from "clsx";
+import { useAuth } from "data";
 import { useMediaQuery } from "hooks";
 import { IconChevronDown, IconMenu, IconX } from "icons";
-import { placeholder } from "images";
 import { Flex, FlexItem, Section, type SectionProps } from "layout";
 import {
   Avatar,
@@ -20,13 +20,12 @@ import {
   Navigation,
   NavigationPill,
 } from "primitives";
-import { AuthenticationContext } from "providers";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { AnchorOrButton } from "utils";
 import "./headers.css";
 
 export function HeaderAuth() {
-  const { currentUser, login, logout } = useContext(AuthenticationContext);
+  const { user, login, logout } = useAuth();
   const [open, setOpen] = useState(false);
   const [page, setPage] = useState("pricing");
 
@@ -37,9 +36,8 @@ export function HeaderAuth() {
         size="small"
         onPress={() =>
           login({
-            avatar: placeholder,
-            name: "Charlie Brown",
-            username: "snooptroupe",
+            email: "Charlie Brown",
+            password: "snooptroupe",
           })
         }
       >
@@ -49,9 +47,8 @@ export function HeaderAuth() {
         size="small"
         onPress={() =>
           login({
-            avatar: placeholder,
-            name: "Charlie Brown",
-            username: "snooptroupe",
+            email: "Charlie Brown",
+            password: "snooptroupe",
           })
         }
       >
@@ -117,19 +114,19 @@ export function HeaderAuth() {
                   alignSecondary="center"
                 >
                   {navigation}
-                  {currentUser ? (
+                  {user ? (
                     <Flex alignSecondary="center" gap="200" direction="column">
                       <FlexItem>
                         <Flex alignPrimary="center">
                           <Avatar
-                            src={currentUser.avatar}
-                            initials={currentUser.name.charAt(0)}
+                            src={user.avatar}
+                            initials={user.name.charAt(0)}
                           />
                         </Flex>
                       </FlexItem>
                       <FlexItem>
                         <Flex alignPrimary="center">
-                          <Label>{currentUser.name}</Label>
+                          <Label>{user.name}</Label>
                         </Flex>
                       </FlexItem>
                       <FlexItem>
@@ -154,25 +151,19 @@ export function HeaderAuth() {
         ) : (
           <Flex gap="400" alignSecondary="center">
             {navigation}
-            {currentUser ? (
+            {user ? (
               <MenuTrigger>
                 <AnchorOrButton className={clsx("header-auth-avatar-button")}>
-                  <Avatar
-                    src={currentUser.avatar}
-                    initials={currentUser.name.charAt(0)}
-                  />
+                  <Avatar src={user.avatar} initials={user.name.charAt(0)} />
                   <IconChevronDown />
                 </AnchorOrButton>
                 <MenuPopover placement="bottom right">
                   <Menu>
                     <MenuItem>
-                      <AvatarBlock
-                        title={currentUser.name}
-                        description="View profile"
-                      >
+                      <AvatarBlock title={user.name} description="View profile">
                         <Avatar
-                          src={currentUser.avatar}
-                          initials={currentUser.name.charAt(0)}
+                          src={user.avatar}
+                          initials={user.name.charAt(0)}
                         />
                       </AvatarBlock>
                     </MenuItem>
