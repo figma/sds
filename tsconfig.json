@@ -17,14 +17,13 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./src",
     "paths": {
+      "data": ["./data"],
       "compositions": ["./ui/compositions"],
-      "data": ["./ui/data"],
       "hooks": ["./ui/hooks"],
       "icons": ["./ui/icons"],
       "images": ["./ui/images"],
       "layout": ["./ui/layout"],
       "primitives": ["./ui/primitives"],
-      "providers": ["./ui/providers"],
       "utils": ["./ui/utils"]
     }
   },

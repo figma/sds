@@ -1,5 +1,5 @@
 import { Footer, Header } from "compositions";
-import { AuthenticationProvider } from "providers";
+import { AllProviders } from "data";
 import { Demo } from "./examples/Demo";
 import { FAQs } from "./examples/FAQs";
 import { PanelSections } from "./examples/PanelSections";
@@ -10,7 +10,7 @@ import { WelcomeHero } from "./examples/WelcomeHero";
 
 function App() {
   return (
-    <AuthenticationProvider>
+    <AllProviders>
       <Header />
       <Demo />
       <WelcomeHero />
@@ -20,7 +20,7 @@ function App() {
       <PricingGrid />
       <ProductGrid />
       <Footer />
-    </AuthenticationProvider>
+    </AllProviders>
   );
 }
 
