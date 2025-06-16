@@ -20,7 +20,7 @@ export const pricingService = {
         currency: "$",
         interval: "month",
         features: ["Promises", "Intentions", "240 credits"],
-        sku: "month_01",
+        sku: "1-beginner",
       },
       {
         id: "advanced-monthly",
@@ -31,7 +31,7 @@ export const pricingService = {
         interval: "month",
         features: ["Kept promises", "Better intentions", "480 credits"],
         popular: true,
-        sku: "month_02",
+        sku: "2-advanced",
       },
       {
         id: "business-monthly",
@@ -41,7 +41,7 @@ export const pricingService = {
         currency: "$",
         interval: "month",
         features: ["Kept promises", "Best intentions", "Infinite credits"],
-        sku: "month_03",
+        sku: "3-business",
       },
     ];
 
@@ -54,7 +54,7 @@ export const pricingService = {
         currency: "$",
         interval: "year",
         features: ["Promises", "Intentions", "240 credits"],
-        sku: "year_01",
+        sku: "1-beginner",
       },
       {
         id: "advanced-annual",
@@ -65,7 +65,7 @@ export const pricingService = {
         interval: "year",
         features: ["Kept promises", "Better intentions", "480 credits"],
         popular: true,
-        sku: "year_02",
+        sku: "2-advanced",
       },
       {
         id: "business-annual",
@@ -75,7 +75,7 @@ export const pricingService = {
         currency: "$",
         interval: "year",
         features: ["Kept promises", "Best intentions", "Infinite credits"],
-        sku: "year_03",
+        sku: "3-business",
       },
     ];
 

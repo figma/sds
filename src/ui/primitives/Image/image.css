@@ -8,10 +8,10 @@
 .image-placeholder {
   background: var(--sds-color-background-default-secondary);
   display: block;
+  width: 100%;
 }
 
 img.image-loading {
-  opacity: 0;
   display: none;
 }
 

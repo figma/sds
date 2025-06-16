@@ -1,5 +1,5 @@
 import { figma } from "@figma/code-connect";
-import { PricingCard, pricingOptionToPricingCardProps } from "compositions";
+import { PricingCard, pricingPlanToPricingCardProps } from "compositions";
 import { usePricing } from "data";
 import { useMediaQuery } from "hooks";
 import { Flex, FlexItem, Section } from "layout";
@@ -109,7 +109,7 @@ figma.connect(Section, "<FIGMA_SECTIONS_CARD_GRID_PRICING>", {
               <PricingCard
                 key={option.sku}
                 size={size}
-                {...pricingOptionToPricingCardProps(option, i)}
+                {...pricingPlanToPricingCardProps(option, i)}
               />
             ))}
           </Flex>

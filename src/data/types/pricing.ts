@@ -15,17 +15,6 @@ export type PricingPlan = {
   sku: string;
 };
 
-export type CartItem = {
-  plan: PricingPlan;
-  quantity: number;
-};
-
-export type Cart = {
-  items: CartItem[];
-  total: number;
-  currency: string;
-};
-
 /**
  * Pricing context type
  */
@@ -39,39 +28,15 @@ export interface PricingContextType {
    */
   annualPlans: PricingPlan[];
   /**
-   * Current pricing interval
+   * Current plan
    */
-  currentInterval: PricingInterval;
-  /**
-   * Shopping cart
-   */
-  cart: Cart;
+  currentPlan?: PricingPlan;
   /**
    * Whether pricing data is loading
    */
   isLoading: boolean;
   /**
-   * Any pricing errors
+   * Set the current plan
    */
-  error: Error | null;
-  /**
-   * Switch between monthly and annual pricing
-   */
-  setInterval: (interval: PricingInterval) => void;
-  /**
-   * Add a plan to cart
-   */
-  addToCart: (planId: string) => void;
-  /**
-   * Remove a plan from cart
-   */
-  removeFromCart: (planId: string) => void;
-  /**
-   * Clear the cart
-   */
-  clearCart: () => void;
-  /**
-   * Clear any errors
-   */
-  clearError: () => void;
+  setCurrentPlan: (plan: PricingPlan) => void;
 }
