@@ -18,7 +18,7 @@ export function Footer({ className, ...props }: FooterProps) {
   return (
     <Section
       elementType="footer"
-      variant="stroke"
+      variant="brand"
       paddingTop="1600"
       paddingBottom="4000"
       style={{ marginTop: "auto" }}
@@ -28,7 +28,7 @@ export function Footer({ className, ...props }: FooterProps) {
         <FlexItem size="minor">
           <Flex direction="column" gap="600" alignSecondary="start">
             <FlexItem>
-              <Logo />
+              <Logo className="footer-logo" />
             </FlexItem>
             <TextLinkList density={listDensity}>
               <TextListItem>

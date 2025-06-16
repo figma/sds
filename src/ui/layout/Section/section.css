@@ -61,7 +61,14 @@
 .section-variant-brand {
   background: var(--sds-color-background-brand-default);
   color: var(--sds-color-text-brand-on-brand);
+  .logo svg {
+    --logo-color: var(--sds-color-icon-brand-on-brand);
+  }
+  .icon svg {
+    --icon-color: var(--sds-color-icon-brand-on-brand);
+  }
 }
+
 .section-variant-neutral {
   background: var(--sds-color-background-default-tertiary);
 }

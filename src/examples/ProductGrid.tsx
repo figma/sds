@@ -1,4 +1,8 @@
-import { ProductInfoCard, productToProductInfoCardProps } from "compositions";
+import {
+  ProductInfoCard,
+  ProductInfoCardSkeleton,
+  productToProductInfoCardProps,
+} from "compositions";
 import { useProducts, type Product } from "data";
 import { useMediaQuery } from "hooks";
 import { IconChevronDown, IconChevronUp } from "icons";
@@ -13,7 +17,7 @@ export function ProductGrid() {
   const [filterTopRated, setFilterTopRated] = useState<boolean>(false);
   const flexGap = isMobile ? "600" : "1200";
   const sectionPadding = isMobile ? "600" : "1600";
-  const { products } = useProducts();
+  const { products, isLoading } = useProducts();
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   useEffect(() => {
     const initialProducts = products.filter(
@@ -40,7 +44,7 @@ export function ProductGrid() {
   });
 
   return (
-    <Section padding={sectionPadding} variant="neutral">
+    <Section padding={sectionPadding} variant="stroke">
       <Flex container wrap gap={flexGap} alignPrimary="stretch">
         <Flex direction="column" gap="1200" alignSecondary="stretch">
           <Flex
@@ -90,11 +94,24 @@ export function ProductGrid() {
             </FlexItem>
           </Flex>
           <Flex type="third" wrap gap="600">
-            {sortedProducts.map(({ ...product }, index) => (
-              <FlexItem key={index} size={isTablet ? "half" : "minor"}>
-                <ProductInfoCard {...productToProductInfoCardProps(product)} />
-              </FlexItem>
-            ))}
+            {isLoading ? (
+              <>
+                <ProductInfoCardSkeleton />
+                <ProductInfoCardSkeleton />
+                <ProductInfoCardSkeleton />
+                <ProductInfoCardSkeleton />
+                <ProductInfoCardSkeleton />
+                <ProductInfoCardSkeleton />
+              </>
+            ) : (
+              sortedProducts.map(({ ...product }, index) => (
+                <FlexItem key={index} size={isTablet ? "half" : "minor"}>
+                  <ProductInfoCard
+                    {...productToProductInfoCardProps(product)}
+                  />
+                </FlexItem>
+              ))
+            )}
           </Flex>
         </Flex>
       </Flex>

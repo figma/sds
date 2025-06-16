@@ -15,9 +15,9 @@ function App() {
       <Demo />
       <WelcomeHero />
       <PanelSections />
+      <PricingGrid />
       <FAQs />
       <ProductDetails />
-      <PricingGrid />
       <ProductGrid />
       <Footer />
     </AllProviders>

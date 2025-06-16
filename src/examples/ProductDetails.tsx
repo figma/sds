@@ -19,7 +19,7 @@ export function ProductDetails() {
   const sectionPadding = isMobile ? "600" : "1600";
 
   return (
-    <Section padding={sectionPadding} variant="neutral">
+    <Section padding={sectionPadding} variant="stroke">
       <Flex container type="half" wrap gap={flexGap}>
         <Image
           src="https://picsum.photos/seed/Modern office/1200/900"

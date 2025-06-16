@@ -27,7 +27,9 @@ export function Image({
   return (
     <>
       {!loaded && <span className={clsx("image-placeholder", classNames)} />}
-      <img className={classNames} {...props} onLoad={() => setLoaded(true)} />
+      {props.src && (
+        <img className={classNames} {...props} onLoad={() => setLoaded(true)} />
+      )}
     </>
   );
 }

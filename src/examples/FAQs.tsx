@@ -7,7 +7,7 @@ export function FAQs() {
   const flexGap = isMobile ? "600" : "1200";
   const sectionPadding = isMobile ? "600" : "1600";
   return (
-    <Section padding={sectionPadding} variant="brand">
+    <Section padding={sectionPadding} variant="neutral">
       <Flex container direction="column" alignSecondary="stretch" gap={flexGap}>
         <TextContentHeading
           align="center"

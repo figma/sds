@@ -136,6 +136,10 @@ export type PricingCardProps = {
    */
   actionVariant?: ButtonProps["variant"];
   /**
+   * The action is disabled
+   */
+  actionDisabled?: boolean;
+  /**
    * The action of the button.
    */
   onAction: () => void;
@@ -149,23 +153,98 @@ export type PricingCardProps = {
   listSlot?: ReactNode;
 };
 
-export function pricingOptionToPricingCardProps(
-  option: PricingPlan,
+/**
+ * Converts a PricingPlan to a PricingCardProps object.
+ */
+export function pricingPlanToPricingCardProps(
+  plan: PricingPlan,
   index: number,
+  currentPlan?: PricingPlan,
+  setCurrentPlan?: (plan: PricingPlan) => void,
 ): PricingCardProps {
+  const isActive = currentPlan?.id === plan.id;
+  const level = parseInt(plan.sku.split("-")[0]);
+  const levelCurrent = currentPlan
+    ? parseInt(currentPlan?.sku.split("-")[0])
+    : null;
+  const levelUpgrade = levelCurrent && levelCurrent < level;
+  const levelDowngrade = levelCurrent && levelCurrent > level;
+  const goAnnual = levelCurrent === level && currentPlan?.interval === "month";
+  const goMonthly = levelCurrent === level && currentPlan?.interval === "year";
+  const action = isActive
+    ? "Current Plan"
+    : levelUpgrade
+      ? `Upgrade to ${plan.name}`
+      : levelDowngrade
+        ? `Downgrade to ${plan.name}`
+        : goAnnual
+          ? `Go Annual`
+          : goMonthly
+            ? `Go Monthly`
+            : `Select ${plan.name}`;
   return {
-    sku: option.sku,
-    interval: option.interval,
-    list: option.features,
-    heading: option.name,
-    priceCurrency: option.currency,
-    action: `Select ${option.name}`,
-    actionVariant: index === 2 ? "neutral" : "primary",
-    variant: index === 2 ? "brand" : "stroke",
-    price: option.price.toString(),
-    priceLabel: option.interval === "month" ? "/ mo" : "/ yr",
-    onAction: () => console.log(`Selected ${option.name}`),
+    sku: plan.sku,
+    interval: plan.interval,
+    list: plan.features,
+    heading: plan.name,
+    priceCurrency: plan.currency,
+    action,
+    actionDisabled: isActive,
+    actionVariant: index === 1 ? "neutral" : "primary",
+    variant: index === 1 ? "brand" : "stroke",
+    price: plan.price.toString(),
+    priceLabel: plan.interval === "month" ? "/ mo" : "/ yr",
+    onAction: () =>
+      setCurrentPlan
+        ? setCurrentPlan(plan)
+        : console.log(`Selected ${plan.name}`),
   };
+}
+
+/**
+ * This is used to show a loading state for PricingCard.
+ * It has no props, but accepts a size prop to determine the size of the card.
+ */
+export function PricingCardSkeleton({
+  size,
+}: {
+  size: PricingCardProps["size"];
+}) {
+  return (
+    <Card
+      variant="stroke"
+      padding={size === "large" ? "800" : "600"}
+      direction="vertical"
+    >
+      <Flex
+        direction={size === "large" ? "column" : "row"}
+        alignPrimary={size === "large" ? "center" : "space-between"}
+        alignSecondary="center"
+        gap={size === "large" ? "400" : undefined}
+      >
+        <TextHeading>&nbsp;</TextHeading>
+        <TextPrice
+          size={size}
+          label="&nbsp;"
+          currency="&nbsp;"
+          price="&nbsp;"
+        />
+      </Flex>
+      <TextList density={size === "large" ? "default" : "tight"}>
+        {[<>&nbsp;</>, <>&nbsp;</>, <>&nbsp;</>].map((item, i) => (
+          <TextListItem key={i}>{item}</TextListItem>
+        ))}
+      </TextList>
+
+      <Flex alignPrimary="stretch">
+        <ButtonGroup align="justify">
+          <Button isDisabled variant="primary">
+            &nbsp;
+          </Button>
+        </ButtonGroup>
+      </Flex>
+    </Card>
+  );
 }
 
 /**
@@ -176,6 +255,7 @@ export function PricingCard({
   action,
   actionVariant = "primary",
   actionIcon,
+  actionDisabled,
   onAction,
   price,
   priceCurrency,
@@ -217,7 +297,11 @@ export function PricingCard({
 
       <Flex alignPrimary="stretch">
         <ButtonGroup align="justify">
-          <Button variant={actionVariant} onPress={onAction}>
+          <Button
+            isDisabled={actionDisabled}
+            variant={actionVariant}
+            onPress={onAction}
+          >
             {action}
             {actionIcon}
           </Button>
@@ -227,6 +311,9 @@ export function PricingCard({
   );
 }
 
+/**
+ * Converts a Product to ProductInfoCardProps object.
+ */
 export function productToProductInfoCardProps(
   product: Product,
 ): ProductInfoCardProps {
@@ -264,6 +351,34 @@ export type ProductInfoCardProps = Pick<CardProps, "asset"> & {
    */
   rating: number;
 };
+
+/**
+ * This is used to show a loading state for ProductInfoCard.
+ * It has no props, but accepts a size prop to determine the size of the card.
+ */
+
+export function ProductInfoCardSkeleton({}: {}) {
+  return (
+    <Card
+      padding="600"
+      direction="vertical"
+      variant="stroke"
+      asset={
+        <Image
+          aspectRatio="4-3"
+          alt="Placeholder image"
+          className="product-info-card-asset"
+        />
+      }
+    >
+      <Flex direction="column" gap="200">
+        <TextSubheading lineClamp={1}>&nbsp;</TextSubheading>
+        <TextStrong>&nbsp;</TextStrong>
+        <Text lineClamp={2}>&nbsp;</Text>
+      </Flex>
+    </Card>
+  );
+}
 
 /**
  * A card that demonstrates product information with a CTA
