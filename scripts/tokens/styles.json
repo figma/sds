@@ -755,9 +755,17 @@
             "type": "VARIABLE_ALIAS",
             "id": "VariableID:228:6769"
           },
+          "spread": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
+          },
           "color": {
             "type": "VARIABLE_ALIAS",
             "id": "VariableID:9:11234"
+          },
+          "offsetX": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:9:11280"
           },
           "offsetY": {
             "type": "VARIABLE_ALIAS",

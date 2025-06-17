@@ -154,8 +154,13 @@ function variablesRESTResponseToVariablesJSON(response, nameSpace) {
       [nameSpace]: { figmaId, modes: modeKeys },
     };
     variableIds.forEach((variableId) => {
-      const { name, resolvedType, valuesByMode, description } =
-        variables[variableId];
+      const {
+        deletedButReferenced,
+        name,
+        resolvedType,
+        valuesByMode,
+        description,
+      } = variables[variableId];
       const value = valuesByMode[keyToId[modeKeys[0]]];
       const fontWeight =
         resolvedType === "FLOAT" &&
@@ -166,7 +171,8 @@ function variablesRESTResponseToVariablesJSON(response, nameSpace) {
         Boolean(name.match(/\/?family/i)) &&
         "fontFamily";
       if (
-        (value !== undefined &&
+        (!deletedButReferenced &&
+          value !== undefined &&
           ["COLOR", "FLOAT", "STRING"].includes(resolvedType)) ||
         fontFamily
       ) {
