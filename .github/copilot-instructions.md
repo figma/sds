@@ -77,6 +77,21 @@ import {
 
 When implementing designs from Figma, follow these guidelines to ensure proper translation to the SDS component library.
 
+## Annotations
+
+In the MCP server response from Figma, you will see annotation attributes that provide context. The annotations can be describing behavior for the current node, or its descendants.
+
+```jsx
+<div
+  data-content-annotations="Cards' button text is dynamic. They should say upgrade or downgrade if there is a current plan and it is better or worse."
+  data-interaction-annotations="Card buttons should be disabled if they are the current plan and their text should say 'current plan'. The pill buttons should update the cards to show annual or monthly pricing."
+/>
+```
+
+The prefix is a category for the annotation and describes the type of annotation. For example, "content" refers to text or image content annotations, and "interaction" refers to user interaction notes.
+
+Always read these annotations carefully, as they provide important context for implementing the design correctly.
+
 ## CSS Variables & Design Tokens
 
 All design tokens from Figma are defined as CSS variables in [src/theme.css](../src/theme.css). **Always use these variables instead of hardcoded values.**

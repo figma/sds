@@ -26,8 +26,8 @@ SDS is a production-ready design system featuring:
 
 ### Key Resources
 
-- [Live Storybook](mdc:https:/figma.github.io/sds/storybook) - Component documentation
-- [Figma Community File](mdc:https:/www.figma.com/community/file/1380235722331273046/simple-design-system) - Design source
+- [Live Storybook](https://figma.github.io/sds/storybook) - Component documentation
+- [Figma Community File](https://www.figma.com/community/file/1380235722331273046/simple-design-system) - Design source
 
 ## Quick Start Checklist
 
@@ -77,9 +77,24 @@ import {
 
 When implementing designs from Figma, follow these guidelines to ensure proper translation to the SDS component library.
 
+## Annotations
+
+In the MCP server response from Figma, you will see annotation attributes that provide context. The annotations can be describing behavior for the current node, or its descendants.
+
+```jsx
+<div
+  data-content-annotations="Cards' button text is dynamic. They should say upgrade or downgrade if there is a current plan and it is better or worse."
+  data-interaction-annotations="Card buttons should be disabled if they are the current plan and their text should say 'current plan'. The pill buttons should update the cards to show annual or monthly pricing."
+/>
+```
+
+The prefix is a category for the annotation and describes the type of annotation. For example, "content" refers to text or image content annotations, and "interaction" refers to user interaction notes.
+
+Always read these annotations carefully, as they provide important context for implementing the design correctly.
+
 ## CSS Variables & Design Tokens
 
-All design tokens from Figma are defined as CSS variables in [src/theme.css](mdc:../src/theme.css). **Always use these variables instead of hardcoded values.**
+All design tokens from Figma are defined as CSS variables in [src/theme.css](../src/theme.css). **Always use these variables instead of hardcoded values.**
 
 - Colors: Use `var(--sds-color-*)` variables (e.g., `var(--sds-color-text-default-default)`)
 - Spacing: Use `var(--sds-size-space-*)` variables (e.g., `var(--sds-size-space-400)`)
@@ -121,7 +136,7 @@ src/
 │   └── utils/          # Utility functions and components
 ├── stories/            # Storybook stories for all components
 ├── examples/           # Examples of how to use components together in larger complete sections
-├── figma/              # Figma [Code Connect](mdc:https:/www.figma.com/code-connect-docs/react) files
+├── figma/              # Figma [Code Connect](https://www.figma.com/code-connect-docs/react/) files
 │   ├── primitives/     # Maps Figma components to React primitives
 │   ├── compositions/   # Maps Figma compositions to React components
 │   └── icons/          # Maps Figma icons to React icons
@@ -143,9 +158,9 @@ scripts/
 
 ## Component Library Structure
 
-All UI components are in [src/ui](mdc:../src/ui). **Never create new components - always use existing SDS components.**
+All UI components are in [src/ui](../src/ui). **Never create new components - always use existing SDS components.**
 
-All data management (contexts, providers, services, types, and data hooks) are in [src/data](mdc:../src/data). Use the provided context providers and custom hooks for state management.
+All data management (contexts, providers, services, types, and data hooks) are in [src/data](../src/data). Use the provided context providers and custom hooks for state management.
 
 ## SDS Component Hierarchy
 
@@ -256,7 +271,7 @@ function ResponsiveExample() {
 - **Always import components from their specific paths** - Use the alias imports
 - **Check component props before using** - Read the TypeScript definitions
 - **Use layout components instead of CSS Grid/Flexbox** - Never write custom layout CSS
-- **Reference existing stories in [src/stories](mdc:../src/stories) for usage examples**
+- **Reference existing stories in [src/stories](../src/stories/) for usage examples**
 
 ### Common Pitfalls & Solutions
 
@@ -296,7 +311,7 @@ Single-purpose, reusable components (alphabetically ordered):
 - **Checkbox** - Boolean selection controls with validation states
 - **Dialog** - Modal dialogs and overlays with backdrop
 - **Fieldset** - Form fieldset grouping with legend
-- **Icon** - Consistent icon rendering (check [src/ui/icons](mdc:../src/ui/icons) for available icons)
+- **Icon** - Consistent icon rendering (check [src/ui/icons](../src/ui/icons/) for available icons)
 - **IconButton** - Icon-only buttons with accessible labels
 - **Image** - Responsive images with loading states
 - **Input** - Form input fields with validation states and labels
