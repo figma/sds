@@ -1,0 +1,152 @@
+.button {
+  --border-radius: var(--sds-size-radius-200);
+  align-items: center;
+  box-shadow: inset 0 0 0 var(--sds-size-stroke-border) var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--background-color);
+  color: var(--color);
+  cursor: pointer;
+  display: inline-flex;
+  font: var(--font);
+  gap: var(--sds-size-space-200);
+  justify-content: center;
+  line-height: 1;
+  padding: var(--padding-y) var(--padding-x);
+  position: relative;
+  white-space: nowrap;
+
+  > .icon {
+    --icon-color: var(--color);
+  }
+}
+
+/* Size variants */
+.small {
+  --font: var(--sds-font-body-small);
+  --padding-x: var(--sds-size-space-200);
+  --padding-y: var(--sds-size-space-200);
+
+  > .icon {
+    --icon-diameter: var(--sds-typography-scale-02);
+  }
+}
+
+.medium {
+  --font: var(--sds-font-body-base);
+  --padding-x: var(--sds-size-space-300);
+  --padding-y: var(--sds-size-space-300);
+
+  > .icon {
+    --icon-diameter: var(--sds-typography-scale-03);
+  }
+}
+
+/* Variant definitions */
+.primary {
+  --background-color: var(--sds-color-background-brand-default);
+  --border-color: var(--sds-color-border-brand-default);
+  --color: var(--sds-color-text-brand-on-brand);
+}
+
+.neutral {
+  --background-color: var(--sds-color-background-default-secondary);
+  --border-color: var(--sds-color-border-default-default);
+  --color: var(--sds-color-text-default-default);
+}
+
+.subtle {
+  --background-color: transparent;
+  --border-color: transparent;
+  --color: var(--sds-color-text-brand-default);
+}
+
+.dangerPrimary {
+  --background-color: var(--sds-color-background-danger-default);
+  --border-color: var(--sds-color-border-danger-secondary);
+  --color: var(--sds-color-text-danger-on-danger);
+}
+
+.dangerSubtle {
+  --background-color: transparent;
+  --border-color: transparent;
+  --color: var(--sds-color-text-danger-default);
+}
+
+/* Hover states */
+.button[data-hovered]:not([data-disabled]).primary {
+  --background-color: var(--sds-color-background-brand-hover);
+  --border-color: var(--sds-color-border-brand-default);
+}
+
+.button[data-hovered]:not([data-disabled]).neutral {
+  --background-color: var(--sds-color-background-default-secondary-hover);
+}
+
+.button[data-hovered]:not([data-disabled]).subtle {
+  --background-color: var(--sds-color-background-default-default-hover);
+}
+
+.button[data-hovered]:not([data-disabled]).dangerPrimary {
+  --background-color: var(--sds-color-background-danger-hover);
+  --border-color: var(--sds-color-border-danger-default);
+}
+
+.button[data-hovered]:not([data-disabled]).dangerSubtle {
+  --background-color: var(--sds-color-background-danger-tertiary-hover);
+}
+
+/* Disabled state */
+.button[data-disabled] {
+  cursor: default;
+  pointer-events: none;
+  --background-color: var(--sds-color-background-disabled-default);
+  --border-color: var(--sds-color-border-disabled-default);
+  --color: var(--sds-color-text-disabled-default);
+}
+
+/* Focus styles */
+.button[data-focus-visible] {
+  outline: none;
+  --offset: calc(var(--sds-size-stroke-border) * 2);
+  &::before {
+    content: "";
+    border-radius: calc(var(--border-radius) + var(--offset));
+    bottom: calc(-1 * var(--offset));
+    box-shadow: 0 0 0 var(--global-focus-ring-size)
+      var(--global-focus-ring-color);
+    left: calc(-1 * var(--offset));
+    position: absolute;
+    right: calc(-1 * var(--offset));
+    top: calc(-1 * var(--offset));
+  }
+}
+
+/* Button Group */
+.group {
+  align-items: center;
+  display: flex;
+  gap: var(--sds-size-space-300);
+}
+
+.alignStart {
+  justify-content: flex-start;
+}
+
+.alignCenter {
+  justify-content: center;
+}
+
+.alignEnd {
+  justify-content: flex-end;
+}
+
+.alignJustify > .button {
+  flex: 1;
+}
+
+.alignStack {
+  flex-direction: column;
+  > .button {
+    width: 100%;
+  }
+}

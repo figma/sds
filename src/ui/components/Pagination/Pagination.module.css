@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.list {
+  align-items: center;
+  display: flex;
+  gap: var(--sds-size-space-200);
+}

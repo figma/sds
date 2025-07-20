@@ -1,0 +1,88 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-400);
+  width: 100%;
+}
+
+.item {
+  --border-radius: var(--sds-size-radius-200);
+  background: var(--sds-color-background-default-secondary);
+  box-shadow: inset 0 0 0 var(--sds-size-stroke-border)
+    var(--sds-color-border-default-default);
+  border-radius: var(--border-radius);
+  color: var(--sds-color-text-default-default);
+  display: flex;
+  flex-direction: column;
+  line-height: var(--global-line-height-body);
+  width: 100%;
+
+  &:has(.title > button[data-hovered]) {
+    background: var(--sds-color-background-default-secondary-hover);
+  }
+
+  &:has(.title > button[data-focus-visible]) {
+    outline: none;
+    position: relative;
+    --offset: calc(var(--sds-size-stroke-border) * 2);
+    &::before {
+      content: "";
+      border-radius: calc(var(--border-radius) + var(--offset));
+      bottom: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size)
+        var(--global-focus-ring-color);
+      left: calc(-1 * var(--offset));
+      position: absolute;
+      right: calc(-1 * var(--offset));
+      top: calc(-1 * var(--offset));
+    }
+  }
+
+  .title > button {
+    align-items: center;
+    color: var(--sds-color-text-default-default);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--sds-size-space-400);
+    width: 100%;
+  }
+
+  .title,
+  .title > button {
+    font: var(--sds-font-body-strong);
+  }
+
+  .indicator {
+    --icon-fill: var(--sds-color-icon-default-default);
+  }
+
+  .content {
+    max-height: 0;
+    overflow-y: hidden;
+  }
+
+  &[data-expanded] {
+    background: var(--sds-color-background-default-default);
+
+    > .title > button {
+      padding-bottom: var(--sds-size-space-200);
+
+      > .indicator {
+        transform: scaleY(-1) translateY(2px);
+      }
+    }
+
+    &:has(.title > button[data-hovered]) {
+      background: var(--sds-color-background-default-default-hover);
+    }
+
+    > .content {
+      margin-left: auto;
+      margin-right: auto;
+      max-height: initial;
+      padding-bottom: var(--sds-size-space-400);
+      width: calc(100% - var(--sds-size-space-400) * 2);
+    }
+  }
+}
