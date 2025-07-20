@@ -1,0 +1,91 @@
+.container {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: var(--global-stack-dialog-container);
+}
+
+.backdrop {
+  backdrop-filter: var(--sds-effects-backdrop-filter-blur-overlay);
+  background: var(--sds-color-background-utilities-scrim);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: var(--global-stack-dialog-backdrop);
+}
+
+.dialog {
+  --padding-y: var(--sds-size-space-800);
+  background: var(--sds-color-background-default-default);
+  box-shadow: var(--sds-effects-shadows-drop-shadow-400);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--padding-y);
+  padding-top: var(--padding-y);
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  .close {
+    position: absolute;
+    top: var(--sds-size-space-200);
+    right: var(--sds-size-space-200);
+  }
+}
+
+.card {
+  border-radius: var(--sds-size-radius-200);
+  border: var(--sds-size-stroke-border) solid
+    var(--sds-color-border-default-default);
+  max-width: var(--global-dialog-max-width);
+  width: calc(100% - var(--sds-size-space-400) * 2);
+}
+
+.sheet {
+  align-self: flex-end;
+  border-top: var(--sds-size-stroke-border) solid
+    var(--sds-color-border-default-default);
+  max-width: 100%;
+  width: 100%;
+  padding-left: calc((100% - min(var(--global-container-max-width), 100%)) / 2);
+  padding-right: calc(
+    (100% - min(var(--global-container-max-width), 100%)) / 2
+  );
+}
+
+.title,
+.description,
+.dialog .button-group,
+.body {
+  padding-left: var(--sds-size-space-800);
+  padding-right: var(--sds-size-space-800);
+}
+
+.bodyBleed {
+  margin-left: calc(-1 * var(--sds-size-space-800));
+  margin-right: calc(-1 * var(--sds-size-space-800));
+  --table-gutter-inset: var(--sds-size-space-800);
+}
+
+.dialog .button-group {
+  margin-top: var(--sds-size-space-600);
+}
+
+.body {
+  margin-top: var(--sds-size-space-600);
+}
+
+.description {
+  margin-top: var(--sds-size-space-200);
+  font: var(--sds-font-body-base);
+}

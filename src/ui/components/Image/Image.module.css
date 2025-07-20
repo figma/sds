@@ -1,0 +1,75 @@
+.image {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: auto;
+}
+
+.placeholder {
+  background: var(--sds-color-background-default-secondary);
+  display: block;
+  width: 100%;
+}
+
+.loading {
+  display: none;
+}
+
+/* Variant classes */
+.rounded {
+  border-radius: var(--sds-size-radius-100);
+}
+
+/* Aspect ratio classes */
+.aspectRatio1_1 {
+  aspect-ratio: 1 / 1;
+}
+
+.aspectRatio16_9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspectRatio4_3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspectRatioFill {
+  width: 100%;
+}
+
+.aspectRatioNatural {
+  aspect-ratio: auto;
+}
+
+/* Size classes */
+.small {
+  --height: 10rem;
+  height: var(--height);
+}
+
+.medium {
+  --height: 20rem;
+  height: var(--height);
+}
+
+.large {
+  --height: 30rem;
+  height: var(--height);
+}
+
+.fill {
+  --height: auto;
+  height: var(--height);
+  width: 100%;
+}
+
+.natural {
+  --height: auto;
+  height: var(--height);
+}
+
+/* Picture component */
+.picture {
+  display: flex;
+  width: 100%;
+}

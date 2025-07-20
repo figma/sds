@@ -4,20 +4,14 @@
     "exclude": ["src/figma/icons/*"],
     "parser": "react",
     "importPaths": {
-      "ui/compositions/**/*": "compositions",
       "ui/icons/*": "icons",
       "ui/images/*": "images",
-      "ui/layout/**/*": "layout",
-      "ui/primitives/**/*": "primitives"
+      "ui/components/**/*": "components"
     },
     "paths": {
-      "compositions": ["src/ui/compositions"],
-      "hooks": ["src/ui/hooks"],
       "icons": ["src/ui/icons"],
       "images": ["src/ui/images"],
-      "layout": ["src/ui/layout"],
-      "primitives": ["src/ui/primitives"],
-      "providers": ["src/ui/providers"],
+      "components": ["src/ui/components"],
       "utils": ["src/ui/utils"]
     },
     "documentUrlSubstitutions": {

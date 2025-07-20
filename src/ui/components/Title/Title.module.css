@@ -1,0 +1,48 @@
+.subtitle {
+  font: var(--sds-font-subtitle);
+}
+
+.subheading {
+  font: var(--sds-font-subheading);
+}
+
+.heading {
+  font: var(--sds-font-heading);
+}
+
+.titleHero {
+  font: var(--sds-font-title-hero);
+}
+
+.titlePage {
+  font: var(--sds-font-title-page);
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignStart {
+  text-align: left;
+}
+
+.alignEnd {
+  text-align: right;
+}
+
+.contentTitle,
+.contentHeading {
+  > * {
+    width: 100%;
+  }
+}
+
+/* Text truncation with ellipsis */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--text-truncate-line-clamp, 9999);
+  line-clamp: var(--text-truncate-line-clamp, 9999);
+}
