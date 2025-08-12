@@ -21,7 +21,7 @@
       "utils": ["src/ui/utils"]
     },
     "documentUrlSubstitutions": {
-      "<FIGMA_ICONS_BASE>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi",
+      "<FIGMA_ICONS_BASE>": "https://figma.com/design/Ffa07BNuHCf55WPU5eyFXA/Simple-Design-System--Community-?node-id=3-5&m=dev&t=qnwcFUH2SdTgxNiX-1",
       "<FIGMA_ACCORDION_ACCORDION_ITEM>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=7753-4634",
       "<FIGMA_ACCORDION_ACCORDION>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=7753-4779",
       "<FIGMA_AVATARS_AVATAR_BLOCK>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=2010-15581",
