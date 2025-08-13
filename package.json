@@ -15,7 +15,9 @@
     "script:icons": "cd scripts/icons; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",
     "script:icons:rest": "cd scripts/icons; node --env-file=../../.env app.mjs; cd -;",
     "script:tokens": "cd scripts/tokens; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",
-    "script:tokens:rest": "cd scripts/tokens; node --env-file=../../.env app.mjs; cd -;"
+    "script:tokens:rest": "cd scripts/tokens; node --env-file=../../.env app.mjs; cd -;",
+    "webpack:build": "webpack --mode production",
+    "webpack:dev": "webpack --mode development"
   },
   "prettier": {
     "plugins": [
@@ -23,6 +25,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
     "@figma/code-connect": "^1.3.3",
     "@react-types/shared": "^3.23.0",
     "@storybook/addon-essentials": "^8.6.12",
@@ -39,17 +43,24 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
+    "babel-loader": "^10.0.0",
     "clsx": "^2.1.1",
+    "css-loader": "^7.1.2",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.8.0",
+    "mini-css-extract-plugin": "^2.9.4",
     "prettier-plugin-organize-imports": "^3.2.4",
     "react": "^18.2.0",
     "react-aria-components": "^1.10.1",
     "react-dom": "^18.2.0",
     "storybook": "^8.6.12",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
     "typescript": "^5.0.2",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "webpack": "^5.101.1",
+    "webpack-cli": "^6.0.1"
   }
 }
