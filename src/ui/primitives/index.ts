@@ -26,3 +26,4 @@ export * from "./Tag/Tag";
 export * from "./Text/Text";
 export * from "./Textarea/Textarea";
 export * from "./Tooltip/Tooltip";
+export * from "./SimpleButton/SimpleButton";
