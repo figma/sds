@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+if ! command -v node &> /dev/null; then
+  echo "Node.js is required but not installed."
+  exit 1
+fi
+
+echo "Node $(node --version) found"
+echo "npm $(npm --version) found"

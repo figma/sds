@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+MAX_ATTEMPTS=30
+ATTEMPT=0
+
+until curl -s -o /dev/null -w '' http://localhost:8000; do
+  ATTEMPT=$((ATTEMPT + 1))
+  if [ "$ATTEMPT" -ge "$MAX_ATTEMPTS" ]; then
+    echo "Dev server did not start within $MAX_ATTEMPTS attempts"
+    exit 1
+  fi
+  sleep 1
+done
+
+echo "Dev server is running at http://localhost:8000"
