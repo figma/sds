@@ -34,7 +34,7 @@ Whether you’re looking to use SDS to start a new project, or are looking for e
 
 SDS is fully backed by Figma's Code Connect. This includes examples for how to connect [primitives](./src/figma/primitives/), as well as [compositions](./src/figma/compositions/) of those primitives for your design system.
 
-This repo utilizes `documentUrlSubstitutions` in [figma.config.json](./figma.config.json). This allows us to keep our docs Figma file-agnostic and colocates all the Figma file-specific information for easy url swapping. The document URL substitutions are also named in a way that helps you find the associated component without clicking a link. A key `<FIGMA_INPUTS_CHECKBOX_GROUP>` is broken down as `<FIGMA_[PAGE_NAME]_[COMPONENT_NAME]>`.
+This repo utilizes `documentUrlSubstitutions` in [figma.config.json](./figma.config.json). This allows us to keep our templates Figma file-agnostic and colocates all the Figma file-specific information for easy url swapping. The document URL substitutions are also named in a way that helps you find the associated component without clicking a link. A key `<FIGMA_INPUTS_CHECKBOX_GROUP>` is broken down as `<FIGMA_[PAGE_NAME]_[COMPONENT_NAME]>`.
 
 ```json
 {
@@ -44,10 +44,10 @@ This repo utilizes `documentUrlSubstitutions` in [figma.config.json](./figma.con
 }
 ```
 
-Allows us to have more expressive URLs in our Code Connect docs:
+Allows us to have more expressive URLs in our Code Connect templates:
 
-```js
-figma.connect(CheckboxGroup, "<FIGMA_INPUTS_CHECKBOX_GROUP>");
+```ts
+// url=<FIGMA_INPUTS_CHECKBOX_GROUP>
 ```
 
 ### Connecting this repo to a duplicated Figma file
@@ -99,7 +99,7 @@ Custom utilities and utility components
 
 ### Code Connect and Storybook
 
-All Code Connect docs and Storybook stories follow the same categorization are defined in [src/figma](./src/figma) and [src/stories](./src/stories).
+All Code Connect templates and Storybook stories follow the same categorization are defined in [src/figma](./src/figma) and [src/stories](./src/stories).
 
 ## Scripts
 
@@ -126,7 +126,8 @@ Some example integrations are available in `scripts` directory. They may require
 
 - `npm run script:icons:rest`
 - Gets all icons from the file, and generates components in the [src/ui/icons](./src/ui/icons) directory.
-- Also generates [src/figma/icons/Icons.figma.tsx](./src/figma/icons/Icons.figma.tsx) for Code Connect.
+- Also generates [src/figma/icons/Icons.figma.batch.json](./src/figma/icons/Icons.figma.batch.json) for Code Connect.
+- `npm run script:icons` regenerates those outputs from the checked-in [scripts/icons/icons.json](./scripts/icons/icons.json) cache without calling the REST API.
 
 ### [scripts/tokens](./scripts/tokens)
 

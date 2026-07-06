@@ -1,25 +1,8 @@
 {
   "codeConnect": {
-    "include": ["src/ui/**/*", "src/figma/**/*"],
-    "exclude": ["src/figma/icons/*"],
-    "parser": "react",
-    "importPaths": {
-      "ui/compositions/**/*": "compositions",
-      "ui/icons/*": "icons",
-      "ui/images/*": "images",
-      "ui/layout/**/*": "layout",
-      "ui/primitives/**/*": "primitives"
-    },
-    "paths": {
-      "compositions": ["src/ui/compositions"],
-      "hooks": ["src/ui/hooks"],
-      "icons": ["src/ui/icons"],
-      "images": ["src/ui/images"],
-      "layout": ["src/ui/layout"],
-      "primitives": ["src/ui/primitives"],
-      "providers": ["src/ui/providers"],
-      "utils": ["src/ui/utils"]
-    },
+    "include": ["**/*.figma.ts", "**/*.figma.batch.json"],
+    "language": "jsx",
+    "label": "React",
     "documentUrlSubstitutions": {
       "<FIGMA_ICONS_BASE>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi",
       "<FIGMA_ACCORDION_ACCORDION_ITEM>": "https://figma.com/design/J0KLPKXiONDRssXD1AX9Oi?node-id=7753-4634",

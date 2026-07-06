@@ -1,0 +1,1440 @@
+{
+  "templateFile": "./Icons.figma.batch.ts",
+  "components": [
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15551",
+      "component": "IconActivity",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconActivity.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15553",
+      "component": "IconAirplay",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAirplay.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15555",
+      "component": "IconAlertCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAlertCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15557",
+      "component": "IconAlertOctagon",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAlertOctagon.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15559",
+      "component": "IconAlertTriangle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAlertTriangle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15561",
+      "component": "IconAlignCenter",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAlignCenter.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15563",
+      "component": "IconAlignJustify",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAlignJustify.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15565",
+      "component": "IconAlignLeft",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAlignLeft.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15567",
+      "component": "IconAlignRight",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAlignRight.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15569",
+      "component": "IconAnchor",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAnchor.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15571",
+      "component": "IconAperture",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAperture.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15573",
+      "component": "IconArchive",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArchive.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15581",
+      "component": "IconArrowDown",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowDown.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15575",
+      "component": "IconArrowDownCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowDownCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15577",
+      "component": "IconArrowDownLeft",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowDownLeft.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15579",
+      "component": "IconArrowDownRight",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowDownRight.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15585",
+      "component": "IconArrowLeft",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowLeft.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15583",
+      "component": "IconArrowLeftCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowLeftCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15589",
+      "component": "IconArrowRight",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowRight.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15587",
+      "component": "IconArrowRightCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowRightCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15597",
+      "component": "IconArrowUp",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowUp.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15591",
+      "component": "IconArrowUpCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowUpCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15593",
+      "component": "IconArrowUpLeft",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowUpLeft.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15595",
+      "component": "IconArrowUpRight",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconArrowUpRight.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15599",
+      "component": "IconAtSign",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAtSign.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15601",
+      "component": "IconAward",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconAward.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15605",
+      "component": "IconBarChart",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBarChart.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15603",
+      "component": "IconBarChart2",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBarChart2.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15609",
+      "component": "IconBattery",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBattery.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15607",
+      "component": "IconBatteryCharging",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBatteryCharging.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15613",
+      "component": "IconBell",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBell.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15611",
+      "component": "IconBellOff",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBellOff.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15615",
+      "component": "IconBluetooth",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBluetooth.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15617",
+      "component": "IconBold",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBold.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15621",
+      "component": "IconBook",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBook.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15619",
+      "component": "IconBookOpen",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBookOpen.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15623",
+      "component": "IconBookmark",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBookmark.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15625",
+      "component": "IconBox",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBox.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15627",
+      "component": "IconBriefcase",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconBriefcase.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15629",
+      "component": "IconCalendar",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCalendar.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15633",
+      "component": "IconCamera",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCamera.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15631",
+      "component": "IconCameraOff",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCameraOff.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15635",
+      "component": "IconCast",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCast.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15641",
+      "component": "IconCheck",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCheck.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15637",
+      "component": "IconCheckCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCheckCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15639",
+      "component": "IconCheckSquare",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCheckSquare.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15643",
+      "component": "IconChevronDown",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconChevronDown.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15645",
+      "component": "IconChevronLeft",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconChevronLeft.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15647",
+      "component": "IconChevronRight",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconChevronRight.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15649",
+      "component": "IconChevronUp",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconChevronUp.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15651",
+      "component": "IconChevronsDown",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconChevronsDown.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15653",
+      "component": "IconChevronsLeft",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconChevronsLeft.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15655",
+      "component": "IconChevronsRight",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconChevronsRight.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15657",
+      "component": "IconChevronsUp",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconChevronsUp.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15659",
+      "component": "IconChrome",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconChrome.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15661",
+      "component": "IconCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15663",
+      "component": "IconClipboard",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconClipboard.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15665",
+      "component": "IconClock",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconClock.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15677",
+      "component": "IconCloud",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCloud.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15667",
+      "component": "IconCloudDrizzle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCloudDrizzle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15669",
+      "component": "IconCloudLightning",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCloudLightning.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15671",
+      "component": "IconCloudOff",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCloudOff.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15673",
+      "component": "IconCloudRain",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCloudRain.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15675",
+      "component": "IconCloudSnow",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCloudSnow.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15679",
+      "component": "IconCode",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCode.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15681",
+      "component": "IconCodepen",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCodepen.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15683",
+      "component": "IconCodesandbox",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCodesandbox.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15685",
+      "component": "IconCoffee",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCoffee.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15687",
+      "component": "IconColumns",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconColumns.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15689",
+      "component": "IconCommand",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCommand.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15691",
+      "component": "IconCompass",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCompass.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15693",
+      "component": "IconCopy",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCopy.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15695",
+      "component": "IconCornerDownLeft",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCornerDownLeft.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15697",
+      "component": "IconCornerDownRight",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCornerDownRight.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15699",
+      "component": "IconCornerLeftDown",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCornerLeftDown.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15701",
+      "component": "IconCornerLeftUp",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCornerLeftUp.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15703",
+      "component": "IconCornerRightDown",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCornerRightDown.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15705",
+      "component": "IconCornerRightUp",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCornerRightUp.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15707",
+      "component": "IconCornerUpLeft",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCornerUpLeft.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15709",
+      "component": "IconCornerUpRight",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCornerUpRight.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15711",
+      "component": "IconCpu",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCpu.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15713",
+      "component": "IconCreditCard",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCreditCard.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15715",
+      "component": "IconCrop",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCrop.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15717",
+      "component": "IconCrosshair",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconCrosshair.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15719",
+      "component": "IconDatabase",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDatabase.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15721",
+      "component": "IconDelete",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDelete.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15723",
+      "component": "IconDisc",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDisc.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15729",
+      "component": "IconDivide",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDivide.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15725",
+      "component": "IconDivideCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDivideCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15727",
+      "component": "IconDivideSquare",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDivideSquare.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15731",
+      "component": "IconDollarSign",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDollarSign.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15735",
+      "component": "IconDownload",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDownload.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15733",
+      "component": "IconDownloadCloud",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDownloadCloud.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15737",
+      "component": "IconDribbble",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDribbble.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15739",
+      "component": "IconDroplet",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconDroplet.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15745",
+      "component": "IconEdit",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconEdit.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15741",
+      "component": "IconEdit2",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconEdit2.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15743",
+      "component": "IconEdit3",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconEdit3.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15747",
+      "component": "IconExternalLink",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconExternalLink.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15751",
+      "component": "IconEye",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconEye.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15749",
+      "component": "IconEyeOff",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconEyeOff.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15753",
+      "component": "IconFacebook",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFacebook.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15755",
+      "component": "IconFastForward",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFastForward.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15757",
+      "component": "IconFeather",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFeather.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15759",
+      "component": "IconFigma",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFigma.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15767",
+      "component": "IconFile",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFile.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15761",
+      "component": "IconFileMinus",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFileMinus.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15763",
+      "component": "IconFilePlus",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFilePlus.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15765",
+      "component": "IconFileText",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFileText.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15769",
+      "component": "IconFilm",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFilm.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15771",
+      "component": "IconFilter",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFilter.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15773",
+      "component": "IconFlag",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFlag.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15779",
+      "component": "IconFolder",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFolder.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15775",
+      "component": "IconFolderMinus",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFolderMinus.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15777",
+      "component": "IconFolderPlus",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFolderPlus.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15781",
+      "component": "IconFramer",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFramer.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15783",
+      "component": "IconFrown",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconFrown.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15785",
+      "component": "IconGift",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconGift.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15787",
+      "component": "IconGitBranch",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconGitBranch.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15789",
+      "component": "IconGitCommit",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconGitCommit.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15791",
+      "component": "IconGitMerge",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconGitMerge.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15793",
+      "component": "IconGitPullRequest",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconGitPullRequest.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15795",
+      "component": "IconGithub",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconGithub.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15797",
+      "component": "IconGitlab",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconGitlab.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15799",
+      "component": "IconGlobe",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconGlobe.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15801",
+      "component": "IconGrid",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconGrid.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15803",
+      "component": "IconHardDrive",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconHardDrive.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15805",
+      "component": "IconHash",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconHash.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15807",
+      "component": "IconHeadphones",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconHeadphones.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15809",
+      "component": "IconHeart",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconHeart.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15811",
+      "component": "IconHelpCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconHelpCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15813",
+      "component": "IconHexagon",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconHexagon.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15815",
+      "component": "IconHome",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconHome.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15817",
+      "component": "IconImage",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconImage.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15819",
+      "component": "IconInbox",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconInbox.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15821",
+      "component": "IconInfo",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconInfo.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15823",
+      "component": "IconInstagram",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconInstagram.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15825",
+      "component": "IconItalic",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconItalic.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15827",
+      "component": "IconKey",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconKey.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15829",
+      "component": "IconLayers",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconLayers.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15831",
+      "component": "IconLayout",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconLayout.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15833",
+      "component": "IconLifeBuoy",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconLifeBuoy.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15837",
+      "component": "IconLink",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconLink.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15835",
+      "component": "IconLink2",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconLink2.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15839",
+      "component": "IconLinkedin",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconLinkedin.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15841",
+      "component": "IconList",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconList.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15843",
+      "component": "IconLoader",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconLoader.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15845",
+      "component": "IconLock",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconLock.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15847",
+      "component": "IconLogIn",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconLogIn.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15849",
+      "component": "IconLogOut",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconLogOut.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15851",
+      "component": "IconMail",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMail.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15855",
+      "component": "IconMap",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMap.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15853",
+      "component": "IconMapPin",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMapPin.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15859",
+      "component": "IconMaximize",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMaximize.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15857",
+      "component": "IconMaximize2",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMaximize2.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15861",
+      "component": "IconMeh",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMeh.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15863",
+      "component": "IconMenu",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMenu.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15865",
+      "component": "IconMessageCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMessageCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15867",
+      "component": "IconMessageSquare",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMessageSquare.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15871",
+      "component": "IconMic",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMic.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15869",
+      "component": "IconMicOff",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMicOff.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15875",
+      "component": "IconMinimize",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMinimize.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15873",
+      "component": "IconMinimize2",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMinimize2.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15881",
+      "component": "IconMinus",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMinus.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15877",
+      "component": "IconMinusCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMinusCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15879",
+      "component": "IconMinusSquare",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMinusSquare.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15883",
+      "component": "IconMonitor",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMonitor.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15885",
+      "component": "IconMoon",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMoon.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15887",
+      "component": "IconMoreHorizontal",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMoreHorizontal.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15889",
+      "component": "IconMoreVertical",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMoreVertical.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15891",
+      "component": "IconMousePointer",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMousePointer.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15893",
+      "component": "IconMove",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMove.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15895",
+      "component": "IconMusic",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconMusic.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15899",
+      "component": "IconNavigation",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconNavigation.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15897",
+      "component": "IconNavigation2",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconNavigation2.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15901",
+      "component": "IconOctagon",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconOctagon.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15903",
+      "component": "IconPackage",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPackage.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15905",
+      "component": "IconPaperclip",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPaperclip.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15909",
+      "component": "IconPause",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPause.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15907",
+      "component": "IconPauseCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPauseCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15911",
+      "component": "IconPenTool",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPenTool.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15913",
+      "component": "IconPercent",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPercent.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15927",
+      "component": "IconPhone",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPhone.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15915",
+      "component": "IconPhoneCall",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPhoneCall.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15917",
+      "component": "IconPhoneForwarded",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPhoneForwarded.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15919",
+      "component": "IconPhoneIncoming",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPhoneIncoming.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15921",
+      "component": "IconPhoneMissed",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPhoneMissed.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15923",
+      "component": "IconPhoneOff",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPhoneOff.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15925",
+      "component": "IconPhoneOutgoing",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPhoneOutgoing.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15929",
+      "component": "IconPieChart",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPieChart.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15933",
+      "component": "IconPlay",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPlay.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15931",
+      "component": "IconPlayCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPlayCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15939",
+      "component": "IconPlus",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPlus.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15935",
+      "component": "IconPlusCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPlusCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15937",
+      "component": "IconPlusSquare",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPlusSquare.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15941",
+      "component": "IconPocket",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPocket.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15943",
+      "component": "IconPower",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPower.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15945",
+      "component": "IconPrinter",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconPrinter.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15947",
+      "component": "IconRadio",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconRadio.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15949",
+      "component": "IconRefreshCcw",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconRefreshCcw.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15951",
+      "component": "IconRefreshCw",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconRefreshCw.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15953",
+      "component": "IconRepeat",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconRepeat.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15955",
+      "component": "IconRewind",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconRewind.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15957",
+      "component": "IconRotateCcw",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconRotateCcw.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15959",
+      "component": "IconRotateCw",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconRotateCw.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15961",
+      "component": "IconRss",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconRss.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15963",
+      "component": "IconSave",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSave.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15965",
+      "component": "IconScissors",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconScissors.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15967",
+      "component": "IconSearch",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSearch.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15969",
+      "component": "IconSend",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSend.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15971",
+      "component": "IconServer",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconServer.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15973",
+      "component": "IconSettings",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSettings.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15977",
+      "component": "IconShare",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconShare.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15975",
+      "component": "IconShare2",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconShare2.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15981",
+      "component": "IconShield",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconShield.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15979",
+      "component": "IconShieldOff",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconShieldOff.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15983",
+      "component": "IconShoppingBag",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconShoppingBag.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15985",
+      "component": "IconShoppingCart",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconShoppingCart.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15987",
+      "component": "IconShuffle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconShuffle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15989",
+      "component": "IconSidebar",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSidebar.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15991",
+      "component": "IconSkipBack",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSkipBack.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15993",
+      "component": "IconSkipForward",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSkipForward.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15995",
+      "component": "IconSlack",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSlack.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15997",
+      "component": "IconSlash",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSlash.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:15999",
+      "component": "IconSliders",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSliders.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16001",
+      "component": "IconSmartphone",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSmartphone.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16003",
+      "component": "IconSmile",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSmile.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16005",
+      "component": "IconSpeaker",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSpeaker.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16007",
+      "component": "IconSquare",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSquare.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16009",
+      "component": "IconStar",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconStar.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16011",
+      "component": "IconStopCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconStopCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16013",
+      "component": "IconSun",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSun.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16015",
+      "component": "IconSunrise",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSunrise.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16017",
+      "component": "IconSunset",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconSunset.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16019",
+      "component": "IconTable",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTable.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16021",
+      "component": "IconTablet",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTablet.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16023",
+      "component": "IconTag",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTag.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16025",
+      "component": "IconTarget",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTarget.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16027",
+      "component": "IconTerminal",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTerminal.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16029",
+      "component": "IconThermometer",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconThermometer.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16031",
+      "component": "IconThumbsDown",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconThumbsDown.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16033",
+      "component": "IconThumbsUp",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconThumbsUp.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16035",
+      "component": "IconToggleLeft",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconToggleLeft.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16037",
+      "component": "IconToggleRight",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconToggleRight.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16039",
+      "component": "IconTool",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTool.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16043",
+      "component": "IconTrash",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTrash.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16041",
+      "component": "IconTrash2",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTrash2.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16045",
+      "component": "IconTrello",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTrello.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16047",
+      "component": "IconTrendingDown",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTrendingDown.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16049",
+      "component": "IconTrendingUp",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTrendingUp.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16051",
+      "component": "IconTriangle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTriangle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16053",
+      "component": "IconTruck",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTruck.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16055",
+      "component": "IconTv",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTv.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16057",
+      "component": "IconTwitch",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTwitch.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16059",
+      "component": "IconTwitter",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconTwitter.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16061",
+      "component": "IconType",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconType.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16063",
+      "component": "IconUmbrella",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUmbrella.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16065",
+      "component": "IconUnderline",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUnderline.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16067",
+      "component": "IconUnlock",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUnlock.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16071",
+      "component": "IconUpload",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUpload.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16069",
+      "component": "IconUploadCloud",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUploadCloud.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16081",
+      "component": "IconUser",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUser.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16073",
+      "component": "IconUserCheck",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUserCheck.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16075",
+      "component": "IconUserMinus",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUserMinus.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16077",
+      "component": "IconUserPlus",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUserPlus.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16079",
+      "component": "IconUserX",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUserX.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16083",
+      "component": "IconUsers",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconUsers.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16087",
+      "component": "IconVideo",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconVideo.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16085",
+      "component": "IconVideoOff",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconVideoOff.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16089",
+      "component": "IconVoicemail",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconVoicemail.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16097",
+      "component": "IconVolume",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconVolume.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16091",
+      "component": "IconVolume1",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconVolume1.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16093",
+      "component": "IconVolume2",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconVolume2.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16095",
+      "component": "IconVolumeX",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconVolumeX.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16099",
+      "component": "IconWatch",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconWatch.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16103",
+      "component": "IconWifi",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconWifi.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16101",
+      "component": "IconWifiOff",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconWifiOff.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16105",
+      "component": "IconWind",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconWind.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16113",
+      "component": "IconX",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconX.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16107",
+      "component": "IconXCircle",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconXCircle.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16109",
+      "component": "IconXOctagon",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconXOctagon.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16111",
+      "component": "IconXSquare",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconXSquare.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16115",
+      "component": "IconYoutube",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconYoutube.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16119",
+      "component": "IconZap",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconZap.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16117",
+      "component": "IconZapOff",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconZapOff.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16121",
+      "component": "IconZoomIn",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconZoomIn.tsx"
+    },
+    {
+      "url": "<FIGMA_ICONS_BASE>?node-id=68:16123",
+      "component": "IconZoomOut",
+      "source": "https://github.com/figma/sds/blob/main/src/ui/icons/IconZoomOut.tsx"
+    }
+  ]
+}

@@ -5,59 +5,72 @@ const TOKEN = process.env.FIGMA_ACCESS_TOKEN;
 const FILE_KEY = process.env.FIGMA_FILE_KEY;
 const URL_BASE = "https://api.figma.com/v1/files";
 const URL_BASE_IMAGES = "https://api.figma.com/v1/images";
+const BATCH_JSON_PATH = "../../src/figma/icons/Icons.figma.batch.json";
+const ICON_SOURCE_BASE = "https://github.com/figma/sds/blob/main/src/ui/icons";
 // The name of the variant for each icon you want to export.
 // If you dont have variants, you'll need to modify this script.
 const ICON_VARIANT_NAME = "Size=16";
 // The node ids from root to icon component parent.
 const ROOT_TRAVERSE_IDS = ["7809:18809", "522:12152"]; // Page ID > Section ID
-// Skipping REST API allows you to run this script using ./icons.json, icons-index.txt, and Icons.figma.txt in their current state.
+// Skipping REST API regenerates outputs from the checked-in icons.json data.
 const SKIP_REST_API = process.argv.includes("--skip-rest-api");
 
 /**
- * Get icon data from Figma and write data to disk (unless skipping REST API)
- * Create Code Connect docs (single file), create icon React component files, and create index file export.
+ * Get icon data from Figma and write data to disk (unless skipping REST API),
+ * then generate the React icons, export index, and Code Connect batch metadata.
  */
 async function go() {
-  // Writing the data files to disk based on icons in Figma.
-  // Storing data to disk allows us to parse it later, independent of REST API requests if we want to change the output.
+  let data;
+
   if (!SKIP_REST_API) {
-    // Get icon data from Figma
-    const data = await getIconComponents();
-    const names = data.map((a) => a[0]).sort();
-    // Write Figma code connect file import statement to disk (".txt" extension prevents unnecessary parsing)
-    // This file is not complete yet and only includes the imports. We will write the actual docs to it later.
-    fs.writeFileSync(
-      "./Icons.figma.txt",
-      `import figma from "@figma/code-connect";\nimport {${names.join(", ")}} from "icons";`,
-    );
-    // Write index export file to disk (".txt" extension prevents unnecessary parsing)
-    fs.writeFileSync(
-      "./icons-index.txt",
-      names.map((n) => `export { ${n} } from "./${n}.tsx";`).join("\n"),
-    );
-    // Write icon component JSON data file to disk (used for both code connect docs and React component file gen)
-    fs.writeFileSync("./icons.json", JSON.stringify(data, null, 2));
+    data = await getIconComponents();
+  } else {
+    data = JSON.parse(fs.readFileSync("./icons.json", "utf8"));
   }
 
-  // Parse the JSON icon component data
-  const json = JSON.parse(fs.readFileSync("./icons.json"));
-  // Copy the index file over to the src and change extension to TypeScript.
-  fs.copyFileSync("./icons-index.txt", "../../src/ui/icons/index.ts");
-  // Loading up the Figma file with the imports already written to it
-  const figmaStarter = fs.readFileSync("./Icons.figma.txt");
-  // Writing the official Code Connect Figma doc with the Code Connect from the JSON data appended to it.
-  fs.writeFileSync(
-    "../../src/figma/icons/Icons.figma.tsx",
-    `${figmaStarter}\n${json.map((a) => a[2]).join("\n")}`,
+  const icons = [...data].sort((a, b) =>
+    a.component < b.component ? -1 : a.component > b.component ? 1 : 0,
   );
-  // Writing each Icon React component file to disk. Additive only, does not delete old icons.
+
+  if (!SKIP_REST_API) {
+    fs.writeFileSync("./icons.json", `${JSON.stringify(icons, null, 2)}\n`);
+  }
+
+  fs.writeFileSync(
+    "../../src/ui/icons/index.ts",
+    icons
+      .map(
+        ({ component }) => `export { ${component} } from "./${component}.tsx";`,
+      )
+      .join("\n"),
+  );
+  fs.writeFileSync(
+    BATCH_JSON_PATH,
+    `${JSON.stringify(
+      {
+        templateFile: "./Icons.figma.batch.ts",
+        components: icons.map(
+          ({ component, figmaNodeId, hasSizeVariants }) => ({
+            url: `<FIGMA_ICONS_BASE>?node-id=${figmaNodeId}`,
+            component,
+            source: `${ICON_SOURCE_BASE}/${component}.tsx`,
+            ...(hasSizeVariants ? { hasSizeVariants: true } : {}),
+          }),
+        ),
+      },
+      null,
+      2,
+    )}\n`,
+  );
+
+  // Writing each icon React component file to disk. Additive only, does not delete old icons.
   await Promise.all(
-    json.map(
-      ([fileName, fileContents]) =>
+    icons.map(
+      ({ component, reactSource }) =>
         new Promise((resolve, reject) => {
           fs.writeFile(
-            `../../src/ui/icons/${fileName}.tsx`,
-            fileContents,
+            `../../src/ui/icons/${component}.tsx`,
+            reactSource,
             (err) => (err ? reject(err) : resolve()),
           );
         }),
@@ -72,7 +85,7 @@ go();
 /**
  * Getting all file data from Figma, then parsing it into icon component data
  * @link https://www.figma.com/developers/api#get-files-endpoint
- * @returns {Promise<string[][]>}
+ * @returns {Promise<Array<{component: string, figmaNodeId: string, hasSizeVariants?: boolean, reactSource: string}>>}
  */
 async function getIconComponents() {
   try {
@@ -112,7 +125,7 @@ async function getSVGImages(nodeIds) {
  * Traverse a Figma file response for all icons, get their svg image data,
  *   and transform it into the data we're storing locally.
  * @param {{document: Node}} response Figma GET file response
- * @returns {Promise<string[][]>} - Array<[IconName, IconSVGString, IconCodeConnectString]>
+ * @returns {Promise<Array<{component: string, figmaNodeId: string, hasSizeVariants?: boolean, reactSource: string}>>}
  */
 async function fileRESTResponseToIconComponentsJSON(response) {
   // Starting parent node is the document. Will traverse children to find icons' parent.
@@ -122,7 +135,7 @@ async function fileRESTResponseToIconComponentsJSON(response) {
   ROOT_TRAVERSE_IDS.forEach(
     (id) => (parentNode = parentNode.children.find((a) => a.id === id)),
   );
-  const idsToNameAndComponentSetId = {};
+  const exportIdsToMetadata = {};
   if (parentNode) {
     // For each child of the parent node, find the icons (variant or main component)
     parentNode.children.forEach((component) => {
@@ -135,18 +148,20 @@ async function fileRESTResponseToIconComponentsJSON(response) {
             ? component
             : null;
       if (icon) {
-        idsToNameAndComponentSetId[icon.id] = [
-          "Icon" +
+        exportIdsToMetadata[icon.id] = {
+          component:
+            "Icon" +
             component.name
               .split(/[^a-zA-Z0-9]+/)
               .map((a) => a.charAt(0).toUpperCase() + a.substring(1))
               .join(""),
-          component.id,
-        ];
+          figmaNodeId: component.id,
+          hasSizeVariants: component.type === "COMPONENT_SET",
+        };
       }
     });
   }
-  const nodeIds = Object.keys(idsToNameAndComponentSetId);
+  const nodeIds = Object.keys(exportIdsToMetadata);
   // SVG export for all the icon nodes we found.
   const { images } = await getSVGImages(nodeIds);
 
@@ -183,14 +198,20 @@ async function fileRESTResponseToIconComponentsJSON(response) {
           "Failed again:",
           nodeId,
           images[nodeId],
-          ...idsToNameAndComponentSetId[nodeId],
+          exportIdsToMetadata[nodeId],
         );
       }
     }),
   );
 
+  if (result.length !== nodeIds.length) {
+    throw new Error(
+      `Failed to generate ${nodeIds.length - result.length} icon(s)`,
+    );
+  }
+
   /**
-   * Get the component name, svg code strings, and code connect doc strings
+   * Generate the React source for one icon.
    * @param {string} nodeId
    */
   async function processNodeId(nodeId) {
@@ -198,13 +219,12 @@ async function fileRESTResponseToIconComponentsJSON(response) {
     const fileResponse = await fetch(images[nodeId], { method: "GET" });
     // Get the raw SVG string from the response
     const svg = await fileResponse.text();
-    // Get the name and component set node id
-    const [name, componentSetId] = idsToNameAndComponentSetId[nodeId];
-    const figmaString = [];
+    const { component, figmaNodeId, hasSizeVariants } =
+      exportIdsToMetadata[nodeId];
     // Building out an svg React component string...
     const svgString = [
       'import { IconProps, Icon } from "primitives";',
-      `export const ${name} = (props: IconProps) => (`,
+      `export const ${component} = (props: IconProps) => (`,
     ];
     // Clean the raw SVG response up (SVG children only, <svg> tag handled by wrapping Icon component)
     const cleanSvg = svg
@@ -220,12 +240,12 @@ async function fileRESTResponseToIconComponentsJSON(response) {
     // Wrap the cleaned svg in our Icon component (paths only)
     svgString.push(`  <Icon {...props}>${cleanSvg}</Icon>`);
     svgString.push(");");
-    // Code Connect doc code
-    figmaString.push(
-      `figma.connect(${name}, "<FIGMA_ICONS_BASE>?node-id=${componentSetId}", { props: { size: figma.enum("Size", { "20": "20", "24": "24", "32": "32", "40": "40", "48": "48" }) }, example: ({ size }) => <${name} size={size} /> });`,
-    );
-    // Add the strings for this component into our result.
-    result.push([name, svgString.join("\n"), figmaString.join("\n")]);
+    result.push({
+      component,
+      figmaNodeId,
+      ...(hasSizeVariants ? { hasSizeVariants: true } : {}),
+      reactSource: svgString.join("\n"),
+    });
   }
 
   return result;
