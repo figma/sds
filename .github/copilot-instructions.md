@@ -136,7 +136,7 @@ src/
 │   └── utils/          # Utility functions and components
 ├── stories/            # Storybook stories for all components
 ├── examples/           # Examples of how to use components together in larger complete sections
-├── figma/              # Figma [Code Connect](https://www.figma.com/code-connect-docs/react/) files
+├── figma/              # Figma [Code Connect](https://developers.figma.com/docs/code-connect/template-files/) files
 │   ├── primitives/     # Maps Figma components to React primitives
 │   ├── compositions/   # Maps Figma compositions to React components
 │   └── icons/          # Maps Figma icons to React icons
