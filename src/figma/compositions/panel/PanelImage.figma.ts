@@ -20,7 +20,12 @@ export default {
   example: figma.code`<Section padding="${padding}">
       <Panel type="auto">
         <FlexItem size="full">
-          <Image src={placeholder} alt="Always use image alt" aspectRatio="fill" size="medium"/>
+          <Image
+            src={placeholder}
+            alt="Always use image alt"
+            aspectRatio="fill"
+            size="medium"
+          />
         </FlexItem>
       </Panel>
     </Section>`,

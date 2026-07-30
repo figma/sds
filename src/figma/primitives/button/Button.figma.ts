@@ -29,7 +29,12 @@ const isDisabled = instance.getEnum("State", {
 export default {
   id: "Button",
   imports: ['import { Button } from "primitives";'],
-  example: figma.code`<Button onPress={() => { }}${variant ? ` variant="${variant}"` : ""}${size ? ` size="${size}"` : ""}${isDisabled ? " isDisabled" : ""}>
+  example: figma.code`<Button
+      onPress={() => {}}
+      ${variant ? figma.code`variant="${variant}"` : ""}
+      ${size ? figma.code`size="${size}"` : ""}
+      ${isDisabled ? "isDisabled" : ""}
+    >
       ${iconStart}
       ${label}
       ${iconEnd}

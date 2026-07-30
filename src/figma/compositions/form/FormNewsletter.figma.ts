@@ -9,7 +9,7 @@ const children = figma.properties.children(["Input Field", "Button"])
 export default {
   id: "FormBox",
   imports: ['import { Form } from "primitives";'],
-  example: figma.code`<Form singleLine onSubmit={() => { }}>
+  example: figma.code`<Form singleLine onSubmit={() => {}}>
       ${children}
     </Form>`,
   metadata: { nestable: true },

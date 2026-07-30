@@ -16,6 +16,11 @@ export default {
     'import { Avatar } from "primitives";',
     'import { placeholder } from "images";',
   ],
-  example: figma.code`<Avatar${square ? " square" : ""}${initials ? ` initials="${initials}"` : ""}${size ? ` size="${size}"` : ""}${src ? " src={placeholder}" : ""}/>`,
+  example: figma.code`<Avatar
+      ${square ? "square" : ""}
+      ${initials ? figma.code`initials="${initials}"` : ""}
+      ${size ? figma.code`size="${size}"` : ""}
+      ${src ? "src={placeholder}" : ""}
+    />`,
   metadata: { nestable: true },
 }

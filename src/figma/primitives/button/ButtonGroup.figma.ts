@@ -16,6 +16,10 @@ const children = figma.properties.children(["Button"]);
 export default {
   id: "ButtonGroup",
   imports: ['import { ButtonGroup } from "primitives";'],
-  example: figma.code`<ButtonGroup${align ? ` align="${align}"` : ""}>${children}</ButtonGroup>`,
+  example: figma.code`<ButtonGroup
+      ${align ? figma.code`align="${align}"` : ""}
+    >
+      ${children}
+    </ButtonGroup>`,
   metadata: { nestable: true },
 };

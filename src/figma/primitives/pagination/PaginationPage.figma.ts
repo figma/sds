@@ -14,6 +14,11 @@ const href = figma.selectedInstance.getString("Number")
 export default {
   id: "PaginationPage",
   imports: ['import { PaginationPage } from "primitives";'],
-  example: figma.code`<PaginationPage${current ? " current" : ""}${figma.helpers.react.renderProp("href", href)}>${number}</PaginationPage>`,
+  example: figma.code`<PaginationPage
+      ${current ? "current" : ""}
+      ${figma.helpers.react.renderProp("href", href)}
+    >
+      ${number}
+    </PaginationPage>`,
   metadata: { nestable: true },
 }

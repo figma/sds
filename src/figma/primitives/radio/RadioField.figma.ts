@@ -17,6 +17,11 @@ const isDisabled = instance.getEnum("State", { Disabled: true });
 export default {
   id: "RadioField",
   imports: ['import { RadioField } from "primitives";'],
-  example: figma.code`<RadioField value="Initial value"${rp("label", label)}${rp("description", description)}${isDisabled ? " isDisabled" : ""}/>`,
+  example: figma.code`<RadioField
+      value="Initial value"
+      ${rp("label", label)}
+      ${rp("description", description)}
+      ${isDisabled ? "isDisabled" : ""}
+    />`,
   metadata: { nestable: true },
 };

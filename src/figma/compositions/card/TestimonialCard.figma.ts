@@ -24,6 +24,11 @@ export default {
     'import { TestimonialCard } from "compositions";',
     'import { placeholder } from "images";',
   ],
-  example: figma.code`<TestimonialCard heading="${heading}" src={placeholder} name="${name}" username="${username}"/>`,
+  example: figma.code`<TestimonialCard
+      heading="${heading}"
+      src={placeholder}
+      name="${name}"
+      username="${username}"
+    />`,
   metadata: { nestable: true },
 };

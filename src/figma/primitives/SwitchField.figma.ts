@@ -18,6 +18,11 @@ const isDisabled = instance.getEnum("State", { Disabled: true });
 export default {
   id: "SwitchField",
   imports: ['import { SwitchField } from "primitives";'],
-  example: figma.code`<SwitchField${rp("label", label)}${rp("description", description)}${defaultSelected ? " defaultSelected" : ""}${isDisabled ? " isDisabled" : ""}/>`,
+  example: figma.code`<SwitchField
+      ${rp("label", label)}
+      ${rp("description", description)}
+      ${defaultSelected ? "defaultSelected" : ""}
+      ${isDisabled ? "isDisabled" : ""}
+    />`,
   metadata: { nestable: true },
 };

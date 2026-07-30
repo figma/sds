@@ -19,14 +19,23 @@ export default {
     const gap = isMobile ? "600" : "1200";
     const gapCards = isMobile ? "600" : "1200";
     const size = isMobile ? "small" : "large";
-    return (<Section padding={padding}>
+
+    return (
+      <Section padding={padding}>
         <Flex container direction="column" gap={gap}>
           ${schedule}
           <Flex container direction="row" gap={gapCards}>
-            {monthlyPlans.map((option, i) => (<PricingCard key={option.sku} size={size} {...pricingPlanToPricingCardProps(option, i)}/>))}
+            {monthlyPlans.map((option, i) => (
+              <PricingCard
+                key={option.sku}
+                size={size}
+                {...pricingPlanToPricingCardProps(option, i)}
+              />
+            ))}
           </Flex>
         </Flex>
-      </Section>);
+      </Section>
+    );
 }`,
   metadata: { nestable: false },
 }

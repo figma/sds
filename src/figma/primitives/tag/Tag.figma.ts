@@ -22,6 +22,12 @@ const scheme = figma.selectedInstance.getEnum("Scheme", {
 export default {
   id: "Tag",
   imports: ['import { Tag } from "primitives";'],
-  example: figma.code`<Tag${onRemove ? " onRemove={() => {}}" : ""}${variant ? ` variant="${variant}"` : ""}${scheme ? ` scheme="${scheme}"` : ""}>${label}</Tag>`,
+  example: figma.code`<Tag
+      ${onRemove ? "onRemove={() => {}}" : ""}
+      ${variant ? figma.code`variant="${variant}"` : ""}
+      ${scheme ? figma.code`scheme="${scheme}"` : ""}
+    >
+      ${label}
+    </Tag>`,
   metadata: { nestable: true },
 }

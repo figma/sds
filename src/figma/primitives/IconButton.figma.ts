@@ -21,7 +21,13 @@ const size = instance.getEnum("Size", {
 export default {
   id: "IconButton",
   imports: ['import { IconButton } from "primitives";'],
-  example: figma.code`<IconButton aria-label="Write a nice description of the action." onPress={() => { }}${variant ? ` variant="${variant}"` : ""}${size ? ` size="${size}"` : ""}${isDisabled ? " isDisabled" : ""}>
+  example: figma.code`<IconButton
+      aria-label="Write a nice description of the action."
+      onPress={() => {}}
+      ${variant ? figma.code`variant="${variant}"` : ""}
+      ${size ? figma.code`size="${size}"` : ""}
+      ${isDisabled ? "isDisabled" : ""}
+    >
       ${icon}
     </IconButton>`,
   metadata: { nestable: true },

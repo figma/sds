@@ -27,6 +27,19 @@ export default {
     'import { Image } from "primitives";',
     'import { placeholder } from "images";',
   ],
-  example: figma.code`<ProductInfoCard asset={<Image src={placeholder} size="medium" aspectRatio="natural" alt="Always describe images"/>} rating={4.5} heading="${heading}" price="${price}" description="${description}"/>`,
+  example: figma.code`<ProductInfoCard
+      asset={
+        <Image
+          src={placeholder}
+          size="medium"
+          aspectRatio="natural"
+          alt="Always describe images"
+        />
+      }
+      rating={4.5}
+      heading="${heading}"
+      price="${price}"
+      description="${description}"
+    />`,
   metadata: { nestable: true },
 };

@@ -19,7 +19,7 @@ export default {
     'import { FormBox } from "compositions";',
     'import { Flex } from "layout";',
   ],
-  example: figma.code`<FormBox onSubmit={() => { }}>
+  example: figma.code`<FormBox onSubmit={() => {}}>
       <Flex direction="column" gap="100">
         ${legend}
       </Flex>

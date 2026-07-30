@@ -17,6 +17,11 @@ const description = instance.getBoolean("Has Description", {
 export default {
   id: "SliderField",
   imports: ['import { SliderField } from "primitives";'],
-  example: figma.code`<SliderField${isDisabled ? " isDisabled" : ""}${rp("label", label)}${rp("description", description)} showOutput/>`,
+  example: figma.code`<SliderField
+      ${isDisabled ? "isDisabled" : ""}
+      ${rp("label", label)}
+      ${rp("description", description)}
+      showOutput
+    />`,
   metadata: { nestable: true },
 };
