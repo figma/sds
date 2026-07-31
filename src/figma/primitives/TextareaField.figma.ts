@@ -36,7 +36,7 @@ export default {
   id: "TextareaField",
   imports,
   example: figma.code`<${hasLabel ? "TextareaField" : "Textarea"}
-      ${isDisabled ? "isDisabled" : ""}
+      ${rp("isDisabled", isDisabled)}
       ${rp("errorMessage", errorMessage)}
       ${rp("label", label)}
       ${rp("description", description)}

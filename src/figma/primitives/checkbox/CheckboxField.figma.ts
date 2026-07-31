@@ -27,9 +27,9 @@ export default {
   example: figma.code`<CheckboxField
       ${rp("label", label)}
       ${rp("description", description)}
-      ${defaultSelected ? "defaultSelected" : ""}
-      ${isIndeterminate ? "isIndeterminate" : ""}
-      ${isDisabled ? "isDisabled" : ""}
+      ${rp("defaultSelected", defaultSelected)}
+      ${rp("isIndeterminate", isIndeterminate)}
+      ${rp("isDisabled", isDisabled)}
     />`,
   metadata: { nestable: true },
 };

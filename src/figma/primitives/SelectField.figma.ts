@@ -46,7 +46,7 @@ export default {
   imports,
   example: figma.code`<${hasLabel ? "SelectField" : "Select"}
       ${rp("defaultSelectedKey", defaultSelectedKey)}
-      ${isDisabled ? "isDisabled" : ""}
+      ${rp("isDisabled", isDisabled)}
       ${rp("errorMessage", errorMessage)}
       ${rp("label", label)}
       ${rp("description", description)}

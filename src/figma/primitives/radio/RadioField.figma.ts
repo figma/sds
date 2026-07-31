@@ -21,7 +21,7 @@ export default {
       value="Initial value"
       ${rp("label", label)}
       ${rp("description", description)}
-      ${isDisabled ? "isDisabled" : ""}
+      ${rp("isDisabled", isDisabled)}
     />`,
   metadata: { nestable: true },
 };

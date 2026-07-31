@@ -35,7 +35,7 @@ export default {
   id: "InputField",
   imports,
   example: figma.code`<${hasLabel ? "InputField" : "Input"}
-      ${isDisabled ? "isDisabled" : ""}
+      ${rp("isDisabled", isDisabled)}
       ${rp("errorMessage", errorMessage)}
       ${rp("label", label)}
       ${rp("description", description)}

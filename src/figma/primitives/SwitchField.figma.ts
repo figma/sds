@@ -21,8 +21,8 @@ export default {
   example: figma.code`<SwitchField
       ${rp("label", label)}
       ${rp("description", description)}
-      ${defaultSelected ? "defaultSelected" : ""}
-      ${isDisabled ? "isDisabled" : ""}
+      ${rp("defaultSelected", defaultSelected)}
+      ${rp("isDisabled", isDisabled)}
     />`,
   metadata: { nestable: true },
 };

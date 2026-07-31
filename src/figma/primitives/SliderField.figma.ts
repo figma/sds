@@ -18,7 +18,7 @@ export default {
   id: "SliderField",
   imports: ['import { SliderField } from "primitives";'],
   example: figma.code`<SliderField
-      ${isDisabled ? "isDisabled" : ""}
+      ${rp("isDisabled", isDisabled)}
       ${rp("label", label)}
       ${rp("description", description)}
       showOutput

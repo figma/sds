@@ -22,7 +22,7 @@ export default {
   example: figma.code`<Search
       ${rp("value", value)}
       ${rp("placeholder", placeholder)}
-      ${disabled ? "disabled" : ""}
+      ${rp("disabled", disabled)}
     />`,
   metadata: { nestable: true },
 };
