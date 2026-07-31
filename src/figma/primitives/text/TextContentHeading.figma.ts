@@ -13,9 +13,10 @@ const subheading = figma.selectedInstance.getString("Subheading")
 export default {
   id: "TextContentHeading",
   imports: ['import { TextContentHeading } from "primitives";'],
-  example: figma.code`<TextContentHeading${align ? ` align="${align}"` : ""}${figma.helpers.react.renderProp(
-    "heading",
-    heading,
-  )}${figma.helpers.react.renderProp("subheading", subheading)}/>`,
+  example: figma.code`<TextContentHeading
+      ${align ? figma.code`align="${align}"` : ""}
+      ${figma.helpers.react.renderProp("heading", heading)}
+      ${figma.helpers.react.renderProp("subheading", subheading)}
+    />`,
   metadata: { nestable: true },
 }

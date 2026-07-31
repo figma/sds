@@ -40,6 +40,20 @@ const variant = instance.getEnum("Variant", {
 export default {
   id: "PricingCard",
   imports: ['import { PricingCard } from "compositions";'],
-  example: figma.code`<PricingCard heading="${heading}" action="${action?.label}"${action?.icon ? ` actionIcon={${action.icon}}` : ""} actionVariant="${action?.variant}" onAction={() => { }} listSlot={${list}} interval="month" sku="example_sku" price="${textPrice?.price}" priceCurrency="${textPrice?.currency}" priceLabel="${textPrice?.label}" size="${textPrice?.size}" variant="${variant}"/>`,
+  example: figma.code`<PricingCard
+      heading="${heading}"
+      action="${action?.label}"
+      ${action?.icon ? figma.code`actionIcon={${action.icon}}` : ""}
+      actionVariant="${action?.variant}"
+      onAction={() => {}}
+      listSlot={${list}}
+      interval="month"
+      sku="example_sku"
+      price="${textPrice?.price}"
+      priceCurrency="${textPrice?.currency}"
+      priceLabel="${textPrice?.label}"
+      size="${textPrice?.size}"
+      variant="${variant}"
+    />`,
   metadata: { nestable: true },
 }

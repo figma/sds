@@ -12,6 +12,11 @@ const children = figma.properties.children(["Avatar"])
 export default {
   id: "AvatarBlock",
   imports: ['import { AvatarBlock } from "primitives";'],
-  example: figma.code`<AvatarBlock title="${title}" description="${description}">${children}</AvatarBlock>`,
+  example: figma.code`<AvatarBlock
+      title="${title}"
+      description="${description}"
+    >
+      ${children}
+    </AvatarBlock>`,
   metadata: { nestable: true },
 }

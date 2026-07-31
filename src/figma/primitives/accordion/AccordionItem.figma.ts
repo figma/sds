@@ -9,6 +9,6 @@ const children = figma.selectedInstance.getString("Content");
 export default {
   id: "AccordionItem",
   imports: ['import { AccordionItem } from "primitives";'],
-  example: figma.code`<AccordionItem title="${title}" children="${children}"/>`,
+  example: figma.code`<AccordionItem title="${title}" children="${children}" />`,
   metadata: { nestable: true },
 };

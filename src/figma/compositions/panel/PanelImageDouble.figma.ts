@@ -23,8 +23,18 @@ export default {
   ],
   example: figma.code`<Section padding="${padding}">
       <Panel gap="${gap}" type="half">
-        <Image src={placeholder} alt="Always use image alt" aspectRatio="4-3" size="medium"/>
-        <Image src={placeholder} alt="Always use image alt" aspectRatio="4-3" size="medium"/>
+        <Image
+          src={placeholder}
+          alt="Always use image alt"
+          aspectRatio="4-3"
+          size="medium"
+        />
+        <Image
+          src={placeholder}
+          alt="Always use image alt"
+          aspectRatio="4-3"
+          size="medium"
+        />
       </Panel>
     </Section>`,
   metadata: { nestable: true },

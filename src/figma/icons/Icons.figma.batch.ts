@@ -14,6 +14,8 @@ const size = figma.batch.hasSizeVariants
 export default {
   id: component,
   imports: [`import { ${component} } from "icons";`],
-  example: figma.code`<${component}${size ? ` size="${size}"` : ""} />`,
+  example: figma.code`<${component}
+      ${size ? figma.code`size="${size}"` : ""}
+    />`,
   metadata: { nestable: true },
 };

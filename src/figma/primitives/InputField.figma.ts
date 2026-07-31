@@ -34,6 +34,13 @@ const imports = hasLabel
 export default {
   id: "InputField",
   imports,
-  example: figma.code`<${hasLabel ? "InputField" : "Input"}${isDisabled ? " isDisabled" : ""}${rp("errorMessage", errorMessage)}${rp("label", label)}${rp("description", description)}${rp("value", value)}${rp("placeholder", placeholder)}/>`,
+  example: figma.code`<${hasLabel ? "InputField" : "Input"}
+      ${rp("isDisabled", isDisabled)}
+      ${rp("errorMessage", errorMessage)}
+      ${rp("label", label)}
+      ${rp("description", description)}
+      ${rp("value", value)}
+      ${rp("placeholder", placeholder)}
+    />`,
   metadata: { nestable: true },
 };

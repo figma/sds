@@ -13,9 +13,10 @@ const subtitle = figma.selectedInstance.getString("Subtitle")
 export default {
   id: "TextContentTitle",
   imports: ['import { TextContentTitle } from "primitives";'],
-  example: figma.code`<TextContentTitle${align ? ` align="${align}"` : ""}${figma.helpers.react.renderProp(
-    "title",
-    title,
-  )}${figma.helpers.react.renderProp("subtitle", subtitle)}/>`,
+  example: figma.code`<TextContentTitle
+      ${align ? figma.code`align="${align}"` : ""}
+      ${figma.helpers.react.renderProp("title", title)}
+      ${figma.helpers.react.renderProp("subtitle", subtitle)}
+    />`,
   metadata: { nestable: true },
 }

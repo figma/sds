@@ -4,6 +4,7 @@
 
 import figma from "figma";
 const instance = figma.selectedInstance;
+const rp = figma.helpers.react.renderProp;
 
 const align = instance.getEnum("Align", {
   Center: "center",
@@ -16,6 +17,10 @@ const children = figma.properties.children(["Button"]);
 export default {
   id: "ButtonGroup",
   imports: ['import { ButtonGroup } from "primitives";'],
-  example: figma.code`<ButtonGroup${align ? ` align="${align}"` : ""}>${children}</ButtonGroup>`,
+  example: figma.code`<ButtonGroup
+      ${rp("align", align)}
+    >
+      ${children}
+    </ButtonGroup>`,
   metadata: { nestable: true },
 };

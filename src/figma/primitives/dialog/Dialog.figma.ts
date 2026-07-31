@@ -12,7 +12,7 @@ export default {
       'import { Button } from "primitives";',
       'import { ButtonGroup } from "primitives";',
   ],
-  example: figma.code`<DialogModal isDismissable isOpen={true} onOpenChange={() => { }}>
+  example: figma.code`<DialogModal isDismissable isOpen={true} onOpenChange={() => {}}>
       ${children}
     </DialogModal>`,
   metadata: { nestable: true },

@@ -20,7 +20,7 @@ export default {
     'import { Button } from "primitives";',
   ],
   example: figma.code`<Dialog type="${type}">
-      <DialogClose onPress={() => { }}/>
+      <DialogClose onPress={() => {}} />
       <DialogTitle>${heading}</DialogTitle>
       <DialogBody>${body}</DialogBody>
       ${buttons}

@@ -28,6 +28,13 @@ export default {
     'import { ReviewCard } from "compositions";',
     'import { placeholder } from "images";',
   ],
-  example: figma.code`<ReviewCard stars={5} src={placeholder} title="${title}" body="${body}" date="${date}" name="${name}"/>`,
+  example: figma.code`<ReviewCard
+      stars={5}
+      src={placeholder}
+      title="${title}"
+      body="${body}"
+      date="${date}"
+      name="${name}"
+    />`,
   metadata: { nestable: true },
 };

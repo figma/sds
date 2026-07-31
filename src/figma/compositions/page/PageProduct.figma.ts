@@ -28,7 +28,12 @@ export default {
   ],
   example: figma.code`<Section padding="${padding}">
       <Flex container type="half" wrap gap="${gap}">
-        <Image src={placeholder} alt="Always use image alt" size="large" aspectRatio="4-3"/>
+        <Image
+          src={placeholder}
+          alt="Always use image alt"
+          size="large"
+          aspectRatio="4-3"
+        />
         <FlexItem size="half">
           <Flex direction="column" gap="600" alignSecondary="stretch">
             ${textHeading}

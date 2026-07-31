@@ -44,7 +44,15 @@ const imports = hasLabel
 export default {
   id: "SelectField",
   imports,
-  example: figma.code`<${hasLabel ? "SelectField" : "Select"}${rp("defaultSelectedKey", defaultSelectedKey)}${isDisabled ? " isDisabled" : ""}${rp("errorMessage", errorMessage)}${rp("label", label)}${rp("description", description)}${rp("value", value)}${rp("placeholder", placeholder)}>
+  example: figma.code`<${hasLabel ? "SelectField" : "Select"}
+      ${rp("defaultSelectedKey", defaultSelectedKey)}
+      ${rp("isDisabled", isDisabled)}
+      ${rp("errorMessage", errorMessage)}
+      ${rp("label", label)}
+      ${rp("description", description)}
+      ${rp("value", value)}
+      ${rp("placeholder", placeholder)}
+    >
       <SelectItem>${defaultSelectedKey}</SelectItem>
       <SelectItem>Option 2</SelectItem>
       <SelectItem>Option 3</SelectItem>

@@ -12,7 +12,10 @@ const iconStart = figma.selectedInstance
 export default {
   id: "TagToggle",
   imports: ['import { TagToggle } from "primitives";'],
-  example: figma.code`<TagToggle${figma.helpers.react.renderProp("id", label)}${figma.helpers.react.renderProp("iconStart", iconStart)}>
+  example: figma.code`<TagToggle
+      ${figma.helpers.react.renderProp("id", label)}
+      ${figma.helpers.react.renderProp("iconStart", iconStart)}
+    >
       ${label}
     </TagToggle>`,
   metadata: { nestable: true },

@@ -5,6 +5,7 @@
 import figma from "figma";
 
 const instance = figma.selectedInstance;
+const rp = figma.helpers.react.renderProp;
 const variant = instance.getEnum("Variant", {
   Primary: "primary",
   Neutral: "neutral",
@@ -29,7 +30,12 @@ const isDisabled = instance.getEnum("State", {
 export default {
   id: "Button",
   imports: ['import { Button } from "primitives";'],
-  example: figma.code`<Button onPress={() => { }}${variant ? ` variant="${variant}"` : ""}${size ? ` size="${size}"` : ""}${isDisabled ? " isDisabled" : ""}>
+  example: figma.code`<Button
+      onPress={() => {}}
+      ${rp("variant", variant)}
+      ${rp("size", size)}
+      ${rp("isDisabled", isDisabled)}
+    >
       ${iconStart}
       ${label}
       ${iconEnd}

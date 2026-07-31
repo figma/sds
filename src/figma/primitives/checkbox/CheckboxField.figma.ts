@@ -24,6 +24,12 @@ const isDisabled = instance.getEnum("State", { Disabled: true });
 export default {
   id: "CheckboxField",
   imports: ['import { CheckboxField } from "primitives";'],
-  example: figma.code`<CheckboxField${rp("label", label)}${rp("description", description)}${defaultSelected ? " defaultSelected" : ""}${isIndeterminate ? " isIndeterminate" : ""}${isDisabled ? " isDisabled" : ""}/>`,
+  example: figma.code`<CheckboxField
+      ${rp("label", label)}
+      ${rp("description", description)}
+      ${rp("defaultSelected", defaultSelected)}
+      ${rp("isIndeterminate", isIndeterminate)}
+      ${rp("isDisabled", isDisabled)}
+    />`,
   metadata: { nestable: true },
 };

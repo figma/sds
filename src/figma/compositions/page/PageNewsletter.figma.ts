@@ -21,7 +21,15 @@ export default {
   id: "Section",
   imports: ['import { Flex, Section } from "layout";'],
   example: figma.code`<Section padding="${padding}">
-      <Flex container wrap gap="${gap}" direction="column" alignPrimary="center" alignSecondary="center" type="third">
+      <Flex
+        container
+        wrap
+        gap="${gap}"
+        direction="column"
+        alignPrimary="center"
+        alignSecondary="center"
+        type="third"
+      >
         ${children}
       </Flex>
     </Section>`,

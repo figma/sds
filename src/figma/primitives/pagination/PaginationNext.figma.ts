@@ -12,6 +12,8 @@ const href = figma.selectedInstance.getEnum("State", {
 export default {
   id: "PaginationNext",
   imports: ['import { PaginationNext } from "primitives";'],
-  example: figma.code`<PaginationNext${href ? ` href="${href}"` : ""}/>`,
+  example: figma.code`<PaginationNext
+      ${href ? figma.code`href="${href}"` : ""}
+    />`,
   metadata: { nestable: true },
 }
