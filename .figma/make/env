@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Environment variables for the project.
+# SDS reads FIGMA_ACCESS_TOKEN and FIGMA_FILE_KEY from a local .env file
+# (see .env-rename). Vite's dev server runs on port 8000 by default
+# (configured in vite.config.ts).
+
+# Dev server
+export VITE_PORT="${VITE_PORT:-8000}"
+export VITE_HOST="${VITE_HOST:-localhost}"
+
+# Figma Make integration
+PORT=8000
+FIGMA_MAKE_URL=http://localhost:8000

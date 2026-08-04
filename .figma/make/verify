@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+set -uo pipefail
+
+# Verify the project is correctly configured and can build.
+
+cd "$(dirname "$0")/../.."
+
+# Load environment variables
+source .figma/make/env
+
+ERRORS=0
+
+# Check node_modules exist
+if [ ! -d "node_modules" ]; then
+  echo "FAIL: node_modules missing. Run .figma/make/install first." >&2
+  ERRORS=$((ERRORS + 1))
+fi
+
+# TypeScript compilation check
+echo "Checking TypeScript..."
+if npx tsc --noEmit 2>/dev/null; then
+  echo "  OK: TypeScript compiles cleanly."
+else
+  echo "  FAIL: TypeScript errors detected." >&2
+  ERRORS=$((ERRORS + 1))
+fi
+
+# Lint check
+echo "Checking ESLint..."
+if npm run app:lint --silent 2>/dev/null; then
+  echo "  OK: No lint errors."
+else
+  echo "  FAIL: Lint errors detected." >&2
+  ERRORS=$((ERRORS + 1))
+fi
+
+# Production build check
+echo "Checking production build..."
+if npm run app:build --silent 2>/dev/null; then
+  echo "  OK: Production build succeeded."
+else
+  echo "  FAIL: Production build failed." >&2
+  ERRORS=$((ERRORS + 1))
+fi
+
+if [ "$ERRORS" -gt 0 ]; then
+  echo ""
+  echo "$ERRORS verification(s) failed."
+  exit 1
+fi
+
+echo ""
+echo "All verifications passed."
