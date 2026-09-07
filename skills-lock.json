@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "skills": {
+    "ds-adoption-plan": {
+      "source": "bradfrost/skills",
+      "sourceType": "github",
+      "skillPath": "skills/design-systems/ds-adoption-plan/SKILL.md",
+      "computedHash": "558cce4bf2f302719e9cd9b68a509f167c14657c04d1855be17e992ca8bcb4bc"
+    },
+    "ds-inspection": {
+      "source": "bradfrost/skills",
+      "sourceType": "github",
+      "skillPath": "skills/design-systems/ds-inspection/SKILL.md",
+      "computedHash": "895f2297d75e70ddc39c5c5bad7aff2996c5926262329b52384192a7c3b62bb8"
+    },
+    "limits-endings": {
+      "source": "bradfrost/skills",
+      "sourceType": "github",
+      "skillPath": "skills/mental-health/limits-endings/SKILL.md",
+      "computedHash": "7d7d7c1f379fda91e3439419e1fb2ce27f5d902d4031e0e7b10fb326ea920fc7"
+    },
+    "limits-energy": {
+      "source": "bradfrost/skills",
+      "sourceType": "github",
+      "skillPath": "skills/mental-health/limits-energy/SKILL.md",
+      "computedHash": "99b24c8a62a45d96c731e22013bbd1eb3f12322f7e27ccdb5691d91c035194b0"
+    },
+    "limits-quiet-hours": {
+      "source": "bradfrost/skills",
+      "sourceType": "github",
+      "skillPath": "skills/mental-health/limits-quiet-hours/SKILL.md",
+      "computedHash": "babd829e044421e28ca630caa8234912f5cda332a3998c07fb2727b8cdaddf7d"
+    },
+    "limits-sessions": {
+      "source": "bradfrost/skills",
+      "sourceType": "github",
+      "skillPath": "skills/mental-health/limits-sessions/SKILL.md",
+      "computedHash": "f94d3f4b7082670f859e330b14c7b8f716d882618e0fe8ec9cb6cf9f591ffcb1"
+    },
+    "limits-setup": {
+      "source": "bradfrost/skills",
+      "sourceType": "github",
+      "skillPath": "skills/mental-health/limits-setup/SKILL.md",
+      "computedHash": "c65faae2b9c0b5ffe2ec23d320e30058c4964a1d4dfbf02e6b81b8fd597c900f"
+    },
+    "product-inspection": {
+      "source": "bradfrost/skills",
+      "sourceType": "github",
+      "skillPath": "skills/product-design/product-inspection/SKILL.md",
+      "computedHash": "f27499345e5fd4cf001b6697db1f48d73fd9514f1bc8df316dfa43dfb6427705"
+    },
+    "setup-brad-frost-skills": {
+      "source": "bradfrost/skills",
+      "sourceType": "github",
+      "skillPath": "skills/setup-brad-frost-skills/SKILL.md",
+      "computedHash": "3f18d1cca526c88b655d7c33a6cc5689b7c7cead8002baa2a3c26da0fe858e81"
+    }
+  }
+}
