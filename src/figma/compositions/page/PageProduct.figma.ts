@@ -1,6 +1,4 @@
 // url=<FIGMA_SECTIONS_PAGE_PRODUCT>
-// source=https://github.com/figma/sds/blob/main/src/ui/layout/Section/Section.tsx
-// component=Section
 
 import figma from "figma"
 
