@@ -1,6 +1,7 @@
 import { useMediaQuery } from "hooks";
 import { Flex, Section } from "layout";
 import { Button, Form, Input, TextContentTitle } from "primitives";
+import "./welcomeHero.css";
 
 export function WelcomeHero() {
   const { isMobile } = useMediaQuery();
@@ -20,7 +21,7 @@ export function WelcomeHero() {
       >
         <TextContentTitle
           align="center"
-          title="Welcome Home"
+          title={<span className="welcome-hero-title">Welcome Home</span>}
           subtitle={<>We're happy to have&nbsp;you.</>}
         />
         <Form singleLine>

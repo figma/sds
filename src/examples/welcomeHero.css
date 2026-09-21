@@ -1,0 +1,5 @@
+.welcome-hero-title {
+  font-family: var(--sds-typography-family-mono);
+  font-style: italic;
+  font-weight: var(--sds-typography-weight-regular);
+}
