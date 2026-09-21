@@ -1,0 +1,4 @@
+# Auto-generated during Figma make bootstrap because this project shipped no mise config.
+[tools]
+node = "22"
+npm = "10"

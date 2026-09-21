@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+npm exec vite -- build
+npm run storybook:build
+[[ -d "dist" ]] || {
+  echo "Expected build output at dist" >&2
+  exit 1
+}
+figma make deploy-preview --build-dir "dist"
