@@ -1,8 +1,70 @@
 {
-  "name": "sds",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@figma/sds",
+  "version": "0.1.0",
+  "description": "Figma Simple Design System React components and styles",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/figma/sds.git" },
+  "publishConfig": { "access": "public" },
   "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/package.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/package.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./primitives": {
+      "types": "./dist/types/ui/primitives/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./compositions": {
+      "types": "./dist/types/ui/compositions/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./icons": {
+      "types": "./dist/types/ui/icons/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./layout": {
+      "types": "./dist/types/ui/layout/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./hooks": {
+      "types": "./dist/types/ui/hooks/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./data": {
+      "types": "./dist/types/data/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": { "types": "./dist/types/css.d.ts", "default": "./dist/styles.css" },
+    "./tokens.css": { "types": "./dist/types/css.d.ts", "default": "./dist/tokens.css" },
+    "./responsive.css": { "types": "./dist/types/css.d.ts", "default": "./dist/responsive.css" },
+    "./reset.css": { "types": "./dist/types/css.d.ts", "default": "./dist/reset.css" },
+    "./icons.css": { "types": "./dist/types/css.d.ts", "default": "./dist/icons.css" }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "react-aria-components": "^1.10.1"
+  },
   "scripts": {
     "app:dev": "vite",
     "app:build": "tsc && vite build",
@@ -10,7 +72,9 @@
     "app:preview": "vite preview",
     "storybook": "storybook dev -p 6006 --no-open",
     "storybook:build": "storybook build --output-dir dist/storybook",
-    "build": "npm run app:build; npm run storybook:build",
+    "build": "npm run app:build && npm run storybook:build",
+    "package:build": "vite build --config vite.package.config.ts && tsc -p tsconfig.package.json && node scripts/resolve-package-types.mjs && node scripts/copy-package-styles.mjs",
+    "prepack": "npm run package:build",
     "script:dev-resources": "cd scripts/dev-resources; node --env-file=../../.env app.mjs; cd -;",
     "script:icons": "cd scripts/icons; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",
     "script:icons:rest": "cd scripts/icons; node --env-file=../../.env app.mjs; cd -;",
@@ -51,5 +115,16 @@
     "storybook": "^8.6.12",
     "typescript": "^5.0.2",
     "vite": "^6.3.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/figma/sds.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/figma/sds/issues"
+  },
+  "homepage": "https://github.com/figma/sds#readme"
 }

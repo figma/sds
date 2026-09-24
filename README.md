@@ -19,6 +19,21 @@ Whether you’re looking to use SDS to start a new project, or are looking for e
 - `npm run app:dev` will run server at [localhost:8000](http://localhost:8000) which renders contents of [App.tsx](src/App.tsx)
 - `npm run storybook` to start storybook at [localhost:6006](http://localhost:6006)
 
+### npm package
+
+Run `npm run package:build` to build the distributable package, or `npm pack` to build and create a tarball. The package exports React components, icons, layout helpers, hooks, and the example data providers from its root. Category paths such as `@figma/sds/primitives`, `@figma/sds/compositions`, `@figma/sds/icons`, `@figma/sds/layout`, `@figma/sds/hooks`, and `@figma/sds/data` are also available.
+
+Import the stylesheet once in your application entry point:
+
+```tsx
+import "@figma/sds/styles.css";
+import { Button, IconCheck } from "@figma/sds";
+```
+
+`@figma/sds/styles.css` includes the component styles, design tokens, responsive variables, icon styles, and reset. For custom styling, the token definitions are also available as `@figma/sds/tokens.css`. The responsive variables, reset, and icon styles can be imported individually from `@figma/sds/responsive.css`, `@figma/sds/reset.css`, and `@figma/sds/icons.css`.
+
+React and React DOM are peer dependencies. Some example compositions use the exported data providers; wrap those compositions in `AllProviders` from `@figma/sds/data` when needed.
+
 ### Figma Auth
 
 - [Create a Figma API token](https://www.figma.com/developers/api#authentication) and request the following scopes to work with Code Connect
