@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Start the Vite dev server with HMR.
+
+cd "$(dirname "$0")/../.."
+
+# Load environment variables
+source .figma/make/env
+
+exec npm run app:dev
