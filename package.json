@@ -12,44 +12,36 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.js",
   "types": "./dist/types/package.d.ts",
   "exports": {
     ".": {
       "types": "./dist/types/package.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "default": "./dist/index.js"
     },
     "./primitives": {
       "types": "./dist/types/ui/primitives/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "default": "./dist/index.js"
     },
     "./compositions": {
       "types": "./dist/types/ui/compositions/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "default": "./dist/index.js"
     },
     "./icons": {
       "types": "./dist/types/ui/icons/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "default": "./dist/index.js"
     },
     "./layout": {
       "types": "./dist/types/ui/layout/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "default": "./dist/index.js"
     },
     "./hooks": {
       "types": "./dist/types/ui/hooks/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "default": "./dist/index.js"
     },
     "./data": {
       "types": "./dist/types/data/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "default": "./dist/index.js"
     },
     "./styles.css": { "types": "./dist/types/css.d.ts", "default": "./dist/styles.css" },
     "./tokens.css": { "types": "./dist/types/css.d.ts", "default": "./dist/tokens.css" },

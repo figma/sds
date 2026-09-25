@@ -23,6 +23,8 @@ Whether you’re looking to use SDS to start a new project, or are looking for e
 
 Run `npm run package:build` to build the distributable package, or `npm pack` to build and create a tarball. The package exports React components, icons, layout helpers, hooks, and the example data providers from its root. Category paths such as `@figma/sds/primitives`, `@figma/sds/compositions`, `@figma/sds/icons`, `@figma/sds/layout`, `@figma/sds/hooks`, and `@figma/sds/data` are also available.
 
+The JavaScript package uses ES modules and includes TypeScript declarations.
+
 Import the stylesheet once in your application entry point:
 
 ```tsx

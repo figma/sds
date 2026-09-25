@@ -22,8 +22,8 @@ export default defineConfig({
     cssCodeSplit: false,
     lib: {
       entry: fromSrc("package.ts"),
-      formats: ["es", "cjs"],
-      fileName: (format) => `index.${format === "es" ? "js" : "cjs"}`,
+      formats: ["es"],
+      fileName: "index",
       cssFileName: "styles",
     },
     rollupOptions: {
