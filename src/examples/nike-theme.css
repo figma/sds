@@ -100,6 +100,12 @@
   }
 }
 
+/* Clear space between the hero title and subtitle. TextContentTitle's default
+   Space/200 gap is too tight with the 0.9 headline line-height. */
+.theme-nike .nike-hero .text-content-title {
+  --flex-gap: var(--sds-size-space-600);
+}
+
 /* The one Volt moment: the launch tag in the hero */
 .theme-nike .nike-hero .tag {
   --tag-background-color: var(--nike-color-accent-volt);
