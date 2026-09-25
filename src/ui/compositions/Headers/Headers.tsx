@@ -24,10 +24,24 @@ import { useState } from "react";
 import { AnchorOrButton } from "utils";
 import "./headers.css";
 
-export function HeaderAuth() {
+const defaultNavItems = [
+  "Pricing",
+  "Solutions",
+  "Community",
+  "Resources",
+  "Contact",
+];
+
+export type HeaderAuthProps = {
+  /**
+   * Labels for the navigation pills
+   */
+  navItems?: string[];
+};
+export function HeaderAuth({ navItems = defaultNavItems }: HeaderAuthProps) {
   const { user, login, logout } = useAuth();
   const [open, setOpen] = useState(false);
-  const [page, setPage] = useState("pricing");
+  const [page, setPage] = useState(navItems[0]?.toLowerCase());
 
   const userButtons = (
     <>
@@ -58,14 +72,6 @@ export function HeaderAuth() {
   );
 
   const { isTabletDown } = useMediaQuery();
-
-  const navItems = [
-    "Pricing",
-    "Solutions",
-    "Community",
-    "Resources",
-    "Contact",
-  ];
 
   const navigation = (
     <Navigation direction={isTabletDown ? "column" : "row"}>
@@ -183,8 +189,9 @@ export function HeaderAuth() {
   );
 }
 
-export type HeaderProps = Omit<SectionProps, "variant" | "padding" | "src">;
-export function Header({ className, ...props }: HeaderProps) {
+export type HeaderProps = Omit<SectionProps, "variant" | "padding" | "src"> &
+  HeaderAuthProps;
+export function Header({ className, navItems, ...props }: HeaderProps) {
   return (
     <Section
       className="header"
@@ -199,7 +206,7 @@ export function Header({ className, ...props }: HeaderProps) {
         </FlexItem>
         <FlexItem size="major">
           <Flex gap="600" alignPrimary="end" alignSecondary="center">
-            <HeaderAuth />
+            <HeaderAuth navItems={navItems} />
           </Flex>
         </FlexItem>
       </Flex>
