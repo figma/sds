@@ -20,12 +20,12 @@ export function WelcomeHero() {
       >
         <TextContentTitle
           align="center"
-          title="Welcome Home"
+          title="Welcome to Nike Design"
           subtitle={<>We're happy to have&nbsp;you.</>}
         />
         <Form singleLine>
           <Input aria-label="Email address" placeholder="you@example.com" />
-          <Button onPress={() => {}} variant="neutral">
+          <Button onPress={() => {}}>
             Get updates
           </Button>
         </Form>
