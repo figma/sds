@@ -25,10 +25,16 @@ Run `npm run package:build` to build the distributable package, or `npm pack` to
 
 The JavaScript package uses ES modules and includes TypeScript declarations.
 
-Import the stylesheet once in your application entry point:
+Import the stylesheet once at the top of your application's CSS entry point:
+
+```css
+@import "@figma/sds/dist/styles.css";
+```
+
+Load that CSS entry point from your application as usual, then import components:
 
 ```tsx
-import "@figma/sds/dist/styles.css";
+import "./app.css";
 import { Button, IconCheck } from "@figma/sds";
 ```
 
