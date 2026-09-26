@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Demo } from "./examples/Demo";
 import { FAQs } from "./examples/FAQs";
 import { NikeLaunch } from "./examples/NikeLaunch";
+import { NikePDP } from "./examples/NikePDP";
 import { PanelSections } from "./examples/PanelSections";
 import { PricingGrid } from "./examples/PricingGrid";
 import { ProductDetails } from "./examples/ProductDetails";
@@ -27,6 +28,14 @@ function App() {
     return (
       <AllProviders>
         <NikeLaunch />
+      </AllProviders>
+    );
+  }
+
+  if (hash === "#nike-pdp") {
+    return (
+      <AllProviders>
+        <NikePDP />
       </AllProviders>
     );
   }
