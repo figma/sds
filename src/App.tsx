@@ -1,6 +1,6 @@
 import { Footer, Header } from "compositions";
 import { AllProviders } from "data";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Demo } from "./examples/Demo";
 import { FAQs } from "./examples/FAQs";
 import { NikeLaunch } from "./examples/NikeLaunch";
@@ -21,27 +21,9 @@ function useHash() {
   return hash;
 }
 
-function App() {
-  const hash = useHash();
-
-  if (hash === "#nike") {
-    return (
-      <AllProviders>
-        <NikeLaunch />
-      </AllProviders>
-    );
-  }
-
-  if (hash === "#nike-pdp") {
-    return (
-      <AllProviders>
-        <NikePDP />
-      </AllProviders>
-    );
-  }
-
+function DefaultPage() {
   return (
-    <AllProviders>
+    <>
       <Header />
       <Demo />
       <WelcomeHero />
@@ -51,7 +33,36 @@ function App() {
       <ProductDetails />
       <ProductGrid />
       <Footer />
-    </AllProviders>
+    </>
+  );
+}
+
+// Hash routes named after the Figma pages; the page name is also the tab title.
+const pages = new Map<string, () => ReactNode>([
+  ["nike_welcome", () => <DefaultPage />],
+  ["nike_launch", () => <NikeLaunch />],
+  ["nike_product_details_page", () => <NikePDP />],
+]);
+
+// Old hashes that keep working after the rename.
+const aliases = new Map([
+  ["nike", "nike_launch"],
+  ["nike-pdp", "nike_product_details_page"],
+]);
+
+const defaultTitle = document.title;
+
+function App() {
+  const hash = useHash().slice(1);
+  const pageName = aliases.get(hash) ?? hash;
+  const renderPage = pages.get(pageName);
+
+  useEffect(() => {
+    document.title = renderPage ? pageName : defaultTitle;
+  }, [pageName, renderPage]);
+
+  return (
+    <AllProviders>{renderPage ? renderPage() : <DefaultPage />}</AllProviders>
   );
 }
 
