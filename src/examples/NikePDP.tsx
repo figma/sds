@@ -35,7 +35,7 @@ const colorways = [
   {
     id: "black-volt",
     name: "Black/Volt",
-    price: "180",
+    price: "160",
     rating: 4.9,
     reviews: 128,
     image: shoeBlackVolt,
@@ -207,7 +207,7 @@ export function NikePDP() {
                 className="nike-pdp-add"
                 onPress={() => setShowSizeError(size === null)}
               >
-                Add to bag
+                Add to bag - free returns
                 <IconShoppingBag />
               </Button>
 
