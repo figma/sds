@@ -1,8 +1,29 @@
 {
-  "name": "sds",
-  "private": true,
-  "version": "0.0.0",
+  "name": "sds-futu",
+  "version": "0.1.0",
+  "description": "Futurice fork of Figma's Simple Design System, packaged for Figma Make kits",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomasFuturice/sds-futu.git"
+  },
   "type": "module",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/lib/index.js",
+  "types": "./dist/lib/lib.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/lib.d.ts",
+      "import": "./dist/lib/index.js"
+    },
+    "./styles.css": "./dist/lib/styles.css"
+  },
+  "files": [
+    "dist/lib"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
     "app:dev": "vite",
     "app:build": "tsc && vite build",
@@ -15,7 +36,9 @@
     "script:icons": "cd scripts/icons; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",
     "script:icons:rest": "cd scripts/icons; node --env-file=../../.env app.mjs; cd -;",
     "script:tokens": "cd scripts/tokens; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",
-    "script:tokens:rest": "cd scripts/tokens; node --env-file=../../.env app.mjs; cd -;"
+    "script:tokens:rest": "cd scripts/tokens; node --env-file=../../.env app.mjs; cd -;",
+    "lib:build": "vite build --config vite.lib.config.ts",
+    "prepublishOnly": "npm run lib:build"
   },
   "prettier": {
     "plugins": [
@@ -39,17 +62,24 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
-    "clsx": "^2.1.1",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.8.0",
     "prettier-plugin-organize-imports": "^3.2.4",
     "react": "^18.2.0",
-    "react-aria-components": "^1.10.1",
     "react-dom": "^18.2.0",
     "storybook": "^8.6.12",
     "typescript": "^5.0.2",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^5.1.1"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "react-aria-components": "^1.10.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
   }
 }

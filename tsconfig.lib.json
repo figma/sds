@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
+    "types": []
+  },
+  "include": ["src/lib.ts", "src/ui", "src/data", "src/index.d.ts", "src/vite-env.d.ts"],
+  "exclude": ["src/**/*.stories.tsx", "src/figma", "src/stories", "src/examples"]
+}
