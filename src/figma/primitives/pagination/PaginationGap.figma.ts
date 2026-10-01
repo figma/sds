@@ -6,6 +6,6 @@ import figma from "figma"
 
 export default {
   id: "PaginationGap",
-  imports: ['import { PaginationGap } from "primitives";'],
+  imports: ['import { PaginationGap } from "sds-futu";'],
   example: figma.code`<PaginationGap />`,
 }

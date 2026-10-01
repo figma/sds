@@ -16,10 +16,10 @@ const gap = figma.selectedInstance.getEnum("Platform", {
 export default {
   id: "Panel",
   imports: [
-    'import { Panel } from "compositions";',
-    'import { Section } from "layout";',
-    'import { placeholder } from "images";',
-    'import { Image } from "primitives";',
+    'import { Panel } from "sds-futu";',
+    'import { Section } from "sds-futu";',
+    'import { placeholder } from "sds-futu";',
+    'import { Image } from "sds-futu";',
   ],
   example: figma.code`<Section padding="${padding}">
       <Panel gap="${gap}" type="half">

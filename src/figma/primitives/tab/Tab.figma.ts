@@ -8,7 +8,7 @@ const label = figma.selectedInstance.getString("Label")
 
 export default {
   id: "Tab",
-  imports: ['import { Tab } from "primitives";'],
+  imports: ['import { Tab } from "sds-futu";'],
   example: figma.code`<Tab${figma.helpers.react.renderProp("id", label)}>${label}</Tab>`,
   metadata: { nestable: true },
 }

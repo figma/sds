@@ -12,10 +12,10 @@ const padding = figma.selectedInstance.getEnum("Platform", {
 export default {
   id: "Panel",
   imports: [
-    'import { Panel } from "compositions";',
-    'import { FlexItem, Section } from "layout";',
-    'import { placeholder } from "images";',
-    'import { Image } from "primitives";',
+    'import { Panel } from "sds-futu";',
+    'import { FlexItem, Section } from "sds-futu";',
+    'import { placeholder } from "sds-futu";',
+    'import { Image } from "sds-futu";',
   ],
   example: figma.code`<Section padding="${padding}">
       <Panel type="auto">

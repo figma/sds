@@ -7,8 +7,8 @@ const schedule = figma.properties.children(["Navigation Pill List"])
 export default {
   id: "Section",
   imports: [
-    'import { PricingCard } from "compositions";',
-    'import { Flex, Section } from "layout";',
+    'import { PricingCard } from "sds-futu";',
+    'import { Flex, Section } from "sds-futu";',
   ],
   example: figma.code`function Example() {
     const { monthlyPlans } = usePricing();

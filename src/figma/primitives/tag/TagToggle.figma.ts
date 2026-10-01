@@ -11,7 +11,7 @@ const iconStart = figma.selectedInstance
 
 export default {
   id: "TagToggle",
-  imports: ['import { TagToggle } from "primitives";'],
+  imports: ['import { TagToggle } from "sds-futu";'],
   example: figma.code`<TagToggle
       ${figma.helpers.react.renderProp("id", label)}
       ${figma.helpers.react.renderProp("iconStart", iconStart)}

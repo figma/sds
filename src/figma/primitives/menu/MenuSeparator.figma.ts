@@ -6,6 +6,6 @@ import figma from "figma"
 
 export default {
   id: "MenuSeparator",
-  imports: ['import { MenuSeparator } from "primitives";'],
+  imports: ['import { MenuSeparator } from "sds-futu";'],
   example: figma.code`<MenuSeparator />`,
 }

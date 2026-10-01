@@ -8,7 +8,7 @@ const text = figma.selectedInstance.getString("Text")
 
 export default {
   id: "TextCode",
-  imports: ['import { TextCode } from "primitives";'],
+  imports: ['import { TextCode } from "sds-futu";'],
   example: figma.code`<TextCode>${text}</TextCode>`,
   metadata: { nestable: true },
 }

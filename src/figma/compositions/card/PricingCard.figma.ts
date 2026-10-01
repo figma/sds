@@ -39,7 +39,7 @@ const variant = instance.getEnum("Variant", {
 
 export default {
   id: "PricingCard",
-  imports: ['import { PricingCard } from "compositions";'],
+  imports: ['import { PricingCard } from "sds-futu";'],
   example: figma.code`<PricingCard
       heading="${heading}"
       action="${action?.label}"

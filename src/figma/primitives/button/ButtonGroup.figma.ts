@@ -16,7 +16,7 @@ const children = figma.properties.children(["Button"]);
 
 export default {
   id: "ButtonGroup",
-  imports: ['import { ButtonGroup } from "primitives";'],
+  imports: ['import { ButtonGroup } from "sds-futu";'],
   example: figma.code`<ButtonGroup
       ${rp("align", align)}
     >

@@ -29,7 +29,7 @@ const isDisabled = instance.getEnum("State", {
 
 export default {
   id: "Button",
-  imports: ['import { Button } from "primitives";'],
+  imports: ['import { Button } from "sds-futu";'],
   example: figma.code`<Button
       onPress={() => {}}
       ${rp("variant", variant)}

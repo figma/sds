@@ -1,6 +1,9 @@
 {
   "codeConnect": {
-    "include": ["**/*.figma.ts", "**/*.figma.batch.json"],
+    "include": [
+      "**/*.figma.ts",
+      "**/*.figma.batch.json"
+    ],
     "language": "jsx",
     "label": "React",
     "documentUrlSubstitutions": {
@@ -100,7 +103,10 @@
       "<FIGMA_TEXT_TEXT_TITLE_HERO>": "https://figma.com/design/oCHgE6RGeXGyIuPTBA56Cp?node-id=2087-8491",
       "<FIGMA_TEXT_TEXT_TITLE_PAGE>": "https://figma.com/design/oCHgE6RGeXGyIuPTBA56Cp?node-id=2087-8490",
       "<FIGMA_TEXT_TEXT>": "https://figma.com/design/oCHgE6RGeXGyIuPTBA56Cp?node-id=2087-8487",
-      "<FIGMA_TOOLTIP_TOOLTIP>": "https://figma.com/design/oCHgE6RGeXGyIuPTBA56Cp?node-id=315-32700"
+      "<FIGMA_TOOLTIP_TOOLTIP>": "https://figma.com/design/oCHgE6RGeXGyIuPTBA56Cp?node-id=315-32700",
+      "<FIGMA_BUTTONS_SOCIAL_BUTTONS>": "https://figma.com/design/oCHgE6RGeXGyIuPTBA56Cp?node-id=3020-13246",
+      "<FIGMA_LOGO>": "https://figma.com/design/oCHgE6RGeXGyIuPTBA56Cp?node-id=3020-13180",
+      "<FIGMA_FORMS_FORM_SLOT>": "https://figma.com/design/oCHgE6RGeXGyIuPTBA56Cp?node-id=6031-11534"
     }
   }
 }

@@ -13,7 +13,7 @@ const children = figma.properties.children(["Avatar"])
 
 export default {
   id: "AvatarGroup",
-  imports: ['import { AvatarGroup } from "primitives";'],
+  imports: ['import { AvatarGroup } from "sds-futu";'],
   example: figma.code`<AvatarGroup
       ${spacing ? figma.code`spacing="${spacing}"` : ""}
       max={3}

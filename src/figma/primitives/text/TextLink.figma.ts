@@ -8,7 +8,7 @@ const text = figma.selectedInstance.getString("Text")
 
 export default {
   id: "TextLink",
-  imports: ['import { TextLink } from "primitives";'],
+  imports: ['import { TextLink } from "sds-futu";'],
   example: figma.code`<TextLink href="#">${text}</TextLink>`,
   metadata: { nestable: true },
 }

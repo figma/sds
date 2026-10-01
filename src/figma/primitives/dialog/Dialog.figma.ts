@@ -8,9 +8,9 @@ const children = figma.properties.children(["Dialog Body"])
 
 export default {
   id: "Dialog",
-  imports: ['import { DialogModal } from "primitives";',
-      'import { Button } from "primitives";',
-      'import { ButtonGroup } from "primitives";',
+  imports: ['import { DialogModal } from "sds-futu";',
+      'import { Button } from "sds-futu";',
+      'import { ButtonGroup } from "sds-futu";',
   ],
   example: figma.code`<DialogModal isDismissable isOpen={true} onOpenChange={() => {}}>
       ${children}

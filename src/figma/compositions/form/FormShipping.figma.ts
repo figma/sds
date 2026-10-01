@@ -16,8 +16,8 @@ const children = figma.properties.children([
 export default {
   id: "FormBox",
   imports: [
-    'import { FormBox } from "compositions";',
-    'import { Flex } from "layout";',
+    'import { FormBox } from "sds-futu";',
+    'import { Flex } from "sds-futu";',
   ],
   example: figma.code`<FormBox onSubmit={() => {}}>
       <Flex direction="column" gap="100">

@@ -6,6 +6,6 @@ import figma from "figma"
 
 export default {
   id: "Header",
-  imports: ['import { Header } from "compositions";'],
+  imports: ['import { Header } from "sds-futu";'],
   example: figma.code`<Header />`,
 }

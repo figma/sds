@@ -12,7 +12,7 @@ const subheading = figma.selectedInstance.getString("Subheading")
 
 export default {
   id: "TextContentHeading",
-  imports: ['import { TextContentHeading } from "primitives";'],
+  imports: ['import { TextContentHeading } from "sds-futu";'],
   example: figma.code`<TextContentHeading
       ${align ? figma.code`align="${align}"` : ""}
       ${figma.helpers.react.renderProp("heading", heading)}

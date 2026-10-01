@@ -31,7 +31,7 @@
 
 .table-row-interactive {
   &.table-row-interactive:hover {
-    --table-row-background: var(--sds-color-background-default-hover);
+    --table-row-background: var(--sds-color-background-default-default-hover);
   }
 }
 

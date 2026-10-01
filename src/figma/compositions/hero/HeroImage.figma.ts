@@ -12,8 +12,8 @@ const children = figma.properties.children([
 export default {
   id: "Hero",
   imports: [
-    'import { Hero } from "compositions";',
-    'import { placeholder } from "images";',
+    'import { Hero } from "sds-futu";',
+    'import { placeholder } from "sds-futu";',
   ],
   example: figma.code`<Hero variant="image" src={placeholder}>
       ${children}

@@ -8,7 +8,7 @@ const children = figma.properties.children(["Tab"])
 
 export default {
   id: "Tabs",
-  imports: ['import { TabList, TabPanel, Tabs } from "primitives";'],
+  imports: ['import { TabList, TabPanel, Tabs } from "sds-futu";'],
   example: figma.code`<Tabs>
       <TabList>${children}</TabList>
       <TabPanel id="match-each-tab">Some stuff</TabPanel>

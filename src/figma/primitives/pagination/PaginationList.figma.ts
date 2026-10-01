@@ -11,7 +11,7 @@ const children = figma.properties.children([
 
 export default {
   id: "PaginationList",
-  imports: ['import { PaginationList } from "primitives";'],
+  imports: ['import { PaginationList } from "sds-futu";'],
   example: figma.code`<PaginationList>${children}</PaginationList>`,
   metadata: { nestable: true },
 }

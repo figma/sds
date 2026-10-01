@@ -26,8 +26,8 @@ const aside = figma.properties.children([
 export default {
   id: "Section",
   imports: [
-    'import { Card } from "compositions";',
-    'import { Flex, FlexItem, Section } from "layout";',
+    'import { Card } from "sds-futu";',
+    'import { Flex, FlexItem, Section } from "sds-futu";',
   ],
   example: figma.code`<Section padding="${padding}">
       <Flex container wrap type="quarter" gap="${gap}">

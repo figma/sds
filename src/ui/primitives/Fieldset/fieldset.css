@@ -62,6 +62,13 @@
   }
 }
 
+/* Matches Figma "Form (Slot)": fields stack with a 24px gap */
+.form:not(.form-single-line) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-600);
+}
+
 .form.form-single-line {
   align-items: center;
   display: flex;

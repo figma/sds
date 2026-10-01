@@ -23,7 +23,7 @@ const isDisabled = instance.getEnum("State", { Disabled: true });
 
 export default {
   id: "CheckboxField",
-  imports: ['import { CheckboxField } from "primitives";'],
+  imports: ['import { CheckboxField } from "sds-futu";'],
   example: figma.code`<CheckboxField
       ${rp("label", label)}
       ${rp("description", description)}

@@ -25,8 +25,8 @@ const date =
 export default {
   id: "ReviewCard",
   imports: [
-    'import { ReviewCard } from "compositions";',
-    'import { placeholder } from "images";',
+    'import { ReviewCard } from "sds-futu";',
+    'import { placeholder } from "sds-futu";',
   ],
   example: figma.code`<ReviewCard
       stars={5}

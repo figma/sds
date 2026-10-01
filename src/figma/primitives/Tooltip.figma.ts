@@ -20,7 +20,7 @@ const placement = figma.selectedInstance.getEnum("Placement", {
 
 export default {
   id: "Tooltip",
-  imports: ['import { TextSmall, TextStrong, Tooltip } from "primitives";'],
+  imports: ['import { TextSmall, TextStrong, Tooltip } from "sds-futu";'],
   example: figma.code`<Tooltip${figma.helpers.react.renderProp(
     "placement",
     placement,

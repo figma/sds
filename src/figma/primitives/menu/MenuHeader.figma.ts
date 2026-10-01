@@ -9,7 +9,7 @@ const subhead = figma.properties.children(["Text Small"])
 
 export default {
   id: "MenuHeader",
-  imports: ['import { MenuHeader } from "primitives";'],
+  imports: ['import { MenuHeader } from "sds-futu";'],
   example: figma.code`<MenuHeader>
       ${subhead}
       ${header}

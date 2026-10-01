@@ -21,7 +21,7 @@ const size = instance.getEnum("Size", {
 
 export default {
   id: "IconButton",
-  imports: ['import { IconButton } from "primitives";'],
+  imports: ['import { IconButton } from "sds-futu";'],
   example: figma.code`<IconButton
       aria-label="Write a nice description of the action."
       onPress={() => {}}

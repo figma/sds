@@ -21,8 +21,8 @@ const username =
 export default {
   id: "TestimonialCard",
   imports: [
-    'import { TestimonialCard } from "compositions";',
-    'import { placeholder } from "images";',
+    'import { TestimonialCard } from "sds-futu";',
+    'import { placeholder } from "sds-futu";',
   ],
   example: figma.code`<TestimonialCard
       heading="${heading}"

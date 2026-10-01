@@ -11,7 +11,7 @@ const href = figma.selectedInstance.getEnum("State", {
 
 export default {
   id: "PaginationPrevious",
-  imports: ['import { PaginationPrevious } from "primitives";'],
+  imports: ['import { PaginationPrevious } from "sds-futu";'],
   example: figma.code`<PaginationPrevious
       ${href ? figma.code`href="${href}"` : ""}
     />`,

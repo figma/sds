@@ -8,7 +8,7 @@ const heading = figma.properties.children(["Text Strong"])
 
 export default {
   id: "MenuHeading",
-  imports: ['import { MenuHeading } from "primitives";'],
+  imports: ['import { MenuHeading } from "sds-futu";'],
   example: figma.code`<MenuHeading>${heading}</MenuHeading>`,
   metadata: { nestable: true },
 }

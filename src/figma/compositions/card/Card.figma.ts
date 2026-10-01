@@ -25,8 +25,8 @@ const variant = figma.selectedInstance.getEnum("Variant", {
 export default {
   id: "Card",
   imports: [
-    'import { Card } from "compositions";',
-    'import { Image, Text, TextHeading } from "primitives";',
+    'import { Card } from "sds-futu";',
+    'import { Image, Text, TextHeading } from "sds-futu";',
   ],
   example: figma.code`<Card${figma.helpers.react.renderProp(
     "asset",

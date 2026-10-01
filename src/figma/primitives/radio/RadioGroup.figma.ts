@@ -8,7 +8,7 @@ const children = figma.properties.children(["Radio Field"]);
 
 export default {
   id: "RadioGroup",
-  imports: ['import { RadioGroup } from "primitives";'],
+  imports: ['import { RadioGroup } from "sds-futu";'],
   example: figma.code`<RadioGroup>${children}</RadioGroup>`,
   metadata: { nestable: true },
 };

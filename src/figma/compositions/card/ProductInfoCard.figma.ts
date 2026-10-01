@@ -23,9 +23,9 @@ const description =
 export default {
   id: "ProductInfoCard",
   imports: [
-    'import { ProductInfoCard } from "compositions";',
-    'import { Image } from "primitives";',
-    'import { placeholder } from "images";',
+    'import { ProductInfoCard } from "sds-futu";',
+    'import { Image } from "sds-futu";',
+    'import { placeholder } from "sds-futu";',
   ],
   example: figma.code`<ProductInfoCard
       asset={

@@ -7,7 +7,7 @@ const children = figma.properties.children(["Accordion Item"]);
 
 export default {
   id: "Accordion",
-  imports: ['import { Accordion } from "primitives";'],
+  imports: ['import { Accordion } from "sds-futu";'],
   example: figma.code`<Accordion>${children}</Accordion>`,
   metadata: { nestable: true },
 };

@@ -29,8 +29,8 @@ const description = hasLabel
   : undefined;
 
 const imports = hasLabel
-  ? ['import { TextareaField } from "primitives";']
-  : ['import { Textarea } from "primitives";'];
+  ? ['import { TextareaField } from "sds-futu";']
+  : ['import { Textarea } from "sds-futu";'];
 
 export default {
   id: "TextareaField",

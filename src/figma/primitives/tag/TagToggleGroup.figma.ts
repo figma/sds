@@ -9,7 +9,7 @@ const children = figma.properties.children(["Tag Toggle"])
 export default {
   id: "TagToggleGroup",
   imports: [
-    'import { Label, TagToggleGroup, TagToggleList } from "primitives";',
+    'import { Label, TagToggleGroup, TagToggleList } from "sds-futu";',
   ],
   example: figma.code`<TagToggleGroup>
       <Label>Label this!</Label>

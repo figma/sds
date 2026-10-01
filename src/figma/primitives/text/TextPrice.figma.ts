@@ -13,7 +13,7 @@ const price = figma.selectedInstance.getString("Price")
 
 export default {
   id: "TextPrice",
-  imports: ['import { TextPrice } from "primitives";'],
+  imports: ['import { TextPrice } from "sds-futu";'],
   example: figma.code`<TextPrice
       ${figma.helpers.react.renderProp("label", label)}
       ${size ? figma.code`size="${size}"` : ""}

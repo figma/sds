@@ -20,7 +20,7 @@ const icon = instance.getInstanceSwap("Icon")?.executeTemplate().example;
 
 export default {
   id: "StatsCard",
-  imports: ['import { StatsCard } from "compositions";'],
+  imports: ['import { StatsCard } from "sds-futu";'],
   example: figma.code`<StatsCard description="${description}" stat="${stat}" icon={${icon}} />`,
   metadata: { nestable: true },
 };

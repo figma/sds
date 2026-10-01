@@ -12,7 +12,7 @@ const direction = figma.selectedInstance.getEnum("Direction", {
 
 export default {
   id: "Navigation",
-  imports: ['import { Navigation } from "primitives";'],
+  imports: ['import { Navigation } from "sds-futu";'],
   example: figma.code`<Navigation direction="${direction}">${children}</Navigation>`,
   metadata: { nestable: true },
 }

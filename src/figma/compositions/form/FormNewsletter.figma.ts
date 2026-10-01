@@ -8,7 +8,7 @@ const children = figma.properties.children(["Input Field", "Button"])
 
 export default {
   id: "FormBox",
-  imports: ['import { Form } from "primitives";'],
+  imports: ['import { Form } from "sds-futu";'],
   example: figma.code`<Form singleLine onSubmit={() => {}}>
       ${children}
     </Form>`,

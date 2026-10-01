@@ -13,7 +13,7 @@ const size = figma.batch.hasSizeVariants
 
 export default {
   id: component,
-  imports: [`import { ${component} } from "icons";`],
+  imports: [`import { ${component} } from "sds-futu";`],
   example: figma.code`<${component}
       ${size ? figma.code`size="${size}"` : ""}
     />`,

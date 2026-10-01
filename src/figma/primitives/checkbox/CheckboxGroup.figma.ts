@@ -8,7 +8,7 @@ const children = figma.properties.children(["Checkbox Field"]);
 
 export default {
   id: "CheckboxGroup",
-  imports: ['import { CheckboxGroup } from "primitives";'],
+  imports: ['import { CheckboxGroup } from "sds-futu";'],
   example: figma.code`<CheckboxGroup>${children}</CheckboxGroup>`,
   metadata: { nestable: true },
 };

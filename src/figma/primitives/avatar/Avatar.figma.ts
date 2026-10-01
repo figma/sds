@@ -16,8 +16,8 @@ const src = instance.getEnum("Type", { Image: true });
 export default {
   id: "Avatar",
   imports: [
-    'import { Avatar } from "primitives";',
-    'import { placeholder } from "images";',
+    'import { Avatar } from "sds-futu";',
+    'import { placeholder } from "sds-futu";',
   ],
   example: figma.code`<Avatar
       ${rp("square", square)}

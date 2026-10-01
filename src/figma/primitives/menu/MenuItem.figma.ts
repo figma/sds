@@ -24,7 +24,7 @@ const label = figma.selectedInstance.getString("Label")
 export default {
   id: "MenuItem",
   imports: [
-    'import { MenuDescription, MenuItem, MenuLabel } from "primitives";',
+    'import { MenuDescription, MenuItem, MenuLabel } from "sds-futu";',
   ],
   example: figma.code`<MenuItem>
       ${figma.helpers.react.renderChildren(icon)}

@@ -19,7 +19,7 @@ const isSelected = instance.getEnum("State", {
 
 export default {
   id: "NavigationButton",
-  imports: ['import { NavigationButton } from "primitives";'],
+  imports: ['import { NavigationButton } from "sds-futu";'],
   example: figma.code`<NavigationButton
       ${rp("icon", icon)}
       ${rp("isSelected", isSelected)}

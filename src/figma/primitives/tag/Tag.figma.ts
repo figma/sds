@@ -24,7 +24,7 @@ const scheme = figma.selectedInstance.getEnum("Scheme", {
 
 export default {
   id: "Tag",
-  imports: ['import { Tag } from "primitives";'],
+  imports: ['import { Tag } from "sds-futu";'],
   example: figma.code`<Tag
       ${rp("onRemove", "onRemove={() => {}}")}
       ${rp("variant", variant)}

@@ -8,7 +8,7 @@ const text = figma.selectedInstance.getString("Text")
 
 export default {
   id: "TextSubheading",
-  imports: ['import { TextSubheading } from "primitives";'],
+  imports: ['import { TextSubheading } from "sds-futu";'],
   example: figma.code`<TextSubheading>${text}</TextSubheading>`,
   metadata: { nestable: true },
 }

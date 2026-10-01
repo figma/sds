@@ -28,8 +28,8 @@ const description = hasLabel
 
 const rp = figma.helpers.react.renderProp;
 const imports = hasLabel
-  ? ['import { InputField } from "primitives";']
-  : ['import { Input } from "primitives";'];
+  ? ['import { InputField } from "sds-futu";']
+  : ['import { Input } from "sds-futu";'];
 
 export default {
   id: "InputField",

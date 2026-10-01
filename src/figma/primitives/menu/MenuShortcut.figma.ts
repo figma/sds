@@ -8,7 +8,7 @@ const shortcut = figma.selectedInstance.getString("Shortcut")
 
 export default {
   id: "MenuShortcut",
-  imports: ['import { MenuShortcut } from "primitives";'],
+  imports: ['import { MenuShortcut } from "sds-futu";'],
   example: figma.code`<MenuShortcut>${shortcut}</MenuShortcut>`,
   metadata: { nestable: true },
 }

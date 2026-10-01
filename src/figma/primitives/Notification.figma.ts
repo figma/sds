@@ -22,7 +22,7 @@ const variant = instance.getEnum("Variant", {
 
 export default {
   id: "Notification",
-  imports: ['import { Notification, Text, TextStrong } from "primitives";'],
+  imports: ['import { Notification, Text, TextStrong } from "sds-futu";'],
   example: figma.code`<Notification
     ${rp("icon", icon)}
     ${rp("isDismissible", isDismissible)}

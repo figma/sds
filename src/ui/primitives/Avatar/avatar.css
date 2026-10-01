@@ -103,7 +103,7 @@
     display: flex;
     justify-content: center;
     font: var(--sds-font-body-small);
-    font-weight: var(--sds-typography-body-weight-strong);
+    font-weight: var(--sds-typography-body-font-weight-strong);
     height: var(--sds-typography-scale-05);
     width: var(--sds-typography-scale-05);
   }

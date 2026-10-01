@@ -38,8 +38,8 @@ const description = hasLabel
   : undefined;
 
 const imports = hasLabel
-  ? ['import { SelectField, SelectItem } from "primitives";']
-  : ['import { Select, SelectItem } from "primitives";'];
+  ? ['import { SelectField, SelectItem } from "sds-futu";']
+  : ['import { Select, SelectItem } from "sds-futu";'];
 
 export default {
   id: "SelectField",

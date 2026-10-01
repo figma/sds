@@ -14,7 +14,7 @@ const isSelected = figma.selectedInstance.getEnum("State", {
 
 export default {
   id: "NavigationPill",
-  imports: ['import { NavigationPill } from "primitives";'],
+  imports: ['import { NavigationPill } from "sds-futu";'],
   example: figma.code`<NavigationPill
     ${rp("isSelected", isSelected)}
   >

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { FormBox } from "compositions";
-import { Button, ButtonGroup, CheckboxField, InputField } from "primitives";
+import { Button, ButtonGroup, CheckboxField, Form, InputField } from "primitives";
 
 const meta: Meta<typeof FormBox> = {
   component: FormBox,
@@ -22,5 +22,20 @@ export const StoryFormBox: StoryObj<typeof FormBox> = {
         </Button>
       </ButtonGroup>
     </FormBox>
+  ),
+};
+
+export const StoryForm: StoryObj<typeof Form> = {
+  name: "Form (no box) — fields stack with 24px gap",
+  render: () => (
+    <Form onSubmit={() => {}}>
+      <InputField label="Name" />
+      <InputField label="Email" />
+      <ButtonGroup>
+        <Button onPress={() => {}} variant="primary">
+          Send
+        </Button>
+      </ButtonGroup>
+    </Form>
   ),
 };

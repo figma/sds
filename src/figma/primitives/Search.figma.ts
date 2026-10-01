@@ -18,7 +18,7 @@ const disabled = instance.getEnum("State", { Disabled: true });
 
 export default {
   id: "Search",
-  imports: ['import { Search } from "primitives";'],
+  imports: ['import { Search } from "sds-futu";'],
   example: figma.code`<Search
       ${rp("value", value)}
       ${rp("placeholder", placeholder)}

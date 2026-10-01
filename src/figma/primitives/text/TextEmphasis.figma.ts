@@ -8,7 +8,7 @@ const text = figma.selectedInstance.getString("Text")
 
 export default {
   id: "TextEmphasis",
-  imports: ['import { TextEmphasis } from "primitives";'],
+  imports: ['import { TextEmphasis } from "sds-futu";'],
   example: figma.code`<TextEmphasis>${text}</TextEmphasis>`,
   metadata: { nestable: true },
 }

@@ -17,7 +17,7 @@ const gap = figma.selectedInstance.getEnum("Platform", {
 
 export default {
   id: "Section",
-  imports: ['import { Flex, Section } from "layout";'],
+  imports: ['import { Flex, Section } from "sds-futu";'],
   example: figma.code`<Section padding="${padding}">
       <Flex
         container

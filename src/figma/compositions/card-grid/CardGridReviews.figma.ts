@@ -15,7 +15,7 @@ const cards = figma.properties.children(["Review Card"])
 
 export default {
   id: "Section",
-  imports: ['import { Flex, FlexItem, Section } from "layout";'],
+  imports: ['import { Flex, FlexItem, Section } from "sds-futu";'],
   example: figma.code`<Section padding="${padding}">
       <Flex container gap="1200" direction="column" alignSecondary="stretch">
         ${top}

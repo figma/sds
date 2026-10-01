@@ -8,7 +8,7 @@ const children = figma.properties.children(["Input Field", "Button Group"])
 
 export default {
   id: "FormBox",
-  imports: ['import { FormBox } from "compositions";'],
+  imports: ['import { FormBox } from "sds-futu";'],
   example: figma.code`<FormBox onSubmit={() => {}}>${children}</FormBox>`,
   metadata: { nestable: true },
 }

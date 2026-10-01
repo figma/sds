@@ -16,7 +16,7 @@ const description = instance.getBoolean("Has Description", {
 
 export default {
   id: "SliderField",
-  imports: ['import { SliderField } from "primitives";'],
+  imports: ['import { SliderField } from "sds-futu";'],
   example: figma.code`<SliderField
       ${rp("isDisabled", isDisabled)}
       ${rp("label", label)}

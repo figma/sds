@@ -11,7 +11,7 @@ const children = figma.properties.children(["Avatar"])
 
 export default {
   id: "AvatarBlock",
-  imports: ['import { AvatarBlock } from "primitives";'],
+  imports: ['import { AvatarBlock } from "sds-futu";'],
   example: figma.code`<AvatarBlock
       title="${title}"
       description="${description}"

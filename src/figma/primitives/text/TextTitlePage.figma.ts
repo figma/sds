@@ -8,7 +8,7 @@ const text = figma.selectedInstance.getString("Text")
 
 export default {
   id: "TextTitlePage",
-  imports: ['import { TextTitlePage } from "primitives";'],
+  imports: ['import { TextTitlePage } from "sds-futu";'],
   example: figma.code`<TextTitlePage>${text}</TextTitlePage>`,
   metadata: { nestable: true },
 }

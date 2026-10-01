@@ -20,9 +20,9 @@ const gap = figma.selectedInstance.getEnum("Platform", {
 export default {
   id: "Section",
   imports: [
-    'import { Flex, FlexItem, Section } from "layout";',
-    'import { placeholder } from "images";',
-    'import { Image } from "primitives";',
+    'import { Flex, FlexItem, Section } from "sds-futu";',
+    'import { placeholder } from "sds-futu";',
+    'import { Image } from "sds-futu";',
   ],
   example: figma.code`<Section padding="${padding}">
       <Flex container type="half" wrap gap="${gap}">

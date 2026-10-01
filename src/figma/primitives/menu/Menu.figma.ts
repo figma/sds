@@ -13,7 +13,7 @@ const children = figma.properties.children([
 
 export default {
   id: "Menu",
-  imports: ['import { Menu } from "primitives";'],
+  imports: ['import { Menu } from "sds-futu";'],
   example: figma.code`<Menu>${children}</Menu>`,
   metadata: { nestable: true },
 }

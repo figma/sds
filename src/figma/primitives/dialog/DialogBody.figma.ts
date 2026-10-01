@@ -16,8 +16,8 @@ const buttons = figma.properties.children(["Button Group"])
 export default {
   id: "Dialog",
   imports: [
-    'import { Dialog, DialogBody, DialogClose, DialogTitle } from "primitives";',
-    'import { Button } from "primitives";',
+    'import { Dialog, DialogBody, DialogClose, DialogTitle } from "sds-futu";',
+    'import { Button } from "sds-futu";',
   ],
   example: figma.code`<Dialog type="${type}">
       <DialogClose onPress={() => {}} />

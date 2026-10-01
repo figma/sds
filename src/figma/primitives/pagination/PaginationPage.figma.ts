@@ -16,7 +16,7 @@ const href = instance.getString("Href");
 
 export default {
   id: "PaginationPage",
-  imports: ['import { PaginationPage } from "primitives";'],
+  imports: ['import { PaginationPage } from "sds-futu";'],
   example: figma.code`<PaginationPage
       ${rp("current", current)}
       ${rp("href", href)}

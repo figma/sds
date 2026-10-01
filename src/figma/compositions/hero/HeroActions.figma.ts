@@ -11,7 +11,7 @@ const children = figma.properties.children([
 
 export default {
   id: "Hero",
-  imports: ['import { Hero } from "compositions";'],
+  imports: ['import { Hero } from "sds-futu";'],
   example: figma.code`<Hero variant="subtle">${children}</Hero>`,
   metadata: { nestable: true },
 }

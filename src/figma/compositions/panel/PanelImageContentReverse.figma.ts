@@ -17,10 +17,10 @@ const children = figma.properties.children(["Text Content Heading", "Text"])
 export default {
   id: "Panel",
   imports: [
-    'import { Panel } from "compositions";',
-    'import { Flex, FlexItem, Section } from "layout";',
-    'import { placeholder } from "images";',
-    'import { Image } from "primitives";',
+    'import { Panel } from "sds-futu";',
+    'import { Flex, FlexItem, Section } from "sds-futu";',
+    'import { placeholder } from "sds-futu";',
+    'import { Image } from "sds-futu";',
   ],
   example: figma.code`<Section padding="${padding}">
       <Panel gap="${gap}" type="half">

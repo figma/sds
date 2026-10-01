@@ -49,7 +49,7 @@
 }
 
 .text-input {
-  font: var(--sds-font-input);
+  font: var(--sds-font-body-base);
 }
 .text-body-code {
   font: var(--sds-font-body-code);
@@ -92,6 +92,10 @@
   &.text-link-list {
     list-style: none;
     padding: 0;
+    /* Matches Figma "Text Link List Item": links in lists are not underlined */
+    .text-body-link.link {
+      text-decoration: none;
+    }
   }
 
   &:not(.text-link-list) {
@@ -101,7 +105,7 @@
 }
 
 .text-list-item {
-  font: var(--sds-font-body);
+  font: var(--sds-font-body-base);
 }
 
 .text-price {

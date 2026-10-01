@@ -16,7 +16,7 @@ const density = figma.selectedInstance.getEnum("Density", {
 
 export default {
   id: "TextLinkList",
-  imports: ['import { TextLinkList } from "primitives";'],
+  imports: ['import { TextLinkList } from "sds-futu";'],
   example: figma.code`<TextLinkList${figma.helpers.react.renderProp(
     "title",
     title,

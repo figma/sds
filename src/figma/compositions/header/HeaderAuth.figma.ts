@@ -6,6 +6,6 @@ import figma from "figma"
 
 export default {
   id: "HeaderAuth",
-  imports: ['import { HeaderAuth } from "compositions";'],
+  imports: ['import { HeaderAuth } from "sds-futu";'],
   example: figma.code`<HeaderAuth />`,
 }
