@@ -7,6 +7,7 @@ import {
   Button as RACButton,
   Link as RACLink,
   type ButtonProps as RACButtonProps,
+  type LinkProps as RACLinkProps,
 } from "react-aria-components";
 
 export type AnchorOrButtonSharedProps = {
@@ -34,7 +35,7 @@ export const AnchorOrButton = forwardRef(function AnchorOrButton(
   const { style, ...sharedProps } = props;
   return isAnchorProps(props) ? (
     <RACLink
-      {...sharedProps}
+      {...(sharedProps as RACLinkProps)}
       className={props.className}
       ref={ref as React.ForwardedRef<HTMLAnchorElement>}
     >
@@ -42,7 +43,7 @@ export const AnchorOrButton = forwardRef(function AnchorOrButton(
     </RACLink>
   ) : (
     <RACButton
-      {...sharedProps}
+      {...(sharedProps as RACButtonProps)}
       className={props.className}
       ref={ref as React.ForwardedRef<HTMLButtonElement>}
     >
