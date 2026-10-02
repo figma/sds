@@ -1,4 +1,4 @@
-# Simple Design System (SDS) Cursor Instructions
+# Simple Design System (SDS) Agent Instructions
 
 Welcome to the Simple Design System repository! This is a comprehensive React-based design system with Figma integration using Code Connect. This guide will help you understand how to work with the codebase effectively.
 
@@ -94,7 +94,7 @@ Always read these annotations carefully, as they provide important context for i
 
 ## CSS Variables & Design Tokens
 
-All design tokens from Figma are defined as CSS variables in [src/theme.css](../src/theme.css). **Always use these variables instead of hardcoded values.**
+All design tokens from Figma are defined as CSS variables in [src/theme.css](./theme.css). **Always use these variables instead of hardcoded values.**
 
 - Colors: Use `var(--sds-color-*)` variables (e.g., `var(--sds-color-text-default-default)`)
 - Spacing: Use `var(--sds-size-space-*)` variables (e.g., `var(--sds-size-space-400)`)
@@ -158,9 +158,9 @@ scripts/
 
 ## Component Library Structure
 
-All UI components are in [src/ui](../src/ui). **Never create new components - always use existing SDS components.**
+All UI components are in [src/ui](./ui). **Never create new components - always use existing SDS components.**
 
-All data management (contexts, providers, services, types, and data hooks) are in [src/data](../src/data). Use the provided context providers and custom hooks for state management.
+All data management (contexts, providers, services, types, and data hooks) are in [src/data](./data). Use the provided context providers and custom hooks for state management.
 
 ## SDS Component Hierarchy
 
@@ -271,7 +271,7 @@ function ResponsiveExample() {
 - **Always import components from their specific paths** - Use the alias imports
 - **Check component props before using** - Read the TypeScript definitions
 - **Use layout components instead of CSS Grid/Flexbox** - Never write custom layout CSS
-- **Reference existing stories in [src/stories](../src/stories/) for usage examples**
+- **Reference existing stories in [src/stories](./stories/) for usage examples**
 
 ### Common Pitfalls & Solutions
 
@@ -301,89 +301,13 @@ function ResponsiveExample() {
 
 ## Component Categories
 
-### Primitives (`src/ui/primitives/`)
+Each component and data directory has its own `AGENTS.md` that lists what's available there:
 
-Single-purpose, reusable components (alphabetically ordered):
-
-- **Accordion** - Expandable content sections with `Accordion` and `AccordionItem`
-- **Avatar** - User profile images and placeholders
-- **Button** - Primary, neutral, subtle variants with size options
-- **Checkbox** - Boolean selection controls with validation states
-- **Dialog** - Modal dialogs and overlays with backdrop
-- **Fieldset** - Form fieldset grouping with legend
-- **Icon** - Consistent icon rendering (check [src/ui/icons](../src/ui/icons/) for available icons)
-- **IconButton** - Icon-only buttons with accessible labels
-- **Image** - Responsive images with loading states
-- **Input** - Form input fields with validation states and labels
-- **Link** - Navigation and external links with proper styling
-- **ListBox** - Selection lists with keyboard navigation
-- **Logo** - Brand logos and identity elements
-- **Menu** - Dropdown menus and context menus
-- **Navigation** - Navigation pills and buttons with selection states
-- **Notification** - Toast notifications and alerts
-- **Pagination** - Page navigation controls with page numbers
-- **Radio** - Single selection from multiple options
-- **Search** - Search input fields with suggestions
-- **Select** - Dropdown selection components with search
-- **Slider** - Range input controls with min/max values
-- **Switch** - Toggle controls for boolean settings
-- **Tab** - Tab navigation with panels
-- **Table** - Data tables with sorting, filtering, and pagination
-- **Tag** - Labels, badges, and category indicators
-- **Text** - Typography components with semantic variants
-- **Textarea** - Multi-line text input with resize options
-- **Tooltip** - Contextual help and information overlays
-
-### Layout (`src/ui/layout/`)
-
-Structural components for positioning:
-
-- **Flex** - Flexbox layouts with gap, alignment, and responsive props
-- **Section** - Page sections with padding and background variants
-- **Grid** - CSS Grid layouts (when Flex isn't sufficient)
-
-### Compositions (`src/ui/compositions/`)
-
-Complex, pre-built component patterns:
-
-- **Cards** - Content cards with headers, bodies, and actions
-- **Forms** - Complete form layouts with validation. Meant to be examples.
-- **Headers/Footers** - Page navigation and footer components
-
-### Hooks (`src/ui/hooks/`)
-
-UI-specific custom React hooks:
-
-- **useMediaQuery** - Responsive breakpoint detection
-
-### Data Layer (`src/data/`)
-
-Data management layer with contexts, providers, services, and hooks:
-
-#### Hooks (`src/data/hooks/`)
-
-- **useAuth** - Authentication state and methods (login, logout, user data)
-- **usePricing** - Pricing plans, cart management, and billing operations
-- **useProducts** - Product catalog, search, filtering, and shopping cart
-
-#### Providers (`src/data/providers/`)
-
-- **AuthProvider** - Authentication context with loading states and error handling
-- **PricingProvider** - Pricing and subscription management
-- **ProductsProvider** - Product catalog and e-commerce functionality
-- **AllProviders** - Combined provider wrapper for full application state
-
-#### Services (`src/data/services/`)
-
-- **authService** - Authentication API calls and token management
-- **pricingService** - Pricing calculations and plan management
-- **productsService** - Product data, filtering, and search operations
-
-#### Types (`src/data/types/`)
-
-- **auth.ts** - User, credentials, and authentication types
-- **pricing.ts** - Plans, pricing, and cart types
-- **products.ts** - Product, filter, and e-commerce types
+- [src/ui/primitives/AGENTS.md](./ui/primitives/AGENTS.md) - Single-purpose, reusable components
+- [src/ui/layout/AGENTS.md](./ui/layout/AGENTS.md) - Structural components for positioning
+- [src/ui/compositions/AGENTS.md](./ui/compositions/AGENTS.md) - Complex, pre-built component patterns
+- [src/ui/hooks/AGENTS.md](./ui/hooks/AGENTS.md) - UI-specific custom React hooks
+- [src/data/AGENTS.md](./data/AGENTS.md) - Data layer: hooks, providers, services, and types
 
 ## Figma Integration
 
