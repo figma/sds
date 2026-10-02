@@ -299,16 +299,6 @@ function ResponsiveExample() {
 
 **Fix**: Read the TypeScript file: `<Button isSelected>` or `<Button variant="primary">`
 
-## Component Categories
-
-Each component and data directory has its own `AGENTS.md` that lists what's available there:
-
-- [src/ui/primitives/AGENTS.md](./ui/primitives/AGENTS.md) - Single-purpose, reusable components
-- [src/ui/layout/AGENTS.md](./ui/layout/AGENTS.md) - Structural components for positioning
-- [src/ui/compositions/AGENTS.md](./ui/compositions/AGENTS.md) - Complex, pre-built component patterns
-- [src/ui/hooks/AGENTS.md](./ui/hooks/AGENTS.md) - UI-specific custom React hooks
-- [src/data/AGENTS.md](./data/AGENTS.md) - Data layer: hooks, providers, services, and types
-
 ## Figma Integration
 
 SDS uses Figma Code Connect for seamless design-to-code integration. Here's how it works:
