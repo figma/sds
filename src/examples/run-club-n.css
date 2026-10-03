@@ -1,0 +1,58 @@
+/*
+ * Run Club N page styles. Mobile-first, matching the 448px Figma frame:
+ * registration content at the top, the join action pinned to the bottom.
+ */
+
+.run-club-n {
+  background: var(--sds-color-background-default-default);
+  min-height: 100dvh;
+}
+
+.run-club-n .run-club-n-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-1200);
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 100dvh;
+  padding: var(--sds-size-space-1200) var(--sds-size-space-600);
+}
+
+.run-club-n .run-club-n-eyebrow {
+  color: var(--sds-color-text-brand-default);
+}
+
+/* Title Hero style override on the TextHeading instance. */
+.run-club-n .run-club-n-title {
+  color: var(--sds-color-text-default-default);
+  font: var(--sds-font-title-hero);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.run-club-n .run-club-n-subtitle {
+  color: var(--sds-color-text-default-secondary);
+  line-height: 1.2;
+}
+
+.run-club-n .run-club-n-detail {
+  .text-heading {
+    color: var(--sds-color-text-default-default);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .text-body-base {
+    color: var(--sds-color-text-default-secondary);
+  }
+}
+
+.run-club-n .run-club-n-note {
+  color: var(--sds-color-text-default-tertiary);
+}
+
+/* Figma's Body styles use 1.4, tighter than the SDS default. */
+.run-club-n :is(.text-body-base, .text-body-small, .text-body-small-strong) {
+  line-height: 1.4;
+}
