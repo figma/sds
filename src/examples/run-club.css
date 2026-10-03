@@ -1,5 +1,5 @@
 /*
- * Run Club page styles. Mobile-first, matching the 412px Figma frame;
+ * Run Club page styles. Mobile-first, matching the 448px Figma frame;
  * colors and type come from the default SDS theme.
  */
 
@@ -17,10 +17,9 @@
   flex: 1;
   flex-direction: column;
   gap: var(--sds-size-space-800);
-  justify-content: space-between;
   margin: 0 auto;
   max-width: 600px;
-  padding: var(--sds-size-space-600) var(--sds-size-space-400);
+  padding: var(--sds-size-space-800) var(--sds-size-space-400);
   width: 100%;
 }
 
@@ -29,9 +28,20 @@
   line-height: 1.2;
 }
 
-.run-club .run-club-heading {
-  letter-spacing: -0.02em;
+.run-club .run-club-subtitle {
+  color: var(--sds-color-text-neutral-secondary);
   line-height: 1.2;
+}
+
+.run-club .run-club-detail {
+  .text-heading {
+    color: var(--sds-color-text-default-default);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .text-body-base {
+    color: var(--sds-color-text-default-secondary);
+  }
 }
 
 /* Figma's Body Base / Body Small styles use 1.4, tighter than the SDS default. */
@@ -44,7 +54,13 @@
 }
 
 .run-club .run-club-footer {
+  background: var(--sds-color-background-default-default);
   border-top: var(--sds-size-stroke-border) solid
     var(--sds-color-border-default-default);
-  padding-top: var(--sds-size-space-400);
+  padding: var(--sds-size-space-800);
+}
+
+.run-club .run-club-footer-title {
+  font-size: var(--sds-typography-scale-01);
+  line-height: normal;
 }
