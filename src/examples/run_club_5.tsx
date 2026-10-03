@@ -25,7 +25,7 @@ export function RunClub5() {
             {/* Code Connect maps this to TextHeading; the frame overrides
                 its text style with Title Hero. */}
             <TextHeading className="run-club-5-title">
-              SUNDAY RUN CLUB
+              SATURDAY RUN CLUB
             </TextHeading>
             <Text className="run-club-5-intro">
               A social city loop for steady miles and good company. All paces
