@@ -29,7 +29,7 @@ export function RunClubN() {
               {/* Code Connect maps this to TextHeading; the frame overrides
                   its text style with Title Hero. */}
               <TextHeading className="run-club-n-title">
-                SUNDAY RUN CLUB
+                SATURDAY RUN CLUB
               </TextHeading>
               <TextSubtitle className="run-club-n-subtitle">
                 Ten kilometers. One city. Every Sunday.
