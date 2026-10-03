@@ -1,0 +1,50 @@
+/*
+ * Run Club page styles. Mobile-first, matching the 412px Figma frame;
+ * colors and type come from the default SDS theme.
+ */
+
+.run-club {
+  background: var(--sds-color-background-default-default);
+  color: var(--sds-color-text-neutral-default);
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.run-club .run-club-content {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--sds-size-space-800);
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: var(--sds-size-space-600) var(--sds-size-space-400);
+  width: 100%;
+}
+
+.run-club .run-club-title {
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.run-club .run-club-heading {
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* Figma's Body Base / Body Small styles use 1.4, tighter than the SDS default. */
+.run-club :is(.text-body-base, .text-body-small) {
+  line-height: 1.4;
+}
+
+.run-club .run-club-secondary {
+  color: var(--sds-color-text-neutral-secondary);
+}
+
+.run-club .run-club-footer {
+  border-top: var(--sds-size-stroke-border) solid
+    var(--sds-color-border-default-default);
+  padding-top: var(--sds-size-space-400);
+}
