@@ -1,0 +1,58 @@
+/*
+ * Run Club 4 page styles. Mobile-first, matching the 448px Figma frame:
+ * run overview at the top, the join action pinned to the bottom.
+ */
+
+.run-club-4 {
+  background: var(--sds-color-background-default-default);
+  min-height: 100dvh;
+}
+
+.run-club-4 .run-club-4-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-800);
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 100dvh;
+  padding: var(--sds-size-space-800) var(--sds-size-space-400);
+}
+
+.run-club-4 .run-club-4-muted {
+  color: var(--sds-color-text-neutral-tertiary);
+}
+
+.run-club-4 .run-club-4-title {
+  color: var(--sds-color-text-neutral-default);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.run-club-4 .run-club-4-subtitle {
+  line-height: 1.2;
+}
+
+.run-club-4 .run-club-4-divider {
+  background: var(--sds-color-border-brand-default);
+  border: 0;
+  height: 1px;
+  margin: 0;
+}
+
+.run-club-4 .run-club-4-detail {
+  .text-heading {
+    color: var(--sds-color-text-default-default);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .text-body-base {
+    color: var(--sds-color-text-default-secondary);
+  }
+}
+
+/* Figma's Body Base style uses 1.4, tighter than the SDS default. */
+.run-club-4 .text-body-base.text-line-height-body {
+  line-height: 1.4;
+}
