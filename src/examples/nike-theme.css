@@ -1,0 +1,116 @@
+/*
+ * Nike-inspired theme layer for the NikeLaunch example.
+ * Scoped to .theme-nike so the base SDS theme stays untouched.
+ *
+ * SDS resolves alias tokens (e.g. brand-default -> brand-800) and the font
+ * shorthands (--sds-font-*) on :root, so overriding a primitive or a single
+ * typography token here would not cascade. Semantic tokens and the font
+ * shorthands that depend on overridden tokens are redeclared directly.
+ */
+
+.theme-nike {
+  /* Nike palette */
+  --nike-color-black: #111111;
+  --nike-color-white: #ffffff;
+  --nike-color-surface: #f5f5f5;
+  /* Volt: accent only, used sparingly */
+  --nike-color-accent-volt: #d8ff00;
+
+  color-scheme: light;
+
+  /* Backgrounds */
+  --sds-color-background-default-default: var(--nike-color-white);
+  --sds-color-background-default-default-hover: var(--nike-color-surface);
+  --sds-color-background-default-secondary: var(--nike-color-surface);
+  --sds-color-background-default-tertiary: var(--nike-color-surface);
+  --sds-color-background-default-tertiary-hover: var(--sds-color-gray-200);
+  --sds-color-background-brand-default: var(--nike-color-black);
+  --sds-color-background-brand-hover: var(--sds-color-gray-800);
+  --sds-color-background-brand-secondary: var(--sds-color-brand-200);
+  --sds-color-background-brand-secondary-hover: var(--sds-color-brand-300);
+  --sds-color-background-brand-tertiary: var(--sds-color-brand-100);
+  --sds-color-background-disabled-default: var(--sds-color-brand-300);
+
+  /* Borders */
+  --sds-color-border-default-default: var(--sds-color-gray-300);
+  --sds-color-border-brand-default: var(--nike-color-black);
+  --sds-color-border-brand-secondary: var(--sds-color-brand-600);
+  --sds-color-border-disabled-default: var(--sds-color-brand-400);
+
+  /* Text */
+  --sds-color-text-default-default: var(--nike-color-black);
+  --sds-color-text-default-secondary: var(--sds-color-gray-500);
+  --sds-color-text-default-tertiary: var(--sds-color-gray-400);
+  --sds-color-text-brand-default: var(--nike-color-black);
+  --sds-color-text-brand-on-brand: var(--nike-color-white);
+  --sds-color-text-brand-on-brand-secondary: var(--sds-color-brand-900);
+  --sds-color-text-brand-on-brand-tertiary: var(--sds-color-brand-800);
+  --sds-color-text-brand-tertiary: var(--sds-color-brand-500);
+  --sds-color-text-disabled-default: var(--sds-color-brand-400);
+
+  /* Icons */
+  --sds-color-icon-default-default: var(--nike-color-black);
+  --sds-color-icon-default-secondary: var(--sds-color-gray-500);
+  --sds-color-icon-brand-default: var(--nike-color-black);
+  --sds-color-icon-brand-on-brand: var(--nike-color-white);
+  --sds-color-icon-brand-on-brand-secondary: var(--sds-color-brand-900);
+  --sds-color-icon-brand-on-brand-tertiary: var(--sds-color-brand-800);
+  --sds-color-icon-brand-tertiary: var(--sds-color-brand-500);
+
+  /* Headlines: Oswald, bold. Body stays Inter. */
+  --nike-typography-family-display: "Oswald", "inter", sans-serif;
+  --sds-typography-title-hero-font-family: var(--nike-typography-family-display);
+  --sds-typography-title-hero-font-weight: var(--sds-typography-weight-bold);
+  --sds-typography-title-hero-size: clamp(3.5rem, 10vw, 9rem);
+  --sds-typography-title-page-font-family: var(--nike-typography-family-display);
+  --sds-typography-title-page-font-weight: var(--sds-typography-weight-bold);
+  --sds-typography-heading-font-family: var(--nike-typography-family-display);
+  --sds-typography-heading-font-weight: var(--sds-typography-weight-bold);
+
+  --sds-font-title-hero: normal var(--sds-typography-title-hero-font-weight)
+    var(--sds-typography-title-hero-size)
+    var(--sds-typography-title-hero-font-family);
+  --sds-font-title-page: normal var(--sds-typography-title-page-font-weight)
+    var(--sds-typography-title-page-size-base)
+    var(--sds-typography-title-page-font-family);
+  --sds-font-heading: normal var(--sds-typography-heading-font-weight)
+    var(--sds-typography-heading-size-base)
+    var(--sds-typography-heading-font-family);
+
+  background: var(--sds-color-background-default-default);
+  color: var(--sds-color-text-default-default);
+}
+
+.theme-nike :is(.text-title-hero, .text-title-page, .text-heading) {
+  letter-spacing: -0.01em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+/* Pill-shaped buttons */
+.theme-nike .button {
+  --border-radius: var(--sds-size-radius-full);
+}
+
+/* Sharp-cornered cards, including their images */
+.theme-nike .card {
+  --border-radius: 0;
+  .image {
+    border-radius: 0;
+  }
+}
+
+/* Clear space between the hero title and subtitle. TextContentTitle's default
+   Space/200 gap is too tight with the 0.9 headline line-height. */
+.theme-nike .nike-hero .text-content-title {
+  --flex-gap: var(--sds-size-space-600);
+}
+
+/* The one Volt moment: the launch tag in the hero */
+.theme-nike .nike-hero .tag {
+  --tag-background-color: var(--nike-color-accent-volt);
+  --tag-color: var(--nike-color-black);
+  font-weight: var(--sds-typography-weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
