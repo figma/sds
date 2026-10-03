@@ -22,7 +22,7 @@ export function RunClub4() {
         <Flex direction="column" alignSecondary="stretch" gap="800">
           <Flex direction="column" alignSecondary="stretch" gap="600">
             <Text lineHeight="single" className="run-club-4-muted">
-              Run Club N
+              Run Club 4
             </Text>
             <Flex direction="column" alignSecondary="stretch" gap="300">
               <TextTitleHero className="run-club-4-title">
