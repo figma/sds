@@ -25,7 +25,7 @@ export function NikeRunClub8() {
           <TextStrong elementType="p">NIKE RUN CLUB 8</TextStrong>
           <Flex direction="column" alignSecondary="stretch" gap="400">
             <TextHeading elementType="h1" className="nike-run-club-8-title">
-              SUNDAY RUN CLUB
+              SATURDAY RUN CLUB
             </TextHeading>
             <TextSubtitle className="nike-run-club-8-subtitle">
               10K. All paces welcome.

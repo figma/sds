@@ -31,11 +31,18 @@
   padding: var(--sds-size-space-800);
 }
 
-/* Heading component styled with the Title Hero text style, as in Figma. */
+/*
+ * Heading component styled as a title: Title Page on phones so
+ * "SATURDAY" fits the hero card, Title Hero from 600px up.
+ */
 .nike-run-club-8 .nike-run-club-8-title {
-  font: var(--sds-font-title-hero);
+  font: var(--sds-font-title-page);
   letter-spacing: -0.03em;
   line-height: 1.2;
+
+  @media (min-width: 600px) {
+    font: var(--sds-font-title-hero);
+  }
 }
 
 .nike-run-club-8 .nike-run-club-8-subtitle {
