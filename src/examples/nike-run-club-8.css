@@ -1,0 +1,71 @@
+/*
+ * Nike Run Club 8 page styles. Mobile-first, matching the 448px Figma frame:
+ * brand hero card, run details, and the join action pinned to the bottom.
+ */
+
+.nike-run-club-8 {
+  background: var(--sds-color-background-default-default);
+  min-height: 100dvh;
+}
+
+.nike-run-club-8 .nike-run-club-8-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-600);
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 100dvh;
+  padding: var(--sds-size-space-600);
+}
+
+.nike-run-club-8 .nike-run-club-8-hero {
+  background: var(--sds-color-background-brand-default);
+  border-radius: var(--sds-size-radius-400);
+  color: var(--sds-color-text-brand-on-brand);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-600);
+  overflow: clip;
+  padding: var(--sds-size-space-800);
+}
+
+/*
+ * Heading component styled as a title: Title Page on phones so
+ * "SATURDAY" fits the hero card, Title Hero from 600px up.
+ */
+.nike-run-club-8 .nike-run-club-8-title {
+  font: var(--sds-font-title-page);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+
+  @media (min-width: 600px) {
+    font: var(--sds-font-title-hero);
+  }
+}
+
+.nike-run-club-8 .nike-run-club-8-subtitle {
+  line-height: 1.2;
+}
+
+.nike-run-club-8 .nike-run-club-8-label,
+.nike-run-club-8 .nike-run-club-8-note {
+  color: var(--sds-color-text-default-secondary);
+}
+
+.nike-run-club-8 .nike-run-club-8-note {
+  text-align: center;
+}
+
+.nike-run-club-8 .nike-run-club-8-detail {
+  .text-heading {
+    color: var(--sds-color-text-default-default);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .text-body-base {
+    color: var(--sds-color-text-default-secondary);
+    line-height: 1.4;
+  }
+}
