@@ -1,0 +1,46 @@
+/*
+ * Run Club 6 page styles. Mobile-first, matching the 448px Figma frame:
+ * intro at the top, run details in the middle, the join action pinned to
+ * the bottom.
+ */
+
+.run-club-6 {
+  background: var(--sds-color-background-default-default);
+  min-height: 100dvh;
+}
+
+.run-club-6 .run-club-6-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-1200);
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 100dvh;
+  padding: var(--sds-size-space-1600) var(--sds-size-space-600)
+    var(--sds-size-space-800);
+}
+
+.run-club-6 .run-club-6-title {
+  color: var(--sds-color-text-neutral-default);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.run-club-6 .run-club-6-subtitle {
+  color: var(--sds-color-text-neutral-tertiary);
+  line-height: 1.2;
+}
+
+.run-club-6 .run-club-6-detail {
+  .text-heading {
+    color: var(--sds-color-text-default-default);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .text-body-base {
+    color: var(--sds-color-text-default-secondary);
+    line-height: 1.4;
+  }
+}
