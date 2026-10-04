@@ -21,7 +21,7 @@ export function RunClub6() {
       <main className="run-club-6-content">
         <Flex direction="column" alignSecondary="stretch" gap="400">
           <TextTitleHero className="run-club-6-title">
-            SUNDAY RUN CLUB
+            SATURDAY RUN CLUB
           </TextTitleHero>
           <TextSubtitle className="run-club-6-subtitle">
             Ten kilometres, one city, every Sunday.
