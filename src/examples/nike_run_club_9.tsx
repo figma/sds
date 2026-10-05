@@ -22,7 +22,7 @@ export function NikeRunClub9() {
         <Flex direction="column" alignSecondary="stretch" gap="1600">
           <Flex direction="column" alignSecondary="stretch" gap="400">
             <TextTitleHero className="nike-run-club-9-title">
-              SUNDAY RUN CLUB
+              SATURDAY RUN CLUB
             </TextTitleHero>
             <TextSubtitle className="nike-run-club-9-subtitle">
               Ten kilometers. One crew. Every Sunday.
