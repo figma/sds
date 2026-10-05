@@ -16,6 +16,7 @@ import { RunClub5 } from "./examples/run_club_5";
 import { RunClub6 } from "./examples/run_club_6";
 import { NikeRunClub7 } from "./examples/nike_run_club_7";
 import { NikeRunClub8 } from "./examples/nike_run_club_8";
+import { NikeRunClub9 } from "./examples/nike_run_club_9";
 import { WelcomeHero } from "./examples/WelcomeHero";
 
 function useHash() {
@@ -56,6 +57,7 @@ const pages = new Map<string, () => ReactNode>([
   ["run_club_6", () => <RunClub6 />],
   ["nike_run_club_7", () => <NikeRunClub7 />],
   ["nike_run_club_8", () => <NikeRunClub8 />],
+  ["nike_run_club_9", () => <NikeRunClub9 />],
 ]);
 
 // Old hashes that keep working after the rename.
