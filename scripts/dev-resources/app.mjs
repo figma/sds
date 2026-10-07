@@ -103,7 +103,6 @@ async function run() {
   console.log(
     `Possible: ${possibleCreateCount} • New: ${createCount} • Deleted: ${deleteCount}`,
   );
-  // We're done!
   return;
 }
 
