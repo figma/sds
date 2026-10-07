@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Initial setup: install system-level dependencies needed to build/run the project.
+
+# Require Node.js >= 18
+if ! command -v node &>/dev/null; then
+  echo "Error: Node.js is not installed. Install Node.js 18+ and re-run." >&2
+  exit 1
+fi
+
+NODE_MAJOR=$(node -e "process.stdout.write(String(process.versions.node.split('.')[0]))")
+if [ "$NODE_MAJOR" -lt 18 ]; then
+  echo "Error: Node.js 18+ is required (found v$(node -v))." >&2
+  exit 1
+fi
+
+# Require npm
+if ! command -v npm &>/dev/null; then
+  echo "Error: npm is not installed." >&2
+  exit 1
+fi
+
+echo "System dependencies OK (Node $(node -v), npm $(npm -v))."
