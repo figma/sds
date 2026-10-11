@@ -36,8 +36,8 @@ Before implementing any Figma design, follow this checklist:
 1. ✅ **Use Figma MCP tools** to extract design data when prompted.
 
 - When trying to get a high level understanding of the design, you can use #get_image to get image representation of the design to contextualize what is selected in Figma
-- Whenever you want more information about the specific UI elements that are selected, use #get_code
-- With the get_code, get_code_connect_map, and get_variable_map tools you will receive information about patterns that should already be defined in this repository.
+- Whenever you want more information about the specific UI elements that are selected, use #get_design_context
+- With the get_design_context, get_code_connect_map, and get_variable_defs tools you will receive information about patterns that should already be defined in this repository.
 - If patterns dont already exist, you should ask for permission and clarify what about the design isn't already accounted for in this codebase that is present in the design.
 
 2. ✅ **Read component APIs** in the actual TypeScript files before using
@@ -166,13 +166,13 @@ All data management (contexts, providers, services, types, and data hooks) are i
 
 When you see `hidden={true}` in Figma data, it indicates that the node should be ignored. This can happen with Figma components frequently, as nodes that can be toggled with a prop need to exist, even when the prop is false.
 
-**Discovery tip**: When implementing Figma designs, check `codeDependencies` first, then browse the actual component files to understand available props and variants. See the complete component list in the Component Categories section below.
+**Discovery tip**: When implementing Figma designs, check `source` in `get_code_connect_map` first, then browse the actual component files to understand available props and variants. See the complete component list in the Component Categories section below.
 
 ## Figma Translation Process
 
 1. **Extract design using Figma tools**: Always use the Figma MCP tools to get the design data
 2. **Identify SDS components**: Map Figma components to existing SDS primitives, compositions, and layouts
-   - Use the `codeDependencies` field to find the correct component path
+   - Use the `source` field from `get_code_connect_map` to find the correct component path
    - If no direct mapping exists, look for similar components or compositions
 3. **Check component APIs**: Read the actual component files to understand props and usage patterns
 4. **Use semantic imports**: Import from correct paths (e.g., `import { Button } from "ui/primitives/Button/Button"`)
