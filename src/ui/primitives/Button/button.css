@@ -66,6 +66,10 @@
     --button-background-color: var(--sds-color-background-brand-hover);
     --button-border-color: var(--sds-color-border-brand-default);
   }
+  /* Figma 4185:3779 (Primary / Default / Medium) is a pill; Hover and Disabled keep radius-200 */
+  &.button-size-medium:not([data-hovered]):not([data-disabled]) {
+    --border-radius: var(--sds-size-radius-full);
+  }
 }
 .button-variant-neutral {
   --button-background-color: var(--sds-color-background-default-secondary);
