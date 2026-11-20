@@ -22,7 +22,8 @@
 }
 
 .button-size-small {
-  --button-font: var(--sds-font-body-small);
+  /* Figma: Small keeps Body Base type; only padding shrinks */
+  --button-font: var(--sds-font-body-base);
   --button-padding-x: var(--sds-size-space-200);
   --button-padding-y: var(--sds-size-space-200);
 
@@ -68,24 +69,30 @@
   }
 }
 .button-variant-neutral {
-  --button-background-color: var(--sds-color-background-default-secondary);
-  --button-border-color: var(--sds-color-border-default-default);
+  --button-background-color: var(--sds-color-background-neutral-tertiary);
+  --button-border-color: var(--sds-color-border-neutral-secondary);
   --button-color: var(--sds-color-text-default-default);
   &[data-hovered]:not([data-disabled]) {
     --button-background-color: var(
-      --sds-color-background-default-secondary-hover
+      --sds-color-background-neutral-tertiary-hover
     );
   }
 }
 .button-variant-subtle {
   --button-background-color: transparent;
   --button-border-color: transparent;
-  --button-color: var(--sds-color-text-brand-default);
+  --button-color: var(--sds-color-text-neutral-default);
   &[data-hovered]:not([data-disabled]) {
-    --button-background-color: var(
-      --sds-color-background-default-default-hover
-    );
+    --button-border-color: var(--sds-color-border-default-default);
+    --button-color: var(--sds-color-text-default-default);
   }
+}
+/* Figma 5005:2100 — only Default/Medium is designed; other states fall back to shared rules */
+.button-variant-tertiary {
+  --border-radius: var(--sds-size-radius-100);
+  --button-background-color: transparent;
+  --button-border-color: var(--sds-color-border-positive-secondary);
+  --button-color: var(--sds-color-text-positive-secondary);
 }
 
 .button-variant-danger-primary {
@@ -113,7 +120,7 @@
   pointer-events: none;
   --button-background-color: var(--sds-color-background-disabled-default);
   --button-border-color: var(--sds-color-border-disabled-default);
-  --button-color: var(--sds-color-text-disabled-default);
+  --button-color: var(--sds-color-text-disabled-on-disabled);
 }
 
 .button-group {

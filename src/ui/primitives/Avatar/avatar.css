@@ -50,7 +50,7 @@
   display: grid;
   grid-template-areas: "avatar title";
   grid-template-columns: auto 1fr;
-  column-gap: var(--sds-size-space-200);
+  column-gap: var(--sds-size-space-300);
   row-gap: var(--sds-size-space-050);
 
   &:has(> .text-body-base) {
@@ -66,6 +66,7 @@
   }
 
   > .text-body-base {
+    color: var(--sds-color-text-default-tertiary);
     grid-area: description;
   }
 }
@@ -75,6 +76,9 @@
 }
 .avatar-shape-square {
   --avatar-border-radius: var(--sds-size-radius-200);
+  &.avatar-size-small {
+    --avatar-border-radius: var(--sds-size-radius-100);
+  }
 }
 
 .avatar-size-small {
@@ -103,7 +107,6 @@
     display: flex;
     justify-content: center;
     font: var(--sds-font-body-small);
-    font-weight: var(--sds-typography-body-weight-strong);
     height: var(--sds-typography-scale-05);
     width: var(--sds-typography-scale-05);
   }
