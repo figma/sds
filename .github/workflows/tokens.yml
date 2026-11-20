@@ -1,0 +1,35 @@
+# Builds CSS variables from design tokens with Style Dictionary and fails if
+# the committed output (src/theme.css and the Figma code syntax snippet) is out
+# of date. Fix a failure by running `npm run tokens:build` and committing.
+name: Tokens
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tokens-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build tokens
+        run: npm run tokens:build
+      - name: Check generated files are up to date
+        run: |
+          if ! git diff --exit-code -- src/theme.css scripts/tokens/tokenVariableSyntaxAndDescriptionSnippet.js; then
+            echo "::error::Generated token files are out of date. Run 'npm run tokens:build' and commit the result."
+            exit 1
+          fi

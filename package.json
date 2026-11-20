@@ -11,11 +11,12 @@
     "storybook": "storybook dev -p 6006 --no-open",
     "storybook:build": "storybook build --output-dir dist/storybook",
     "build": "npm run app:build; npm run storybook:build",
+    "tokens:build": "style-dictionary build --config style-dictionary.config.mjs",
     "script:dev-resources": "cd scripts/dev-resources; node --env-file=../../.env app.mjs; cd -;",
     "script:icons": "cd scripts/icons; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",
     "script:icons:rest": "cd scripts/icons; node --env-file=../../.env app.mjs; cd -;",
-    "script:tokens": "cd scripts/tokens; node --env-file=../../.env app.mjs --skip-rest-api; cd -;",
-    "script:tokens:rest": "cd scripts/tokens; node --env-file=../../.env app.mjs; cd -;"
+    "script:tokens": "npm run tokens:build",
+    "script:tokens:rest": "cd scripts/tokens && node --env-file=../../.env app.mjs && cd - && npm run tokens:build"
   },
   "prettier": {
     "plugins": [
@@ -49,6 +50,7 @@
     "react-aria-components": "^1.10.1",
     "react-dom": "^18.2.0",
     "storybook": "^8.6.12",
+    "style-dictionary": "5.8.0",
     "typescript": "^5.0.2",
     "vite": "^6.3.5"
   }
