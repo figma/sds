@@ -140,9 +140,11 @@ Some example integrations are available in `scripts` directory. They may require
 ### [scripts/tokens](./scripts/tokens)
 
 - `npm run script:tokens:rest`
-- Gets all variables and styles from Figma, and converts them to [src/theme.css](./src/theme.css).
-- Creates [scripts/tokens/tokensCodeSyntaxes.js](./scripts/tokens/tokensCodeSyntaxes.js) which is a script you can run in the JS console in Figma to update all the variable's [codeSyntaxes](https://www.figma.com/plugin-docs/api/Variable/#codesyntax) with CSS that matches this repo.
+- Gets all variables and styles from Figma into [tokens/tokens.json](./tokens/tokens.json) and [tokens/styles.json](./tokens/styles.json), then runs `npm run tokens:build`.
+- `npm run tokens:build` uses [Style Dictionary](https://styledictionary.com) ([style-dictionary.config.mjs](./style-dictionary.config.mjs)) to generate [src/theme.css](./src/theme.css) from those JSON files, without calling the REST API. `npm run script:tokens` is an alias.
+- Also generates [scripts/tokens/tokenVariableSyntaxAndDescriptionSnippet.js](./scripts/tokens/tokenVariableSyntaxAndDescriptionSnippet.js) which is a script you can run in the JS console in Figma to update all the variable's [codeSyntaxes](https://www.figma.com/plugin-docs/api/Variable/#codesyntax) with CSS that matches this repo.
+- Don't edit `src/theme.css` by hand. A GitHub Action runs `npm run tokens:build` on every pull request and fails if the committed CSS is out of date.
 - Includes some example plugins for how to get the same data without the Variables REST API.
   - [Install plugins](https://www.figma.com/plugin-docs/plugin-quickstart-guide/) in Development
-  - Run plugins, and copy plugin outputs into [scripts/tokens/styles.json](./scripts/tokens/styles.json) and [scripts/tokens/tokens.json](./scripts/tokens/tokens.json)
-  - Run `npm run script:tokens` (without `:rest`) and it will reference the JSON files directly without making a REST API request to update them
+  - Run plugins, and copy plugin outputs into [tokens/styles.json](./tokens/styles.json) and [tokens/tokens.json](./tokens/tokens.json)
+  - Run `npm run tokens:build` and it will reference the JSON files directly without making a REST API request to update them
