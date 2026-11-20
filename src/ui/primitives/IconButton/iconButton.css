@@ -1,3 +1,24 @@
 .icon-button {
   --border-radius: var(--sds-size-radius-full);
 }
+
+/* Figma Icon Button (11:11508) keeps the previous Neutral/Subtle tokens,
+   which differ from Button (4185:3778). Pin them so Button changes don't leak. */
+.icon-button.button-variant-neutral:not([data-disabled]) {
+  --button-background-color: var(--sds-color-background-default-secondary);
+  --button-border-color: var(--sds-color-border-default-default);
+  &[data-hovered] {
+    --button-background-color: var(
+      --sds-color-background-default-secondary-hover
+    );
+  }
+}
+.icon-button.button-variant-subtle:not([data-disabled]) {
+  --button-color: var(--sds-color-text-default-default);
+  &[data-hovered] {
+    --button-background-color: var(
+      --sds-color-background-default-default-hover
+    );
+    --button-border-color: transparent;
+  }
+}

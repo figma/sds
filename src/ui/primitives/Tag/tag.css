@@ -37,7 +37,7 @@
   display: inline-flex;
   font: var(--sds-font-body-base);
 
-  gap: var(--sds-size-space-300);
+  gap: var(--sds-size-space-200);
   justify-content: center;
   line-height: 1;
   padding: var(--sds-size-space-200) var(--sds-size-space-200);
@@ -65,9 +65,7 @@
 
     &[data-hovered],
     &:has(.tag-remove-button[data-hovered]) {
-      --tag-background-color: var(
-        --sds-color-background-default-tertiary-hover
-      );
+      --tag-background-color: var(--sds-color-background-brand-tertiary-hover);
     }
   }
 }
@@ -137,27 +135,6 @@
       --tag-background-color: var(
         --sds-color-background-warning-secondary-hover
       );
-    }
-  }
-}
-.tag-scheme-brand {
-  --tag-color: var(--sds-color-text-brand-on-brand);
-  --tag-icon: var(--sds-color-icon-brand-on-brand);
-  --tag-background-color: var(--sds-color-background-brand-default);
-
-  &[data-hovered],
-  &:has(.tag-remove-button[data-hovered]) {
-    --tag-background-color: var(--sds-color-background-brand-hover);
-  }
-
-  &.tag-variant-secondary {
-    --tag-color: var(--sds-color-text-brand-on-brand-secondary);
-    --tag-icon: var(--sds-color-icon-brand-on-brand-secondary);
-    --tag-background-color: var(--sds-color-background-brand-secondary);
-
-    &[data-hovered],
-    &:has(.tag-remove-button[data-hovered]) {
-      --tag-background-color: var(--sds-color-background-brand-secondary-hover);
     }
   }
 }

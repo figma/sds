@@ -10,6 +10,7 @@ const variant = instance.getEnum("Variant", {
   Primary: "primary",
   Neutral: "neutral",
   Subtle: "subtle",
+  tertiary: "tertiary",
 });
 const label = instance.getString("Label");
 const iconStartSwap = instance.getInstanceSwap("Icon Start");

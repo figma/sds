@@ -24,7 +24,7 @@ export const StoryButton: StoryObj<typeof Button> = {
     },
     variant: {
       control: { type: "select" },
-      options: ["primary", "neutral", "subtle"],
+      options: ["primary", "neutral", "subtle", "tertiary"],
     },
   },
   render: ({ children, ...props }) => (

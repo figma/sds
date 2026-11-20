@@ -1,6 +1,6 @@
 .checkbox {
   --checkbox-background: var(--sds-color-background-default-default);
-  --checkbox-border: var(--sds-color-border-default-default);
+  --checkbox-border: var(--sds-color-border-brand-tertiary);
   --checkbox-icon: var(--sds-color-icon-brand-on-brand);
   --checkbox-border-radius: var(--sds-size-radius-100);
   align-items: center;

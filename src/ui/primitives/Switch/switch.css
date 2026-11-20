@@ -1,7 +1,7 @@
 .switch {
-  --switch-background: var(--sds-color-background-default-secondary);
-  --switch-border: var(--sds-color-border-default-default);
-  --switch-icon: var(--sds-color-icon-default-secondary);
+  --switch-background: var(--sds-color-background-default-default);
+  --switch-border: var(--sds-color-border-brand-tertiary);
+  --switch-icon: var(--sds-color-icon-brand-tertiary);
   --switch-padding: var(--sds-size-space-100);
   --switch-width: calc(var(--sds-size-space-400) + var(--sds-size-space-600));
   --switch-icon-diameter: var(--sds-size-space-400);

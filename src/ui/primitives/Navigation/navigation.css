@@ -105,6 +105,7 @@
 
   &.navigation-button-direction-row {
     flex-direction: row;
+    gap: var(--sds-size-space-150);
   }
 
   &.navigation-button-size-small {

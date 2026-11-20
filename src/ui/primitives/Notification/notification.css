@@ -47,12 +47,12 @@
 .notification-variant-message {
   --notification-color: var(--sds-color-text-default-default);
   --notification-icon: var(--sds-color-icon-default-default);
-  --notification-border-color: var(--sds-color-border-default-default);
+  --notification-border-color: var(--sds-color-border-default-secondary);
   --notification-background-color: var(--sds-color-background-default-default);
 }
 .notification-variant-alert {
   --notification-color: var(--sds-color-text-danger-on-danger-tertiary);
   --notification-icon: var(--sds-color-icon-danger-on-danger-tertiary);
-  --notification-border-color: var(--sds-color-border-danger-default);
+  --notification-border-color: var(--sds-color-border-danger-tertiary);
   --notification-background-color: var(--sds-color-background-danger-tertiary);
 }

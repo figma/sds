@@ -1,6 +1,6 @@
 .radio {
   --radio-background: var(--sds-color-background-default-default);
-  --radio-border: var(--sds-color-border-default-default);
+  --radio-border: var(--sds-color-border-brand-tertiary);
   --radio-icon: var(--sds-color-icon-brand-on-brand);
   --radio-border-radius: var(--sds-size-space-400);
   background: var(--radio-background);
@@ -24,8 +24,9 @@
 }
 
 .radio-field[data-selected] .radio {
-  --radio-background: var(--sds-color-background-brand-default);
-  --radio-border: var(--radio-background);
+  --radio-background: var(--sds-color-background-brand-secondary);
+  --radio-border: var(--sds-color-border-brand-default);
+  --radio-icon: var(--sds-color-icon-brand-on-brand-secondary);
   > .radio-check {
     display: block;
   }

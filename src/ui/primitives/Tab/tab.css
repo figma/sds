@@ -1,8 +1,8 @@
 .tabs {
 }
 .tab {
-  --color: var(--sds-color-text-default-secondary);
-  --border-color: var(--sds-color-border-default-default);
+  --color: var(--sds-color-text-neutral-tertiary);
+  --border-color: var(--sds-color-border-neutral-tertiary);
   --border-radius: var(--sds-size-radius-100);
   padding: var(--sds-size-space-100) var(--sds-size-space-300);
   border-bottom: solid var(--sds-size-stroke-border) var(--border-color);
@@ -14,13 +14,13 @@
   position: relative;
 
   &[data-selected] {
-    --color: var(--sds-color-text-default-default);
-    --border-color: var(--sds-color-border-default-secondary);
+    --color: var(--sds-color-text-neutral-default);
+    --border-color: var(--sds-color-border-neutral-default);
     position: relative;
     z-index: 1;
   }
 
-  &[data-hovered]:not([data-selected]) {
+  &[data-hovered] {
     background: var(--sds-color-background-default-default-hover);
   }
 
